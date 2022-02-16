@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 1 Introducción a la Genómica | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
+  <meta name="description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 1 Introducción a la Genómica | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 1 Introducción a la Genómica | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  
+  <meta name="twitter:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
+  
+
+<meta name="author" content="Hugo Naya" />
+<meta name="author" content="(Federica Marín)" />
+<meta name="author" content="(Jorge Urioste, María André, Washington Bell, Ana Laura Sanchez)" />
+<meta name="author" content="(Clara Pritsch, Paola Gaiero, Marianella Quezada)" />
+
+
+<meta name="date" content="2022-02-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="variación-y-equilibrio-de-hardy-weinberg.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio (leer antes de arrancar)</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nuestra-filosofía-del-no-tanto"><i class="fa fa-check"></i>Nuestra filosofía del NO (tanto)</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#qué-es-y-qué-no-es-este-libro"><i class="fa fa-check"></i>¿Qué ES y qué NO ES este libro?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#bibliografía-recomendada-para-este-curso"><i class="fa fa-check"></i>Bibliografía recomendada para este curso</a></li>
+</ul></li>
+<li class="part"><span><b>Parte I: Genómica</b></span></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introducción a la Genómica</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#variabilidad-genética"><i class="fa fa-check"></i><b>1.1</b> Variabilidad genética</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#detectando-la-variabilidad-diferentes-técnicas"><i class="fa fa-check"></i><b>1.1.1</b> Detectando la variabilidad: diferentes técnicas</a></li>
+<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#metagenómica-y-metatranscriptómica"><i class="fa fa-check"></i><b>1.1.2</b> Metagenómica y Metatranscriptómica</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#genómica-composicional"><i class="fa fa-check"></i><b>1.2</b> Genómica composicional</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-gcskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones, GCskew</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#uso-de-codones"><i class="fa fa-check"></i>Uso de codones</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#exploración-multivariada-análisis-de-correspondencia"><i class="fa fa-check"></i>Exploración multivariada: Análisis de Correspondencia</a></li>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i><b>1.2.1</b> Composición de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-en-propiedades-de-los-aas"><i class="fa fa-check"></i>Diferencias en propiedades de los AAs</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-de-composición-entre-clases-de-proteínas"><i class="fa fa-check"></i>Diferencias de composición entre clases de proteínas</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#genómica-comparativa"><i class="fa fa-check"></i><b>1.3</b> Genómica comparativa</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#comparación-de-secuencias-génicas"><i class="fa fa-check"></i>Comparación de secuencias génicas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección Positiva</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#vías"><i class="fa fa-check"></i>Vías</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#genómica-funcional"><i class="fa fa-check"></i><b>1.4</b> Genómica funcional</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#estudios-epigenéticos-y-epigenómicos"><i class="fa fa-check"></i>Estudios epigenéticos y epigenómicos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicio-1.1"><i class="fa fa-check"></i>Ejercicio 1.1</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Parte II: Genética de Poblaciones</b></span></li>
+<li class="chapter" data-level="2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html"><i class="fa fa-check"></i><b>2</b> Variación y equilibrio de Hardy-Weinberg</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#el-equilibrio-de-hardy-weinberg"><i class="fa fa-check"></i><b>2.1</b> El equilibrio de Hardy-Weinberg</a>
+<ul>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#supuestos-que-asumimos-se-cumplen-para-h-w"><i class="fa fa-check"></i>Supuestos que asumimos se cumplen para H-W</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-dioicas-dos-sexos"><i class="fa fa-check"></i><b>2.2</b> Hardy-Weinberg en especies dioicas (dos sexos)</a></li>
+<li class="chapter" data-level="2.3" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#h-w-la-frecuencia-de-heterocigotas-en-función-de-la-frecuencia-alélica"><i class="fa fa-check"></i><b>2.3</b> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
+<li class="chapter" data-level="2.4" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo"><i class="fa fa-check"></i><b>2.4</b> El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo</a></li>
+<li class="chapter" data-level="2.5" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#tres-o-más-alelos"><i class="fa fa-check"></i><b>2.5</b> Tres o más alelos</a></li>
+<li class="chapter" data-level="2.6" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-y-el-equilibrio-o-no"><i class="fa fa-check"></i><b>2.6</b> La estimación de frecuencias y el equilibrio (o no)</a></li>
+<li class="chapter" data-level="2.7" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#el-sistema-abo"><i class="fa fa-check"></i><b>2.7</b> El sistema ABO</a></li>
+<li class="chapter" data-level="2.8" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#dónde-se-esconden-los-alelos-recesivos"><i class="fa fa-check"></i><b>2.8</b> ¿Dónde se “esconden” los alelos recesivos?</a></li>
+<li class="chapter" data-level="2.9" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-poliploides"><i class="fa fa-check"></i><b>2.9</b> Hardy-Weinberg en especies poliploides</a></li>
+<li class="chapter" data-level="2.10" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#geometría-y-genética-los-diagramas-de-de-finetti-para-cuando-estés-aburrido"><i class="fa fa-check"></i><b>2.10</b> <strong>Geometría y Genética: los diagramas de <em>de Finetti</em></strong> (para cuando estés aburrido)</a></li>
+<li class="chapter" data-level="2.11" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-en-el-locus-abo-para-cuando-estés-muy-aburrido"><i class="fa fa-check"></i><b>2.11</b> <strong>La estimación de frecuencias en el locus ABO</strong> (para cuando estés MUY aburrido)</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicios-2"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="deriva.html"><a href="deriva.html"><i class="fa fa-check"></i><b>3</b> Deriva Genética</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="deriva.html"><a href="deriva.html#el-rol-de-los-procesos-estocásticos-en-la-genética"><i class="fa fa-check"></i><b>3.1</b> El rol de los procesos estocásticos en la genética</a></li>
+<li class="chapter" data-level="3.2" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i><b>3.2</b> El modelo de Wright-Fisher</a></li>
+<li class="chapter" data-level="3.3" data-path="deriva.html"><a href="deriva.html#el-rol-de-la-subdivisión-poblacional-en-la-evolución-de-las-frecuencias-alélicas"><i class="fa fa-check"></i><b>3.3</b> El rol de la subdivisión poblacional en la evolución de las frecuencias alélicas</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#homocigosidad-y-heterocigosidad"><i class="fa fa-check"></i>Homocigosidad y Heterocigosidad</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="deriva.html"><a href="deriva.html#cadenas-de-markov"><i class="fa fa-check"></i><b>3.4</b> Cadenas de Markov</a></li>
+<li class="chapter" data-level="3.5" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i><b>3.5</b> Tamaño efectivo poblacional</a></li>
+<li class="chapter" data-level="3.6" data-path="deriva.html"><a href="deriva.html#aproximación-de-difusión"><i class="fa fa-check"></i><b>3.6</b> Aproximación de difusión</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#caminatas-al-azar-y-procesos-de-difusión"><i class="fa fa-check"></i>Caminatas al azar y procesos de difusión</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-forward-equation"><i class="fa fa-check"></i>Kolmogorov Forward Equation</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-backward-equation"><i class="fa fa-check"></i>Kolmogorov Backward Equation</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#solución-de-las-ecuaciones"><i class="fa fa-check"></i>Solución de las ecuaciones</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i><b>3.7</b> Probabilidad de fijación y tiempos de fijación</a></li>
+<li class="chapter" data-level="3.8" data-path="deriva.html"><a href="deriva.html#el-modelo-coalescente"><i class="fa fa-check"></i><b>3.8</b> El modelo coalescente</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejercicios-3"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="seleccion.html"><a href="seleccion.html"><i class="fa fa-check"></i><b>4</b> Selección Natural</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="seleccion.html"><a href="seleccion.html#el-concepto-de-fitness"><i class="fa fa-check"></i><b>4.1</b> El concepto de “fitness”</a></li>
+<li class="chapter" data-level="4.2" data-path="seleccion.html"><a href="seleccion.html#selección-natural-en-el-modelo-de-un-locus-con-dos-alelos"><i class="fa fa-check"></i><b>4.2</b> Selección natural en el modelo de un locus con dos alelos</a></li>
+<li class="chapter" data-level="4.3" data-path="seleccion.html"><a href="seleccion.html#diferentes-formas-de-selección"><i class="fa fa-check"></i><b>4.3</b> Diferentes formas de selección</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="seleccion.html"><a href="seleccion.html#selección-direccional"><i class="fa fa-check"></i><b>4.3.1</b> Selección direccional</a></li>
+<li class="chapter" data-level="4.3.2" data-path="seleccion.html"><a href="seleccion.html#selección-estabilizadora"><i class="fa fa-check"></i><b>4.3.2</b> Selección estabilizadora</a></li>
+<li class="chapter" data-level="4.3.3" data-path="seleccion.html"><a href="seleccion.html#selección-disruptiva"><i class="fa fa-check"></i><b>4.3.3</b> Selección disruptiva</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="seleccion.html"><a href="seleccion.html#el-teorema-fundamental-de-la-selección-natural"><i class="fa fa-check"></i><b>4.4</b> El teorema fundamental de la selección natural</a></li>
+<li class="chapter" data-level="4.5" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-mutación"><i class="fa fa-check"></i><b>4.5</b> Equilibrio selección-mutación</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="seleccion.html"><a href="seleccion.html#el-principio-de-haldane-muller"><i class="fa fa-check"></i><b>4.5.1</b> El principio de Haldane-Muller</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="seleccion.html"><a href="seleccion.html#la-fuerza-de-la-selección-natural"><i class="fa fa-check"></i><b>4.6</b> La fuerza de la selección natural</a></li>
+<li class="chapter" data-level="4.7" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-deriva"><i class="fa fa-check"></i><b>4.7</b> Equilibrio selección-deriva</a></li>
+<li class="chapter" data-level="4.8" data-path="seleccion.html"><a href="seleccion.html#otros-tipos-de-selección-y-complejidades"><i class="fa fa-check"></i><b>4.8</b> Otros tipos de selección y complejidades</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#ejercicios-4"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="dosloci.html"><a href="dosloci.html"><i class="fa fa-check"></i><b>5</b> Dinámica de 2 <em>loci</em></a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-de-ligamiento-y-recombinación"><i class="fa fa-check"></i><b>5.1</b> Desequilibrio de ligamiento y recombinación</a></li>
+<li class="chapter" data-level="5.2" data-path="dosloci.html"><a href="dosloci.html#la-evolución-en-el-tiempo-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i><b>5.2</b> La evolución en el tiempo del desequilibrio de ligamiento</a></li>
+<li class="chapter" data-level="5.3" data-path="dosloci.html"><a href="dosloci.html#otras-medidas-de-asociación"><i class="fa fa-check"></i><b>5.3</b> Otras medidas de asociación</a>
+<ul>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejemplo-5.3"><i class="fa fa-check"></i>Ejemplo 5.3</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="dosloci.html"><a href="dosloci.html#selección-en-modelos-de-dos-loci"><i class="fa fa-check"></i><b>5.4</b> Selección en modelos de dos <em>loci</em></a>
+<ul>
+<li><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento">Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i><b>5.5</b> Arrastre genético (“genetic hitchhiking” o “genetic draft”)</a></li>
+<li class="chapter" data-level="5.6" data-path="dosloci.html"><a href="dosloci.html#causas-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i><b>5.6</b> Causas del desequilibrio de ligamiento</a>
+<ul>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-al-mestizaje"><i class="fa fa-check"></i>Desequilibrio debido al mestizaje</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-inducido-por-el-sistema-de-apareamiento"><i class="fa fa-check"></i>Desequilibrio inducido por el sistema de apareamiento</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#el-cromosoma-y"><i class="fa fa-check"></i>El cromosoma Y</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-a-recombinación-reducida"><i class="fa fa-check"></i>Desequilibrio debido a recombinación reducida</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejercicios-5"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="aparnoalazar.html"><a href="aparnoalazar.html"><i class="fa fa-check"></i><b>6</b> Apareamientos no-aleatorios</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-concepto-de-identidad-por-ascendencia-ibd"><i class="fa fa-check"></i><b>6.1</b> El concepto de “identidad por ascendencia” (IBD)</a></li>
+<li class="chapter" data-level="6.2" data-path="aparnoalazar.html"><a href="aparnoalazar.html#generalización-de-hardy-weinberg-para-apareamientos-no-aleatorios"><i class="fa fa-check"></i><b>6.2</b> Generalización de Hardy-Weinberg para apareamientos no-aleatorios</a></li>
+<li class="chapter" data-level="6.3" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><b>6.3</b> <em>F</em> como correlación entre gametos unidos</a></li>
+<li class="chapter" data-level="6.4" data-path="aparnoalazar.html"><a href="aparnoalazar.html#endocría-y-depresión-endogámica"><i class="fa fa-check"></i><b>6.4</b> Endocría y depresión endogámica</a></li>
+<li class="chapter" data-level="6.5" data-path="aparnoalazar.html"><a href="aparnoalazar.html#un-caso-extremo-la-autogamia"><i class="fa fa-check"></i><b>6.5</b> Un caso extremo: la autogamia</a></li>
+<li class="chapter" data-level="6.6" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-estadísticos-f"><i class="fa fa-check"></i><b>6.6</b> El Coeficiente de endocría y estadísticos <em>F</em></a></li>
+<li class="chapter" data-level="6.7" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i><b>6.7</b> El efecto Wahlund</a></li>
+<li class="chapter" data-level="6.8" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i><b>6.8</b> Subdivisión, migración y el modelo de islas</a></li>
+<li class="chapter" data-level="6.9" data-path="aparnoalazar.html"><a href="aparnoalazar.html#mecanismos-de-especiación"><i class="fa fa-check"></i><b>6.9</b> Mecanismos de especiación</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejercicios-6"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="microbial.html"><a href="microbial.html"><i class="fa fa-check"></i><b>7</b> Genética de Poblaciones Microbianas</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="microbial.html"><a href="microbial.html#genómica-y-mecanismos-de-herencia-en-procariotas"><i class="fa fa-check"></i><b>7.1</b> Genómica y mecanismos de herencia en procariotas</a></li>
+<li class="chapter" data-level="7.2" data-path="microbial.html"><a href="microbial.html#dinámica-de-las-poblaciones-bacterianas"><i class="fa fa-check"></i><b>7.2</b> Dinámica de las poblaciones bacterianas</a>
+<ul>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-exponencial"><i class="fa fa-check"></i>El modelo exponencial</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-logístico"><i class="fa fa-check"></i>El modelo logístico</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="microbial.html"><a href="microbial.html#modelos-haploides-de-selección-natural"><i class="fa fa-check"></i><b>7.3</b> Modelos haploides de selección natural</a>
+<ul>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-discreto"><i class="fa fa-check"></i>Selección haploide: modelo discreto</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-continuo"><i class="fa fa-check"></i>Selección haploide: modelo continuo</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-versus-el-de-wright-fisher"><i class="fa fa-check"></i><b>7.4</b> Los modelos de Moran y de Fisión versus el de Wright-Fisher</a></li>
+<li class="chapter" data-level="7.5" data-path="microbial.html"><a href="microbial.html#el-rol-de-la-transferencia-horizontal"><i class="fa fa-check"></i><b>7.5</b> El rol de la transferencia horizontal</a></li>
+<li class="chapter" data-level="7.6" data-path="microbial.html"><a href="microbial.html#selección-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i><b>7.6</b> Selección vs Neutralismo: los procariotas en el debate</a></li>
+<li class="chapter" data-level="7.7" data-path="microbial.html"><a href="microbial.html#genómica-poblacional"><i class="fa fa-check"></i><b>7.7</b> Genómica poblacional</a></li>
+<li class="chapter" data-level="7.8" data-path="microbial.html"><a href="microbial.html#genes-de-resistencia"><i class="fa fa-check"></i><b>7.8</b> Genes de resistencia</a></li>
+<li class="chapter" data-level="7.9" data-path="microbial.html"><a href="microbial.html#introducción-a-la-epidemiología-modelos-compartimentales"><i class="fa fa-check"></i><b>7.9</b> Introducción a la epidemiología: modelos compartimentales</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejercicios-7"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="part"><span><b>Parte III: Genética Cuantitativa</b></span></li>
+<li class="chapter" data-level="8" data-path="modelogenbas.html"><a href="modelogenbas.html"><i class="fa fa-check"></i><b>8</b> El Modelo Genético Básico</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="modelogenbas.html"><a href="modelogenbas.html#variación-continua-y-discreta"><i class="fa fa-check"></i><b>8.1</b> Variación continua y discreta</a></li>
+<li class="chapter" data-level="8.2" data-path="modelogenbas.html"><a href="modelogenbas.html#el-modelo-genético-básico"><i class="fa fa-check"></i><b>8.2</b> El modelo genético básico</a></li>
+<li class="chapter" data-level="8.3" data-path="modelogenbas.html"><a href="modelogenbas.html#modelo-genético-básico-un-locus-con-dos-alelos"><i class="fa fa-check"></i><b>8.3</b> Modelo Genético Básico: un <em>locus</em> con dos alelos</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#media-de-la-población"><i class="fa fa-check"></i>Media de la población</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="modelogenbas.html"><a href="modelogenbas.html#efecto-medio"><i class="fa fa-check"></i><b>8.4</b> Efecto medio</a></li>
+<li class="chapter" data-level="8.5" data-path="modelogenbas.html"><a href="modelogenbas.html#valor-reproductivo-o-valor-de-cría"><i class="fa fa-check"></i><b>8.5</b> Valor reproductivo (o valor de cría)</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#derivación-de-los-efectos-medios-por-mínimos-cuadrados"><i class="fa fa-check"></i>Derivación de los efectos medios por mínimos cuadrados</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="modelogenbas.html"><a href="modelogenbas.html#desvío-de-dominancia"><i class="fa fa-check"></i><b>8.6</b> Desvío de dominancia</a></li>
+<li class="chapter" data-level="8.7" data-path="modelogenbas.html"><a href="modelogenbas.html#interacción-genotipo-x-ambiente"><i class="fa fa-check"></i><b>8.7</b> Interacción Genotipo x Ambiente</a></li>
+<li class="chapter" data-level="8.8" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-en-el-modelo-genético-básico"><i class="fa fa-check"></i><b>8.8</b> La Varianza en el modelo genético básico</a>
+<ul>
+<li><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos">Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-ambiental"><i class="fa fa-check"></i>La varianza ambiental</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-de-la-interacción"><i class="fa fa-check"></i>La Varianza de la interacción</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejercicios-8"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="parentesco.html"><a href="parentesco.html"><i class="fa fa-check"></i><b>9</b> Parentesco y Semejanza entre Parientes</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="parentesco.html"><a href="parentesco.html#parentesco-1"><i class="fa fa-check"></i><b>9.1</b> Parentesco</a></li>
+<li class="chapter" data-level="9.2" data-path="parentesco.html"><a href="parentesco.html#parentesco-aditivo"><i class="fa fa-check"></i><b>9.2</b> Parentesco aditivo</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#consanguinidad"><i class="fa fa-check"></i>Consanguinidad</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#diagramas-de-flechas"><i class="fa fa-check"></i>Diagramas de flechas</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#el-método-tabular"><i class="fa fa-check"></i>El método tabular</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="parentesco.html"><a href="parentesco.html#parentesco-de-dominancia"><i class="fa fa-check"></i><b>9.3</b> Parentesco de dominancia</a></li>
+<li class="chapter" data-level="9.4" data-path="parentesco.html"><a href="parentesco.html#semejanza-entre-parientes"><i class="fa fa-check"></i><b>9.4</b> Semejanza entre parientes</a></li>
+<li class="chapter" data-level="9.5" data-path="parentesco.html"><a href="parentesco.html#estimación-de-las-varianzas-aditiva-y-de-dominancia"><i class="fa fa-check"></i><b>9.5</b> Estimación de las varianzas aditiva y de dominancia</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#propiedades-deseables-de-los-estimadores"><i class="fa fa-check"></i>Propiedades deseables de los estimadores</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estimación-de-la-varianza-aditiva-a-partir-del-análisis-de-varianza-anova"><i class="fa fa-check"></i>Estimación de la varianza aditiva a partir del análisis de varianza (ANOVA)</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estimaciones-basadas-en-modelos-mixtos-lineales"><i class="fa fa-check"></i>Estimaciones basadas en modelos mixtos lineales</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="parentesco.html"><a href="parentesco.html#parentesco-genómico"><i class="fa fa-check"></i><b>9.6</b> Parentesco genómico</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#contenido-génico"><i class="fa fa-check"></i>Contenido génico</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#la-matriz-de-similaridad-genómica"><i class="fa fa-check"></i>La matriz de similaridad genómica</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#ejercicios-9"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="pargen.html"><a href="pargen.html"><i class="fa fa-check"></i><b>10</b> Parámetros Genéticos: Heredabilidad y Repetibilidad</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="pargen.html"><a href="pargen.html#heredabilidad"><i class="fa fa-check"></i><b>10.1</b> Heredabilidad</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-heredabilidad-como-relación-de-varianzas"><i class="fa fa-check"></i>La heredabilidad como relación de varianzas</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-heredabilidad-como-regresión"><i class="fa fa-check"></i>La heredabilidad como regresión</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-de-cría-en-el-fenotipo-individual"><i class="fa fa-check"></i>Regresión del valor de cría en el fenotipo individual</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-fenotípico-de-los-hijos-sobre-el-fenotipo-de-un-progenitor"><i class="fa fa-check"></i>Regresión del valor fenotípico de los hijos sobre el fenotipo de un progenitor</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-fenotípico-de-los-hijos-sobre-el-fenotipo-de-ambos-progenitores"><i class="fa fa-check"></i>Regresión del valor fenotípico de los hijos sobre el fenotipo de ambos progenitores</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#precisión-en-las-estimaciones-de-heredabilidad-varianza-del-estimador"><i class="fa fa-check"></i>Precisión en las estimaciones de heredabilidad: varianza del estimador</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-sentido-amplio-y-sentido-estricto"><i class="fa fa-check"></i><b>10.2</b> Heredabilidad en sentido amplio y sentido estricto</a></li>
+<li class="chapter" data-level="10.3" data-path="pargen.html"><a href="pargen.html#heredabilidad-lograda"><i class="fa fa-check"></i><b>10.3</b> Heredabilidad lograda</a></li>
+<li class="chapter" data-level="10.4" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-poblaciones-agronómicas-y-de-laboratorio-vs-poblaciones-naturales"><i class="fa fa-check"></i><b>10.4</b> Heredabilidad en poblaciones agronómicas y de laboratorio vs poblaciones naturales</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-animales-domésticos"><i class="fa fa-check"></i>Estimaciones de heredabilidad en animales domésticos</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-plantas"><i class="fa fa-check"></i>Estimaciones de heredabilidad en plantas</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-condiciones-naturales"><i class="fa fa-check"></i>Estimaciones de heredabilidad en condiciones naturales</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="pargen.html"><a href="pargen.html#heredabilidad-y-filogenética"><i class="fa fa-check"></i><b>10.5</b> Heredabilidad y filogenética</a></li>
+<li class="chapter" data-level="10.6" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-la-era-genómica"><i class="fa fa-check"></i><b>10.6</b> Heredabilidad en la era genómica</a></li>
+<li class="chapter" data-level="10.7" data-path="pargen.html"><a href="pargen.html#métodos-más-avanzados-de-estimación"><i class="fa fa-check"></i><b>10.7</b> Métodos más avanzados de estimación</a></li>
+<li class="chapter" data-level="10.8" data-path="pargen.html"><a href="pargen.html#repetibilidad"><i class="fa fa-check"></i><b>10.8</b> Repetibilidad</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-cociente-de-varianzas"><i class="fa fa-check"></i>La repetibilidad como cociente de varianzas</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-coeficiente-de-correlación-intraclase"><i class="fa fa-check"></i>La repetibilidad como coeficiente de correlación intraclase</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-relación-entre-la-heredabilidad-y-la-repetibilidad"><i class="fa fa-check"></i>La relación entre la heredabilidad y la repetibilidad</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-reducción-en-la-varianza-fenotípica-con-varias-medidas"><i class="fa fa-check"></i>La reducción en la varianza fenotípica con varias medidas</a></li>
+</ul></li>
+<li class="chapter" data-level="10.9" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-herramienta-en-la-predicción"><i class="fa fa-check"></i><b>10.9</b> La repetibilidad como herramienta en la predicción</a></li>
+<li class="chapter" data-level="10.10" data-path="pargen.html"><a href="pargen.html#evolucionabilidad"><i class="fa fa-check"></i><b>10.10</b> Evolucionabilidad</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#ejercicios-10"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="selartifI.html"><a href="selartifI.html"><i class="fa fa-check"></i><b>11</b> Selección Artificial I</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección"><i class="fa fa-check"></i><b>11.1</b> Factores de corrección</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-aditivos"><i class="fa fa-check"></i>Factores de corrección aditivos</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-multiplicativos"><i class="fa fa-check"></i>Factores de corrección multiplicativos</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-lineales"><i class="fa fa-check"></i>Factores de corrección lineales</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="selartifI.html"><a href="selartifI.html#la-respuesta-a-la-selección-y-su-predicción"><i class="fa fa-check"></i><b>11.2</b> La respuesta a la selección y su predicción</a></li>
+<li class="chapter" data-level="11.3" data-path="selartifI.html"><a href="selartifI.html#diferencial-de-selección-e-intensidad-de-selección"><i class="fa fa-check"></i><b>11.3</b> Diferencial de selección e intensidad de selección</a></li>
+<li class="chapter" data-level="11.4" data-path="selartifI.html"><a href="selartifI.html#intensidad-de-selección-y-proporción-seleccionada"><i class="fa fa-check"></i><b>11.4</b> Intensidad de selección y proporción seleccionada</a>
+<ul>
+<li><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp">¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#la-relación-entre-diferentes-formas-de-calcular-la-intensidad-de-selección"><i class="fa fa-check"></i>La relación entre diferentes formas de calcular la intensidad de selección</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="selartifI.html"><a href="selartifI.html#intervalo-generacional"><i class="fa fa-check"></i><b>11.5</b> Intervalo generacional</a></li>
+<li class="chapter" data-level="11.6" data-path="selartifI.html"><a href="selartifI.html#medidas-de-la-respuesta"><i class="fa fa-check"></i><b>11.6</b> Medidas de la respuesta</a></li>
+<li class="chapter" data-level="11.7" data-path="selartifI.html"><a href="selartifI.html#progreso-genético-generacional-y-anual"><i class="fa fa-check"></i><b>11.7</b> Progreso genético generacional y anual</a></li>
+<li class="chapter" data-level="11.8" data-path="selartifI.html"><a href="selartifI.html#cambio-en-las-frecuencias-alélicas-bajo-selección-artificial"><i class="fa fa-check"></i><b>11.8</b> Cambio en las frecuencias alélicas bajo selección artificial</a></li>
+<li class="chapter" data-level="11.9" data-path="selartifI.html"><a href="selartifI.html#el-diferencial-de-selección-direccional-y-la-identidad-de-robertson-price"><i class="fa fa-check"></i><b>11.9</b> El diferencial de selección direccional y la identidad de Robertson-Price</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#ejercicios-11"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="correlacionada.html"><a href="correlacionada.html"><i class="fa fa-check"></i><b>12</b> Correlaciones y Respuesta Correlacionada</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="correlacionada.html"><a href="correlacionada.html#causas-genéticas-y-ambientales-de-las-correlaciones"><i class="fa fa-check"></i><b>12.1</b> Causas genéticas y ambientales de las correlaciones</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#causas-de-las-correlaciones-genéticas"><i class="fa fa-check"></i>Causas de las correlaciones genéticas</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#causas-de-las-correlaciones-ambientales"><i class="fa fa-check"></i>Causas de las correlaciones ambientales</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="correlacionada.html"><a href="correlacionada.html#introducción-al-path-analysis"><i class="fa fa-check"></i><b>12.2</b> Introducción al “path analysis”</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#la-relación-entre-las-correlaciones-fenotípica-genética-y-ambiental"><i class="fa fa-check"></i>La relación entre las correlaciones fenotípica, genética y ambiental</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="correlacionada.html"><a href="correlacionada.html#métodos-para-determinar-la-correlación-genética"><i class="fa fa-check"></i><b>12.3</b> Métodos para determinar la correlación genética</a></li>
+<li class="chapter" data-level="12.4" data-path="correlacionada.html"><a href="correlacionada.html#la-correlación-fenotípica-y-su-relación-con-la-correlación-genética-aditiva-y-ambiental"><i class="fa fa-check"></i><b>12.4</b> La correlación fenotípica y su relación con la correlación genética aditiva y ambiental</a></li>
+<li class="chapter" data-level="12.5" data-path="correlacionada.html"><a href="correlacionada.html#respuesta-correlacionada"><i class="fa fa-check"></i><b>12.5</b> Respuesta correlacionada</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#eficiencia-en-relación-a-la-selección-directa"><i class="fa fa-check"></i>Eficiencia en relación a la selección directa</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#el-signo-de-la-correlación-y-el-beneficio-demérito-de-la-misma"><i class="fa fa-check"></i>El signo de la correlación y el beneficio-demérito de la misma</a></li>
+</ul></li>
+<li class="chapter" data-level="12.6" data-path="correlacionada.html"><a href="correlacionada.html#matrices-de-varianza-covarianza"><i class="fa fa-check"></i><b>12.6</b> Matrices de varianza-covarianza</a></li>
+<li class="chapter" data-level="12.7" data-path="correlacionada.html"><a href="correlacionada.html#la-forma-generalizada-de-la-ecuación-del-criador"><i class="fa fa-check"></i><b>12.7</b> La forma generalizada de la ecuación del criador</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#ejercicios-12"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="selartifII.html"><a href="selartifII.html"><i class="fa fa-check"></i><b>13</b> Selección Artificial II</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="selartifII.html"><a href="selartifII.html#criterios-y-objetivos-de-selección"><i class="fa fa-check"></i><b>13.1</b> Criterios y objetivos de selección</a></li>
+<li class="chapter" data-level="13.2" data-path="selartifII.html"><a href="selartifII.html#selección-basada-en-un-solo-tipo-de-fuente-de-información"><i class="fa fa-check"></i><b>13.2</b> Selección basada en un solo tipo de fuente de información</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#diferentes-tipos-de-selección-basados-en-estructuras-de-parentesco-definidas"><i class="fa fa-check"></i>Diferentes tipos de selección basados en estructuras de parentesco definidas</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-las-heredabilidades-en-los-distintos-tipos-de-selección"><i class="fa fa-check"></i>Cálculo de las heredabilidades en los distintos tipos de selección</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="selartifII.html"><a href="selartifII.html#combinando-la-información-proporcionada-por-diferentes-tipos-de-parientes"><i class="fa fa-check"></i><b>13.3</b> Combinando la información proporcionada por diferentes tipos de parientes</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-los-elementos-de-la-matriz-de-varianzas-covarianzas-fenotípica"><i class="fa fa-check"></i>Cálculo de los elementos de la matriz de varianzas-covarianzas fenotípica</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-los-elementos-del-vector-de-varianzas-covarianzas-genéticas"><i class="fa fa-check"></i>Cálculo de los elementos del vector de varianzas-covarianzas genéticas</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#información-propia-y-de-un-progenitor"><i class="fa fa-check"></i>Información propia y de un progenitor</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#información-propia-y-de-varios-hermanos-enteros"><i class="fa fa-check"></i>Información propia y de varios hermanos enteros</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#pruebas-de-progenie"><i class="fa fa-check"></i>Pruebas de progenie</a></li>
+<li class="chapter" data-level="13.3.1" data-path="selartifII.html"><a href="selartifII.html#límites-de-la-eficiencia-en-pruebas-de-progenie"><i class="fa fa-check"></i><b>13.3.1</b> Límites de la eficiencia en pruebas de progenie</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#precisión-del-valor-de-cría-a-partir-del-índice"><i class="fa fa-check"></i>Precisión del valor de cría a partir del índice</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="selartifII.html"><a href="selartifII.html#métodos-de-selección-para-varias-características"><i class="fa fa-check"></i><b>13.4</b> Métodos de selección para varias características</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#selección-en-tandem"><i class="fa fa-check"></i>Selección en tandem</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#niveles-independientes-de-rechazo"><i class="fa fa-check"></i>Niveles Independientes de Rechazo</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#índices-de-selección"><i class="fa fa-check"></i>Índices de Selección</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="selartifII.html"><a href="selartifII.html#índices-de-selección-para-múltiples-características"><i class="fa fa-check"></i><b>13.5</b> Índices de selección para múltiples características</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#el-índice-de-smith-hazel"><i class="fa fa-check"></i>El índice de Smith-Hazel</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="selartifII.html"><a href="selartifII.html#métodos-y-técnicas-avanzadas-de-selección"><i class="fa fa-check"></i><b>13.6</b> Métodos y técnicas avanzadas de selección</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#blup-las-ecuaciones-del-modelo-mixto-lineal"><i class="fa fa-check"></i>BLUP: las ecuaciones del modelo mixto lineal</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#ejercicios-13"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="endoexo.html"><a href="endoexo.html"><i class="fa fa-check"></i><b>14</b> Endocría, exocría, consanguinidad y depresión endogámica</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="endoexo.html"><a href="endoexo.html#el-aumento-de-la-consanguinidad-a-partir-del-número-de-individuos"><i class="fa fa-check"></i><b>14.1</b> El aumento de la consanguinidad a partir del número de individuos</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#qué-proporción-de-machos-es-necesaria-para-mantener-un-tamaño-efectivo-poblacional-mínimo"><i class="fa fa-check"></i>¿Qué proporción de machos es necesaria para mantener un tamaño efectivo poblacional mínimo?</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="endoexo.html"><a href="endoexo.html#el-coeficiente-de-consanguinidad-en-razas-lecheras"><i class="fa fa-check"></i><b>14.2</b> El coeficiente de consanguinidad en razas lecheras</a></li>
+<li class="chapter" data-level="14.3" data-path="endoexo.html"><a href="endoexo.html#depresión-endogámica"><i class="fa fa-check"></i><b>14.3</b> Depresión endogámica</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#los-riesgos-del-uso-masivo-de-reproductores-y-la-endogamia-elevada"><i class="fa fa-check"></i>Los riesgos del uso masivo de reproductores y la endogamia elevada</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#redistribución-en-la-varianza-genética"><i class="fa fa-check"></i>Redistribución en la varianza genética</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="endoexo.html"><a href="endoexo.html#exocría-y-heterosis"><i class="fa fa-check"></i><b>14.4</b> Exocría y Heterosis</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#el-modelo-del-templo-griego"><i class="fa fa-check"></i>El modelo del templo griego</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#un-modelo-sencillo-de-heterosis-bajo-exocría"><i class="fa fa-check"></i>Un modelo sencillo de heterosis bajo exocría</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#complementariedad"><i class="fa fa-check"></i>Complementariedad</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#tipos-de-cruzamientos"><i class="fa fa-check"></i>Tipos de cruzamientos</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="endoexo.html"><a href="endoexo.html#modelo-genético-de-cruzamientos"><i class="fa fa-check"></i><b>14.5</b> Modelo genético de cruzamientos</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#ejercicios-14"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#notas-al-pie"><i class="fa fa-check"></i>Notas al pie</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="GxE.html"><a href="GxE.html"><i class="fa fa-check"></i><b>15</b> Normas de reacción e interacción Genotipo x Ambiente</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="GxE.html"><a href="GxE.html#plasticidad-fenotípica-y-normas-de-reacción"><i class="fa fa-check"></i><b>15.1</b> Plasticidad fenotípica y normas de reacción</a></li>
+<li class="chapter" data-level="15.2" data-path="GxE.html"><a href="GxE.html#interacción-gxe-en-dos-ambientes"><i class="fa fa-check"></i><b>15.2</b> Interacción GxE en dos ambientes</a></li>
+<li class="chapter" data-level="15.3" data-path="GxE.html"><a href="GxE.html#correlación-genética-a-través-de-dos-ambientes"><i class="fa fa-check"></i><b>15.3</b> Correlación genética a través de dos ambientes</a>
+<ul>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#procedimientos-de-estimación"><i class="fa fa-check"></i>Procedimientos de estimación</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="GxE.html"><a href="GxE.html#genética-cuantitativa-de-la-interacción-gxe"><i class="fa fa-check"></i><b>15.4</b> Genética cuantitativa de la interacción GxE</a></li>
+<li class="chapter" data-level="15.5" data-path="GxE.html"><a href="GxE.html#otros-ejemplos-de-interacción-genotipo-ambiente"><i class="fa fa-check"></i><b>15.5</b> Otros ejemplos de interacción genotipo-ambiente</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#ejercicios-15"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apendice-a-conceptos-matemáticos-básicos.html"><a href="apendice-a-conceptos-matemáticos-básicos.html"><i class="fa fa-check"></i>APENDICE A: Conceptos Matemáticos Básicos</a></li>
+<li class="chapter" data-level="" data-path="apendice-b-cálculo-diferencial-e-integral-ecuaciones-diferenciales.html"><a href="apendice-b-cálculo-diferencial-e-integral-ecuaciones-diferenciales.html"><i class="fa fa-check"></i>APENDICE B: Cálculo Diferencial e Integral, ecuaciones diferenciales</a></li>
+<li class="chapter" data-level="" data-path="bibliografía.html"><a href="bibliografía.html"><i class="fa fa-check"></i>Bibliografía</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intro" class="section level1" number="1">
+<h1><span class="header-section-number">Capítulo 1</span> Introducción a la Genómica</h1>
+<p>El presente capítulo es una somera introducción a la genómica y apenas tiene como cometido el asegurarnos de que algunos conceptos básicos sobre la misma, que usaremos durante el curso, se encuentren disponibles. El foco del mismo es en diferentes metodologías para el estudio de los genomas, muchas de ellas que usaremos en distintos ejemplos y secciones del curso y poco esfuerzo se hace por explicar las bases de la herencia y la estructura y organización de los genomas eucariotas y procariotas, que se asumen conocidos.</p>
+<p>Los organismos en nuestro planeta derivan todos de un organismo ancestral, desconocido, y por lo tanto es de esperar que sus genomas compartan determinadas características. Sin embargo, al mismo tiempo podemos observar una enorme diversidad entre los mismos, por lo que resulta fundamental entender los procesos que llevan a esas diferencias. Para esto, debemos en primer lugar poder conocer las secuencias y comparándolas encontrar las diferencias entre las mismas. La secuenciación de genomas es una historia que comenzó en las últimas décadas del siglo pasado y desde ese momento no ha dejado de crecer, en ciertos momentos a velocidad vertiginosa. En particular, a partir de las tecnologías de segunda y tercera generación, esto ha permitido pasar de la secuenciación de un genoma por especie a la secuenciación de cientos o miles de individuos de la especie y de esta forma poder caracterizar mucho mejor la variabilidad existente.</p>
+<p>Por otra parte, los microorganismos juegan un papel relevante en casi todos los ecosistemas, a diferentes escalas, desde bosques, praderas, ríos y mares a los ecosistemas internos (aparato digestivo, por ejemplo) y externos (piel) de los organismos. A pesar de su importancia, la diversidad microbiana apenas ha sido explorada, fundamentalmente por las dificultades asociadas al cultivo de los microorganismos, muchos de ellos directamente no-cultivables. En este sentido, también la genómica ha jugado un rol destacado en los avances que se han producido en este campo en los últimos años. La metagenómica, la metagenómica funcional y la metatranscriptómica han contribuido a entender la composición de los ecosistemas microbianos, así como las funciones de los genes involucradas y la regulación de su expresión, por lo que mencionaremos cada una de estas aproximaciones.</p>
+<!-- De ninguna manera este capítulo permite (ni lo pretende) sustituir los conocimientos sobre la misma que deberás haber adquirido previamente, especialmente a partir del curso de ___Genética I___, pero también de los cursos de __Biología__ y __Bioquímica__. -->
+<!-- El curso de ___Genética II___ tiene dos grandes bloques conceptuales: __Genética de Poblaciones___ y ___Genética Cuantitativa___. Sin embargo, entendimos desde la creación del mismo que la genómica debería estar fuertemente presente en la formación del Ingeniero Agrónomo, por lo que dadas las limitaciones de créditos que teníamos, decidimos que la mejor forma de compatibilizar las cosas era incorporando la genómica de una manera transversal, particularmente a través de varios ejemplos que iremos viendo durante el curso. -->
+<div id="variabilidad-genética" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Variabilidad genética</h2>
+<p>Todos los organismos presentan diferencias observables (fenotípicas) entre ellos, muchas de las cuales son productos del desarrollo en determinados ambientes (específicos para cada individuo) y otras se corresponden a las diferencias en el genoma. Excepto los clones (copias idénticas del mismo individuo), todos los organismos son de alguna manera diferentes entre sí. Aún entre gemelos es posible postular que la <strong>epigenética</strong> puede jugar un rol diferente en su desarrollo. Estas diferencias a nivel genético o genómico son las que nos resultan fundamentales cuando hablamos de mejorar una especie de nuestro interés o en cualquier instancia en la que busquemos seleccionar algunos individuos de la población.</p>
+<p>Muchas otras veces estamos más interesados en entender las diferencias entre especies y como las proporciones de individuos de las mismas juegan en la dinámica de un ecosistema. Claramente, la robustez de un ecosistema suele estar asociada al balance de diversas especies, cada una jugando roles diferentes, pero ese balance no solo depende de la presencia de algún miembro de cada especie, sino de las proporciones que esas especies ocupan en el ecosistema. Tradicionalmente, en ecología se definen tres tipos de medidas de diversidad, la diversidad alfa, la diversidad<br />
+beta y la diversidad gamma, de acuerdo a la escala del fenómeno estudiado.</p>
+<p>Se llama <strong>diversidad alfa</strong> a la que describe la diversidad de especies dentro de una comunidad a una escala pequeña o local. Esta escala es normalmente del tamaño de un ecosistema y es a la que generalmente nos referimos al hablar de una zona.</p>
+<p>La <strong>diversidad beta</strong> describe la diversidad de especies entre dos comunidades o ecosistemas. Involucra una escala mayor, ya que incluye ecosistemas (que correspondían a la diversidad alfa) y en general suele haber alguna distinción geográfica o barrera importante entre las comunidades de referencia.</p>
+<p>La <strong>diversidad gamma</strong> se refiere a una escala de estudio mucho mayor, como por ejemplo un bioma, donde se compara la diversidad de especies entre muchos ecosistemas.</p>
+<p>Aunque la diversidad biológica puede cuantificarse de muchas maneras diferentes, los dos factores principales que se tienen en cuenta para medir la diversidad son la riqueza y la uniformidad. La riqueza representa el número de tipos (especies) diferentes entre todos los que identificamos en el área de interés. Sin embargo, nuestra intuición nos dice que la uniformidad representa también una parte importante de la diversidad. Es decir, si en un ambiente tenemos 1 individuos de cada una de 4 especies y 996 individuos de una quinta especie, claramente identificaremos una menor diversidad respecto a otro ambiente que tiene 200 individuos de cada una de las especies. En general, la uniformidad compara la similitud del tamaño de la población de cada una de las especies presentes.</p>
+<p>Para cada uno de estos tipos de diversidad se han desarrollado índices que permiten obtener estimaciones de su importancia relativa a otros sistemas. Por ejemplo para la diversidad alfa el índice más sencillo de entender es la entropía de Shannon (por el matemático Claude Shannon que la propuso para un problema de transmisión de información), que mide la incertidumbre es asignar la identidad de un individuo elegido al azar de la población. Si le llamamos <span class="math inline">\(p_i\)</span> a la proporción (frecuencia relativa) de individuos de la especie <span class="math inline">\(i\)</span>, de un total de <span class="math inline">\(k\)</span> especies identificadas en el ecosistema, entonces el <strong>índice de Shannon</strong> se calcula como</p>
+<p><span class="math display" id="eq:alphadiver1">\[\begin{equation}
+H&#39;=-\sum^k_{i=1} p_i \ln p_i
+\tag{1.1}
+\end{equation}\]</span></p>
+<p>Es decir, cada frecuencia es multiplicada por su logaritmo y sumada, con el resultado final multiplicado por <span class="math inline">\(-1\)</span> ya que cualquiera de los logartitmos será menor o igual a cero (porque para todas las especies <span class="math inline">\(0 \leqslant p_i \leqslant 1\)</span>). En el caso de una sola especie <span class="math inline">\(\ln p_i=\ln 1=0\)</span>, por lo que la diversidad será cero. Cuanto más homogéneo sea el reparto de las especies mayor será el índice de Shannon. En particular, el máximo del índice de Shanon se dará cuando <span class="math inline">\(p_i=\frac{N/k}{N}=\frac{1}{k}\ \forall \ i\)</span>, en cuyo caso</p>
+<p><span class="math display" id="eq:alphadiver1p1">\[\begin{equation}
+H_{max}=-\sum^k_{i=1} \frac{1}{k} \ln \frac{1}{k}=\\
+=k\ \frac{1}{k} [\ln 1 -\ln k]=-[0-\ln k] \therefore \\
+H_{max}=\ln k
+\tag{1.2}
+\end{equation}\]</span></p>
+<p>es decir, el máximo del índice será el logaritmo del número de especies, lo que ocurre cuando todas las especies tienen el mismo número de integrantes.</p>
+<p>Un índice relacionado directamente al índice de Shanone es el propuesto por <span class="citation"><a href="#ref-Pielou1969" role="doc-biblioref">Pielou</a> (<a href="#ref-Pielou1969" role="doc-biblioref">1969</a>)</span>, que estandariza el índice de Shanon por la riqueza, lo que lo deja como un índice de uniformidad (“evenness” en inglés) que se calcular como</p>
+<p><span class="math display" id="eq:alphadiver1p2">\[\begin{equation}
+E=\frac{H&#39;}{H_{max}}=\frac{H&#39;}{\ln k}
+\tag{1.3}
+\end{equation}\]</span></p>
+<p>Otro índice popular es el <strong>índice de Simpson</strong>. El índice de Simpson (<span class="math inline">\(D\)</span>) mide la probabilidad de que dos individuos seleccionados al azar de una muestra pertenezcan a la misma especie o categoría. Es decir, si <span class="math inline">\(n_i\)</span> representa el número de individuos de la especie o categoría <span class="math inline">\(i\)</span> y <span class="math inline">\(N\)</span> el número total de individuos, es decir <span class="math inline">\(N=\sum_i n_i\)</span>, entonces</p>
+<p><span class="math display" id="eq:alphadiver2">\[\begin{equation}
+D=\sum^k_{i=1} \frac{n_i(n_i-1)}{N(N-1)}
+\tag{1.4}
+\end{equation}\]</span></p>
+<p>La intuición de este índice es que si los individuos se concentran en pocos tipos diferentes el valor de <span class="math inline">\(D\)</span> será más alto, es decir lo contrario a lo que esperaríamos para un índice de diversidad. De hecho, con este índice 0 representa una diversidad infinita y 1, ninguna diversidad. Es decir, cuanto mayor sea el valor de <span class="math inline">\(D\)</span>, menor será la diversidad. Para superar este problema, se suele restar a 1 el valor de <span class="math inline">\(D\)</span>, es decir se reporta <span class="math inline">\(1-D\)</span>. Otra alternativa es reportar el recíproco de <span class="math inline">\(D\)</span>, es decir <span class="math inline">\(1/D\)</span>. Cuando el número de individuos es muy grande, entonces en general <span class="math inline">\(\frac{n_i -1}{N-1} \to \frac{n_i}{N}\)</span>, por lo que</p>
+<p><span class="math display" id="eq:alphadiver2p1">\[\begin{equation}
+D=\sum^k_{i=1} \frac{n_i(n_i-1)}{N(N-1)}=\sum^k_{i=1} \frac{n_i}{N}\frac{(n_i-1)}{(N-1)} \approx \sum^k_{i=1} \frac{n_i}{N}\frac{(n_i)}{(N)} \therefore \\
+D \approx \sum^k_{i=1} \frac{n^2_i}{N^2}
+\tag{1.5}
+\end{equation}\]</span></p>
+<p>El <strong>índice de cobertura de Good</strong> es usado a veces como estimador de diversidad alfa y se calcula mediante la siguiente ecuación:</p>
+<p><span class="math display" id="eq:alphadiver3">\[\begin{equation}
+C=1-\frac{F_1}{N}
+\tag{1.6}
+\end{equation}\]</span></p>
+<p>donde <span class="math inline">\(F_1\)</span> es el número de <strong>OTUs</strong> (“Operational Taxonomic Units,” Unidades Taxonómicas Operacionales) en la muestra con un solo representante. <strong>OTU</strong> es una forma de expresar una unidad taxónomica particular a un nivel de la taxonomía determinado. Por ejemplo, en algunos casos las <strong>OTUs</strong> pueden representar especies, pero otra veces representan niveles más altos o más bajo, por lo que la definición de “operacional.” La idea del índice es capturar de alguna manera la probabilidad de perder <strong>OTUs</strong> por un tema de muestreo, es decir aquellas <strong>OTUs</strong> que no fueron secuenciadas pero que se encontraban presentes y se hallarían con tamaños muestrales mucho mayores.</p>
+<p>La diversidad juega un papel fundamental en la resiliencia de los sistemas, tanto la diversidad entre especies como dentro de especies. Por ejemplo, la pérdida de diversidad asociada a la revolución verde entre la década del 60 y del 80 del siglo XX representa una pérdida irrecuperable de patrimonio genético desarrollado durante miles y millones de años. Lamentablemente, es poco probable que la biotecnología pueda recuperar en breve lo que la naturaleza desarrolló durante millones de años, por lo que resulta trascendental pensar en conservar la diversidad en nuestro planeta.</p>
+<p><br />
+</p>
+<hr />
+<div id="ejemplo-1.1" class="section level4 unnumbered">
+<h4>Ejemplo 1.1</h4>
+<p>Luego de un muestreo realizado a partir de <strong>metagenómica</strong> en dos ambientes diferentes, la distribución de especies (<strong>OTUs</strong>) en los mismos es la siguiente</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Especie</th>
+<th align="left">Ambiente 1</th>
+<th align="left">Ambiente 2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>OTU 1</strong></td>
+<td align="left"><span class="math inline">\(60\)</span></td>
+<td align="left"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>OTU 2</strong></td>
+<td align="left"><span class="math inline">\(150\)</span></td>
+<td align="left"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>OTU 3</strong></td>
+<td align="left"><span class="math inline">\(0\)</span></td>
+<td align="left"><span class="math inline">\(297\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>OTU 4</strong></td>
+<td align="left"><span class="math inline">\(390\)</span></td>
+<td align="left"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>OTU 5</strong></td>
+<td align="left"><span class="math inline">\(400\)</span></td>
+<td align="left"><span class="math inline">\(700\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Total</strong></td>
+<td align="left"><span class="math inline">\(1000\)</span></td>
+<td align="left"><span class="math inline">\(1000\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Calcular los difentes índices para los dos ambientes y discutir los resultados.</p>
+<p><br />
+</p>
+<p>Como el total de “individuos” (<strong>reads</strong>) obtenidos en ambas muestras es <span class="math inline">\(1000\)</span>, alcanza con dividir entre ese número para tener la frecuencia relativa. Por lo tanto, utilizando la ecuación <a href="intro.html#eq:alphadiver1">(1.1)</a> el índice de Shanon para el primer ambiente es igual a</p>
+<p><span class="math display">\[\begin{equation}
+H&#39;_1=-\sum^k_{i=1} p_i \ln p_i =\\
+=-[0,06 \times \ln 0,06 + 0,15 \times \ln 0,15 + 0,39 \times \ln 0,39 +\\
++ \ln 0,01 + 0,4 \times \ln 0,4] \therefore \\
+H&#39;_1=1,1871
+\end{equation}\]</span></p>
+<p>mientras que para el segundo ambiente el mismo es</p>
+<p><span class="math display">\[\begin{equation}
+H&#39;_2=-\sum^k_{i=1} p_i \ln p_i =\\
+=-[0,001 \times \ln 0,001 + 0,001 \times \ln 0,001 + 0,297 \times \ln 0,297 +\\
++0,001 \times \ln 0,001 + \ln 0,7 + 0,4 \times \ln 0,7] \therefore \\
+H&#39;_2=0,9855
+\end{equation}\]</span></p>
+<p>Notar que en el <strong>ambiente 1</strong> no se encontró la especie <strong>OTU 3</strong>, por lo que no se incluye en los cálculos (de hecho <span class="math inline">\(\ln 0=-\infty\)</span>). De acuerdo con esto, según el <strong>índice de Shanon</strong> el <strong>ambiente 1</strong> es más diverso que el <strong>ambiente 2</strong>. Para medir la uniformidad utilizando el índice propuesto por Pielou (1969), primero tenemos que calcular el máximo posible del índice de Shanon, que a partir de la ecuación <a href="intro.html#eq:alphadiver1p1">(1.2)</a> sabemos que es igual al logaritmo del número de <strong>OTUs</strong>, es decir <span class="math inline">\(H_{max_1}=\ln k=\ln 4=1,3863\)</span> y <span class="math inline">\(H_{max_2}=\ln k=\ln 5=1,6094\)</span>. Por lo tanto, aplicando la ecuación <a href="intro.html#eq:alphadiver1p2">(1.3)</a>, tenemos que el índice de uniformidad para los dos ambientes será</p>
+<p><span class="math display">\[\begin{equation}
+E_1=\frac{H&#39;_1}{H_{max_1}}=\frac{1,1871}{1,3863}= 0,8563 \\
+E_2=\frac{H&#39;_2}{H_{max_2}}=\frac{0,9855}{1,6094}= 0,6123
+\end{equation}\]</span></p>
+<p>lo que habla de una uniformidad mucho menor en el <strong>ambiente 2</strong>.</p>
+<p>Para el índice de Simpson vamos a utilizar la ecuación <a href="intro.html#eq:alphadiver2">(1.4)</a>, por lo que para el <strong>ambiente 1</strong> el mismo será</p>
+<p><span class="math display">\[\begin{equation}
+D_1=\sum^k_{i=1} \frac{n_i(n_i-1)}{N(N-1)}=\\
+=\left[\frac{60(59)+150(149)+390(389)+400(399)}{1000 \times 999}\right]=0,3375
+\end{equation}\]</span></p>
+<p>mientras que para el <strong>ambiente 2</strong> su valor será</p>
+<p><span class="math display">\[\begin{equation}
+D_2=\sum^k_{i=1} \frac{n_i(n_i-1)}{N(N-1)}=\\
+=\left[\frac{1(0)+1(0)+297(296)+1(0)+700(699)}{1000 \times 999}\right]=0,5778
+\end{equation}\]</span></p>
+<p>Si utilizamos el criterio de reportar <span class="math inline">\(1-D\)</span>, entonces <span class="math inline">\(1-D_1=1-0,6625\)</span>, mientras que <span class="math inline">\(1-D_2=1-0,4222\)</span>. Si utilizamos el criterio del recíproco, entonces <span class="math inline">\(1/D_1=2,9626\)</span> y <span class="math inline">\(1/D_2=1,7307\)</span>, por lo que se aprecia claramente que la diversidad en el <strong>ambiente 1</strong> es mayor que la del <strong>ambiente 2</strong> de acuerdo a este índice.</p>
+<p>Finalmente, de acuerdo a la ecuación <a href="intro.html#eq:alphadiver3">(1.6)</a>, teniendo en cuenta que en el primer ambiente no hay ningún <strong>singleton</strong> mientras que en el segundo hay 3, el <strong>índice de cobertura de Good</strong> para los dos ambientes sería</p>
+<p><span class="math display">\[\begin{equation}
+C_1=1-\frac{0}{1000}=1
+C_2=1-\frac{3}{1000}=0,997
+\end{equation}\]</span></p>
+<p><br />
+</p>
+<hr />
+<div class="graybox">
+<div class="center">
+<p><strong>PARA RECORDAR</strong></p>
+</div>
+</div>
+</div>
+<div id="detectando-la-variabilidad-diferentes-técnicas" class="section level3" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Detectando la variabilidad: diferentes técnicas</h3>
+<p>Para entender la variabilidad genética es necesario conocer las secuencias, o al menos algunas secuencias que nos puedan servir de marcador, en muchos individuos. Un ejemplo de estudios iniciales de diversidad genética es la utilización de grupos sanguíneos, que veremos en el próximo capítulo. Hasta hace algunos años la búsqueda de marcadores fiables de diversidad genética representaba un enorme desafío y se desarrollaron una plétora de métodos para obtener marcadores moleculares de diversidad. Tanto el trabajo como los costos eran enormes, lo que dificultaba el desarrollo de estudios a gran escala en este sentido. Afortunadamente, a fines del siglo XX las técnicas de secuenciación habían avanzado lo suficiente como para incluir centenas de individuos en los estudios. Más aún, el desarrollo de técnicas como los <strong>microarrays</strong> posibilitaron la automatización de muchos análisis, en especial los de expresión, pero también resultaron fundamentales a la hora de abaratar los costos para estudios masivos de diversidad.</p>
+<p>Los <strong>microarrays</strong> son un arreglo de <strong>sondas</strong> moleculares colocadas en una placa. Originalmente contenían apenas unas decenas de sondas, con la robotización y con la aplicación de tecnologías que se usan en la fabricación de semiconductores permitieron alcanzar densidades del orden del millón de sondas por array (placa). Una sonda molecular, en este caso, es una secuencia específica a un gen o una región de un gen y que es (idealmente) única en el genoma de referencia. Cuando el <strong>ADN</strong> o el <strong>ADN copia</strong> (en los estudios de transcriptómica) de un individuo se hibrida con dicha sonda (que está fijada en la placa) se produce algún tipo de señal, por ejemplo la emisión de luz en determinada frecuencia al ser iluminada por un <strong>laser</strong>.</p>
+<p>Esta tecnología permite, por ejemplo, identificar si la secuencia presente en el organismo es de un tipo u otro, por ejemplo en el caso de los <strong>SNPs</strong> (polimorfismos de un solo nucleótido) y en el caso de las especies diploides identificar el genotipo. Para conocer la diversidad del genoma humano es usual usar chips de densidad media (10-60K) o de alta densidad (hasta un millón de SPNs). En especies de interés comercial existen diferentes tipos de alternativas, desde arrays de baja densidad (apenas unos pocos miles de SNPs), media, hasta los de alta densidad, como el <strong>BovineHD</strong> que comprende más de 777 mil SNPs, compatible con todas las razas bovinas lecheras o de carne.</p>
+<p>A pesar del enorme éxito de los microarrays para estudiar la diversidad genética en diversas poblaciones de diferentes especies, los mismos padecen de un problema fundamental: para crear una sonda para medir variabilidad hay que conocer las secuencias de regiones que contengan variabilidad. Es decir, para estudiar la variabilidad por esta técnica hay que tener alguna información previa de qué regiones son variables. Esto se debe a que la suma de los tamaños de las sondas son extremadamente pequeños en relación al largo total de los genomas. Por ejemplo, en genoma humano un chip de alta densidad cubre 1 millón de posiciones, de las más de 3.000 millones que tiene el genoma. Para elegir bien ese millón hay que tener muy buena información previa. Además, otro problema derivado de los microarrays y de este sesgo en los marcadores a incluir es que luego de diseñado el array solo va a captar variabilidad en las posiciones del genoma para el que fue diseñado. Si una nueva población aparece con variabilidad importante en otras regiones, el array no va a ser capaz de detectarlo. Por ejemplo, en genoma humano, hasta hace poco tiempo los arrays poseían un sesgo importante “eurocéntrico,” porque la mayor parte de la información previa venía de Europa. Esto dejaba fuera de los mismos sitios de alta variabilidad en poblaciones asiáticas o amerindias, por ejemplo, determinando que las mismas tenían menos variabilidad que la real.</p>
+<p>Afortunadamente, las <strong>tecnologías de secuenciación masiva</strong> que se desarrollaron a comienzo del siglo XXI cambiaron definitivamente el panorama ya que permiten obtener las secuencias de decenas o cientos de individuos a un precio razonable y en tiempos razonables. Como referencia, el esfuerzo global para obtener la secuencia del primer genoma humano llevó más de 10 años a decenas de laboratorios repartidos en el mundo y costó más de 3.000 millones de dólares. Actualmente, un genoma humano tarda en secuenciarse menos de una semana (el record mundial, establecido recientemente es de 5 hroas y 2 minutos) y cuesta en promedio unos mil dólares (sin incluir los costos del análisis posterior). Más aún, si bien las tecnologías de segunda generación (<strong>Roche 454</strong>, <strong>Illumina</strong> y <strong>SOLiD</strong>) tuvieron un éxito enorme, la flexibilidad de las mismas era algo limitada y en particular muy difícil de bajar los tiempos de secuenciación, además de tener ciertos sesgos específicos en los resultados. En la segunda década de esto siglo comenzaron a aparecer y consolidarse otras nuevas tecnologías, que se dieron en llamar de tercera generación y que incluyen los secuenciadores <strong>IonTorrent</strong>, los de <strong>Oxford Nanopore Technologies</strong> y los <strong>PacBio</strong>. En conjunto, estas tecnologías, sumadas a <strong>Illumina</strong> que fue la única de las de segunda que sobrevive con mucho éxito, ahora si permiten tener una flexibilidad enorme en tamaños y costos de equipamientos y reactivos, en sesgos y distribución de errores, así como en la velocidad de secuenciación.</p>
+</div>
+<div id="metagenómica-y-metatranscriptómica" class="section level3" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Metagenómica y Metatranscriptómica</h3>
+<p>En muchos casos nos interesa determinar la estructura de alguna comunidad biológica y estudiar su evolución en el tiempo, o simplemente comparar esa estructura en diferentes condiciones. Por ejemplo, la microbiota ruminal es fundamental para los procesos que determinan la degradación de la materia orgánica que el animal recibe y qué productos de esta degradación recibirá el animal y en qué proporciones. ¿Qué variables afectan más la composición de la microbiota? ¿El pH ruminal? ¿El porcentaje de materia seca? ¿La proporción de fibra? En el plano de la salud, ¿qué microorganismos se encuentran presente en la ubre sana y qué microorganismos en la glándula de un animal con mastitis? ¿La infección es a causa de un microorganismo dominante o el patógeno no precisa ser el que domine el ecosistema ruminal? ¿El rol del patógeno es directo sobre la salud del animal o su rol se limita a desestabilizar la ecología de la glándula?</p>
+<p>Para poder responder a cualquiera de estas preguntas es necesario poder caracterizar la comunidad microbiana presente. A diferencia de lo que ocurre con especies de plantas, hongos y animales que generalmente podemos percibir y contar a simple vista, con los microorganismos nos ocurre que necesitamos identificarlos de formas más indirectas. Si bien usando el microscopio (con algo de suerte) podríamos ser capaces de reconocer el genero de algunas bacterias presentes en una muestra, difícilmente seamos capaces de reconocer a la mayoría, mucho menos las especies y cepas de estas bacterias y muchísimo menos cuantificar la proporción de cada grupo bacteriano. Es decir, para entender la comunidad vegetal de un bosque no alcanza con determinar la presencia de al menos un ejemplar de una especie, es fundamental entender la proporción que dicha especie ocupa en el ecosistema.</p>
+<p>El hecho de todos los organismos en nuestro planeta “desciendan” del mismo organismo ancestral, a veces conocido como <strong>LUCA</strong> (“Last Unknown Common Ancestor”), nos sugiere que sería de espera encontrar ciertas regularidades en la información genética de los mismos. Es decir, diferentes formas de vida son el producto de modificaciones a formas de vida preexistentes, al menos hasta llegar a <strong>LUCA</strong>, por lo que de alguna manera todos los seres vivos comparten ciertas características. Las diferencias entre especies, como sabemos, se corresponden en gran medida a cambios en el genoma de los mismos, tanto a nivel de mutaciones puntuales como de inserciones y deleciones, duplicaciones de regiones del genoma o aún re-arreglos cromosómicos. La clave para identificar especies es ubicar secuencias lo suficientemente conservadas como para que deban encontrarse en todos los organismos de interés, pero al mismo tiempo con suficientes cambios entre especies como para poder identificarlas en forma unívoca.</p>
+<p>Dentro de las secuencias con estas características, la maquinaria vinculada a la traducción de la información es ciertamente privilegiada ya que constituye un elemento clave para cualquier forma de vida: la capacidad de traducir la información genética en los efectores, que suelen ser la proteínas. La trducción de la información implica una maquinaria tan compleja que resulta completamente implausible su surgimiento de forma independiente en diferentes linajes de la vida, más aún dado que cualquier especie ya hubiese precisado de una para existir. Además, debido a su enorme complejidad se trata de una maquinaria muy ajustada y donde es posible introducir muy pocas variaciones sin que la maquinaria deje de funcionar completamente, en particular porque el <strong>fitness</strong> de lo organismos tiene, en muchos casos, una vinculación directa con la tasa de producción de las proteínas. En particular, el <strong>ARN ribosomal</strong> (<strong>ARNr</strong>) está constituido por una serie de moléculas de <strong>ARN</strong> que dependen de su estructura espacial para poder cumplir su rol. Esto incluye apareamientos Watson-Crick entre regiones complementarias, pero también bases modificadas post-transcripcionalmente para asegurar la estabilidad de la molécula y la fidelidad de de la traducción.</p>
+<p>En procariotas, el <strong>ARNr 16S</strong> es una molécula usada en forma extensiva para identificar el genero y especie de los organismos. De hecho, la propuesta para un sistema de clasificación de la vida de <span class="citation"><a href="#ref-WoeseKandlerWheelis1990" role="doc-biblioref">Woese, Kandler, and Wheelis</a> (<a href="#ref-WoeseKandlerWheelis1990" role="doc-biblioref">1990</a>)</span>, posiblemente la más aceptada hoy en día y representada en la figura <a href="intro.html#fig:arbolvida">1.1</a>, se basa en las diferencias observadas en la molécula de <strong>16S</strong> y su equivalente en eucariotas, el <strong>ARNr 18S</strong>. De acuerdo con esta forma de organizar las diferentes especies, existen tres grandes dominios de la vida: <em>Bacteria</em>, <em>Archaea</em> y <em>Eukarya</em>. Es importante notar que a diferencia de la taxonomía basada en similitud morfológica, la clasificación propuesta por <span class="citation"><a href="#ref-WoeseKandlerWheelis1990" role="doc-biblioref">Woese, Kandler, and Wheelis</a> (<a href="#ref-WoeseKandlerWheelis1990" role="doc-biblioref">1990</a>)</span> se basa en similitud en las secuencias genómicas, donde de acuerdo a determinados modelos se pueden asignar relaciones de proximidad y distancia entre secuencias pertenecientes a organismos. En particular, la reconstrucción filogenética se realiza generalmente a partir de secuencias de genes ortólogos, en este caso el <strong>16S</strong>, por ejemplo. Si bien desde el punto de vista morfológico los miembros del dominio <strong>Archaea</strong> no son, aparentemente, muy distintos de los miembros de <strong>Bacteria</strong>, desde el punto de vista evolutivo poseen grandes diferencias que los hacen acreedores de su propio dominio.</p>
+<p><br />
+</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:arbolvida"></span>
+<img src="figuras/PhylogeneticTreeWoese1990.png" alt="Árbol filogenético de los 3 dominios biológicos, Bacteria, Archaea y Eukarya. Con una barra vertical se representa la existencia de LUCA, el último ancestro común, desconocido. (Por Maulucioni - Trabajo Propio, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=24740337)." width="491" />
+<p class="caption">
+Figure 1.1: Árbol filogenético de los 3 dominios biológicos, <em>Bacteria</em>, <em>Archaea</em> y <em>Eukarya</em>. Con una barra vertical se representa la existencia de <strong>LUCA</strong>, el último ancestro común, desconocido. (Por Maulucioni - Trabajo Propio, CC BY-SA 3.0, <a href="https://commons.wikimedia.org/w/index.php?curid=24740337" class="uri">https://commons.wikimedia.org/w/index.php?curid=24740337</a>).
+</p>
+</div>
+<p>Las técnicas de secuenciación masiva implicaron un salto enorme para la caracterízación de poblaciones microbianas, ya que permiten la secuenciación de miles y hasta millones de fragmentos de secuencias en muy poco tiempo y en forma paralela. La idea más básica consiste en secuenciar una determinada secuencia o región que se encuentre en todos los organismos de interés y que presente suficiente varaiabilidad, como es el caso del <strong>ARNr 16S</strong>. Esquemáticamente, los pasos serían los siguientes:</p>
+<p><br />
+</p>
+<p>1- Determinar el grupo de organismos de interés y cuál sería la molécula y región de interés. Las regiones hipervariables <strong>V3</strong> y <strong>V4</strong> del <strong>ARNr 16S</strong> son buenas candidatas iniciales para procariotas. El gen tiene una longitud aproximada de 1.500 pb y contiene nueve regiones variables intercaladas entre regiones conservadas. Qué región del ARNr 16S secuenciar es un área de debate, y la misma puede variar dependiendo de cosas como los objetivos experimentales, el diseño y el tipo de muestra, aunque las regiones <strong>V3</strong> y <strong>V4</strong> son ampliamente utilizadas.</p>
+<p>2- Extraer los ácidos nucléicos de interés y amplificar por PCR las regiones de interés. Los protocolos permiten en general utilizar “barcodes,” que son secuencias específicas que se agregan a las secuencias (un “barcode” para cada muestra), lo que permite correr en paralelo hasta 96 muestras en la misma “corrida” del secuenciador.</p>
+<p>3- Secuenciar las muestras preparadas de acuerdo al protocolo. Existen diferentes tecnologías y en distintos tamaños, lo que permite secuenciar desde unas poquitas muestras hasta centenas de ellas a un costo razonable y en tiempos razonables. Las distintas tecnologías poseen problemas diferentes, pero en general no introducen sesgos importantes en la composición estimada de la muestra.</p>
+<p>4- Control de calidad y limpieza de las secuencias obtenidas. Es una serie de proceso a nivel bioinformático que tienen por objetivo eliminar las secuencias de los adaptadores que se agregaron durante la preparación de las bibliotecas, separar las secuencias de acuerdo al correspondiente “barcode” y calcular una serie de parámetros que indican la calidad de la corrida y de cada una de las muestras.</p>
+<p>5- Agrupamiento de secuencias y mapeo contra bases de datos con secuencias identificadas. Se trata del corazón de la idea y consiste en que cada secuencia o fragmento producido durante la secuenciación debe tener uno idéntico depositado en una base de datos con secuencias de organismos. Hay diferentes estrategias de como agrupar los fragementos antes de “mapearlos” contra las bases de datos y diferentes bases de datos de organismos, pero esto ya es materia específica de la bioinformática.</p>
+<p>6- Una vez mapeadas las secuencias obtenidas, es decir que a cada una le asignamos un <strong>taxon</strong> determinado (puede llegar a ser una especie, aunque a veces la identificación queda a un nivel más alto, por ejemplo género), entonces alcanza por contar cuantas veces aparece cada organismo en una muestra (es decir, cuantos fragmentos secuenciados mapean al mismo taxon). Esto nos permite organizar la información en una tabla que puede tener las muestras en filas y los taxa en las columnas.</p>
+<p>7- Análisis de la tabla de conteos. Por lo general la tabla generada de conteos tiene diferencias importantes en el número de secuencias obtenidas por muestra ya que no se obtiene la misma cantidad de ácidos nucléicos en cada muestra a pesar de los esfuerzos. Para la parte de exploración suelen usarse análisis exploratorios multivariados, como el <strong>escalado multidimensional</strong> (MDS), una técnica con cierta relación al PCA en su versión más clásica (que se conoce como <strong>Principal Coordinates Analysis</strong>, PCoA). La idea es reducir la dimensionalidad del problema de tal forma que se pueda representar en pocas dimensiones con poca pérdida de información. En el mejor de los casos, después es posible correlacionar directamente las posiciones de la muestras en las principales dimensiones con factores externos, tales como el pH, la temperatura, ubicación geográfica o cualquier otro factor que sea relevante. En la figura <a href="intro.html#fig:mdslepto">1.2</a> se observa la representación gráfica de los dos primeros ejes en un análisis MDS realizado como control de calidad en un experimento de <strong>transcriptómica RNA-seq</strong> con <strong>Leptospira biflexa</strong>. Se observa que las muestras se agrupan de acuerdo a la condición biológica y que los dos factores relevantes desde el punto de vista biológico (fase de crecimiento y tiempo) son las que separan las muestras entre sí.</p>
+<p><br />
+</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mdslepto"></span>
+<img src="figuras/mdslepto2016.jpg" alt="Escalado multidimensional en un experimento de transcriptómica de Leptospira biflexa. El experimento incluía dos factores, la fase de crecimiento (biofilm y planctónica) y dos tiempos (48 y 120 horas), en 3 réplicas (A, B y C) por condición. Alguna de las réplicas fue descartada por motivos de calidad (figura de Iraola et al. (2016))." width="443" />
+<p class="caption">
+Figure 1.2: Escalado multidimensional en un experimento de transcriptómica de <strong>Leptospira biflexa</strong>. El experimento incluía dos factores, la fase de crecimiento (biofilm y planctónica) y dos tiempos (48 y 120 horas), en 3 réplicas (A, B y C) por condición. Alguna de las réplicas fue descartada por motivos de calidad (figura de <span class="citation"><a href="#ref-Iraolaetal2016" role="doc-biblioref">Iraola et al.</a> (<a href="#ref-Iraolaetal2016" role="doc-biblioref">2016</a>)</span>).
+</p>
+</div>
+<p><br />
+</p>
+<p>Con las tecnologías de segunda generación (Roche 454, Illumina, SOLiD) era y aún es común secuenciar fragmentos, como vimos recién. Sin embargo, con tecnologías de terecera generación como la de <strong>Oxford Nanopore Technologies</strong> es común secuenciar toda la molécula de <strong>16S</strong> ya que el largo de la lectura no está determinado <em>a priori</em> (como sí en Illumina) y es normal obtener <strong>reads</strong> (lecturas del secuenciador) de miles o aún decenas de miles de pares de bases. Por otro lado, existen otras formas de metagenómica que no pasan por la secuenciación de una región o de una secuencia en particular. En <strong>metagenómica funcional</strong> la idea es secuenciar todo el <strong>ADN</strong> presente en la muestra, en lugar de determinadas secuencias en particular. Esto permite capturar no solo la variabilidad de organismos presentes en la muestra sino que también identificar secuencias de ellos que puedan ser relevantes al problema biológico en cuestión.</p>
+<p>Por ejemplo, si un determinado microorganismo se encuentra asociado a un determinado estado patológico de un sistema, conocer las secuencias de genes del mismo puede ser relevante para interpretar los mecanismos de acción del mismo. Asumiendo que el organismo no se encuentre completamente secuenciado y disponible en las bases de datos públicos, la función de las secuencias relevantes se puede deducir a partir del mapeo contra las bases de datos de secuencias anotadas (por ejemplo <strong>GenBank</strong>), usando <strong>BLAST</strong>. Por otro lado, si varios organismos están expresando las mismas vías, por ejemplo a causa del exceso de un determinado producto o metabolito en el medio, entonces aparecerá una plétora de secuencias relacionadas por la función, pero provenientes de diferentes organismos.</p>
+<p>Un paso más adelante se encuentra la <strong>metatranscriptómica</strong> que tiene por objetivo la caracterización de todo el <strong>ARN</strong> mensajero (<strong>ARNm</strong>) presente en cada muestra. La diferencia más importante con la genómica funcional es que mientras que en esta última cada genoma aporta lo mismo y por lo tanto el factor de ponderación es la proporción de cada taxa (v.g. especie) en la muestra, en la metatranscriptómica existe la misma ponderación, pero también la ponderación por expresión de las secuencias (en realidad un balance entre la tasa de transcripción y la de decaimiento). De esta forma, más allá de identificar que secuencias están presentes en la muestra, podemos cuantificar (en forma relativa) la “importancia” de cada una. Por ejemplo, en situaciones de organismos patógenos, si el mismo está expresando genes de resistencia a antibióticos, podemos identificar las secuencias responsables de esto a través de la <strong>metatranscriptómica</strong>.</p>
+<p>Las aplicaciones de todas estas técnicas, <strong>metagenómica</strong>, <strong>metagenómica funcional</strong> y <strong>metatranscriptómica</strong> han permitido avanzar en varios campos donde entender el funcionamiento del ecosistema microbiológicos es fundamental. Por ejemplo, en agricultura resulta muy claro que desde el punto de vista de las plantas el suelo no es solamente el sustrato y las sustancias químicas disponibles para las mismas; se trata de un ecosistema complejo donde los microorganismos juegan un rol fundamental, tanto los de vida libre como los asociados a las plantas. En este sentido, resulta fundamental entender la diversidad de microorganismos en los distintos suelos, su evolución a lo largo del tiempo y cómo eso se relaciona con la productividad del suelo.</p>
+<p>Ejemplos en el área de producción animal también son ubicuos. El rumen es un órgano complejo cuya principal misión consiste en la fermentación de los alimentos ingeridos y la preparación para la posterior absorción de nutrientes a nivel intestinal. Se trata de un ambiente esencialmente anaerobio (ausencia de oxígeno) donde proliferan múltiples microorganismos, entre los que se destacan bacterias, protozoos, arqueas metanogénicas, hongos y virus. La mayor parte de los microorganismos presentes nunca han sido cultivados, en parte por la dificultad de cultivar anaerobios, pero las técnicas de metagenómica han permitido enormes avances al respecto. Claramente, la microbiota ruminal es dinámica y suele verse afectada por diversos factores, que incluyen la dieta, cambios en la fisiología del animal producto de la preñez, cambios ambientales o la estación del año. Los distintos tipos de bacterias que actuan en el rumen (de acuerdo a su función en la digestión) comprenden las celulolíticas, lactolíticas, sacarolíticas, lipolíticas, amilolíticas y metanogénicas ureolíticas, entre otras. Entender como las distinas variables afectan la composición de la microbiota ruminal es esencial para predecir los impactos en la salud animal y en la producción.</p>
+<p>En salud animal como en salud vegetal resulta fundamental entender cuáles son los patógenos causantes de la enfermedad. En general, muchos de los microoorganismos que se encuentran en el órgano afectado son desconocidos y en muchos casos no son cultivables. Como las condiciones de cultivo suelen ser fundamentales en la bacteriología clásica, existe un sesgo importante en asignar las causas de la patogenicidad a organismos cultivables. Esto nos dejan con una parte de la historia conocida y otra parte, posiblemente tan relevante, sin conocer ya que en muchos casos el origen de una patología puede ser el producto de un desarreglo en la comunidad que lleve a patógenos oportunistas a tomar la oportunidad. Más aún, uno de los temas de mayor preocupación para la salud mundial, en el paradigma de <strong>Una Sola Salud</strong> (<strong>One Health</strong>, en inglés) es la resistencia a antibióticos que se ha desarrollado a escala global y que amenaza dejarnos sin tratamiento ante enfermedades que parecían superadas. Frente a esto parece fundamental empezar a trabajar el tema desde una perspectiva racional, tanto a nivel de las políticas y la investigación como a nivel del trabajo de campo. Para un manejo racional es fundamental, a su vez, conocer los organismos causantes de cada patología específica, así como los potenciales mecanismos de resistencia desarrollados, ya que el uso infructuoso de antibióticos no hace otra cosa que aumentar las posibilidades de desarrollar otras resistencias.</p>
+<p>En este último sentido, la metagenómica puede constituirse en una herramienta muy poderosa para la invetigación, por ejemplo en el estudio de la mastitis bovina, analizando los cambios en la flora microbiana de la glándula mamaria en animales sanos cuando pasan a un estado de mastitis. En principio, no solo es posible estudiar la composición microbiana durante la evolución de la enfermedad sino que mediante <strong>metagenómica funcional</strong> y especialmente mediante <strong>metatranscriptómica</strong> se puede analizar el <strong>resistoma</strong> (el análisis de los genes relacionados a la resistencia) de la ubre (<span class="citation"><a href="#ref-Hoqueetal2020" role="doc-biblioref">Hoque et al.</a> (<a href="#ref-Hoqueetal2020" role="doc-biblioref">2020</a>)</span>). Además, otras técnicas masivas que ya se están utilizando en forma rutinaria en el diagnóstico de enfermedades infecciosas en humano, como la espectrometría de masas MALDI-TOF, prometen revolucionar la velocidad y precisión de diagnóstico en animales de producción, así como mejorar la predicción de resistencias antes de aplicar antibióticos (<span class="citation"><a href="#ref-Nonnemannetal2019" role="doc-biblioref">Nonnemann et al.</a> (<a href="#ref-Nonnemannetal2019" role="doc-biblioref">2019</a>)</span>).</p>
+<p><br />
+</p>
+<hr />
+<div id="ejemplo-1.x" class="section level4 unnumbered">
+<h4>Ejemplo 1.x</h4>
+<p><br />
+</p>
+<hr />
+<div class="graybox">
+<div class="center">
+<p><strong>PARA RECORDAR</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="genómica-composicional" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Genómica composicional</h2>
+<p>Si bien todos los organismos derivan del mismo organismo ancestral (<strong>LUCA</strong>) y por lo tanto deben compartir ciertas características en sus genomas, los mismos evolucionan y son la base de las diferencias entre los distintos organismos. A nivel genómico la evolución se da por un conjunto de eventos como las mutaciones, las duplicaciones de genes y regiones, las inserciones y “deleciones” de secuencias nucleotídicas. Claramente, la mayor parte de estos eventos producen cambios importantes a nivel composicional de los genomas. Por ejemplo, las mutaciones pueden llevar a una acumulación de cambios completamente al azar en los genomas, o puede tener determinados tipos de sesgos que favorezcan que las mutaciones sean hacia determinadas bases (por ejemplo, mutaciones desde las bases A y T hacia las base G y C, recordar que en el ADN doble cadena A se aparea con T y C con G). Los eventos de duplicación génica, por otro lado, generan cierta libertad para que ambas evolucionen más libremente ya que en principio una de las dos secuencias sigue siendo funcional (hasta que también deje de serlo) y de esta forma se pueden explorar nuevas funciones para una de las dos secuencias.</p>
+<p>En general, el conjunto de estos cambios hace que resulte interesante para entender las bases de la evolución en ambientes particulares, o aún en general, el conocimiento de las secuencias de los diferentes organismos y la comparación de las mismas. El estudio de las variaciones en la composición de los genomas es lo que se puede llamar <strong>Genómica Composicional</strong> y forma parte de la <strong>Genómica Comparativa</strong>. A continuación veremos el tema de la variación en composición, tanto desde el punto de vista de los nucleótidos, como de los codones en las secuencias codificantes y finalmente de los aminoácidos que forman las proteínas.</p>
+<div id="contenido-gc-genómico-génico-correlaciones-gcskew" class="section level3 unnumbered">
+<h3>Contenido GC genómico, génico, correlaciones, GCskew</h3>
+<p>La proporción de bases guanina y citosina (G y C respectivamente) que
+componen una secuencia se conoce como el contenido GC de la misma, o
+G+C, o aún GC% (cuando expresado en porcentaje)<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>. Por las reglas de
+apareamiento de bases (A-T y G-C), no tiene importancia en la
+determinación de dicho contenido cual hebra del ADN se considera para el
+cálculo de esta proporción. En principio, uno podría preguntarse cual es
+la importancia de medir esta proporción en particular y no otra de las
+tres posibles combinaciones de dos bases distintas (hay 6 de estas
+combinaciones, pero como la frecuencia de las dos elegidas más la de las
+otras dos debe sumar 1, basta con calcular la mitad; v.gr. GC=1-AT). Es
+más, alguna de ellas resultan obviamente relevantes, como la proporción
+de purinas vs. pirimidinas (AG vs. CT). Entonces, ¿qué es lo que hace
+tan relevante al contenido GC de las secuencias?</p>
+<p>Existen varias razones, como veremos más adelante, pero desde el punto de vista bioquímico, tal
+vez la más obvia sea la diferencia en el número de puentes de hidrógeno
+entre los apareamientos A-T y los G-C, dos para el primero y tres para
+el segundo, así como diferencias en el “stacking” resultante. Esto
+conduce directamente a importantes diferencias en las propiedades
+físicas de la doble hebra, por ejemplo el incremento en el “melting
+point” como función del contenido GC
+<span class="citation">(<a href="#ref-Yakovchuk_Protozanova_Frank-Kamenetskii_2006" role="doc-biblioref">Yakovchuk, Protozanova, and Frank-Kamenetskii 2006</a>)</span>. Pero más importante
+aún, en secuencias codificantes el código genético (tanto el “universal”
+como todas sus variantes) establece un mapeo entre la secuencia de ADN y
+la proteína que será traducida a partir de la misma. Dada la estructura
+“redundante” del código genético, algunos aminoácidos presentan poca
+dependencia del contenido GC, mientras que otros se encuentran
+fuertemente asociados a este problema (ya que los codones
+correspondientes tienen un sesgo importante).</p>
+<p>Entre los aminoácidos codificados por codones con sesgo GC(AT) tenemos <strong><em>Phe</em></strong> (5 A/T en 6
+posiciones), <strong><em>Ile</em></strong> (8 A/T en 9) y <strong><em>Tyr</em></strong> (5 A/T en 6). Por
+ejemplo, en el genoma de <em>Buchnera aphidicola str. Cc (Cinara cedri)</em>,
+una bacteria parásita intracelular obligada con contenido GC de 20.1%,
+mientras que en la proteína con mayor contenido GC del genoma (36.7%) el
+uso de estos 3 aminoácidos corresponde al 16%, en la proteína con menor
+contenido GC (8.6%) el uso de los mismos sube a 48%. Estas diferencias
+no tendrían de por si una consecuencia necesaria a nivel de diferencias
+entre organismos ya que de hecho el contenido GC podría ser la simple
+consecuencia de los aminoácidos constituyentes de las proteínas y no al
+revés. Es decir, la distribución del contenido GC de las proteínas de un
+organismo sería solo el reflejo de la constitución de las mismas.</p>
+<p>Sin embargo, de ser esto cierto esperaríamos que organismos con una
+composición relativamente similar a nivel de las proteínas
+constituyentes tuvieran similar contenido GC y esto no es lo que ocurre.
+De hecho, es bien conocido que entre los organismos procariotas
+(Bacteria y Archaea) el contenido GC genómico varía desde 25% a 75%
+aproximadamente <span class="citation">(<a href="#ref-Sueoka_1962" role="doc-biblioref">Sueoka 1962</a>)</span>, con algunos organismos aún más extremos
+(ver box “GC en el debate Neutralismo-Seleccionismo”). Más aún, la
+bacteria <em>Anaeromyxobacter dehalogenans 2CP-C</em>, primer cultivo puro de
+una <em>myxobacteria</em> capaz de crecer en forma anaeróbica, con un contenido
+GC genómico de 74.9%, está constituída por proteínas cuyo contenido GC
+va entre 56.5% y 88.0%. Comparando esto con los datos de <em>B. aphidicola</em>
+observamos que no existe superposición, es decir, ambas bacterias no
+tendrían ninguna proteína de similar composición. Sabemos sin embargo
+que ambas comparten un origen evolutivo único y por lo tanto descienden
+de un mismo organismo, además de contar ambas con una serie de proteínas
+con idéntica función, pero de hecho con una composición aminoacídica muy
+diferente.<br />
+</p>
+<p>¿Qué es entonces lo que nos permite pensar que sería el contenido GC el
+que conduce el proceso de sustitución de aminoácidos? Hay varios motivos
+para pensar en este sentido. El primero es que los procariotas, cuyo
+genoma es en su mayoría <strong>codificante</strong>, poseen una importante homogeneidad
+composicional (restringida por la necesidad de usar todos los
+aminoácidos), y esto se manifiesta aún en las regiones intergénicas, que
+no tienen mayores restricciones composicionales. Un ejemplo del alto
+nivel de homogeneidad se puede ver al comparar los intervalos
+inter-cuartílicos de contenido GC codificante, que tanto en <em>B.
+aphidicola</em> como en <em>A. dehalogenans</em> es de 6%, o en otras palabras, la
+mitad de las proteínas dentro de cada bacteria difieren en menos de 6%
+de contenido GC (comparar contra más de 50% entre ellas).</p>
+<p>Pero, además, existe otra evidencia fuerte. Así como calculamos el contenido GC de una
+secuencia, también podemos calcular el contenido GC en cada una de las
+posiciones de los codones de la misma. Como hay tres posiciones por
+codón tenemos entonces <span class="math inline">\(GC_1\)</span>, <span class="math inline">\(GC_2\)</span> y <span class="math inline">\(GC_3\)</span>, de acuerdo al contenido
+GC solo considerando una posición a la vez. Si observamos el código
+genético con detenimiento vamos a observar que la tercera posición es la
+“más sinónima,” es decir, la posición en la que una mayor proporción de
+los cambios de base no afectan el aminoácido codificado. De hecho,
+excepto <strong><em>Met</em></strong> y <strong><em>Trp</em></strong>, todos los aminoácidos poseen codones
+sinónimos, con opción entre G/C y A/T. De acuerdo con esto, si el
+contenido GC no estuviera conduciendo el proceso de sustitución de
+aminoácidos, se podría esperar que el <span class="math inline">\(GC_3\)</span> se mantuviera variando
+libremente entre los distintos genomas, con casi tanta varianza entre
+como dentro de genomas. Sin embargo esto no es así, ya que existe una
+fuerte correlación positiva entre el contenido GC y el <span class="math inline">\(GC_3\)</span>, tanto a
+nivel de secuencias como considerando los genomas enteros (en
+procariotas) y aún con las regiones intergénicas flanqueantes
+<span class="citation">(<a href="#ref-Zerial_Salinas_Filipski_Bernardi_1986" role="doc-biblioref">Zerial et al. 1986</a>)</span>.<br />
+</p>
+<p>Además de los sesgos en contenido GC que discutimos más arriba, existen
+otros sesgos menos obvios pero con muy importantes consecuencias
+prácticas. Por ejemplo, si consideramos una región particular de la
+mayoría de los genomas bacterianos es posible observar una diferencia
+importante (dentro de cada hebra) entre el número de bases G y C, así
+como entre A y T. De hecho, este fenómeno se encuentra asociado a la
+replicación de los genomas bacterianos (usualmente circulares) y
+típicamente la hebra “leading” se encuentra enriquecida en G y T,
+mientras que la “lagging” se encuentra enriquecida en C y A. Las
+desviaciones de las frecuencias G=C y A=T se conocen como <span class="math inline">\(GC_{skew}\)</span> y
+<span class="math inline">\(AT_{skew}\)</span> respectivamente.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> Una aplicación práctica evidente de
+esto es la determinación (aproximada) del origen de replicación, ya que
+en este (y en la posición opuesta dentro del genoma circular) habrá un
+cambio de signo del <span class="math inline">\(GC_{skew}\)</span> (asociado a la densidad de genes en una
+hebra y otra). Una forma de visualizar esto es graficando el <span class="math inline">\(GC_{skew}\)</span>
+en las ordenadas contra la posición del genoma (centro de la ventana) a
+partir del cual fue calculado, identificando el cambio de signo en las
+ordenadas. Otra alternativa, generalmente más efectiva es plotear el
+<span class="math inline">\(GC_{skew}\)</span> acumulado contra la posición y observar los máximos y mńimos
+del gráfico, que usualmente están a una distancia de medio genoma
+<span class="citation">(<a href="#ref-Grigoriev_1998" role="doc-biblioref">Grigoriev 1998</a>)</span>.</p>
+<p>Si bien existe una fuerte controversia sobre la explicación causal de
+todas estas correlaciones, así como de correlaciones entre el contenido
+GC y factores del ambiente donde viven los organismos (ver box “GC en el
+debate Neutralismo-Seleccionismo”), resulta claro que el contenido GC
+tiene un importante rol en la evolución de los organismos y en los
+procesos moleculares que rigen a los mismos (incluso se debe tener en
+cuenta a la hora de calcular algunos índices genómicos o en los procesos
+bioquímicos que requieran la denaturalización del ADN). Existen diversas
+herramientas para el cálculo del contenido GC, alguna de ellas web
+(v.gr. Mobyle <a href="http://mobyle.pasteur.fr/" class="uri">http://mobyle.pasteur.fr/</a>) que sirven para un cálculo
+rápido de una o pocas secuencias. Sin embargo, si el cálculo involucra
+muchas secuencias lo usual es recurrir a la programación de tipo
+“scripting,” usualmente en lenguajes como <em>Python</em>
+(<a href="http://python.org/" class="uri">http://python.org/</a>), <em>Perl</em> (<a href="http://www.perl.org/" class="uri">http://www.perl.org/</a>), o <em>Java</em>
+(<a href="http://www.java.com" class="uri">http://www.java.com</a>; todos ellos poseen módulos “Bio” que facilitan
+todas las tareas), en <em>R</em> (<a href="http://cran.r-project.org/" class="uri">http://cran.r-project.org/</a>) a través de
+bibliotecas como <em>seqinr</em>, en bash (cuando se trabaja en Linux-UNIX o
+Mac OS-X), o usando paquetes como <em>EMBOSS</em>
+(<a href="http://emboss.sourceforge.net/" class="uri">http://emboss.sourceforge.net/</a>). Si se desea trabajar con genomas
+procariotas ya secuenciados, una página interesante es la de OligoWeb
+(<a href="http://insilico.ehu.es/oligoweb/" class="uri">http://insilico.ehu.es/oligoweb/</a>) ya que además de las frecuencias de
+nucleótidos de los distintos genomas ya tiene calculados otros índices y
+estadísticos.<br />
+</p>
+</div>
+<div id="uso-de-codones" class="section level3 unnumbered">
+<h3>Uso de codones</h3>
+<p>Habíamos hablado antes de que los genomas procariotas eran
+extremadamente amplios en el rango de contenidos G+C y que dado lo
+reducido de lo no-codificante estas variaciones debían tener
+implicancias en el uso de codones. Es más, si comparamos entre genomas
+veremos que existe una clara correlación lineal entre el contenido GC
+del genoma con <span class="math inline">\(GC_1\)</span>, <span class="math inline">\(GC_2\)</span> y <span class="math inline">\(GC_3\)</span>, aunque con diferentes
+pendientes. En general GC3 es una posición sinónima, es decir al cambiar
+de base en ella no hay cambio de aminoácido (debido a la degeneración
+del código, ver los cuartetos por ejemplo). <span class="math inline">\(GC_1\)</span> y <span class="math inline">\(GC_2\)</span> son mucho
+más restringidas en su variación dado que suelen implicar un cambio de
+aminoácido, lo que por lo general afecta negativamente la función.</p>
+<p>Esta redundancia en el código genético sumado a las posibilidades de
+reconocimiento alternativo codón/anticodón (no-Watson-Crick) permiten la
+evolución en los genomas de diferentes estrategias de uso de codones
+(UC)<span class="citation">(<a href="#ref-Rocha_2004" role="doc-biblioref">Eduardo P. C. Rocha 2004</a>)</span>. Esto que puede verse entre genomas también tiene su
+correlato a nivel interno en muchos genomas. Es conocido que en algunos
+genomas procariotas los genes altamente expresados tienden a usar
+<strong>codones mayores</strong>, que suelen ser reconocidos en forma de apareamiento WatsonCrick por los tRNAs más abundantes, aunque hay distintos modelos (ver la discusión en
+<span class="citation">(<a href="#ref-Rocha_2004" role="doc-biblioref">Eduardo P. C. Rocha 2004</a>)</span>). Lograr comprender los factores que inciden en el uso de
+codones (también puede pensarse para aminoácidos) suele requerir de
+alguna forma de “resumir” la información.<br />
+</p>
+<p>En un genoma procariota promedio tenemos unos 4000 genes y los codones
+de aminoácidos con degeneración son 59 (los 64 menos los 3 <em>stop</em>, menos
+<strong><em>Met</em></strong> y <strong><em>Trp</em></strong>), lo que se puede resumir en una tabla de esas
+dimensiones y queremos entender por qué los genes utilizan en forma
+distinta los codones, si es que lo hicieran. Para quitar la influencia
+del uso de aminoácidos como factor que influye en esta perspectiva (cada
+proteína tiene un uso diferencial de AAs) se puede estandarizar a la
+interna de cada aminoácido. Una de las estandarizaciones posibles es el
+<em>RSCU</em> <span class="citation">(<a href="#ref-Sharp_Tuohy_Mosurski_1986" role="doc-biblioref">Sharp, Tuohy, and Mosurski 1986</a>)</span> en que el número observado de
+codones para un aminoácido es dividido por el número esperado si el uso
+dentro de un aminoácido fuera equiprobable. Es decir,</p>
+<p><span class="math display" id="eq:rscu1">\[\begin{equation}
+RSCU_{ij}=\frac{x_{ij}}{\frac{1}{n_i}\sum_{j=1}^{n_i}\ x_{ij}}
+\tag{1.7}
+\end{equation}\]</span></p>
+<p>donde <span class="math inline">\(x_{ij}\)</span> es el número de ocurrencias del codón <span class="math inline">\(j\)</span> para el
+aminoácido <span class="math inline">\(i\)</span> y <span class="math inline">\(n_i\)</span> es la multiplicidad del aminoácido <span class="math inline">\(i\)</span> (es decir, el número de codones que lo codifican).</p>
+<p>De cualquier forma, aún luego de estandarizar seguimos teniendo la tabla
+de 2000x59. La mayor parte de los humanos tenemos una limitada capacidad
+para visualizar datos en espacios de más de 3 dimensiones por lo que
+necesitamos reducir la “dimensionalidad” del problema. Podríamos pensar
+en representar las 59 variables originales de a pares
+(<span class="math inline">\(\binom{59}{2}=59*58/2=1711\)</span>), o aún de a tres
+(<span class="math inline">\(\binom{59}{3}=59*58*57/6=32509\)</span>) para ver interacciones entre más
+variables, pero estos números hacen imposible poder extraer conclusiones
+relevantes en forma sistemática. Afortunadamente, existen diferentes técnicas
+estadísticas exploratorias multivariadas que nos permiten abordar este
+tipo de cuestiones.</p>
+<p>Probablemente, de las técnicas usuales de análisis exploratorio multivariado, la más conocidas es el <strong>Análisis de Componentes Principales</strong> (PCA), aunque existen otros miembros prominentes
+de la familia. Uno de los más interesantes para nuestro tipo de problema
+es el <strong>Análisis de Correspondencia</strong> (COA, ver [Exploración multivariada: Análisis de Correspondenci]). El mismo
+nos permite reducir la variación en las 59 variables originales a unas
+pocas dimensiones, cada una de ellas una combinación de las originales,
+y que capturan la mayor parte de la variabilidad. De esta forma, el
+problema pasa a ser identificar que variables biológicas se asocian a
+cada una de estas dimensiones.</p>
+<p>Ejemplos típicos de variables biológicas
+asociadas a la variación en el <strong>uso de codones</strong> dentro de genomas procariotas son el
+<strong>contenido GC del gen</strong>, el <strong>nivel de expresión</strong>, la <strong>hidropatía</strong> promedio de
+la proteína, la <strong>hebra</strong> en que se encuentra el gen, el <span class="math inline">\(GC_{skew}\)</span> y la
+<strong>precisión en la traducción</strong> <span class="citation">(<a href="#ref-Ermolaeva_2001" role="doc-biblioref">Ermolaeva 2001</a>)</span>. Diferencias de uso de codones entre
+genomas han sido reportadas asociadas a varios factores
+eco-fisiológicos, entre ellos la <strong>temperatura óptima de crecimiento</strong> y
+adaptaciones a hiper-salinidad. Un programa diseñado específicamente
+para el análisis composicional es el <em>codonW</em>
+(<a href="http://codonw.sourceforge.net/" class="uri">http://codonw.sourceforge.net/</a>), que analiza las frecuencias de
+bases, codones y aminoácidos, calcula diferentes índices estadísticos,
+así como permite realizar un COA en codones y AAs.</p>
+<p>Existen diversos índices, calculados a partir de las frecuencias de
+codones, que permiten identificar sesgos importantes en UC, que pueden
+ser suficiéntemente indicativos de por sí, o combinados con la
+información del COA. Por ejemplo, el <em>Nc</em>, o número efectivo de codones,
+es un índice del uso de codones intragénico. Puede tomar valores
+extremos de 20, cuando un solo codón por AA es utilizado en ese gen, a
+61, cuando hay una equi-distribución de los mismos <span class="citation">(<a href="#ref-Wright_1990" role="doc-biblioref">F. Wright 1990</a>)</span>. Este
+índice es sensible al contenido GC del genoma y una mejora fue sugerida
+posteriormente que toma en cuenta este factor <span class="citation">(<a href="#ref-Novembre_2002" role="doc-biblioref">Novembre 2002</a>)</span>. Otros
+dos índices, “codon bias index” (<em>CBI</em>) y “frequency of optimal codons”
+(<em>Fop</em>), calculan el sesgo a partir de un juego de codones “óptimos,”
+derivados respectivamente de un conjunto particular de genes o de la
+concentración de los tRNAs. Una aproximación totalmente diferente, que
+no depende de un conjunto particular de genes es el “codon Adaptation
+Index” (<em>CAI</em>)<span class="citation">(<a href="#ref-Sharp_Li_1987" role="doc-biblioref">Sharp and Li 1987</a>)</span>, que ha demostrado ser un indicador muy
+razonable del nivel de expresión de los genes (basado en comparaciones
+con técnicas para medir experimentalmente expresión, como los
+<em>microarrays</em>). El <em>CAI</em> es simplemente la media geométrica de los
+<em>RSCU</em> relativos (al máximo <em>RSCU</em> para ese AA) de todos los codones de
+una proteína. Con la misma notación que más arriba, si consideramos
+<span class="math inline">\(\text{w}_{ij}=RSCU_{ij}/RSCU_{i,max}\)</span>, entonces se define
+<span class="math inline">\(CAI=\exp{\frac{1}{L}\sum_{k=1}^L\ln \text{w}_{ij}}\)</span>.</p>
+<p>Pese a los buenos
+resultados del <em>CAI</em>, el mismo presenta también importantes debilidades,
+como la no-linealidad y una sobre-estimación de las desviaciones para
+secuencias cortas. En el 2009, Roymondal y colaboradores
+<span class="citation">(<a href="#ref-Roymondal_Das_Sahoo_2009" role="doc-biblioref">Roymondal, Das, and Sahoo 2009</a>)</span> proponen una aproximación muy diferente,
+basada en las frecuencias de cada base en las distintas posiciones de
+los codones, que lleva al índice <em>RCB</em>. Estos autores proponen para cada
+codón <em>xyz</em> calcular el <span class="math inline">\(RCB\)</span> de acuerdo a la fórmula:</p>
+<p><span class="math display" id="eq:rcb1">\[\begin{equation}
+RCB_{xyz}=\frac{f(xyz)}{f_1(x)f_2(y)f_3(z)}
+\tag{1.8}
+\end{equation}\]</span></p>
+<p>(donde <span class="math inline">\(f_1(x)\)</span>, <span class="math inline">\(f_2(y)\)</span>, <span class="math inline">\(f_3(z)\)</span> son las frecuencias de las bases <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> y
+<span class="math inline">\(z\)</span> en las posiciones 1, 2 y 3 respectivamente), para luego resumir toda
+la información a través de la media geométrica,
+<span class="math inline">\(RCB=(\prod_{l=1}^LRCB_{xyz}(l))^{1/L}-1\)</span>. Este nuevo índice presenta
+ventajas respecto al <em>CAI</em>, pero aún presenta un problema importante
+para secuencias cortas, lo que llevó a sugerir una modificación del
+mismo (Relative Codon Adaptation, <em>RCA</em>), basada en el uso de
+pseudo-conteos <span class="citation">(<a href="#ref-Fox_Erill_2010" role="doc-biblioref">Fox and Erill 2010</a>)</span>.</p>
+<p>Un índice de expresión tiene mucha utilidad en la exploración de los
+factores que influyen en la composición diferente de los genes, pero un
+punto interesante es la posible relación entre la expresión con el
+efecto de “gene dosage” (más copias de genes disponibles a medida que la
+replicación avanza), resultado de favorecer los genes altamente
+expresados en una posición cercana al origen de replicación. Para
+investigar este efecto basta con ver cual es la relación entre el <em>CAI</em>
+y la posición. Una forma fácil consiste en un análogo del <span class="math inline">\(GC_{skew}\)</span>
+acumulado, calculados como desvíos del <em>CAI</em> promedio y compararlo con
+las posiciones genómicas. Si existe un efecto de “gene dosage” el patrón
+de <em>CAI</em> debería mostrar un pico en la zona del origen de replicación.</p>
+<p>Un soporte adicional a la hora de entender lo que ocurre en el uso de
+codones cuando comparamos dos grupos, por ejemplo genes de alta
+expresión con los de baja expresión, es a través de las tablas de uso de
+codones. Las mismas contienen el conteo total por codón para cada grupo
+y si las agrupamos por AA podemos calcular la probabilidad de que las
+diferencias en uso de codones (para cada codón) se deban al azar. Para
+esto, dentro de cada AA se contruye una tabla de 2x2 (2 grupos a
+comparar y codón a analizar vs la suma de los otros dentro de AA) y con
+la misma realiza un text de <span class="math inline">\(\chi^2\)</span> con un grado de libertad. Es
+importante tener en cuenta las múltiples comparaciones a realizar (el
+número de hipótesis a ensayar, v.gr. el número de codones) a la hora de
+definir el umbral de significancia para corregir adecuadamente.</p>
+<p>Finalmente, el uso de codones de un organismo puede tener implicancias
+directas de carácter tecnológico. Como vimos más arriba, dentro de las
+mayores fuentes de variación en UC se encuentra en algunos organismos la
+expresión, con codones muy usados en los genes de alta expresión y un
+uso m’s plano en proteínas de baja expresión. Esto influye inclusive en
+el plegamiento de las proteínas, cambiando la solubilidad de la misma
+<span class="citation">(<a href="#ref-Cortazzo_Cervenansky_Marin_Reiss_Ehrlich_Deana_2002" role="doc-biblioref">Cortazzo et al. 2002</a>)</span>. Cuando deseamos
+expresar proteínas recombinantes resulta muy importante considerar no
+solo la secuencia de AAs de la proteína a expresar, sino también que el
+UC se adapte al UC en genes de alta expresión en el organismo hospedero.</p>
+<p><br />
+</p>
+<hr />
+<div id="ejemplo-1.3" class="section level4 unnumbered">
+<h4>Ejemplo 1.3</h4>
+<p>Teniendo en cuenta todas las secuencias codificantes, en una bacteria de interés biotecnológico se observó el siguiente conteo de codones para dos aminoácidos:</p>
+<p><br />
+</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Aminoácido</th>
+<th align="left">Codón</th>
+<th align="left">Conteo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Arg</strong> (<strong>R</strong>)</td>
+<td align="left"><strong>CGU</strong></td>
+<td align="left"><span class="math inline">\(666\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Arg</strong> (<strong>R</strong>)</td>
+<td align="left"><strong>CGC</strong></td>
+<td align="left"><span class="math inline">\(1320\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Arg</strong> (<strong>R</strong>)</td>
+<td align="left"><strong>CGA</strong></td>
+<td align="left"><span class="math inline">\(1457\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Arg</strong> (<strong>R</strong>)</td>
+<td align="left"><strong>CGG</strong></td>
+<td align="left"><span class="math inline">\(1818\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Arg</strong> (<strong>R</strong>)</td>
+<td align="left"><strong>AGA</strong></td>
+<td align="left"><span class="math inline">\(5913\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Arg</strong> (<strong>R</strong>)</td>
+<td align="left"><strong>AGG</strong></td>
+<td align="left"><span class="math inline">\(5120\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Val</strong> (<strong>V</strong>)</td>
+<td align="left"><strong>GUU</strong></td>
+<td align="left"><span class="math inline">\(7123\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Val</strong> (<strong>V</strong>)</td>
+<td align="left"><strong>GUC</strong></td>
+<td align="left"><span class="math inline">\(2144\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Val</strong> (<strong>V</strong>)</td>
+<td align="left"><strong>GUA</strong></td>
+<td align="left"><span class="math inline">\(1125\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Val</strong> (<strong>V</strong>)</td>
+<td align="left"><strong>GUG</strong></td>
+<td align="left"><span class="math inline">\(8213\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Calcular el <strong>RSCU</strong> para cada codón y determinar cuáles son los usados y si hay diferencias entre los aminoácidos en la forma en que usan los codones.</p>
+<p><br />
+</p>
+<p>De acuerdo a la ecuación <a href="intro.html#eq:rscu1">(1.7)</a>, el RSCU se calcula como</p>
+<p><span class="math display">\[\begin{equation}
+RSCU_{ij}=\frac{x_{ij}}{\frac{1}{n_i}\sum_{j=1}^{n_i}\ x_{ij}}
+\end{equation}\]</span></p>
+<p>donde <span class="math inline">\(x_{ij}\)</span> es el número de ocurrencias del codón <span class="math inline">\(j\)</span> para el aminoácido <span class="math inline">\(i\)</span>. Tenemos dos aminoácidos diferentes, por lo vamos a calcular el RSCU de cada codón dentro de cada aminoácido. Lo primero es obtener la suma de codones en cada aminoácido, por lo que tenemos que para <strong>Arginina</strong> es igual a <span class="math inline">\(666+1320+1457+1818+5913+5120=16294\)</span>, mientras que para <strong>Valina</strong> es de <span class="math inline">\(7123+2144+1125+8213=18605\)</span>. Este es el número total de codones para cada uno de los aminoácidos, o lo que es lo mismo, el número de veces que aparece dicho aminoácido en las secuencias codificantes de nuestra bacteria. Para calcular el RSCU alcanza con dividir el número de ocurrencias de cada codon entre el total de veces que se utiliza el aminoácido y multiplicarlo por el número de codones que tiene el aminoácido (<span class="math inline">\(n_i=6\)</span> en el caso de Arginina, <span class="math inline">\(n_i=4\)</span> en el caso de Valina, ver el código genético).</p>
+<p>Por lo tanto, utilizando la ecuación <a href="intro.html#eq:rscu1">(1.7)</a>, tenemos que por ejemplo, para el codón <strong>CGU</strong> de la <strong>Arginina</strong> su RSCU es igual a</p>
+<p><span class="math display">\[\begin{equation}
+RSCU_{R,CGU}=\frac{x_{CGU}}{\frac{1}{6}\sum_{j=1}^6\ x_{R,j}}=6 \times \frac{666}{16294}=0,2452
+\end{equation}\]</span></p>
+<p>Para el codón <strong>CGC</strong> la cuenta es igual a</p>
+<p><span class="math display">\[\begin{equation}
+RSCU_{R,CGC}=\frac{x_{CGC}}{\frac{1}{6}\sum_{j=1}^6\ x_{R,j}}=6 \times \frac{1320}{16294}=0,4861
+\end{equation}\]</span></p>
+<p>y así sucesivamente con todos los codones de este aminoácido, lo que nos deja con una tabla como la siguiente:</p>
+<p><br />
+</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Codón</th>
+<th align="left">Conteo</th>
+<th align="left">RSCU</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>CGU</strong></td>
+<td align="left"><span class="math inline">\(666\)</span></td>
+<td align="left"><span class="math inline">\(0,2452\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>CGC</strong></td>
+<td align="left"><span class="math inline">\(1320\)</span></td>
+<td align="left"><span class="math inline">\(0,4861\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>CGA</strong></td>
+<td align="left"><span class="math inline">\(1457\)</span></td>
+<td align="left"><span class="math inline">\(0,5365\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>CGG</strong></td>
+<td align="left"><span class="math inline">\(1818\)</span></td>
+<td align="left"><span class="math inline">\(0,6694\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>AGA</strong></td>
+<td align="left"><span class="math inline">\(5913\)</span></td>
+<td align="left"><span class="math inline">\(2,1774\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>AGG</strong></td>
+<td align="left"><span class="math inline">\(5120\)</span></td>
+<td align="left"><span class="math inline">\(1.8854\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Suma</strong></td>
+<td align="left"><span class="math inline">\(16294\)</span></td>
+<td align="left"><span class="math inline">\(6\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<p>De la misma manera, para la Valina, el RSCU del primer codón es igual a</p>
+<p><span class="math display">\[\begin{equation}
+RSCU_{V,GUU}=\frac{x_{GUU}}{\frac{1}{4}\sum_{j=1}^4\ x_{V,j}}=4 \times \frac{7123}{18605}=1,5314
+\end{equation}\]</span></p>
+<p>mientras que para el resto de los codones se calcula en forma análoga, hasta obtener la siguiente tabla:</p>
+<p><br />
+</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Codón</th>
+<th align="left">Conteo</th>
+<th align="left">RSCU</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>GUU</strong></td>
+<td align="left"><span class="math inline">\(7123\)</span></td>
+<td align="left"><span class="math inline">\(1,5314\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>GUC</strong></td>
+<td align="left"><span class="math inline">\(2144\)</span></td>
+<td align="left"><span class="math inline">\(0,4610\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>GUA</strong></td>
+<td align="left"><span class="math inline">\(1125\)</span></td>
+<td align="left"><span class="math inline">\(0,2419\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>GUG</strong></td>
+<td align="left"><span class="math inline">\(8213\)</span></td>
+<td align="left"><span class="math inline">\(1,7658\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Suma</strong></td>
+<td align="left"><span class="math inline">\(18605\)</span></td>
+<td align="left"><span class="math inline">\(4\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>En ambos aminoácidos se observa que el uso de codones se aparta bastante de la hipótesis de uso similar. Mientras que en el primer caso (Arginina) los codones favorecidos son los codificados por el dueto (del sexteto), es decir <strong>AGA</strong> y <strong>AGG</strong>, en el segundo caso (Valina) los codones favorecidos son los que terminan en <strong>U</strong> o en <strong>G</strong>.</p>
+<p><br />
+</p>
+<hr />
+</div>
+</div>
+<div id="exploración-multivariada-análisis-de-correspondencia" class="section level3 unnumbered">
+<h3>Exploración multivariada: Análisis de Correspondencia</h3>
+<p>Desarrollado por Benzecrí <span class="citation">(<a href="#ref-Benzecri_1980" role="doc-biblioref">Benzecri 1980</a>)</span>, originalmente para trabajar con tablas de frecuencias.
+En resumen, la idea subyacente es dada una tabla de <span class="math inline">\(n\)</span>x<span class="math inline">\(p\)</span> (casos x
+variables) encontrar un sistema de <span class="math inline">\(k\)</span> ejes ortogonales (con
+<span class="math inline">\(k &lt; min(n,p)\)</span>) que condense el máximo de variación en los datos
+originales. Esto es posible en la medida en que las variables (casos)
+estén correlacionados en alguna medida y cuanto mayor sea esa asociación
+más varianza será condensada en pocos ejes (dimensiones). La métrica
+adoptada es la de la distancia <span class="math inline">\(\chi^2\)</span>, o sea, para la celda correspondiente a la fila <span class="math inline">\(i\)</span> y columna <span class="math inline">\(j\)</span>, la distancia será</p>
+<p><span class="math display" id="eq:dchi2">\[\begin{equation}
+d_{ij}=(O_{ij}-E_{ij})^2/E_{ij} 
+\tag{1.9}
+\end{equation}\]</span></p>
+<p>donde <span class="math inline">\(O_{ij}\)</span> es el número observado y <span class="math inline">\(E_{ij}\)</span> el número esperado para esa celda, usualmente el número total de observaciones multiplicado por las frecuencias relativas marginales en la tabla.</p>
+<p>Aplicando el COA a una tabla de frecuencias observadas vamos a obtener una serie de valores
+propios y vectores propios asociados (“eigen-values” y “eigen-vectors”),
+tantos como el mínimo de Filas-1 y Columnas-1. Cada uno de los valores
+propios está relacionado con la varianza explicada por la nueva
+dimensión correspondiente. La suma de todos los valores propios es
+equivalente al 100% de la varianza por lo que cada uno explicará una
+fracción correspondiente al valor propio sobre la suma de todos (la
+traza de la matriz de valores propios). A su vez, cada uno explica menor
+varianza que el anterior (están ordenados por el procedimiento de
+extracción). El punto importante es determinar con cuantos ejes (nuevas
+dimensiones) nos vamos a quedar. Cuantas más dimensiones retengamos
+mayor cantidad de la varianza original retendremos, pero al costo de
+dificultar la interpretación (el objetivo del COA es poder capturar la
+esencia de los datos, cuantas más dimensiones más difícil de visualizar
+la situación). Existen varios métodos para determinar el número de
+dimensiones a retener, pero en última instancia esto es una materia
+subjetiva. Un enfoque es gráfico (“scriplot”) y consiste en encontrar el
+cambio en la pendiente de los valores propios graficados en función de
+su número ordinal.</p>
+<p>Otra aproximación es retener los valores propios hasta que expliquen menos de lo que se esperaría por azar si cada unas
+de las variables originales explicara la misma proporción de la
+varianza. Por ejemplo, en una tabla de uso de aminoácidos, dado que hay
+20 AAs la varianza promedio explicada por cada uno es 5% y por lo tanto
+luego de un COA en AAs retendríamos todos aquellos valores propios que
+expliquen más de 5% de la varianza. Cada una de las observaciones
+originales tendrá ahora unas nuevas coordenadas en el nuevo sistema de
+ejes ortogonales (las dimensiones). O sea, si por ejemplo retuvimos de
+nuestro COA en uso de AAs 3 dimensiones (combinaciones de las 20
+originales) cada gen podrá representarse ahora en un espacio
+tridimensional. Asimismo, las variables originales están representadas
+de distinta manera en las nuevas dimensiones, es decir tienen distinta
+participación en cada una de ellas. Esto apunta a una de las
+características más destacables del COA, su simetría Filas/Columnas lo
+que permite el auxilio de representar en forma conjunta (en el mismo
+gráfico) la distribución de observaciones y variables (genes y AAs, por
+ejemplo) aunque las distancias entre observaciones y variables deben
+tomarse con cautela.</p>
+<p>La clave del éxito con el COA es lograr “etiquetar” las nuevas
+dimensiones con factores entendibles, biológicamente significativos, que
+vayan más allá de las propias variables medidas. Ejemplo de esto en
+genómica podría ser la expresión diferencial, los compartimientos
+celulares, proteínas IMP (“integral membrane proteins”), etc, cuando se
+correlacionan con alguno de los ejes del análisis. La forma tradicional
+de trabajo, al menos en el campo de la genómica comparativa, consiste en
+determinar cuantos valores propios retener para luego graficarlos de a
+pares intentando ver la distribución conjunta de observaciones y
+variables en las nuevas dimensiones. Se puede además intentar
+correlacionar variables externas con las nuevas dimensiones, buscando
+“etiquetas” para las dimensiones. Un link interesante de análisis de correspondencia:
+<a href="http://www.micheloud.com/FXM/COR/index.htm" class="uri">http://www.micheloud.com/FXM/COR/index.htm</a></p>
+<hr />
+</div>
+<div id="composición-de-proteínas" class="section level3" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Composición de proteínas</h3>
+<p>Hasta ahora hemos centrado nuestros análisis composicionales en bases
+nucleotídicas y codones, pero la mayor parte de las secuencias
+procarióticas terminan en proteínas y por lo tanto vamos a dedicarle un
+breve espacio al respecto. En muchos casos los archivos de partida (en
+cualquiera de los formatos estándar como FASTA o GenBank) solo incluyen
+la secuencia nucleotídica, dado que a partir de la misma es posible
+deducir directamente la secuencia de AAs (si conocemos el código
+genético correspondiente).</p>
+<p>Existen muchos programas para realizar la
+traducción de estas secuencias, pero el <em>transeq</em> (de la suite <em>EMBOSS</em>)
+es muy flexible y eficiente, aceptando diversos formatos de entrada.
+Dentro del <em>EMBOSS</em> también tenemos toda una serie de programas para
+facilitar el análisis de secuencias proteícas. Entre ellos (hay muchos
+más): <em>antigenic</em> para encontrar sitios antigénicos, <em>charge</em> que hace
+un diagrama de carga, <em>digest</em> reporta sobre enzimas proteolíticas,
+<em>emowse</em> para buscar en proteínas por peso molecular de fragmentos de
+digestión, <em>fuzzpro</em> para buscar patrones, <em>helixturnhelix</em> para
+identificar motivos de unión a ácidos nucléicos, <em>iep</em> para calcular el
+punto isoeléctrico, <em>makeprotseq</em> para crear secuencias aleatorias,
+<em>pepcoil</em> para predecir regiones “coiled-coil,” <em>pepstats</em> para calcular
+diversos estadísticos de proteínas, <em>preg</em> para buscar expresiones
+regulares en proteínas, <em>pepwindow</em> para realizar un ploteo de
+hidropatía, <em>tmap</em> para predecir segmentos trans-membrana, <em>psiphi</em> para
+calcular ángulos torsionales y <em>patmatmotifs</em> que escanea una proteína
+con motivos del <em>PROSITE</em> (<a href="http://prosite.expasy.org/" class="uri">http://prosite.expasy.org/</a>).</p>
+</div>
+<div id="diferencias-en-propiedades-de-los-aas" class="section level3 unnumbered">
+<h3>Diferencias en propiedades de los AAs</h3>
+<p>Existen 22 aminoácidos proteinogénicos o naturales (los que se
+incorporan directamente en las proteínas). De entre ellos, 20 son
+codificados directamente, mientras que la selenocisteína y la
+pirrolisina se codifican a partir de modificaciones en la lectura de
+codones <em>stop</em> (con símbolos IUPAC/IUBMB <strong><em>Sec</em></strong> o <strong><em>U</em></strong>, y
+<strong><em>Pyl</em></strong> u <strong><em>O</em></strong>, respectivamente). Como se puede apreciar en la
+figura <a href="intro.html#fig:VennAAprop">1.3</a>, los 20 aminoácidos codificados directamente
+(que suelen ser los más abundantes) poseen importantes diferencias en
+las propiedades físico-químicas, lo que lleva a agruparlos de diferentes
+maneras, de acuerdo al grupo de propiedades de relevancia.</p>
+<p>Típicamente, podemos distinguir:</p>
+<ul>
+<li><em>i)</em> Polares/hidrofílicos - <strong><em>N</em></strong>, <strong><em>Q</em></strong>,
+<strong><em>S</em></strong>, <strong><em>T</em></strong>, <strong><em>K</em></strong>, <strong><em>R</em></strong>, <strong><em>H</em></strong>, <strong><em>D</em></strong>, <strong><em>E</em></strong>, (<strong><em>C</em></strong>,
+<strong><em>Y</em></strong>)<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>,</li>
+<li><em>ii)</em> No-polares / hidrofóbicos - (<strong><em>G</em></strong>), <strong><em>A</em></strong>,
+<strong><em>V</em></strong>, <strong><em>L</em></strong>, <strong><em>I</em></strong>, <strong><em>P</em></strong>, <strong><em>Y</em></strong>, <strong><em>F</em></strong>, <strong><em>W</em></strong>, <strong><em>M</em></strong>,
+<strong><em>C</em></strong>,</li>
+<li><em>iii)</em> enlace de H - <strong><em>C</em></strong>, <strong><em>W</em></strong>, <strong><em>N</em></strong>, <strong><em>Q</em></strong>,
+<strong><em>S</em></strong>, <strong><em>T</em></strong>, <strong><em>Y</em></strong>, <strong><em>K</em></strong>, <strong><em>R</em></strong>, <strong><em>H</em></strong>, <strong><em>D</em></strong>, <strong><em>E</em></strong>,</li>
+<li><em>iv)</em> contienen azufre - <strong><em>C</em></strong>, <strong><em>M</em></strong>,</li>
+<li><em>v)</em> con carga negativa a
+<em>pH</em> neutro / acídicos - <strong><em>D</em></strong>, <strong><em>E</em></strong>, (<strong><em>C</em></strong>),</li>
+<li><em>v)</em> con carga positiva a <em>pH</em> neutro / básicos - <strong><em>K</em></strong>, <strong><em>R</em></strong>, (<strong><em>H</em></strong>),</li>
+<li><em>vi)</em> Ionizables - <strong><em>D</em></strong>, <strong><em>E</em></strong>, <strong><em>H</em></strong>, <strong><em>C</em></strong>, <strong><em>Y</em></strong>, <strong><em>K</em></strong>,
+<strong><em>R</em></strong>,</li>
+<li><em>vii)</em> Aromáticos - <strong><em>F</em></strong>, <strong><em>W</em></strong>, <strong><em>Y</em></strong>, (<strong><em>H</em></strong>, pero
+sin absorción significativa de UV), <em>viii )</em> Alifáticos - <strong><em>G</em></strong> ,
+<strong><em>A</em></strong>, <strong><em>V</em></strong>, <strong><em>L</em></strong>, <strong><em>I</em></strong>, <strong><em>P</em></strong>,</li>
+<li><em>ix)</em> Forman enlaces covalentes cruzados (puentes di-sulfuro) - <strong><em>C</em></strong>,</li>
+<li><em>x)</em> Cíclicos - <strong><em>P</em></strong></li>
+</ul>
+<p>(ver por ejemplo <a href="http://www.mcb.ucdavis.edu/courses/bis102/AAProp.html" class="uri">http://www.mcb.ucdavis.edu/courses/bis102/AAProp.html</a>).<br />
+</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:VennAAprop"></span>
+<img src="figuras/VennAApropiedades.png" alt="Diagrama de Venn con las propiedades de los diferentes aminoácidos. Figura tomada de Wikipedia (CC BY-SA 3.0), versión en castellano modificada a partir del archivo “Amino Acids Venn Diagram (es).svg”" width="474" />
+<p class="caption">
+Figure 1.3: Diagrama de Venn con las propiedades de los diferentes aminoácidos. Figura tomada de Wikipedia (CC BY-SA 3.0), versión en castellano modificada a partir del archivo “Amino Acids Venn Diagram (es).svg”
+</p>
+</div>
+<p>Las diferencias en las propiedades físico-químicas llevan a importantes
+diferencias en la estructura de las proteínas y hacen que los cambios
+observados (substituciones) entre proteínas homólogas tengan
+distribuciones particulares, las que se suelen representar en matrices
+de substituciones (como BLOSUM, o PAM, ver más arriba). Estas
+diferencias, por lo tanto, tendrán un gran impacto en muchos de los
+procesos evolutivos, así como en la reconstrucción de los mismos. De
+hecho, algunos AAs poseen bastante similaridad con otros, por ejemplo
+<strong><em>Phe</em></strong> con <strong><em>Tyr</em></strong> e <strong><em>Ile</em></strong> con <strong><em>Val</em></strong>, lo que hace que los
+mismos sean más propensos a intercambiarse, cuando las presiones
+mutacionales sean suficiéntemente fuertes.</p>
+<p>Por ejemplo, mientras que en el caso de <strong><em>Phe</em></strong> con <strong><em>Tyr</em></strong> no hay diferencias en el contenido GC de los codones
+implicados, en el segundo caso (<strong><em>Ile</em></strong> con <strong><em>Val</em></strong>) se trata del cambio A<span class="math inline">\(\leftrightarrow\)</span>G en
+primera posición del codón y por lo tanto estará sujeto a cambio cuando
+el sesgo mutacional sea hacia GC (AT). Otros casos de cambios
+relativamente frecuentes incluyen <strong><em>Asp</em></strong> con <strong><em>Glu</em></strong>, <strong><em>Glu</em></strong> con
+<strong><em>Gln</em></strong>, <strong><em>Ile</em></strong> con <strong><em>Leu</em></strong>, <strong><em>Arg</em></strong> con <strong><em>Lys</em></strong>, <strong><em>Leu</em></strong>
+con <strong><em>Met</em></strong>, <strong><em>His</em></strong> con <strong><em>Tyr</em></strong> y <strong><em>Trp</em></strong> con <strong><em>Tyr</em></strong>. De
+todos estos solo el último implica un cambio de dos bases, el resto de
+solo una base y casi todos independientes del contenido GC (de todos
+estos solo <strong><em>His</em></strong> con <strong><em>Tyr</em></strong> implica cambio de GC). Esto podría
+estar relacionado con un fuerte proceso selectivo para la optimización
+de la estructura del código genético <span class="citation">(<a href="#ref-Novozhilov_Wolf_Koonin_2007" role="doc-biblioref">Novozhilov, Wolf, and Koonin 2007</a>)</span>,
+aunque existen teorías alternativas.</p>
+<p>Bajando un poco más el nivel de
+conservación (pero aún con “score” positivo en la matriz BLOSUM62)
+tenemos varios cambios que requieren cambio de contenido GC en los
+codones implicados.</p>
+<p>Un recurso extremadamente útil para comparar las propiedades de los
+aminoácidos, así como para trabajar a partir de las mismas, es la
+“AAindex database” (<a href="http://www.genome.jp/aaindex/" class="uri">http://www.genome.jp/aaindex/</a>)
+<span class="citation">(<a href="#ref-Kawashima_Ogata_Kanehisa_2000" role="doc-biblioref">Kawashima, Ogata, and Kanehisa 2000</a>)</span>. En la misma se encuentra registrada
+información para unas 500 propiedades diferentes, así como información
+adicional acerca de los autores, la publicación original y otras
+auxiliares. La posibilidad de acceder a estas propiedades a través de la
+biblioteca <em>seqinr</em> de <em>R</em> facilita enormemente la exploración de
+hipótesis más complejas que se relacionen con la substitución de AAs
+(ver por ejemplo <span class="citation">(<a href="#ref-Spangenberg_Battke_Grana_Nieselt_Naya_2011" role="doc-biblioref">L. Spangenberg et al. 2011</a>)</span>).</p>
+</div>
+<div id="diferencias-de-composición-entre-clases-de-proteínas" class="section level3 unnumbered">
+<h3>Diferencias de composición entre clases de proteínas</h3>
+<p>Existen diferentes clases de proteínas de acuerdo al criterio que se
+utilice para clasificarlas y, en general, de acuerdo al criterio usado
+poseen una composición diferente. Por ejemplo, de acuerdo a la forma
+podemos clasificarlas en Fibrosas, Globulares y Mixtas. Las Fibrosas
+presentan largas cadenas polipeptídicas, estructura secundaria atípica,
+son insolubles en agua y en disoluciones acuosas (v.gr. queratina,
+colágeno y fibrina). Las Globulares pliegan sus cadenas en una forma
+esféérica apretada, con los grupos hidrófobos hacia el interior y grupos
+hidrófilos hacia afuera. Esto hace las mismas sean solubles en
+disolventes polares como el agua. Entre ellas se encuentran los
+anticuerpos, las enzimas, algunas hormonas y proteínas de transporte.
+Finalmente, las Mixtas poseen una parte fibrilar y otra parte globular.</p>
+<p>Las proteínas solubles en agua suelen poseer los residuos hidrofóbicos
+(<strong><em>Leu</em></strong>, <strong><em>Ile</em></strong>, <strong><em>Val</em></strong>, <strong><em>Phe</em></strong> y <strong><em>Trp</em></strong>) escondidos
+en el medio de la proteína (en su estructura), mientras que los
+hidrofílicos se encuentran expuestos en la superficie. Al mismo tiempo,
+las proteínas de membrana (IMPs) suelen contar con anillos externos
+hidrofóbicos, los cuales sirven de anclaje en la bi-capa lipídica. Por
+otro lado, proteínas que deben interactuar con moléculas de carga
+positiva suelen tener residuos de carga negativa en su superficie
+(<strong><em>Glu</em></strong> y <strong><em>Asp</em></strong>) y viceversa (<strong><em>Arg</em></strong> y <strong><em>Lys</em></strong>). Algunos AAs
+poseen propiedades muy particulares, con un efecto sustancial en la
+estructura de la proteína. <strong><em>Pro</em></strong> por ejemplo que forma codos en la
+estructura y <strong><em>Cys</em></strong> que forma puentes di-sulfuro estabilizando
+estructuras.</p>
+<p>Un grupo de particular interés son las proteínas de membrana, que
+juegan un papel muy importante en el intercambio de molééculas entre la
+célula y el exterior, así como en la transducción de señales. Por esta
+razón es muy importante poder predecir que secuencias se corresponden a
+IMPs. Existen básicamente dos tipos de IMPs, las de <span class="math inline">\(\alpha\)</span>-hélices
+(TMH) y las de barriles-<span class="math inline">\(\beta\)</span> (TMB). Las primeras se encuentran en la
+membranas internas bacterianas y en las membranas plasmáticas
+bacterianas, aunque a veces también en membrana externa. Es la mayor
+categoría de proteínas transmembrana y una parte importante de todas las
+proteínas humanas. Las proteínas de conformación tipo barriles-<span class="math inline">\(\beta\)</span>
+se encuentran solo en membrana externa de bacterias Gram-negativas,
+pared celular de Gram-positivas y membrana externa de organelos.</p>
+<p>Aunque existen distintos algoritmos y programas, la predicción de la
+pertenencia a alguna de estas dos clases se basa esencialmente en el
+mismo paradigma, básicamente el alineamiento a otras proteínas o
+estructuras conocidas <span class="citation">(<a href="#ref-Bigelow_Rost_2009" role="doc-biblioref">Bigelow and Rost 2009</a>)</span>. Un concepto clave en este
+sentido es el de “transferencia de homología a través de alineamientos,”
+que consiste en que la evidencia experimental en las proteínas que en el
+alineamiento con la de interés permiten inferir homología puede
+extenderse a la proteína de interés. Claramente la capacidad de extender
+las conclusiones depende de la calidad del alineamiento. Ejemplo de esto
+serían regiones transmembrana en proteínas TMH. Existen méétodos
+específicos para la predicción de ambas clases de IMPs. Los métodos
+para detección de TMHs se basan en la presencia de una o más héélices
+transmembrana. Dentro de estos méétodos se encuentra <em>TMHMM</em>
+(<a href="http://www.cbs.dtu.dk/services/TMHMM/" class="uri">http://www.cbs.dtu.dk/services/TMHMM/</a>) que utiliza modelos del tipo
+HMM (ver más arriba) para la predicción.</p>
+<p>Entre los programas que permiten discriminar entre proteínas TMB o no-TMB se encuentra
+<em>TMB-Hunt</em>, que utiliza un algoritmo k-Nearest Neighbour (k-NN) sobre la
+composición aminoacídica de las proteínas. El mismo permite además
+incluir pesos diferenciales para los aminoácidos, así como información
+evolutiva, lo que consigue una precisión mayor al 92% con una
+sensibilidad mayor al 91% <span class="citation">(<a href="#ref-Garrow_Agnew_Westhead_2005" role="doc-biblioref">Garrow, Agnew, and Westhead 2005</a>)</span>. Finalmente, una
+alternativa interesante es utilizar <em>InterScanPro</em>
+(<a href="http://www.ebi.ac.uk/Tools/pfa/iprscan/" class="uri">http://www.ebi.ac.uk/Tools/pfa/iprscan/</a>), una herramienta que combina
+la información de hasta 14 programas de predicción diferentes. Los
+programas que se pueden seleccionar a través de esta herramienta son:
+<em>BlastProDom</em> (busca en la base de dominios <em>ProDom</em>), <em>FPrintScan</em>
+(busca en la base <em>PRINTS</em> de grupos de motivos), <em>HMMPIR</em> (busca en
+modelos HMM de la Protein Sequence Database, <em>PSD</em>), <em>HMMPfam</em> (busca en
+modelos HMM de la base <em>PFAM</em>), <em>HMMSmart</em> (busca en modelos HMM de la
+base <em>SMART</em>), <em>HMMTigr</em> (busca en modelos HMM de la base <em>TIGRFAMs</em>),
+<em>ProfileScan</em> (busca contra perfiles de <em>PROSITE</em>), <em>HAMAP</em> (busca
+contra perfiles de <em>HAMAP</em>), <em>PatternScan</em> (nueva versión de búsqueda
+sobre <em>PROSITE</em>), <em>SuperFamily</em>, <em>SignalPHMM</em>, <em>TMHMM</em>, <em>HMMPanther</em> y
+<em>Gene3D</em>. El costo computacional de estas búsquedas es muy elevado y por
+lo tanto se debe ser muy cauteloso a la hora de enviar varios trabajos
+simultaneamente.</p>
+<hr />
+<p><br />
+</p>
+<hr />
+<div id="ejemplo-1.x-1" class="section level4 unnumbered">
+<h4>Ejemplo 1.x</h4>
+<p><br />
+</p>
+<hr />
+<div class="graybox">
+<div class="center">
+<p><strong>PARA RECORDAR</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="genómica-comparativa" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Genómica comparativa</h2>
+<p>Como vimos más arriba, solo es posible entender la biología de los
+organismos si entendemos los procesos evolutivos subyacentes
+<span class="citation">(<a href="#ref-Dobzhansky_1964" role="doc-biblioref">Dobzhansky 1964</a>)</span>. De hecho, pese a que nuestra visión antropocééntrica
+nos incline a vernos sustancialmente diferente de otras especies, desde
+el punto de vista genómico compartimos una enorme similaridad con otras
+especies, a nivel genómico de secuencias codificantes mayor al 98% en
+algunos casos, como por ejemplo con el chimpancé (<em>Pan troglodytes</em>)
+<span class="citation">(<a href="#ref-Sequencing_Consortium_2005" role="doc-biblioref">Sequencing and Consortium 2005</a>)</span>. Las diferencias que observamos entre las
+especies pueden, en general, correlacionarse con diferencias a nivel
+genómico, tanto por la presencia/ausencia de genes así como diferencias
+en las secuencias que producen proteínas con diferencias
+estructurales/funcionales o modificaciones en las redes regulatorias. La
+genómica comparativa trata precisamente de identificar diferencias en
+los genomas, entender los procesos evolutivos que llevan a esas
+diferencias y en algunos casos de correlacionar estas diferencias con el
+fenotipo o aún el ambiente donde se desarrollan los organismos.<br />
+</p>
+<div id="comparación-de-secuencias-génicas" class="section level3 unnumbered">
+<h3>Comparación de secuencias génicas</h3>
+<p>La base de la genómica comparativa se encuentra en la determinación de
+homología en secuencias, es decir la inferencia sobre el origen
+ancestral compartido de las mismas. En especial, la determinación de la
+relación de ortología (ancestría común por especiación, ver más arriba)
+juega un papel central en la genómica comparativa ya que suele implicar
+(aunque no siempre) la realización de la misma función en diferentes
+organismos. La determinación de ortología es un problema usualmente
+complejo, particularmente cuando hay varias especies implicadas. La base
+de este proceso es la identificación de secuencias, en todas las
+especies de interés, que presenten un nivel de similaridad tal que
+permita inferir la relación de ortología. Debido a que es usualmente
+necesario explorar muchos pares (solo la comparación de dos bacterias
+requiere del orden de <span class="math inline">\(10^7\)</span> comparaciones), se requiere de herramientas
+que identifiquen similaridad rápidamente, lo que lleva al tipo de
+alineamientos heurísticos como el <em>BLAST</em>.</p>
+<p>Usualmente las secuencias ortólogas son las más similares en las otras especies y esto ha llevado
+al criterio práctico del Reciprocal Best Hit (RBH), es decir, un par de
+secuencias se consideran ortólogas si cada una de ellas es la mejor
+“selección” (la más similar) en su correspondiente genoma, de la otra.
+Un criterio de este tipo es necesario para evitar relaciones confusas
+debido a la existencia de parálogos. Cuando se comparan dos especies
+este criterio esta suficientemente bien definido; sin embargo, cuando se
+trata de más de dos especies la existencia de parálogos en alguna de
+ellas puede llevar a identificar distintas secuencias como perteneciente
+al grupo de ortólogas en dicha especie de acuerdo a que pares de
+especies se tomen en cuenta.</p>
+<p>Este problema nos lleva a otros dos criterios de utilidad práctica a la
+hora de identificar ortólogos. Por un lado, cuando la similaridad entre
+secuencias es debida a eventos de especiación (definición de ortólogos,
+ver más arriba) el orden de los distintos genes dentro del genoma será
+relativamente similara durante mucho tiempo. Esto se debe a que los
+re-arreglos genómicos suelen tener un importante costo evolutivo; en
+procariotas en particular existen estructuras llamadas operones, que
+facilitan la expresión coordinada de un conjunto de genes cuyos
+productos interactúan directamente y que tienden a conservarse en la
+evolución. Este ordenamiento puede ser usado para determinar las
+relaciones de ortología, ya que además del alto nivel de identidad de
+las secuencias podemos requerir que los genes en el vecindario de ambas
+especies sean los mismos y estén ordenados de similar manera. Todo esto
+es altamente dependiente de la distancia evolutiva entre los organismos
+considerados, ya que a mayor tiempo de divergencia menos conservación de
+estos patrones podemos esperar.</p>
+<p>La otra aproximación, conocida como
+filogenómica, implica una cuidadosa reconstrucción filogenética, a
+partir de la cual se intenta conciliar los resultados del alineamientos
+de las secuencias homólogas. Con un poco de suerte es posible determinar
+correctamente las relaciones de ortología y paralogía de nuestras
+secuencias. Los resultados obtenidos son altamente dependientes de la
+reconstrucción filogenética, por lo que es necesario tener mucho cuidado
+en la selección de secuencias para realizar la misma, en la correcta
+selección del modelo de substitución (tanto aminoácidica como
+nucleotídica) y el algoritmo de reconstrucción filogenética (ver más
+arriba). En la medida de lo posible es bueno explorar la sensibilidad
+del análisis frente a posibles cambios en el proceso, por ejemplo la
+selección de otro método de reconstrucción.</p>
+<p>Existe una gran cantidad de software específico para atacar el problema
+de la detección y determinación de ortólogos, así como bases de datos
+para distintos grupos filogenéticos. Entre estas últimas podemos
+destacar <em>COG</em> (Cluster of Orthologous Groups,
+<a href="http://www.ncbi.nlm.nih.gov/COG/" class="uri">http://www.ncbi.nlm.nih.gov/COG/</a>), una base de datos construida a
+partir de RBH con consistencia en al menos tres linajes para procariotas
+y su extensión eucariótica <em>KOG</em>, así como <em>EGO</em>
+(<a href="http://compbio.dfci.harvard.edu/tgi/ego/" class="uri">http://compbio.dfci.harvard.edu/tgi/ego/</a>) una base de ortólogos para
+eucariotas. Entre los programas podemos mencionar <em>Inparanoid</em>
+(<a href="http://inparanoid.sbc.su.se/" class="uri">http://inparanoid.sbc.su.se/</a>) que consiste en RBH seguido de
+agrupamiento de in-parálogos (parálogos dentro de una especie), así como
+<em>OrthoMCL</em> (<a href="http://www.orthomcl.org/" class="uri">http://www.orthomcl.org/</a>) que a diferencia del primero usa
+<strong>E-value</strong> y porcentaje de identidad para asignar las proteínas a
+diferentes agrupamientos. Finalmente, un programa muy interesantes es
+<em>Orthostrapper</em> (<a href="http://sonnhammer.sbc.su.se/download/software/" class="uri">http://sonnhammer.sbc.su.se/download/software/</a>), y su
+visualizador <em>OrthoGUI</em>, que permite obtener valores de soporte
+estadístico para la ortología de cada par de secuencias en un
+alineamiento.</p>
+</div>
+<div id="selección-positiva" class="section level3 unnumbered">
+<h3>Selección Positiva</h3>
+<p>Otro ejemplo interesante de las posibilidades de la genómica comparativa
+es la determinación de sitios en el genoma (o genes) que se encuentran
+evolucionando bajo selección positiva, o dicho en otras palabras, donde
+la selección se orienta hacia una adaptación a un ambiente particular
+(mejora en el “fitness”). Existen diversas formas de estudiar el efecto
+de la selección a nivel molecular, pero uno de los usualmente más
+aceptados es el de la relación Ka/Ks (también conocida como <span class="math inline">\(\omega\)</span>, o
+dN/dS), la relación entre el número de substituciones no-sinónimas por
+sitio no-sinónimo con respecto al número de substituciones sinónimas por
+sitio sinónimo. Como las substituciones sinónimas es de esperar que sean
+encontradas a una tasa usualmente mucho más alta que las no-sinónimas,
+aquellos sitios con una relación Ka/Ks por encima de 1 se consideran
+bajo selección positiva. El problema principal radica en determinar
+cuales apartamientos del 1 resultan estadísticamente significativos.</p>
+<p>Existen diferentes formas de estimar Ka y Ks, los más complejos usando
+estimación por máxima-verosimilitud, pero un método aproximado suele dar
+resultados equivalentes cuando los datos son suficientes. En esencia, en
+el método aproximado, a partir de un alineamiento de secuencias, se
+realiza el conteo de sustituciones sinónimas y no-sinónimas, con
+corrección por substituciones múltiples, para luego calcular la relación
+Ka/Ks. Es importante tener en cuenta que el alineamiento debe realizarse
+a nivel de aminoácidos, para luego realizar el retro-alineamiento a
+nucleótidos, asegurándose de esta forma que la comparación se realiza
+codón a codón. Dentro del software clásico para estimar esta relación
+podemos mencionar <em>PAML</em>
+(<a href="http://abacus.gene.ucl.ac.uk/software/paml.html" class="uri">http://abacus.gene.ucl.ac.uk/software/paml.html</a>) que realiza la
+estimación por máxima-verosimilitud, mientras que entre las fáciles de
+usar podemos mencionar la función <em>KaKs</em> de la biblioteca <em>seqinr</em> de
+<em>R</em>.</p>
+</div>
+<div id="vías" class="section level3 unnumbered">
+<h3>Vías</h3>
+<p>Las proteínas suelen realizar sus funciones particulares como partes de
+procesos más complejos, que envuelven otras proteínas, en diferentes
+etapas de esos procesos. El conjunto de proteínas (u otras móleculas)
+que participan en un determinado proceso se conocen como vía (por
+ejemplo la vía de la pentosa fosfato, durante la cual se utiliza la
+glucosa para generar ribosa y poder reductor a través de NADPH). Las
+distintas vías existentes en cada organismo se constituyen en el “mapa”
+de los distintos procesos biológicos que cada organismo es capaz de
+realizar. Si bien el número de organismos donde todos los procesos
+bioquímicos son conocidos al detalle es relativamente escaso, la
+genómica comparativa es una alternativa importante para determinar la
+capacidad de realización de distintos procesos en otros organismos.</p>
+<p>La idea central en esta estrategia consiste en ubicar en el genoma de
+interés ortólogos de los genes que constituyen una vía en un organismo
+modelo, como puede ser <em>E. coli</em>. Asumiendo que los genes ortólogos
+posean aún la misma función, la completitud de la vía (es decir, la
+presencia en el organismo de interés de todos los genes que la
+constituyen en el modelo) permite inferir la capacidad de realizar el
+proceso bioquímicos en el organismo de interés. Existen diferentes bases
+de datos con representaciones de las diferentes vías en varios
+organismos, pero probablemente la más conocida es <em>KEGG-Pathways</em>
+(<a href="http://www.genome.jp/kegg/pathway.html" class="uri">http://www.genome.jp/kegg/pathway.html</a>). La misma permite la búsqueda
+por diferentes criterios, posee información de varios organismos,
+muestra la información en forma gráfica y existe una API (Application
+Programming Interface) que facilita el acceso a los datos a través de
+software.</p>
+<p>Por otro lado, la existencia de información de las diferentes vías puede
+ser usado durante el proceso de anotación genómica, ya que si conocemos
+que un organismo realiza determinado proceso bioquímico entonces deben
+estar presentes todos los genes que constituyen esa vía. Si bien en
+algunos organismos las vías pueden estar formadas por diferentes genes,
+en general es posible determinar la falta de genes claves en las
+distintas vías, lo que usualmente se debe a errores en el proceso de
+anotación o a cambios desconocidos en las vías, esto último de gran
+interés científico.</p>
+<hr />
+<p><br />
+</p>
+<hr />
+<div id="ejemplo-1.x-2" class="section level4 unnumbered">
+<h4>Ejemplo 1.x</h4>
+<p><br />
+</p>
+<hr />
+<div class="graybox">
+<div class="center">
+<p><strong>PARA RECORDAR</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="genómica-funcional" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Genómica funcional</h2>
+<p>Las proteínas son los principales efectores a nivel celular (por ejemplo las enzimas), así como también juegan un rol fundamental en las estructuras celulares y las diferentes maquinarias, por lo que si intentamos entender el funcionamiento de células y tejidos a este nivel es necesario conocer cuándo, cuánto y dónde se producen. Por ejemplo, si queremos ver las diferencias entre un tejido determinado en estado normal y en el mismo tejido pero con un tumor, podríamos medir el nivel de cada proteína en ambos tejidos y comaprar luego los niveles correspondientes para entender las diferencias. Desafortunadamente, la medición de proteínas a escala masiva (lo que se conoce como <strong>proteómica</strong>) es un tema aún relativamente en pañales, si bien existen cientos de estudios desarrollados a esta escala en diferentes especies. Se trata de técnicas caras y complejas y que no han experimentado aún una explosión similar a la que se experimentó a nivel de la medición de ácidos nucléicos.</p>
+<p>De acuerdo a una versión esquemática del paradigma de la biología molecular (paradigma que imperó durante muchos años), la información se almacena en el ADN, la que luego es transcrita hacia el ARN y que luego se traduce en proteínas. Si juntamos esto con el hecho de que es relativamente sencillo medir cantidades de <strong>ARN</strong> en forma masiva (en realidad <strong>ADNc</strong>), la idea de utilizar la medición de los transcritos como un <strong>proxy</strong> a la medición de proteínas surge de inmediato. Es decir, si suponemos que la tasa de producción de proteínas es directamente proporcional a la tasa de transcripción, entonces medir la cantidad de transcritos es una buena y fiable indicación de la producción de proteínas (aunque existe una compresión de rango entre el logaritmo de la relación de proteínas y el logaritmo de la relación de mensajeros, como lo muestran <span class="citation"><a href="#ref-Spangenbergetal2013" role="doc-biblioref">L. Spangenberg et al.</a> (<a href="#ref-Spangenbergetal2013" role="doc-biblioref">2013</a>)</span>). Claramente, a pesar de su enorme importancia en el desarrollo de la disciplina, esta visión simplificada del paradigma de la biología molecular ha sido ampliamente sobrepasada por la información generada en los últimos años, incluyendo los descubrimientos de los microARNs y de un gran número de otros ARNs que juegan un papel fundamental en la regulación de la expresión génica. Más aún, la vida media de los diferentes transcritos no es necesariamente igual, lo que conlleva un error a la hora de utilizar su cantidad (no su tasa de producción) como indicador de la producción de proteínas.</p>
+<p>A pesar de todos estos problemas, el análisis de la expresión de los <strong>ARN mensajeros</strong> (<strong>ARNm</strong>) sigue siendo la principal herramienta para entender los cambios a nivel de expresión en los distintos tipos de órganos y tejidos, así como en células bacterianas o de otras especies. En un principio, los <strong>microarrays</strong> fueron fundamentales para esta tarea ya que permitían interrogar miles de genes al mismo tiempo. Desde los originales <strong>spot arrays</strong> que eran impresos por un robot cartesiano mediante un bloque de agujas que depositaban las sonda en una placa de vidrio, diferentes tecnologías se fueron desarrollando. Una de las principales limitaciones de los primeros arrays era la necesidad de utilizar algún tipo de “referencia,” es decir algo contra lo que contrastar las mediciones debido a las imperfecciones de las impresiones con agujas. Posiblemente de las tecnologías más conocida es la desarrollada por la empresa <strong>Affymetrix</strong> (fundada por el bioquímico uruguayo Alejandro Zaffaroni) que utilizando la misma tecnología que se utiliza para la fabricación de chips de semiconductores (esencialmente la fotolitografía) consiguieron desarrollar arrays de altísima densidad. La figura <a href="intro.html#fig:affychips">1.4</a> muestras dos arrays de esta marca, a la izquierda un chip para genoma humano, mientras que a la derecha aparece un chip para genoma de ratón; en la parte inferior aparece un fósforo a efectos de imaginar el tamaño de los mismos. La principal ventaja de estos arrays respecto a los típicos <strong>spotted</strong> era la muy alta precisión con los que eran fabricados, lo que permitía evitar tener que usar una referencia. Sin embargo, el principal problema con estos arrays era el costo de desarrollo asociado a cada nuevo diseño, por lo que quedaron reducidos a las pocas especies que eran modelo para la investigación (humano, ratón, <em>Arabidopsis thaliana</em>, etc.).</p>
+<p><br />
+</p>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:affychips"></span>
+<img src="figuras/Affymetrix-microarray.jpg" alt="Dos chips de Affymetrix, uno para genoma humano a la izquierda, el otro para genoma de ratón. El fósforo debajo es solo a fines de comparación del tamaño. La fecha de expiración de ambos es en el año 2006, por lo que su uso seguramente fue anterior (Schutz, trabajo propio (based on copyright claims)., CC BY 2.5, https://commons.wikimedia.org/w/index.php?curid=694717)." width="266" />
+<p class="caption">
+Figure 1.4: Dos chips de Affymetrix, uno para genoma humano a la izquierda, el otro para genoma de ratón. El fósforo debajo es solo a fines de comparación del tamaño. La fecha de expiración de ambos es en el año 2006, por lo que su uso seguramente fue anterior (Schutz, trabajo propio (based on copyright claims)., CC BY 2.5, <a href="https://commons.wikimedia.org/w/index.php?curid=694717" class="uri">https://commons.wikimedia.org/w/index.php?curid=694717</a>).
+</p>
+</div>
+<p>Un poco más tarde, la tecnología de la empresa <strong>Agilent</strong>, la <strong>impresión laser</strong> de los arrays permitió combinar una altísima precisión con la posibilidad de fabricar los mismos a gusto del consumidor y sin costos adicionales, lo que llevó a utilizarlos en decenas de nuevas especies. En efecto, en lugar de utilizar tinta de diferentes colores, el array se construía imprimiendo un nucleótido por vez en cada posición de una sonda, utilizando como tintas 4 soluciones con los nucleótidos A, C, G y T. La precisión de esta tecnología permitía realizar análisis en experimentos de un solo canal o en experimentos con dos canales, lo que en ciertos casos posibilitaba reducir los costos (por ejemplo, cuando existe una referencia natural para cada caso, utilizando el mismo array se elimina la necesidad de dos arrays).</p>
+<p>Finalmente, en años recientes, las tecnologías de secuenciación masiva llegaron a este campo y mediante la secuenciación del <strong>ARNc</strong> permiten obtener una representación mucho más amplia y fidedigna de las proporciones de los distintos mensajeros. Además, como se obtienen las secuencias de los mismos, es posible identificar variantes (que son a su vez producto de variantes en el <strong>ADN</strong>) asociadas a cambios en la expresión entre individuos, lo que se conoce como <strong>eQTL</strong> (“expression Quantitative Trait Locus”). La principal diferencia entre el análisis de expresión con arrays respecto a la secuenciación (que se conoce como <strong>RNA-seq</strong>) es que en el primer caso la señal obtenida es analógica (un número en una escala continua), mientras que en el segundo caso es digital (en realidad el conteo de los reads que mapean a un transcrito particular).</p>
+<p>La idea de las comparaciones en similar en las diferentes tecnologías, aunque cada tecnología requiere de detalles específicos a la hora de analizar los datos. En general, si vamos a comparar el perfil de expresión en dos tratamientos diferentes, por ejemplo tejido sano y tumoral, requerimos de varios individuos en cada tratamiento a fin de tener en cuenta la variación entre individuos y de que nuestras conclusiones se puedan extrapolar de alguna manera a la población general. Luego de haber obtenido los perfiles de expresión en cada individuo necesitamos realizar algún tipo de normalización, ya que las cantidades absolutas suelen depender de la preparación de las bibliotecas. Luego de normalizadas las muestras debemos comparar gen a gen, lo que suele hacerse mediante un modelo lineal sobre los datos transformados de alguna manera. En los casos en que se compara un tratamiento contra una referencia, se acostumbra a utilizar la distribución del logaritmo de la relación de cambio entre las dos condiciones (que se llama <span class="math inline">\(logFC\)</span>). Es decir, si la expresión del gen <span class="math inline">\(i\)</span> en el tratamiento es <span class="math inline">\(mRNA_{i,1}\)</span> y en la referencia o control es <span class="math inline">\(mRNA_{i,2}\)</span>, entonces</p>
+<p><span class="math display" id="eq:logfc1">\[\begin{equation}
+logFC_i=log\left[\frac{mRNA_{i,1}}{mRNA_{i,2}}\right]
+\tag{1.10}
+\end{equation}\]</span></p>
+<p>Las ventajas de esta transformación son varias. Por un lado, tanto las distribuciones de conteo (en el caso de RNA-seq) como las de señal luminosa tienen una cola larga a la derecha, es decir, una serie de valores muy altos y alejados de donde se concentra la mayor parte de la distribución; el logaritmo “corrige” de alguna forma eso, transformándolas en distribuciones parecidas a la normal. En segundo caso, mientras que la relación <span class="math inline">\(\frac{mRNA_{i,1}}{mRNA_{i,2}}\)</span> es asimétrica (cuando el numerador es más pequeño que el denominador la relación queda entre 0 y 1, mientras que al revés va de 1 a <span class="math inline">\(+\infty\)</span>), la relación transformada <span class="math inline">\(log\left[\frac{mRNA_{i,1}}{mRNA_{i,2}}\right]\)</span> es simétrica y centrada en cero, además de relativamente normal. Con esta transformación, por ejemplo si hay solo dos grupos a comparar, la comparación podría ser a través de un test de <span class="math inline">\(t\)</span> (la distribución). Como realizamos miles de comparaciones a la vez (una por gen), la significación estadística de cada gen debe ajustarse para múltiples ensayos, lo que usualmente se realiza a través de algún método como Benjamini-Hochberg.</p>
+<div id="estudios-epigenéticos-y-epigenómicos" class="section level3 unnumbered">
+<h3>Estudios epigenéticos y epigenómicos</h3>
+<p>Hasta ahora hemos manejado los aspectos de la genética que tienen que ver con la transmisión de información como algo bastante rígido y donde hay poco margen para cambiar lo recibido de los progenitores. Sin embargo, existen una serie de mecanismos que tienen que ver con la regulación que pueden transmitirse de padres a hijos y a su vez ser modificados posteriormente de recibidos. El estudio de estos mecanismos particulares es el objetivo de la epigenética y de la epigenómica. Básicamente, la epigenética se centra en los procesos que regulan la activación y desactivación de genes, tanto en lo que hace a cómo y cuándo se produce esto. Por otra parte, la epigenómica se refiere a los cambios globales que ocurren a nivel de genoma que permiten activar o desactivar un conjunto de genes, tanto a nivel de células como de organismos.</p>
+<p>En general, los procesos epigenéticos son los responsables de controlar el crecimiento y desarrollo de un organismo. En situaciones particulares, la alteración del control puede llevar a procesos patogénicos, como por ejemplo el cáncer. Lo trascendente de este proceso es que factores ambientales pueden ser los causantes del desajuste en la regulación y por lo tanto en el desarrollo de patologías. Dentro de los factores ambientales conocidos, la exposición a determinadas sustancias químicas aparece como muy relevante, aunque también la dieta parece estar relacionada con alteraciones en la regulación. Además, existe cierta evidencia de los cambios en la regulación podrían ser transmisibles.</p>
+<p>Existen dos formas en las que el epigenoma es capaz de marcar el ADN para la regulación génica: a) la metilación y b) la modificación de las histonas. En la primera, grupos metilo se intercalan en la molécula de ADN modificando la función cuando esto ocurre en un gen promotor. En general, la metilación del ADN actúa reprimiendo la transcripción génica. En mamíferos entre el <span class="math inline">\(60\%\)</span> y el <span class="math inline">\(90\%\)</span> de todas las CpG están metiladas. Por otra parte, en la segunda forma de acción una serie de modificaciones en las histonas (acetilación, metilación, desmetilación, fosforilación, ubiquitilación, etc.) modifican el arrollamiento del ADN y por lo tanto la disponibilidad para la transcripción.</p>
+<p>Por supuesto, existen arrays disponibles para el estudio de las modificaciones epigenómicas, así como métodos para realizar los estudios a través de secuenciación masiva.</p>
+<hr />
+<div class="graybox">
+<div class="center">
+<p><strong>PARA RECORDAR</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div id="ejercicios-1" class="section level2 unnumbered">
+<h2>Ejercicios</h2>
+<div id="ejercicio-1.1" class="section level3 unnumbered">
+<h3>Ejercicio 1.1</h3>
+<p>Dada la siguiente secuencia “AUGGGAUUUCCGCCCAUUUACGUG,” a) determinar de que ácido nucléico se trata (ADN o ARN), b) si tiene sentido, traducirla a una secuencia de aminoácidos tomandola como hebra <strong>codificante</strong> y en marco de referencia y c) escribir en sentido 5’–&gt;3’ la hebra complementaria pero en ADN (hebra molde) d) calcular el contenido G+C</p>
+<p><strong><em>Solución</em></strong>
+a) se trata de ARN ya que entre sus bases aparece <strong>U</strong>racilo en lugar de <strong>T</strong>imina<br />
+b) en principio parece tener sentido, por lo que asumiendo que está en marco de referencia correcto y y que se trata de la hebra codificante, separamos en codones “AUG GGA UUU CCG CCC AUU UAC GUG,” que utilizando el código genético se traduce como MGFPPIYV<br />
+c) “CAC GTA AAT GGG CGG AAA TCC CAT”<br />
+d) 6G + 6C= 12 G o C en un total de [8 codones x 3 bases c/u = 24 bases], por lo tanto 12/24=0.5 o 50%</p>
+<hr />
+
+</div>
+</div>
+</div>
+
+
+
+<h3>Bibliografía</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Benzecri_1980" class="csl-entry">
+Benzecri, J P. 1980. <span>“Introduction a l’analyse Des Correspondances d’apres Un Exemple de Données Médicale.”</span> <em>Les Cahiers d’Analyse Des Données</em> V (3): 283–310.
+</div>
+<div id="ref-Bigelow_Rost_2009" class="csl-entry">
+Bigelow, Henry, and Burkhard Rost. 2009. <span>“Online Tools for Predicting Integral Membrane Proteins.”</span> Edited by Matthew J Peirce and RobinEditors Wait. <em>Methods In Molecular Biology Clifton Nj</em> 528: 3–23. <a href="http://www.springerlink.com/content/h869368601336862">http://www.springerlink.com/content/h869368601336862</a>.
+</div>
+<div id="ref-Cortazzo_Cervenansky_Marin_Reiss_Ehrlich_Deana_2002" class="csl-entry">
+Cortazzo, Patricia, Carlos Cerveñansky, Mónica Marín, Claude Reiss, Ricardo Ehrlich, and Atilio Deana. 2002. <span>“Silent Mutations Affect in Vivo Protein Folding in Escherichia Coli.”</span> <em>Biochemical and Biophysical Research Communications</em> 293 (1): 537–41. <a href="http://www.ncbi.nlm.nih.gov/pubmed/12054634">http://www.ncbi.nlm.nih.gov/pubmed/12054634</a>.
+</div>
+<div id="ref-Dobzhansky_1964" class="csl-entry">
+Dobzhansky, Theodosius. 1964. <span>“Biology, Molecular and Organismic.”</span> <em>American Zoologist</em> 4 (4): 443-452 ST - Biology, molecular and organismic. <a href="http://icb.oxfordjournals.org/cgi/reprint/4/4/443.pdf">http://icb.oxfordjournals.org/cgi/reprint/4/4/443.pdf</a>.
+</div>
+<div id="ref-Ermolaeva_2001" class="csl-entry">
+Ermolaeva, M D. 2001. <span>“Synonymous Codon Usage in Bacteria.”</span> <em>Current Issues in Molecular Biology</em> 3 (4): 91–97. <a href="http://www.ncbi.nlm.nih.gov/pubmed/11719972">http://www.ncbi.nlm.nih.gov/pubmed/11719972</a>.
+</div>
+<div id="ref-Fox_Erill_2010" class="csl-entry">
+Fox, Jesse M, and Ivan Erill. 2010. <span>“Relative Codon Adaptation: A Generic Codon Bias Index for Prediction of Gene Expression.”</span> <em>DNA Research an International Journal for Rapid Publication of Reports on Genes and Genomes</em> 17 (3): 185–96. <a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2885275&amp;tool=pmcentrez&amp;rendertype=abstract">http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2885275&amp;tool=pmcentrez&amp;rendertype=abstract</a>.
+</div>
+<div id="ref-Garrow_Agnew_Westhead_2005" class="csl-entry">
+Garrow, Andrew G, Alison Agnew, and David R Westhead. 2005. <span>“TMB-Hunt: An Amino Acid Composition Based Method to Screen Proteomes for Beta-Barrel Transmembrane Proteins.”</span> <em>BMC Bioinformatics</em> 6 (1): 56. <a href="http://www.ncbi.nlm.nih.gov/pubmed/15769290">http://www.ncbi.nlm.nih.gov/pubmed/15769290</a>.
+</div>
+<div id="ref-Grigoriev_1998" class="csl-entry">
+Grigoriev, A. 1998. <span>“Analyzing Genomes with Cumulative Skew Diagrams.”</span> <em>Nucleic Acids Research</em> 26 (10): 2286–90. <a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=147580&amp;tool=pmcentrez&amp;rendertype=abstract">http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=147580&amp;tool=pmcentrez&amp;rendertype=abstract</a>.
+</div>
+<div id="ref-Hoqueetal2020" class="csl-entry">
+Hoque, M. N., A. Istiaq, R. A. Clement, K. M. Gibson, O. Saha, O. K. Islam, R. A. Abir, et al. 2020. <span>“<span class="nocase"><span>I</span>nsights <span>I</span>nto the <span>R</span>esistome of <span>B</span>ovine <span>C</span>linical <span>M</span>astitis <span>M</span>icrobiome, a <span>K</span>ey <span>F</span>actor in <span>D</span>isease <span>C</span>omplication</span>.”</span> <em>Front Microbiol</em> 11: 860.
+</div>
+<div id="ref-Iraolaetal2016" class="csl-entry">
+Iraola, G., L. Spangenberg, B. Lopes Bastos, M. Graña, L. Vasconcelos, Á. Almeida, G. Greif, C. Robello, P. Ristow, and H. Naya. 2016. <span>“<span class="nocase"><span>T</span>ranscriptome <span>S</span>equencing <span>R</span>eveals <span>W</span>ide <span>E</span>xpression <span>R</span>eprogramming of <span>B</span>asal and <span>U</span>nknown <span>G</span>enes in <span>L</span>eptospira biflexa <span>B</span>iofilms</span>.”</span> <em>mSphere</em> 1 (2).
+</div>
+<div id="ref-Kawashima_Ogata_Kanehisa_2000" class="csl-entry">
+Kawashima, S, H Ogata, and M Kanehisa. 2000. <span>“AAindex: Amino Acid Index Database.”</span> <em>Nucleic Acids Research</em> 27 (1): 374. <a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2238890&amp;tool=pmcentrez&amp;rendertype=abstract">http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2238890&amp;tool=pmcentrez&amp;rendertype=abstract</a>.
+</div>
+<div id="ref-Nonnemannetal2019" class="csl-entry">
+Nonnemann, B., U. Lyhs, L. Svennesen, K. A. Kristensen, I. C. Klaas, and K. Pedersen. 2019. <span>“<span class="nocase"><span>B</span>ovine mastitis bacteria resolved by <span>M</span><span>A</span><span>L</span><span>D</span><span>I</span>-<span>T</span><span>O</span><span>F</span> mass spectrometry</span>.”</span> <em>J Dairy Sci</em> 102 (3): 2515–24.
+</div>
+<div id="ref-Novembre_2002" class="csl-entry">
+Novembre, John A. 2002. <span>“Accounting for Background Nucleotide Composition When Measuring Codon Usage Bias.”</span> <em>Molecular Biology and Evolution</em> 19 (8): 1390–94. <a href="http://mbe.oxfordjournals.org/content/19/8/1390.long">http://mbe.oxfordjournals.org/content/19/8/1390.long</a>.
+</div>
+<div id="ref-Novozhilov_Wolf_Koonin_2007" class="csl-entry">
+Novozhilov, Artem S, Yuri I Wolf, and Eugene V Koonin. 2007. <span>“Evolution of the Genetic Code: Partial Optimization of a Random Code for Robustness to Translation Error in a Rugged Fitness Landscape.”</span> <em>Biology Direct</em> 2 (1): 24. <a href="http://www.ncbi.nlm.nih.gov/pubmed/17956616">http://www.ncbi.nlm.nih.gov/pubmed/17956616</a>.
+</div>
+<div id="ref-Pielou1969" class="csl-entry">
+Pielou, E. C. 1969. <em>An Introduction to Mathematical Ecology</em>. Wiley-Interscience.
+</div>
+<div id="ref-Rocha_2004" class="csl-entry">
+Rocha, Eduardo P C. 2004. <span>“Codon Usage Bias from tRNA’s Point of View: Redundancy, Specialization, and Efficient Decoding for Translation Optimization.”</span> <em>Genome Research</em> 14 (11): 2279–86. <a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=525687&amp;tool=pmcentrez&amp;rendertype=abstract">http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=525687&amp;tool=pmcentrez&amp;rendertype=abstract</a>.
+</div>
+<div id="ref-Roymondal_Das_Sahoo_2009" class="csl-entry">
+Roymondal, Uttam, Shibsankar Das, and Satyabrata Sahoo. 2009. <span>“Predicting Gene Expression Level from Relative Codon Usage Bias: An Application to Escherichia Coli Genome.”</span> <em>DNA Research An International Journal for Rapid Publication of Reports on Genes and Genomes</em> 16 (1): 13–30. <a href="http://www.ncbi.nlm.nih.gov/pubmed/19131380">http://www.ncbi.nlm.nih.gov/pubmed/19131380</a>.
+</div>
+<div id="ref-Sequencing_Consortium_2005" class="csl-entry">
+Sequencing, The Chimpanzee, and Analysis Consortium. 2005. <span>“Initial Sequence of the Chimpanzee Genome and Comparison with the Human Genome.”</span> <em>Nature</em> 437 (7055): 69–87. <a href="http://www.ncbi.nlm.nih.gov/pubmed/16136131">http://www.ncbi.nlm.nih.gov/pubmed/16136131</a>.
+</div>
+<div id="ref-Sharp_Li_1987" class="csl-entry">
+Sharp, P M, and W H Li. 1987. <span>“The Codon Adaptation Index–a Measure of Directional Synonymous Codon Usage Bias, and Its Potential Applications.”</span> <em>Nucleic Acids Research</em> 15 (3): 1281–95. <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Citation&amp;list_uids=3547335">http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Citation&amp;list_uids=3547335</a>.
+</div>
+<div id="ref-Sharp_Tuohy_Mosurski_1986" class="csl-entry">
+Sharp, P M, T M Tuohy, and K R Mosurski. 1986. <span>“Codon Usage in Yeast: Cluster Analysis Clearly Differentiates Highly and Lowly Expressed Genes.”</span> <em>Nucleic Acids Research</em> 14 (13): 5125–43. <a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=311530&amp;tool=pmcentrez&amp;rendertype=abstract">http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=311530&amp;tool=pmcentrez&amp;rendertype=abstract</a>.
+</div>
+<div id="ref-Spangenbergetal2013" class="csl-entry">
+Spangenberg, L., A. Correa, B. Dallagiovanna, and H. Naya. 2013. <span>“<span class="nocase"><span>R</span>ole of alternative polyadenylation during adipogenic differentiation: an in silico approach</span>.”</span> <em>PLoS One</em> 8 (10): e75578.
+</div>
+<div id="ref-Spangenberg_Battke_Grana_Nieselt_Naya_2011" class="csl-entry">
+Spangenberg, L, F Battke, M Graña, K Nieselt, and H Naya. 2011. <span>“Identifying Associations Between Amino Acid Changes and Meta Information in Alignments.”</span> <em>Bioinformatics</em> 27 (20): 2782–89. <a href="http://www.ncbi.nlm.nih.gov/pubmed/21846738">http://www.ncbi.nlm.nih.gov/pubmed/21846738</a>.
+</div>
+<div id="ref-Sueoka_1962" class="csl-entry">
+Sueoka, Noboru. 1962. <span>“ON THE GENETIC BASIS OF VARIATION AND HETEROGENEITY OF DNA BASE COMPOSITION.”</span> <em>Proceedings of the National Academy of Sciences of the United States of America</em> 48 (4): 582–92. <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC220819/">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC220819/</a>.
+</div>
+<div id="ref-WoeseKandlerWheelis1990" class="csl-entry">
+Woese, C. R., O. Kandler, and M. L. Wheelis. 1990. <span>“<span class="nocase"><span>T</span>owards a natural system of organisms: proposal for the domains <span>A</span>rchaea, <span>B</span>acteria, and <span>E</span>ucarya</span>.”</span> <em>Proc Natl Acad Sci U S A</em> 87 (12): 4576–79.
+</div>
+<div id="ref-Wright_1990" class="csl-entry">
+Wright, F. 1990. <span>“The <span>‘Effective Number of Codons’</span> Used in a Gene.”</span> <em>Gene</em> 87 (1): 23–29. <a href="http://www.ncbi.nlm.nih.gov/pubmed/2110097">http://www.ncbi.nlm.nih.gov/pubmed/2110097</a>.
+</div>
+<div id="ref-Yakovchuk_Protozanova_Frank-Kamenetskii_2006" class="csl-entry">
+Yakovchuk, Peter, Ekaterina Protozanova, and Maxim D Frank-Kamenetskii. 2006. <span>“Base-Stacking and Base-Pairing Contributions into Thermal Stability of the DNA Double Helix.”</span> <em>Nucleic Acids Research</em> 34 (2): 564–74. <a href="http://www.ncbi.nlm.nih.gov/pubmed/16449200">http://www.ncbi.nlm.nih.gov/pubmed/16449200</a>.
+</div>
+<div id="ref-Zerial_Salinas_Filipski_Bernardi_1986" class="csl-entry">
+Zerial, M, J Salinas, J Filipski, and G Bernardi. 1986. <span>“Gene Distribution and Nucleotide Sequence Organization in the Human Genome.”</span> <em>The Federation of European Biochemical Societies Journal</em> 160 (3): 479–85. <a href="http://www.ncbi.nlm.nih.gov/pubmed/3780716">http://www.ncbi.nlm.nih.gov/pubmed/3780716</a>.
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="5">
+<li id="fn5"><p>El contenido GC se calcula usualmente como
+<span class="math inline">\(GC=(N_C+N_G)/(N_A+N_C+N_G+N_T)\)</span>, donde <span class="math inline">\(N_A\)</span>...<span class="math inline">\(N_T\)</span> corresponde
+al número de veces que aparece cada base en una secuencia.<a href="intro.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>El <span class="math inline">\(GC_{skew}\)</span> se calcula tomando una ventana de tamaño
+determinado y de acuerdo con la siguiente expresión:
+<span class="math inline">\(GC_{skew}=(N_G-N_C)/(N_G+N_C)\)</span>.<a href="intro.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>figuran entre paréntesis cuando entran en la categoría parcialmente<a href="intro.html#fnref7" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="variación-y-equilibrio-de-hardy-weinberg.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-introGenomica.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ApuntesGeneticaII.pdf", "ApuntesGeneticaII.epub"],
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
