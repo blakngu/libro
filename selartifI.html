@@ -4,30 +4,30 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 11 Selección Artificial I | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
-  <meta name="description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
+  <title>Capítulo 11 Selección Artificial I | Genética II: Guía Práctica</title>
+  <meta name="description" content="Apuntes del curso Genética II. Guía Práctica" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 11 Selección Artificial I | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  <meta property="og:title" content="Capítulo 11 Selección Artificial I | Genética II: Guía Práctica" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
+  <meta property="og:description" content="Apuntes del curso Genética II. Guía Práctica" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 11 Selección Artificial I | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  <meta name="twitter:title" content="Capítulo 11 Selección Artificial I | Genética II: Guía Práctica" />
   
-  <meta name="twitter:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
+  <meta name="twitter:description" content="Apuntes del curso Genética II. Guía Práctica" />
   
 
 <meta name="author" content="Hugo Naya" />
 <meta name="author" content="(Federica Marín)" />
-<meta name="author" content="(Jorge Urioste, María André, Washington Bell, Ana Laura Sanchez)" />
+<meta name="author" content="(María André, Ana Laura Sanchez, Andrea Larracharte, Rodrigo Vivián)" />
 <meta name="author" content="(Clara Pritsch, Paola Gaiero, Marianella Quezada)" />
 
 
-<meta name="date" content="2022-02-09" />
+<meta name="date" content="2022-02-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,10 +56,6 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 
@@ -102,357 +98,76 @@ div.csl-indent {
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio (leer antes de arrancar)</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio a la Guía Práctica</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nuestra-filosofía-del-no-tanto"><i class="fa fa-check"></i>Nuestra filosofía del NO (tanto)</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#qué-es-y-qué-no-es-este-libro"><i class="fa fa-check"></i>¿Qué ES y qué NO ES este libro?</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#bibliografía-recomendada-para-este-curso"><i class="fa fa-check"></i>Bibliografía recomendada para este curso</a></li>
 </ul></li>
 <li class="part"><span><b>Parte I: Genómica</b></span></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introducción a la Genómica</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#variabilidad-genética"><i class="fa fa-check"></i><b>1.1</b> Variabilidad genética</a>
-<ul>
-<li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#detectando-la-variabilidad-diferentes-técnicas"><i class="fa fa-check"></i><b>1.1.1</b> Detectando la variabilidad: diferentes técnicas</a></li>
-<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#metagenómica-y-metatranscriptómica"><i class="fa fa-check"></i><b>1.1.2</b> Metagenómica y Metatranscriptómica</a></li>
-</ul></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#genómica-composicional"><i class="fa fa-check"></i><b>1.2</b> Genómica composicional</a>
-<ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-gcskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones, GCskew</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#uso-de-codones"><i class="fa fa-check"></i>Uso de codones</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#exploración-multivariada-análisis-de-correspondencia"><i class="fa fa-check"></i>Exploración multivariada: Análisis de Correspondencia</a></li>
-<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i><b>1.2.1</b> Composición de proteínas</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-en-propiedades-de-los-aas"><i class="fa fa-check"></i>Diferencias en propiedades de los AAs</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-de-composición-entre-clases-de-proteínas"><i class="fa fa-check"></i>Diferencias de composición entre clases de proteínas</a></li>
-</ul></li>
-<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#genómica-comparativa"><i class="fa fa-check"></i><b>1.3</b> Genómica comparativa</a>
-<ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#comparación-de-secuencias-génicas"><i class="fa fa-check"></i>Comparación de secuencias génicas</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección Positiva</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#vías"><i class="fa fa-check"></i>Vías</a></li>
-</ul></li>
-<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#genómica-funcional"><i class="fa fa-check"></i><b>1.4</b> Genómica funcional</a>
-<ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#estudios-epigenéticos-y-epigenómicos"><i class="fa fa-check"></i>Estudios epigenéticos y epigenómicos</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a>
-<ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicio-1.1"><i class="fa fa-check"></i>Ejercicio 1.1</a></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicio-1.2"><i class="fa fa-check"></i>Ejercicio 1.2</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicio-1.3"><i class="fa fa-check"></i>Ejercicio 1.3</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicio-1.4"><i class="fa fa-check"></i>Ejercicio 1.4</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicio-1.5"><i class="fa fa-check"></i>Ejercicio 1.5</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicio-1.6"><i class="fa fa-check"></i>Ejercicio 1.6</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicio-1.7"><i class="fa fa-check"></i>Ejercicio 1.7</a></li>
 </ul></li>
 <li class="part"><span><b>Parte II: Genética de Poblaciones</b></span></li>
 <li class="chapter" data-level="2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html"><i class="fa fa-check"></i><b>2</b> Variación y equilibrio de Hardy-Weinberg</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#el-equilibrio-de-hardy-weinberg"><i class="fa fa-check"></i><b>2.1</b> El equilibrio de Hardy-Weinberg</a>
-<ul>
-<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#supuestos-que-asumimos-se-cumplen-para-h-w"><i class="fa fa-check"></i>Supuestos que asumimos se cumplen para H-W</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.1"><i class="fa fa-check"></i>Ejercicio 2.1</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.2"><i class="fa fa-check"></i>Ejercicio 2.2</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.3"><i class="fa fa-check"></i>Ejercicio 2.3</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.4"><i class="fa fa-check"></i>Ejercicio 2.4</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.5"><i class="fa fa-check"></i>Ejercicio 2.5</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.6"><i class="fa fa-check"></i>Ejercicio 2.6</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.7"><i class="fa fa-check"></i>Ejercicio 2.7</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.8"><i class="fa fa-check"></i>Ejercicio 2.8</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.9"><i class="fa fa-check"></i>Ejercicio 2.9</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.10"><i class="fa fa-check"></i>Ejercicio 2.10</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.11"><i class="fa fa-check"></i>Ejercicio 2.11</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.12"><i class="fa fa-check"></i>Ejercicio 2.12</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.13"><i class="fa fa-check"></i>Ejercicio 2.13</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.14"><i class="fa fa-check"></i>Ejercicio 2.14</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.15"><i class="fa fa-check"></i>Ejercicio 2.15</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.16"><i class="fa fa-check"></i>Ejercicio 2.16</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.17"><i class="fa fa-check"></i>Ejercicio 2.17</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-dioicas-dos-sexos"><i class="fa fa-check"></i><b>2.2</b> Hardy-Weinberg en especies dioicas (dos sexos)</a></li>
-<li class="chapter" data-level="2.3" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#h-w-la-frecuencia-de-heterocigotas-en-función-de-la-frecuencia-alélica"><i class="fa fa-check"></i><b>2.3</b> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
-<li class="chapter" data-level="2.4" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo"><i class="fa fa-check"></i><b>2.4</b> El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo</a></li>
-<li class="chapter" data-level="2.5" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#tres-o-más-alelos"><i class="fa fa-check"></i><b>2.5</b> Tres o más alelos</a></li>
-<li class="chapter" data-level="2.6" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-y-el-equilibrio-o-no"><i class="fa fa-check"></i><b>2.6</b> La estimación de frecuencias y el equilibrio (o no)</a></li>
-<li class="chapter" data-level="2.7" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#el-sistema-abo"><i class="fa fa-check"></i><b>2.7</b> El sistema ABO</a></li>
-<li class="chapter" data-level="2.8" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#dónde-se-esconden-los-alelos-recesivos"><i class="fa fa-check"></i><b>2.8</b> ¿Dónde se “esconden” los alelos recesivos?</a></li>
-<li class="chapter" data-level="2.9" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-poliploides"><i class="fa fa-check"></i><b>2.9</b> Hardy-Weinberg en especies poliploides</a></li>
-<li class="chapter" data-level="2.10" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#geometría-y-genética-los-diagramas-de-de-finetti-para-cuando-estés-aburrido"><i class="fa fa-check"></i><b>2.10</b> <strong>Geometría y Genética: los diagramas de <em>de Finetti</em></strong> (para cuando estés aburrido)</a></li>
-<li class="chapter" data-level="2.11" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-en-el-locus-abo-para-cuando-estés-muy-aburrido"><i class="fa fa-check"></i><b>2.11</b> <strong>La estimación de frecuencias en el locus ABO</strong> (para cuando estés MUY aburrido)</a></li>
-<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicios-2"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="deriva.html"><a href="deriva.html"><i class="fa fa-check"></i><b>3</b> Deriva Genética</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="deriva.html"><a href="deriva.html#el-rol-de-los-procesos-estocásticos-en-la-genética"><i class="fa fa-check"></i><b>3.1</b> El rol de los procesos estocásticos en la genética</a></li>
-<li class="chapter" data-level="3.2" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i><b>3.2</b> El modelo de Wright-Fisher</a></li>
-<li class="chapter" data-level="3.3" data-path="deriva.html"><a href="deriva.html#el-rol-de-la-subdivisión-poblacional-en-la-evolución-de-las-frecuencias-alélicas"><i class="fa fa-check"></i><b>3.3</b> El rol de la subdivisión poblacional en la evolución de las frecuencias alélicas</a>
-<ul>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#homocigosidad-y-heterocigosidad"><i class="fa fa-check"></i>Homocigosidad y Heterocigosidad</a></li>
-</ul></li>
-<li class="chapter" data-level="3.4" data-path="deriva.html"><a href="deriva.html#cadenas-de-markov"><i class="fa fa-check"></i><b>3.4</b> Cadenas de Markov</a></li>
-<li class="chapter" data-level="3.5" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i><b>3.5</b> Tamaño efectivo poblacional</a></li>
-<li class="chapter" data-level="3.6" data-path="deriva.html"><a href="deriva.html#aproximación-de-difusión"><i class="fa fa-check"></i><b>3.6</b> Aproximación de difusión</a>
-<ul>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#caminatas-al-azar-y-procesos-de-difusión"><i class="fa fa-check"></i>Caminatas al azar y procesos de difusión</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-forward-equation"><i class="fa fa-check"></i>Kolmogorov Forward Equation</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-backward-equation"><i class="fa fa-check"></i>Kolmogorov Backward Equation</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#solución-de-las-ecuaciones"><i class="fa fa-check"></i>Solución de las ecuaciones</a></li>
-</ul></li>
-<li class="chapter" data-level="3.7" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i><b>3.7</b> Probabilidad de fijación y tiempos de fijación</a></li>
-<li class="chapter" data-level="3.8" data-path="deriva.html"><a href="deriva.html#el-modelo-coalescente"><i class="fa fa-check"></i><b>3.8</b> El modelo coalescente</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejercicios-3"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="seleccion.html"><a href="seleccion.html"><i class="fa fa-check"></i><b>4</b> Selección Natural</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="seleccion.html"><a href="seleccion.html#el-concepto-de-fitness"><i class="fa fa-check"></i><b>4.1</b> El concepto de “fitness”</a></li>
-<li class="chapter" data-level="4.2" data-path="seleccion.html"><a href="seleccion.html#selección-natural-en-el-modelo-de-un-locus-con-dos-alelos"><i class="fa fa-check"></i><b>4.2</b> Selección natural en el modelo de un locus con dos alelos</a></li>
-<li class="chapter" data-level="4.3" data-path="seleccion.html"><a href="seleccion.html#diferentes-formas-de-selección"><i class="fa fa-check"></i><b>4.3</b> Diferentes formas de selección</a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="seleccion.html"><a href="seleccion.html#selección-direccional"><i class="fa fa-check"></i><b>4.3.1</b> Selección direccional</a></li>
-<li class="chapter" data-level="4.3.2" data-path="seleccion.html"><a href="seleccion.html#selección-estabilizadora"><i class="fa fa-check"></i><b>4.3.2</b> Selección estabilizadora</a></li>
-<li class="chapter" data-level="4.3.3" data-path="seleccion.html"><a href="seleccion.html#selección-disruptiva"><i class="fa fa-check"></i><b>4.3.3</b> Selección disruptiva</a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="seleccion.html"><a href="seleccion.html#el-teorema-fundamental-de-la-selección-natural"><i class="fa fa-check"></i><b>4.4</b> El teorema fundamental de la selección natural</a></li>
-<li class="chapter" data-level="4.5" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-mutación"><i class="fa fa-check"></i><b>4.5</b> Equilibrio selección-mutación</a>
-<ul>
-<li class="chapter" data-level="4.5.1" data-path="seleccion.html"><a href="seleccion.html#el-principio-de-haldane-muller"><i class="fa fa-check"></i><b>4.5.1</b> El principio de Haldane-Muller</a></li>
-</ul></li>
-<li class="chapter" data-level="4.6" data-path="seleccion.html"><a href="seleccion.html#la-fuerza-de-la-selección-natural"><i class="fa fa-check"></i><b>4.6</b> La fuerza de la selección natural</a></li>
-<li class="chapter" data-level="4.7" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-deriva"><i class="fa fa-check"></i><b>4.7</b> Equilibrio selección-deriva</a></li>
-<li class="chapter" data-level="4.8" data-path="seleccion.html"><a href="seleccion.html#otros-tipos-de-selección-y-complejidades"><i class="fa fa-check"></i><b>4.8</b> Otros tipos de selección y complejidades</a></li>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#ejercicios-4"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
+<li class="chapter" data-level="3" data-path="deriva.html"><a href="deriva.html"><i class="fa fa-check"></i><b>3</b> Deriva Genética</a></li>
+<li class="chapter" data-level="4" data-path="seleccion.html"><a href="seleccion.html"><i class="fa fa-check"></i><b>4</b> Selección Natural</a></li>
 <li class="chapter" data-level="5" data-path="dosloci.html"><a href="dosloci.html"><i class="fa fa-check"></i><b>5</b> Dinámica de 2 <em>loci</em></a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-de-ligamiento-y-recombinación"><i class="fa fa-check"></i><b>5.1</b> Desequilibrio de ligamiento y recombinación</a></li>
-<li class="chapter" data-level="5.2" data-path="dosloci.html"><a href="dosloci.html#la-evolución-en-el-tiempo-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i><b>5.2</b> La evolución en el tiempo del desequilibrio de ligamiento</a></li>
-<li class="chapter" data-level="5.3" data-path="dosloci.html"><a href="dosloci.html#otras-medidas-de-asociación"><i class="fa fa-check"></i><b>5.3</b> Otras medidas de asociación</a>
-<ul>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejemplo-5.3"><i class="fa fa-check"></i>Ejemplo 5.3</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejercicio-5.3"><i class="fa fa-check"></i>Ejercicio 5.3</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="dosloci.html"><a href="dosloci.html#selección-en-modelos-de-dos-loci"><i class="fa fa-check"></i><b>5.4</b> Selección en modelos de dos <em>loci</em></a>
-<ul>
-<li><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento">Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
-</ul></li>
-<li class="chapter" data-level="5.5" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i><b>5.5</b> Arrastre genético (“genetic hitchhiking” o “genetic draft”)</a></li>
-<li class="chapter" data-level="5.6" data-path="dosloci.html"><a href="dosloci.html#causas-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i><b>5.6</b> Causas del desequilibrio de ligamiento</a>
-<ul>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-al-mestizaje"><i class="fa fa-check"></i>Desequilibrio debido al mestizaje</a></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-inducido-por-el-sistema-de-apareamiento"><i class="fa fa-check"></i>Desequilibrio inducido por el sistema de apareamiento</a></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#el-cromosoma-y"><i class="fa fa-check"></i>El cromosoma Y</a></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-a-recombinación-reducida"><i class="fa fa-check"></i>Desequilibrio debido a recombinación reducida</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejercicios-5"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="aparnoalazar.html"><a href="aparnoalazar.html"><i class="fa fa-check"></i><b>6</b> Apareamientos no-aleatorios</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-concepto-de-identidad-por-ascendencia-ibd"><i class="fa fa-check"></i><b>6.1</b> El concepto de “identidad por ascendencia” (IBD)</a></li>
-<li class="chapter" data-level="6.2" data-path="aparnoalazar.html"><a href="aparnoalazar.html#generalización-de-hardy-weinberg-para-apareamientos-no-aleatorios"><i class="fa fa-check"></i><b>6.2</b> Generalización de Hardy-Weinberg para apareamientos no-aleatorios</a></li>
-<li class="chapter" data-level="6.3" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><b>6.3</b> <em>F</em> como correlación entre gametos unidos</a></li>
-<li class="chapter" data-level="6.4" data-path="aparnoalazar.html"><a href="aparnoalazar.html#endocría-y-depresión-endogámica"><i class="fa fa-check"></i><b>6.4</b> Endocría y depresión endogámica</a></li>
-<li class="chapter" data-level="6.5" data-path="aparnoalazar.html"><a href="aparnoalazar.html#un-caso-extremo-la-autogamia"><i class="fa fa-check"></i><b>6.5</b> Un caso extremo: la autogamia</a></li>
-<li class="chapter" data-level="6.6" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-estadísticos-f"><i class="fa fa-check"></i><b>6.6</b> El Coeficiente de endocría y estadísticos <em>F</em></a></li>
-<li class="chapter" data-level="6.7" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i><b>6.7</b> El efecto Wahlund</a></li>
-<li class="chapter" data-level="6.8" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i><b>6.8</b> Subdivisión, migración y el modelo de islas</a></li>
-<li class="chapter" data-level="6.9" data-path="aparnoalazar.html"><a href="aparnoalazar.html#mecanismos-de-especiación"><i class="fa fa-check"></i><b>6.9</b> Mecanismos de especiación</a></li>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejercicios-6"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="microbial.html"><a href="microbial.html"><i class="fa fa-check"></i><b>7</b> Genética de Poblaciones Microbianas</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="microbial.html"><a href="microbial.html#genómica-y-mecanismos-de-herencia-en-procariotas"><i class="fa fa-check"></i><b>7.1</b> Genómica y mecanismos de herencia en procariotas</a></li>
-<li class="chapter" data-level="7.2" data-path="microbial.html"><a href="microbial.html#dinámica-de-las-poblaciones-bacterianas"><i class="fa fa-check"></i><b>7.2</b> Dinámica de las poblaciones bacterianas</a>
-<ul>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-exponencial"><i class="fa fa-check"></i>El modelo exponencial</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-logístico"><i class="fa fa-check"></i>El modelo logístico</a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="microbial.html"><a href="microbial.html#modelos-haploides-de-selección-natural"><i class="fa fa-check"></i><b>7.3</b> Modelos haploides de selección natural</a>
-<ul>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-discreto"><i class="fa fa-check"></i>Selección haploide: modelo discreto</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-continuo"><i class="fa fa-check"></i>Selección haploide: modelo continuo</a></li>
-</ul></li>
-<li class="chapter" data-level="7.4" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-versus-el-de-wright-fisher"><i class="fa fa-check"></i><b>7.4</b> Los modelos de Moran y de Fisión versus el de Wright-Fisher</a></li>
-<li class="chapter" data-level="7.5" data-path="microbial.html"><a href="microbial.html#el-rol-de-la-transferencia-horizontal"><i class="fa fa-check"></i><b>7.5</b> El rol de la transferencia horizontal</a></li>
-<li class="chapter" data-level="7.6" data-path="microbial.html"><a href="microbial.html#selección-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i><b>7.6</b> Selección vs Neutralismo: los procariotas en el debate</a></li>
-<li class="chapter" data-level="7.7" data-path="microbial.html"><a href="microbial.html#genómica-poblacional"><i class="fa fa-check"></i><b>7.7</b> Genómica poblacional</a></li>
-<li class="chapter" data-level="7.8" data-path="microbial.html"><a href="microbial.html#genes-de-resistencia"><i class="fa fa-check"></i><b>7.8</b> Genes de resistencia</a></li>
-<li class="chapter" data-level="7.9" data-path="microbial.html"><a href="microbial.html#introducción-a-la-epidemiología-modelos-compartimentales"><i class="fa fa-check"></i><b>7.9</b> Introducción a la epidemiología: modelos compartimentales</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejercicios-7"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
+<li class="chapter" data-level="6" data-path="aparnoalazar.html"><a href="aparnoalazar.html"><i class="fa fa-check"></i><b>6</b> Apareamientos no-aleatorios</a></li>
+<li class="chapter" data-level="7" data-path="microbial.html"><a href="microbial.html"><i class="fa fa-check"></i><b>7</b> Genética de Poblaciones Microbianas</a></li>
 <li class="part"><span><b>Parte III: Genética Cuantitativa</b></span></li>
 <li class="chapter" data-level="8" data-path="modelogenbas.html"><a href="modelogenbas.html"><i class="fa fa-check"></i><b>8</b> El Modelo Genético Básico</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="modelogenbas.html"><a href="modelogenbas.html#variación-continua-y-discreta"><i class="fa fa-check"></i><b>8.1</b> Variación continua y discreta</a></li>
-<li class="chapter" data-level="8.2" data-path="modelogenbas.html"><a href="modelogenbas.html#el-modelo-genético-básico"><i class="fa fa-check"></i><b>8.2</b> El modelo genético básico</a></li>
-<li class="chapter" data-level="8.3" data-path="modelogenbas.html"><a href="modelogenbas.html#modelo-genético-básico-un-locus-con-dos-alelos"><i class="fa fa-check"></i><b>8.3</b> Modelo Genético Básico: un <em>locus</em> con dos alelos</a>
-<ul>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#media-de-la-población"><i class="fa fa-check"></i>Media de la población</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejemplo-8.1"><i class="fa fa-check"></i>Ejemplo 8.1</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejemplo-8.2"><i class="fa fa-check"></i>Ejemplo 8.2</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejemplo-8.3"><i class="fa fa-check"></i>Ejemplo 8.3</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejemplo-8.4"><i class="fa fa-check"></i>Ejemplo 8.4</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejemplo-8.5"><i class="fa fa-check"></i>Ejemplo 8.5</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejemplo-8.6"><i class="fa fa-check"></i>Ejemplo 8.6</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejercicio-8.7"><i class="fa fa-check"></i>Ejercicio 8.7</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejercicio-8.8"><i class="fa fa-check"></i>Ejercicio 8.8</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejercicio-8.9"><i class="fa fa-check"></i>Ejercicio 8.9</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejercicio-8.10"><i class="fa fa-check"></i>Ejercicio 8.10</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejercicio-8.11"><i class="fa fa-check"></i>Ejercicio 8.11</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejercicio-8.12"><i class="fa fa-check"></i>Ejercicio 8.12</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejercicio-8.13"><i class="fa fa-check"></i>Ejercicio 8.13</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejercicio-8.14"><i class="fa fa-check"></i>Ejercicio 8.14</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejercicio-8.15"><i class="fa fa-check"></i>Ejercicio 8.15</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="modelogenbas.html"><a href="modelogenbas.html#efecto-medio"><i class="fa fa-check"></i><b>8.4</b> Efecto medio</a></li>
-<li class="chapter" data-level="8.5" data-path="modelogenbas.html"><a href="modelogenbas.html#valor-reproductivo-o-valor-de-cría"><i class="fa fa-check"></i><b>8.5</b> Valor reproductivo (o valor de cría)</a>
-<ul>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#derivación-de-los-efectos-medios-por-mínimos-cuadrados"><i class="fa fa-check"></i>Derivación de los efectos medios por mínimos cuadrados</a></li>
-</ul></li>
-<li class="chapter" data-level="8.6" data-path="modelogenbas.html"><a href="modelogenbas.html#desvío-de-dominancia"><i class="fa fa-check"></i><b>8.6</b> Desvío de dominancia</a></li>
-<li class="chapter" data-level="8.7" data-path="modelogenbas.html"><a href="modelogenbas.html#interacción-genotipo-x-ambiente"><i class="fa fa-check"></i><b>8.7</b> Interacción Genotipo x Ambiente</a></li>
-<li class="chapter" data-level="8.8" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-en-el-modelo-genético-básico"><i class="fa fa-check"></i><b>8.8</b> La Varianza en el modelo genético básico</a>
-<ul>
-<li><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos">Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-ambiental"><i class="fa fa-check"></i>La varianza ambiental</a></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-de-la-interacción"><i class="fa fa-check"></i>La Varianza de la interacción</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejercicios-8"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="parentesco.html"><a href="parentesco.html"><i class="fa fa-check"></i><b>9</b> Parentesco y Semejanza entre Parientes</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="parentesco.html"><a href="parentesco.html#parentesco-1"><i class="fa fa-check"></i><b>9.1</b> Parentesco</a></li>
-<li class="chapter" data-level="9.2" data-path="parentesco.html"><a href="parentesco.html#parentesco-aditivo"><i class="fa fa-check"></i><b>9.2</b> Parentesco aditivo</a>
-<ul>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#consanguinidad"><i class="fa fa-check"></i>Consanguinidad</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#diagramas-de-flechas"><i class="fa fa-check"></i>Diagramas de flechas</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#el-método-tabular"><i class="fa fa-check"></i>El método tabular</a></li>
-</ul></li>
-<li class="chapter" data-level="9.3" data-path="parentesco.html"><a href="parentesco.html#parentesco-de-dominancia"><i class="fa fa-check"></i><b>9.3</b> Parentesco de dominancia</a></li>
-<li class="chapter" data-level="9.4" data-path="parentesco.html"><a href="parentesco.html#semejanza-entre-parientes"><i class="fa fa-check"></i><b>9.4</b> Semejanza entre parientes</a></li>
-<li class="chapter" data-level="9.5" data-path="parentesco.html"><a href="parentesco.html#estimación-de-las-varianzas-aditiva-y-de-dominancia"><i class="fa fa-check"></i><b>9.5</b> Estimación de las varianzas aditiva y de dominancia</a>
-<ul>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#propiedades-deseables-de-los-estimadores"><i class="fa fa-check"></i>Propiedades deseables de los estimadores</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estimación-de-la-varianza-aditiva-a-partir-del-análisis-de-varianza-anova"><i class="fa fa-check"></i>Estimación de la varianza aditiva a partir del análisis de varianza (ANOVA)</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estimaciones-basadas-en-modelos-mixtos-lineales"><i class="fa fa-check"></i>Estimaciones basadas en modelos mixtos lineales</a></li>
-</ul></li>
-<li class="chapter" data-level="9.6" data-path="parentesco.html"><a href="parentesco.html#parentesco-genómico"><i class="fa fa-check"></i><b>9.6</b> Parentesco genómico</a>
-<ul>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#contenido-génico"><i class="fa fa-check"></i>Contenido génico</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#la-matriz-de-similaridad-genómica"><i class="fa fa-check"></i>La matriz de similaridad genómica</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#ejercicios-9"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="pargen.html"><a href="pargen.html"><i class="fa fa-check"></i><b>10</b> Parámetros Genéticos: Heredabilidad y Repetibilidad</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="pargen.html"><a href="pargen.html#heredabilidad"><i class="fa fa-check"></i><b>10.1</b> Heredabilidad</a>
-<ul>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-heredabilidad-como-relación-de-varianzas"><i class="fa fa-check"></i>La heredabilidad como relación de varianzas</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-heredabilidad-como-regresión"><i class="fa fa-check"></i>La heredabilidad como regresión</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-de-cría-en-el-fenotipo-individual"><i class="fa fa-check"></i>Regresión del valor de cría en el fenotipo individual</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-fenotípico-de-los-hijos-sobre-el-fenotipo-de-un-progenitor"><i class="fa fa-check"></i>Regresión del valor fenotípico de los hijos sobre el fenotipo de un progenitor</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-fenotípico-de-los-hijos-sobre-el-fenotipo-de-ambos-progenitores"><i class="fa fa-check"></i>Regresión del valor fenotípico de los hijos sobre el fenotipo de ambos progenitores</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#precisión-en-las-estimaciones-de-heredabilidad-varianza-del-estimador"><i class="fa fa-check"></i>Precisión en las estimaciones de heredabilidad: varianza del estimador</a></li>
-</ul></li>
-<li class="chapter" data-level="10.2" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-sentido-amplio-y-sentido-estricto"><i class="fa fa-check"></i><b>10.2</b> Heredabilidad en sentido amplio y sentido estricto</a></li>
-<li class="chapter" data-level="10.3" data-path="pargen.html"><a href="pargen.html#heredabilidad-lograda"><i class="fa fa-check"></i><b>10.3</b> Heredabilidad lograda</a></li>
-<li class="chapter" data-level="10.4" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-poblaciones-agronómicas-y-de-laboratorio-vs-poblaciones-naturales"><i class="fa fa-check"></i><b>10.4</b> Heredabilidad en poblaciones agronómicas y de laboratorio vs poblaciones naturales</a>
-<ul>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-animales-domésticos"><i class="fa fa-check"></i>Estimaciones de heredabilidad en animales domésticos</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-plantas"><i class="fa fa-check"></i>Estimaciones de heredabilidad en plantas</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-condiciones-naturales"><i class="fa fa-check"></i>Estimaciones de heredabilidad en condiciones naturales</a></li>
-</ul></li>
-<li class="chapter" data-level="10.5" data-path="pargen.html"><a href="pargen.html#heredabilidad-y-filogenética"><i class="fa fa-check"></i><b>10.5</b> Heredabilidad y filogenética</a></li>
-<li class="chapter" data-level="10.6" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-la-era-genómica"><i class="fa fa-check"></i><b>10.6</b> Heredabilidad en la era genómica</a></li>
-<li class="chapter" data-level="10.7" data-path="pargen.html"><a href="pargen.html#métodos-más-avanzados-de-estimación"><i class="fa fa-check"></i><b>10.7</b> Métodos más avanzados de estimación</a></li>
-<li class="chapter" data-level="10.8" data-path="pargen.html"><a href="pargen.html#repetibilidad"><i class="fa fa-check"></i><b>10.8</b> Repetibilidad</a>
-<ul>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-cociente-de-varianzas"><i class="fa fa-check"></i>La repetibilidad como cociente de varianzas</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-coeficiente-de-correlación-intraclase"><i class="fa fa-check"></i>La repetibilidad como coeficiente de correlación intraclase</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-relación-entre-la-heredabilidad-y-la-repetibilidad"><i class="fa fa-check"></i>La relación entre la heredabilidad y la repetibilidad</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-reducción-en-la-varianza-fenotípica-con-varias-medidas"><i class="fa fa-check"></i>La reducción en la varianza fenotípica con varias medidas</a></li>
-</ul></li>
-<li class="chapter" data-level="10.9" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-herramienta-en-la-predicción"><i class="fa fa-check"></i><b>10.9</b> La repetibilidad como herramienta en la predicción</a></li>
-<li class="chapter" data-level="10.10" data-path="pargen.html"><a href="pargen.html#evolucionabilidad"><i class="fa fa-check"></i><b>10.10</b> Evolucionabilidad</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#ejercicios-10"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="selartifI.html"><a href="selartifI.html"><i class="fa fa-check"></i><b>11</b> Selección Artificial I</a>
-<ul>
-<li class="chapter" data-level="11.1" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección"><i class="fa fa-check"></i><b>11.1</b> Factores de corrección</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-aditivos"><i class="fa fa-check"></i>Factores de corrección aditivos</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-multiplicativos"><i class="fa fa-check"></i>Factores de corrección multiplicativos</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-lineales"><i class="fa fa-check"></i>Factores de corrección lineales</a></li>
-</ul></li>
-<li class="chapter" data-level="11.2" data-path="selartifI.html"><a href="selartifI.html#la-respuesta-a-la-selección-y-su-predicción"><i class="fa fa-check"></i><b>11.2</b> La respuesta a la selección y su predicción</a></li>
-<li class="chapter" data-level="11.3" data-path="selartifI.html"><a href="selartifI.html#diferencial-de-selección-e-intensidad-de-selección"><i class="fa fa-check"></i><b>11.3</b> Diferencial de selección e intensidad de selección</a></li>
-<li class="chapter" data-level="11.4" data-path="selartifI.html"><a href="selartifI.html#intensidad-de-selección-y-proporción-seleccionada"><i class="fa fa-check"></i><b>11.4</b> Intensidad de selección y proporción seleccionada</a>
-<ul>
-<li><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp">¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#la-relación-entre-diferentes-formas-de-calcular-la-intensidad-de-selección"><i class="fa fa-check"></i>La relación entre diferentes formas de calcular la intensidad de selección</a></li>
-</ul></li>
-<li class="chapter" data-level="11.5" data-path="selartifI.html"><a href="selartifI.html#intervalo-generacional"><i class="fa fa-check"></i><b>11.5</b> Intervalo generacional</a></li>
-<li class="chapter" data-level="11.6" data-path="selartifI.html"><a href="selartifI.html#medidas-de-la-respuesta"><i class="fa fa-check"></i><b>11.6</b> Medidas de la respuesta</a></li>
-<li class="chapter" data-level="11.7" data-path="selartifI.html"><a href="selartifI.html#progreso-genético-generacional-y-anual"><i class="fa fa-check"></i><b>11.7</b> Progreso genético generacional y anual</a></li>
-<li class="chapter" data-level="11.8" data-path="selartifI.html"><a href="selartifI.html#cambio-en-las-frecuencias-alélicas-bajo-selección-artificial"><i class="fa fa-check"></i><b>11.8</b> Cambio en las frecuencias alélicas bajo selección artificial</a></li>
-<li class="chapter" data-level="11.9" data-path="selartifI.html"><a href="selartifI.html#el-diferencial-de-selección-direccional-y-la-identidad-de-robertson-price"><i class="fa fa-check"></i><b>11.9</b> El diferencial de selección direccional y la identidad de Robertson-Price</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#ejercicios-11"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="correlacionada.html"><a href="correlacionada.html"><i class="fa fa-check"></i><b>12</b> Correlaciones y Respuesta Correlacionada</a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="correlacionada.html"><a href="correlacionada.html#causas-genéticas-y-ambientales-de-las-correlaciones"><i class="fa fa-check"></i><b>12.1</b> Causas genéticas y ambientales de las correlaciones</a>
-<ul>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#causas-de-las-correlaciones-genéticas"><i class="fa fa-check"></i>Causas de las correlaciones genéticas</a></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#causas-de-las-correlaciones-ambientales"><i class="fa fa-check"></i>Causas de las correlaciones ambientales</a></li>
-</ul></li>
-<li class="chapter" data-level="12.2" data-path="correlacionada.html"><a href="correlacionada.html#introducción-al-path-analysis"><i class="fa fa-check"></i><b>12.2</b> Introducción al “path analysis”</a>
-<ul>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#la-relación-entre-las-correlaciones-fenotípica-genética-y-ambiental"><i class="fa fa-check"></i>La relación entre las correlaciones fenotípica, genética y ambiental</a></li>
-</ul></li>
-<li class="chapter" data-level="12.3" data-path="correlacionada.html"><a href="correlacionada.html#métodos-para-determinar-la-correlación-genética"><i class="fa fa-check"></i><b>12.3</b> Métodos para determinar la correlación genética</a></li>
-<li class="chapter" data-level="12.4" data-path="correlacionada.html"><a href="correlacionada.html#la-correlación-fenotípica-y-su-relación-con-la-correlación-genética-aditiva-y-ambiental"><i class="fa fa-check"></i><b>12.4</b> La correlación fenotípica y su relación con la correlación genética aditiva y ambiental</a></li>
-<li class="chapter" data-level="12.5" data-path="correlacionada.html"><a href="correlacionada.html#respuesta-correlacionada"><i class="fa fa-check"></i><b>12.5</b> Respuesta correlacionada</a>
-<ul>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#eficiencia-en-relación-a-la-selección-directa"><i class="fa fa-check"></i>Eficiencia en relación a la selección directa</a></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#el-signo-de-la-correlación-y-el-beneficio-demérito-de-la-misma"><i class="fa fa-check"></i>El signo de la correlación y el beneficio-demérito de la misma</a></li>
-</ul></li>
-<li class="chapter" data-level="12.6" data-path="correlacionada.html"><a href="correlacionada.html#matrices-de-varianza-covarianza"><i class="fa fa-check"></i><b>12.6</b> Matrices de varianza-covarianza</a></li>
-<li class="chapter" data-level="12.7" data-path="correlacionada.html"><a href="correlacionada.html#la-forma-generalizada-de-la-ecuación-del-criador"><i class="fa fa-check"></i><b>12.7</b> La forma generalizada de la ecuación del criador</a></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#ejercicios-12"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="selartifII.html"><a href="selartifII.html"><i class="fa fa-check"></i><b>13</b> Selección Artificial II</a>
-<ul>
-<li class="chapter" data-level="13.1" data-path="selartifII.html"><a href="selartifII.html#criterios-y-objetivos-de-selección"><i class="fa fa-check"></i><b>13.1</b> Criterios y objetivos de selección</a></li>
-<li class="chapter" data-level="13.2" data-path="selartifII.html"><a href="selartifII.html#selección-basada-en-un-solo-tipo-de-fuente-de-información"><i class="fa fa-check"></i><b>13.2</b> Selección basada en un solo tipo de fuente de información</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#diferentes-tipos-de-selección-basados-en-estructuras-de-parentesco-definidas"><i class="fa fa-check"></i>Diferentes tipos de selección basados en estructuras de parentesco definidas</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-las-heredabilidades-en-los-distintos-tipos-de-selección"><i class="fa fa-check"></i>Cálculo de las heredabilidades en los distintos tipos de selección</a></li>
-</ul></li>
-<li class="chapter" data-level="13.3" data-path="selartifII.html"><a href="selartifII.html#combinando-la-información-proporcionada-por-diferentes-tipos-de-parientes"><i class="fa fa-check"></i><b>13.3</b> Combinando la información proporcionada por diferentes tipos de parientes</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-los-elementos-de-la-matriz-de-varianzas-covarianzas-fenotípica"><i class="fa fa-check"></i>Cálculo de los elementos de la matriz de varianzas-covarianzas fenotípica</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-los-elementos-del-vector-de-varianzas-covarianzas-genéticas"><i class="fa fa-check"></i>Cálculo de los elementos del vector de varianzas-covarianzas genéticas</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#información-propia-y-de-un-progenitor"><i class="fa fa-check"></i>Información propia y de un progenitor</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#información-propia-y-de-varios-hermanos-enteros"><i class="fa fa-check"></i>Información propia y de varios hermanos enteros</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#pruebas-de-progenie"><i class="fa fa-check"></i>Pruebas de progenie</a></li>
-<li class="chapter" data-level="13.3.1" data-path="selartifII.html"><a href="selartifII.html#límites-de-la-eficiencia-en-pruebas-de-progenie"><i class="fa fa-check"></i><b>13.3.1</b> Límites de la eficiencia en pruebas de progenie</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#precisión-del-valor-de-cría-a-partir-del-índice"><i class="fa fa-check"></i>Precisión del valor de cría a partir del índice</a></li>
-</ul></li>
-<li class="chapter" data-level="13.4" data-path="selartifII.html"><a href="selartifII.html#métodos-de-selección-para-varias-características"><i class="fa fa-check"></i><b>13.4</b> Métodos de selección para varias características</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#selección-en-tandem"><i class="fa fa-check"></i>Selección en tandem</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#niveles-independientes-de-rechazo"><i class="fa fa-check"></i>Niveles Independientes de Rechazo</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#índices-de-selección"><i class="fa fa-check"></i>Índices de Selección</a></li>
-</ul></li>
-<li class="chapter" data-level="13.5" data-path="selartifII.html"><a href="selartifII.html#índices-de-selección-para-múltiples-características"><i class="fa fa-check"></i><b>13.5</b> Índices de selección para múltiples características</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#el-índice-de-smith-hazel"><i class="fa fa-check"></i>El índice de Smith-Hazel</a></li>
-</ul></li>
-<li class="chapter" data-level="13.6" data-path="selartifII.html"><a href="selartifII.html#métodos-y-técnicas-avanzadas-de-selección"><i class="fa fa-check"></i><b>13.6</b> Métodos y técnicas avanzadas de selección</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#blup-las-ecuaciones-del-modelo-mixto-lineal"><i class="fa fa-check"></i>BLUP: las ecuaciones del modelo mixto lineal</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#ejercicios-13"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="endoexo.html"><a href="endoexo.html"><i class="fa fa-check"></i><b>14</b> Endocría, exocría, consanguinidad y depresión endogámica</a>
-<ul>
-<li class="chapter" data-level="14.1" data-path="endoexo.html"><a href="endoexo.html#el-aumento-de-la-consanguinidad-a-partir-del-número-de-individuos"><i class="fa fa-check"></i><b>14.1</b> El aumento de la consanguinidad a partir del número de individuos</a>
-<ul>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#qué-proporción-de-machos-es-necesaria-para-mantener-un-tamaño-efectivo-poblacional-mínimo"><i class="fa fa-check"></i>¿Qué proporción de machos es necesaria para mantener un tamaño efectivo poblacional mínimo?</a></li>
-</ul></li>
-<li class="chapter" data-level="14.2" data-path="endoexo.html"><a href="endoexo.html#el-coeficiente-de-consanguinidad-en-razas-lecheras"><i class="fa fa-check"></i><b>14.2</b> El coeficiente de consanguinidad en razas lecheras</a></li>
-<li class="chapter" data-level="14.3" data-path="endoexo.html"><a href="endoexo.html#depresión-endogámica"><i class="fa fa-check"></i><b>14.3</b> Depresión endogámica</a>
-<ul>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#los-riesgos-del-uso-masivo-de-reproductores-y-la-endogamia-elevada"><i class="fa fa-check"></i>Los riesgos del uso masivo de reproductores y la endogamia elevada</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#redistribución-en-la-varianza-genética"><i class="fa fa-check"></i>Redistribución en la varianza genética</a></li>
-</ul></li>
-<li class="chapter" data-level="14.4" data-path="endoexo.html"><a href="endoexo.html#exocría-y-heterosis"><i class="fa fa-check"></i><b>14.4</b> Exocría y Heterosis</a>
-<ul>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#el-modelo-del-templo-griego"><i class="fa fa-check"></i>El modelo del templo griego</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#un-modelo-sencillo-de-heterosis-bajo-exocría"><i class="fa fa-check"></i>Un modelo sencillo de heterosis bajo exocría</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#complementariedad"><i class="fa fa-check"></i>Complementariedad</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#tipos-de-cruzamientos"><i class="fa fa-check"></i>Tipos de cruzamientos</a></li>
-</ul></li>
-<li class="chapter" data-level="14.5" data-path="endoexo.html"><a href="endoexo.html#modelo-genético-de-cruzamientos"><i class="fa fa-check"></i><b>14.5</b> Modelo genético de cruzamientos</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#ejercicios-14"><i class="fa fa-check"></i>Ejercicios</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#notas-al-pie"><i class="fa fa-check"></i>Notas al pie</a></li>
-</ul></li>
-<li class="chapter" data-level="15" data-path="GxE.html"><a href="GxE.html"><i class="fa fa-check"></i><b>15</b> Normas de reacción e interacción Genotipo x Ambiente</a>
-<ul>
-<li class="chapter" data-level="15.1" data-path="GxE.html"><a href="GxE.html#plasticidad-fenotípica-y-normas-de-reacción"><i class="fa fa-check"></i><b>15.1</b> Plasticidad fenotípica y normas de reacción</a></li>
-<li class="chapter" data-level="15.2" data-path="GxE.html"><a href="GxE.html#interacción-gxe-en-dos-ambientes"><i class="fa fa-check"></i><b>15.2</b> Interacción GxE en dos ambientes</a></li>
-<li class="chapter" data-level="15.3" data-path="GxE.html"><a href="GxE.html#correlación-genética-a-través-de-dos-ambientes"><i class="fa fa-check"></i><b>15.3</b> Correlación genética a través de dos ambientes</a>
-<ul>
-<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#procedimientos-de-estimación"><i class="fa fa-check"></i>Procedimientos de estimación</a></li>
-</ul></li>
-<li class="chapter" data-level="15.4" data-path="GxE.html"><a href="GxE.html#genética-cuantitativa-de-la-interacción-gxe"><i class="fa fa-check"></i><b>15.4</b> Genética cuantitativa de la interacción GxE</a></li>
-<li class="chapter" data-level="15.5" data-path="GxE.html"><a href="GxE.html#otros-ejemplos-de-interacción-genotipo-ambiente"><i class="fa fa-check"></i><b>15.5</b> Otros ejemplos de interacción genotipo-ambiente</a></li>
-<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#ejercicios-15"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apendice-a-conceptos-matemáticos-básicos.html"><a href="apendice-a-conceptos-matemáticos-básicos.html"><i class="fa fa-check"></i>APENDICE A: Conceptos Matemáticos Básicos</a></li>
-<li class="chapter" data-level="" data-path="apendice-b-cálculo-diferencial-e-integral-ecuaciones-diferenciales.html"><a href="apendice-b-cálculo-diferencial-e-integral-ecuaciones-diferenciales.html"><i class="fa fa-check"></i>APENDICE B: Cálculo Diferencial e Integral, ecuaciones diferenciales</a></li>
-<li class="chapter" data-level="" data-path="bibliografía.html"><a href="bibliografía.html"><i class="fa fa-check"></i>Bibliografía</a></li>
+<li class="chapter" data-level="9" data-path="parentesco.html"><a href="parentesco.html"><i class="fa fa-check"></i><b>9</b> Parentesco y Semejanza entre Parientes</a></li>
+<li class="chapter" data-level="10" data-path="pargen.html"><a href="pargen.html"><i class="fa fa-check"></i><b>10</b> Parámetros Genéticos: Heredabilidad y Repetibilidad</a></li>
+<li class="chapter" data-level="11" data-path="selartifI.html"><a href="selartifI.html"><i class="fa fa-check"></i><b>11</b> Selección Artificial I</a></li>
+<li class="chapter" data-level="12" data-path="correlacionada.html"><a href="correlacionada.html"><i class="fa fa-check"></i><b>12</b> Correlaciones y Respuesta Correlacionada</a></li>
+<li class="chapter" data-level="13" data-path="selartifII.html"><a href="selartifII.html"><i class="fa fa-check"></i><b>13</b> Selección Artificial II</a></li>
+<li class="chapter" data-level="14" data-path="endoexo.html"><a href="endoexo.html"><i class="fa fa-check"></i><b>14</b> Endocría, exocría, consanguinidad y depresión endogámica</a></li>
+<li class="chapter" data-level="15" data-path="GxE.html"><a href="GxE.html"><i class="fa fa-check"></i><b>15</b> Normas de reacción e interacción Genotipo x Ambiente</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -465,7 +180,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Genética II: Guía Práctica</a>
           </h1>
         </div>
 
@@ -475,419 +190,8 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="selartifI" class="section level1" number="11">
 <h1><span class="header-section-number">Capítulo 11</span> Selección Artificial I</h1>
-<p>Alcanza con observar las diferentes formas de los organismos vivientes para comprender, a la luz de la teoría de la evolución, el rol que la selección natural ha jugado en la adaptación de los organismos al ambiente. En lo que llevamos avanzado del presente material, hemos intentado ponderar el rol de las distintas fuerzas aleatorias y determinísticas en la evolución de los organismos. En el capítulo dedicado a la <a href="seleccion.html#seleccion">Selección Natural</a> estudiamos, a través de modelos muy simples y estilizados como la selección natural puede cambiar las frecuencias de los alelos en un <em>locus</em> o apenas en un par de <em>loci</em>. Claramente, la selección natural llamó la atención de Charles Darwin<a href="#fn42" class="footnote-ref" id="fnref42"><sup>42</sup></a> de tal manera que la experiencia como naturalista a bordo durante la expedición del “Beagle” le permitió formular las bases de teoría evolutiva a partir de la selección natural. Sin embargo, la comprensión del mecanismo subyacente fue en gran parte a través de la observación del proceso de selección artificial que realizaban y realizan los mejoradores de diferentes razas de animales domésticos o de producción (y de los colombófilos).</p>
-<p>En efecto, alcanza con observar la variedad de razas de perros para entender que la fuerte presión de selección por desarrollar determinadas características puede tener una respuesta concomitante en relativamente pocas generaciones. De hecho, la mayor parte de las razas de perros que conocemos en la actualidad surgieron a mitad del siglo XIX, en plena revolución industrial. Pese a tratarse de animales de la misma especie, resulta difícil imaginarse el apareamiento de un Gran Danés con un Chihuahua (en realidad artificialmente es posible lograr crías de una hembra de Gran Danés con un macho Chihuahua, al revés es imposible la gestación). Todos los cambios y la diversidad observada desde el ancestro lobo domesticado se han obtenido como resultado de ese esfuerzo por modelar esta especie de acuerdo a nuestros gustos, costumbres y necesidades.</p>
-<p>Lo mismo es posible de observar en cada especie que tiene alguna importancia económica o cultural en nuestra vida diaria. En las diferentes razas bovinas vemos animales completamente especializados en la producción de leche, mientras que otros se especializan en la producción de carne. Las diferencias morfológicas son notables, pero aún más lo son en las características de interés productivo. El tamaño de los pollos parrilleros en los EEUU creció más de 4 veces desde 1957 a 1991 (<span class="citation"><a href="#ref-Havensteinetal1994" role="doc-biblioref">Havenstein et al.</a> (<a href="#ref-Havensteinetal1994" role="doc-biblioref">1994</a>)</span>), en gran parte debido a la selección especializada para carne o producción de huevos.</p>
-<p>En el presente capítulo vamos a comenzar a estudiar la selección artificial para características métricas. Para ello usaremos un escenario sencillo, esencialmente basado en lo que se conoce como selección por truncamiento, en el que solo los individuos que sobrepasen un valor umbral de la característica (asumiendo que los mejores se corresponden a valores altos, al revés si los mejores son los valores bajos) son considerados como reproductores y progenitores de la siguiente generación. Para entender la relación entre las medias de la población en la generación actual, la media de los individuos seleccionados y la respuesta a la selección definiremos el concepto de <strong>diferencial de selección direccional</strong>, reforzando la idea de que estamos realizando de manera artificial <strong>selección direccional</strong> y veremos como se relacionan estas medias con la heredabilidad de la característica bajo selección. Esto nos permitirá definir la <strong>ecuación del criador</strong>, posiblemente una de las ecuaciones más importantes para el mejoramiento genético animal. Como alternativa para poder comaparar la presión de selección ejercida en diferentes características definiremos el concepto de <strong>intensidad de selección</strong> y discutiremos su relación con la proporción de individuos seleccionados, bajo el supuesto de normalidad de la característica de interés. Más adelante definiremos el concepto de intervalo generacional y lo utilizaremos para calcular la respuesta a la selección en base anual. Finalmente, estudiaremos el cambio en las frecuencias alélicas que se corresponden con una determinada intensidad de selección en un <em>locus</em> con dos alelos y cerraremos el capítulo con otra perspectiva acerca del diferencial de selección direccional que proviene de la <strong>identidad de Robertson-Price</strong>.</p>
-<div id="factores-de-corrección" class="section level2" number="11.1">
-<h2><span class="header-section-number">11.1</span> Factores de corrección</h2>
-<p>El interés en mejoramiento genético suele estar puesto en elegir los “mejores” individuos para que se reproduzcan y usualmente dependemos de la información fenotípica para poder realizar la selección de los “mejores” individuos. Podríamos imaginar que para un característica fácil de medir, como lo son el peso de vellón sucio o limpio, la producción de leche diaria, el peso a los 18 meses en bovinos de carne o muchas otras, alcanza con medir y elegir a los individuos que poseen los valores “mejores” en la característica. Sin embargo, como se puede deducir de nuestro modelo genético básico, si bien el fenotipo es lo único con lo que contamos usualmente, no es de por sí una excelente referencia sobre el valor reproductivo de los individuos. Claramente, los efectos genéticos no-aditivos y el ambiente tienen una influencia usualmente importante en la manifestación fenotípica de la característica. Desafortunadamente, en general nos resulta imposible conocer los efectos de dominancia y epistasis, así como los efectos ambientales que han influido en la vida del individuo, por lo que en ese sentido no podemos reducir la incertidumbre.</p>
-<p>Sin embargo, existen una serie de efectos que se manifiestan siempre de la misma manera y que por lo tanto afectan los registros fenotípicos en forma sistemática. En mamíferos, por ejemplo, existen en general importantes diferencias en la expresión de características métricas asociadas al tamaño de los individuos. Si volvemos a mirar con atención la figura <a href="pargen.html#fig:galton">10.1</a> del capítulo <a href="pargen.html#pargen">Parámetros Genéticos: Heredabilidad y Repetibilidad</a> veremos que antes de deducir la relación entre alturas de padres e hijos, <span class="citation"><a href="#ref-Galton1886" role="doc-biblioref">Galton</a> (<a href="#ref-Galton1886" role="doc-biblioref">1886</a>)</span>, multiplica la altura de las mujeres por el coeficiente <span class="math inline">\(1,08\)</span> a fin de que las mismas sean comparables. Es decir, Galton reconoce algo que todos observamos diariamente: que existen <strong>diferencias sistemáticas</strong> en las alturas de hombres y mujeres, siendo estas últimas más bajas. Eso no quiere decir que todas las mujeres sean más bajas que todos los hombres, ni que determinada mujer sea más baja que determinado hombre. Simplemente establece una relación entre la media de un grupo y la media del otro grupo. Claramente esto se aplica a muchas otras características, tanto en seres humanos como en otras especies. En algunas características un sexo poseerá registros promedialmente superiores al otro y en otras será a la inversa.</p>
-<p>En este punto podríamos plantearnos si tiene algo de sentido lo que estamos discutiendo. Al ser características con distribuciones aleatorias (por todos los efectos que tienen esas distribuciones, genéticos y ambientales), es altamente probable que cualquier factor que utilicemos para separar los individuos (por ejemplo el color de pelo, color de ojos, etc) genere diferencias, algunas de ellas estadísticamente significativas. ¿Qué hace entonces particular a los factores que estamos discutiendo en esta sección? Lo particular de los factores que estamos analizando es precisamente su caracter <strong>sistemático</strong>. Es decir, no importa si analizamos la diferencia de peso de vellón entre machos y hembras en Salto, Paysandú, Rio Negro o en Tacuarembó (utilizando siempre un gran número de individuos para reducir la incertidumbre en las estimaciones), la diferencia observada en las medias de ambos sexos será similar en todos ellos. No importa si analizamos esas diferencias este año, el año pasado o tres años hacia atrás, las diferencias entre sexos serán similares.</p>
-<p>Otras diferencias sistemáticas no están relacionadas al sexo de los individuos. Por ejemplo, hasta la cuarta o quinta lactancia las vacas producirán en cada lactancia un poco más que en la anterior; esto se debe al crecimiento que experimenta la vaca con el paso del tiempo y se trata de diferencias que son sistemáticas. Lo mismo ocurrirá con el peso de los borregos, que se verá afectado por el sexo del animal, por el hecho de haber transcurrido la gestación como mellizo o trillizo y aún por haber sido criado en los primeros meses como único, mellizo o trillizo; se trata en todos los casos de diferencias sistemáticas entre las clases consideradas y que por lo tanto se repetirán en signo y magnitud durante un intervalo de tiempo razonable (no sería razonable suponer que <strong>esas mismas diferencias</strong> se observaran hace dos siglos, por ejemplo, aunque si el signo de las mismas).</p>
-<p>Un punto importante es el que hace al caracter genético o ambiental de los efectos y su consideración como efectos ambientales sistemáticos. Claramente, el sexo está determinado genéticamente, por lo que resulta llamativo que lo incluyamos en el mismo lugar que otros efectos ambientales. En cierta forma, lo mismo podría pensarse para la calidad de mellizos, que en ovinos está parcialmente controlada por los alelos presentes en el gen de Fecundidad “Booroola” (<strong>FecB</strong>). El punto aquí es que para nuestros objetivos, mejorar la característica métrica de interés, tanto el sexo como la calidad mellicera son genéticamente irrelevantes. Para reproducir la especie necesitaremos individuos de ambos sexos y si no consideramos las correlaciones entre características (algo que veremos en el próximo capítulo) el hecho de que sean mellizos o no es irrelevante para nuestro mejoramiento en el peso de cada borrego. Lo mismo, las diferencias entre producción de diferentes lactancias en la vaca tiene un correlato con la curva de crecimiento de los animales, la que se encuentra determinada en gran parte a nivel genético. Sin embargo, no tendría sentido para nosotros elegir todas las vacas que serán reproductoras entre las de quinta lactancia; debemos poder corregir por esas diferencias sistemáticas (esperables).</p>
-<p>Esto nos lleva directamente a la pregunta fundamental ¿Por qué son tan importantes para nosotros las diferencias sistemáticas? La respuesta es relativamente sencilla: <strong>porque podemos corregir fácilmente por estas diferencias</strong> (ya que son siempre del mismo signo y magnitud), tratando en forma más justa a los diferentes candidatos a la selección. Tradicionalmente se aplicaron factores de corrección como forma de corregir por esas diferencias sistemáticas, calculándose los mismos previamente y luego ajustando los datos antes de procesarlos en la evaluación. Afortunadamente, desde hace tiempo, los modelos lineales mixtos usados en las evaluaciones permiten “corregir” directamente por los efectos sistemáticos, estimando sus efectos al mismo tiempo que los efectos genéticos y otros efectos (como el del grupo contemporáneo), por lo que no es ya más necesaria la pre-corrección. Sin embargo, a fines didácticos, el cálculo de los mismos sigue siendo interesante porque muestra más de cerca los problemas de comparar cosas que tienen diferentes bases y las formas de corregir por esas diferencias que no son relevantes a nuestros fines, por lo que incluimos esta sección.</p>
-<p><br />
-</p>
-<hr />
-<p><strong>¿Como funcionan los factores de corrección?</strong> El funcionamiento de los mismos es sencillo, pero cuenta con dos fases completamente diferentes:</p>
-<p>1- <strong>Cálculo de los factores de corrección</strong> (que se hace en forma regular, cada determinado tiempo) <strong>a partir de la mayor cantidad posible de registros</strong> de la “misma” gran población.</p>
-<p>2- <strong>Aplicación del factor de corrección correspondiente a cada registro</strong> que se pretenda utilizar en una evaluación genética.</p>
-<hr />
-<p><br />
-</p>
-<div id="factores-de-corrección-aditivos" class="section level3 unnumbered">
-<h3>Factores de corrección aditivos</h3>
-<p>Hasta aquí hemos venido discutiendo en términos generales acerca de los efectos sistemáticos, mencionando que al tratarse de diferencias con el mismo signo y magnitud por un plazo razonable de tiempo, resultaba sencillo corregir por ellas. Sin embargo, no mencionamos hasta ahora
-el cómo corregirlas. Lo primero a tener en cuenta a la hora de corregir por diferencias sistemáticas entre determinadas clases es entender las diferencias en las distribuciones de las clases (o niveles) del factor en consideración para la característica de interés. Para esto, un histograma o un gráfico de densidad de la distribución suele ser extremadamente útil, acompañado de los estadísticos resumen usuales (media, mediana, varianza, cuantiles).</p>
-<p>En la figura <a href="selartifI.html#fig:fcad">11.1</a> se representa una situación clásica para un característica métrica de interés. Por lo que se aprecia en la figura, los dos sexos presentan una distribución diferente ya que las medias de ambas distribuciones se encuentran desplazadas una respecto a la otra. En este caso, por otra parte, <strong>las dos distribuciones tienen aproximadamente la misma varianza</strong>, por lo que la forma de hacerlas coincidir parece obvia: o desplazamos la distribución de machos a la izquierda hasta que coincida con la de hembras, o desplazamos la de hembras hasta que coincida con la de machos. En la figura nos hemos decidido por esta última opción, en forma totalmente arbitraria. Para ello calcularemos un factor de <strong>corrección aditivo</strong> para cada clase (o nivel) del factor, en este caso <strong>sexo</strong>. Para que el método sea general a más de dos niveles o clases, vamos a definir siempre una clase como la <strong>clase de referencia</strong>, clase <strong>cuyos registros ajustados permanecerán idénticos</strong> a pesar del ajuste. En el caso de la figura, elegimos la categoría de los <strong>machos</strong> como <strong>clase de referencia</strong>. Si llamamos <span class="math inline">\(\bar y_r\)</span> a la media de la clase de referencia, entonces los factores para la clase <span class="math inline">\(i\)</span> se calcula como</p>
-<p><span class="math display" id="eq:fcad1">\[\begin{equation}
-c_i=\bar y_r - \bar y_i
-\tag{11.1}
-\end{equation}\]</span></p>
-<p>En el caso de la clase de referencia, <span class="math inline">\(\bar y_i=\bar y_r\)</span>, por lo que la ecuación anterior nos deja con</p>
-<p><span class="math display" id="eq:fcad2">\[\begin{equation}
-c_{i=r}=\bar y_r - \bar y_i=\bar y_r - \bar y_r=0
-\tag{11.2}
-\end{equation}\]</span></p>
-<p>Es decir, para calcular los distintos factores de corrección aditivos alcanza con restarle a la media de la clases de referencia las medias de cada una de las clases.</p>
-<p><br />
-</p>
-
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fcad"></span>
-<img src="ApuntesGeneticaII_files/figure-html/fcad-1.png" alt="Factor de corrección aditivo. La característica de interés tiene una distribución diferente en hembras y machos ya que si bien su varianza es igual, las medias para ambos sexos son diferentes. Si definimos un umbral de selección determinado, si no corregimos por esta diferencia casi ninguna hembra resultaría seleccionada (la pequeña porción rayada en azul en la parte superior de la figura). Como la diferencia entre las distribuciones es apenas en la media, alcanza con desplazar la media de hembras hasta alcanzar la media de machos (podríamos haber hecho lo contrario), categoría que usaremos como referencia. Esto produce que las dos distribuciones ahora coincidan (parte inferior de la figura) y que el umbral de selección brinde las mismas posibilidades de ser elegidos a machos y hembras." width="672" />
-<p class="caption">
-Figure 11.1: Factor de corrección aditivo. La característica de interés tiene una distribución diferente en hembras y machos ya que si bien su varianza es igual, las medias para ambos sexos son diferentes. Si definimos un umbral de selección determinado, si no corregimos por esta diferencia casi ninguna hembra resultaría seleccionada (la pequeña porción rayada en azul en la parte superior de la figura). Como la diferencia entre las distribuciones es apenas en la media, alcanza con desplazar la media de hembras hasta alcanzar la media de machos (podríamos haber hecho lo contrario), categoría que usaremos como referencia. Esto produce que las dos distribuciones ahora coincidan (parte inferior de la figura) y que el umbral de selección brinde las mismas posibilidades de ser elegidos a machos y hembras.
-</p>
-</div>
-<p>El paso final, luego de haber calculado los distintos factores de corrección será aplicarlos sobre los distintos registros. Para eso alcanza con sumar al registro fenotípico el valor del factor de corrección correspondiente a la clase a la que pertenece el registro. Es decir, si un registro fenotípico <span class="math inline">\(j\)</span> pertenece a la clase <span class="math inline">\(i\)</span>, su valor ajustado será</p>
-<p><span class="math display" id="eq:fcad3">\[\begin{equation}
-y_{j}=y_{i,j}+c_i
-\tag{11.3}
-\end{equation}\]</span></p>
-<p>Notar que esta notación desapareció el subíndice <span class="math inline">\(i\)</span> luego de la corrección ya que todas las clases serán comparables en pie de igualdad luego de ajustadas.</p>
-<p><br />
-</p>
-<hr />
-<div id="ejemplo-11.1" class="section level4 unnumbered">
-<h4>Ejemplo 11.1</h4>
-<hr />
-</div>
-</div>
-<div id="factores-de-corrección-multiplicativos" class="section level3 unnumbered">
-<h3>Factores de corrección multiplicativos</h3>
-<p>Como discutimos antes, los factores de corrección aditivos se pueden aplicar cuando las diferencias en las distribuciones de los fenotipos de las clases son exclusivamente en las medias de cada una de ellas. En esos casos alcanza con sumar un valor (el <strong>factor de corrección aditivo</strong>) a cada uno de los registros de la clase para que todos los registros queden expresados en términos equivalentes respecto al factor en consideración. Sin embargo, en muchos casos no solo las medias difieren sino que también lo hace las dispersiones de cada clase. Un ejemplo típico es el de la producción de leche por lactancia. Mientras que en las primeras lactancias la producción es promedialmente menor que en las segundas lactancias, la variación también es menor en las primeras respecto a las segundas. Esto se extiende a su vez a las terceras lactancias, como puede verse en el ejemplo de la figura <a href="selartifI.html#fig:fcmu">11.2</a>, en la parte superior de la misma. Si utilizacemos un umbral de selección sin corregir, casi ninguna vaca de segunda lactancia sería elegida y ninguna de las vacas en primera lactancia lo sería. Más aún, si aplicásemos un factor de corrección aditivo tomando como referencia la 3era lactancia, solamente desplazaríamos las curvas de 1era y 2da lactancia hacia la derecha, pero al quedar con menor variación que la curva de 3era tampoco estaríamos siendo justos con las vacas en 1era o 2da lactancia (que se elegirían en menor proporción que las de 3era). Por lo tanto, hace falta aplicar alguna corrección que al mismo tiempo que desplace las medias para hacerlas coincidir con la media de 3era lactancia, también expanda las varianzas de las distribuciones. Nuevamente, si llamamos <span class="math inline">\(\bar y_r\)</span> a la media de la clase de referencia, ahora el factor de corrección para la clase <span class="math inline">\(i\)</span> estará dado por</p>
-<p><span class="math display" id="eq:fcmu1">\[\begin{equation}
-c_i=\frac{\bar y_r} {\bar y_i}
-\tag{11.4}
-\end{equation}\]</span></p>
-<p>En el caso de la clase de referencia, <span class="math inline">\(\bar y_i=\bar y_r\)</span>, por lo que la ecuación anterior nos deja con</p>
-<p><span class="math display" id="eq:fcmu2">\[\begin{equation}
-c_{i=r}=\frac{\bar y_r}{\bar y_i}=\frac{\bar y_r}{\bar y_r}=1
-\tag{11.5}
-\end{equation}\]</span></p>
-<p>o lo que es lo mismo, un factor multiplicativo de <span class="math inline">\(c_r=1\)</span> para la clase de referencia.</p>
-<p><br />
-</p>
-
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fcmu"></span>
-<img src="ApuntesGeneticaII_files/figure-html/fcmu-1.png" alt="Factor de corrección multiplicativo La característica de interés, producción de leche a 305 días, posee una distribución diferente en cada lactancia (1era, 2da y 3era) y así como crece las medias de la característica también lo hacen las varianzas. Si definimos un umbral de selección determinado, si no corregimos por esta diferencia casi ninguna hembra segunda y ninguna de primera lactancia resultaría seleccionada (la pequeña porción rayada en azul en la parte superior de la figura y la no existente rayada en verde). Como la diferencia entre las distribuciones es en ambos parámetros (medias y varianzas), ambos en el mismo sentido, es posible que si definidmos la 3era lactancia como categoría de referencia, al multiplicar los registros de las otras dos categorías por su correspondiente factor de corrección multiplicativo estemos corrigiendo ambos parámetros, como se ve en la figura de abajo." width="672" />
-<p class="caption">
-Figure 11.2: Factor de corrección multiplicativo La característica de interés, producción de leche a 305 días, posee una distribución diferente en cada lactancia (1era, 2da y 3era) y así como crece las medias de la característica también lo hacen las varianzas. Si definimos un umbral de selección determinado, si no corregimos por esta diferencia casi ninguna hembra segunda y ninguna de primera lactancia resultaría seleccionada (la pequeña porción rayada en azul en la parte superior de la figura y la no existente rayada en verde). Como la diferencia entre las distribuciones es en ambos parámetros (medias y varianzas), ambos en el mismo sentido, es posible que si definidmos la 3era lactancia como categoría de referencia, al multiplicar los registros de las otras dos categorías por su correspondiente <strong>factor de corrección multiplicativo</strong> estemos corrigiendo ambos parámetros, como se ve en la figura de abajo.
-</p>
-</div>
-<p>Nuevamente, el paso final, luego de haber calculado los distintos factores de corrección será aplicarlos sobre los distintos registros. Para eso alcanza con multiplicar el valor del registro fenotípico por el valor del factor de corrección correspondiente a la clase a la que pertenece el registro. Es decir, si un registro fenotípico <span class="math inline">\(j\)</span> pertenece a la clase <span class="math inline">\(i\)</span>, su valor ajustado será</p>
-<p><span class="math display" id="eq:fcmu3">\[\begin{equation}
-y_{j}=y_{i,j} \cdot c_i
-\tag{11.6}
-\end{equation}\]</span></p>
-<p>Igual que para el factor de corrección aditivo, observar que en esta notación desapareció el subíndice <span class="math inline">\(i\)</span> luego de la corrección ya que todas las clases serán comparables en pie de igualdad luego de ajustadas.</p>
-<p><br />
-</p>
-<hr />
-<div id="ejemplo-11.2" class="section level4 unnumbered">
-<h4>Ejemplo 11.2</h4>
-<hr />
-<p>Un detalle práctico final a la hora de observar las diferencias entre factores aditivos y multiplicativos es la que tiene que ver con la relación que existe en el elemento neutro de las operaciones de adición y multiplicación y los correspondientes valores de las clases de referencia para factores de corrección aditivos y multiplicativos, respectivamente. Llamamos clase de referencia a aquella a la que íbamos a referir todos los registros y que asumíamos como que no cambiaba luego de ajustados los registros. Es decir, luego de aplicar la operación correspondiente al tipo de corrección, los registros quedaban intactos. En la adición, el único elemento que sumado a otro deje sin cambiar el valor de este último es el cero, neutro de la suma. Por lo tanto, <strong>el factor de corrección aditivo correspondiente a la clase de referencia debe ser cero</strong>. De la misma manera, el único elemento que al multiplicar a un número por este deja sin cambio al último es el uno, el neutro de la multiplicación. Por lo tanto, <strong>el factor de corrección multiplicativo correspondiente a la clase de referencia debe ser uno</strong>. Esto tan sencillo puede ser una ayuda importante si poseemos una tabla de factores de corrección pero no sabemos si se trata de factores de corrección aditivos o multiplicativos.</p>
-</div>
-</div>
-<div id="factores-de-corrección-lineales" class="section level3 unnumbered">
-<h3>Factores de corrección lineales</h3>
-<p>En algunos casos existe un gran número de categorías posibles o aún infinitas, por lo que calcular un factor de corrección aditivo para cada una de ellas resulta impráctico o aún imposible. Ejemplo de esto podría ser la necesidad de corregir pesos de acuerdo al crecimiento del animal. Por ejemplo, si definimos una característica <strong>peso al destete (a los 205 días)</strong>, lo ideal sería pesar a todos los animales exactamente cuando cumplen 205 días. Sin embargo, en la práctica resulta impracticable esta idea ya que los animales suelen parir en un período extendido de tiempos y deberíamos estar pesando todos los días. La resultante de esto es que algunos animales serán pesados exactamente cuando tienen 205 días, pero unos cuantos lo serán con menos días y otros varios con más de 205 días. ¿Cómo corregimos entonces por estas diferencias en el número de días?</p>
-<p>Si asumimos que en intervalos cortos de tiempo, por ejemplo hasta un par de semanas después de los 205 días, el comportamiento de la evolución del peso con los días se corresponde a un crecimiento lineal, entonces podríamos ajustar una recta (por mínimos cuadrados, por ejemplo) de los pesos como función de los días desde el nacimiento, si tuviésemos esos varios datos para cada animal. <strong>La pendiente de esta recta será la ganancia diaria</strong>, que llamaremos <span class="math inline">\(b_{PE}\)</span> por ejemplo en Kg/día, que es el elemento central en la corrección lineal que vamos a aplicar. En caso de no tener esa posibilidad, si tenemos el peso al nacimiento (<span class="math inline">\(P_N\)</span>), además del peso a la edad cercana a los 205 días (<span class="math inline">\(P_d\)</span>), por ejemplo a los <span class="math inline">\(d\)</span> días, podemos estimar esa pendiente de ganancia diaria como</p>
-<p><span class="math display" id="eq:lineal1">\[\begin{equation}
-b_{PE}=\frac{(P_d-P_N)}{d}
-\tag{11.7}
-\end{equation}\]</span></p>
-<p>Si llamamos <span class="math inline">\(b_{PE}\)</span> a la pendiente de regresión del peso en la edad (cualquiera sea el método para obtenerla) para el animal en particular que queremos corregir, es decir a <strong>la ganancia diaria esperada para ese animal</strong>, entonces un registro de peso <span class="math inline">\(P_d\)</span> obtenido a los <span class="math inline">\(d\)</span> días se corregirá a 205 días de acuerdo a la siguiente ecuación</p>
-<p><span class="math display" id="eq:lineal2">\[\begin{equation}
-P_{205}=P_N + b_{PE} \cdot 205
-\tag{11.8}
-\end{equation}\]</span></p>
-<p>Dicho de otra forma, el registro corregido a 205 días será igual al peso al nacimiento sumado a la ganancia diaria esperada multiplicada por los 205 días establecidos como referencia. En el caso de que <span class="math inline">\(d=205\)</span>, entonces <span class="math inline">\(b_{PE}=\frac{(P_d-P_N)}{205}\)</span>, por lo que al sustituir en la ecuación <a href="selartifI.html#eq:lineal2">(11.8)</a> tenemos</p>
-<p><span class="math display">\[\begin{equation}
-P_{205}=P_N + b_{PE} \cdot 205=P_N+\frac{(P_{d}-P_N)}{205} \cdot 205=P_N+P_d-P_N=P_d
-\end{equation}\]</span></p>
-<p><br />
-</p>
-<hr />
-<div id="ejemplo-11.3" class="section level4 unnumbered">
-<h4>Ejemplo 11.3</h4>
-<p><br />
-</p>
-<hr />
-<div class="graybox">
-<div class="center">
-<p><strong>PARA RECORDAR</strong></p>
-</div>
-</div>
-<hr />
-</div>
-</div>
-</div>
-<div id="la-respuesta-a-la-selección-y-su-predicción" class="section level2" number="11.2">
-<h2><span class="header-section-number">11.2</span> La respuesta a la selección y su predicción</h2>
-<p>Cualquiera que haya salido al campo puede fácilmente reconocer las diferencias entre las razas de ganado bovino, por ejemplo entre vacas lecheras y vacas destinadas a la producción de carne. No solo son claramente observables las diferencias en color (en nuestro país las razas más abundantes en ganado de carne son la Hereford y Aberdeen Angus, mientras que en leche es Holando), sino también en el tamaño y en el desarrollo morfológico del animal. Aún para aquellos que nunca salieron al campo, resultan obvias las diferencias entre razas de perros, tamaños, colores, formas de la cabeza, etc. Tanto en ganado bovino como en cánidos domésticos, las diferencias que observamos no fueron producto de la evolución actuando libremente sino que mayormente fueron guiadas por el ser humano y moldeadas de acuerdo a sus intereses. Vista la diversidad y el poco tiempo (en términos evolutivos) en el que la humanidad realizó la selección artificial, resulta bastante llamativo el éxito obtenido.</p>
-<p>Las bases de la selección artificial tradicional son muy sencillas y razonables: si una característica se hereda, entonces eligiendo en cada generación a los “mejores” individuos como reproductores (padres de la siguiente generación) es de esperar que la característica vaya “mejorando.” Este razonamiento ha estado con nosotros desde el inicio de la domesticación, tanto en plantas, animales, como en microbiología (mejores fermentos, etc.). Por ejemplo, si obtener mayor cantidad de lana por oveja parece una buena idea, entonces también lo parece elegir (seleccionar) a los mejores animales (aquellos con más lana) como reproductores y progenitores de la próxima generación. En principio alcanza con repetir este proceso tantas veces como sea necesario para llegar a nuestro objetivo.</p>
-<p>Veamos como opera esta idea concretamente. Supongamos que tenemos una característica fenotípica de nuestro interés y que deseamos individuos con valores altos de la misma, es decir, cuanto más a la derecha de la media mejor. Para ser objetivos, definimos un determinado valor <strong>umbral</strong>, que indica que individuos son aceptables para reproducirse y seleccionamos a los que superen dicho umbral. Una representación de esto puede verse en la parte superior de la figura <a href="selartifI.html#fig:respuesele">11.3</a>, donde el área rayada en rojo denota los individuos seleccionados en la generación parental. La diferencia entre la media de los individuos seleccionados <span class="math inline">\(\mathrm{\bar x_S}\)</span> y la media de la población <span class="math inline">\(\mathrm{\bar x_0}\)</span> será igual al diferencial de selección, es decir <span class="math inline">\(\mathrm{S=\bar x_S-\bar x_0}\)</span>. Aunque puede parecer trivial, es un error frecuente confundir el valor umbral a partir del cuál vamos a elegir los individuos que serán reproductores con la media de la característica para los reproductores seleccionados; en el caso de que estemos seleccionando para valores altos de la característica, el valor umbral es el mínimo de la misma para que los individuos sean considerados como reproductores, por lo que la media será en general mayor que el umbral (en el peor de los casos será igual).</p>
-<p><br />
-</p>
-<hr />
-<p><strong>Diferencial de selección</strong> (<span class="math inline">\(S\)</span>) es la diferencia entre la media de los individuos seleccionados como progenitores de la siguiente generación respecto a la media de la población contemporánea. En selección por truncamiento (selección masal), la media de los animales seleccionados debe tener una valor más favorable (más alto si estamos seleccionado para valores altos) que el <strong>umbral de selección</strong>. El diferencial de selección, al tratarse de una resta de medias de la característica, tendrá las mismas unidades que la característica.</p>
-<p><strong>Umbral de selección</strong> es un valor fijo a partir del cuál elegimos a los individuos que serán reproductores de la siguiente generación, es decir, aquellos individuos que tengan una fenotipo igual o más favorable que el valor umbral.</p>
-<hr />
-<p><br />
-</p>
-
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:respuesele"></span>
-<img src="figuras/respusele.jpg" alt="Respuesta a la selección. En la parte superior aparece la distribución valores fenotípicos centrados de un característica cuantitativa en la generación parental. Si realizamos selección masal, luego de definido un valor umbral, los individuos que superen (en este caso) dicho valor son elegidos para reproducirse (área rayada en rojo). Claramente, la media de la característica debe ser (en este caso) mayor al valor umbral. La diferencia entre la media de los seleccionado y la media de su generación es el diferencial de selección \(\mathrm{S=\bar x_S-\bar x_0}\). La descendencia de los animales seleccionados constituirán la siguiente generación (distribución de abajo). La respuesta a la selección será la diferencia de medias entre la población en la generación 1 y en la generación 0, es decir \(\mathrm{R=\bar x_1 - \bar x_0}\). La relación entre la respuesta y lo elegido como reproductores es igual a la heredabilidad de la característica, es decir \(\mathrm{\frac{R}{S}=h^2}\) y por lo tanto \(\mathrm{R=S\ h^2}\), que se conoce como la ecuación del criador." width="1152" />
-<p class="caption">
-Figure 11.3: Respuesta a la selección. En la parte superior aparece la distribución valores fenotípicos centrados de un característica cuantitativa en la generación parental. Si realizamos <strong>selección masal</strong>, luego de definido un valor <strong>umbral</strong>, los individuos que superen (en este caso) dicho valor son elegidos para reproducirse (área rayada en rojo). Claramente, la media de la característica debe ser (en este caso) mayor al valor umbral. La diferencia entre la media de los seleccionado y la media de su generación es el diferencial de selección <span class="math inline">\(\mathrm{S=\bar x_S-\bar x_0}\)</span>. La descendencia de los animales seleccionados constituirán la siguiente generación (distribución de abajo). La respuesta a la selección será la diferencia de medias entre la población en la generación 1 y en la generación 0, es decir <span class="math inline">\(\mathrm{R=\bar x_1 - \bar x_0}\)</span>. La relación entre la respuesta y lo elegido como reproductores es igual a la heredabilidad de la característica, es decir <span class="math inline">\(\mathrm{\frac{R}{S}=h^2}\)</span> y por lo tanto <span class="math inline">\(\mathrm{R=S\ h^2}\)</span>, que se conoce como la ecuación del criador.
-</p>
-</div>
-<p><br />
-</p>
-<p>Como ya vimos en el capítulo <a href="pargen.html#pargen">Parámetros Genéticos: Heredabilidad y Repetibilidad</a>, no todas las diferencias que obervamos en los padres respecto a la media será observada en la progenie, un fenómeno que ya había sido observado por Francis Galton y descrito como <strong>regresión hacia la mediocridad</strong>. También vimos previamente que <strong>la pendiente de la regresión del fenotipo de los hijos en el promedio del fenotipo de los padres es igual a la heredabilidad</strong> (<span class="math inline">\(\mathrm{h^2}\)</span>). Más aún, como adelanto de este capítulo vimos en la sección <a href="pargen.html#heredabilidad-lograda">Heredabilidad lograda</a> que la pendiente de la recta que relacionaba la respuesta a la selección <span class="math inline">\(\mathrm{R}\)</span> en función del diferencial de selección <span class="math inline">\(\mathrm{S}\)</span> era <span class="math inline">\(\mathrm{\frac{R}{S}=h^2}\)</span>. Dado de que la regresión lineal del valor fenotípico de los hijos en el promedio de los padres (seleccionados) es una función lineal, entonces la media de la regresión es igual a la regresión de la media. Dicho de otra manera, si usamos el coeficiente de regresión para, a partir del valor fenotípico de los padres seleccionados, obtener el valor fenotípico <strong>predicho</strong> de los hijos y luego le hacemos la media a ese valor, sería lo mismo que predecir la media de la generación de hijos (<span class="math inline">\(\mathrm{\bar x_1}\)</span>) usando el coeficiente de regresión (<span class="math inline">\(\mathrm{b_{O\bar P}=h^2}\)</span>) sobre la media de los padres seleccionados (<span class="math inline">\(\mathrm{\bar x_0}\)</span>). Como el coeficiente de esta regresión lo habíamos obtenido de datos centrados, tanto en la variable dependiente como en la independiente (no tiene intercepto), la predicción debemos hacerla en los mismos términos. Es decir, en términos matemáticos, la predicción será a partir de <span class="math inline">\(\mathrm{\bar x_S - \bar x_0=S}\)</span>.</p>
-<p>Como muestra la figura <a href="selartifI.html#fig:respuesele">11.3</a>, la media de la nueva generación será <span class="math inline">\(\mathrm{\bar x_1}\)</span> y por lo tanto, la respuesta a la selección será la diferencia entre la media de la generación de los progenitores y la media de los descendientes, es decir <span class="math inline">\(\mathrm{R=\bar x_1-\bar x_0}\)</span>. Por lo tanto, usando como criterio de predicción de la media de la generación de los hijos (<span class="math inline">\(\mathrm{\bar x_1}\)</span>) respecto a la media de la generación parental (<span class="math inline">\(\mathrm{\bar x_0}\)</span>) el desvío de la media de los animales seleccionados respecto a la media de su generación (<span class="math inline">\(\mathrm{S=\bar x_S - \bar x_0}\)</span>), tenemos</p>
-<p><span class="math display" id="eq:criador">\[\begin{equation}
-\mathrm{(\bar x_1 - \bar x_0)=R=(\bar x_S - \bar x_0) b_{O\bar P}= (\bar x_S - \bar x_0) h^2}\therefore \\
-\mathrm{R=S\ h^2}
-\tag{11.9}
-\end{equation}\]</span></p>
-<p>que es uno de los resultados más importantes de la genética cuantitativa. La ecuación <a href="selartifI.html#eq:criador">(11.9)</a> es central para el mejoramiento genético y es conocida como la <strong>ecuación del criador</strong>. El mensaje de la misma es muy claro: <strong>cuando la heredabilidad es alta, la respuesta a la selección basada en el fenotipo individual será muy eficiente</strong> y <strong>la media de la nueva generación será cercana a la media de los animales seleccionados como reproductores</strong>. Por otro lado, <strong>cuando la heredabilidad es muy baja, la respuesta a la selección será pobre</strong> y <strong>la media de la nueva generación será casi igual a la de la generación anterior</strong>. Desafortunadamente, como lo plantea <span class="citation"><a href="#ref-Houchmandzadeh2014" role="doc-biblioref">Houchmandzadeh</a> (<a href="#ref-Houchmandzadeh2014" role="doc-biblioref">2014</a>)</span>, el alcance de la linealidad implícita en la ecuación del criador se encuentra restringida al caso en que tanto en los genotipos como los factores ambientales tienen distribución normal. Pese a esto, dado que para muchas características de interés agronómico parece ser un supuesto razonable, seguiremos con esta forma particular de la relación entre diferencial de selección y respuesta.</p>
-<p>Otra cosa que seguramente te llamó la atención es el hecho de que pese a que la distribución de los individuos seleccionados como progenitores (el área rayada en rojo en la figura <a href="selartifI.html#fig:respuesele">11.3</a>) no es una distribución normal, ni siquiera simétrica, hemos dibujado para los descendientes de estos nuevamente una distribución normal. Por ejemplo, la densidad de los individuos que están cerca del valor umbral es mucho mayor que la densidad de los individuos que están hacia valores extremos a la derecha en la distribución. Entonces, la pregunta sería ¿por qué razón los descendientes tendrían pese a esto una distribución <strong>aproximadamente</strong> normal? La razón es intuitiva: como <strong>genotipo y ambiente son independientes</strong> (y a su vez los componentes genéticos son ortogonales entre sí), los individuos que están cerca del umbral (límite inferior de los seleccionados) pueden provenir de muchas combinaciones de genotipos y ambientes. Por ejemplo, muy buen genotipo y ambiente mediocre, relativamente buen genotipo y ambiente, o excelente ambiente y mediocre genotipo. En cambio, a medida de que nos desplazamos hacia la derecha en los fenotipos seleccionados, ambos factores, genéticos y ambientales deben ser muy buenos para que su suma sea excelente. Esto nos deja con una distribución de genotipos seleccionados (y en particular los valores aditivos) que tiene una distribución mucho más simétrica que la zona roja rayada, como se puede apreciar en la figura <a href="selartifI.html#fig:umbronorm">11.4</a>. En la misma, se grafican para tres valores de heredabilidad diferentes las distribuciones de los efectos genotípicos y ambientales de los animales seleccionados. Claramente, pese a que realizamos selección por truncamiento, tanto los efectos de los genotipos como losambientales tienen una distribución continua y aproximadamente normal. Además, para generar los descendientes de esta distribución los apareamientos serán al azar y en este caso lo único relevante son los valores aditivos, que tienen una distribución bastante razonable y a la que se le sumarán el resto de los efectos aleatorios (dominancia, epistasis y ambiente), por lo que no es difícil imaginar que el resultado será aproximadamente normal.</p>
-
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:umbronorm"></span>
-<img src="ApuntesGeneticaII_files/figure-html/umbronorm-1.png" alt="Distribución fenotípica de la población (en negro), de los fenotipos seleccionados como reproductores (área rayada en rojo) y de los genotipos seleccionados (azul), así como de los efectos ambientales (verde) en los individuos seleccionados. De izquierda a derecha, heredabilidades de \(h^2=0,50\), \(h^2=0,80\) y \(h^2=0,90\). Se aprecia claramente que pese a que la selección es por truncamiento en los fenotipos, los genotipos de los individuos seleccionados se distribuyen en casi todo el continuo de valores y con una distribución aproximadamente normal a heredabilidades no demasiado altas." width="672" />
-<p class="caption">
-Figure 11.4: Distribución fenotípica de la población (en negro), de los fenotipos seleccionados como reproductores (área rayada en rojo) y de los genotipos seleccionados (azul), así como de los efectos ambientales (verde) en los individuos seleccionados. De izquierda a derecha, heredabilidades de <span class="math inline">\(h^2=0,50\)</span>, <span class="math inline">\(h^2=0,80\)</span> y <span class="math inline">\(h^2=0,90\)</span>. Se aprecia claramente que pese a que la selección es por truncamiento en los fenotipos, los genotipos <strong>de los individuos seleccionados</strong> se distribuyen en casi todo el continuo de valores y con una distribución aproximadamente normal a heredabilidades no demasiado altas.
-</p>
-</div>
-<p>Como en la ecuación del criador la respuesta a la selección es directamente proporcional al diferencial de selección y a la heredabilidad, incrementos en cualquiera de las dos llevan a incrementar la respuesta a la selección. Sin embargo el significado de ambas es conceptualmente distinto. Por un lado, mientras que el diferencial de selección se refiere a una decisión que podemos adoptar casi a nuestra voluntad en una población reducida (rodeo, majada, etc.), la heredabilidad se trata de un parámetro genético poblacional que requiere de mucho esfuerzo para ser modificado en el sentido deseado. Como vimos previamente, la heredabilidad es igual a la proporción de la varianza fenotípica que corresponde a los efectos aditivos, es decir, a la varianza aditiva. Por lo tanto, la única forma de incrementarla, dada la arquitectura genética de una característica, es reducir la varianza ambiental. En muchas características esto es posible a nivel del predio, con manejo más controlados, mejores registros que permitan de alguna manera “corregir” por diferencias, etc., pero en general suele ser algo complicado y costoso.</p>
-<p>Por otro lado, el diferencial de selección es una función de la varianza de la característica y de la proporción de individuos que decidamos quedarnos como reproductores. Cuanto más varianza fenotípica tenga la característica en la población en la que estoy haciendo la selección, mayor podrá ser el diferencial de selección a la misma proporción de individuos seleccionados. En general, la idea es mover la media lo más hacia el extremo deseado que sea posible, pero en casi cualquier distribución razonable eso suele implicar cada vez menos individuos que cumplen con los criterios de inclusión (que superen el umbral, por ejemplo).</p>
-<p>En la figura <a href="selartifI.html#fig:difselevar">11.5</a> se puede apreciar la relación existente entre el diferencial de selección y la varianza de la distribución a partir de un valor de umbral prefijado. En la parte superior de la figura podemos apreciar la gráfica de una característica con distribución normal que por comodidad hemos centrado restándole el valor de la media, por lo que ahora la media será cero y con desvío estándar igual a <span class="math inline">\(1\)</span> unidad de la característica (por ejemplo kg en peso de vellón, micras en diámetro, etc.). Si definimos un umbral de selección, por ejemplo de <span class="math inline">\(\mathrm{u=0,6745}\)</span>, todos los individuos que superen ese valor en su fenotipo serán considerados como reproductores, es decir, progenitores de la siguiente generación. Con ese umbral, en la distribución normal estándar (media igual a cero y desvío estándar igual a 1) quedan <span class="math inline">\(25\%\)</span> de individuos en el área seleccionada (rayada en rojo) y la media de la característica para esos individuos es de <span class="math inline">\(\mathrm{\bar x_S=1,27}\)</span>. Como la media de la característica para toda la población en nuestro caso es de <span class="math inline">\(\mathrm{\bar x_0=0}\)</span> (porque la centramos), entonces el diferencial de selección será de <span class="math inline">\(\mathrm{S=\bar x_S-\bar x_0=1,27-0=1,27}\)</span> unidades de la característica. Por otra parte, en la parte inferior de la figura se representa la situación para la misma característica pero en una población cuyo desvío estándar fenotípico es de <span class="math inline">\(2/3\)</span> (menor a <span class="math inline">\(1\)</span> que era el valor de la distribución en la parte superior). Ahora, utilizando el mismo umbral de selección que utilizamos en la población de arriba, es decir <span class="math inline">\(\mathrm{u=0,6745}\)</span>, ahora tendremos solamente el <span class="math inline">\(16\%\)</span> de los individuos como reproductores en el área rayada en rojo y el valor de la media para los mismos será <span class="math inline">\(\mathrm{\bar x_S=1,02}\)</span>, por lo que el diferencial de selección será ahora de <span class="math inline">\(\mathrm{S=\bar x_S-\bar x_0=1,02-0=1,02}\)</span> unidades de la característica.</p>
-<p><br />
-</p>
-
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:difselevar"></span>
-<img src="ApuntesGeneticaII_files/figure-html/difselevar-1.png" alt="La relación entre el diferencial de selección y la varianza fenotípica de la característica. En la parte superior se ilustra la distribución fenotípica de una característica respecto a la media de la misma (es decir, con media de cero) y con desvío estándar de \(1\) unidad de la característica. Si decidimos hacer selección por truncamiento, eligiendo arbitrariamente un umbral \(\mathrm{u=0,6745}\) (el percentil \(75\) de la distribución normal estándar), los individuos que pasen ese valor serán consideramos como reproductores. En este caso, \(25\%\) de los individuos cumplen esa condición y la media de los individuos seleccionados es de \(\mathrm{\bar x_S=1,27}\), por lo que el diferencial de selección será \(\mathrm{S=\bar x_S-\bar x_0=1,27-0=1,27}\). En la parte inferior, la población (para la misma característica) tiene un desvío de \(2/3\), inferior al de la población en la parte superior; esto implica que ahora solo el \(16\%\) de los individuos serán seleccionados como reproductores. Además, el diferencial de selección será ahora de \(\mathrm{S=\bar x_S-\bar x_0=1,02-0=1,02}\), inferior al de la población de la gráfica superior, pese a que el valor de umbral es el mismo en ambos casos." width="672" />
-<p class="caption">
-Figure 11.5: La relación entre el diferencial de selección y la varianza fenotípica de la característica. En la parte superior se ilustra la distribución fenotípica de una característica respecto a la media de la misma (es decir, con media de cero) y con desvío estándar de <span class="math inline">\(1\)</span> unidad de la característica. Si decidimos hacer selección por truncamiento, eligiendo arbitrariamente un umbral <span class="math inline">\(\mathrm{u=0,6745}\)</span> (el percentil <span class="math inline">\(75\)</span> de la distribución normal estándar), los individuos que pasen ese valor serán consideramos como reproductores. En este caso, <span class="math inline">\(25\%\)</span> de los individuos cumplen esa condición y la media de los individuos seleccionados es de <span class="math inline">\(\mathrm{\bar x_S=1,27}\)</span>, por lo que el diferencial de selección será <span class="math inline">\(\mathrm{S=\bar x_S-\bar x_0=1,27-0=1,27}\)</span>. En la parte inferior, la población (para la misma característica) tiene un desvío de <span class="math inline">\(2/3\)</span>, inferior al de la población en la parte superior; esto implica que ahora solo el <span class="math inline">\(16\%\)</span> de los individuos serán seleccionados como reproductores. Además, el diferencial de selección será ahora de <span class="math inline">\(\mathrm{S=\bar x_S-\bar x_0=1,02-0=1,02}\)</span>, inferior al de la población de la gráfica superior, pese a que el valor de umbral es el mismo en ambos casos.
-</p>
-</div>
-<p><br />
-</p>
-<p>En conclusión, pese a que en ambos casos el valor de umbral de selección utilizado es el mismo, en el primer caso la varianza mayor hace que una proporción mayor de los individuos cumpla con el criterio de selección y además, en el caso de la distribución normal, que el diferencial de selección sea mayor.</p>
-<p><br />
-</p>
-<hr />
-<div id="ejemplo-11.4" class="section level4 unnumbered">
-<h4>Ejemplo 11.4</h4>
-<p><br />
-</p>
-<hr />
-<div class="graybox">
-<div class="center">
-<p><strong>PARA RECORDAR</strong></p>
-</div>
-</div>
-<hr />
-</div>
-</div>
-<div id="diferencial-de-selección-e-intensidad-de-selección" class="section level2" number="11.3">
-<h2><span class="header-section-number">11.3</span> Diferencial de selección e intensidad de selección</h2>
-<p>Como vimos más arriba (figura <a href="selartifI.html#fig:difselevar">11.5</a>), el diferencial de selección para un determinado umbral de selección es una función de la varianza de la característica. Esto nos deja con una medida de la <strong>presión de selección</strong> que es dependiente de los parámetros de la distribución fenotípica de la población de interés. Es decir, el significado de un determinado umbral de selección es completamente dependiente de la distribución fenotípica de la característica en la población en la que se piensa aplicar.</p>
-<p>Por otra parte, cuando queremos comparar la presión de selección en dos característica diferentes, el diferencial de selección deja de tener sentido: ¿cómo podría comparar la presión de selección en peso sucio de vellón (PVS, en <span class="math inline">\(kg\)</span>) con la presión de selección en diámetro de fibras (DF, <span class="math inline">\(\mu m\)</span>)? ¿Es acaso más importante un esfuerzo de 100 gramos en PVS que <span class="math inline">\(2 \mu m\)</span> en DF? Claramente, resulta imposible de comparar cuando ambas características tienen distintas unidades. Aún teniendo las mismas unidades, si se trata de características distintas es esperable que las distribuciones sean diferentes y por lo tanto el diferencial de selección sea incomparable en términos del esfuerzo de selección o presión de selección que implican.</p>
-<p>Todo lo anterior sugiere que para poder comparar la presión de selección de una manera razonable es necesario estandarizar de alguna forma el diferencial de selección. Como vimos antes, una de las dificultades para comparar esta presión usando el diferencial de selección era la dependencia de de este último en la varianza de la característica: a un determinado valor del diferencial de selección, cuanto menor era la varianza de la característica mayor era el esfuerzo que implicaba ya que debía quedarme con menos individuos como reproductores (pese a que el diferencial de selección podía ser menor en valor absoluto). Esto nos sugiere que a una presión de selección determinada hay una relación inversa entre el diferencial de selección y la dispersión de la distribución. Por otro lado, el desvío estándar de una característica posee las mismas unidades que la característica. Por lo tanto, dividiendo el diferencial de selección entre el desvío estándar fenotípico de la misma estamos corrigiendo los dos problemas en forma simultánea, es decir</p>
-<p><span class="math display" id="eq:intsel1">\[\begin{equation}
-\mathrm{i=\frac{S}{\sigma_P}}
-\tag{11.10}
-\end{equation}\]</span></p>
-<p><br />
-</p>
-<hr />
-<p>La <strong>intensidad de selección</strong> es una medida de la presión de selección que es independiente de las unidades de la característica y que <strong>es igual al diferencial de selección estandarizado</strong>, es decir, el diferencial de selección divido entre el desvío estándar fenotípico de la característica.</p>
-<hr />
-<p><br />
-</p>
-<p>Claramente, tanto el diferencial de selección como el desvío estándar fenotípico tienen las unidades de la características, por lo que al dividir ambas cantidades el resultado es adimensional (es decir, no tiene unidades). Por otra parte, cuanto mayor la varianza de una característica, mayor es su desvío estándar (que es la raíz cuadrada de la varianza) y dado un valor fijo de umbral una mayor parte de la población superará ese umbral (aumentando el diferencial de selección). Sin embargo, ese efecto se ve contrarrestado en la <strong>intensidad de selección</strong> ya que el diferencial de selección se divide entre el desvío estándar fenotípico, lo que compensa exactamente el incremento del diferencial de selección.</p>
-<p>Normalmente, en especies de mamíferos domésticos de interés productivo (bovinos, ovinos, equinos, caprinos, porcinos, etc.) es posible mantener una presión de selección mucho más alta en machos que en hembras. Esto se debe a que las hembras deben hacerse cargo de la preñez, quedando “bloqueadas” durante todo ese período a los fines de nuevos eventos reproductivos. Es decir, una vez preñada la hembra deberá continuar con la gestación hasta que nazcan las crías y recién a partir de ese momento (en general algo después) estará disponible para volver a ser gestante. En cambio, para los machos la preñez de la hembra no significa ninguna restricción a su capacidad de fecundar los gametos de otras hembras. Claramente, el factor limitante de la parte reproductiva de la mayor parte de los sistemas de producción animal es la capacidad de alojar a las hembras gestantes, ya que los machos, luego de la fecundación, dejan de tener importancia para el nacimiento de las crías. Estas diferencias nos llevan a que un macho pueda aparearse con muchas hembras y por lo tanto necesitaremos muchos menos machos que hembras.</p>
-<p>En términos de la proporción de animales seleccionados, lo anterior puede expresarse de la siguiente manera. Usualmente, la proporción de hembras que debo retener es la relación entre el número de hembras que tengo en la categoría de entrada a la población (rodeo, majada, piara, etc.) y el número de las mismas que generé como reemplazos. El número de hembras que tengo en la categoría de entrada es función de la estructura de edades de la población y de la capacidad de animales que tiene el establecimiento, mientras que el número de reemplazos generados es función del número de hembras reproductivas en la población y de la eficiencia reproductiva de las mismas. Por otro lado, la proporción de machos retenidos como reproductores (en el caso de que los mismos salgan del establecimiento) suele obtenerse sobre un base mucho más sencilla: el número de machos requeridos es una función del número de hembras que un solo macho puede fecundar por estación de cría, mientras que el número de reemplazos generados es (en general) el mismo que el de hembras generadas.</p>
-<p>Todo lo anterior nos lleva a la necesidad de poder manejar de forma integrada las diferencias en intensidad de selección que corresponde a machos y hembras. Como el aporte genético a la nueva generación vendrá la mitad por el lado de machos y la mitad por el lado de hembras, la intensidad de selección a nivel de la población será el promedio de la intensidad de selección en macho y en hembras.</p>
-<p><span class="math display" id="eq:intsel2">\[\begin{equation}
-\mathrm{i=\frac{i_M+i_H}{2}}
-\tag{11.11}
-\end{equation}\]</span></p>
-<p>En el caso de que en ambos sexos la varianza fuese diferente, la ecuación anterior implica</p>
-<p><span class="math display" id="eq:intsel3">\[\begin{equation}
-\mathrm{i=\frac{i_M+i_H}{2}=\frac{\frac{S_M}{\sigma_{P_M}}+\frac{S_H}{\sigma_{P_H}}}{2}=\frac{1}{2}\left[\frac{S_M}{\sigma_{P_M}}+\frac{S_H}{\sigma_{P_H}}\right]}
-\tag{11.12}
-\end{equation}\]</span></p>
-<p>es decir, cada diferencial de selección es dividido entre su correspondiente desvío estándar fenotípico y luego ambos promediados.</p>
-<p>Por otro parte, <strong>si la característica tiene el mismo desvío estándar en machos que en hembras</strong>, es decir <span class="math inline">\(\mathrm{\sigma_{P_M}=\sigma_{P_H}=\sigma_P}\)</span>, entonces sustituyendo la definición de la ecuación <a href="selartifI.html#eq:intsel1">(11.10)</a> en la ecuación <a href="selartifI.html#eq:intsel2">(11.11)</a> tenemos ahora</p>
-<p><span class="math display" id="eq:intsel4">\[\begin{equation}
-\mathrm{i=\frac{i_M+i_H}{2}=\frac{\frac{S_M}{\sigma_P}+\frac{S_H}{\sigma_P}}{2}=\frac{\frac{S_M+S_H}{\sigma_P}}{2}=\frac{S_M+S_H}{2\sigma_P}=\frac{\frac{S_M+S_H}{2}}{\sigma_P}=\frac{\bar S}{\sigma_P}}
-\tag{11.13}
-\end{equation}\]</span></p>
-<p><br />
-</p>
-<hr />
-<div id="ejemplo-11.5" class="section level4 unnumbered">
-<h4>Ejemplo 11.5</h4>
-<p><br />
-</p>
-<hr />
-<div class="graybox">
-<div class="center">
-<p><strong>PARA RECORDAR</strong></p>
-</div>
-</div>
-<hr />
-</div>
-</div>
-<div id="intensidad-de-selección-y-proporción-seleccionada" class="section level2" number="11.4">
-<h2><span class="header-section-number">11.4</span> Intensidad de selección y proporción seleccionada</h2>
-<p>La definición de intensidad de selección que hemos dado, es decir, el diferencial de selección estandarizado, nos deja con una medida de presión de selección que es sencilla de obtener si conocemos tanto el diferencial de selección como el desvío fenotípico de la característica. Sin embargo, en muchos casos no podemos darnos el lujo de determinar un valor dado de umbral para la característica ya que podría comprometer la sostenibilidad del sistema o implicar una presión de selección mucho menor que la posible y deseable. Por ejemplo, si fijamos un umbral tan alto que restrinja el número de hembras por debajo de las necesarias para generar reemplazos de la primera categoría en el rodeo, entoces comenzarermos un proceso de reducción en el tamaño del mismo, a menos que compensemos de otra forma. Esto nos lleva a la posibilidad de que el determinante para la presión de selección posible sea la proporción de individuos que debo quedarme como reproductores.</p>
-<p>En general, para distribuciones arbitrarias esto implicaría obtener la media de los individuos que quedan en la proporción seleccionada, lo que puede resultar algo complejo de derivar. Para distribuciones conocidas una alternativa adecuada a los tiempos es recurrir a algún software que permita hacer los cálculos basados en las distribuciones o aún realizar simulaciones (<span class="citation"><a href="#ref-R2021" role="doc-biblioref">R Core Team</a> (<a href="#ref-R2021" role="doc-biblioref">2021</a>)</span>) y obtener una buena estimación de esta media y del desvío estándar de la característica. Claramente, esto implica conocer la distribución, así como un estimado razonable de sus parámetros. Afortunadamente, la mayor parte de las características productivas siguen una distribución normal, con media <span class="math inline">\(\mu\)</span> y varianza <span class="math inline">\(\sigma_P^2\)</span>, es decir <span class="math inline">\(N(\mu,\sigma^2)\)</span>. El diferencial de selección es igual a la media de los seleccionados menos la media de la población, por lo que al restarle la media de la población a los todos los datos los mismos quedan centrados en cero (ya que si <span class="math inline">\(\mu=x_0\)</span>, entonces la nueva media al restarle <span class="math inline">\(x_0\)</span> será <span class="math inline">\(\mu=x_0-x_0=0\)</span>). Esta operación solo desplaza la distribución centrándola en <span class="math inline">\(\mu=0\)</span>, es decir, cada valor será un desvío de la media, pero no cambia su varianza. Sin embargo, en la definición de intensidad de selección que vimos, <span class="math inline">\(\mathrm{i=\frac{S}{\sigma_P}}\)</span>. Ahora, si a esta distribución centrada en cero la dividimos entre el desvío estándar fenotípico, es decir <span class="math inline">\(\sigma_P^2\)</span>, tenemos que los datos tienen ahora distribución <span class="math inline">\(N(0,1)\)</span>.</p>
-<p>Dicho de otra forma, haciendo las operaciones clásicas que haríamos para obtener la intensidad de selección a partir del diferencial de selección, lo que estamos haciendo es obtener el apartamiento para la media de los individuos seleccionados en una distribución normal estandarizada, es decir <span class="math inline">\(N(0,1)\)</span>. Esto que puede parecer trivial es de suma importancia ya que la distribución normal estandarizada nos permite obtener varios resultados importantes sin tener que hacer cuentas específicas para cada combinación de <span class="math inline">\(x_0\)</span> y <span class="math inline">\(\sigma_P^2\)</span>.</p>
-<p>Como muestra la figura <a href="selartifI.html#fig:izp">11.6</a>, <strong>en una distribución normal estandarizada la media de los individuos seleccionados es exactamente la intensidad de selección</strong>. Es decir, para estandarizar una distribución normal <span class="math inline">\(N(x_0, \sigma_P^2)\)</span> primero le restamos <span class="math inline">\(x_0\)</span> a todas las observaciones y luego dividimos esto entre el desvío estándar de la distribución (<span class="math inline">\(\sigma_P\)</span>). La primera operación deja la media de los individuos seleccionados exactamente igual al diferencial de selección ya que <span class="math inline">\(\mathrm{x_S-x_0=S}\)</span>, mientras que la segunda transforma el diferencial de selección en la intensidad de selección ya que <span class="math inline">\(\mathrm{\frac{S}{\sigma_P}=i}\)</span>. Ahora, basados en las propiedades de la distribución normal estándar, la media de la región seleccionada es igual a la altura del punto de truncamiento dividido entre el área bajo la curva a partir del límite de truncamiento y hasta <span class="math inline">\(+\infty\)</span>.</p>
-
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:izp"></span>
-<img src="figuras/izp.jpg" alt="La intensidad de selección en una distribución normal estandarizada. Al haber estandarizado la distribución fenotípica, es decir, restado a los valores la media original y luego dividido entre el desvío estándar, ahora la media de los individuos seleccionados será directamente \(\mathrm{i}\), ya que \(\mathrm{\frac{(\bar x_s - \bar x_0)}{\sigma_P}=\frac{S}{\sigma_P}=i}\). Esto nos permite explotar la relación existente en la distribución normal de la media de la región seleccionada como la relación entre la altura en el punto de truncamiento \(\mathrm{z}\) (que es la densidad de la normal \(N(0,1)\) en ese punto) y la proporción seleccionada \(\mathrm{p}\) (que es el área bajo la curva entre el punto de truncamiento y \(+\infty\)), es decir \(\mathrm{i=\frac{z}{p}}\)." width="1728" />
-<p class="caption">
-Figure 11.6: La intensidad de selección en una distribución normal estandarizada. Al haber estandarizado la distribución fenotípica, es decir, restado a los valores la media original y luego dividido entre el desvío estándar, ahora la media de los individuos seleccionados será directamente <span class="math inline">\(\mathrm{i}\)</span>, ya que <span class="math inline">\(\mathrm{\frac{(\bar x_s - \bar x_0)}{\sigma_P}=\frac{S}{\sigma_P}=i}\)</span>. Esto nos permite explotar la relación existente en la distribución normal de la media de la región seleccionada como la relación entre la altura en el punto de truncamiento <span class="math inline">\(\mathrm{z}\)</span> (que es la densidad de la normal <span class="math inline">\(N(0,1)\)</span> en ese punto) y la proporción seleccionada <span class="math inline">\(\mathrm{p}\)</span> (que es el área bajo la curva entre el punto de truncamiento y <span class="math inline">\(+\infty\)</span>), es decir <span class="math inline">\(\mathrm{i=\frac{z}{p}}\)</span>.
-</p>
-</div>
-<p><br />
-</p>
-<p>El resultado obtenido, <span class="math inline">\(\mathrm{i=z/p}\)</span>, es muy importante porque nos dice que a una proporción determinada de individuos seleccionados en una característica con distribución normal, cualquiera sea esta, le corresponde siempre la misma intensidad de selección. Además, como esta intensidad de selección es siempre la misma para una proporción dada es posible construir una tabla con los pares de valores a la precisión deseada. Más aún, es trivial calcular el valor exacto para cualquier proporción en la mayoría de las hojas de cálculo o en software estadístico como <span class="citation"><a href="#ref-R2021" role="doc-biblioref">R Core Team</a> (<a href="#ref-R2021" role="doc-biblioref">2021</a>)</span>.</p>
-<p>En la figura <a href="selartifI.html#fig:intprop">11.7</a> se muestra la curva de intensidad de selección en función de la proporción de individuos seleccionados. A la izquierda se grafica esta relación para todo el intervalo posible de proporciones (es decir entre cero y uno), expresado como porcentaje y en la misma se aprecia el carácter aproximadamente sigmoidal de la relación. Claramente, a medida de que nos vamos acercando hacia el cero la pendiente se hace más empinada. Por esta razón, a la izquierda se grafica solamente la región entre <span class="math inline">\(0\%\)</span> y <span class="math inline">\(10\%\)</span>, una zona que es usual en machos de mamíferos domésticos. Por ejemplo, si seleccionamos el <span class="math inline">\(2\%\)</span> de los machos como reproductores, tendremos entonces (de acuerdo a la gráfica) aproximadamente una intensidad de selección igual a <span class="math inline">\(2,4\)</span>; como referencia, el valor “exacto” usando la expresión “dnorm(qnorm(0.98))/0.02” en <span class="citation"><a href="#ref-R2021" role="doc-biblioref">R Core Team</a> (<a href="#ref-R2021" role="doc-biblioref">2021</a>)</span> es de <span class="math inline">\(2,420907\)</span>.</p>
-<p><br />
-</p>
-
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:intprop"></span>
-<img src="ApuntesGeneticaII_files/figure-html/intprop-1.png" alt="Intensidad de selección en función de la proporción de individuos seleccionados como reproductores en una característica con distribución normal. Mientras que la gráfica de la derecha representa todo el intervalo posible de selección, la de la derecha representa la región de más intensidad de selección, típica de machos en la mayor parte de las especies de mamíferos domésticos." width="672" />
-<p class="caption">
-Figure 11.7: Intensidad de selección en función de la proporción de individuos seleccionados como reproductores en una característica con distribución normal. Mientras que la gráfica de la derecha representa todo el intervalo posible de selección, la de la derecha representa la región de más intensidad de selección, típica de machos en la mayor parte de las especies de mamíferos domésticos.
-</p>
-</div>
-<p>Un tema relativamente menor en la práctica, pero relevante en algunos casos es el del tamaño poblacional y su efecto en el cálculo de la intensidad de selección. La obtención de la intensidad de selección a partir de las propiedades de la distribución normal asume precisamente eso, una distribución normal de la característica. En particular, con muy pocos individuos, el efecto de seleccionar una determinada proporción nunca será continuo, como sí lo asume la distribución normal. Por ejemplo, si de 10 individuos voy a seleccionar solo 1, la proporción de elegidos es <span class="math inline">\(p=1/10=0,1\)</span>. Por otro lado, si tengo que elegir 100 individuos de una población que tiene 1.000 individuos, también la proporción será de <span class="math inline">\(p=100/1.000=0,100\)</span>. Sin embargo, mientras que la “resolución” de este último caso es de <span class="math inline">\(1/1000\)</span> (si hubiese tenido que elegir 1 individuo más la proporción sería de <span class="math inline">\(p=101/1.000=0,101\)</span>), en el primer caso la “resolución” es de <span class="math inline">\(1/10\)</span> (si hubiese elegido un individuo más sería <span class="math inline">\(p=2/10=0,2\)</span>). Claramente, el <strong>tamaño de los pasos</strong> en la discontinuidad es de <span class="math inline">\(1/n\)</span>. Para corregir este efecto, <span class="citation"><a href="#ref-Bulmer1980" role="doc-biblioref">Bulmer</a> (<a href="#ref-Bulmer1980" role="doc-biblioref">1980</a>)</span> propone una “corrección” de la proporción a utilizar en la distribución normal (que llamaremos <span class="math inline">\(\mathrm{p^*}\)</span>) y que para seleccionar <span class="math inline">\(k\)</span> individuos entre <span class="math inline">\(n\)</span> individuos disponibles es igual a</p>
-<p><span class="math display" id="eq:iprop10">\[\begin{equation}
-\mathrm{p^* = \frac{\left(k+\frac{1}{2}\right)}{\left(n+\frac{k}{2n}\right)}}
-\tag{11.14}
-\end{equation}\]</span></p>
-<p>En la figura <a href="selartifI.html#fig:paster">11.8</a> se puede apreciar el efecto del número total de individuos de la población en la corrección necesaria para la proporción de individuos seleccionados. Cada una de las curvas de colores representa una proporción diferente de individuos seleccionados, desde <span class="math inline">\(10\%\)</span> (curva en rojo) hasta <span class="math inline">\(20\%\)</span> (curva en azul). Mientras que a partir de los 100 individuos las diferencias entre la proporción realmente seleccionada (<span class="math inline">\(\mathrm{p}\)</span>) y el equivalente efectivo de proporción (<span class="math inline">\(\mathrm{p^*}\)</span>) a considerar para calcular la intensidad de selección es insignificante, a valores bajos del número de individuos (<span class="math inline">\(\mathrm{n}\)</span>) puede ser bastante importante. Por ejemplo, para <span class="math inline">\(\mathrm{k=1}\)</span> y <span class="math inline">\(\mathrm{n=10}\)</span>, mientras que <span class="math inline">\(\mathrm{p=0,10}\)</span>, <span class="math inline">\(\mathrm{p^* \approx 0.1492}\)</span>. Sin embargo, para la misma proporción en <span class="math inline">\(\mathrm{n=100}\)</span> individuos (por lo tanto <span class="math inline">\(\mathrm{k=10}\)</span>), tenemos que <span class="math inline">\(\mathrm{p^* \approx 0.1049}\)</span>. El comportamiento asintótico se puede apreciar claramente en la figura ya que a medida de que aumenta el <span class="math inline">\(\mathrm{n}\)</span> las curvas de colores tienden a las líneas punteadas que les “corresponden,” es decir <span class="math inline">\(\mathrm{\lim_{n \to \infty}p^*=p}\)</span>.</p>
-<p><br />
-</p>
-
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paster"></span>
-<img src="ApuntesGeneticaII_files/figure-html/paster-1.png" alt="Ajuste de la proporción de individuos seleccionados para un número bajo de individuos. De abajo hacia arriba, las curvas representan proporciones reales de \(0,100\), \(0,125\), \(0,150\), \(0,175\) y \(0,200\), como lo indican las líneas a trazos correspondientes. A medida de que el número total de individuos crece la diferencia entre la proporción real \(p\) (línea a trazos) y la proporción ajustada \(p^*\) (curvas de color) tiende a cero." width="672" />
-<p class="caption">
-Figure 11.8: Ajuste de la proporción de individuos seleccionados para un número bajo de individuos. De abajo hacia arriba, las curvas representan proporciones reales de <span class="math inline">\(0,100\)</span>, <span class="math inline">\(0,125\)</span>, <span class="math inline">\(0,150\)</span>, <span class="math inline">\(0,175\)</span> y <span class="math inline">\(0,200\)</span>, como lo indican las líneas a trazos correspondientes. A medida de que el número total de individuos crece la diferencia entre la proporción real <span class="math inline">\(p\)</span> (línea a trazos) y la proporción ajustada <span class="math inline">\(p^*\)</span> (curvas de color) tiende a cero.
-</p>
-</div>
-<p><br />
-</p>
-<p>Hasta ahora hemos solo considerado el caso de la selección contra determinados individuos (aquellos que quedan por debajo del umbral), pero no necesariamente este tipo de selección es óptimo a largo plazo. Si la presión de selección es muy alta, en la medida de que elegimos los “mejores individuos” basados en nuestra característica de interés, estamos reduciendo en forma sustancial la variabilidad genética disponible, lo que puede atentar contra el futuro genético a mediano o largo plazo. Una alternativa más general es utilizar una función continua (por ejemplo) de nuestra característica de interés para determinar la probabilidad de que el individuo quede entre los reproductores. Esto es lo mismo que establecer el <strong>fitness del individuo</strong> como <strong>función de la característica</strong>. Con esto en mente, ahora existe una probabilidad de permanecer como reproductor para cada valor fenotípico estandarizado y que será el “peso” que tendrá cada fenotipo en el cálculo de <span class="math inline">\(\mathrm{i}\)</span>. Es decir, la intensidad de selección será la media ponderada (por la función <strong>fitness</strong>) de los fenotipos estandarizados.</p>
-<div id="de-dónde-sale-la-relación-ifraczp" class="section level3 unnumbered">
-<h3>¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</h3>
-<p>Una de las relaciones más usadas para conocer la intensidad de selección
-en mejoramiento genético animal es la que establece <span class="math inline">\(i=\frac{z}{p}\)</span>, es
-decir, en selección por truncamiento, la intensidad es la relación de la
-ordenada de una distribución <span class="math inline">\(\sim N(0,1)\)</span> en el punto de truncamiento,
-dividido la proporción de animales seleccionados. ¿Pero de dónde sale
-esta relación?<br />
-Para entenderla, recordemos que la intensidad de selección era igual al
-diferencial de selección dividido entre el desvío estándar fenotípico,
-lo que nos referirá a una distribución <span class="math inline">\(\sim N(0,1)\)</span> y por lo tanto la
-intensidad de selección será la media de la fracción seleccionada a
-partir del punto de truncamiento. En el caso de la distribución normal, la
-Función de Densidad Acumulada es</p>
-<p><span class="math display">\[\begin{equation}
-\Phi_{\mu,\sigma^2}(x)=  \frac{1}{\sigma \sqrt{2 \pi}} \int^x_{-\infty} e^{- \frac{(u-\mu)^2}{2 \sigma^2}} du 
-= 1- \frac{1}{\sigma \sqrt{2 \pi}} \int^{X_u}_{-\infty} e^{- \frac{(u-\mu)^2}{2 \sigma^2}} du
-\end{equation}\]</span></p>
-<p>por lo que la propoción <span class="math inline">\(p\)</span> de individuos seleccionados a partir de un
-valor <span class="math inline">\(X_u\)</span> en una <span class="math inline">\(\sim N(0,1)\)</span> será</p>
-<p><span class="math display">\[\begin{equation}
-p =  \frac{1}{\sqrt{2 \pi}} \int^{\infty }_{X_u} e^{- \frac{u^2}{2}} du  = 1- \frac{1}{\sqrt{2 \pi}} \int^{X_u}_{-\infty} e^{- \frac{u^2}{2}} du = 1 - \Phi_{0,1}(X_u)
-\end{equation}\]</span></p>
-<p>Pero la media es la integral en el intervalo de interés del producto de
-<span class="math inline">\(x\)</span> por la densidad, que ahora será la densidad original de la normal,
-pero dividida por la integral de la misma en el intervalo (la proporción
-de individuos con los que nos quedamos), para que integre a 1.
-Calculemos la primitiva del numerador</p>
-<p><span class="math display">\[\begin{equation}
-\frac{1}{\sqrt{2 \pi}} \int x e^{- \frac{x^2}{2}} dx.
-\text{ Ahora, si}\ u=-\frac{x^2}{2} \Rightarrow \frac{du}{dx}=-x \therefore dx= - \frac{1}{x} du\\
-\frac{1}{\sqrt{2 \pi}} \int x e^{- \frac{x^2}{2}} dx = - \frac{1}{\sqrt{2 \pi}} \int x e^{u} \frac{du}{x} = - \frac{1}{\sqrt{2 \pi}} \int e^{u} du = \\
-=  - \frac{e^u}{\sqrt{2 \pi}} = - \frac{e^{\frac{x^2}{2}}}{\sqrt{2 \pi}}
-\end{equation}\]</span></p>
-<p>Ahora, de acuerdo a la definición que dimos recién, si dividimos este
-último resultado (evaluado en el intervalo de interés) entre la
-proporción de individuos, obtenemos</p>
-<p><span class="math display">\[\begin{equation}
-i= \frac{\frac{1}{\sqrt{2 \pi}} \int^{\infty }_{X_u} u e^{- \frac{u^2}{2}} du}{\frac{1}{\sqrt{2 \pi}} \int^{\infty }_{X_u} e^{- \frac{u^2}{2}} du} = \frac{-\dfrac{\mathrm{e}^{-\frac{u^2}{2}}}{\sqrt{2\pi}} \Big|_{u=X_u}^{\infty}}{\dfrac{\operatorname{erf}\left(\frac{u}{\sqrt{2}}\right)}{2} \Big|_{u=X_u}^{\infty}} = \frac{\dfrac{\mathrm{e}^{-\frac{X_u^2}{2}}}{\sqrt{2\pi}}}{\dfrac{\operatorname{erf}\left(\frac{u}{\sqrt{2}}\right)}{2} \Big|_{u=X_u}^{\infty}}  = \frac{z}{p}
-\end{equation}\]</span></p>
-<p>En las ecuaciones anteriores <span class="math inline">\(erf(z)=\frac{2}{\sqrt{\pi}}\int_0^z e^{-t^{2}} dt\)</span> es la <strong>función de error</strong> (o <strong>función de error de Gauss</strong>).</p>
-<p>Resumiendo, la intensidad de selección es la ordenada de la función de densidad
-<span class="math inline">\(\sim N(0,1)\)</span> en el punto de truncamiento, dividida entre la proporción de
-la distribución que es mayor a ese punto de truncamiento (la proporción de individuos
-seleccionados).</p>
-<p><br />
-</p>
-</div>
-<div id="la-relación-entre-diferentes-formas-de-calcular-la-intensidad-de-selección" class="section level3 unnumbered">
-<h3>La relación entre diferentes formas de calcular la intensidad de selección</h3>
-<p>Vimos más arriba dos formas diferentes de calcular la intensidad de
-selección, <span class="math inline">\(i=\frac{S}{\sigma_P}\)</span> y <span class="math inline">\(i=\frac{z}{p}\)</span>. La pregunta que nos
-hacemos entonces es si estas definiciones son exactamente equivalentes.
-Recordemos que desde el punto de vista conceptual, la intensidad de
-selección es la media de los individuos seleccionados, pero expresada en
-relación al desvío estándar, o sea, independiente de las unidades con
-que se mide la característica. Ahora, la primera de las dos ecuaciones
-claramente se ajusta a esta definición en palabras, que no asume ninguna
-forma de la distribución de valores de la característica, al menos en
-forma explícita. En cambio, la segunda ecuación invoca explícitamente
-una distribución <span class="math inline">\(\sim N(0,1)\)</span>.</p>
-<p>La definición de intensidad de selección como el diferencial de selección estandarizado es simple y precisa, pero requiere del conocimiento del diferencial de selección, lo que requiere usualmente del conocimiento de las medias de la población y de los individuos seleccionados, además del desvío estándar fenotípico de la característica en la población. En cambio, la definición de la intensidad de selección como la relación <span class="math inline">\(i=z/p\)</span> es apenas una definición operacional que se cumple bajo el supuesto de normalidad. Por el contrario, lo único que es necesario conocer es la proporción de animales que se seleccionarán, lo que usualmente resulta trivial de calcular para estructuras poblacionales típicas de la producción animal. En resumen, el uso de una u otra dependerá de la información disponible y de que se cumpla o no el supuesto de normalidad para la característica de interés.</p>
-<p><br />
-</p>
-<hr />
-<div id="ejemplo-11.6" class="section level4 unnumbered">
-<h4>Ejemplo 11.6</h4>
-<p><br />
-</p>
-<hr />
-<div class="graybox">
-<div class="center">
-<p><strong>PARA RECORDAR</strong></p>
-</div>
-</div>
-<hr />
-</div>
-</div>
-</div>
-<div id="intervalo-generacional" class="section level2" number="11.5">
-<h2><span class="header-section-number">11.5</span> Intervalo generacional</h2>
-<p>En general, el progreso genético medido en términos de generaciones nos permite desarrollar los conceptos principales sobre los mecanismos y procesos que intervienen en el mejoramiento genético o en el estudio de las variaciones en las frecuencias génicas. Sin embargo, su utilidad resulta reducida cuando tenemos que pensar su significado en los términos a los que estamos acostumbrados a referenciarnos los seres humanos. Por ejemplo, un productor rural debe pagar los impuestos todos los años, un productor ganadero debe entorar todos los años y un productor lechero idealmente debe elegir dosis de semen cada año para las vacas en producción. Es decir, solemos manejarnos con nuestro marco de referencia temporal a la hora de decidir y eso requiere que podamos expresar el progreso genético en dicho marco. Más aún, como veremos más adelante, diferentes estrategias de selección suelen implicar diferentes intervalos de tiempo para observar el progreso genético, por lo que debemos poder “ajustar” nuestros resultados para tener en consideración estos efectos.</p>
-<p>El ciclo de vida de diferentes organismos implica que cuando una generación alcanza la madurez para reproducirse, la anterior ya desapareció o al menos no se encuentra más en su fase reproductiva. Ejemplo de esto serían las plantas anuales, especies de peces anuales y varios otros organismos. En estos casos, pasar del progreso generacional al anual es muy sencillo: alcanza con dividir el progreso genético generacional (es decir, expresado en las unidades de la característica que avanzamos <strong>por generación</strong>) entre el intervalo (en años) entre dos generaciones (años/generación), es decir</p>
-<p><span class="math display" id="eq:ig1">\[\begin{equation}
-\mathrm{R_a=\frac{R}{IG}}
-\tag{11.15}
-\end{equation}\]</span></p>
-<p>Las unidades de <span class="math inline">\(\mathrm{R_a}\)</span> serán entonces las de la característica pero <strong>por año</strong> (o sea, divididas entre año). En el caso de plantas anuales, el intervalo de tiempo entre generaciones será igual a 1 año, por lo que los valores de <span class="math inline">\(\mathrm{R_a}\)</span> y <span class="math inline">\(\mathrm{R}\)</span> serán iguales, aunque expresados en distintas unidades. En animales, un ejemplo de especies anuales son las Cynolebias, peces que pertenecen a la familia Rivulidae y al orden Ciprinodontiformes. Estos peces habitan en charcos o bañados y su distribución incluye Argentina, Brasil, Paraguay y Uruguay. El ciclo de vida de estos organismos comienza como huevos que son puestos por la generación parental en primavera, los que son enterrados en el fondo barrosos. Al llegar el verano el calor hace que los charcos se sequen y los adultos mueran, mientras que los huevos continúan incubándose en el suelo. Con las primeras lluvias de Abril y Mayo los peces nacen y se desarrollan rápidamente hasta la primavera, donde ya maduros sexualmente comenzarán una nueva puesta.</p>
-<p>Hasta acá resulta inmediata la relación entre progreso genético generacional y progreso genético anual ya el intervalo generacional es trivial de calcular, por lo que también la aplicación de la ecuación <a href="selartifI.html#eq:ig1">(11.15)</a> es trivial. Sin embargo, en poblaciones en las que las generaciones se superponen resulta mucho menos intuitivo cuál es el intervalo generacional ya que en cada momento del tiempo hay individuos de diferentes generaciones reproduciéndose. Esto nos lleva a la necesidad de tener una definición operativa del intervalo generacional.</p>
-<p><br />
-</p>
-<hr />
-<p><strong>Llamamos intervalo generacional a la edad promedio de los padres cuando nacen sus hijos</strong>. Acá es importante tener en cuenta que promedio se refiere tanto al promedio entre los dos sexos, como al promedio dentro de cada progenitor (ya que cada progenitor puede tener más de un hijo en distintos momentos).</p>
-<hr />
-<p><br />
-</p>
-<p>Esto nos deja con una definición muy clara pero que en general no será trivial de calcular, excepto en situaciones bastante estilizadas o simplificadas. Lo primero que se deriva de nuestra definición es que el intervalo generacional será el promedio de los intervalos generacionales de ambos sexos, es decir</p>
-<p><span class="math display" id="eq:ig2">\[\begin{equation}
-\mathrm{IG=\frac{IG_{m}+IG_{h}}{2}=\frac{IG_{m}}{2}+\frac{IG_{h}}{2}}
-\tag{11.16}
-\end{equation}\]</span></p>
-<p>Si bien el número de machos no es, por lo general, igual al de hembras, los aportes genéticos de ambos sexos son similares (desde el punto de vista del genoma nuclear) ya que los hijos reciben la mitad de sus genomas de cada progenitor. Por otra parte, el promedio de la edades a las que nacen los hijos deberá tener en cuenta el aporte relativo en cada categoría de edad. Por ejemplo, en seres humanos, es posible encontrar madres que tuvieron descendencia a los 55 años de edad, pero claramente son casos bastante excepecionales y este aporte es proporcionalmente mucho menor que el de las madres de 25 años de edad. Por lo tanto, para cada sexo, si <span class="math inline">\(j\)</span> representa una edad determinada, la edad promedio será</p>
-<p><span class="math display" id="eq:ig3">\[\begin{equation}
-\mathrm{IG_m=\frac{1}{n_m}\sum_j n_{j_{m}}\cdot j} \\
-\mathrm{IG_h=\frac{1}{n_h}\sum_j n_{j_{h}}\cdot j}
-\tag{11.17}
-\end{equation}\]</span></p>
-<p>con</p>
-<p><span class="math display" id="eq:ig4">\[\begin{equation}
-\mathrm{\sum_j n_{j_{m}}=n_m} \\
-\mathrm{\sum_j n_{j_{h}}=n_h}
-\tag{11.18}
-\end{equation}\]</span></p>
-<p>el número total de machos y hembras, respectivamente. Es decir, el intervalo generacional será el promedio de edades de los padres al nacer los hijos, ponderado el promedio por la proporción de hijos en cada una de las edades.</p>
-<p><br />
-</p>
-<hr />
-<div id="ejemplo-11.7" class="section level4 unnumbered">
-<h4>Ejemplo 11.7</h4>
+<div id="ejercicio-11.1" class="section level4 unnumbered">
+<h4>Ejercicio 11.1</h4>
 <p>Un rodeo vacuno que produce sus propios reemplazos posee las siguientes cantidades de machos y hembras en las distintas categorías de edades (en años, al nacimiento de los hijos)</p>
 <p><br />
 </p>
@@ -935,9 +239,8 @@ una distribución <span class="math inline">\(\sim N(0,1)\)</span>.</p>
 <p><br />
 </p>
 <p>Calcular el intervalo generacional de machos, el de hembras y el intervalo generacional promedio.</p>
-<p><br />
-</p>
-<p>En machos hay solo 3 categorías de edad, por lo que el intervalo generacional de machos sería, aplicando las ecuaciones <a href="selartifI.html#eq:ig3">(11.17)</a> y <a href="selartifI.html#eq:ig4">(11.18)</a>, tenemos que</p>
+<p><strong><em>Solución</em></strong></p>
+<p>En machos hay solo 3 categorías de edad, por lo que el intervalo generacional de machos sería, aplicando las ecuaciones <a href="#eq:ig3">(<strong>??</strong>)</a> y <a href="#eq:ig4">(<strong>??</strong>)</a>, tenemos que</p>
 <p><span class="math display">\[\begin{equation}
 \mathrm{n_m=\sum_j n_{j_{m}}=15+10+5=30}\\
 \end{equation}\]</span></p>
@@ -953,460 +256,15 @@ una distribución <span class="math inline">\(\sim N(0,1)\)</span>.</p>
 <p><span class="math display">\[\begin{equation}
 \mathrm{IG_h=\frac{1}{n_h}\sum_j n_{j_{h}}\cdot j=\frac{3 \times 250+4 \times 220 + 5 \times 200+ 6 \times 170 + 7 \times 160}{1000}=\frac{4770}{1000}=4,77} \text{ años}
 \end{equation}\]</span></p>
-<p>Por lo tanto, ahora aplicando la ecuación <a href="selartifI.html#eq:ig2">(11.16)</a>, tenemos que el intervalo generacional del rodeo será igual a</p>
+<p>Por lo tanto, ahora aplicando la ecuación <a href="#eq:ig2">(<strong>??</strong>)</a>, tenemos que el intervalo generacional del rodeo será igual a</p>
 <p><span class="math display">\[\begin{equation}
 \mathrm{IG=\frac{IG_{m}+IG_{h}}{2}=\frac{3,6667+4,77}{2}=\frac{8,4367}{2} \sim 4,22} \text{ años}
 \end{equation}\]</span></p>
 <p><br />
 </p>
 <hr />
-<p><br />
-</p>
-<p>Es importante destacar que <strong>la estructura de edades</strong> en el rodeo, majada o población <strong>que nos importa es la de los individuos activos en términos reproductivos</strong> (y que sean exitosos, es decir que generan descendencia). En general, para que una estructura de edades sea estable en una población es necesario que se cumplan algunas cosas. Por ejemplo, si consideramos a todos los individuos de una <strong>población cerrada a los ingresos</strong>, cada categoría de edad debe tener el mismo número o menos de individuos que la edad que la antecede, ya que de lo contrario los individuos aparecerían mágicamente o no se trataría de una estructura de edades estabilizada. La estructura de edades de los individuos que se reproducen sí puede ser arbitraria, con más individuos reproductivos en edades más avanzadas, por ejemplo, si impedimos que los más jóvenes se reproduzcan o aún si los más jóvenes tienen menor éxito reproductivo que los mayores (y lo tenemos en cuenta en el modelo). Por lo general, para simplificar, usaremos ejemplos y ejercicios que muestran el número total de individuos en cada categoría de edad, asumiendo que <strong>refugamos</strong> a los individuos que no se reproducen o que directamente no están (por muerte, por ejemplo).</p>
-<p><br />
-</p>
-<div class="graybox">
-<div class="center">
-<p><strong>PARA RECORDAR</strong></p>
-</div>
-</div>
-</div>
-</div>
-<div id="medidas-de-la-respuesta" class="section level2" number="11.6">
-<h2><span class="header-section-number">11.6</span> Medidas de la respuesta</h2>
-<p>En este capítulo hemos manejado hasta ahora el progreso genético ocurrido en el transcurso de una generación y su relación con el diferencial de selección y la heredabilidad. Claramente, cuando presentamos la ecuación del criador como forma de estimar la <a href="pargen.html#heredabilidad-lograda">Heredabilidad lograda</a>, es decir <span class="math inline">\(\hat h^2=\frac{R}{S}\)</span>, necesitamos tener buenas medidas de la respuesta a la selección y de diferencial de selección.</p>
-<p>El diferencial de selección teórico es simplemente la diferencia entre la media de la población seleccionada y la media de la población de referencia, es decir <span class="math inline">\(S=\mu_S-\mu_0\)</span>, por lo que su medición no presenta, en principio mayores dificultades. Alcanza con medir los individuos en ambos grupos, la población seleccionada y la población en general (o al menos un estimado razonable de esta última) y calcular la diferencia. Sin embargo, ese diferencial de selección teórico funcionaba en nuestras derivaciones si asumíamos que todos los padres seleccionados dejaban el mismo número de descendientes. En los casos en los que existen diferencias notorias en la descendencia que dejaron los padres seleccionados es necesario obtener una mejor estimación del <strong>diferencial de selección efectivo</strong>, lo que puede obtenerse ponderando la medida fenotípica de cada progenitor por el número de descendientes que aportaron a la nueva generación. Esto tiene en cuenta no solo el efecto de la fertilidad de los reproductores sino la viabilidad de los descendientes. Por ejemplo, si existen diferencias en la fertilidad o viabilidad asociadas a fenotipos más extremos, pese a que nuestro esfuerzo en la <strong>selección artificial</strong> es hacia los mismos, el efecto de la <strong>selección natural</strong> contrarrestará, de alguna manera, este esfuerzo. Un ejemplo de esto podría ser en la producción lechera, donde los fenotipos más productores (extremos) suelen tener peores resultados reproductivos (vinculado esto a la partición energética de base genética).</p>
-<p>Por otra parte, como ya vimos en la sección dedicada a la <a href="pargen.html#heredabilidad-lograda">Heredabilidad lograda</a>, el resultado del progreso genético observado en cada generación sucesiva puede ser diferente de los otros, esencialmente debido a los efectos del azar en la respuesta, sumados a las variaciones aleatorias de los efectos del diferencial de selección efectivo (por diferencias en el número de progenies dejadas debido al azar). Esto nos lleva a la necesidad de buscar algo de estabilidad, lo que podemos hacer a partir del promedio de varias generaciones, o del ajuste de una regresión de la respuesta acumulada en el diferencial de selección acumulado (como vimos previamente). Sin embargo, en estas estimaciones estamos pasando por alto un factor que puede ser determinante: la evolución del “ambiente.” La mejora en la producción puede y suele venir de la genética, del “ambiente,” o de ambos (y de sus interacciones). Cuando miramos la respuesta a la selección como solo de origen genético nos estamos olvidando de la posible existencia de mejoras en las condiciones de producción (alimentación, alojamiento, salud, manejo, etc.), por lo que estaríamos sobrestimando la respuesta. Como <span class="math inline">\(\hat h^2=\frac{R}{S}\)</span>, una sobrestimación del numerador nos lleva a una sobrestimación de la heredabilidad también. Una alternativa para esto es el uso de datos en una población similar pero en la que no se realizó selección en el mismo período de tiempo. Eso nos permitiría tener un testigo y usar además esa información para descontarla del progreso obtenido en la población bajo selección.</p>
-<p><br />
-</p>
-</div>
-<div id="progreso-genético-generacional-y-anual" class="section level2" number="11.7">
-<h2><span class="header-section-number">11.7</span> Progreso genético generacional y anual</h2>
-<p>Como vimos previamente en la ecuación <a href="selartifI.html#eq:ig1">(11.15)</a>, el progreso genético anual es simplemente el resultado de dividir el progreso genético que se observa en una generación entre el intervalo de tiempo que le toma a una generación sustituir a la siguiente (en términos reproductivos), es decir, el <strong>intervalo generacional</strong>. En las ecuaciones <a href="selartifI.html#eq:ig3">(11.17)</a> y <a href="selartifI.html#eq:ig4">(11.18)</a> encontramos una forma de calcular el intervalo generacional cuando las generaciones se solapaban, mientras que previamente habíamos obtenido distintas formulaciones para el progreso genético generacional (por ejemplo, en la ecuación del criador <span class="math inline">\(\mathrm{R=S\ h^2}\)</span>, ecuación <a href="selartifI.html#eq:criador">(11.9)</a>).</p>
-<p>Por lo tanto, poniendo todo junto, tenemos una primera expresión algo más explícita del progreso genético anual</p>
-<p><span class="math display" id="eq:pga0">\[\begin{equation}
-\mathrm{R_a=\frac{R}{IG}=\frac{S\ h^2}{IG}}
-\tag{11.19}
-\end{equation}\]</span></p>
-<p>En ciertos casos, como vimos antes, es difícil obtener el diferencial de selección ya que implica conocer tanto la media de la población como la media de los individuos seleccionados. Sin embargo, para características fenotípicas con distribución normal, la intensidad de selección es mucho más fácil de obtener a partir de la proporción de individuos seleccionados. Recordando además que la relación entre diferencial de selección e intensidad de selección es <span class="math inline">\(i=\mathrm{\frac{S}{\sigma_P}}\therefore \mathrm{S=}i \cdot \mathrm{\sigma_P}\)</span>, sustituyendo en la ecuación <a href="selartifI.html#eq:pga0">(11.19)</a> tenemos ahora</p>
-<p><span class="math display" id="eq:pga1">\[\begin{equation}
-\mathrm{R_a=\frac{S\ h^2}{IG}=\frac{\mathit{i}\ \sigma_p\ h^2  }{IG}}
-\tag{11.20}
-\end{equation}\]</span></p>
-<p>Ahora, como la intensidad de selección de la población es igual al promedio de machos y hembras y el intervalo generacional de la población también es igual al promedio de dicho intervalo en machos y hembras, poniendo todo junto tenemos que la ecuación <a href="selartifI.html#eq:pga1">(11.20)</a> se transforma en</p>
-<p><span class="math display" id="eq:pga2">\[\begin{equation}
-\mathrm{R_a=\frac{\left(\frac{\mathit{i_m}+\mathit{i_h}}{2}\right)\ h^2\ \sigma_P}{\left[\frac{IG_m+IG_h}{2}\right]}}
-\tag{11.21}
-\end{equation}\]</span></p>
-<p>A su vez, <span class="math inline">\(\mathrm{h=\frac{\sigma_A}{\sigma_P}}\)</span>, entonces, sustituyendo en el numerador de la ecuación <a href="selartifI.html#eq:pga1">(11.20)</a> tenemos</p>
-<p><span class="math display" id="eq:pga3">\[\begin{equation}
-\mathrm{R=i\ h^2\ \sigma_P=i\ h\ h\ \sigma_P=i\ h\ \frac{\sigma_A}{\sigma_P} \sigma_P} \therefore \\
-\mathrm{R=i\ h\ \sigma_A}
-\tag{11.22}
-\end{equation}\]</span></p>
-<p>lo que nos deja con el siguiente equivalente de la ecuación <a href="selartifI.html#eq:pga2">(11.21)</a></p>
-<p><span class="math display" id="eq:pga4">\[\begin{equation}
-\mathrm{R_a=\frac{\left(\frac{\mathit{i_m}+\mathit{i_h}}{2}\right)\ h\ \sigma_A}{\left[\frac{IG_m+IG_h}{2}\right]}}
-\tag{11.23}
-\end{equation}\]</span></p>
-<p>Recordando que <span class="math inline">\(h\)</span> era la precisión en el caso de selección individual basada en el fenotipo y que también era la correlación entre el valor de cría y la fuente de información, <span class="math inline">\(\mathrm{r_{AC}}\)</span> (en este caso el fenotipo del individuo), entonces, podemos generalizar la ecuación <a href="selartifI.html#eq:pga3">(11.22)</a> a</p>
-<p><span class="math display" id="eq:pga5">\[\begin{equation}
-\mathrm{R=i\ r_{AC}\ \sigma_A}
-\tag{11.24}
-\end{equation}\]</span></p>
-<p>o llevar la ecuación <a href="selartifI.html#eq:pga4">(11.23)</a> a una de sus formas más explícitas que usaremos en este capítulo</p>
-<p><span class="math display" id="eq:pga6">\[\begin{equation}
-\mathrm{R_a=\frac{\left(\frac{\mathit{i_m}+\mathit{i_h}}{2}\right)\ r_{AC}\ \sigma_A}{\left[\frac{IG_m+IG_h}{2}\right]}}
-\tag{11.25}
-\end{equation}\]</span></p>
-<p><br />
-</p>
-<hr />
-<div id="ejemplo-11.8" class="section level4 unnumbered">
-<h4>Ejemplo 11.8</h4>
-<hr />
-<p><br />
-</p>
-<div class="graybox">
-<div class="center">
-<p><strong>PARA RECORDAR</strong></p>
-</div>
-</div>
-</div>
-</div>
-<div id="cambio-en-las-frecuencias-alélicas-bajo-selección-artificial" class="section level2" number="11.8">
-<h2><span class="header-section-number">11.8</span> Cambio en las frecuencias alélicas bajo selección artificial</h2>
-<p>Hasta ahora hemos visto el proceso de selección de diferentes maneras, pero sin conectarlas entre sí. Mientras que en el capítulo sobre <a href="seleccion.html#seleccion">Selección Natural</a> analizamos diferentes formas de selección y sus implicancias en el cambio de frecuencias alélicas, en este capítulo vimos el proceso de selección desde la perspectiva del cambio en la distribución de los valores fenotípicos resultantes. Es momento pués de combinar las dos aproximaciones para intentar entender los cambios en las frecuencias alélicas que ocurren como resultante del proceso de selección basado en la información fenotípica disponible.</p>
-<p>Abundemos un poco en lo anterior antes de avanzar en los cálculos. Mientras que en el capítulo sobre <a href="seleccion.html#seleccion">Selección Natural</a> trabajamos sobre el <strong>fitness</strong> específico de cada genotipo en un <em>locus</em> determinado, en combinación con las frecuencias respectivas, en el presente capítulo supusimos que la característica de interés puede estar gobernada por uno o más <em>loci</em> y que no contamos con la información correspondiente (ni siquiera asumimos saber cuántos <em>loci</em> gobiernan la característica). Este hecho nos llevó a tener que trabajar con la información que contamos, básicamente la distribución fenotípica de la característica y el conocimiento sobre los parámetros genéticos más relevantes, en particular las varianzas fenotípicas y aditivas o la heredabilidad. Mientras que el primer enfoque nos permite derivaciones más profundas sobre el cambio de las frecuencias alélicas, excepto a partir de información genómica y en situaciones muy particulares, su aplicación no resulta para nada práctica o realizable. En cambio, la segunda aproximación (condicional a que se cumplan los supuestos) es totalmente practicable y ha sido la base del mejoramiento genético animal durante mucho tiempo y en particular durantes la segunda mitad del siglo XX.</p>
-<p>Veamos entonces ahora como podemos conectar las dos aproximaciones. Para ello vamos a suponer al comienzo una situación muy estilizada, de una característica que es gobernada mayormente por un <em>locus</em> con dos alelos, donde además el modo de acción es de dominancia completa del alelos <span class="math inline">\(A_1\)</span>. La situación se ilustra en la figura <a href="selartifI.html#fig:cambfreqsel">11.9</a>. Como nos encontramos en una situación de dominancia total de uno de los dos alelos (el <span class="math inline">\(A_1\)</span>), entonces los genotipos <span class="math inline">\(A_1A_1\)</span> y <span class="math inline">\(A_1A_2\)</span> serán indistiguibles desde el punto de vista de los fenotipos para la característica, pero ambos serán diferentes del genotipo <span class="math inline">\(A_2A_2\)</span>. Por lo tanto, desde el punto de vista de los genotipos, nuestra población la podemos descomponer en dos distribuciones, las que poseen al menos un alelo <span class="math inline">\(A_1\)</span> (en rojo en la figura) y las que no tienen ningún alelo <span class="math inline">\(A_1\)</span>. De acuerdo al modelo genético básico, en la escala fenotípica (genotípica) transformada, los genotipos homocigotos <span class="math inline">\(A_1A_1\)</span> y <span class="math inline">\(A_2A_2\)</span> tenían valores respectivos de <span class="math inline">\(a\)</span> y <span class="math inline">\(-a\)</span>, por lo que la diferencia entre ellos es de <span class="math inline">\(a-(-a)=a+a=2a\)</span>. Obviamente, el genotipo <span class="math inline">\(A_1A_2\)</span> pertenece a la misma clase fenotípica que el <span class="math inline">\(A_1A_1\)</span>, por lo que compartirá distribución de valores con este. En nuestro caso, asumiremos adicionalmente que no existe interacción genotipo ambiente y que la varianza residual es igual en ambas clases fenotípicas (y centrada en cero), por lo que la amplitud de las distribuciones respecto a la media es similar para ambas clases, como se muestra en la figura <a href="selartifI.html#fig:cambfreqsel">11.9</a>.</p>
-<p><br />
-</p>
-
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cambfreqsel"></span>
-<img src="figuras/cambiofrec.jpg" alt="Cambio en las frecuencias alélicas como producto de la selección por umbral. En este caso asumimos que el alelo \(A_1\) es completamente dominante, por lo que existen solo dos fenotipos para este locus, lo que se ve enmascarado por los efectos ambientales y del resto de los loci dando la distribución continua para la característica. La diferencia entre las medias de los genotipos \(A_1A_1+A_1A_2\) y \(A_2A_2\) será igual a \(a-(-a)=2a\). En la figura se representa la situación en que \(q^2=\frac{1}{2}\)." width="1152" />
-<p class="caption">
-Figure 11.9: Cambio en las frecuencias alélicas como producto de la selección por umbral. En este caso asumimos que el alelo <span class="math inline">\(A_1\)</span> es completamente dominante, por lo que existen solo dos fenotipos para este <em>locus</em>, lo que se ve enmascarado por los efectos ambientales y del resto de los <em>loci</em> dando la distribución continua para la característica. La diferencia entre las medias de los genotipos <span class="math inline">\(A_1A_1+A_1A_2\)</span> y <span class="math inline">\(A_2A_2\)</span> será igual a <span class="math inline">\(a-(-a)=2a\)</span>. En la figura se representa la situación en que <span class="math inline">\(q^2=\frac{1}{2}\)</span>.
-</p>
-</div>
-<p><br />
-</p>
-<p>Claramente, si fijamos un umbral de selección (como hemos hecho en este capítulo), la proporción de individuos seleccionados de la distribución <span class="math inline">\(A_1A_1/A_1A_2\)</span> es mayor que la de los individuos <span class="math inline">\(A_2A_2\)</span>. Este es el caso particular en que <span class="math inline">\(q^2=\frac{1}{2}\)</span>, por lo que hay la misma proporción en las dos clases fenotípicas, pero lo mismo se aplicaría a cualquier frecuencia si consideramos la relación entre las frecuencias de las dos clases antes de la selección y en los individuos seleccionados. Eso es así debido a que la distribución de la clase <span class="math inline">\(A_2A_2\)</span> está más a la izquierda respecto al umbral y por lo tanto solo los valores más extremos respecto a la media de la clase alcanzan el umbral.</p>
-<p>En principio, no tenemos una forma de conocer la frecuencia del alelo <span class="math inline">\(A_2\)</span> entre los seleccionados, pero podemos recurrir al concepto de regresión que hemos utilizado antes para determinar esta frecuencia a partir de la diferencia de la media de los individuos seleccionados. Esta media era, por definición, el <strong>diferencial de selección</strong> <span class="math inline">\(S\)</span>, por lo que la nueva frecuencia del alelo <span class="math inline">\(A_2\)</span> será igual a</p>
-<p><span class="math display" id="eq:cambfr1">\[\begin{equation}
-q_1=q+b_{qP}S
-\tag{11.26}
-\end{equation}\]</span></p>
-<p>Es decir, la nueva frecuencia será igual a la frecuencia anterior <span class="math inline">\(q\)</span>, más la regresión de la frecuencia en el diferencial de selección. Para determinar el coeficiente de selección vamos a necesitar calcular la covarianza entre las frecuencias de los alelos (<span class="math inline">\(q\)</span>) en los genotipos y los valores fenotípicos. Para ello vamos a emplear la siguiente tabla</p>
-<p><br />
-</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Genotipo</th>
-<th align="left">frecuencia</th>
-<th align="left">alelo <span class="math inline">\(q\)</span></th>
-<th align="left"><span class="math inline">\(G=P\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><span class="math inline">\(A_1A_1\)</span></td>
-<td align="left"><span class="math inline">\(p^2\)</span></td>
-<td align="left"><span class="math inline">\(0\)</span></td>
-<td align="left"><span class="math inline">\(a\)</span></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(A_1A_2\)</span></td>
-<td align="left"><span class="math inline">\(2pq\)</span></td>
-<td align="left"><span class="math inline">\(\frac{1}{2}\)</span></td>
-<td align="left"><span class="math inline">\(d\)</span></td>
-</tr>
-<tr class="odd">
-<td align="left"><span class="math inline">\(A_2A_2\)</span></td>
-<td align="left"><span class="math inline">\(q^2\)</span></td>
-<td align="left"><span class="math inline">\(1\)</span></td>
-<td align="left"><span class="math inline">\(-a\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><br />
-</p>
-<p>En ella tenemos las frecuencias de cada genotipo (asumiendo equilibrio de Hardy-Weinberg), la frecuencia del alelo <span class="math inline">\(q\)</span> en cada genotipo (no hay ninguno en <span class="math inline">\(A_1A_1\)</span>, hay uno de dos en <span class="math inline">\(A_1A_2\)</span> y hay dos de dos en <span class="math inline">\(A_2A_2\)</span>), así como el valor genotípico (observar que los heterocigotas se especifican como <span class="math inline">\(d\)</span>, por lo que no estamos asumiendo ningún modo particular de relación entre alelos). La covarianza podemos calcularla como el producto cruzado de la proporción de alelos <span class="math inline">\(q\)</span> en cada genotipo con el valor genotípico, ponderado por la frecuencia de cada genotipo. En la definición que hemos usado de covarianza hacíamos este producto cruzado de los desvíos respecto a las medias respectivas, pero más práctico en este caso resulta hacer los productos de las columnas 2, 3 y 4 de la tabla y a eso restarle el producto de las medias de la frecuencia alélica por la media fenotípica (genotípica). Del capítulo <a href="modelogenbas.html#el-modelo-genético-básico">El Modelo Genético Básico</a>, recordarás que la media era <span class="math inline">\(M=a(p-q)+2pqd\)</span> (ecuación <a href="modelogenbas.html#eq:modgenbas8">(8.13)</a>). Por lo tanto, la covarianza será</p>
-<p><span class="math display" id="eq:cambfr1p1">\[\begin{equation}
-Cov_{qP}=[a \times 0 \times p^2+d \times \frac{1}{2} 2pq -a \times 1 \times q^2]-qM=pqd-q^2a-qM
-\tag{11.27}
-\end{equation}\]</span></p>
-<p>Sustituyendo el valor de <span class="math inline">\(M\)</span> en la ecuación anterior, recordando que <span class="math inline">\(1-2q=[p+q]-2q=p-q\)</span>, tenemos entonces que</p>
-<p><span class="math display" id="eq:cambfr1p2">\[\begin{equation}
-Cov_{qP}=pqd-q^2a-q[a(p-q)+2pqd]=pqd-q^2a-pqa+q^2a-2pq^2d=pq[a+d(1-2q)]=pq[a+d(q-p)] \therefore \\
-Cov_{qP}=-pq \alpha
-\tag{11.28}
-\end{equation}\]</span></p>
-<p>con <span class="math inline">\(\alpha=a+d(q-p)\)</span> el efecto de sustitución alélica (ecuación <a href="modelogenbas.html#eq:efemed4">(8.19)</a>). Por lo tanto, usando este resultado para la covarianza, con la varianza fenotípica igual <span class="math inline">\(\sigma_P^2\)</span>, el coeficiente de regresión será simplemente</p>
-<p><span class="math display" id="eq:cambfr2">\[\begin{equation}
-b_{qP}=-\frac{pq\alpha}{\sigma^2_P}
-\tag{11.29}
-\end{equation}\]</span></p>
-<p>Por otra parte, teniendo en cuenta que el diferencial de selección podemos escribirlo como el producto entre la intensidad de selección y el desvío estándar fenotípico, es decir <span class="math inline">\(S=i\sigma_P\)</span>, tenemos por lo tanto que la ecuación <a href="selartifI.html#eq:cambfr1">(11.26)</a> la podemos escribir ahora como</p>
-<p><span class="math display" id="eq:cambfr3">\[\begin{equation}
-q_1=q+b_{qP}i \sigma_P=q-\frac{pq\alpha}{\sigma^2_P}i \sigma_P
-\tag{11.30}
-\end{equation}\]</span></p>
-<p>y por lo tanto, el cambio de frecuencia <span class="math inline">\(\Delta q\)</span> esperable en una generación producto de la selección será igual a</p>
-<p><span class="math display" id="eq:cambfr4">\[\begin{equation}
-\Delta q=q_1-q=[q-\frac{pq\alpha}{\sigma^2_P}i \sigma_P]-q=-ipq\frac{\alpha}{\sigma_P}
-\tag{11.31}
-\end{equation}\]</span></p>
-<p>La interpretación de esta ecuación es bastante sencilla: el cambio en la frecuencia del alelo <span class="math inline">\(A_2\)</span> será negativo ya que estamos seleccionando en contra del mismo. La intensidad del cambio será directamente proporcional a la intensidad de selección <span class="math inline">\(i\)</span>, al producto de las frecuencias de los alelos (<span class="math inline">\(pq\)</span>) y al efecto de sustitución alélica estandarizado entre el desvío fenotípico de la característica.</p>
-<p><br />
-</p>
-<hr />
-<p>La pregunta que nos hacemos ahora es cómo se relaciona esto con los cambios de frecuencia esperados bajo selección que vimos en capítulos previos (en especial en el capítulo <a href="seleccion.html#seleccion">Selección Natural</a>). Para ello vamos a realizar una pequeña disgresión para recordar como derivábamos el cambio de frecuencia en una generación bajo selección.</p>
-<p>Por ejemplo, en el caso de que el modo de acción génica fuese de <strong>dominancia completa</strong>, con un coeficiente de selección <span class="math inline">\(s\)</span> contra el recesivo, teníamos la siguiente tabla</p>
-<p><br />
-</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Genotipos</th>
-<th align="left"><span class="math inline">\(A_1A_1\)</span></th>
-<th align="left"><span class="math inline">\(A_1A_2\)</span></th>
-<th align="left"><span class="math inline">\(A_2A_2\)</span></th>
-<th align="left"><strong>Total</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Frecuencia inicial</td>
-<td align="left"><span class="math inline">\(p^2\)</span></td>
-<td align="left"><span class="math inline">\(2pq\)</span></td>
-<td align="left"><span class="math inline">\(q^2\)</span></td>
-<td align="left"><span class="math inline">\(1\)</span></td>
-</tr>
-<tr class="even">
-<td align="left">Fitness</td>
-<td align="left"><span class="math inline">\(1\)</span></td>
-<td align="left"><span class="math inline">\(1\)</span></td>
-<td align="left"><span class="math inline">\(1-s\)</span></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Contribución</td>
-<td align="left"><span class="math inline">\(p^2\)</span></td>
-<td align="left"><span class="math inline">\(2pq\)</span></td>
-<td align="left"><span class="math inline">\(q^2(1-s)\)</span></td>
-<td align="left"><span class="math inline">\(1-sq^2\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><br />
-</p>
-<p>Por lo tanto, la frecuencia en la siguiente generación (es decir, después de la selección) sería</p>
-<p><span class="math display" id="eq:deltasel0">\[\begin{equation}
-q_1=\frac{q^2(1-s)+pq}{1-sq^2}
-\tag{11.32}
-\end{equation}\]</span></p>
-<p>y el cambio de frecuencia, por lo tanto</p>
-<p><span class="math display" id="eq:deltasel1">\[\begin{equation}
-\Delta q=q_1-q=\frac{q^2(1-s)+pq}{1-sq^2}-\frac{q(1-sq^2)}{1-sq^2}=\frac{q^2(1-s)+(1-q)q-q(1-sq^2)}{1-sq^2}=\\
-=\frac{q^2-sq^2+q-q^2-q+sq^3}{1-sq^2}=\frac{-sq^2+sq^3}{1-sq^2} \therefore \\
-\Delta q=-\frac{sq^2(1-q)}{1-sq^2}
-\tag{11.33}
-\end{equation}\]</span></p>
-<p>En el caso</p>
-<p><br />
-</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Genotipos</th>
-<th align="left"><span class="math inline">\(A_1A_1\)</span></th>
-<th align="left"><span class="math inline">\(A_1A_2\)</span></th>
-<th align="left"><span class="math inline">\(A_2A_2\)</span></th>
-<th align="left"><strong>Total</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Frecuencia inicial</td>
-<td align="left"><span class="math inline">\(p^2\)</span></td>
-<td align="left"><span class="math inline">\(2pq\)</span></td>
-<td align="left"><span class="math inline">\(q^2\)</span></td>
-<td align="left"><span class="math inline">\(1\)</span></td>
-</tr>
-<tr class="even">
-<td align="left">Fitness</td>
-<td align="left"><span class="math inline">\(1\)</span></td>
-<td align="left"><span class="math inline">\(1-\frac{1}{2}s\)</span></td>
-<td align="left"><span class="math inline">\(1-s\)</span></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Contribución</td>
-<td align="left"><span class="math inline">\(p^2\)</span></td>
-<td align="left"><span class="math inline">\(2pq-pqs\)</span></td>
-<td align="left"><span class="math inline">\(q^2(1-s)\)</span></td>
-<td align="left"><span class="math inline">\(1-sq\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><br />
-</p>
-<p>El nuevo total de frecuencias (para relativizar) el resultado de cada alelo será
-<span class="math display" id="eq:deltasel3">\[\begin{equation}
-p^2+2pq-pqs+q^2(1-s)=1-pqs-q^2s=1-s[pq+q^2]=1-s[q(p+1)]=1-sq
-\tag{11.34}
-\end{equation}\]</span></p>
-<p>La nueva frecuencia del alelo <span class="math inline">\(A_2\)</span>, <span class="math inline">\(q_1\)</span>, será por lo tanto</p>
-<p><span class="math display" id="eq:deltasel4">\[\begin{equation}
-q_1=\frac{pq-\frac{1}{2}pqs+q^2(1-s)}{1-sq}=\frac{q-q^2-\frac{1}{2}s[q-q^2]+q^2-q^2s)}{1-sq}=\\
-=\frac{q-\frac{1}{2}s[q-q^2]-q^2s)}{1-sq}=\frac{q[1-\frac{1}{2}s(1-q)-qs]}{1-sq}=\\
-=\frac{q[1-\frac{1}{2}s+\frac{1}{2}qs-qs]}{1-sq}=\frac{q[1-\frac{1}{2}s-\frac{1}{2}qs]}{1-sq}=\\
-=\frac{q[1-\frac{1}{2}s-\frac{1}{2}qs]}{1-sq}
-\tag{11.35}
-\end{equation}\]</span></p>
-<p>y entonces, el cambio de frecuencia correspondiente será igual a</p>
-<p><span class="math display" id="eq:deltasel5">\[\begin{equation}
-\Delta q=q_1-q=\frac{q[1-\frac{1}{2}s-\frac{1}{2}qs]}{1-sq}-q=\frac{q[1-\frac{1}{2}s-\frac{1}{2}qs]-q[1-sq]}{1-sq}=\\
-=\frac{q-\frac{1}{2}qs-\frac{1}{2}q^2s-q+sq^2}{1-sq}=\frac{-\frac{1}{2}qs+\frac{1}{2}q^2s}{1-sq}=-\frac{\frac{1}{2}sq(1-q)}{1-sq}
-\tag{11.36}
-\end{equation}\]</span></p>
-<p>En general, cuando las frecuencias del alelo recesivo son bajas, podemos considerar una buena aproximación el hecho de que el denominador será cercano a <span class="math inline">\(1\)</span> (en ambos casos, sin dominancia y sobre todo con dominancia completa), lo que nos deja solo con el numerador de las correspondientes fórmulas.</p>
-<hr />
-<p><br />
-</p>
-<p>La idea ahora es entonces igualar los resultados obtenidos para el cambio de frecuencia en los distintos modos génicos en una generación de selección con el resultado obtenido a partir del diferencial (intensidad) de selección.</p>
-<p>Cuando no hay dominancia, como vimos más arriba, el cambio de frecuencia en el alelo <span class="math inline">\(A_2\)</span>, asumiendo bajas frecuencias de este alelo, podemos aproximarlo a</p>
-<p><span class="math display" id="eq:aprox1">\[\begin{equation}
-\Delta q=-\frac{\frac{1}{2}sq(1-q)}{1-sq^2} \sim \frac{1}{2}sq(1-q)
-\tag{11.37}
-\end{equation}\]</span></p>
-<p>En este caso, por otra parte, <span class="math inline">\(d=0\)</span> y <span class="math inline">\(\alpha=a+d(q-p)=a\)</span>, por lo que sustituyendo ese valor de <span class="math inline">\(\alpha\)</span> en la ecuación <a href="selartifI.html#eq:cambfr4">(11.31)</a> e igualando al resultado de la ecuación <a href="selartifI.html#eq:aprox1">(11.37)</a>, tenemos</p>
-<p><span class="math display" id="eq:cambfr6">\[\begin{equation}
-ipq\frac{a}{\sigma_P} \sim \frac{1}{2}sq(1-q)
-\tag{11.38}
-\end{equation}\]</span></p>
-<p>Por otra parte, si la dominancia es completa, entonces <span class="math inline">\(d=a\)</span> y entonces <span class="math inline">\(\alpha=a+a(q-p)=a(p+q)+a(q-p)=2qa\)</span>, por lo que</p>
-<p><span class="math display" id="eq:cambfr5">\[\begin{equation}
-ipq\frac{2qa}{\sigma_P} \sim sq^2(1-q)
-\tag{11.39}
-\end{equation}\]</span></p>
-<p>En general, ambas ecuaciones, <a href="selartifI.html#eq:cambfr5">(11.39)</a> y <a href="selartifI.html#eq:cambfr6">(11.38)</a>, se reducen a</p>
-<p><span class="math display" id="eq:cambfr7">\[\begin{equation}
-s=i\frac{2a}{\sigma_P}
-\tag{11.40}
-\end{equation}\]</span></p>
-<p>Por ejemplo, la ecuación <a href="selartifI.html#eq:cambfr6">(11.38)</a>, asumiendo que la aproximación es exacta, se reduce mediante</p>
-<p><span class="math display">\[\begin{equation}
-ipq\frac{a}{\sigma_P} = \frac{1}{2}sq(1-q) \Leftrightarrow 2ipq \frac{a}{\sigma_P}=spq \\ \Leftrightarrow s=i \frac{2a}{\sigma_P}
-\end{equation}\]</span></p>
-<p>mientras que la ecuación <a href="selartifI.html#eq:cambfr5">(11.39)</a> se reduce mediante</p>
-<p><span class="math display">\[\begin{equation}
-ipq\frac{2qa}{\sigma_P} = sq^2(1-q) \Leftrightarrow ip\frac{2a}{\sigma_P} = s(1-q)  \Leftrightarrow \\
-i (1-q)\frac{2a}{\sigma_P} = s(1-q) \Leftrightarrow i \frac{2a}{\sigma_P} = s
-\end{equation}\]</span></p>
-<p>Es decir, la ecuación <a href="selartifI.html#eq:cambfr6">(11.38)</a> nos dice que hemos encontrado una relación directa entre las dos formas de expresar la selección que venimos trabajando. El coeficiente de selección que hemos usado para encontrar las frecuencias de los genotipos y el cambio de la frecuencia del alelo <span class="math inline">\(A_2\)</span> es igual a la intensidad de selección multiplicada por el factor <span class="math inline">\(\frac{2a}{\sigma_P}\)</span>, que no es otra cosa que la diferencia entre los genotipos (fenotipos) de los homocigotas, estandarizados entre el desvío estándar fenotípico de la característica.</p>
-<p>Una otra forma interesante de ver este resultado es haciendo uso de la relación <span class="math inline">\(i=\frac{S}{\sigma_P}\)</span> y de la ecuación del criador. A partir de la ecuación <a href="selartifI.html#eq:cambfr6">(11.38)</a>, utilizando la relación entre intensidad de selección y diferencial de selección podemos hacer</p>
-<p><span class="math display" id="eq:cambfr9">\[\begin{equation}
-s=i\frac{2a}{\sigma_P}=\frac{S}{\sigma_P}\frac{2a}{\sigma_P}=S\frac{2a}{\sigma_P^2} \Leftrightarrow S=s\frac{\sigma_P^2}{2a} 
-\tag{11.41}
-\end{equation}\]</span></p>
-<p>Sustituyendo este resultado en la ecuación del criador, tenemos</p>
-<p><span class="math display" id="eq:cambfr10">\[\begin{equation}
-R=h^2 S=h^2 s\frac{\sigma_P^2}{2a} = \frac{\sigma_A^2}{\sigma_P^2} s\frac{\sigma_P^2}{2a} \therefore \\
-R=\sigma^2_A \frac{s}{2a}
-\tag{11.42}
-\end{equation}\]</span></p>
-<p>El resultado de la ecuación <a href="selartifI.html#eq:cambfr10">(11.42)</a> tiene dos formas interesantes de verse. La primera tiene una relación directa con <a href="seleccion.html#el-teorema-fundamental-de-la-selección-natural">El teorema fundamental de la selección natural</a> que vimos en el capítulo de <a href="seleccion.html#seleccion">Selección Natural</a>. Si recuerdas, la idea del mismo era que existía una relación directa entre la tasa de cambio en la aptitud (<strong>fitness</strong>) debida a la selección natural en una característica y la varianza genética aditiva de la misma. La ecuación <a href="selartifI.html#eq:cambfr10">(11.42)</a> establece que el progreso genético es directamente proporcional a la varianza genética aditiva de la característica. Si no hay varianza genética, sin importar la magnitud del coeficiente de selección, no existirá progreso genético. Esto nos lleva directamente a reflexionar sobre la posibilidad de utilizar la clonación para propagar el mejoramiento genético, una idea que pareció extenderse a partir de la clonación de la oveja “Dolly.” Si clonásemos <strong>al mejor animal existente</strong> (un concepto algo absurdo) y lo utilizasemos para reemplazar todo el stock, todos los animales sería idénticos, por lo que no existiría varianza genética aditiva y por lo tanto nos anularíamos la posibilidad de mejorar la característica (al menos hasta que aparezcan nuevas mutaciones que introduzcan varianza y que sean en el sentido correcto).</p>
-<p>La segunda forma interesente de ver este resultado es si sustituimos en la ecuación <a href="selartifI.html#eq:cambfr10">(11.42)</a> la varianza genética aditiva por su valor esperado en el modelo de un <em>locus</em> con dos alelos, ecuación <a href="modelogenbas.html#eq:vara1">(8.44)</a>, <span class="math inline">\(V_A=\sigma^2_A=2pq\alpha^2\)</span></p>
-<p><span class="math display" id="eq:cambfr11">\[\begin{equation}
-R=\sigma^2_A \frac{s}{2a}=\frac{2pq\alpha^2}{2a}s \therefore R=\frac{pq\alpha^2}{a}s
-\tag{11.43}
-\end{equation}\]</span></p>
-<p>De acuerdo con esta última ecuación, a valores determinados del coeficiente de selección y del efecto de sustitución (que depende del modo de acción génica y de las frecuencias alélicas), la respuesta a la selección será máxima cuando el producto <span class="math inline">\(pq\)</span> sea máximo, cosa que como ya vimos ocurre cuando <span class="math inline">\(p=q=\frac{1}{2}\)</span>. Es decir, el progreso genético será máximo a frecuencias intermedias y luego irá disminuyendo a medida de que la frecuencia del alelo que seleccionamos en contra decrece.</p>
-<p><br />
-</p>
-<div class="graybox">
-<div class="center">
-<p><strong>PARA RECORDAR</strong></p>
-</div>
-</div>
-<p><br />
-</p>
-</div>
-<div id="el-diferencial-de-selección-direccional-y-la-identidad-de-robertson-price" class="section level2" number="11.9">
-<h2><span class="header-section-number">11.9</span> El diferencial de selección direccional y la identidad de Robertson-Price</h2>
-<p>Una perspectiva integradora del diferencial de selección <strong>direccional</strong> viene de la llamada <strong>identidad de Robertson-Price</strong> (<span class="citation"><a href="#ref-Robertson1966" role="doc-biblioref">Robertson</a> (<a href="#ref-Robertson1966" role="doc-biblioref">1966</a>)</span>; <span class="citation"><a href="#ref-Price1970" role="doc-biblioref">Price</a> (<a href="#ref-Price1970" role="doc-biblioref">1970</a>)</span>; <span class="citation"><a href="#ref-Price1972" role="doc-biblioref">Price</a> (<a href="#ref-Price1972" role="doc-biblioref">1972</a>)</span>). En esta sección usaremos la notación de <span class="citation"><a href="#ref-LynchWalsh1998" role="doc-biblioref">Michael Lynch and Walsh</a> (<a href="#ref-LynchWalsh1998" role="doc-biblioref">1998</a>)</span>, así como el razonamiento empleado, con <span class="math inline">\(z\)</span> representando el fenotipo de una característica de interés para el <strong>fitness</strong>. Hacemos énfasis en <strong>direccional</strong>, ya que es el tipo de selección que hemos manejado esencialmente en este capítulo (seleccionamos los individuos que se encontraban hacia un extremo de la distribución). Como vimos previamente, el diferencial de selección es igual a la diferencia de los individuos seleccionados (pero antes de la reproducción) y la media de la población en general, es decir</p>
-<p><span class="math display" id="eq:rp3">\[\begin{equation}
-S=\mu_s - \mu
-\tag{11.44}
-\end{equation}\]</span></p>
-<p>Por simplicidad asumamos que las diferencias entre los individuos solo conciernen a la probabilidad de llegar a la madurez, por lo que la función de <strong>fitness</strong> <span class="math inline">\(W(z)\)</span> es la probabilidad de que los individuos con fenotipo <span class="math inline">\(z\)</span> alcancen la edad reproductiva. En particular, no asumimos acá ninguna forma particular de <span class="math inline">\(W(z)\)</span>, por lo que esta podría ser una función discontinua, como en <strong>selección por truncamiento</strong>, o una continua, como en la <strong>selección gaussiana</strong> (<span class="citation"><a href="#ref-Houchmandzadeh2014" role="doc-biblioref">Houchmandzadeh</a> (<a href="#ref-Houchmandzadeh2014" role="doc-biblioref">2014</a>)</span>). Si llamamos <span class="math inline">\(p(z)\)</span> a la función de densidad correspondiente al fenotipo <span class="math inline">\(z\)</span> <strong>antes de la selección</strong>, entonces la densidad después de la selección será</p>
-<p><span class="math display" id="eq:rp4">\[\begin{equation}
-p_s(z)=\frac{W(z)\ p(z)}{\int W(z)\ p(z)\ dz}
-\tag{11.45}
-\end{equation}\]</span></p>
-<p>La lógica del numerador ecuación <a href="selartifI.html#eq:rp4">(11.45)</a> es sencilla, si pensamos que <span class="math inline">\(W(z)\)</span> es la ponderación del éxito de cada fenotipo <span class="math inline">\(z\)</span>, multiplicado en el numerador por la densidad correspondiente a ese fenotipo. otar que el denominador ya no integra necesariamente a <span class="math inline">\(1\)</span> y por lo tanto es el factor de escalado de la nueva densidad. Por otra parte, <span class="math inline">\(\int W(z)\ p(z)\ dz=\bar W\)</span>, el <strong>fitness medio individual</strong>. Si ahora llamamos a <span class="math inline">\(w(z)=\frac{W(z)}{\bar W}\)</span> el <strong>fitness relativo</strong> del fenotipo <span class="math inline">\(z\)</span>, entonces la ecuación <a href="selartifI.html#eq:rp4">(11.45)</a> se transforma en</p>
-<p><span class="math display" id="eq:rp5">\[\begin{equation}
-p_s(z)=\frac{W(z)\ p(z)}{\int W(z)\ p(z)\ dz}=\frac{W(z)\ p(z)}{\bar W}=\frac{W(z)}{\bar W} p(z) \therefore \\
-p_s(z)=w(z)\ p(z)
-\tag{11.46}
-\end{equation}\]</span></p>
-<p>El fenotipo medio después de la selección estará dado por</p>
-<p><span class="math display" id="eq:rp6">\[\begin{equation}
-\mu_s=\int z\ p_s(z)\ dz=\int z\ w(z)\ p(z)\ dz=\mathrm{E}[z\ w(z)] 
-\tag{11.47}
-\end{equation}\]</span></p>
-<p>que es la esperanza del producto del fenotipo por su <strong>fitness relativo</strong>. Por otra parte, el <strong>fitness medio relativo</strong> en la población estará dado por</p>
-<p><span class="math display" id="eq:rp7">\[\begin{equation}
-\bar w=\int w(z)\ p(z)\ dz=\frac{1}{\bar W} \int W(z)\ p(z)\ dz=\frac{\bar W}{\bar W}=1 
-\tag{11.48}
-\end{equation}\]</span></p>
-<p>El resultado de la ecuación <a href="selartifI.html#eq:rp7">(11.48)</a> nos muestra que el <strong>fitness medio relativo</strong> de una población siempre será igual a <span class="math inline">\(1\)</span>. Al mismo tiempo, la esperanza de la media de la población antes de la selección será igual a</p>
-<p><span class="math display" id="eq:rp8">\[\begin{equation}
-\mu=\mathrm{E}(z) \cdot \mathrm{E}(w)=\mathrm{E}(z) \cdot 1
-\tag{11.49}
-\end{equation}\]</span></p>
-<p>Uniendo este último resultado con la ecuación <a href="selartifI.html#eq:rp6">(11.47)</a> y sustituyendo ambos en la ecuación <a href="selartifI.html#eq:rp3">(11.44)</a>, tenemos</p>
-<p><span class="math display" id="eq:rp9">\[\begin{equation}
-S=\mu_s - \mu=\mathrm{E}[z\ w(z)] - \mathrm{E}(z) \cdot \mathrm{E}(w) = \mathrm{\sigma}[z,w(z)] 
-\tag{11.50}
-\end{equation}\]</span></p>
-<p>con <span class="math inline">\(\mathrm{\sigma}[z,w(z)]\)</span> representando la covarianza entre el fenotipo y el <strong>fitness relativo</strong>.</p>
-<p>Bajo el supuesto de linealidad en la respuesta del promedio de los padres hacia su descendencia, como asumimos en otras partes, el cambio generacional en función del diferencial de selección direccional será</p>
-<p><span class="math display" id="eq:rp10">\[\begin{equation}
-R=\Delta \mu=\mu_o - \mu= \beta (\mu_s-\mu)=\beta S=h^2\ S
-\tag{11.51}
-\end{equation}\]</span></p>
-<p>la última igualdad (asumiendo que el coeficiente de regresión lineal es <span class="math inline">\(\beta=h^2\)</span>) correspondiendo a la <strong>ecuación del criador</strong>, que vimos antes. Uniendo esto último con la ecuación <a href="selartifI.html#eq:rp9">(11.50)</a>, tenemos que (utilizando la notación de <span class="math inline">\(z\)</span> para el fenotipo) podemos escribir el progreso genético generacional como</p>
-<p><span class="math display" id="eq:rp11">\[\begin{equation}
-R=h^2\ S=\frac{\sigma_A^2}{\sigma_z^2}S=\frac{\sigma_A^2}{\sigma_z^2}\mathrm{\sigma}[z,w(z)] \therefore \\
-R=\sigma_A^2 \frac{\mathrm{\sigma}[z,w(z)]}{\sigma_z^2}=\sigma_A^2 b_{w(z),z}
-\tag{11.52}
-\end{equation}\]</span></p>
-<p>donde <span class="math inline">\(b_{w(z),z}\)</span> representa el coeficiente de regresión del <strong>fitness relativo</strong> en el <strong>fenotipo</strong>. La forma de la ecuación <a href="selartifI.html#eq:rp11">(11.52)</a> tiene una estrecha relación con la ecuación <a href="selartifI.html#eq:cambfr10">(11.42)</a> donde estudiamos el cambio de frecuencias bajo selección y nuevamente resalta la relación existente entre la respuesta a la selección y la varianza aditiva de la característica.</p>
-<p><br />
-</p>
-<div class="graybox">
-<div class="center">
-<p><strong>PARA RECORDAR</strong></p>
-</div>
-</div>
-<hr />
-</div>
-<div id="ejercicios-11" class="section level2 unnumbered">
-<h2>Ejercicios</h2>
-<div id="ejercicio-11.1" class="section level4 unnumbered">
-<h4>Ejercicio 11.1</h4>
-<p><strong><em>Solución</em></strong></p>
-</div>
-<div id="ejercicio-11.2" class="section level4 unnumbered">
-<h4>Ejercicio 11.2</h4>
-<p><strong><em>Solución</em></strong></p>
-</div>
-<div id="ejercicio-11.3" class="section level4 unnumbered">
-<h4>Ejercicio 11.3</h4>
-<p><strong><em>Solución</em></strong></p>
-<hr />
 
 </div>
-</div>
-</div>
-<h3>Bibliografía</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-Bulmer1980" class="csl-entry">
-Bulmer, Michael George. 1980. <em>The Mathematical Theory of Quantitative Genetics</em>. Clarendon Press.
-</div>
-<div id="ref-Galton1886" class="csl-entry">
-Galton, Francis. 1886. <span>“Regression Towards Mediocrity in Hereditary Stature.”</span> <em>Journal of the Anthropological Institute</em> 15: 246–63.
-</div>
-<div id="ref-Havensteinetal1994" class="csl-entry">
-Havenstein, G. B., P. R. Ferket, S. E. Scheideler, and B. T. Larson. 1994. <span>“<span class="nocase"><span>G</span>rowth, livability, and feed conversion of 1957 vs 1991 broilers when fed "typical" 1957 and 1991 broiler diets</span>.”</span> <em>Poult Sci</em> 73 (12): 1785–94.
-</div>
-<div id="ref-Houchmandzadeh2014" class="csl-entry">
-Houchmandzadeh, B. 2014. <span>“<span>A</span>n Alternative to the Breeder’s and <span>L</span>ande’s Equations.”</span> <em>G3 (Bethesda)</em> 4 (1): 97–108.
-</div>
-<div id="ref-LynchWalsh1998" class="csl-entry">
-Lynch, Michael, and Bruce Walsh. 1998. <em>Genetics and Analysis of Quantitative Traits</em>. Sinauer Associates (Oxford University Press).
-</div>
-<div id="ref-Price1970" class="csl-entry">
-Price, G. R. 1970. <span>“<span class="nocase"><span>S</span>election and covariance</span>.”</span> <em>Nature</em> 227 (5257): 520–21.
-</div>
-<div id="ref-Price1972" class="csl-entry">
-———. 1972. <span>“<span class="nocase"><span>E</span>xtension of covariance selection mathematics</span>.”</span> <em>Ann Hum Genet</em> 35 (4): 485–90.
-</div>
-<div id="ref-R2021" class="csl-entry">
-R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
-</div>
-<div id="ref-Robertson1966" class="csl-entry">
-———. 1966. <span>“A Mathematical Model of the Culling Process in Dairy Cattle.”</span> <em>Animal Production</em> 8: 95–108.
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="42">
-<li id="fn42"><p>Charles Darwin (12 febrero 1809 – 19 abril 1882) fue un naturalista inglés, fundador de la teoría de la selección natural. En el segundo viaje del HMS-Beagle, con el objetivo primario de cartografiar la costa sudamericana, Darwin viajó como naturalista, recojiendo observaciones geológicas y diferentes especímenes biológicos. Su obra más famosa, “On the Origin of Species,” fue publicada por primera vez en 1859.<a href="selartifI.html#fnref42" class="footnote-back">↩︎</a></p></li>
-</ol>
 </div>
             </section>
 
@@ -1446,7 +304,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/11-selartifI.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/11-GPselartifI.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -1457,7 +315,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["ApuntesGeneticaII.pdf", "ApuntesGeneticaII.epub"],
+"download": ["GuiaPracticaGeneticaII.pdf", "GuiaPracticaGeneticaII.epub"],
 "search": {
 "engine": "lunr",
 "options": null
