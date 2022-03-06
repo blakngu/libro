@@ -28,7 +28,7 @@
 <meta name="author" content="(Paola Gaiero)" />
 
 
-<meta name="date" content="2022-03-01" />
+<meta name="date" content="2022-03-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -586,7 +586,7 @@ C=1-\frac{F_1}{N}
 \begin{split}
 H&#39;_1=-\sum^k_{i=1} p_i \ln p_i =\\
 =-[0,06 \times \ln 0,06 + 0,15 \times \ln 0,15 + 0,39 \times \ln 0,39 +\\
-+ \ln 0,01 + 0,4 \times \ln 0,4] \therefore \\
++ 0,4 \times \ln 0,4] \therefore \\
 H&#39;_1=1,1871
 \end{split}
 \end{equation}\]</span></p>
@@ -595,15 +595,15 @@ H&#39;_1=1,1871
 \begin{split}
 H&#39;_2=-\sum^k_{i=1} p_i \ln p_i =\\
 =-[0,001 \times \ln 0,001 + 0,001 \times \ln 0,001 + 0,297 \times \ln 0,297 +\\
-+0,001 \times \ln 0,001 + \ln 0,7 + 0,4 \times \ln 0,7] \therefore \\
-H&#39;_2=0,9855
++0,001 \times \ln 0,001 + 0,7 \times \ln 0,7] \therefore \\
+H&#39;_2=0,63096
 \end{split}
 \end{equation}\]</span></p>
 <p>Notar que en el <strong>ambiente 1</strong> no se encontró la especie <strong>OTU 3</strong>, por lo que no se incluye en los cálculos (de hecho <span class="math inline">\(\ln 0=-\infty\)</span>). De acuerdo con esto, según el <strong>índice de Shannon</strong> el <strong>ambiente 1</strong> es más diverso que el <strong>ambiente 2</strong>. Para medir la uniformidad utilizando el índice propuesto por Pielou (1969), primero tenemos que calcular el máximo posible del índice de Shannon, que a partir de la ecuación <a href="intro.html#eq:alphadiver1p1">(1.2)</a> sabemos que es igual al logaritmo del número de <strong>OTUs</strong>, es decir <span class="math inline">\(H_{max_1}=\ln k=\ln 4=1,3863\)</span> y <span class="math inline">\(H_{max_2}=\ln k=\ln 5=1,6094\)</span>. Por lo tanto, aplicando la ecuación <a href="intro.html#eq:alphadiver1p2">(1.3)</a>, tenemos que el índice de uniformidad para los dos ambientes será</p>
 <p><span class="math display">\[\begin{equation}
 \begin{split}
 E_1=\frac{H&#39;_1}{H_{max_1}}=\frac{1,1871}{1,3863}= 0,8563 \\
-E_2=\frac{H&#39;_2}{H_{max_2}}=\frac{0,9855}{1,6094}= 0,6123
+E_2=\frac{H&#39;_2}{H_{max_2}}=\frac{0,63096}{1,6094}= 0,3920
 \end{split}
 \end{equation}\]</span></p>
 <p>lo que habla de una uniformidad mucho menor en el <strong>ambiente 2</strong>.</p>
@@ -650,7 +650,7 @@ C_2=1-\frac{3}{1000}=0,997
 <li><p>Aunque la diversidad biológica puede cuantificarse de muchas maneras diferentes, los dos factores principales que se tienen en cuenta para medir la diversidad son la <strong>riqueza y la uniformidad</strong>. La <strong>riqueza</strong> representa el número de tipos (especies) diferentes entre todos los que identificamos en el área de interés mientras que la uniformidad compara la similitud del tamaño de la población de cada una de las especies presentes.</p></li>
 <li><p>Para la diversidad alfa, el índice más sencillo de entender es la entropía de Shannon que mide la incertidumbre al asignar la identidad de un individuo elegido al azar de la población. Si le llamamos <span class="math inline">\(p_i\)</span> a la proporción (frecuencia relativa) de individuos de la especie <span class="math inline">\(i\)</span>, de un total de <span class="math inline">\(k\)</span> especies identificadas en el ecosistema, entonces el <strong>índice de Shannon</strong> se calcula como: <span class="math inline">\(H&#39;=-\sum^k_{i=1} p_i \ln p_i\)</span>.
 Cuanto más homogéneo sea el reparto de las especies mayor será el índice de Shannon y el máximo del mismo será cuando todas las especies tienen el mismo número de integrantes.</p></li>
-<li><p>El <strong>índice de Simpson (<span class="math inline">\(D\)</span>)</strong> mide la probabilidad de que dos individuos seleccionados al azar de una muestra pertenezcan a la misma especie o categoría. Es decir, si <span class="math inline">\(n_i\)</span> representa el número de individuos de la especie o categoría <span class="math inline">\(i\)</span> y <span class="math inline">\(N\)</span> el número total de individuos, es decir <span class="math inline">\(N=\sum_i n_i\)</span>, entonces <span class="math inline">\(D=\sum^k_{i=1} \frac{n_i(n_i-1)}{N(N-1)}\)</span>. La intuición de este índice es que si los individuos se concentran en pocos tipos diferentes el valor de <span class="math inline">\(D\)</span> será más alto, es decir lo contrario a lo que esperaríamos para un índice de diversidad. Para superar este problema, se suele restar a 1 el valor de 𝐷, es decir se reporta <span class="math inline">\(1 − D\)</span>.</p></li>
+<li><p>El <strong>índice de Simpson (<span class="math inline">\(D\)</span>)</strong> mide la probabilidad de que dos individuos seleccionados al azar de una muestra pertenezcan a la misma especie o categoría. Es decir, si <span class="math inline">\(n_i\)</span> representa el número de individuos de la especie o categoría <span class="math inline">\(i\)</span> y <span class="math inline">\(N\)</span> el número total de individuos, es decir <span class="math inline">\(N=\sum_i n_i\)</span>, entonces <span class="math inline">\(D=\sum^k_{i=1} \frac{n_i(n_i-1)}{N(N-1)}\)</span>. La intuición de este índice es que si los individuos se concentran en pocos tipos diferentes el valor de <span class="math inline">\(D\)</span> será más alto, es decir lo contrario a lo que esperaríamos para un índice de diversidad. Para superar este problema, se suele restar a 1 el valor de <span class="math inline">\(D\)</span>, es decir se reporta <span class="math inline">\(1-D\)</span>.</p></li>
 </ul>
 </div>
 </div>
@@ -728,8 +728,8 @@ Figura 1.2: Escalado multidimensional en un experimento de transcriptómica de <
 <ul>
 <li><p>Para entender la variabilidad genética es necesario conocer las secuencias, o al menos algunas secuencias que nos puedan servir de marcador, en muchos individuos. Los <strong>microarrays</strong> son un arreglo de <strong>sondas moleculares</strong> colocadas en una placa.</p></li>
 <li><p>Una <strong>sonda molecular</strong>, en este caso, es una <strong>secuencia específica a un gen o una región de un gen y que es (idealmente) única en el genoma de referencia</strong>. Cuando el ADN o el ADN copia (en los estudios de transcriptómica) de un individuo se hibrida con dicha sonda (que está fijada en la placa) se produce algún tipo de señal, por ejemplo la emisión de luz en determinada frecuencia al ser iluminada por un laser. Esta tecnología permite, por ejemplo, identificar si la secuencia presente en el organismo es de un tipo u otro, por ejemplo en el caso de los <strong>SNPs</strong> (polimor- fismos de un solo nucleótido) y en el caso de las especies diploides identificar el genotipo.</p></li>
-<li><p>Es importante tener en cuenta que para crear una sonda para medir variabilidad hay que cono- cer las secuencias de regiones que contengan variabilidad y que el array solo va a captar variabilidad en las posiciones del genoma para el que fue diseñado.</p></li>
-<li><p>La <strong>la metatranscriptómica</strong> que tiene por objetivo la <strong>caracterización de todo el ARN mensajero (ARNm)</strong> presente en cada muestra. La diferencia más importante con la genómica funcional es que mientras que en esta última cada genoma aporta lo mismo y por lo tanto el factor de ponderación es la proporción de cada taxa (v.g. especie) en la muestra, en la metatranscriptómica existe la misma ponderación, pero también la ponderación por expresión de las secuencias. De esta forma, más allá de identificar qué secuencias están presentes en la muestra, podemos cuantificar (en forma relativa) la “importancia” de cada una.</p></li>
+<li><p>Es importante tener en cuenta que para crear una sonda para medir variabilidad hay que conocer las secuencias de regiones que contengan variabilidad y que el array solo va a captar variabilidad en las posiciones del genoma para el que fue diseñado.</p></li>
+<li><p>La <strong>metatranscriptómica</strong> tiene por objetivo la <strong>caracterización de todo el ARN mensajero (ARNm)</strong> presente en cada muestra. La diferencia más importante con la genómica funcional es que mientras que en esta última cada genoma aporta lo mismo y por lo tanto el factor de ponderación es la proporción de cada taxa (v.g. especie) en la muestra, en la metatranscriptómica existe la misma ponderación, pero también la ponderación por expresión de las secuencias. De esta forma, más allá de identificar qué secuencias están presentes en la muestra, podemos cuantificar (en forma relativa) la “importancia” de cada una.</p></li>
 </ul>
 </div>
 </div>
