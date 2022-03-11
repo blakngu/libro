@@ -28,7 +28,7 @@
 <meta name="author" content="(Paola Gaiero)" />
 
 
-<meta name="date" content="2022-03-01" />
+<meta name="date" content="2022-03-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -836,7 +836,10 @@ con forma de “U” invertida y cuyas intersecciones con el eje de las
 abcsisas (raíces) son 0 y 1, por lo que por simetría el vértice debe
 estar en el punto medio, es decir <span class="math inline">\(\frac{1}{2}\)</span>. Sustituyendo, tenemos:</p>
 <p><span class="math display">\[\begin{equation}
-f_{Het_{max}}(p=\frac{1}{2})=2pq=2 \frac{1}{2} (1-\frac{1}{2})= 2 \frac{1}{2} \frac{1}{2} = \frac{1}{2}
+\begin{split}
+f_{Het_{max}}(p=\frac{1}{2})=2p-2p^2=2 \frac{1}{2}-2\left(\frac{1}{2}\right)^2=\\
+=2 \frac{1}{2} -2 \frac{1}{4} =1- \frac{1}{2}=\frac{1}{2}
+\end{split}
 \end{equation}\]</span></p>
 <hr />
 </div>
@@ -1157,7 +1160,7 @@ resulta claro que la probabilidad de no acertar en el único número
 correcto (5 alelos), es realmente alta. De hecho, si calculamos la
 probabilidad de observar exactamente 5 alelos en 10, dada la frecuencia
 real de <span class="math inline">\(p=0,5\)</span>, esta probabilidad es igual a <span class="math inline">\(0,2460938\)</span>, por lo que la
-probabilidad de obtener el “verdadero” valor de <span class="math inline">\(p\)</span> en una muestra de
+probabilidad de <strong>NO</strong> obtener el “verdadero” valor de <span class="math inline">\(p\)</span> en una muestra de
 este tamaño es igual a <span class="math inline">\(1-0,2460938=0,7539062 \sim 75,4\%\)</span>. Por otro
 lado, la probabilidad de tener un estimado de <span class="math inline">\(p \leq 0,3\)</span> es la suma de
 las probabilidades de obtener 0, 1, 2 o 3 conteos y esto es igual a
@@ -1200,7 +1203,7 @@ ahora la posibilidad de observar entre 45 y 54 alelos (un intervalo de
 frecuencias equivalente), ahora con 50 individuos, concentra <span class="math inline">\(\sim 63\%\)</span>
 de la probabilidad. O dicho de otra manera, con una probabilidad similar
 a la de la muestra de 5 individuos, ahora los resultados se concentrarán
-(aproximadamente) entre 49 y 52 alelos. Claramente, nuestras
+(aproximadamente) entre 49 y 51 alelos. Claramente, nuestras
 estimaciones se vuelven mucho más precisas y útiles.</p>
 <p>Hasta acá, hicimos nuestras estimaciones de las frecuencias alélicas
 poblacionales (y por lo tanto la posibilidad de conocer nuestras
