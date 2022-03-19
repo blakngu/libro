@@ -28,7 +28,7 @@
 <meta name="author" content="(Paola Gaiero)" />
 
 
-<meta name="date" content="2022-03-18" />
+<meta name="date" content="2022-03-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -859,7 +859,15 @@ Figura 3.2: Probabilidad de sacar una bolita azul en la próxima extracción, pa
 <p><span class="math display">\[\begin{equation}
 P(\text{última=roja})=\frac{9}{10} \frac{8}{9} \frac{7}{8} ... \frac{1}{2}=\frac{\prod_{1}^9}{\prod_{2}^{10}}=\frac{9!}{10!}=\frac{1}{10}
 \end{equation}\]</span></p>
-<p>que es la proporción de bolitas rojas al inicio (recuerda que el símbolo <span class="math inline">\(\prod_a^b\)</span> implica la productoria, el equivalente a la sumatoria, pero en lugar de sumar multiplicamos, entre los números <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>). La utilidad de todo este razonamiento lo veremos en la siguiente sección (<a href="deriva.html#el-modelo-de-wright-fisher">El modelo de Wright-Fisher</a>).</p>
+<p>que es la proporción de bolitas rojas al inicio (recuerda que el símbolo <span class="math inline">\(\prod_a^b\)</span> implica la productoria, el equivalente a la sumatoria, pero en lugar de sumar multiplicamos, entre los números <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>).</p>
+<p>De hecho, podemos generalizar fácilmente el razonamiento anterior a otra proporción de bolitas rojas y azules. Supongamos ahora que tenemos 4 bolitas rojas y 6 azules. ¿Cuál es la probabilidad de que la última bolita sea de color rojo? Llamemos <span class="math inline">\(n\)</span> al número total de bolitas, es decir <span class="math inline">\(n=10\)</span> en nuestro caso y <span class="math inline">\(k\)</span> a l número de bolitas rojas (<span class="math inline">\(k=4\)</span> en este experimento). El total de posibles órdenes en que salen <strong>todas</strong> las bolitas es igual a las permutaciones de <span class="math inline">\(n\)</span> elementos, es decir <span class="math inline">\(\mathbb{P}_n=n!\)</span>. Para que la ultima bolita sea roja, separamos una de ellas del conjunto y ahora solo tenemos <span class="math inline">\(n-1=9\)</span> bolitas, pero cualquier orden de salia de las mismas es irrelevante, por lo que hay <span class="math inline">\(\mathbb{P}_{(n-1)}=(n-1)!\)</span> posibilidades (órdenes de salida) de que esto suceda. Por lo tanto, <strong>dado que agarramos una bolita roja en particular</strong>, la probabilidad de que esa salga última será <span class="math inline">\(\frac{\mathbb{P}_{(n-1)}}{\mathbb{P}_{n}}=\frac{(n-1)!}{n!}=\frac{\prod_{1}^{n-1}}{\prod_{1}^{n}}=\frac{1}{n}\)</span>. Sin embargo, hay <span class="math inline">\(k\)</span> bolitas rojas <strong>diferentes</strong> y para cualquiera de ellas este razonamiento es válido, por lo que debemos multiplicar la probabilidad anterior por <span class="math inline">\(k\)</span> (todos son eventos disjuntos). Poniendo todo junto, tenemos que la probabilidad de que la última bolita sea roja es</p>
+<p><span class="math display">\[\begin{equation}
+\mathbb{P}(\text{última=roja})=k \frac{\mathbb{P}_{(n-1)}}{\mathbb{P}_{n}}=k \frac{(n-1)!}{n!}=k \frac{\prod_{1}^{n-1}}{\prod_{1}^{n}}=\frac{k}{n}
+\end{equation}\]</span></p>
+<p>que es la probabilidad inicial de sacar una bolita roja (<span class="math inline">\(k/n\)</span>, <span class="math inline">\(4/10\)</span> en nuestro caso) o, lo que es lo mismo, la proporción inicial de bolitas rojas. La utilidad de todo este razonamiento lo veremos en la siguiente sección (<a href="deriva.html#el-modelo-de-wright-fisher">El modelo de Wright-Fisher</a>
+).</p>
+<p><br />
+</p>
 <div class="graybox">
 <div class="center">
 <p><strong>PARA RECORDAR</strong></p>
