@@ -28,7 +28,7 @@
 <meta name="author" content="(Paola Gaiero)" />
 
 
-<meta name="date" content="2022-03-22" />
+<meta name="date" content="2022-03-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -553,7 +553,7 @@ p&#39;=\frac{p^2w_{11}}{\bar{w}}+\frac{1}{2}\frac{2pqw_{12}}{\bar{w}}=\frac{p^2w
 \end{equation}\]</span></p>
 <p>El cambio ocurrido entre generaciones, que siguiendo la notación de <span class="citation"><a href="#ref-Gillespie2004" role="doc-biblioref">John H. Gillespie</a> (<a href="#ref-Gillespie2004" role="doc-biblioref">2004</a>)</span> llamaremos <span class="math inline">\(\Delta_s p\)</span> para reforzar la idea de que el cambio se debe a la selección, será la frecuencia actual del alelo <span class="math inline">\(A_1\)</span>, es decir <span class="math inline">\(p&#39;\)</span> (notar el <span class="math inline">\(&#39;\)</span> para la nueva generación), menos la frecuencia en la generación anterior, o sea <span class="math inline">\(p\)</span>.</p>
 <p><span class="math display" id="eq:deltap">\[\begin{equation}
-\Delta_s p=p&#39;-p=\frac{p^2w_{11}+2pqw_{12}}{\bar{w}}-p=\frac{p^2w_{11}+pqw_{12}-p\bar{w}}{\bar{w}}
+\Delta_s p=p&#39;-p=\frac{p^2w_{11}+pqw_{12}}{\bar{w}}-p=\frac{p^2w_{11}+pqw_{12}-p\bar{w}}{\bar{w}}
 \tag{4.2}
 \end{equation}\]</span></p>
 <p>Si trabajamos un poco el numerador, teniendo en cuenta además que <span class="math inline">\(pq=p(1-p)=p-p^2\)</span> y que <span class="math inline">\(1-2p=(1-p)-p=q-p\)</span>, tenemos para el numerador de la ecuación <a href="seleccion.html#eq:deltap">(4.2)</a></p>
@@ -1089,7 +1089,7 @@ u=\frac{\hat{q}^2(1-\hat{q})s}{1+\hat{q}} \Leftrightarrow \frac{u}{s}=\frac{\hat
 <h3><span class="header-section-number">4.5.1</span> El principio de Haldane-Muller</h3>
 <p>El principio de Haldane<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a>-Muller<a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a> se relaciona con la reducción en el <strong>fitness medio</strong> de una población como balance entre selección y mutación. En el caso de <strong>selección direccional</strong> e ignorando el efecto de las mutaciones recurrentes, en algún momento el alelo favorecido (<span class="math inline">\(A_1\)</span>) se fijará y entonces <span class="math inline">\(\bar{w}=1-2pqhs-q^2s=1\)</span> ya que <span class="math inline">\(q=0\)</span>. Sin embargo, cuando existe mutación recurrente, el alelo desfavorecido volverá a aparecer en forma recurrente y por lo tanto la frecuencia de equilibrio será <span class="math inline">\(\hat{q}&gt;0\)</span>. En el caso particular que <span class="math inline">\(h=0\)</span>, es decir cuando <span class="math inline">\(A_1\)</span> domina completamente a <span class="math inline">\(A_2\)</span>, entonces el <strong>fitness medio</strong> de la población será <span class="math inline">\(\bar{w}=1-q^2s\)</span> ya que <span class="math inline">\(2pqhs=0\)</span>. Si sustituimos el resultado de la ecuación <a href="seleccion.html#eq:mutsel10">(4.25)</a> en la expresión anterior, tenemos que</p>
 <p><span class="math display">\[\begin{equation}
-\bar{w}=1-q^2s \approx 1-\left(\sqrt{\frac{u}{s}}\right)^2=1-u
+\bar{w}=1-q^2s \approx 1-\left(\sqrt{\frac{u}{s}}\right)^2s=1-u
 \end{equation}\]</span></p>
 <p>El cambio en el <strong>fitness medio</strong> correspondiente a esta <strong>carga mutacional</strong> será la diferencia entre el fitness máximo (igual a <span class="math inline">\(1\)</span>) y el producto del equilibrio mutación selección, es decir</p>
 <p><span class="math display">\[\begin{equation}
