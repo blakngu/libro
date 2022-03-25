@@ -1191,12 +1191,12 @@ Figura 4.18: Número de generaciones requeridas para quedar a menos de <span cla
 <p>En el presente capítulo, hasta ahora solo hemos mencionado el efecto de la deriva como usualmente pequeño y por lo tanto afectando el resultado de la selección solo en el entorno de los puntos críticos del proceso, es decir en torno a los puntos de equilibrio, fijación o pérdida, de acuerdo al tipo de selección, pero sin explicitar en forma matemática dicha relación. Es tiempo entonces de presentar esta relación en una forma tal que nos permita evaluar el impacto de cada una de las dos fuerzas en este entorno. La matemática implicada es bastante más compleja que la usada en este capítulo, ya que la matemática de los procesos estocásticos lo es, pero por suerte no deberemos hacer un gran esfuerzo ya que las herramientas las pusimos a punto en el capítulo <a href="deriva.html#deriva">Deriva Genética</a>, en particular en la sección <a href="deriva.html#aproximación-de-difusión">Aproximación de difusión</a> (si antes decidiste no prestarle mucha atención a dicha sección, es probable que sea tiempo de ir de nuevo a ella).</p>
 <p>Supongamos que tenemos un <em>locus</em> autosomal con dos alelos en un organismo diploide, con un modo de acción completamente aditivo, es decir <span class="math inline">\(h=\frac{1}{2}\)</span> y con coeficiente de selección <span class="math inline">\(s\)</span>. Como recordarás de más arriba, el cambio de frecuencia por generación esperado era</p>
 <p><span class="math display">\[\begin{equation}
-\Delta_s p=\frac{pq[ph+q(1-h)]}{\bar{w}}
+\Delta_s p=\frac{pqs[ph+q(1-h)]}{\bar{w}}
 \end{equation}\]</span></p>
 <p>que sustituyendo los valores con <span class="math inline">\(h=\frac{1}{2}\)</span> nos da</p>
 <p><span class="math display" id="eq:selderiva0">\[\begin{equation}
-\Delta_s p=\frac{pq[\frac{1}{2}p+q(1-\frac{1}{2})]}{\bar{w}}=\frac{pq[\frac{1}{2}(p+q)]}{\bar{w}} \therefore \\
-\Delta_s p=\frac{pq}{2}\frac{1}{\bar{w}}
+\Delta_s p=\frac{pqs[\frac{1}{2}p+q(1-\frac{1}{2})]}{\bar{w}}=\frac{pqs[\frac{1}{2}(p+q)]}{\bar{w}} \therefore \\
+\Delta_s p=\frac{pqs}{2}\frac{1}{\bar{w}}
 \tag{4.27}
 \end{equation}\]</span></p>
 <p>Esto era el cambio por generación en la frecuencia de <span class="math inline">\(p\)</span> debido a la selección. Veamos cómo entra este resultado en el equilibrio entre selección y deriva. Para ello vamos a recurrir a nuestra <a href="deriva.html#aproximación-de-difusión">Aproximación de difusión</a>. Si recuerdas la idea, vamos a pasar de un tiempo discreto en generaciones (y con cambios discretos en frecuencias) a una aproximación suficientemente buena en tiempo y frecuencias continuas. En esta aproximación considerábamos dos fuerzas, una sistemática con dirección determinística, que notamos como <span class="math inline">\(M(x)\)</span> (pero que técnicamente se conoce como “coeficiente de deriva,” lo que es algo confuso ya que a veces usamos el témino “deriva” para referirnos al azar) y una segunda fuerza aleatoria que notamos como <span class="math inline">\(V(x)\)</span> (y que técnicamente se conoce como “coeficiente de difusión”). En el capítulo anterior, como todavía no habíamos hablado de la selección pusimos la restricción de que <span class="math inline">\(M(x)=0\)</span>, es decir que solo analizamos el efecto del movimiento al azar de la frecuencias. Ahora es tiempo de usar <span class="math inline">\(M(x)\)</span> a nuestra conveniencia, en particular para modelar el efecto de la selección (que como ya vimos, es una fuerza determinística).</p>
@@ -1256,7 +1256,7 @@ G(x)=exp\left[-2N_es \int^x \frac{y(1-y)}{y(1-y)}dy\right]=e^{-2N_esx}
 <li>En nuestro modelo de un <em>locus</em> autosómico en un organismo diploide, <strong>asumiendo que el efecto de los alelos es aditivo</strong>, la probabilidad de fijación de un alelo <span class="math inline">\(A_1A_1\)</span> que se encuentra en frecuencia <span class="math inline">\(p\)</span> y que en homocigosis tiene ventaja <span class="math inline">\(s\)</span> sobre el genotipo <span class="math inline">\(A_2A_2\)</span> es</li>
 </ul>
 <p><span class="math display">\[\begin{equation}
-\pi_1(p)=\frac{1-e^{-N_esp}}{1-e^{-2N_es}}
+\pi_1(p)=\frac{1-e^{-2N_esp}}{1-e^{-2N_es}}
 \end{equation}\]</span></p>
 <ul>
 <li>En el caso particular de que además de todo lo anterior (<em>locus</em> autosómico en un organismo diploide, efecto de los alelos es <strong>aditivo</strong>), la <strong>probabilidad de fijación de un nuevo alelo</strong> <span class="math inline">\(A_1A_1\)</span> que en homocigosis tiene ventaja <span class="math inline">\(s\)</span> sobre el genotipo <span class="math inline">\(A_2A_2\)</span> es</li>
