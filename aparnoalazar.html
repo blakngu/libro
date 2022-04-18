@@ -28,7 +28,7 @@
 <meta name="author" content="(Paola Gaiero)" />
 
 
-<meta name="date" content="2022-03-01" />
+<meta name="date" content="2022-04-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -765,13 +765,13 @@ Figura 6.2: Representación de la distribución de frecuencias alélicas y genot
 <p>El otro componente de las varianzas es la esperanza de los cuadrados de las variables aleatorias. En el caso de <span class="math inline">\(x\)</span>, la esperanza de <span class="math inline">\(x^2\)</span> será</p>
 <p><span class="math display" id="eq:fcor3">\[\begin{equation}
 \mathbb{E}(x^2)=1^2 \times (p^2+pqF) + 1^2 \times (pq-pqF) + 0^2 \times (pq-pqF) + 0^2 \times (q^2+pqF) \therefore \\
-\mathbb{E}(x)=p^2+pqF+pq-pqF=p^2+pq=p(p+q)=p
+\mathbb{E}(x^2)=p^2+pqF+pq-pqF=p^2+pq=p(p+q)=p
 \tag{6.8}
 \end{equation}\]</span></p>
 <p>mientras que la de <span class="math inline">\(y^2\)</span> estará dada por</p>
 <p><span class="math display" id="eq:fcor4">\[\begin{equation}
 \mathbb{E}(y^2)=1^2 \times (p^2+pqF) + 0^2 \times (pq-pqF) + 1^2 \times (pq-pqF) + 0^2 \times (q^2+pqF) \therefore \\
-\mathbb{E}(y)=p^2+pqF+pq-pqF=p^2+pq=p(p+q)=p
+\mathbb{E}(y^2)=p^2+pqF+pq-pqF=p^2+pq=p(p+q)=p
 \tag{6.9}
 \end{equation}\]</span></p>
 <p>En este punto tenemos todo para calcular ambas varianzas, de <span class="math inline">\(x\)</span> y de <span class="math inline">\(y\)</span>. Para el caso de <span class="math inline">\(x\)</span>, poniendo juntos los resultados de las ecuaciones <a href="aparnoalazar.html#eq:fcor1">(6.6)</a> y <a href="aparnoalazar.html#eq:fcor3">(6.8)</a>, la misma será</p>
@@ -787,13 +787,16 @@ Figura 6.2: Representación de la distribución de frecuencias alélicas y genot
 <p>lo que no nos sorprende dada la simetría del problema (las frecuencias de los gametos son iguales en ambos sexos).</p>
 <p>Como vimos antes, para calcular el coeficiente de correlación nos hace falta la covarianza entre ambas variables, mientras que para la misma, además de las esperanzas de ambas necesitamos la esperanza de su producto. En este caso, la esperanza es</p>
 <p><span class="math display" id="eq:fcor7">\[\begin{equation}
-\mathbb{E}(xy)=(1 \times 1) \times (p^2+pqF) + (1 \times 0) \times (pq-pqF) + (0 \times 1) \times (pq-pqF) + (0 \times 0) \times (q^2+pqF) \therefore \\
-\mathbb{E}(x)=p^2+pqF
+\begin{split}
+\mathbb{E}(xy)=(1 \times 1) \times (p^2+pqF) + (1 \times 0) \times (pq-pqF)+\\ 
++ (0 \times 1) \times (pq-pqF) + (0 \times 0) \times (q^2+pqF) \therefore \\
+\mathbb{E}(xy)=p^2+pqF
+\end{split}
 \tag{6.12}
 \end{equation}\]</span></p>
 <p>Poniendo juntos los resultados de las ecuaciones <a href="aparnoalazar.html#eq:fcor1">(6.6)</a>, <a href="aparnoalazar.html#eq:fcor2">(6.7)</a> y <a href="aparnoalazar.html#eq:fcor7">(6.12)</a>, tenemos que la covarianza está dada por</p>
 <p><span class="math display" id="eq:fcor8">\[\begin{equation}
- {Cov}(xy)=\mathbb{E}(xy)-\mathbb{E}(x)\mathbb{E}(y)=p^2+pqF-p \times p=pqF
+\mathrm{Cov}(xy)=\mathbb{E}(xy)-\mathbb{E}(x)\mathbb{E}(y)=p^2+pqF-p \times p=pqF
 \tag{6.13}
 \end{equation}\]</span></p>
 <p>Finalmente, juntando ahora los resultados de la ecuación <a href="aparnoalazar.html#eq:fcor8">(6.13)</a> (en el numerador) y de las ecuaciones <a href="aparnoalazar.html#eq:fcor5">(6.10)</a> y <a href="aparnoalazar.html#eq:fcor6">(6.11)</a> (para el denominador), llegamos a nuestro tan ansiado resultado</p>
@@ -1229,7 +1232,7 @@ F_{ST} = \frac{(F_{IT}-F_{IS})}{(1-F_{IS})}
 \end{equation}\]</span></p>
 <ul>
 <li><span class="math inline">\(F_{IT}\)</span>: Correlación de alelos dentro de un individuo en relación con toda la
-población. A su vez, es la desviación de las frecuencias de los genotipos con respecto a las expectativas de Hardy-Weinberg para todo el <strong>enesemble</strong> de poblaciones.</li>
+población. A su vez, es la desviación de las frecuencias de los genotipos con respecto a las expectativas de Hardy-Weinberg para todo el <strong>ensemble</strong> de poblaciones.</li>
 </ul>
 <p><span class="math display">\[\begin{equation}
 F_{IT}=\frac{H_T-H_I}{H_T}
@@ -1364,7 +1367,7 @@ F_{ST}=\frac{H_T-H_S}{H_T}=\frac{2\sigma^2}{2\bar{p}\bar{q}}=\frac{\sigma^2}{\ba
 <p>Por lo tanto, el promedio será <span class="math inline">\(\frac{0,375+0,375}{2}=0,375\)</span>.</p>
 <p>De acuerdo a la ecuación <a href="aparnoalazar.html#eq:wahlund3">(6.40)</a>, el aumento en la frecuencia de los heterocigotos será de</p>
 <p><span class="math display">\[\begin{equation}
-\Delta_H=\frac{1}{2}(p_1-p_2)^2=\frac{1}{2}(0,75-0,25)^2=0,5^2=\frac{0,25}{2}=0,125
+\Delta_H=\frac{1}{2}(p_1-p_2)^2=\frac{1}{2}(0,75-0,25)^2=\frac{1}{2}0,5^2=\frac{0,25}{2}=0,125
 \end{equation}\]</span></p>
 <p>Como la frecuencia del promedio, antes de la unión y reproducción era <span class="math inline">\(0,375\)</span>, la nueva frecuencia será <span class="math inline">\(0,375+0,125=0,500\)</span>. Esto es fácil de corroborar, ya que al ser del mismo tamaño, si las juntamos para la reproducción <span class="math inline">\(\bar{p}=\frac{p_1+p_2}{2}=\frac{0,75+0,25}{2}=0,5\)</span>, por lo que <span class="math inline">\(2\bar{p}\bar{q}=2 \times 0,5 \times 0,5=0,5\)</span>.</p>
 <p><br />
@@ -1391,7 +1394,7 @@ F_{ST}=\frac{H_T-H_S}{H_T}=\frac{2\sigma^2}{2\bar{p}\bar{q}}=\frac{\sigma^2}{\ba
 <li><p>Para dos poblaciones, en un <em>locus</em> diploide con dos alelos, con frecuencias del alelo <span class="math inline">\(A_1\)</span> <span class="math inline">\(p_1\)</span> y <span class="math inline">\(p_2\)</span>, ambas poblaciones en equilibrio Hardy-Weinberg, el aumento en la frecuencia de heterocigotas, <span class="math inline">\(\Delta_H\)</span>, será</p></li>
 </ul>
 <p><span class="math display">\[\begin{equation}
-\Delta_H=p_1^2+p_2^2-2p_1p_2 = (p_1-p_2)^2
+\Delta_H=\frac{1}{2}(p_1^2+p_2^2-2p_1p_2) = \frac{1}{2}(p_1-p_2)^2
 \end{equation}\]</span></p>
 <ul>
 <li>El efecto Wahlund nos permite obtener un estimador de la diferenciación entre poblaciones que consiste en dividir la varianza en frecuencias de un alelo en las poblaciones (<span class="math inline">\(\hat{\sigma}_p^2\)</span>) entre el producto de la media de frecuencias y su complementario a 1 (<span class="math inline">\(\bar{p}\bar{q}=\bar{p}(1-\bar{p})\)</span>), es decir</li>
