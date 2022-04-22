@@ -28,7 +28,7 @@
 <meta name="author" content="(Paola Gaiero)" />
 
 
-<meta name="date" content="2022-03-01" />
+<meta name="date" content="2022-04-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -570,7 +570,7 @@ R=(1-d)(1+b)=1+b-d-bd
 </p>
 <p>Una forma alternativa de analizar la dinámica de las poblaciones es a partir de los modelos continuos. Ahora, a diferencia del caso de los modelos discretos, como el intervalo de tiempo considerado es infinitesimal, no tiene importancia el orden en los componentes del ciclo y además nunca van a ocurrir dos eventos en el mismo instante infinitesimal (en nuestro caso nacimiento y muerte, del que daba cuenta el término <span class="math inline">\(-bd\)</span>). Para derivar la ecuación del modelo continuo podemos partir de la correspondiente ecuación del modelo discreto e ir reduciendo el intervalo de tiempo para pasar al límite. En particular, si consideramos un intervalo de tiempo arbitrariamente pequeño <span class="math inline">\(\Delta t\)</span> (que podríamos ver como una fracción de la generación), entonces el número de individuos nacidos en ese intervalo de tiempo será <span class="math inline">\(b\ \Delta t\)</span>, mientras que el número de muertes será <span class="math inline">\(d\ \Delta t\)</span>. Por lo tanto, a partir de la definición de derivada tenemos</p>
 <p><span class="math display" id="eq:dinamica5">\[\begin{equation}
-\frac{dn}{dt}=\lim_{\Delta t \to 0}\ [n(t+1)-n(t)]=\lim_{\Delta t \to 0}\ \frac{[(1-d \Delta t)(1+b \Delta t)n(t)-n(t)]}{\Delta t} \therefore \\
+\frac{dn}{dt}=\lim_{\Delta t \to 0}\ \frac{[n(t+1)-n(t)]}{\Delta t}=\lim_{\Delta t \to 0}\ \frac{[(1-d \Delta t)(1+b \Delta t)n(t)-n(t)]}{\Delta t} \therefore \\
 \frac{dn}{dt}=\lim_{\Delta t \to 0}\  \frac{[1-d \Delta t+b \Delta t-bd(\Delta t)^2-1]n(t)}{\Delta t}=\lim_{\Delta t \to 0}\  [b-d-bd\Delta t]\ n(t) 
 \tag{7.5}
 \end{equation}\]</span></p>
@@ -669,8 +669,8 @@ n(t+1)=R\ n(t)=n(t) \left[1+r_d\left(1-\frac{n(t)}{K}\right)\right]=n(t)+n(t)\ r
 <p><span class="math display" id="eq:dinamica16">\[\begin{equation}
 -\ln \left(1-\frac{K}{n}\right) \big\rvert_{n_0}^{n_t}=r_c\ t  \Leftrightarrow \ln \left(1-\frac{K}{n_0}\right)-\ln \left(1-\frac{K}{n_t}\right)=r_c\ t \Leftrightarrow \\
 \ln \left[ \frac{\left(1-\frac{K}{n_0}\right)}{\left(1-\frac{K}{n_t}\right)} \right] =r_c\ t \Leftrightarrow \ln \left[ \frac{(n_0-K)n_t}{(n_t-K)n_0} \right] =r_c\ t \Leftrightarrow \frac{(n_0-K)n_t}{(n_t-K)n_0}= e^{r_c\ t} \Leftrightarrow \\
-n_t=\frac{[(n_t-K)n_0]e^{r_c\ t}}{n_0-K} \Leftrightarrow n_t=\frac{(n_t\ n_0\ e^{r_c\ t}-Kn_0\ e^{r_c\ t}}{n_0-K} \Leftrightarrow n_t \left[1-\frac{n_0\ e^{r_c\ t}}{n_0-K} \right]= -\frac{Kn_0\ e^{r_c\ t}}{n_0-K} \Leftrightarrow \\
-n_t[n_0-K-n_0\ e^{r_c\ t}]=-Kn_0\ e^{r_c\ t} \Leftrightarrow n_t=\frac{-Kn_0\ e^{r_c\ t}}{n_0-K-n_0\ e^{r_c\ t}} 
+n_t=\frac{[(n_t-K)n_0]e^{r_c\ t}}{n_0-K} \Leftrightarrow n_t=\frac{n_t\ n_0\ e^{r_c\ t}-Kn_0\ e^{r_c\ t}}{n_0-K} \Leftrightarrow n_t \left[1-\frac{n_0\ e^{r_c\ t}}{n_0-K} \right]= -\frac{Kn_0\ e^{r_c\ t}}{n_0-K} \Leftrightarrow \\
+n_t[n_0-K-n_0\ e^{r_c\ t}]=-Kn_0\ e^{r_c\ t} \Leftrightarrow n_t=\frac{-Kn_0\ e^{r_c\ t}}{n_0-K-n_0\ e^{r_c\ t}}
 \tag{7.16}
 \end{equation}\]</span></p>
 <p>y finalmente, multiplicando y dividiendo por <span class="math inline">\(-1\)</span>, tenemos la forma final</p>
@@ -688,7 +688,7 @@ n(t)=\frac{K\ n_0\ e^{r_c\ t}}{K+n_0\ (e^{r_c\ t}-1)}
 \end{equation}\]</span></p>
 <p>por lo que sustituyendo por los valores del problema, llegamos a</p>
 <p><span class="math display">\[\begin{equation}
-n(10)=\frac{5\times 10^{6} \times 5 \times e^{4,1667\times 10^{-3} \times 3.600}}{5\times 10^{6}+5\times (e^{4,1667\times 10^{-3} \times 3.600}-1)}=3.828.879
+n(3600)=\frac{5\times 10^{6} \times 5 \times e^{4,1667\times 10^{-3} \times 3.600}}{5\times 10^{6}+5\times (e^{4,1667\times 10^{-3} \times 3.600}-1)}=3.828.879
 \end{equation}\]</span></p>
 <p>es decir, aproximadamente <span class="math inline">\(3,8\)</span> millones de bacterias, aún relativamente lejos de la capacidad de carga del sistema.</p>
 <hr />
@@ -861,7 +861,7 @@ p(t+1)=\frac{W_1\ p(t)}{W_1\ p(t)\ +\ W_2\ q(t)}=\frac{W_1\ p(t)}{W_1\ p(t)\ +\ 
 \tag{7.28}
 \end{equation}\]</span></p>
 <p>La ecuación <a href="microbial.html#eq:haplosel7">(7.28)</a> depende de dos parámetros, <span class="math inline">\(W_1\)</span> y <span class="math inline">\(W_2\)</span> para definir las frecuencias alélicas en la próxima generación. Si recordamos de más arriba, <span class="math inline">\(W_1\)</span> y <span class="math inline">\(W_2\)</span> eran los factores reproductivos de cada uno de los dos alelos, es decir la tasa neta de crecimiento de cada uno de los dos alelos, que no es otra cosa que el <strong>fitness absoluto</strong> de cada uno de ellos y por lo tanto la notación <span class="math inline">\(W\)</span>, de la que habíamos hablado al comienzo del capítulo <a href="seleccion.html#seleccion">Selección Natural</a>. Como vimos también en ese capítulo, dividiendo el <strong>fitness absoluto</strong> de los distintos genotipos entre el de alguno de ellos nos daba el <strong>fitness relativo</strong> de los mismos, que nuevamente notaremos <span class="math inline">\(w\)</span>.</p>
-<p>Con esta lógica, si definimos <span class="math inline">\(w_1 = W_1/W_2\)</span> como el <strong>fitness relativo</strong> del alelo <span class="math inline">\(A_1\)</span> respecto del <span class="math inline">\(A_2\)</span>, y por lo tanto <span class="math inline">\(W_1=w_2\ W_2\)</span>, sustituyendo en la ecuación <a href="microbial.html#eq:haplosel7">(7.28)</a> llegamos a</p>
+<p>Con esta lógica, si definimos <span class="math inline">\(w_1 = W_1/W_2\)</span> como el <strong>fitness relativo</strong> del alelo <span class="math inline">\(A_1\)</span> respecto del <span class="math inline">\(A_2\)</span>, y por lo tanto <span class="math inline">\(W_1=w_1\ W_2\)</span>, sustituyendo en la ecuación <a href="microbial.html#eq:haplosel7">(7.28)</a> llegamos a</p>
 <p><span class="math display" id="eq:haplosel8">\[\begin{equation}
 p(t+1)=\frac{w_1\ W_2\ p(t)}{w_1\ W_2\ p(t)\ +\ W_2(1-p(t))}=\frac{w_1\ p(t)}{w_1\ p(t)\ +\ (1-p(t))}
 \tag{7.29}
@@ -924,14 +924,14 @@ Figura 7.6: Cambio en la frecuencia del alelo <span class="math inline">\(A_1\)<
 <hr />
 <div id="ejemplo-7.3" class="section level4 unnumbered">
 <h4>Ejemplo 7.3</h4>
-<p>En una especie bacteriana, un <em>locus</em> con dos alelos, <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span> produce que los individuos que poseen los mismos presentan un <strong>fitness absoluto</strong> de <span class="math inline">\(W_1=1,7\)</span> y <span class="math inline">\(W_1,2\)</span>. Si la frecuencia del alelo <span class="math inline">\(A_1\)</span> es <span class="math inline">\(p=0,45\)</span>, asumiendo que la división de las bacterias opera en tiempo discreto, determinar la frecuencia en la siguiente generación.</p>
+<p>En una especie bacteriana, un <em>locus</em> con dos alelos, <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span> produce que los individuos que poseen los mismos presentan un <strong>fitness absoluto</strong> de <span class="math inline">\(W_1=1,7\)</span> y <span class="math inline">\(W_2=1,2\)</span>. Si la frecuencia del alelo <span class="math inline">\(A_1\)</span> es <span class="math inline">\(p=0,45\)</span>, asumiendo que la división de las bacterias opera en tiempo discreto, determinar la frecuencia en la siguiente generación.</p>
 <p>Una alternativa es usar la ecuación <a href="microbial.html#eq:haplosel8p1">(7.30)</a>, es decir</p>
 <p><span class="math display">\[\begin{equation}
 \Delta_sp=p(t+1)-p(t)=\frac{W_1\ p(t)}{W_1\ p(t)\ +\ W_2\ q(t)}-p(t) 
 \end{equation}\]</span></p>
 <p>por lo que, sustituyendo los valores tenemos</p>
 <p><span class="math display">\[\begin{equation}
-\Delta_sp=frac{1,7 \times 0,45}{1,7 \times 0,45+1,2 \times (1-0,45}-0,45=0,08684
+\Delta_sp=\frac{1,7 \times 0,45}{1,7 \times 0,45+1,2 \times (1-0,45}-0,45=0,08684
 \end{equation}\]</span></p>
 <p>Por otro lado, si calculamos <span class="math inline">\(s_d=(W_1-W_2)/W_2=(1,7-1,2)/1,2=0,41667\)</span>, entonces aplicando la ecuación @(eq:haplosel13) y sustituyendo los valores correspondientes tenemos</p>
 <p><span class="math display">\[\begin{equation}
@@ -954,7 +954,7 @@ r_2=(b_2-d_2)
 <p>Si como antes <span class="math inline">\(n_1\)</span> y <span class="math inline">\(n_2\)</span> representan los número de células (individuos) de cada uno de los dos genotipos, entonces el modelo de crecimiento exponencial nos permite describir el cambio en el número de células como las ecuaciones diferenciales</p>
 <p><span class="math display" id="eq:haploselc2">\[\begin{equation}
 \frac{dn_1}{dt}=r_1\ n_1(t) \\
-\frac{dn_2}{dt}=r_2\ n_1(t)
+\frac{dn_2}{dt}=r_2\ n_2(t)
 \tag{7.37}
 \end{equation}\]</span></p>
 <p>Pero, de acuerdo a la ecuación <a href="microbial.html#eq:haplosel3">(7.24)</a>, las frecuencias <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span> (ambas funciones de <span class="math inline">\(t\)</span>), son</p>
