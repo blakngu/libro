@@ -28,7 +28,7 @@
 <meta name="author" content="(Paola Gaiero)" />
 
 
-<meta name="date" content="2022-03-01" />
+<meta name="date" content="2022-04-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -640,7 +640,7 @@ I=I_{AA}+I_{AD}+I_{DD}+I_{AAA}+I_{AAD}+...
 </table>
 <p><br />
 </p>
-<p>Finalmente, en el cuadro siguiente le hemos agregado al cuadro de efectos aditivos un efecto de interacción <strong>aditivo x aditivo</strong>, sencillamente como el producto de los valores del efecto aditivo de los dos <em>loci</em> para cada par de genotipos (las funciones de interacción pueden ser infinitas, esta es una sola, elegida por sencilla para representar el fenómeno). El primer valor de cada celda corresponde al efecto aditivo y el segundo al <strong>efecto de epistasis</strong> del tipo <span class="math inline">\(I_{AA}\)</span>. Además de haberse alterado los valores de casi todas las celdas, el cambio entre celdas contiguas experimenta ahora algunos valores leves y otros abruptos, en los dos sentidos. Por ejemplo, pasar de <span class="math inline">\(A_1A_1\)</span> a <span class="math inline">\(A_1A2\)</span> significa solo <span class="math inline">\(\Delta=6-8=-2\)</span> unidades, mientras que de <span class="math inline">\(A_1A_2\)</span> a <span class="math inline">\(A_2A_2\)</span> el cambio correspondiente es de <span class="math inline">\(\Delta=-10-6=-16\)</span> unidades. Claramente, los efectos epistáticos pueden cambiar totalmente la configuración de los genotipos respecto a la aditividad o a la dominancia.</p>
+<p>Finalmente, en el cuadro siguiente le hemos agregado al cuadro de efectos aditivos un efecto de interacción <strong>aditivo x aditivo</strong>, sencillamente como el producto de los valores del efecto aditivo de los dos <em>loci</em> para cada par de genotipos (las funciones de interacción pueden ser infinitas, esta es una sola, elegida por sencilla para representar el fenómeno). El primer valor de cada celda corresponde al efecto aditivo y el segundo al <strong>efecto de epistasis</strong> del tipo <span class="math inline">\(I_{AA}\)</span>. Además de haberse alterado los valores de casi todas las celdas, el cambio entre celdas contiguas experimenta ahora algunos valores leves y otros abruptos, en los dos sentidos. Por ejemplo, pasar de <span class="math inline">\(A_1A_1/B_1B_1\)</span> a <span class="math inline">\(A_1A2/B_1B_1\)</span> significa solo <span class="math inline">\(\Delta=14-2=12\)</span> unidades, mientras que de <span class="math inline">\(A_1A_1/B_2B_2\)</span> a <span class="math inline">\(A_1A_2/B_2B_2\)</span> el cambio correspondiente es de <span class="math inline">\(\Delta=-6-(-2)=-4\)</span> unidades. Claramente, los efectos epistáticos pueden cambiar totalmente la configuración de los genotipos respecto a la aditividad o a la dominancia.</p>
 <p><br />
 </p>
 <table>
@@ -656,30 +656,30 @@ I=I_{AA}+I_{AD}+I_{DD}+I_{AAA}+I_{AAD}+...
 <tbody>
 <tr class="odd">
 <td align="left"><span class="math inline">\({B_1B_1}\)</span></td>
-<td align="center"><span class="math inline">\(6+8=8\)</span></td>
-<td align="center"><span class="math inline">\(2+4=6\)</span></td>
+<td align="center"><span class="math inline">\(6+8=14\)</span></td>
+<td align="center"><span class="math inline">\(2+0=2\)</span></td>
 <td align="center"><span class="math inline">\(-2-8=-10\)</span></td>
-<td align="center"><span class="math inline">\(1,333\)</span></td>
+<td align="center"><span class="math inline">\(2\)</span></td>
 </tr>
 <tr class="even">
 <td align="left"><span class="math inline">\({B_1B_2}\)</span></td>
 <td align="center"><span class="math inline">\(4-0=4\)</span></td>
-<td align="center"><span class="math inline">\(0\)</span></td>
+<td align="center"><span class="math inline">\(0+0\)</span></td>
 <td align="center"><span class="math inline">\(-4-0=-4\)</span></td>
 <td align="center"><span class="math inline">\(0\)</span></td>
 </tr>
 <tr class="odd">
 <td align="left"><span class="math inline">\({B_2B_2}\)</span></td>
-<td align="center"><span class="math inline">\(2-4=-2\)</span></td>
-<td align="center"><span class="math inline">\(-2-4=-6\)</span></td>
-<td align="center"><span class="math inline">\(-6+4=-2\)</span></td>
-<td align="center"><span class="math inline">\(-3,333\)</span></td>
+<td align="center"><span class="math inline">\(2-8=-6\)</span></td>
+<td align="center"><span class="math inline">\(-2+0=-2\)</span></td>
+<td align="center"><span class="math inline">\(-6+8=2\)</span></td>
+<td align="center"><span class="math inline">\(-2\)</span></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Promedio</strong></td>
-<td align="center"><span class="math inline">\(3,333\)</span></td>
+<td align="center"><span class="math inline">\(4\)</span></td>
 <td align="center"><span class="math inline">\(0\)</span></td>
-<td align="center"><span class="math inline">\(-5,333\)</span></td>
+<td align="center"><span class="math inline">\(-4\)</span></td>
 <td align="center"></td>
 </tr>
 </tbody>
@@ -752,14 +752,14 @@ Figura 8.3: Distribución de pesos en una población compuesta de tres genotipos
 <p><span class="math display">\[\begin{equation}
  {fr}(A_1A_1)=p^2=0,6^2=0,36 \\
  {fr}(A_1A_2)=2pq=2 \times 0,6 \times 0,4=0,48 \\
- {fr}(A_1A_1)=q^2=0,4^2=0,16
+ {fr}(A_2A_2)=q^2=0,4^2=0,16
 \end{equation}\]</span></p>
 <p>lo que se aprecia claramente por el área de cada curva en la figura. Si juntamos las tres curvas, es decir unimos las sub-poblaciones con distinto genotipo, entonces tenemos toda la población, representada por la curva negra. La media de la población general se encuentra representada por una línea continua de color negro, a la derecha de la línea rayada violeta que corresponde al genotipo heterocigoto. Finalmente, esta figura también muestra un aspecto interesante, que suele confundir a muchos cuando trabajamos con modelos lineales, por ejemplo. Pese a que las distribuciones de valores de los individuos pertenecientes a cada genotipo es normal y con la misma varianza, la distribución resultante de combinar los individuos de todos los genotipos <strong>no es normal</strong>. Esto no suele representar ningún problema cuando el modelo es infinitesimal porque no existe un número pequeño de clases, como en nuestro caso de la figura <a href="modelogenbas.html#eq:modgenbas1">(8.1)</a> y como cada clase está formada por diferentes combinaciones (suma) de contribuciones infinitesimales, entonces la distribución es aproximadamente normal en esos casos. En estadística, el supuesto de normalidad en modelos lineales (en ANOVA, por ejemplo) se refiere a la distribución de los residuos (es decir, luego de descontados los efectos del modelo), no de los datos originales.</p>
 <p>En la figura <a href="modelogenbas.html#fig:figura8p2">8.3</a> hemos colocado una línea vertical en el valor correspondiente a cada uno de los genotipos, pero hasta ahora no hemos mencionado de dónde salieron esos valores. Es decir, el <strong>test genético</strong> lo único que es capaz de decirme son los genotipos de cada animal al que le realizamos el ensayo, pero no puede decirme cuánto vale ese genotipo. ¿De dónde sale entonces esa información? Si consideramos que los valores de los genotipos son independientes de otro tipo de información genómica y que la distribución de valores <strong>fenotípicos</strong> alrededor de cada valor <strong>genotípico</strong> es la misma, una distribución normal producto de la <strong>variabilidad ambiental</strong>, entonces las <strong>medias de los fenotipos de cada clase</strong> se corresponderá con el consiguiente <strong>valor genotípico</strong>. Es decir, si se cumplen nuestros supuestos, entonces, usando los resultados de la ecuación <a href="modelogenbas.html#eq:modgenbas2">(8.7)</a>, tenemos que</p>
 <p><span class="math display" id="eq:modgenbas3">\[\begin{equation}
 \bar{P}_{11}=\mathbb{E}(P_{11})=\mathbb{E}[G_{11}+N(0,\sigma_E^2)]=\mathbb{E}[N(G_{11},\sigma_E^2)]= G_{11}\\
-\bar{P}_{12}=\mathbb{E}(P_{11})=\mathbb{E}[G_{12}+N(0,\sigma_E^2)]=\mathbb{E}[N(G_{12},\sigma_E^2)]= G_{12}\\
-\bar{P}_{22}=\mathbb{E}(P_{11})=\mathbb{E}[G_{22}+N(0,\sigma_E^2)]=\mathbb{E}[N(G_{22},\sigma_E^2)]= G_{22}
+\bar{P}_{12}=\mathbb{E}(P_{12})=\mathbb{E}[G_{12}+N(0,\sigma_E^2)]=\mathbb{E}[N(G_{12},\sigma_E^2)]= G_{12}\\
+\bar{P}_{22}=\mathbb{E}(P_{22})=\mathbb{E}[G_{22}+N(0,\sigma_E^2)]=\mathbb{E}[N(G_{22},\sigma_E^2)]= G_{22}
 \tag{8.8}
 \end{equation}\]</span></p>
 <p>Dicho de otra forma, si conocemos los pesos de cada animal y su genotipo, separamos a los animales por genotipo y calculamos el promedio de cada grupo, obteniendo entonces el valor esperado para ese genotipo, que asumimos se corresponde sin error al “verdadero” valor del mismo<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a>. Pasamos entonces, ahora, de manejarnos con una distribución de <strong>valores fenotípicos</strong> a un conjunto de 3 valores genotípicos. Antes de comenzar a trabajar con estos valores genotípicos, veamos si podemos reducir el número de parámetros de 3 a 2, de forma tal de simplificar nuestras ecuaciones futuras. De todas las transformaciones imaginables, posiblemente la más utilizada en los textos de genética cuantitativa es la que aparece representada en la figura <a href="modelogenbas.html#fig:modgenbas">8.4</a>. En la parte superior de la misma vemos representados los valores de los tres genotipos (<span class="math inline">\(G_{11}\)</span>, <span class="math inline">\(G_{12}\)</span>, <span class="math inline">\(G_{22}\)</span>), o lo que es lo mismo las medias de las clases fenotípicas (<span class="math inline">\(\bar{P}_{11}\)</span>, <span class="math inline">\(\bar{P}_{12}\)</span>, <span class="math inline">\(\bar{P}_{22}\)</span>) en la <strong>escala original</strong>, es decir, la escala en la que se tomó la medida. En nuestro caso, con los valores de la figura <a href="modelogenbas.html#fig:figura8p2">8.3</a>, <span class="math inline">\(G_{11}=180\)</span> Kg, <span class="math inline">\(G_{12}=160\)</span> Kg y <span class="math inline">\(G_{22}=120\)</span> Kg. También sobre la misma escala, podemos ahora identificar el <strong>punto medio entre los homocigotas</strong>, que llamaremos <span class="math inline">\(m\)</span> y cuyo valor está dado por</p>
@@ -841,9 +841,9 @@ m=\frac{G_{LL}+G_{FF}}{2}=\frac{43,3+40,7}{2}=42 \text{ Kg}
 \end{equation}\]</span></p>
 <p>Por lo tanto, los valores de los genotipos expresados en esta escala transformada serían</p>
 <p><span class="math display">\[\begin{equation}
-A_{FF}=G_{LL}-m=(43,3-42)\text{ Kg}=1,3 \text{ Kg}=a\\
-A_{FL}=G_{LL}-m=(41,4-42) \text{ Kg}=-0,6\text{ Kg}=d\\
-A_{LL}=G_{LL}-m=(40,7-42)\text{ Kg}=-1,3\text{ Kg}=-a
+A_{LL}=G_{LL}-m=(43,3-42)\text{ Kg}=1,3 \text{ Kg}=a\\
+A_{FL}=G_{FL}-m=(41,4-42) \text{ Kg}=-0,6\text{ Kg}=d\\
+A_{FF}=G_{FF}-m=(40,7-42)\text{ Kg}=-1,3\text{ Kg}=-a
 \end{equation}\]</span></p>
 <p>Con la misma idea, para la segunda característica tenemos</p>
 <p><span class="math display">\[\begin{equation}
@@ -1462,7 +1462,7 @@ Figura 8.9: Representación gráfica de los valores genotípicos (círculos azul
 <p>por lo que también el valor promedio del desvío de dominancia en nuestra población será cero. Esto no nos debería sorprender ya que por construcción, es decir, por propiedades del ajuste por mínimos cuadrados el desvío promedio de la recta es cero. Finalmente, un punto importante a entender es que también por construcción, bajo apareamientos al azar (es decir, equilibrio de Hardy-Weinberg) los valores reproductivos son ortogonales a los valores de desvío dominante. Dicho de otra forma, no existe correlación entre unos valores y los otros. Para demostrar hacemos la suma de los productos cruzados, multiplicado cada uno por su frecuencia correspondiente, es decir</p>
 <p><span class="math display" id="eq:ddom6">\[\begin{equation}
 p^2[(2q\alpha)(-2q^2d)]+2pq[(q-p)\alpha(2pqd)]+q^2[(-2p\alpha)(-2p^2d)]= \\
-=4p^2q^2d\alpha[-q+(q-p)-p]=4p^2q^2d\alpha [0]=0
+=4p^2q^2d\alpha[-q+(q-p)+p]=4p^2q^2d\alpha [0]=0
 \tag{8.41}
 \end{equation}\]</span></p>
 <p>o dicho de otra forma, no existe correlación entre los valores de cría de los genotipos y los desvíos de dominancia, que es lo que queríamos demostrar.</p>
