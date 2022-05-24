@@ -28,7 +28,7 @@
 <meta name="author" content="(Paola Gaiero)" />
 
 
-<meta name="date" content="2022-03-01" />
+<meta name="date" content="2022-05-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -616,17 +616,17 @@ subclases de lactancia presentan diferente media e igual varianza:</p>
 <p>Lo primero que tenemos que hacer es calcular los factores de corrección para cada clase (número de lactancia), lo que hacemos eligiendo una clase de referencia, restándole luego a la media de dicha clase la media de cada clase, es decir (si elegimos la segunda lactancia como referencia)</p>
 <p><br />
 <span class="math display">\[\begin{equation}
-\mathbf{a_1}= \bar y_0 - \bar y_i= 4481 − 3897 = 584\\
-\mathbf{a_2}= \bar y_0 - \bar y_i= 4481 − 4481 = 0  \\
-\mathbf{a_3}= \bar y_0 - \bar y_i= 4481 − 4740 = −259\\
+\mathbf{a_1}= \bar y_r - \bar y_1= 4481 − 3897 = 584\\
+\mathbf{a_2}= \bar y_r - \bar y_2= 4481 − 4481 = 0  \\
+\mathbf{a_3}= \bar y_r - \bar y_3= 4481 − 4740 = −259\\
 \end{equation}\]</span></p>
 <p>A partir de estos factores de corrección (poblacionales) debemos corregir cada registro individual, sumándole el factor de corrección que le corresponda. Por lo tanto, para cada una de las 5 vacas, la producción corregida será igual a:</p>
 <p><span class="math display">\[\begin{equation}
-\bar y_{I801}^*= \bar y_i - \bar a_i= 4000 + 584 = 4584  \text{ litros}\\
-\bar y_{J805}^*= \bar y_i - \bar a_i= 3500 + 584 = 4084  \text{ litros}\\
-\bar y_{K709}^*= \bar y_i - \bar a_i= 4900 + 0 = 4900  \text{ litros}\\
-\bar y_{L713}^*= \bar y_i - \bar a_i= 6000 + 0 = 6000  \text{ litros}\\
-\bar y_{M607}^*= \bar y_i - \bar a_i= 5600 + (−259) = 5341  \text{ litros}
+y_{I801}^*=  y_{I801} +  a_1= 4000 + 584 = 4584  \text{ litros}\\
+y_{J805}^*=  y_{J805} +  a_1= 3500 + 584 = 4084  \text{ litros}\\
+y_{K709}^*=  y_{K709} +  a_2= 4900 + 0 = 4900  \text{ litros}\\
+y_{L713}^*=  y_{L713} +  a_2= 6000 + 0 = 6000  \text{ litros}\\
+y_{M607}^*=  y_{M607} +  a_3= 5600 + (-259) = 5341  \text{ litros}\\
 \end{equation}\]</span></p>
 <p>Seleccionaríamos a la vaca <strong>L713</strong>, la cual presenta la mayor producción de leche corregida.</p>
 <p><br />
@@ -736,20 +736,20 @@ cada ternero, planteado como subclase de referencia a la edad de la madre de 4 a
 </p>
 <p>Lo primero que debemos hacer es nuevamente calcular los factores de corrección, en este caso multiplicativos. Para ello vamos a <strong>dividir</strong> la media de la clase de referencia entre el valor de la media de cada clase de <strong>edad de la madre</strong>, es decir</p>
 <p><span class="math display">\[\begin{equation}
-m_3=\frac{\mathrm{\bar y_0}}{\mathrm{\bar y_i}}=\frac{\mathrm{166}}{\mathrm{157}}= 1,06
+m_3=\frac{{\bar y_r}}{{\bar y_3}}=\frac{{166}}{{157}}= 1,06
 \end{equation}\]</span></p>
 <p><span class="math display">\[\begin{equation}
-m_4=\frac{\mathrm{\bar y_0}}{\mathrm{\bar y_i}}=\frac{\mathrm{166}}{\mathrm{166}}= 1,0
+m_4=\frac{{\bar y_r}}{{\bar y_4}}=\frac{{166}}{{166}}= 1,0
 \end{equation}\]</span></p>
 <p><span class="math display">\[\begin{equation}
-m_5=\frac{\mathrm{\bar y_0}}{\mathrm{\bar y_i}}=\frac{\mathrm{166}}{\mathrm{169}}= 0,98
+m_5=\frac{{\bar y_r}}{{\bar y_5}}=\frac{{166}}{{169}}= 0,98
 \end{equation}\]</span></p>
 <p>Luego, para tener los registros corregidos por el efecto de la edad de la madre alcanza con multiplicar el valor de cada registro por su correspondiente factor de corrección, es decir</p>
 <p><span class="math display">\[\begin{equation}
-\bar y_{P101}^*= \bar y_i * \bar m_i= 132 \times 1,06 = 140  \text{ kg}\\
-\bar y_{Q108}^*= \bar y_i * \bar m_i= 145 \times 1,06 = 154  \text{ kg}\\
-\bar y_{R114}^*= \bar y_i - \bar m_i= 140 \times 1 = 140  \text{ kg}\\
-\bar y_{T132}^*= \bar y_i - \bar m_i= 150 \times 0,98 = 147  \text{ kg}
+y_{P101}^*=  y_{P101} \times  m_3= 132 \times 1,06 = 140  \text{ kg}\\
+y_{Q108}^*=  y_{Q108} \times  m_3= 145 \times 1,06 = 154  \text{ kg}\\
+y_{R114}^*=  y_{R114} \times  m_4= 140 \times 1 = 140  \text{ kg}\\
+y_{T132}^*=  y_{T132} \times  m_5= 150 \times 0,98 = 147  \text{ kg}
 \end{equation}\]</span></p>
 <p>Seleccionaríamos al ternero <strong>Q108</strong>, el cual presenta el mayor peso al destete corregido.</p>
 <p><br />
