@@ -28,7 +28,7 @@
 <meta name="author" content="(Paola Gaiero)" />
 
 
-<meta name="date" content="2022-03-01" />
+<meta name="date" content="2022-05-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -569,7 +569,7 @@ D_t=(1-r)^t D_0 \approx e^{-rt} D_0
 <p><br />
 </p>
 <p>El segundo fenómeno que puede explicar fácilmente la correlación genética entre dos características es la <strong>pleiotropía</strong>. Existen muchas definiciones de pleiotropía ya que el concepto ha ido cambiando con el tiempo, pero básicamente es el efecto que un <em>locus</em> produce en más de una característica fenotípica, sea esta entendida en el sentido tradicional o en el extendido que incluye, por ejemplo, la expresión génica (el transcriptoma). En la figura <a href="correlacionada.html#fig:pleiotrop">12.1</a> se ilustra el mecanismo básico de la pleiotropía. La línea horizontal a trazos separa lo que sería lo determinado a nivel genómico de lo que observamos a nivel fenotípico (en el sentido tradicional, pesos, alturas, colores, diámetros de características, cantidad de productos, porcentaje de materias, etc.), aunque esta distinción no se aplica a los <strong>fenotipos de expresión génica</strong>.</p>
-<p>La característica fenotípica 1 se encuentra controlada desde el punto de vista genético por un solo gen, que es a su vez regulado por un regulador exclusivo para ese gen. Por lo tanto, <strong>desde el punto de vista genético</strong> existe razón para que la pleiotropía induzca una correlación de la característica 1 con cualquiera de las otras. En cambio, mientras que la <strong>característica 2</strong> está controlada desde el punto de vista genético por un solo gen, el <strong>gen 2</strong> con su propio regulador, <strong>la característica 3 está gobernada por dos genes</strong>, el <strong>gen 2</strong> y el <strong>gen 3</strong>. Esto hace que la expresión del <strong>gen 2</strong> controle, al menos parcialmente, las dos características. Sin duda, es una buena razón para esperar que esta causa en común genere una correlación (de origen genético) en los datos fenotípicos observados. Por último, las características 4 y 5 están cada una de ellas gobernadas por un solo gen, distinto, por que podríamos pensar que no hay razón para que exista pleiotropía. Sin embargo, ambos genes, el <strong>gen 4</strong> y el <strong>gen 5</strong> comparten un mismo regulador (además de la posibilidad de que tengan otros reguladores), por lo que la expresión de ambos genes será una función del mismo regulador y por lo tanto tendrán expresiones correlacionadas, lo que a su vez, posiblemente induzca una correlación a nivel fenotípico.</p>
+<p>La característica fenotípica 1 se encuentra controlada desde el punto de vista genético por un solo gen, que es a su vez regulado por un regulador exclusivo para ese gen. Por lo tanto, <strong>desde el punto de vista genético</strong> no existe razón para que la pleiotropía induzca una correlación de la característica 1 con cualquiera de las otras. En cambio, mientras que la <strong>característica 2</strong> está controlada desde el punto de vista genético por un solo gen, el <strong>gen 2</strong> con su propio regulador, <strong>la característica 3 está gobernada por dos genes</strong>, el <strong>gen 2</strong> y el <strong>gen 3</strong>. Esto hace que la expresión del <strong>gen 2</strong> controle, al menos parcialmente, las dos características. Sin duda, es una buena razón para esperar que esta causa en común genere una correlación (de origen genético) en los datos fenotípicos observados. Por último, las características 4 y 5 están cada una de ellas gobernadas por un solo gen, distinto, por que podríamos pensar que no hay razón para que exista pleiotropía. Sin embargo, ambos genes, el <strong>gen 4</strong> y el <strong>gen 5</strong> comparten un mismo regulador (además de la posibilidad de que tengan otros reguladores), por lo que la expresión de ambos genes será una función del mismo regulador y por lo tanto tendrán expresiones correlacionadas, lo que a su vez, posiblemente induzca una correlación a nivel fenotípico.</p>
 <p><br />
 </p>
 
@@ -1168,7 +1168,7 @@ RC_Y=i_X\ h_X\ r_{A_{XY}}\ \sigma_{A_{Y}}=i_X\ h_X\ r_{A_{XY}}\ h_Y\ \sigma_{P_{
 <hr />
 <div id="ejemplo-12.4" class="section level4 unnumbered">
 <h4>Ejemplo 12.4</h4>
-<p>La oveja galesa de montaña <strong>Balwen</strong> (<strong>Balwen Welsh Mountain</strong>), figura <a href="#fig:valwen"><strong>??</strong></a>, es una raza que se cría especialmente para carne. A fin de definir estrategias para mejorar su producción de lana, para estimar la correlación genética entre peso de vellón sucio (<strong>PVS</strong>) y peso de vellón limpio (<strong>PVL</strong>) se realizó un experimento de selección directa y selección indirecta para ambas características, donde se obtuvieron las siguiente respuestas en una generación:</p>
+<p>La oveja galesa de montaña <strong>Balwen</strong> (<strong>Balwen Welsh Mountain</strong>), figura <a href="correlacionada.html#fig:balwen">12.5</a>, es una raza que se cría especialmente para carne. A fin de definir estrategias para mejorar su producción de lana, para estimar la correlación genética entre peso de vellón sucio (<strong>PVS</strong>) y peso de vellón limpio (<strong>PVL</strong>) se realizó un experimento de selección directa y selección indirecta para ambas características, donde se obtuvieron las siguiente respuestas en una generación:</p>
 <p><br />
 </p>
 <table>
@@ -1227,7 +1227,8 @@ r^2_{A_{XY}}=\frac{RC_X}{R_X}\frac{RC_Y}{R_Y}
 \end{equation}\]</span></p>
 <p>Sustituyendo los valores que tenemos en la tabla, si llamamos <span class="math inline">\(X\)</span> a <strong>PVL</strong> e <span class="math inline">\(Y\)</span> a <strong>PVS</strong>, tenemos entonces que</p>
 <p><span class="math display">\[\begin{equation}
-r^2_{A_{XY}}=\frac{0,084\text{ kg}}{0,113\text{ kg}}\frac{0,082\text{ kg}}{0,101\text{ kg}}=0,6035
+r^2_{A_{XY}}=\frac{0,084\text{ kg}}{0,113\text{ kg}}\frac{0,082\text{ kg}}{0,101\text{ kg}}=0,6035\\
+r_{A_{XY}}=\sqrt{r^2_{A_{XY}}}=\sqrt{0,6035}=0,7769
 \end{equation}\]</span></p>
 <p>que es una correlación genética positiva y mediana</p>
 <p><br />
@@ -1453,7 +1454,7 @@ r_{E_{12}}=\frac{r_{P_{12}}-h_1 h_2 r_{A_{12}}}{e_1e_2}=\frac{0,4906-(0,6364 \ti
 <ul>
 <li><p>El procedimiento para <strong>obtener las correlaciones fenotípica</strong>s será igual al descrito más arriba para las correlaciones genéticas, pero ahora usando la matriz <span class="math inline">\(\mathbf{P}\)</span> en lugar de la matriz <span class="math inline">\(\mathbf{G}\)</span>.</p></li>
 <li><p>Para calcualar las <strong>heredabilidades</strong> sólo haremos uso de las diagonales de ambas matrices, tal que para la característica <span class="math inline">\(i\)</span> la misma sería <span class="math inline">\({h^2_i=\frac{Var(A_i)}{Var(P_i)}=\frac{\sigma^2_{A_{i}}}{\sigma^2_{P_{i}}}}\)</span>. Por lo tanto, el procedimiento para calcular nuestra estimación de la heredabilidad de cada característica será dividir cada elemento de la diagonal de <span class="math inline">\(\mathbf{G}\)</span> entre el correspondiente elemento de la diagonal en la matriz <span class="math inline">\(\mathbf{P}\)</span>, es decir <span class="math inline">\({h^2_i}=\frac{G_{i,i}}{P_{i,i}}\)</span></p></li>
-<li><p>Recordando la relación entre las correlaciones fenotípicas que vimos previamente, odemos obtener tam- bién la correlación ambiental (más allá de que a veces tenemos la matriz <span class="math inline">\(\mathbf{E}\)</span> disponible) a partir de: <span class="math inline">\({r_{E_{i,j}}=\frac{r_{P_{i,j}}-h_i\cdot h_j\cdot r_{A_{i,j}}}{\sqrt{(1-h^2_i)(1-h^2_j)}}}\)</span></p></li>
+<li><p>Recordando la relación entre las correlaciones fenotípicas que vimos previamente, podemos obtener también la correlación ambiental (más allá de que a veces tenemos la matriz <span class="math inline">\(\mathbf{E}\)</span> disponible) a partir de: <span class="math inline">\({r_{E_{i,j}}=\frac{r_{P_{i,j}}-h_i\cdot h_j\cdot r_{A_{i,j}}}{\sqrt{(1-h^2_i)(1-h^2_j)}}}\)</span></p></li>
 </ul>
 </div>
 <hr />
