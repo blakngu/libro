@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 5 Dinámica de 2 loci | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
   <meta name="description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 5 Dinámica de 2 loci | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
@@ -28,7 +27,7 @@
 <meta name="author" content="(Paola Gaiero)" />
 
 
-<meta name="date" content="2022-04-05" />
+<meta name="date" content="2023-04-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -37,8 +36,8 @@
   
 <link rel="prev" href="seleccion.html"/>
 <link rel="next" href="aparnoalazar.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -54,9 +53,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
@@ -212,7 +211,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="dosloci.html"><a href="dosloci.html#selección-en-modelos-de-dos-loci"><i class="fa fa-check"></i><b>5.4</b> Selección en modelos de dos <em>loci</em></a>
 <ul>
-<li><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento">Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento"><i class="fa fa-check"></i>Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
 </ul></li>
 <li class="chapter" data-level="5.5" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i><b>5.5</b> Arrastre genético (“genetic hitchhiking” o “genetic draft”)</a></li>
 <li class="chapter" data-level="5.6" data-path="dosloci.html"><a href="dosloci.html#causas-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i><b>5.6</b> Causas del desequilibrio de ligamiento</a>
@@ -276,7 +275,7 @@ div.csl-indent {
 <li class="chapter" data-level="8.7" data-path="modelogenbas.html"><a href="modelogenbas.html#interacción-genotipo-x-ambiente"><i class="fa fa-check"></i><b>8.7</b> Interacción Genotipo x Ambiente</a></li>
 <li class="chapter" data-level="8.8" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-en-el-modelo-genético-básico"><i class="fa fa-check"></i><b>8.8</b> La Varianza en el modelo genético básico</a>
 <ul>
-<li><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos">Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos"><i class="fa fa-check"></i>Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
 <li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-ambiental"><i class="fa fa-check"></i>La varianza ambiental</a></li>
 <li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-de-la-interacción"><i class="fa fa-check"></i>La Varianza de la interacción</a></li>
 </ul></li>
@@ -352,7 +351,7 @@ div.csl-indent {
 <li class="chapter" data-level="11.3" data-path="selartifI.html"><a href="selartifI.html#diferencial-de-selección-e-intensidad-de-selección"><i class="fa fa-check"></i><b>11.3</b> Diferencial de selección e intensidad de selección</a></li>
 <li class="chapter" data-level="11.4" data-path="selartifI.html"><a href="selartifI.html#intensidad-de-selección-y-proporción-seleccionada"><i class="fa fa-check"></i><b>11.4</b> Intensidad de selección y proporción seleccionada</a>
 <ul>
-<li><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp">¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp"><i class="fa fa-check"></i>¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
 <li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#la-relación-entre-diferentes-formas-de-calcular-la-intensidad-de-selección"><i class="fa fa-check"></i>La relación entre diferentes formas de calcular la intensidad de selección</a></li>
 </ul></li>
 <li class="chapter" data-level="11.5" data-path="selartifI.html"><a href="selartifI.html#intervalo-generacional"><i class="fa fa-check"></i><b>11.5</b> Intervalo generacional</a></li>
@@ -476,12 +475,12 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="dosloci" class="section level1" number="5">
-<h1><span class="header-section-number">Capítulo 5</span> Dinámica de 2 <em>loci</em></h1>
+<div id="dosloci" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Capítulo 5</span> Dinámica de 2 <em>loci</em><a href="dosloci.html#dosloci" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>En los capítulos anteriores hemos sentado las bases matemáticas del análisis de la evolución de las frecuencias alélicas en la poblaciones, considerando tanto los fenómenos sistemáticos como los estocásticos. Sin embargo, hasta el momento nuestro modelo fue simplificado en extremo y el tratamiento quedó reducido casi siempre a un <em>locus</em> con un par de alelos. En principio, podríamos pensar que para el tratamiento de más <em>loci</em> alcanzaría con considerar para cada uno de ellos un modelo como el de un <em>locus</em> con dos alelos, como los que hemos trabajado. Eso significaría que nuestros <em>loci</em> son todos independientes unos de otros. Desafortunadamente para el modelado matemático, aunque afortunadamente para nosotros, la meiosis produce un <em>barajado</em> de los alelos en diferentes <em>loci</em>, barajado que puede ocurrrir en varios puntos del genoma. Obviamente, la probabilidad de que esos eventos discretos que producen el intercambio de cromátidas ocurran entre dos <em>loci</em> en particular es una función de la <strong>distancia de mapeo</strong> entre ellos (cuanto más lejos, menor la probabilidad de que ese evento ocurra entre los dos <em>loci</em>).</p>
-<p>Es momento entonces de comenzar a extender nuestros modelos a la interacción con otro <em>locus</em> cercano y analizar el tipo de dinámicas que pueden surgir de esta interacción. En general, aún los modelos más simplificados de interacción entre dos <em>loci</em> agregan una complejidad importante al análisis, por lo que nos limitaremos a tratar analíticamente los casos más sencillos, mientras que recurriremos a aproximaciones basadas en el modelado computacional en aquellos casos que se complique más allá de nuestras posibilidades. Una nota de advertencia antes de empezar: gran parte del material de este capítulo se encuentra basado en <span class="citation"><a href="#ref-Gillespie2004" role="doc-biblioref">John H. Gillespie</a> (<a href="#ref-Gillespie2004" role="doc-biblioref">2004</a>)</span> que es uno de los pocos textos que lo trata como un tema mereciendo un capítulo, la mayoría de ellos apenas considerándolo en alguna sección. Si bien la decisión de qué temas tratar y su profundidad es algo arbitraria, las posibles consecuencias evolutivas de los fenómenos asociados no son despreciables y por lo tanto entendimos que merece este tratamiento preferencial.</p>
-<div id="desequilibrio-de-ligamiento-y-recombinación" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Desequilibrio de ligamiento y recombinación</h2>
+<p>Es momento entonces de comenzar a extender nuestros modelos a la interacción con otro <em>locus</em> cercano y analizar el tipo de dinámicas que pueden surgir de esta interacción. En general, aún los modelos más simplificados de interacción entre dos <em>loci</em> agregan una complejidad importante al análisis, por lo que nos limitaremos a tratar analíticamente los casos más sencillos, mientras que recurriremos a aproximaciones basadas en el modelado computacional en aquellos casos que se complique más allá de nuestras posibilidades. Una nota de advertencia antes de empezar: gran parte del material de este capítulo se encuentra basado en <span class="citation">John H. Gillespie (<a href="#ref-Gillespie2004" role="doc-biblioref">2004</a>)</span> que es uno de los pocos textos que lo trata como un tema mereciendo un capítulo, la mayoría de ellos apenas considerándolo en alguna sección. Si bien la decisión de qué temas tratar y su profundidad es algo arbitraria, las posibles consecuencias evolutivas de los fenómenos asociados no son despreciables y por lo tanto entendimos que merece este tratamiento preferencial.</p>
+<div id="desequilibrio-de-ligamiento-y-recombinación" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Desequilibrio de ligamiento y recombinación<a href="dosloci.html#desequilibrio-de-ligamiento-y-recombinación" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En los organismos diploides y con ploidías más altas, durante la meiosis se produce un fenómeno fundamental para la evolución: la <strong>recombinación</strong>. Este proceso se encuentra esquematizado en la figura <a href="dosloci.html#fig:recombinacion">5.1</a>. En los organismos diploides todas las células nucleadas, con excepción de los gametos, cuentan con una dotación aproximadamente duplicada, la mitad proveniente de su <strong>madre</strong> y la otra mitad de su <strong>padre</strong>. Como recordarás del curso de <strong>Genética I</strong>, durante la <strong>meiosis I</strong> ocurre ocasionalmente (frecuentemente) la unión física de los cromosomas homólogos en algunos puntos (por ejemplo, en mamíferos usualmente del orden del número de brazos cromosómicos) llamados <strong>quiasmas</strong> y mediante un proceso complejo se produce un intercambio de cromátidas no-hermanas. Esto lleva a combinar de una manera diferente los alelos respecto a su arreglo original <strong>madre-padre</strong>, teniendo ahora fragmentos de uno y de otro en los gametos recombinados. Este es un proceso aleatorio y los lugares donde ocurren los quiasmas también lo son, aunque no necesariamente con la misma probabilidad para cada punto o región del genoma. La importancia evolutiva de este fenómeno es obvia: la posibilidad de combinar en forma diferente alelos beneficiosos surgidos en diferentes lugares del mismo cromosoma nos aporta tanto en el efecto aditivo de los mismos como en el efecto agregado de la combinación; este último (estadísticamente el efecto de la <strong>interacción</strong> entre <em>loci</em>), es desde el punto de vista genético la <strong>epistasis</strong>, algo que veremos en el capítulo <a href="modelogenbas.html#el-modelo-genético-básico">El Modelo Genético Básico</a>.</p>
 
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:recombinacion"></span>
@@ -594,6 +593,13 @@ x_2=x_2(x_1+x_2+x_3+x_4)=x_2(1)=x_2\\
 <p>que es lo que queríamos verificar. El procedimiento es el mismo para el resto de las ecuaciones. Resumiento, las formas de expresar las frecuencias de los gametos aparecen en el siguiente cuadro que resume las ecuaciones <a href="dosloci.html#eq:deslig6">(5.7)</a> y <a href="dosloci.html#eq:deslig7">(5.8)</a>.<br />
 </p>
 <table>
+<colgroup>
+<col width="21%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="18%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Gametos</th>
@@ -634,7 +640,7 @@ x_2=x_2(x_1+x_2+x_3+x_4)=x_2(1)=x_2\\
 <p>Los resultados de <a href="dosloci.html#eq:desligp1">(5.17)</a> implican que, agrupándolos por condición,</p>
 <p><span class="math display" id="eq:desligp2">\[\begin{equation}
 D_{mín}=\text{máximo}(-p_1p_2,-q_1q_2) \\
-D_{máx}=\text{mínimo}(p_1q_2,q_1p_2) 
+D_{máx}=\text{mínimo}(p_1q_2,q_1p_2)
 \tag{5.18}
 \end{equation}\]</span></p>
 <p>Claramente, <span class="math inline">\(D_{máx}\)</span> y <span class="math inline">\(D_{mín}\)</span> dependen ambas de las frecuencias de los alelos, <span class="math inline">\(_1\)</span> y <span class="math inline">\(p_2\)</span>, que son específicas a cada situación. Sin embargo, podríamos variar <span class="math inline">\(p_1\)</span>y <span class="math inline">\(p_2\)</span> a nuestro antojo para ver cuáles son el máximo y el mínimo teóricos de <span class="math inline">\(D\)</span>. La función bivariada (porque depende de <span class="math inline">\(p_1\)</span> y <span class="math inline">\(p_2\)</span>) para <span class="math inline">\(D_{máx}\)</span> tiene un máximo cuando <span class="math inline">\(p_1=\frac{1}{2}=q_1; p_2=\frac{1}{2}=q_2\)</span> y el valor es entonces <span class="math inline">\(D_{máx}=0,25\)</span>, como se aprecia en la figura <a href="dosloci.html#fig:superficieDmax">5.3</a>. A su vez, para <span class="math inline">\(D_{mín}\)</span> su valor mínimo teórico es también cuando <span class="math inline">\(p_1=\frac{1}{2}=q_1; p_2=\frac{1}{2}=q_2\)</span> y equivale a <span class="math inline">\(D_{mín}=-0,25\)</span>. En palabras, el valor absoluto del desequilibrio de ligamiento <strong>puede</strong> ser máximo cuando las frecuencias de los dos alelos son <span class="math inline">\(0,5\)</span> en ambos <em>loci</em>.</p>
@@ -648,8 +654,8 @@ Figura 5.3: Superficie para el valor de <span class="math inline">\(D_{máx}\)</
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-5.1" class="section level4 unnumbered">
-<h4>Ejemplo 5.1</h4>
+<div id="ejemplo-5.1" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 5.1<a href="dosloci.html#ejemplo-5.1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>En un análisis genómico de dos <em>loci</em> (<strong>A</strong> y <strong>B</strong>) físicamente cercanos en el mismo cromosoma autosomal, ambos con dos alelos, de una especie diploide se encontraron los haplotipos posibles con las siguientes frecuencias</p>
 <p><span class="math display">\[\begin{equation}
 \bf{A_1B_1}=300\\
@@ -685,6 +691,13 @@ x_4=\frac{N_4}{N}=\frac{280}{980} = 0,286
 <p>Ahora, podemos armar un cuadro con las frecuencias esperadas y observadas<br />
 </p>
 <table>
+<colgroup>
+<col width="23%" />
+<col width="19%" />
+<col width="19%" />
+<col width="19%" />
+<col width="18%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Gametos</th>
@@ -729,7 +742,7 @@ D_{máx}=\text{mínimo}(0,1926 ; 0,3146) = 0,1926
 <p><br />
 </p>
 <hr />
-<p>El conteo de los distintos gametos está influido por el azar y por lo tanto lo podemos considerar producto de alguna distribución de probabilidad subyacente. A partir de un conteo de haplotipos (o gametos, por ejemplo) normalmente vamos a derivar no solo las frecuencias de cada uno de ellos, sino que también de los alelos en los distintos <em>loci</em>. En general, al tratarse de un muestreo aleatorio siempre vamos a encontrar valores de <span class="math inline">\(D\)</span> no exactamente iguales a cero, aunque estas diferencias puedan ser mínimas. Eso nos lleva a preguntarnos cómo podemos distinguir cuáles diferencias son estadísticamente significativas, es decir, que si muestreamos toda la población (o con <span class="math inline">\(N \to \infty\)</span>) detectemos aquellas que “realmente” existen. Para eso debemos antes que nada definir que cuál es nuestra hipótesis nula a evaluar, o dicho de otra forma, que esperaríamos nosotros “por defecto.”</p>
+<p>El conteo de los distintos gametos está influido por el azar y por lo tanto lo podemos considerar producto de alguna distribución de probabilidad subyacente. A partir de un conteo de haplotipos (o gametos, por ejemplo) normalmente vamos a derivar no solo las frecuencias de cada uno de ellos, sino que también de los alelos en los distintos <em>loci</em>. En general, al tratarse de un muestreo aleatorio siempre vamos a encontrar valores de <span class="math inline">\(D\)</span> no exactamente iguales a cero, aunque estas diferencias puedan ser mínimas. Eso nos lleva a preguntarnos cómo podemos distinguir cuáles diferencias son estadísticamente significativas, es decir, que si muestreamos toda la población (o con <span class="math inline">\(N \to \infty\)</span>) detectemos aquellas que “realmente” existen. Para eso debemos antes que nada definir que cuál es nuestra hipótesis nula a evaluar, o dicho de otra forma, que esperaríamos nosotros “por defecto”.</p>
 <p>En el caso de desequilibrio de ligamiento, la hipótesis nula usual es que los <em>loci</em> considerados se encuentran en equilibrio, o lo que es equivalente, que las frecuencias de los alelos en cada <em>locus</em> son independientes de los resultados en otros <em>loci</em>. Por ejemplo, para el caso de dos <em>loci</em> con dos alelos cada uno, usando la notación anterior, la frecuencia esperada para un gameto <span class="math inline">\(A_1B_1\)</span> sería el producto de la frecuencia de <span class="math inline">\(A_1\)</span> en el primer <em>locus</em> (<span class="math inline">\(p_1\)</span>) por la frecuencia de <span class="math inline">\(B_1\)</span> en el segundo <em>locus</em> (<span class="math inline">\(p_2\)</span>), es decir, bajo la hipótesis nula <span class="math inline">\(\mathbb{E}(x_1)=p_1p_2\)</span>. Dado un conteo total de <span class="math inline">\(N\)</span> haplotipos (o gametos), entonces el número esperado de los mismos que sean <span class="math inline">\(A_1B_1\)</span> es <span class="math inline">\(\mathbb{E}(n_1)=p_1p_2N\)</span>. Claramente, siguiendo esta lógica, el conteo esperado (bajo nuestra hipótesis nula) para los otros gametos será <span class="math inline">\(\mathbb{E}(n_2)=p_1q_2N\)</span>, <span class="math inline">\(\mathbb{E}(n_3)=q_1p_2N\)</span> y <span class="math inline">\(\mathbb{E}(n_4)=q_1q_2N\)</span>, con <span class="math inline">\(n_1+n_2+n_3+n_4=N\)</span>. Los conteos observados para nuestros haplotipos (gametos) los hemos notado como <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, <span class="math inline">\(x_3\)</span> y <span class="math inline">\(x_4\)</span> respectivamente, por lo que tenemos un conteo observado y uno esperado. Si recuerdas de los cursos de estadística, las anteriores parecen ser las condiciones para la aplicación de un test de independencia. Más aún seguramente recuerdes de esos mismos cursos el test de chi-cuadrado (<span class="math inline">\(\chi^2\)</span>), cuya fórmula lucía</p>
 <p><span class="math display" id="eq:chicuad1">\[\begin{equation}
 \chi_{gl}^2=\sum_i \frac{(O_i-E_i)^2}{E_i}
@@ -738,6 +751,12 @@ D_{máx}=\text{mínimo}(0,1926 ; 0,3146) = 0,1926
 <p>con <span class="math inline">\(gl\)</span> los grados de libertad del test, <span class="math inline">\(O_i\)</span> el conteo observado para la “celda” <span class="math inline">\(i\)</span> y <span class="math inline">\(E_i\)</span> el esperado para esa misma celda. En nuestro caso, podemos arreglar los datos que observamos en una tabla como la siguiente<br />
 </p>
 <table>
+<colgroup>
+<col width="23%" />
+<col width="22%" />
+<col width="25%" />
+<col width="28%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Gametos</th>
@@ -773,6 +792,12 @@ D_{máx}=\text{mínimo}(0,1926 ; 0,3146) = 0,1926
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="23%" />
+<col width="22%" />
+<col width="25%" />
+<col width="28%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Gametos</th>
@@ -791,7 +816,7 @@ D_{máx}=\text{mínimo}(0,1926 ; 0,3146) = 0,1926
 <tr class="even">
 <td align="left"><span class="math inline">\(\bf{A_2}\)</span></td>
 <td align="center"><span class="math inline">\(q_1p_2N\)</span></td>
-<td align="center"><span class="math inline">\(p_2q_2N\)</span></td>
+<td align="center"><span class="math inline">\(q_1q_2N\)</span></td>
 <td align="center"><span class="math inline">\(q_1N\)</span></td>
 </tr>
 <tr class="odd">
@@ -812,12 +837,18 @@ D_{máx}=\text{mínimo}(0,1926 ; 0,3146) = 0,1926
 <p>donde <span class="math inline">\(m_i, i=1,2\)</span> y <span class="math inline">\(m_j, j=1,2\)</span> son los conteos marginales de filas y columnas respectivamente. En una tabla de 2x2 como la que estamos trabajando, los grados de libertad son <span class="math inline">\(gl=2\)</span>x<span class="math inline">\(2=4-1=3\)</span>, menos <span class="math inline">\(1\)</span> para estimar <span class="math inline">\(p_1\)</span> (<span class="math inline">\(3-1=2\)</span>), menos otro grado de libertad para estimar <span class="math inline">\(p_2\)</span> (<span class="math inline">\(2-1=1\)</span>), por lo que <span class="math inline">\(gl=1\)</span>, con lo que ya tenemos casi todo para nuestro <strong>test de independencia</strong>. Lo único que nos estaría faltando es definir el valor umbral para <span class="math inline">\(p\)</span> que vamos a usar para determinar si la diferencia observada es estadísticamente significativa (a veces conocido como <span class="math inline">\(\alpha\)</span>).</p>
 <hr />
 </div>
-<div id="ejemplo-5.2" class="section level4 unnumbered">
-<h4>Ejemplo 5.2</h4>
+<div id="ejemplo-5.2" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 5.2<a href="dosloci.html#ejemplo-5.2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Con los datos del <a href="dosloci.html#ejemplo-5.1">Ejemplo 5.1</a> determinar si el desequilibrio de ligamiento observado es estadísticamente significativo al valor de <span class="math inline">\(\alpha=1\%\)</span>.</p>
 <p>Ordenando los haplotipos observados en una tabla tenemos<br />
 </p>
 <table>
+<colgroup>
+<col width="24%" />
+<col width="23%" />
+<col width="25%" />
+<col width="26%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Gametos</th>
@@ -850,6 +881,12 @@ D_{máx}=\text{mínimo}(0,1926 ; 0,3146) = 0,1926
 <p><br />
 El valor esperado para la celda <span class="math inline">\(i,j\)</span> podemos calcularlos de acuerdo a <span class="math inline">\(E_{i,j}=\frac{m_1*m_j}{N}\)</span>. Por ejemplo, para el haplotipo <span class="math inline">\(A_1B_1\)</span> sería <span class="math inline">\(E_{1,1}=\frac{440*560}{980}=251,43\)</span> Por lo tanto, si lo calculamos para las celdas restantes, los esperados serían</p>
 <table>
+<colgroup>
+<col width="24%" />
+<col width="23%" />
+<col width="25%" />
+<col width="26%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Gametos</th>
@@ -914,14 +951,14 @@ x_4=q_1q_2+D
 </ul>
 <p><span class="math display">\[\begin{equation}
 D_{mín}=\text{máximo}(-p_1p_2,-q_1q_2) \\
-D_{máx}=\text{mínimo}(p_1q_2,q_1p_2) 
+D_{máx}=\text{mínimo}(p_1q_2,q_1p_2)
 \end{equation}\]</span></p>
 </div>
 <hr />
 </div>
 </div>
-<div id="la-evolución-en-el-tiempo-del-desequilibrio-de-ligamiento" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> La evolución en el tiempo del desequilibrio de ligamiento</h2>
+<div id="la-evolución-en-el-tiempo-del-desequilibrio-de-ligamiento" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> La evolución en el tiempo del desequilibrio de ligamiento<a href="dosloci.html#la-evolución-en-el-tiempo-del-desequilibrio-de-ligamiento" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A esta altura podemos preguntarnos cómo evolucionará el desequilibrio de ligamiento con el tiempo, en nuestro caso en generaciones. Para eso podemos ver lo que ocurre en una generación. Si llamamos con <span class="math inline">\(x&#39;_1\)</span> a la frecuencia del gameto <span class="math inline">\(A_1B_1\)</span> en la siguiente generación, entonces de acuerdo a lo la ecuación <a href="dosloci.html#eq:deslig6">(5.7)</a> (poniendo “primas” donde corresponda)</p>
 <p><span class="math display" id="eq:deslig16">\[\begin{equation}
 x&#39;_1=p&#39;_1p&#39;_2+D&#39;=(1-r)(p_1p_2+D)+rp_1p_2
@@ -972,8 +1009,19 @@ D_t=D_0 f=(1-r)^t D_0 \therefore f=(1-r)^t
 \tag{5.27}
 \end{equation}\]</span></p>
 <p>El resultado de aplicar la ecuación <a href="dosloci.html#eq:deslig22">(5.27)</a> a distintas combinaciones de la fracción <span class="math inline">\(f=\frac{D_t}{D_0}\)</span> y <span class="math inline">\(r\)</span> se puede apreciar en la tabla <a href="dosloci.html#tab:tablaDtr">5.1</a>. Claramente, a medida de que disminuye la fracción de gametos recombinantes <span class="math inline">\(r\)</span> (de izquierda a derecha en la tabla), mayor se hace el número de generaciones necesarias para alcanzar una fracción determinada <span class="math inline">\(f\)</span>. Por ejemplo, mientras que para reducir el desequilibrio de ligamiento inicial a la mitad con un <span class="math inline">\(r=0,50\)</span> se precisa una generación, para lograrlo con un <span class="math inline">\(r=0,01\)</span> se precisan <span class="math inline">\(\approx 69\)</span> generaciones.</p>
-<table>
+<table style="width:100%;">
 <caption><span id="tab:tablaDtr">Tabla 5.1: </span>Número de generaciones requeridas para alcanzar una fracción del desequilibrio de ligamiento inicial (“f”), de acuerdo a la fracción recombinante (“r”).</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -1120,12 +1168,12 @@ t=\frac{\ln f}{-r}
 \end{equation}\]</span></p>
 </div>
 </div>
-<div id="otras-medidas-de-asociación" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> Otras medidas de asociación</h2>
+<div id="otras-medidas-de-asociación" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Otras medidas de asociación<a href="dosloci.html#otras-medidas-de-asociación" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Como vimos previamente, ecuación <a href="dosloci.html#eq:desligp2">(5.18)</a> el rango de valores posibles de <span class="math inline">\(D\)</span> es claramente dependiente de las frecuencias de los alelos en ambos <em>loci</em>, ya que se encuentran dadas por</p>
 <p><span class="math display">\[\begin{equation}
 D_{mín}=\text{máximo}(-p_1p_2,-q_1q_2) \\
-D_{máx}=\text{mínimo}(p_1q_2,q_1p_2) 
+D_{máx}=\text{mínimo}(p_1q_2,q_1p_2)
 \end{equation}\]</span></p>
 <p>Una alternativa para hacer <span class="math inline">\(D\)</span> independiente de las frecuencias es dividir su valor por su máximo (mínimo) valor posible en relación a las frecuencias (dependiendo del signo el uso de <span class="math inline">\(D_{máx}\)</span> o <span class="math inline">\(D_{mín}\)</span>), es decir</p>
 <p><span class="math display" id="eq:otrasmedas2">\[\begin{equation}
@@ -1141,8 +1189,8 @@ r^2=\frac{D^2}{p_1q_1p_2q_2}
 \end{equation}\]</span></p>
 <p>Es importante tener en cuenta que acá <span class="math inline">\(r\)</span> <strong>no se refiere a la tasa de recombinación</strong> para lo que también usamos <span class="math inline">\(r\)</span> en secciones previas. <span class="math inline">\(r^2\)</span> es el cuadrado del coeficiente de correlación de Pearson, a veces llamado el coeficiente de determinación, que recordarás de los cursos de estadística. En nuestro contexto <span class="math inline">\(r=\sqrt{r^2}\)</span> es la correlación entre estados alélicos dentro del mismo gameto. Por otro lado, <span class="math inline">\(r^2\)</span> es útil para el cálculo de <span class="math inline">\(\chi^2\)</span> a partir de las frecuencias de haplotipos ya que el valor numérico que usamos en el test es igual a <span class="math inline">\(r^2N\)</span>. Igual que para <span class="math inline">\(D&#39;\)</span>, <span class="math inline">\(0 \leqslant r^2 \leqslant 1\)</span>, ya que se trata del cuadrado del coeficiente de correlación (que por definición está limitado a <span class="math inline">\(-1 \leqslant r \leqslant 1\)</span>). Tanto <span class="math inline">\(D&#39;\)</span> como <span class="math inline">\(r^2\)</span> tienen signo positivo por definición, por lo que desafortunadamente no es posible tener el sentido del desequilibrio a partir de ellos (pero si a partir de <span class="math inline">\(D\)</span>, del que ambos parten usualmente).</p>
 <hr />
-<div id="ejemplo-5.3" class="section level3 unnumbered">
-<h3>Ejemplo 5.3</h3>
+<div id="ejemplo-5.3" class="section level3 unnumbered hasAnchor">
+<h3>Ejemplo 5.3<a href="dosloci.html#ejemplo-5.3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A partir del resultado <span class="math inline">\(\chi^2=r^2N\)</span> calcular el valor de este estadístico con los datos del <a href="dosloci.html#ejemplo-5.1">Ejemplo 5.1</a>.</p>
 <p>Usando las frecuencias calculadas para <span class="math inline">\(p_1,q_1, p_2, q_2\)</span> y el valor de <span class="math inline">\(D\)</span> del ejemplo, sustituyendo, tenemos</p>
 <p><span class="math display">\[\begin{equation}
@@ -1160,10 +1208,10 @@ r^2=\frac{D^2}{p_1q_1p_2q_2}
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:Dprimar2"></span>
 <img src="ApuntesGeneticaII_files/figure-html/Dprimar2-1.png" alt="Relación entre los estadísticos \(D&#39;\) y \(r^2\) para realizaciones al azar de los 4 haplotipos en dos loci con dos alelos. Mientras que para valores bajos de \(r^2\) es posible encontrar cualquier valor de \(D&#39;\), no ocurre lo mismo en el sentido contrario (valores bajos de \(D&#39;\) implican valores más bajos de \(r^2\)). Realización propia sobre idea en Hartl and Clark (2007)." width="80%" />
 <p class="caption">
-Figura 5.6: Relación entre los estadísticos <span class="math inline">\(D&#39;\)</span> y <span class="math inline">\(r^2\)</span> para realizaciones al azar de los 4 haplotipos en dos <em>loci</em> con dos alelos. Mientras que para valores bajos de <span class="math inline">\(r^2\)</span> es posible encontrar cualquier valor de <span class="math inline">\(D&#39;\)</span>, no ocurre lo mismo en el sentido contrario (valores bajos de <span class="math inline">\(D&#39;\)</span> implican valores más bajos de <span class="math inline">\(r^2\)</span>). Realización propia sobre idea en <span class="citation"><a href="#ref-HartlClark2007" role="doc-biblioref">Hartl and Clark</a> (<a href="#ref-HartlClark2007" role="doc-biblioref">2007</a>)</span>.
+Figura 5.6: Relación entre los estadísticos <span class="math inline">\(D&#39;\)</span> y <span class="math inline">\(r^2\)</span> para realizaciones al azar de los 4 haplotipos en dos <em>loci</em> con dos alelos. Mientras que para valores bajos de <span class="math inline">\(r^2\)</span> es posible encontrar cualquier valor de <span class="math inline">\(D&#39;\)</span>, no ocurre lo mismo en el sentido contrario (valores bajos de <span class="math inline">\(D&#39;\)</span> implican valores más bajos de <span class="math inline">\(r^2\)</span>). Realización propia sobre idea en <span class="citation">Hartl and Clark (<a href="#ref-HartlClark2007" role="doc-biblioref">2007</a>)</span>.
 </p>
 </div>
-<p>Una diferencia importante entre el estadístico <span class="math inline">\(D&#39;\)</span> y el <span class="math inline">\(r^2\)</span> tiene que ver con la afectación de ambos frente a la historia que produce el desequilibrio de ligamiento. Mientras que <span class="math inline">\(r^2\)</span> es relativamente sensible al momento en que, por ejemplo, aparece una nueva variante, <span class="math inline">\(D&#39;\)</span> es relativamente independiente y su principal dependencia es la tasa de recombinación. Por ejemplo, un alelo que entra “temprano” en la historia evolutiva de la asociación tendrá, a medida de que pase el tiempo, una alta correlación con el alelo en el otro <em>locus</em> con el que fue a dar en el inicio. En cambio, si la introducción de este alelo es “reciente” la correlación será baja. Eso explica en gran medida por qué para un valor determinado de <span class="math inline">\(D&#39;\)</span> el rango de valores posibles de <span class="math inline">\(r^2\)</span> es importante. Otras diferencias que favorecen el uso de <span class="math inline">\(r^2\)</span> sobre <span class="math inline">\(D&#39;\)</span> son que primero presenta mayor estabilidad en el caso de <em>loci</em> con alelos en baja frecuencia cuando los tamaños muestrales son pequeños y que favorece la interpretación como la proporción explicada de varianza debida al desequilibrio de ligamiento en relación a la varianza explicada por <strong>QTLs</strong> (Quantitative Trait Locus) (<span class="citation"><a href="#ref-VanInghelandtetal2011" role="doc-biblioref">Van Inghelandt et al.</a> (<a href="#ref-VanInghelandtetal2011" role="doc-biblioref">2011</a>)</span>). Finalmente, existen otros estadísticos alternativos con mejores propiedades en ciertas condiciones o más fáciles de obtener. Por ejemplo, <span class="citation"><a href="#ref-Gianolaetal2013" role="doc-biblioref">D. Gianola, Qanbari, and Simianer</a> (<a href="#ref-Gianolaetal2013" role="doc-biblioref">2013</a>)</span> introducen el estadístico <span class="math inline">\(\rho^2\)</span> que además de buenas propiedades de muestreo es mucho más sencillo de calcular que los estimados por máxima-verosimilitud o bayesianos de la correlación tetracórica (correlación para tablas de 2x2, por ejemplo).</p>
+<p>Una diferencia importante entre el estadístico <span class="math inline">\(D&#39;\)</span> y el <span class="math inline">\(r^2\)</span> tiene que ver con la afectación de ambos frente a la historia que produce el desequilibrio de ligamiento. Mientras que <span class="math inline">\(r^2\)</span> es relativamente sensible al momento en que, por ejemplo, aparece una nueva variante, <span class="math inline">\(D&#39;\)</span> es relativamente independiente y su principal dependencia es la tasa de recombinación. Por ejemplo, un alelo que entra “temprano” en la historia evolutiva de la asociación tendrá, a medida de que pase el tiempo, una alta correlación con el alelo en el otro <em>locus</em> con el que fue a dar en el inicio. En cambio, si la introducción de este alelo es “reciente” la correlación será baja. Eso explica en gran medida por qué para un valor determinado de <span class="math inline">\(D&#39;\)</span> el rango de valores posibles de <span class="math inline">\(r^2\)</span> es importante. Otras diferencias que favorecen el uso de <span class="math inline">\(r^2\)</span> sobre <span class="math inline">\(D&#39;\)</span> son que primero presenta mayor estabilidad en el caso de <em>loci</em> con alelos en baja frecuencia cuando los tamaños muestrales son pequeños y que favorece la interpretación como la proporción explicada de varianza debida al desequilibrio de ligamiento en relación a la varianza explicada por <strong>QTLs</strong> (Quantitative Trait Locus) (<span class="citation">Van Inghelandt et al. (<a href="#ref-VanInghelandtetal2011" role="doc-biblioref">2011</a>)</span>). Finalmente, existen otros estadísticos alternativos con mejores propiedades en ciertas condiciones o más fáciles de obtener. Por ejemplo, <span class="citation">D. Gianola, Qanbari, and Simianer (<a href="#ref-Gianolaetal2013" role="doc-biblioref">2013</a>)</span> introducen el estadístico <span class="math inline">\(\rho^2\)</span> que además de buenas propiedades de muestreo es mucho más sencillo de calcular que los estimados por máxima-verosimilitud o bayesianos de la correlación tetracórica (correlación para tablas de 2x2, por ejemplo).</p>
 <hr />
 <div class="graybox">
 <div class="center">
@@ -1190,8 +1238,8 @@ r^2=\frac{D^2}{(p_1q_1p_2q_2)}
 </div>
 </div>
 </div>
-<div id="selección-en-modelos-de-dos-loci" class="section level2" number="5.4">
-<h2><span class="header-section-number">5.4</span> Selección en modelos de dos <em>loci</em></h2>
+<div id="selección-en-modelos-de-dos-loci" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Selección en modelos de dos <em>loci</em><a href="dosloci.html#selección-en-modelos-de-dos-loci" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En esta sección vamos a estudiar qué ocurre con la selección cuando tenemos dos <em>loci</em> en los que la tasa de recombinación entre ellos no es <span class="math inline">\(r=\frac{1}{2}\)</span>, es decir, cuando no podemos considerar a ambos <em>loci</em> como estadísticamente independientes. Nuestro estudio va a ser somero, ya que las complicaciones posibles son inmediatas y muchas, lo que escapa al alcance del presente curso. Para el modelado de este fenómenos vamos a suponer que entre los dos <em>loci</em> la tasa de recombinación <span class="math inline">\(0 \leqslant r &lt; \frac{1}{2}\)</span> (aunque teóricamente <span class="math inline">\(r\)</span> pueder ser mayor a <span class="math inline">\(1/2\)</span>). La idea central de esta sección aparece representada en la figura <a href="dosloci.html#fig:distrecombina">5.7</a>. Tenemos un <em>locus</em> bajo selección, el <em>locus</em> <strong>A</strong>, y un <em>locus</em> “cercano” <strong>B</strong> “neutral” (es decir, que no está sujeto a selección). En el presente contexto “cercano” se refiere a que <span class="math inline">\(r&lt;\frac{1}{2}\)</span>, es decir, que ambos <em>loci</em> no se comportan desde el punto de vista de la recombinación como totalmente independientes. A medida de que nos alejamos del <em>locus</em> bajo selección la probabilidad de que aparezca un quiasma entre el <em>locus</em> <strong>A</strong> y el <strong>B</strong> se incrementa (lo que representamos por flecha de tamaño creciente). En forma ingenua podríamos pensar que la dinámica del <em>locus</em> <strong>A</strong> sería la de selección de acuerdo a lo que ya vimos mientras que el comportamiento de <strong>B</strong>, no sujeto a la selección, sería complemante al azar y dominado exclusivamente por fenómenos como la mutación y la deriva. Sin embargo, en esta sección vamos a ignorar ambos efectos y vamos a estudiar si en ausencia de esas fuerzas las frecuencias de los alelos en <strong>B</strong> siguen imperturbables.<br />
 </p>
 
@@ -1205,6 +1253,13 @@ Figura 5.7: Ilustración del modelo de selección que vamos a analizar. Mientras
 <br />
 </p>
 <table>
+<colgroup>
+<col width="15%" />
+<col width="21%" />
+<col width="21%" />
+<col width="21%" />
+<col width="21%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Gametos</th>
@@ -1279,9 +1334,9 @@ x&#39;_1=\frac{x_1\bar{w}_1-rDw_{14}}{\bar{w}}
 \end{equation}\]</span></p>
 <p>Veamos ahora el cambio en las frecuencias de los gametos, es decir <span class="math inline">\(\Delta x_i\)</span>, que lo obtenemos como de costumbre, <span class="math inline">\(\Delta x_i = x&#39;_i-x\)</span>. Por ejemplo, para el alelo <span class="math inline">\(A_1B_1\)</span>, el cambio de frecuencia será</p>
 <p><span class="math display" id="eq:recsel6">\[\begin{equation}
-\Delta x_1=x&#39;_1-x_1=\frac{x_1\bar{w}_1-rDw_{14}}{\bar{w}}-x_1 \therefore =\frac{x_1\bar{w}_1-rDw_{14}}{\bar{w}}-x_1\frac{\bar{w}}{\bar{w}}\\ 
+\Delta x_1=x&#39;_1-x_1=\frac{x_1\bar{w}_1-rDw_{14}}{\bar{w}}-x_1 \therefore =\frac{x_1\bar{w}_1-rDw_{14}}{\bar{w}}-x_1\frac{\bar{w}}{\bar{w}}\\
 \Delta x_1=\frac{x_1\bar{w}_1-rDw_{14}-x_1\bar{w}}{\bar{w}} \therefore \\
-\Delta x_1=\frac{x_1(\bar{w}_1-\bar{w})-rw_{14}D}{\bar{w}} 
+\Delta x_1=\frac{x_1(\bar{w}_1-\bar{w})-rw_{14}D}{\bar{w}}
 \tag{5.35}
 \end{equation}\]</span></p>
 <p>En principio, podemos aplicar la misma lógica para el resto de las ecuaciones, lo que nos lleva a</p>
@@ -1298,11 +1353,18 @@ x&#39;_1=\frac{x_1\bar{w}_1-rDw_{14}}{\bar{w}}
 \end{equation}\]</span></p>
 <p>es decir, el cambio en la frecuencia de los gametos es aproximadamente suma del cambio debido a la selección y el cambio debido a la recombinación. Más aún, el conflicto entre las direcciones de ambos aportes es evidente, la selección tendiendo a favorecer la asociación de los alelos en gametos, mientras que la recombinación actúa destruyendo esa asociación.<br />
 </p>
-<div id="selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento" class="section level3 unnumbered">
-<h3>Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</h3>
-<p>Un ejemplo de la aplicación del análisis previo es el de un <em>locus</em> bajo selección, en desequilibrio de ligamiento con un <em>locus</em> cercano, neutral este último (es decir, sin ventaja selectiva ninguno de sus alelos o combinaciones) aparece en <span class="citation"><a href="#ref-Gillespie2004" role="doc-biblioref">John H. Gillespie</a> (<a href="#ref-Gillespie2004" role="doc-biblioref">2004</a>)</span>. ¿Qué ocurrirá con las frecuencias alélicas bajo estas condiciones? Si utilizamos la misma notación del capítulo <a href="seleccion.html#seleccion">Selección Natural</a>, es decir que para el primer <em>locus</em> los <strong>fitness relativos</strong> quedan definidos por <span class="math inline">\(1\)</span>, <span class="math inline">\(1-hs\)</span> y <span class="math inline">\(1-s\)</span>, entonces nuestro cuadro de <strong>fitness</strong> <span class="math inline">\(w_{ij}\)</span> estará dado por<br />
+<div id="selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento" class="section level3 unnumbered hasAnchor">
+<h3>Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento<a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un ejemplo de la aplicación del análisis previo es el de un <em>locus</em> bajo selección, en desequilibrio de ligamiento con un <em>locus</em> cercano, neutral este último (es decir, sin ventaja selectiva ninguno de sus alelos o combinaciones) aparece en <span class="citation">John H. Gillespie (<a href="#ref-Gillespie2004" role="doc-biblioref">2004</a>)</span>. ¿Qué ocurrirá con las frecuencias alélicas bajo estas condiciones? Si utilizamos la misma notación del capítulo <a href="seleccion.html#seleccion">Selección Natural</a>, es decir que para el primer <em>locus</em> los <strong>fitness relativos</strong> quedan definidos por <span class="math inline">\(1\)</span>, <span class="math inline">\(1-hs\)</span> y <span class="math inline">\(1-s\)</span>, entonces nuestro cuadro de <strong>fitness</strong> <span class="math inline">\(w_{ij}\)</span> estará dado por<br />
 </p>
 <table>
+<colgroup>
+<col width="15%" />
+<col width="21%" />
+<col width="21%" />
+<col width="21%" />
+<col width="21%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Gametos</th>
@@ -1446,7 +1508,7 @@ Resumiendo, tenemos <span class="math inline">\(\bar{w}_1=\bar{w}_2=1-q_1hs\)</s
 \end{equation}\]</span></p>
 <p>Finalmente, como <span class="math inline">\(-q_1h+q_1=q_1(1-h)\)</span>, sustituyendo en <a href="dosloci.html#eq:recsel18">(5.47)</a> tenemos</p>
 <p><span class="math display" id="eq:recsel19">\[\begin{equation}
-\Delta p_2=\frac{Ds[p_1h+q_1(1-h)]}{\bar{w}} 
+\Delta p_2=\frac{Ds[p_1h+q_1(1-h)]}{\bar{w}}
 \tag{5.48}
 \end{equation}\]</span><br />
 </p>
@@ -1475,16 +1537,16 @@ Resumiendo, tenemos <span class="math inline">\(\bar{w}_1=\bar{w}_2=1-q_1hs\)</s
 <li>Bajo este mismo modelo, el cambio de frecuencia del alelo <span class="math inline">\(B_1\)</span> en el <em>locus</em> que no está bajo selección directa (segundo <em>locus</em>) está dado por la ecuación</li>
 </ul>
 <p><span class="math display">\[\begin{equation}
-\Delta p_2=\frac{Ds[p_1h+q_1(1-h)]}{\bar{w}} 
+\Delta p_2=\frac{Ds[p_1h+q_1(1-h)]}{\bar{w}}
 \end{equation}\]</span></p>
 <p>con <span class="math inline">\(\bar{w}=1-2p_1q_1hs-q_1^2s\)</span></p>
 </div>
 <hr />
 </div>
 </div>
-<div id="arrastre-genético-genetic-hitchhiking-o-genetic-draft" class="section level2" number="5.5">
-<h2><span class="header-section-number">5.5</span> Arrastre genético (“genetic hitchhiking” o “genetic draft”)</h2>
-<p>A esta altura te estarás preguntando ¿qué consecuencias tiene el fenómeno del final de la sección anterior? Desde el punto de vista evolutivo el fenómeno anterior tiene la enorme importancia de que aún las regiones del genoma que no se encuentran bajo selección directa por ninguna característica (tanto a nivel nucleotídico, aminoacídico o en ningún otro nivel) y que por lo tanto podrían considerarse <strong>neutrales</strong> pueden estar sujetas a las consecuencias de la selección si están asociadas (en desequilibrio de ligamiento) con algún <em>locus</em> bajo selección. Una analogía para esto sería que para las regiones que están cerca del <em>locus</em> bajo selección los alelos viajan (el cambio de frecuencias) “sin pagar” (el precio de la selección) y por lo tanto al fenómeno se lo conoce como <strong>hitchhiking</strong> (es decir, “hacer dedo” o “autostop”), un término acuñado por John Maynard Smith<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a> y John Haigh (<span class="citation"><a href="#ref-MaynardSmithHaigh1974" role="doc-biblioref">Maynard Smith and Haigh</a> (<a href="#ref-MaynardSmithHaigh1974" role="doc-biblioref">1974</a>)</span>), pese a no ser los primeros en trabajar la idea. De cualquier manera, pese al atractivo del nombre, la idea continuó relativamente desatendida hasta que el artículo de John Gillespie (<span class="citation"><a href="#ref-Gillespie2000" role="doc-biblioref">J. H. Gillespie</a> (<a href="#ref-Gillespie2000" role="doc-biblioref">2000</a>)</span>) resaltó su posible papel como la fuerza estocástica dominante sobre la deriva.</p>
+<div id="arrastre-genético-genetic-hitchhiking-o-genetic-draft" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Arrastre genético (“genetic hitchhiking” o “genetic draft”)<a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A esta altura te estarás preguntando ¿qué consecuencias tiene el fenómeno del final de la sección anterior? Desde el punto de vista evolutivo el fenómeno anterior tiene la enorme importancia de que aún las regiones del genoma que no se encuentran bajo selección directa por ninguna característica (tanto a nivel nucleotídico, aminoacídico o en ningún otro nivel) y que por lo tanto podrían considerarse <strong>neutrales</strong> pueden estar sujetas a las consecuencias de la selección si están asociadas (en desequilibrio de ligamiento) con algún <em>locus</em> bajo selección. Una analogía para esto sería que para las regiones que están cerca del <em>locus</em> bajo selección los alelos viajan (el cambio de frecuencias) “sin pagar” (el precio de la selección) y por lo tanto al fenómeno se lo conoce como <strong>hitchhiking</strong> (es decir, “hacer dedo” o “autostop”), un término acuñado por John Maynard Smith <a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a> y John Haigh (<span class="citation">Maynard Smith and Haigh (<a href="#ref-MaynardSmithHaigh1974" role="doc-biblioref">1974</a>)</span>), pese a no ser los primeros en trabajar la idea. De cualquier manera, pese al atractivo del nombre, la idea continuó relativamente desatendida hasta que el artículo de John Gillespie (<span class="citation">J. H. Gillespie (<a href="#ref-Gillespie2000" role="doc-biblioref">2000</a>)</span>) resaltó su posible papel como la fuerza estocástica dominante sobre la deriva.</p>
 <p>Claramente, a partir de lo anterior, un <em>locus</em> bajo selección puede arrastrar todo un segmento del cromosoma en que se encuentra en la dirección en que opera la selección sobre dicho <em>locus</em>. Para ello es necesario que exista un desequilibrio de ligamiento con las regiones asociadas estadísticamente, usualmente las colindantes. En el caso de que el desequilibrio de ligamiento inicial sea relativamente importante, con una tasa de recombinación <span class="math inline">\(r\)</span> baja en relación al coeficiente de selección <span class="math inline">\(s\)</span>, como es poco probable la aparición de recombinación en ese fragmento entonces el alelo más asociado en el segundo <em>locus</em> al alelo favorecido en el primero seguirá su camino. Esto, como una función continua de la distancia implica que todo lo que esté asociado en otras posiciones del genoma a ese alelo favorecido también irá en la misma dirección. Si el destino del alelo favorecido es la fijación, las regiones del genoma que estén suficientemente ligadas al mismo tendrán también una ventaja para ir hacia la fijaciónque no ganaron por derecho propio, dependiedo su alcance de la relación <span class="math inline">\(r/s\)</span>. La consecuencia directa de esto es la pérdida de heterocigosidad, o el aumento de homocigosidad en los <em>loci</em> asociados estadísticamente.</p>
 <p>El caso típico es el una nueva mutación que llega, por ejemplo a un <em>locus</em>, llamémosle <strong>A</strong>, que hasta el momento no tenía alelos (al menos alelos que no fuesen neutrales). Este alelo nuevo, <span class="math inline">\(A_1\)</span> se encontrará en frecuencia <span class="math inline">\(\frac{1}{2N}\)</span> y por lo tanto el alelo viejo (todos los que no son el <span class="math inline">\(A_1\)</span>) estarán en frecuencia <span class="math inline">\(1-\frac{1}{2N}\)</span>. Supongamos que el <em>locus</em> <strong>A</strong> se encuentra relativamente cerca de otro, <strong>B</strong>, con dos alelos, <span class="math inline">\(B_1\)</span> y <span class="math inline">\(B_2\)</span>, selectivamente neutros. Nuestro nuevo alelo <span class="math inline">\(A_1\)</span> le confiere ventajas a los genotipos en los que se encuentra de <span class="math inline">\(1\)</span> (<span class="math inline">\(A_1A_1\)</span>), <span class="math inline">\(1-hs\)</span> (<span class="math inline">\(A_1A_2\)</span>) y <span class="math inline">\(1-s\)</span> (<span class="math inline">\(A_2A_2\)</span>), por lo que se trata del modelo que vimos en la sección previa. ¿Qué ocurrirá en el <em>locus</em> <strong>B</strong> si la fracción de recombinantes entre <strong>A</strong> y <strong>B</strong> es <span class="math inline">\(r\)</span>?. En principio, el alelo <span class="math inline">\(A_1\)</span> puede haber caído en un cromosoma que tenía el alelo <span class="math inline">\(B_1\)</span> en el otro locus, con probabilidad <span class="math inline">\(p_2\)</span>, o en un cromosoma conteniendo el alelo <span class="math inline">\(B_2\)</span>, con probabilidad <span class="math inline">\(q_2=1-p_2\)</span>. Dependiendo de eso, puedo calcular <span class="math inline">\(D\)</span>, así como el cambio en frecuencia <span class="math inline">\(p_2\)</span> (y obviamente <span class="math inline">\(p_1\)</span>). Sin embargo, no hay una forma fácil y cerrada de describir la trayectoria de esta evolución a lo largo de las generaciones, siendo la aproximación más fácil la simulación en una computadora.</p>
 <p>En la figura <a href="dosloci.html#fig:heterorec">5.8</a> podemos ver el resultado de la reducción de heterocigosidad al simular la situación anterior para 3 tamaños poblacionales, de <span class="math inline">\(N=100\)</span>, <span class="math inline">\(N=1000\)</span> y <span class="math inline">\(N=5000\)</span> individuos, con un coeficiente de selección <span class="math inline">\(s=0,1\)</span> y variando <span class="math inline">\(r\)</span> desde <span class="math inline">\(0\)</span> a <span class="math inline">\(0,001\)</span> para variar la relación <span class="math inline">\(r/s\)</span> (con signo negativo a la izquierda del <em>locus</em> seleccionado) y con frecuencias iniciales en el <em>locus</em> <strong>B</strong> (antes de la mutación en el <strong>A</strong>) de <span class="math inline">\(p_2=q_2=\frac{1}{2}\)</span>. Como <span class="math inline">\(p_2=q_2=\frac{1}{2}\)</span> es indistinto el análisis de las dos situaciones (en función de dónde caiga inicialmente <span class="math inline">\(A_1\)</span>). A medida de que el tamaño poblacional aumenta, menos se extiende el efecto de la reducción de heterocigosidad con la distancia. Esto lo podemos asociar directamente con el valor del desequilibrio de ligamiento (<span class="math inline">\(D=x_1x_4-x_2x_3\)</span>) que se puede calcular directamente a partir <span class="math inline">\(x_1=\frac{1}{2N}\)</span>, <span class="math inline">\(x_2=0\)</span>, <span class="math inline">\(x_3=1-\frac{1}{2N}\)</span>, <span class="math inline">\(x_4=0,5\)</span>: por lo tanto <span class="math inline">\(D=x_1x_4=\frac{1}{2}\frac{1}{2N}=\frac{1}{4N}\)</span> y a medida que aumenta <span class="math inline">\(N\)</span>, aumenta el denominador y decrece el desequilibrio inicial.</p>
@@ -1498,7 +1560,7 @@ Resumiendo, tenemos <span class="math inline">\(\bar{w}_1=\bar{w}_2=1-q_1hs\)</s
 Figura 5.8: Heterocigosidad final (relativa a la inicial) en función de la distancia a un <em>locus</em> bajo selección direccional. La distancia al <em>locus</em> bajo selección se muestra como <span class="math inline">\(r/s\)</span> a ambos lados del mismo (el cero corresponde al <em>locus</em> bajo selección). Los parámetros para esta simulación fueron, <span class="math inline">\(N=100\)</span>, <span class="math inline">\(N=1000\)</span> y <span class="math inline">\(N=5000\)</span> individuos (de izquierda a derecha), <span class="math inline">\(h={1}{2}\)</span>, <span class="math inline">\(s=0,1\)</span> y variando <span class="math inline">\(r\)</span> desde <span class="math inline">\(0\)</span> a <span class="math inline">\(0,001\)</span> para variar la relación <span class="math inline">\(r/s\)</span> (con signo negativo a la izquierda del <em>locus</em> seleccionado). Se aprecia claramente que el efecto fuerte del <strong>hitchhiking</strong> es bastante local, del entorno de <span class="math inline">\(|r/s|&lt;0,05\)</span>, aunque esto puede significar miles de pares de bases. En rojo la distancia (como <span class="math inline">\(r/s\)</span>) en la que se alcanza una reducción del <span class="math inline">\(25\%\)</span> de la heterocigosidad (es decir, la misma el del <span class="math inline">\(75\%\)</span> de la inicial).
 </p>
 </div>
-<p>Las tasas de recombinación varían entre especies y aún dentro de la especie entre géneros, entre cromosomas y más aún dentro de los mismos en distintas regiones. Por ejemplo, en un mapa de ligamiento del genoma bovino <span class="citation"><a href="#ref-Ariasetal2009" role="doc-biblioref">Arias et al.</a> (<a href="#ref-Ariasetal2009" role="doc-biblioref">2009</a>)</span> concluyen que para los cromosomas autosomales la distancia genética por cM es de <span class="math inline">\(1,25\)</span>Mb, o al revés <span class="math inline">\(\approx 0,8\)</span>Mb/cM. Estimaciones más precisas para el genoma humano son del orden de <span class="math inline">\(0,75\)</span>Mb/cM, lo que coincide razonablemente con el genoma bovino del que no estamos tan lejos en términos evolutivos. <span class="citation"><a href="#ref-Kongetal2002" role="doc-biblioref">Kong et al.</a> (<a href="#ref-Kongetal2002" role="doc-biblioref">2002</a>)</span> estimaron que el total del genoma humano en mujeres abarca 4460 cM, mientras que el de los varones es de 2590 cM. <span class="citation"><a href="#ref-SardellKirkpatrick2020" role="doc-biblioref">Sardell and Kirkpatrick</a> (<a href="#ref-SardellKirkpatrick2020" role="doc-biblioref">2020</a>)</span> encuentran que en general, en distintas especies, los <strong>hotspots</strong> de recombinación se encuentran distribuidos hacia los <strong>telómeros</strong>, mientras que en hembras la distribución es más uniforme. Si bien se desconoce el mecanismo molecular que se encuentra por detrás de este fenómeno, se sabe que los paisajes de la cromatina (“chromatin landscapes”) juegan un rol importante. <span class="citation"><a href="#ref-Kongetal2010" role="doc-biblioref">Kong et al.</a> (<a href="#ref-Kongetal2010" role="doc-biblioref">2010</a>)</span>, utilizando datos de 15.257 pares padre-hijo encontraron que aproximadamente <span class="math inline">\(15\%\)</span> de los <strong>hotspots</strong> son específicos de cada sexo. Por otro lado, <span class="citation"><a href="#ref-Baudatetal2010" role="doc-biblioref">Baudat et al.</a> (<a href="#ref-Baudatetal2010" role="doc-biblioref">2010</a>)</span> demostraron que el gen <strong>PRDM9</strong> es un determinante mayor de los sitios de recombinación en humanos y en ratón, con sus variantes alélicas asociadas a variación en el número de los mismos, lo que contribuiría a explicar variaciones dentro y posiblemente entre especies.</p>
+<p>Las tasas de recombinación varían entre especies y aún dentro de la especie entre géneros, entre cromosomas y más aún dentro de los mismos en distintas regiones. Por ejemplo, en un mapa de ligamiento del genoma bovino <span class="citation">Arias et al. (<a href="#ref-Ariasetal2009" role="doc-biblioref">2009</a>)</span> concluyen que para los cromosomas autosomales la distancia genética por cM es de <span class="math inline">\(1,25\)</span>Mb, o al revés <span class="math inline">\(\approx 0,8\)</span>Mb/cM. Estimaciones más precisas para el genoma humano son del orden de <span class="math inline">\(0,75\)</span>Mb/cM, lo que coincide razonablemente con el genoma bovino del que no estamos tan lejos en términos evolutivos. <span class="citation">Kong et al. (<a href="#ref-Kongetal2002" role="doc-biblioref">2002</a>)</span> estimaron que el total del genoma humano en mujeres abarca 4460 cM, mientras que el de los varones es de 2590 cM. <span class="citation">Sardell and Kirkpatrick (<a href="#ref-SardellKirkpatrick2020" role="doc-biblioref">2020</a>)</span> encuentran que en general, en distintas especies, los <strong>hotspots</strong> de recombinación se encuentran distribuidos hacia los <strong>telómeros</strong>, mientras que en hembras la distribución es más uniforme. Si bien se desconoce el mecanismo molecular que se encuentra por detrás de este fenómeno, se sabe que los paisajes de la cromatina (“chromatin landscapes”) juegan un rol importante. <span class="citation">Kong et al. (<a href="#ref-Kongetal2010" role="doc-biblioref">2010</a>)</span>, utilizando datos de 15.257 pares padre-hijo encontraron que aproximadamente <span class="math inline">\(15\%\)</span> de los <strong>hotspots</strong> son específicos de cada sexo. Por otro lado, <span class="citation">Baudat et al. (<a href="#ref-Baudatetal2010" role="doc-biblioref">2010</a>)</span> demostraron que el gen <strong>PRDM9</strong> es un determinante mayor de los sitios de recombinación en humanos y en ratón, con sus variantes alélicas asociadas a variación en el número de los mismos, lo que contribuiría a explicar variaciones dentro y posiblemente entre especies.</p>
 <p>Si bien hasta ahora hemos visto el rol de dos fuerzas estocásticas en el cambio de frecuencias su importancia relativa está sujeta a diferentes factores. En el caso de la deriva su dependencia es inversa respecto al tamaño efectivo poblacional, el factor del que depende. A tamaños efectivos moderados su importancia es baja. Por el contrario, en el <strong>genetic draft</strong> la dependencia es del coeficiente de selección en el <em>locus</em> bajo selección y del desequilibrio de ligamiento entre este y los <em>loci</em> adyacentes (lo que tiene una cierta dependencia del tamaño poblacional, como vimos). Sin embargo, a medida de que crece el tamaño poblacional se llega a un punto donde el <strong>draft</strong> domina al <strong>drift</strong> como fuerza estocástica.</p>
 <hr />
 <div class="graybox">
@@ -1514,16 +1576,23 @@ Figura 5.8: Heterocigosidad final (relativa a la inicial) en función de la dist
 </div>
 <hr />
 </div>
-<div id="causas-del-desequilibrio-de-ligamiento" class="section level2" number="5.6">
-<h2><span class="header-section-number">5.6</span> Causas del desequilibrio de ligamiento</h2>
+<div id="causas-del-desequilibrio-de-ligamiento" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Causas del desequilibrio de ligamiento<a href="dosloci.html#causas-del-desequilibrio-de-ligamiento" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Hasta ahora hemos manejado el desequilibrio de ligamiento como una condición mecanísticamente asociada a la cercanía física de los <em>loci</em> en el mismo cromosoma y por lo tanto a la probabilidad de que alelos en los mismos compartan destino en los gametos. En este sentido, vimos la influencia de la selección en un <em>locus</em> y una fracción de recombinantes menor a <span class="math inline">\(1/2\)</span> con otros <em>loci</em> como la causa de “arrastre” de esos otros <em>loci</em> y en ciertas condiciones el desarrollo de un desequilibrio de ligamiento. Cuando arriba un nuevo alelo en un <em>locus</em> determinado siempre lo hace en alguna configuración particular con los <em>loci</em> vecinos al mismo, es decir una combinación de alelos particulares en esos otros <em>loci</em>. Si el nuevo alelo tiene ventajas selectivas, ya estudiamos previamente su devenir. Sin embargo, la selección no es la única causa posible asociada a una fracción de recombinación menor a <span class="math inline">\(1/2\)</span>; en principio, en poblaciones pequeñas el efecto de la deriva puede ocasionalmente incrementar la frecuencia del alelo nuevo y aún llevarlo a la fijación (aunque con baja probabilidad). Como este alelo cayó en alguna configuración particular de alelos en otros <em>loci</em>, dado que el alelo incrementó su frecuencia (por azar), en la medida de ausencia relativa de recombinación, también lo harán los alelos de los otros <em>loci</em> que compartían configuración con él. Esto, al aumentar la correlación de estados alélicos compartidos incrementará el valor de <span class="math inline">\(r^2\)</span> y también de <span class="math inline">\(D\)</span>.</p>
 <p>Si en lugar de considerar el fenómeno del desequilibrio de ligamiento desde el punto de vista de los mecanismos de transmisión de la información genética lo consideramos simplemente desde el punto de vista estadístico como la <strong>no-independencia</strong> de las frecuencias entre <em>loci</em>, entonces desaparece la necesidad de una explicación estrictamente asociada a estos mecanismos. Un ejemplo claro de esto es cuando aparecen correlaciones entre estados alélicos en diferentes cromosomas. En este caso ya no podemos usualmente apelar a la cercanía física y es necesario invocar otros mecanismos. Uno de los procesos poblacionales que pueden explicar este “desequilibrio” (en realidad, apenas la <strong>no-independencia</strong>) es la existencia de determinadas estructuras poblacionales, como veremos a continuación.</p>
-<div id="desequilibrio-debido-al-mestizaje" class="section level3 unnumbered">
-<h3>Desequilibrio debido al mestizaje</h3>
+<div id="desequilibrio-debido-al-mestizaje" class="section level3 unnumbered hasAnchor">
+<h3>Desequilibrio debido al mestizaje<a href="dosloci.html#desequilibrio-debido-al-mestizaje" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Supongamos que tenemos dos poblaciones de la misma especie que han evolucionado en paralelo durante un tiempo relativamente importante respecto al tamaño poblacional como para que la deriva pueda hacer su trabajo en las frecuencias de los alelos. Supongamos también que vamos a estudiar dos <em>loci</em> bi-alélicos en particular en ambas poblaciones, que además se encuentran en equilibrio de Hardy-Weinberg. Luego del análisis genómico logramos determinar las frecuencias de los 4 haplotipos posibles, que son las que aparecen en el cuadro siguiente (<strong>Población 1</strong> y <strong>Población 2</strong>):</p>
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="17%" />
+<col width="18%" />
+<col width="19%" />
+<col width="18%" />
+<col width="25%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><strong>Gameto/estadístico</strong></th>
@@ -1614,19 +1683,19 @@ Figura 5.8: Heterocigosidad final (relativa a la inicial) en función de la dist
 <p>Si prestamos atención al cuadro veremos que las diferencias de frecuencias en los alelos <strong>entre</strong> poblaciones es muy importante para ambos <em>loci</em>. Pese a esto, dentro de cada población las frecuencias de los haplotipos simplemente siguen lo esperado para la independencia, por ejemplo <span class="math inline">\(p_1p_2\)</span> para el haplotipo <span class="math inline">\(A_1B_1\)</span>. Sin embargo, pese a que en cada población uno de los haplotipos en <strong>fase de acoplamiento</strong> presenta una frecuencia muy alta, el descenso en la frecuencia del otro haplotipo en la misma fase es tan importante como para hacer que el producto de las frecuencias de los gametos en <strong>fase de acoplamiento</strong> sea idéntico al de ¡las frecuencias de los gametos en <strong>fase de repulsión</strong>, es decir <span class="math inline">\(x_1x_4=x_2x_3\)</span>. En nuestro caso <span class="math inline">\(0,81 \cdot 0,01=0,081\)</span> compensa perfectamente <span class="math inline">\(0,09 \cdot 0,09=0,081\)</span>. Ahora, cuando mezclamos las dos poblaciones que tienen cada una frecuencia alta para uno de los dos gametos en <strong>fase de acoplamiento</strong> (pero <span class="math inline">\(A_1B_1\)</span> en una y <span class="math inline">\(A_2B_2\)</span> en la otra), el promedio son dos frecuencias relativamente altas de los dos gametos en <strong>fase de acoplamiento</strong> (<span class="math inline">\(0,41\)</span> para ambos en nuestro caso). Es decir la frecuencia alta en <span class="math inline">\(A_1B_1\)</span> no es acompañado por una reducción suficiente en <span class="math inline">\(A_2B_2\)</span>. Ya que, en nuestro caso, el promedio de las frecuencias de los gametos en <strong>fase de repulsión</strong> se mantuvo en <span class="math inline">\(0,09\)</span> y por lo tanto <span class="math inline">\(x_2x_3=0,09 \cdot 0,09=0,081\)</span>, para que existiese equilibrio en la nueva población mezcla <span class="math inline">\(x_1x_4\)</span> también debería ser <span class="math inline">\(0,081\)</span>, cosa que no ocurre ya que <span class="math inline">\(0,41 \cdot 0,41=0,1681\)</span> y de ahí el desequilibrio de ligamiento observado.</p>
 <p>Es de notar que al invocar este mecanismo no hicimos uso de la fracción de recombinantes, ni en forma explícita ni implícita, por lo que el mismo proceso podría haberse adjudicado a dos <em>loci</em> que se encontrasen a suficiente distancia para que se cumpla <span class="math inline">\(r=\frac{1}{2}\)</span> e incluso, con alguna modificación leve al ejemplo, que estuviesen en cromosomas diferentes.</p>
 </div>
-<div id="desequilibrio-inducido-por-el-sistema-de-apareamiento" class="section level3 unnumbered">
-<h3>Desequilibrio inducido por el sistema de apareamiento</h3>
+<div id="desequilibrio-inducido-por-el-sistema-de-apareamiento" class="section level3 unnumbered hasAnchor">
+<h3>Desequilibrio inducido por el sistema de apareamiento<a href="dosloci.html#desequilibrio-inducido-por-el-sistema-de-apareamiento" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>En algunas especies de plantas la auto-fertilización es moneda corriente, variando la tasa de la misma. Cuando se produce auto-fertilización se produce una reducción de los heterocigotas, ya que la misma es un caso extremo de <strong>inbreeding</strong>, algo que veremos en más detalle en el capítulo <a href="aparnoalazar.html#aparnoalazar">Apareamientos no-aleatorios</a>. La lógica es igual sencilla: los <em>loci</em> en los que una planta dada son heterocigotas tienen una probabilidad de <span class="math inline">\(50\%\)</span> en auto-fertilización de dejar descendencia heterocigota, mientras que el otro <span class="math inline">\(50\%\)</span> será homocigota. Los homocigotas de la nueva generación solo podrán dejar descendencia homocigota, pero lo heterocigotas tendrán nuevamente un <span class="math inline">\(50\%\)</span> de chance de dejar heterocigotas (es decir, <span class="math inline">\(50\%\)</span> del <span class="math inline">\(50\%\)</span> de la generación anterior). Claramente, de continuar esa progresión la fracción de heterocigotas cae en función de <span class="math inline">\(\left(\frac{1}{2}\right)^t\)</span>, con <span class="math inline">\(t\)</span> el número de generaciones.</p>
-<p>Supongamos ahora dos <em>loci</em> que son homocigotos en la misma planta. Los eventos de recombinación entre ellos para la producción de gametos serán completamente irrelevantes (para estos dos <em>loci</em>) ya que los gametos producidos siempre serán del mismo tipo (porque para cada <em>loci</em> hay un solo alelo, ya que son homocigotos). Más aún, el efecto de la auto-fertilización disminuye el número de dobles heterocigotas, <span class="math inline">\(A_1B_2\)</span>y <span class="math inline">\(A_2B_1\)</span> fundamentales para reducir el desequilibrio de ligamiento, por lo que en función de la proporción de auto-fertilización esperamos una reducción de la eficiencia en el proceso que elimina el desequilibrio. Pese a la importancia de este fenómeno en el mantenimiento del desequilibrio de ligamiento, aún pequeñas tasas de <strong>outcrossing</strong> (es decir cruzamiento con otras plantas no emparentadas) reduce rápidamente el efecto ya que quiebra los bloques haplotípicos formados. Un <strong>bloque haplotípico</strong> es una serie de variantes, por ejemplo <strong>SNPs</strong> que se encuentran en fuerte desequilibrio de ligamiento entre todos ellos y es usualmente definido por un valor de <span class="math inline">\(r^2\)</span> (todos los marcadores tienen al menos ese valor con los adyacentes). Al romperse un bloque por un evento de recombinación, a ambos lados se sigue manteniendo el desequilibrio pero ya no entre las variantes de lados diferentes. Por ejemplo, en <em>Arabidopsis thaliana</em>, una planta modelo para la experimentación y que normalmente experimenta más del <span class="math inline">\(95\%\)</span> de auto-fertilización, los bloques haplotípicos son del orden de las 100kb (<span class="citation"><a href="#ref-Nordborgetal2002" role="doc-biblioref">Nordborg et al.</a> (<a href="#ref-Nordborgetal2002" role="doc-biblioref">2002</a>)</span>), mientras que en especies como el maíz (que normalmente no tien auto-fertilización) los bloques haplotípicos son del orden de algunas decenas de miles de bases (<span class="citation"><a href="#ref-VanInghelandtetal2011" role="doc-biblioref">Van Inghelandt et al.</a> (<a href="#ref-VanInghelandtetal2011" role="doc-biblioref">2011</a>)</span>).</p>
+<p>Supongamos ahora dos <em>loci</em> que son homocigotos en la misma planta. Los eventos de recombinación entre ellos para la producción de gametos serán completamente irrelevantes (para estos dos <em>loci</em>) ya que los gametos producidos siempre serán del mismo tipo (porque para cada <em>loci</em> hay un solo alelo, ya que son homocigotos). Más aún, el efecto de la auto-fertilización disminuye el número de dobles heterocigotas, <span class="math inline">\(A_1B_2\)</span>y <span class="math inline">\(A_2B_1\)</span> fundamentales para reducir el desequilibrio de ligamiento, por lo que en función de la proporción de auto-fertilización esperamos una reducción de la eficiencia en el proceso que elimina el desequilibrio. Pese a la importancia de este fenómeno en el mantenimiento del desequilibrio de ligamiento, aún pequeñas tasas de <strong>outcrossing</strong> (es decir cruzamiento con otras plantas no emparentadas) reduce rápidamente el efecto ya que quiebra los bloques haplotípicos formados. Un <strong>bloque haplotípico</strong> es una serie de variantes, por ejemplo <strong>SNPs</strong> que se encuentran en fuerte desequilibrio de ligamiento entre todos ellos y es usualmente definido por un valor de <span class="math inline">\(r^2\)</span> (todos los marcadores tienen al menos ese valor con los adyacentes). Al romperse un bloque por un evento de recombinación, a ambos lados se sigue manteniendo el desequilibrio pero ya no entre las variantes de lados diferentes. Por ejemplo, en <em>Arabidopsis thaliana</em>, una planta modelo para la experimentación y que normalmente experimenta más del <span class="math inline">\(95\%\)</span> de auto-fertilización, los bloques haplotípicos son del orden de las 100kb (<span class="citation">Nordborg et al. (<a href="#ref-Nordborgetal2002" role="doc-biblioref">2002</a>)</span>), mientras que en especies como el maíz (que normalmente no tien auto-fertilización) los bloques haplotípicos son del orden de algunas decenas de miles de bases (<span class="citation">Van Inghelandt et al. (<a href="#ref-VanInghelandtetal2011" role="doc-biblioref">2011</a>)</span>).</p>
 </div>
-<div id="el-cromosoma-y" class="section level3 unnumbered">
-<h3>El cromosoma Y</h3>
+<div id="el-cromosoma-y" class="section level3 unnumbered hasAnchor">
+<h3>El cromosoma Y<a href="dosloci.html#el-cromosoma-y" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>En mamíferos cromosoma Y representa una situación particular. Al no tener un homólogo para recombinar este proceso no forma parte del repertorio de mecanismos moleculares en su evolución, a diferencia del cromosoma X que sí puede recombinar con su homólogo en el caso de las hembras. Esto hace del cromosoma Y un cromosoma muy particular. De hecho, se trata de un cromosoma con muy pocos genes, habiendo perdido más del <span class="math inline">\(95\%\)</span> de los mismos durante su evolución.</p>
-<p>La ausencia de recombinación (en realidad hay un <span class="math inline">\(5\%\)</span> del mismo que se recombina con el X), como ya vimos, implica la imposibilidad de “barajar” los alelos en diferentes <em>loci</em> para que el tamiz de la selección pueda “elegir” los mejores. Es decir, si una nueva mutación beneficiosa aparece en un <em>locus</em> determinado, su suerte será siempre acompañar a la configuración de alelos en otros <em>loci</em> del gameto en el que apareció. Si está configuración era ya “buena,” la misma posiblemente incrementará el <strong>fitness</strong> del portador, pero si la configuración era “mala” el riesgo de perder esta mutación es grande. A esto se suma que el cromosoma Y está sujeto a mayor deriva que el resto puesto que su aporte es solo <span class="math inline">\(\frac{1}{4}\)</span> de del aporte del resto (es la mitad de la información de los gametos sexuales en los machos, que son la mitad de los individuos <span class="math inline">\(\frac{1}{2}\frac{1}{2}=\frac{1}{4}\)</span>).</p>
-<p>La imposibilidad de recombinar impide, en principio de eliminar por selección los errores generados en la replicación, sumado a la alta tasa mutacional de este cromosoma en particular. Eso llevaría a una situación catastrófica, con acumulación continua de errores y casi sin posibilidad de liberarse de ellos. Sin embargo, existe un mecanismo que en principio funcionaría en el cromosoma Y y que permite la reparación de algunos de ellos. Este mecanismo se llama <strong>conversión génica</strong> y fue propuesto para el cromosoma Y por <span class="citation"><a href="#ref-Rozenetal2003" role="doc-biblioref">Rozen et al.</a> (<a href="#ref-Rozenetal2003" role="doc-biblioref">2003</a>)</span>. Su funcionamiento se basa en la existencia de secuencias palindrómicas (una secuencia repetida pero en el sentido contrario) que permitirían la recombinación del cromosoma Y con sí mismo. Estos autores plantean que 8 palíndromos ocuparían la cuarta parte de la eucromatina de la región específica del macho (<strong>MSY</strong>, <span class="math inline">\(95\%\)</span> del largo total) en el cromosoma humano y que unos 600 nucleótidos por recién nacido habrían experimentado recombinación Y-Y.</p>
+<p>La ausencia de recombinación (en realidad hay un <span class="math inline">\(5\%\)</span> del mismo que se recombina con el X), como ya vimos, implica la imposibilidad de “barajar” los alelos en diferentes <em>loci</em> para que el tamiz de la selección pueda “elegir” los mejores. Es decir, si una nueva mutación beneficiosa aparece en un <em>locus</em> determinado, su suerte será siempre acompañar a la configuración de alelos en otros <em>loci</em> del gameto en el que apareció. Si está configuración era ya “buena”, la misma posiblemente incrementará el <strong>fitness</strong> del portador, pero si la configuración era “mala” el riesgo de perder esta mutación es grande. A esto se suma que el cromosoma Y está sujeto a mayor deriva que el resto puesto que su aporte es solo <span class="math inline">\(\frac{1}{4}\)</span> de del aporte del resto (es la mitad de la información de los gametos sexuales en los machos, que son la mitad de los individuos <span class="math inline">\(\frac{1}{2}\frac{1}{2}=\frac{1}{4}\)</span>).</p>
+<p>La imposibilidad de recombinar impide, en principio de eliminar por selección los errores generados en la replicación, sumado a la alta tasa mutacional de este cromosoma en particular. Eso llevaría a una situación catastrófica, con acumulación continua de errores y casi sin posibilidad de liberarse de ellos. Sin embargo, existe un mecanismo que en principio funcionaría en el cromosoma Y y que permite la reparación de algunos de ellos. Este mecanismo se llama <strong>conversión génica</strong> y fue propuesto para el cromosoma Y por <span class="citation">Rozen et al. (<a href="#ref-Rozenetal2003" role="doc-biblioref">2003</a>)</span>. Su funcionamiento se basa en la existencia de secuencias palindrómicas (una secuencia repetida pero en el sentido contrario) que permitirían la recombinación del cromosoma Y con sí mismo. Estos autores plantean que 8 palíndromos ocuparían la cuarta parte de la eucromatina de la región específica del macho (<strong>MSY</strong>, <span class="math inline">\(95\%\)</span> del largo total) en el cromosoma humano y que unos 600 nucleótidos por recién nacido habrían experimentado recombinación Y-Y.</p>
 </div>
-<div id="desequilibrio-debido-a-recombinación-reducida" class="section level3 unnumbered">
-<h3>Desequilibrio debido a recombinación reducida</h3>
+<div id="desequilibrio-debido-a-recombinación-reducida" class="section level3 unnumbered hasAnchor">
+<h3>Desequilibrio debido a recombinación reducida<a href="dosloci.html#desequilibrio-debido-a-recombinación-reducida" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Los re-arreglos cromosómicos son una de las fuentes importantes de evolución a nivel genómico. Una de ellas se relaciona con la inversión de segmentos cromosómicos alrededor de los centrómeros, por ejemplo en las moscas <em>Drosophila pseudoobscura</em> y <em>D. subobscura</em>. La inversión de un segmento de cromosoma en general inhibe la recombinación en el mismo por lo que todos los genes en el mismo están de alguna manera ligados físicamente. Igual que en el caso del cromosoma Y, esto conlleva la imposibilidad de “barajar” los alelos entre <em>loci</em> buscando las mejores combinaciones, pero al mismo tiempo las mutaciones beneficiosas que se acumulen tampoco serán separadas por eventos de recombinación. Finalmente, el mecanismo de <strong>conversión génica</strong> permite de alguna manera el flujo de información de un cromosoma al otro, sin recurrir a la recombinación, erosionando la estructura fija del bloque invertido.</p>
 <hr />
 <div class="graybox">
@@ -1643,10 +1712,10 @@ Figura 5.8: Heterocigosidad final (relativa a la inicial) en función de la dist
 <hr />
 </div>
 </div>
-<div id="ejercicios-5" class="section level2 unnumbered">
-<h2>Ejercicios</h2>
-<div id="ejercicio-5.1" class="section level4 unnumbered">
-<h4>Ejercicio 5.1</h4>
+<div id="ejercicios-5" class="section level2 unnumbered hasAnchor">
+<h2>Ejercicios<a href="dosloci.html#ejercicios-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ejercicio-5.1" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 5.1<a href="dosloci.html#ejercicio-5.1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>En un estudio de una población de la mosca de la fruta (<em>Drosophila melanogaster</em>) enfocando en el análisis de la recombinación en esa especie, se determinaron los haplotipos de dos <em>loci</em> (<strong>A</strong> y <strong>B</strong>) físicamente cercanos en el mismo cromosoma autosomal, ambos con dos alelos. Las frecuencias de los haplotipos fueron las siguientes</p>
 <p><span class="math display">\[\begin{equation}
 \bf{A_1B_1}=280\\
@@ -1659,9 +1728,9 @@ Figura 5.8: Heterocigosidad final (relativa a la inicial) en función de la dist
 </p>
 
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:drosophila"></span>
-<img src="figuras/Drosophilamelanogaster.jpg" alt="Drosophila melanogaster, la “mosca de la fruta.” Imagen de wikipedia (autor André Karwath aka Aka, CC BY-SA 2.5)." width="60%" />
+<img src="figuras/Drosophilamelanogaster.jpg" alt="Drosophila melanogaster, la “mosca de la fruta”. Imagen de wikipedia (autor André Karwath aka Aka, CC BY-SA 2.5)." width="60%" />
 <p class="caption">
-Figura 5.9: <em>Drosophila melanogaster</em>, la “mosca de la fruta.” Imagen de wikipedia (autor André Karwath aka Aka, CC BY-SA 2.5).
+Figura 5.9: <em>Drosophila melanogaster</em>, la “mosca de la fruta”. Imagen de wikipedia (autor André Karwath aka Aka, CC BY-SA 2.5).
 </p>
 </div>
 <p><br />
@@ -1673,8 +1742,8 @@ Figura 5.9: <em>Drosophila melanogaster</em>, la “mosca de la fruta.” Imagen
 <p>Juntando ambos resultados, <span class="math inline">\(D&#39;=\frac{D}{D_{máx}}=\frac{0,0256}{0,2256}=0,1135\)</span>. Al mismo tiempo, <span class="math inline">\(r^2=\frac{D^2}{p_1q_1p_2q_2}=\frac{0,0256^2}{0,48 \cdot 0,52 \cdot 0,53 \cdot 0,47}=0,0105\)</span> (que es menor a <span class="math inline">\((D&#39;)^2=0,1135^2=0,0129\)</span>).</p>
 <p>Como vimos antes, el valor del estadístico de <span class="math inline">\(\chi_1^2=r^2N=0,0105 \cdot 1000=10,54\)</span>, con un grado de libertad, por lo que si <span class="math inline">\(\alpha=0,01\)</span> entonces el umbral del test con <span class="math inline">\(gl=1\)</span> es <span class="math inline">\(\chi_1^2=6,63\)</span>, entonces como <span class="math inline">\(10,54&gt;6,63\)</span>, el desequilibrio de ligamiento es estadísticamente significativo (respecto a la hipótesis nula de independencia).</p>
 </div>
-<div id="ejercicio-5.2" class="section level4 unnumbered">
-<h4>Ejercicio 5.2</h4>
+<div id="ejercicio-5.2" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 5.2<a href="dosloci.html#ejercicio-5.2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Dos <em>loci</em> en el mismo cromosoma de un organismo diploide presentan un desequilibrio de ligamiento con <span class="math inline">\(D=0,18\)</span>. A partir de diversos estudios de mapeo y de la distancia física se estima que la fracción de recombinación es de <span class="math inline">\(r=0,13\)</span> ¿Cuantas generaciones tardará en llegarse a un desequilibrio del <span class="math inline">\(1\%\)</span>?</p>
 <p><br />
 </p>
@@ -1690,15 +1759,15 @@ t=\frac{\ln 0,05556}{\ln (1-0,13)}=\frac{\ln 0,05556}{\ln 0,87} \approx 20,75 \t
 <p><br />
 </p>
 </div>
-<div id="ejercicio-5.3" class="section level4 unnumbered">
-<h4>Ejercicio 5.3</h4>
+<div id="ejercicio-5.3" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 5.3<a href="dosloci.html#ejercicio-5.3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Un <em>locus</em> con dos alelos en una especie diploide se encuentra sujeto a selección direccional, con parámetros <span class="math inline">\(h=0,5\)</span> y <span class="math inline">\(s=0,15\)</span> (el alelo <span class="math inline">\(A_1\)</span> es el favorecido). Las frecuencias actuales de los alelos en el primer <em>locus</em> están dadas por <span class="math inline">\(p_1=0,70\)</span> y las del segundo <em>locus</em> por <span class="math inline">\(p_2=0,4\)</span>. El desequilibrio de ligamiento entre ambos <em>loci</em> es <span class="math inline">\(D=0,10\)</span>. Calcular el cambio de frecuencia esperado en una generación <strong>para el segundo</strong> <em>loci</em> así como el valor de la frecuencia en la próxima generación.</p>
 <p><br />
 </p>
 <p><strong><em>Solución</em></strong></p>
 <p>Usando la ecuación</p>
 <p><span class="math display">\[\begin{equation}
-\Delta p_2=\frac{Ds[p_1h+q_1(1-h)]}{\bar{w}} 
+\Delta p_2=\frac{Ds[p_1h+q_1(1-h)]}{\bar{w}}
 \end{equation}\]</span></p>
 <p>con <span class="math inline">\(\bar{w}=1-2p_1q_1hs-q_1^2s\)</span>, como <span class="math inline">\(q_1=1-p_1=1-0,70=0,30\)</span>, podemos esperar un cambio de</p>
 <p><span class="math display">\[\begin{equation}
@@ -1708,12 +1777,19 @@ t=\frac{\ln 0,05556}{\ln (1-0,13)}=\frac{\ln 0,05556}{\ln 0,87} \approx 20,75 \t
 <p><br />
 </p>
 </div>
-<div id="ejercicio-5.4" class="section level4 unnumbered">
-<h4>Ejercicio 5.4</h4>
+<div id="ejercicio-5.4" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 5.4<a href="dosloci.html#ejercicio-5.4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Para dos subpoblaciones de la misma especie se secuenciaron 1000 haplotipos de dos <em>loci</em> en el mismo cromosoma. Completar la tabla siguiente para las dos subpoblaciones <strong>Población 1</strong> y <strong>Población 2</strong>, así como para una <strong>Población mezcla</strong> constituida por el agrupamiento de todos los haplotipos de ambas. Determinar la significancia estadística de <span class="math inline">\(D\)</span> en cada caso. ¿Cuál es la razón del comportamiento llamativo de la <strong>Población mezcla</strong>?</p>
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="17%" />
+<col width="18%" />
+<col width="19%" />
+<col width="18%" />
+<col width="25%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><strong>Gameto/estadístico</strong></th>
@@ -1802,6 +1878,13 @@ t=\frac{\ln 0,05556}{\ln (1-0,13)}=\frac{\ln 0,05556}{\ln 0,87} \approx 20,75 \t
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="17%" />
+<col width="18%" />
+<col width="19%" />
+<col width="18%" />
+<col width="25%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><strong>Gameto/estadístico</strong></th>
@@ -1892,7 +1975,7 @@ t=\frac{\ln 0,05556}{\ln (1-0,13)}=\frac{\ln 0,05556}{\ln 0,87} \approx 20,75 \t
 </div>
 </div>
 </div>
-<h3>Bibliografía</h3>
+<h3>Bibliografía<a href="bibliografía.html#bibliografía" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Ariasetal2009" class="csl-entry">
 Arias, J. A., M. Keehan, P. Fisher, W. Coppieters, and R. Spelman. 2009. <span>“<span class="nocase"><span>A</span> high density linkage map of the bovine genome</span>.”</span> <em>BMC Genet</em> 10 (April): 18.
@@ -1950,7 +2033,6 @@ Van Inghelandt, D., J. C. Reif, B. S. Dhillon, P. Flament, and A. E. Melchinger.
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1991,7 +2073,7 @@ gitbook.start({
 },
 "download": ["ApuntesGeneticaII.pdf", "ApuntesGeneticaII.epub"],
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
@@ -2007,7 +2089,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
