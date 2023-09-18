@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 15 Normas de reacción e interacción Genotipo x Ambiente | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
   <meta name="description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 15 Normas de reacción e interacción Genotipo x Ambiente | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
@@ -28,7 +27,7 @@
 <meta name="author" content="(Paola Gaiero)" />
 
 
-<meta name="date" content="2022-06-22" />
+<meta name="date" content="2023-09-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -37,8 +36,8 @@
   
 <link rel="prev" href="endoexo.html"/>
 <link rel="next" href="apendice-a-conceptos-matemáticos-básicos.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -54,16 +53,18 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -115,31 +116,38 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#variabilidad-genética"><i class="fa fa-check"></i><b>1.1</b> Variabilidad genética</a>
 <ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.1"><i class="fa fa-check"></i>Ejemplo 1.1</a></li>
 <li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#detectando-la-variabilidad-diferentes-técnicas"><i class="fa fa-check"></i><b>1.1.1</b> Detectando la variabilidad: diferentes técnicas</a></li>
-<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#metagenómica-y-metatranscriptómica"><i class="fa fa-check"></i><b>1.1.2</b> Metagenómica y Metatranscriptómica</a></li>
+<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#metagenomica-y-metatranscriptomica"><i class="fa fa-check"></i><b>1.1.2</b> Metagenómica y Metatranscriptómica</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.2"><i class="fa fa-check"></i>Ejemplo 1.2</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#genómica-composicional"><i class="fa fa-check"></i><b>1.2</b> Genómica composicional</a>
 <ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-gcskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones, GCskew</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-y-textgc_textskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones y <span class="math inline">\(\text{GC}_{\text{skew}}\)</span></a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#uso-de-codones"><i class="fa fa-check"></i>Uso de codones</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#exploración-multivariada-análisis-de-correspondencia"><i class="fa fa-check"></i>Exploración multivariada: Análisis de Correspondencia</a></li>
-<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i><b>1.2.1</b> Composición de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.3"><i class="fa fa-check"></i>Ejemplo 1.3</a></li>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#exploracion-multivariada"><i class="fa fa-check"></i><b>1.2.1</b> Exploración multivariada: Análisis de Correspondencia</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i><b>1.2.2</b> Composición de proteínas</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-en-propiedades-de-los-aas"><i class="fa fa-check"></i>Diferencias en propiedades de los AAs</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-de-composición-entre-clases-de-proteínas"><i class="fa fa-check"></i>Diferencias de composición entre clases de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.4"><i class="fa fa-check"></i>Ejemplo 1.4</a></li>
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#genómica-comparativa"><i class="fa fa-check"></i><b>1.3</b> Genómica comparativa</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#comparación-de-secuencias-génicas"><i class="fa fa-check"></i>Comparación de secuencias génicas</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección Positiva</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección positiva</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#vías"><i class="fa fa-check"></i>Vías</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#genómica-funcional"><i class="fa fa-check"></i><b>1.4</b> Genómica funcional</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#estudios-epigenéticos-y-epigenómicos"><i class="fa fa-check"></i>Estudios epigenéticos y epigenómicos</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#conclusión"><i class="fa fa-check"></i><b>1.5</b> Conclusión</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#actividades"><i class="fa fa-check"></i><b>1.6</b> Actividades</a>
 <ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicio-1.1"><i class="fa fa-check"></i>Ejercicio 1.1</a></li>
+<li class="chapter" data-level="1.6.1" data-path="intro.html"><a href="intro.html#control-de-lectura"><i class="fa fa-check"></i><b>1.6.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="1.6.2" data-path="intro.html"><a href="intro.html#verdadero-o-falso"><i class="fa fa-check"></i><b>1.6.2</b> ¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>Parte II: Genética de Poblaciones</b></span></li>
@@ -150,7 +158,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#supuestos-que-asumimos-se-cumplen-para-h-w"><i class="fa fa-check"></i>Supuestos que asumimos se cumplen para H-W</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-dioicas-dos-sexos"><i class="fa fa-check"></i><b>2.2</b> Hardy-Weinberg en especies dioicas (dos sexos)</a></li>
-<li class="chapter" data-level="2.3" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#h-w-la-frecuencia-de-heterocigotas-en-función-de-la-frecuencia-alélica"><i class="fa fa-check"></i><b>2.3</b> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
+<li class="chapter" data-level="2.3" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#heterocigotas-freq-alelica"><i class="fa fa-check"></i><b>2.3</b> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
 <li class="chapter" data-level="2.4" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo"><i class="fa fa-check"></i><b>2.4</b> El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo</a></li>
 <li class="chapter" data-level="2.5" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#tres-o-más-alelos"><i class="fa fa-check"></i><b>2.5</b> Tres o más alelos</a></li>
 <li class="chapter" data-level="2.6" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-y-el-equilibrio-o-no"><i class="fa fa-check"></i><b>2.6</b> La estimación de frecuencias y el equilibrio (o no)</a></li>
@@ -158,19 +166,33 @@ div.csl-indent {
 <li class="chapter" data-level="2.8" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#dónde-se-esconden-los-alelos-recesivos"><i class="fa fa-check"></i><b>2.8</b> ¿Dónde se “esconden” los alelos recesivos?</a></li>
 <li class="chapter" data-level="2.9" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-poliploides"><i class="fa fa-check"></i><b>2.9</b> Hardy-Weinberg en especies poliploides</a></li>
 <li class="chapter" data-level="2.10" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#geometría-y-genética-los-diagramas-de-de-finetti"><i class="fa fa-check"></i><b>2.10</b> Geometría y Genética: los diagramas de <em>de Finetti</em></a></li>
-<li class="chapter" data-level="2.11" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-en-el-locus-abo"><i class="fa fa-check"></i><b>2.11</b> La estimación de frecuencias en el locus ABO</a></li>
+<li class="chapter" data-level="2.11" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#estimacion-abo"><i class="fa fa-check"></i><b>2.11</b> La estimación de frecuencias en el locus ABO</a></li>
+<li class="chapter" data-level="2.12" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#conclusión-1"><i class="fa fa-check"></i><b>2.12</b> Conclusión</a></li>
+<li class="chapter" data-level="2.13" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#actividades-1"><i class="fa fa-check"></i><b>2.13</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="2.13.1" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#control-de-lectura-1"><i class="fa fa-check"></i><b>2.13.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="2.13.2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#verdadero-o-falso-1"><i class="fa fa-check"></i><b>2.13.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicios-2"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="deriva.html"><a href="deriva.html"><i class="fa fa-check"></i><b>3</b> Deriva Genética</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="deriva.html"><a href="deriva.html#el-rol-de-los-procesos-estocásticos-en-la-genética"><i class="fa fa-check"></i><b>3.1</b> El rol de los procesos estocásticos en la genética</a></li>
-<li class="chapter" data-level="3.2" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i><b>3.2</b> El modelo de Wright-Fisher</a></li>
+<li class="chapter" data-level="3.2" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i><b>3.2</b> El modelo de Wright-Fisher</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.1"><i class="fa fa-check"></i>Ejemplo 3.1</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="deriva.html"><a href="deriva.html#el-rol-de-la-subdivisión-poblacional-en-la-evolución-de-las-frecuencias-alélicas"><i class="fa fa-check"></i><b>3.3</b> El rol de la subdivisión poblacional en la evolución de las frecuencias alélicas</a>
 <ul>
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#homocigosidad-y-heterocigosidad"><i class="fa fa-check"></i>Homocigosidad y Heterocigosidad</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.2"><i class="fa fa-check"></i>Ejemplo 3.2</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="deriva.html"><a href="deriva.html#cadenas-de-markov"><i class="fa fa-check"></i><b>3.4</b> Cadenas de Markov</a></li>
-<li class="chapter" data-level="3.5" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i><b>3.5</b> Tamaño efectivo poblacional</a></li>
+<li class="chapter" data-level="3.5" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i><b>3.5</b> Tamaño efectivo poblacional</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.3"><i class="fa fa-check"></i>Ejemplo 3.3</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.4"><i class="fa fa-check"></i>Ejemplo 3.4</a></li>
+</ul></li>
 <li class="chapter" data-level="3.6" data-path="deriva.html"><a href="deriva.html#aproximación-de-difusión"><i class="fa fa-check"></i><b>3.6</b> Aproximación de difusión</a>
 <ul>
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#caminatas-al-azar-y-procesos-de-difusión"><i class="fa fa-check"></i>Caminatas al azar y procesos de difusión</a></li>
@@ -178,9 +200,18 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-backward-equation"><i class="fa fa-check"></i>Kolmogorov Backward Equation</a></li>
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#solución-de-las-ecuaciones"><i class="fa fa-check"></i>Solución de las ecuaciones</a></li>
 </ul></li>
-<li class="chapter" data-level="3.7" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i><b>3.7</b> Probabilidad de fijación y tiempos de fijación</a></li>
+<li class="chapter" data-level="3.7" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i><b>3.7</b> Probabilidad de fijación y tiempos de fijación</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.5"><i class="fa fa-check"></i>Ejemplo 3.5</a></li>
+</ul></li>
 <li class="chapter" data-level="3.8" data-path="deriva.html"><a href="deriva.html#el-modelo-coalescente"><i class="fa fa-check"></i><b>3.8</b> El modelo coalescente</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejercicios-3"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="3.9" data-path="deriva.html"><a href="deriva.html#conclusión-2"><i class="fa fa-check"></i><b>3.9</b> Conclusión</a></li>
+<li class="chapter" data-level="3.10" data-path="deriva.html"><a href="deriva.html#actividades-2"><i class="fa fa-check"></i><b>3.10</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="deriva.html"><a href="deriva.html#control-de-lectura-2"><i class="fa fa-check"></i><b>3.10.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="3.10.2" data-path="deriva.html"><a href="deriva.html#verdadero-o-falso-2"><i class="fa fa-check"></i><b>3.10.2</b> ¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="3.10.3" data-path="deriva.html"><a href="deriva.html#ejercicios"><i class="fa fa-check"></i><b>3.10.3</b> Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="seleccion.html"><a href="seleccion.html"><i class="fa fa-check"></i><b>4</b> Selección Natural</a>
 <ul>
@@ -200,7 +231,13 @@ div.csl-indent {
 <li class="chapter" data-level="4.6" data-path="seleccion.html"><a href="seleccion.html#la-fuerza-de-la-selección-natural"><i class="fa fa-check"></i><b>4.6</b> La fuerza de la selección natural</a></li>
 <li class="chapter" data-level="4.7" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-deriva"><i class="fa fa-check"></i><b>4.7</b> Equilibrio selección-deriva</a></li>
 <li class="chapter" data-level="4.8" data-path="seleccion.html"><a href="seleccion.html#otros-tipos-de-selección-y-complejidades"><i class="fa fa-check"></i><b>4.8</b> Otros tipos de selección y complejidades</a></li>
+<li class="chapter" data-level="4.9" data-path="seleccion.html"><a href="seleccion.html#conclusión-3"><i class="fa fa-check"></i><b>4.9</b> Conclusión</a></li>
+<li class="chapter" data-level="4.10" data-path="seleccion.html"><a href="seleccion.html#actividades-3"><i class="fa fa-check"></i><b>4.10</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="4.10.1" data-path="seleccion.html"><a href="seleccion.html#control-de-lectura-3"><i class="fa fa-check"></i><b>4.10.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="4.10.2" data-path="seleccion.html"><a href="seleccion.html#verdadero-o-falso-3"><i class="fa fa-check"></i><b>4.10.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#ejercicios-4"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="dosloci.html"><a href="dosloci.html"><i class="fa fa-check"></i><b>5</b> Dinámica de 2 <em>loci</em></a>
 <ul>
@@ -212,9 +249,9 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="dosloci.html"><a href="dosloci.html#selección-en-modelos-de-dos-loci"><i class="fa fa-check"></i><b>5.4</b> Selección en modelos de dos <em>loci</em></a>
 <ul>
-<li><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento">Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento"><i class="fa fa-check"></i>Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i><b>5.5</b> Arrastre genético (“genetic hitchhiking” o “genetic draft”)</a></li>
+<li class="chapter" data-level="5.5" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i><b>5.5</b> Arrastre genético (“<em>genetic hitchhiking</em>” o “<em>genetic draft</em>”)</a></li>
 <li class="chapter" data-level="5.6" data-path="dosloci.html"><a href="dosloci.html#causas-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i><b>5.6</b> Causas del desequilibrio de ligamiento</a>
 <ul>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-al-mestizaje"><i class="fa fa-check"></i>Desequilibrio debido al mestizaje</a></li>
@@ -222,20 +259,41 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#el-cromosoma-y"><i class="fa fa-check"></i>El cromosoma Y</a></li>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-a-recombinación-reducida"><i class="fa fa-check"></i>Desequilibrio debido a recombinación reducida</a></li>
 </ul></li>
+<li class="chapter" data-level="5.7" data-path="dosloci.html"><a href="dosloci.html#conclusión-4"><i class="fa fa-check"></i><b>5.7</b> Conclusión</a></li>
+<li class="chapter" data-level="5.8" data-path="dosloci.html"><a href="dosloci.html#actividades-4"><i class="fa fa-check"></i><b>5.8</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="5.8.1" data-path="dosloci.html"><a href="dosloci.html#control-de-lectura-4"><i class="fa fa-check"></i><b>5.8.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="5.8.2" data-path="dosloci.html"><a href="dosloci.html#verdadero-o-falso-4"><i class="fa fa-check"></i><b>5.8.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejercicios-5"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="aparnoalazar.html"><a href="aparnoalazar.html"><i class="fa fa-check"></i><b>6</b> Apareamientos no-aleatorios</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-concepto-de-identidad-por-ascendencia-ibd"><i class="fa fa-check"></i><b>6.1</b> El concepto de “identidad por ascendencia” (IBD)</a></li>
 <li class="chapter" data-level="6.2" data-path="aparnoalazar.html"><a href="aparnoalazar.html#generalización-de-hardy-weinberg-para-apareamientos-no-aleatorios"><i class="fa fa-check"></i><b>6.2</b> Generalización de Hardy-Weinberg para apareamientos no-aleatorios</a></li>
-<li class="chapter" data-level="6.3" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><b>6.3</b> <em>F</em> como correlación entre gametos unidos</a></li>
+<li class="chapter" data-level="6.3" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><b>6.3</b> <span class="math inline">\(F\)</span> como correlación entre gametos unidos</a></li>
 <li class="chapter" data-level="6.4" data-path="aparnoalazar.html"><a href="aparnoalazar.html#endocría-y-depresión-endogámica"><i class="fa fa-check"></i><b>6.4</b> Endocría y depresión endogámica</a></li>
 <li class="chapter" data-level="6.5" data-path="aparnoalazar.html"><a href="aparnoalazar.html#un-caso-extremo-la-autogamia"><i class="fa fa-check"></i><b>6.5</b> Un caso extremo: la autogamia</a></li>
-<li class="chapter" data-level="6.6" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-estadísticos-f"><i class="fa fa-check"></i><b>6.6</b> El Coeficiente de endocría y estadísticos <em>F</em></a></li>
-<li class="chapter" data-level="6.7" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i><b>6.7</b> El efecto Wahlund</a></li>
-<li class="chapter" data-level="6.8" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i><b>6.8</b> Subdivisión, migración y el modelo de islas</a></li>
+<li class="chapter" data-level="6.6" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-los-estadísticos-f"><i class="fa fa-check"></i><b>6.6</b> El coeficiente de endocría y los estadísticos <em>F</em></a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.1"><i class="fa fa-check"></i>Ejemplo 6.1</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i><b>6.7</b> El efecto Wahlund</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.2"><i class="fa fa-check"></i>Ejemplo 6.2</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i><b>6.8</b> Subdivisión, migración y el modelo de islas</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.3"><i class="fa fa-check"></i>Ejemplo 6.3</a></li>
+</ul></li>
 <li class="chapter" data-level="6.9" data-path="aparnoalazar.html"><a href="aparnoalazar.html#mecanismos-de-especiación"><i class="fa fa-check"></i><b>6.9</b> Mecanismos de especiación</a></li>
+<li class="chapter" data-level="6.10" data-path="aparnoalazar.html"><a href="aparnoalazar.html#conclusión-5"><i class="fa fa-check"></i><b>6.10</b> Conclusión</a></li>
+<li class="chapter" data-level="6.11" data-path="aparnoalazar.html"><a href="aparnoalazar.html#actividades-5"><i class="fa fa-check"></i><b>6.11</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="6.11.1" data-path="aparnoalazar.html"><a href="aparnoalazar.html#control-de-lectura-5"><i class="fa fa-check"></i><b>6.11.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="6.11.2" data-path="aparnoalazar.html"><a href="aparnoalazar.html#verdadero-o-falso-5"><i class="fa fa-check"></i><b>6.11.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejercicios-6"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="microbial.html"><a href="microbial.html"><i class="fa fa-check"></i><b>7</b> Genética de Poblaciones Microbianas</a>
 <ul>
@@ -243,20 +301,30 @@ div.csl-indent {
 <li class="chapter" data-level="7.2" data-path="microbial.html"><a href="microbial.html#dinámica-de-las-poblaciones-bacterianas"><i class="fa fa-check"></i><b>7.2</b> Dinámica de las poblaciones bacterianas</a>
 <ul>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-exponencial"><i class="fa fa-check"></i>El modelo exponencial</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.1"><i class="fa fa-check"></i>Ejemplo 7.1</a></li>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-logístico"><i class="fa fa-check"></i>El modelo logístico</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.2"><i class="fa fa-check"></i>Ejemplo 7.2</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="microbial.html"><a href="microbial.html#modelos-haploides-de-selección-natural"><i class="fa fa-check"></i><b>7.3</b> Modelos haploides de selección natural</a>
 <ul>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-discreto"><i class="fa fa-check"></i>Selección haploide: modelo discreto</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.3"><i class="fa fa-check"></i>Ejemplo 7.3</a></li>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-continuo"><i class="fa fa-check"></i>Selección haploide: modelo continuo</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.4"><i class="fa fa-check"></i>Ejemplo 7.4</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-versus-el-de-wright-fisher"><i class="fa fa-check"></i><b>7.4</b> Los modelos de Moran y de Fisión versus el de Wright-Fisher</a></li>
+<li class="chapter" data-level="7.4" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-vs-el-de-wright-fisher"><i class="fa fa-check"></i><b>7.4</b> Los modelos de Moran y de fisión <em>vs</em> el de Wright-Fisher</a></li>
 <li class="chapter" data-level="7.5" data-path="microbial.html"><a href="microbial.html#el-rol-de-la-transferencia-horizontal"><i class="fa fa-check"></i><b>7.5</b> El rol de la transferencia horizontal</a></li>
-<li class="chapter" data-level="7.6" data-path="microbial.html"><a href="microbial.html#selección-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i><b>7.6</b> Selección vs Neutralismo: los procariotas en el debate</a></li>
+<li class="chapter" data-level="7.6" data-path="microbial.html"><a href="microbial.html#seleccionismo-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i><b>7.6</b> Seleccionismo <em>vs</em> neutralismo: los procariotas en el debate</a></li>
 <li class="chapter" data-level="7.7" data-path="microbial.html"><a href="microbial.html#genómica-poblacional"><i class="fa fa-check"></i><b>7.7</b> Genómica poblacional</a></li>
 <li class="chapter" data-level="7.8" data-path="microbial.html"><a href="microbial.html#genes-de-resistencia"><i class="fa fa-check"></i><b>7.8</b> Genes de resistencia</a></li>
 <li class="chapter" data-level="7.9" data-path="microbial.html"><a href="microbial.html#introducción-a-la-epidemiología-modelos-compartimentales"><i class="fa fa-check"></i><b>7.9</b> Introducción a la epidemiología: modelos compartimentales</a></li>
+<li class="chapter" data-level="7.10" data-path="microbial.html"><a href="microbial.html#conclusión-6"><i class="fa fa-check"></i><b>7.10</b> Conclusión</a></li>
+<li class="chapter" data-level="7.11" data-path="microbial.html"><a href="microbial.html#actividades-6"><i class="fa fa-check"></i><b>7.11</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="7.11.1" data-path="microbial.html"><a href="microbial.html#control-de-lectura-6"><i class="fa fa-check"></i><b>7.11.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="7.11.2" data-path="microbial.html"><a href="microbial.html#verdadero-o-falso-6"><i class="fa fa-check"></i><b>7.11.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejercicios-7"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>Parte III: Genética Cuantitativa</b></span></li>
 <li class="chapter" data-level="8" data-path="modelogenbas.html"><a href="modelogenbas.html"><i class="fa fa-check"></i><b>8</b> El Modelo Genético Básico</a>
@@ -276,7 +344,7 @@ div.csl-indent {
 <li class="chapter" data-level="8.7" data-path="modelogenbas.html"><a href="modelogenbas.html#interacción-genotipo-x-ambiente"><i class="fa fa-check"></i><b>8.7</b> Interacción Genotipo x Ambiente</a></li>
 <li class="chapter" data-level="8.8" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-en-el-modelo-genético-básico"><i class="fa fa-check"></i><b>8.8</b> La Varianza en el modelo genético básico</a>
 <ul>
-<li><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos">Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos"><i class="fa fa-check"></i>Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
 <li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-ambiental"><i class="fa fa-check"></i>La varianza ambiental</a></li>
 <li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-de-la-interacción"><i class="fa fa-check"></i>La Varianza de la interacción</a></li>
 </ul></li>
@@ -352,7 +420,7 @@ div.csl-indent {
 <li class="chapter" data-level="11.3" data-path="selartifI.html"><a href="selartifI.html#diferencial-de-selección-e-intensidad-de-selección"><i class="fa fa-check"></i><b>11.3</b> Diferencial de selección e intensidad de selección</a></li>
 <li class="chapter" data-level="11.4" data-path="selartifI.html"><a href="selartifI.html#intensidad-de-selección-y-proporción-seleccionada"><i class="fa fa-check"></i><b>11.4</b> Intensidad de selección y proporción seleccionada</a>
 <ul>
-<li><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp">¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp"><i class="fa fa-check"></i>¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
 <li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#la-relación-entre-diferentes-formas-de-calcular-la-intensidad-de-selección"><i class="fa fa-check"></i>La relación entre diferentes formas de calcular la intensidad de selección</a></li>
 </ul></li>
 <li class="chapter" data-level="11.5" data-path="selartifI.html"><a href="selartifI.html#intervalo-generacional"><i class="fa fa-check"></i><b>11.5</b> Intervalo generacional</a></li>
@@ -476,12 +544,12 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="GxE" class="section level1" number="15">
-<h1><span class="header-section-number">Capítulo 15</span> Normas de reacción e interacción Genotipo x Ambiente</h1>
+<div id="GxE" class="section level1 hasAnchor" number="15">
+<h1><span class="header-section-number">Capítulo 15</span> Normas de reacción e interacción Genotipo x Ambiente<a href="GxE.html#GxE" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>En capítulos previos hemos desarrollado los principales conceptos de la genética cuantitativa, así como obtenido diferentes resultados cuantitativos a partir del modelo genético básico. Cuando comenzamos a trabajar con dicho modelo, mencionamos la existencia de la interacción entre genotipo y ambiente pero decidimos dejarla fuera de la mayor parte de nuestros desarrollos. El argumento usado es que su importancia es relativamente baja en las condiciones normales asociadas a la producción animal (no así en la vegetal), pero en realidad lo que nos motivó a no considerarla son las complicaciones asociadas a su tratamiento. El presente capítulo vamos a dedicarlo entonces a entender el significado biológico de esta interacción, comprender su significado desde el punto de vista de nuestro modelo genético básico, así como delinear algunas implicancias de esta interacción sobre parámetros genéticos como la varianza aditiva.</p>
 <p>Para esto vamos a comenzar por mostrar cuán extendido es el alcance de este efecto y que natural nos resulta su existencia cuando pensamos un poco sobre ello. Vamos a definir conceptos claves como el de <strong>plasticidad fenotípica</strong> o el de <strong>norma de reacción</strong> y entender que nuestro concepto de genotipo como algo incambiado y que no reacciona al ambiente es poco natural. Luego pasaremos a analizar formas posibles de estimar su impacto y para eso recurriremos primero al análisis de una característica en dos ambientes. Eso nos remitirá al concepto de respuesta correlacionada, que vimos en el capítulo <a href="correlacionada.html#correlacionada">Correlaciones y Respuesta Correlacionada</a> y la utilidad de la correlación genética como forma de detectar interacciones significativas. Por último, pasaremos a vincular las normas de reacción lineales con los conceptos de genética cuantitativa que vimos en el caso del modelo de un <em>locus</em> con dos alelos y veremos el impacto en la varianza aditiva que puede tener el ambiente.</p>
-<div id="plasticidad-fenotípica-y-normas-de-reacción" class="section level2" number="15.1">
-<h2><span class="header-section-number">15.1</span> Plasticidad fenotípica y normas de reacción</h2>
+<div id="plasticidad-fenotípica-y-normas-de-reacción" class="section level2 hasAnchor" number="15.1">
+<h2><span class="header-section-number">15.1</span> Plasticidad fenotípica y normas de reacción<a href="GxE.html#plasticidad-fenotípica-y-normas-de-reacción" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Hasta ahora, en lo que hace a la genética cuantitativa, hemos venido trabajando esencialmente con una versión algo simplificada del modelo genético básico. Si bien establecimos desde un principio que el modelo, además de los efectos genéticos y ambientales, podía incorporar los efectos de la interacción entre genotipo y ambiente, hasta ahora logramos evitar razonablemente tener que lidiar con este último factor, que sin duda complica sobremanera muchas de las derivaciones. De hecho, en gran parte de las situaciones que modelamos no parece tan descabellado el ignorar esta interacción. Por ejemplo, cuando el ambiente es relativamente constante o uniforme para todos los individuos, el término de interacción no tendrá significación o importancia práctica. Por ejemplo, si los tambos de una determinada región se encuentran sometidos a las mismas condiciones geográficas, climáticas, etc. y además presentan un manejo muy similar de los animales (algo que parece razonable, ya que los mismos precios de insumos y egresos afectan las decisiones de manejo en forma similar), entonces podemos considerar el “ambiente” como relativamente homogéneo; en estas condiciones, no tiene mucho sentido considerar la interacción entre el genotipo y el ambiente ya que el ambiente es casi el mismo para todos los animales.</p>
 <p>Sin embargo, en muchas situaciones los ambientes son claramente contrastantes y ya no es posible evitar la consideración de la interacción entre genotipo y ambiente. Siguiendo con el mismo ejemplo, el uso de la raza <strong>Holando</strong> (Holstein) se encuentra extendido por todo el orbe, debido a su enorme producción. De hecho, el “tipo” de la raza ha ido cambiando a lo largo del siglo XX, principalmente guiado por los criadores de América del Norte hacia animales más grandes y pesados, adaptados a las condiciones productivas de dichos criadores. Mirada como unidad productiva, cuanto más grande la vaca (dentro de la raza Holando) mayor la expectativa promedio de producción, lo que ha llevado a animales de gran porte (vacas de más de 650 Kg). Estos “genotipos” (en un sentido liberal del término) de animales se encuentran perfectamente adaptados a un ambiente controlado y agradable (en general estabulados buena parte del año), con comida <em>ad libitum</em> y un manejo sanitario excelente, lo que permite que una partición de la energía hacia la producción lechera sea favorecida (es decir, seleccionada favorablemente por los productores).</p>
 <p>Por otra parte, cuando estos mismos animales deben producir en otros ambientes, por ejemplo en los trópicos, las condiciones ambientales cambian en forma dramática y las mismas características que eran tan deseables antes ahora parecen claramente perjudiciales. Vacas grandes precisan mucho más alimento que vacas pequeñas y difícilmente puedan mantener una condición corporal razonable ya que además estaban seleccionadas para sacrificar su condición a cambio de la producción de leche. Mucho peor, como mencionamos antes, el calor se genera proporcionalmente al volumen del animal, mientras que se disipa en proporción al área, por lo que animales grandes sufrirán en extremo el calor. Más aún, el manejo sanitario tan cuidadoso que recibieron seguramente evitó el desarrollo de resistencia frente a parásitos, en particular los del nuevo ambiente, que seguramente tiene mayor cantidad y diversidad de los mismos, por lo que apenas podrá mantenerse en condición sanitarias aceptables. Frente a esto, animales de la misma raza, de menor tamaño, criados desde hace varias generaciones en las condiciones de los trópicos seguramente se sentirán más “aclimatados” y adaptados al ambiente exigente, por lo que su producción será razonable, así como su condición corporal y su estado sanitario.</p>
@@ -505,7 +573,7 @@ V_P=\mathbb{V}(G+E+I_{GxE})=V_G+V_E+V_{GxE}+2\mathrm{Cov}_{GE}=\\
 <hr />
 <p><br />
 </p>
-<p>Usualmente es más fácil de observar plasticidad fenotípica en las plantas como mecanismo de adaptación a la variabilidad ambiental a las que se ven sometidas. Ejemplos claros incluyen la asignación de más recursos a las raíces en suelos que contienen bajas concentraciones de nutrientes, el tiempo de floración, así como el área y espesor de las hojas. En algunas plantas, por ejemplo del género <em>Convolvulus</em> <span class="citation"><a href="#ref-GonzalezGianoli2004" role="doc-biblioref">González and Gianoli</a> (<a href="#ref-GonzalezGianoli2004" role="doc-biblioref">2004</a>)</span>, mientras que las hojas que crecen en ambiente sombreado muestran una gran superficie y son de poco espesor para maximizar la captura de la luz, en ambientes soleados muestran hojas de menor superficie y más gruesas. También el <strong>diente de león</strong> (del género <em>Taraxacum</em>) es bien conocido por mostrar una considerable plasticidad en su forma cuando crece en ambientes soleados frente a los sombreados.</p>
+<p>Usualmente es más fácil de observar plasticidad fenotípica en las plantas como mecanismo de adaptación a la variabilidad ambiental a las que se ven sometidas. Ejemplos claros incluyen la asignación de más recursos a las raíces en suelos que contienen bajas concentraciones de nutrientes, el tiempo de floración, así como el área y espesor de las hojas. En algunas plantas, por ejemplo del género <em>Convolvulus</em> <span class="citation">González and Gianoli (<a href="#ref-GonzalezGianoli2004" role="doc-biblioref">2004</a>)</span>, mientras que las hojas que crecen en ambiente sombreado muestran una gran superficie y son de poco espesor para maximizar la captura de la luz, en ambientes soleados muestran hojas de menor superficie y más gruesas. También el <strong>diente de león</strong> (del género <em>Taraxacum</em>) es bien conocido por mostrar una considerable plasticidad en su forma cuando crece en ambientes soleados frente a los sombreados.</p>
 <p>El concepto de <strong>plasticidad fenotípica</strong> se encuentra estrechamente relacionado al concepto de <strong>norma de reacción</strong>, que sería la expresión de este concepto para una característica fenotípica determinada, en un genotipo y en gradiente ambiental particular.</p>
 <p><br />
 </p>
@@ -514,7 +582,7 @@ V_P=\mathbb{V}(G+E+I_{GxE})=V_G+V_E+V_{GxE}+2\mathrm{Cov}_{GE}=\\
 <hr />
 <p><br />
 </p>
-<p>La norma de reacción de un genotipo dado es su rango de respuestas fenotípicas a lo largo de un gradiente ambiental. El concepto fue introducido por Richard Woltereck en 1909 (<span class="citation"><a href="#ref-Woltereck1909" role="doc-biblioref">Woltereck</a> (<a href="#ref-Woltereck1909" role="doc-biblioref">1909</a>)</span>) en un trabajo con <strong>Dafnias</strong> (un género de crustáceos planctónicos del orden <em>Cladocera</em>) y se ilustra en la figura <a href="GxE.html#fig:normarea">15.1</a>. En un <strong>gradiente ambiental</strong>, marcado por el eje de las abscisas, los dos genotipos <strong>A</strong> y <strong>B</strong> reaccionan de manera opuesta en la expresión fenotípica de una característica. Por ejemplo, la característica fenotípica podría ser el rendimiento y el gradiente ambiental podría ser la humedad del suelo. Mientras que para el <strong>genotipo A</strong> el rendimiento aumenta en forma aproximadamente lineal con la humedad, para el <strong>genotipo B</strong> el rendimiento decrece de la misma forma con la humedad.</p>
+<p>La norma de reacción de un genotipo dado es su rango de respuestas fenotípicas a lo largo de un gradiente ambiental. El concepto fue introducido por Richard Woltereck en 1909 (<span class="citation">Woltereck (<a href="#ref-Woltereck1909" role="doc-biblioref">1909</a>)</span>) en un trabajo con <strong>Dafnias</strong> (un género de crustáceos planctónicos del orden <em>Cladocera</em>) y se ilustra en la figura <a href="GxE.html#fig:normarea">15.1</a>. En un <strong>gradiente ambiental</strong>, marcado por el eje de las abscisas, los dos genotipos <strong>A</strong> y <strong>B</strong> reaccionan de manera opuesta en la expresión fenotípica de una característica. Por ejemplo, la característica fenotípica podría ser el rendimiento y el gradiente ambiental podría ser la humedad del suelo. Mientras que para el <strong>genotipo A</strong> el rendimiento aumenta en forma aproximadamente lineal con la humedad, para el <strong>genotipo B</strong> el rendimiento decrece de la misma forma con la humedad.</p>
 <p><br />
 </p>
 
@@ -526,7 +594,7 @@ Figura 15.1: Ilustración del concepto de <strong>norma de reacción</strong>. E
 </div>
 <p><br />
 </p>
-<p>Los conceptos de plasticidad fenotípica y de norma de reacción están estrechamente vinculados al concepto de <strong>canalización</strong>, un término acuñado en 1942 por Conrad Hal Waddington (<span class="citation"><a href="#ref-Waddington1942" role="doc-biblioref">Waddington</a> (<a href="#ref-Waddington1942" role="doc-biblioref">1942</a>)</span>) con la idea de conceptualizar la robustez que demuestran ciertos procesos y reacciones involucradas en el desarrollo de los organismos y que pese a ser apartadas (ligeramente) de las condiciones normales igual llevan al mismo resultado.</p>
+<p>Los conceptos de plasticidad fenotípica y de norma de reacción están estrechamente vinculados al concepto de <strong>canalización</strong>, un término acuñado en 1942 por Conrad Hal Waddington (<span class="citation">Waddington (<a href="#ref-Waddington1942" role="doc-biblioref">1942</a>)</span>) con la idea de conceptualizar la robustez que demuestran ciertos procesos y reacciones involucradas en el desarrollo de los organismos y que pese a ser apartadas (ligeramente) de las condiciones normales igual llevan al mismo resultado.</p>
 <p><br />
 </p>
 <hr />
@@ -544,7 +612,7 @@ Figura 15.2: Norma de reacción para ilustrar el concepto de canalización. Mien
 </div>
 <p><br />
 </p>
-<p>Desde el punto de vista molecular la canalización podría estar actuando como un <strong>capacitor evolutivo</strong>, manteniendo diversos cambios a nivel genómico sin expresión en el fenotipo, hasta que por algún motivo el mismo se descarga (la analogía es con el funcionamiento de un capacitor en los circuitos eléctricos, donde el mismo es capaz de almacenar energía mientras se carga). Un ejemplo de un gen con esta función podría ser la proteína <strong>HSP90</strong> (“Heat Shock Protein 90,” las HSP son un conjunto de proteínas que originalmente se asociaron a la expresión como respuesta al estrés), que cumple una función de “chaperona” (ayudan al plegado de otras proteínas). Se ha demostrado en diversas especies que la mutación de esta proteína está asociada al incremento en la variabilidad observada en diferentes características fenotípicas, que estarían canalizadas por la forma normal de <strong>HSP90</strong>.</p>
+<p>Desde el punto de vista molecular la canalización podría estar actuando como un <strong>capacitor evolutivo</strong>, manteniendo diversos cambios a nivel genómico sin expresión en el fenotipo, hasta que por algún motivo el mismo se descarga (la analogía es con el funcionamiento de un capacitor en los circuitos eléctricos, donde el mismo es capaz de almacenar energía mientras se carga). Un ejemplo de un gen con esta función podría ser la proteína <strong>HSP90</strong> (“Heat Shock Protein 90”, las HSP son un conjunto de proteínas que originalmente se asociaron a la expresión como respuesta al estrés), que cumple una función de “chaperona” (ayudan al plegado de otras proteínas). Se ha demostrado en diversas especies que la mutación de esta proteína está asociada al incremento en la variabilidad observada en diferentes características fenotípicas, que estarían canalizadas por la forma normal de <strong>HSP90</strong>.</p>
 <!-- \ -->
 <!-- ---- -->
 <!-- #### Ejemplo 15.x{-} -->
@@ -565,8 +633,8 @@ Figura 15.2: Norma de reacción para ilustrar el concepto de canalización. Mien
 </ul>
 </div>
 </div>
-<div id="interacción-gxe-en-dos-ambientes" class="section level2" number="15.2">
-<h2><span class="header-section-number">15.2</span> Interacción GxE en dos ambientes</h2>
+<div id="interacción-gxe-en-dos-ambientes" class="section level2 hasAnchor" number="15.2">
+<h2><span class="header-section-number">15.2</span> Interacción GxE en dos ambientes<a href="GxE.html#interacción-gxe-en-dos-ambientes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Cuando en lugar de considerar un gradiente ambiental, es decir una variación continua del ambiente, consideramos una serie discreta de ambientes contrastantes, la situación puede simplificarse bastante, particularmente en el caso de dos ambientes. En muchos casos, si bien existe un gradiente ambiental subyacente, nos interesa contrastar dos ambientes en particular, por ejemplo, la expresión de una característica en clima templado versus su expresión en los trópicos. Más específico aún, podemos analizar el uso de una raza cebuina en nuestro país, comparando los resultados de varias razas británicas y de la raza cebuina en nuestro país y en la región de origen de la raza cebuina. Otro ejemplo podría ser analizar la producción de diferentes variedades de maíz en el “Medio Oeste Estadounidense” y en nuestro país.</p>
 <p>Un rango de comportamientos posibles de estos experimentos puede apreciarse en la figura <a href="GxE.html#fig:figura15p1">15.3</a>, donde la expresión fenotípica de tres “genotipos” diferentes, identificados por colores diferentes, se muestran en dos ambientes diferentes, uno <strong>pobre</strong> y el otro <strong>favorable</strong>. En la situación representada en (a), los fenotipos correspondientes a los tres genotipos se desplazan la misma cantidad en el ambiente favorable respecto al ambiente pobre, por lo que genotipo y ambiente son aditivos entre ellos (su suma es el fenotipo) y por lo tanto no existe interacción entre genotipo y ambiente. En la situación mostrada en (b), se mantiene el ordenamiento relativo entre los genotipos (el rojo superior al verde y este superior al azul) en los dos ambientes, pero las distancias entre ellos no son idénticas en los dos ambientes, sino que resultan de multiplicar la distancia original for un factor. Por lo tanto, en este caso estamos tratando con un cambio de escala entre los dos ambientes. Por otra parte, la situación representada en (c) implica un cambio en el ordenamiento de los genotipos (las líneas se cruzan), aunque no hay un cambio de escala ya que la varianza fenotípica es igual en ambos ambientes. Por último, la situación representada en (d) implica tanto un re-ordenamiento de los genotipos como un cambio de escala ya que existe mayor variabilidad fenotípica en el ambiente favorable.</p>
 <p><br />
@@ -580,7 +648,7 @@ Figura 15.3: Representación esquemática de la interacción genotipo ambiente. 
 </div>
 <p><br />
 </p>
-<p>Una simplificación notable en el tratamiento de la interacción entre genotipo y ambiente proviene de la idea de <span class="citation"><a href="#ref-Falconer1952" role="doc-biblioref">Falconer</a> (<a href="#ref-Falconer1952" role="doc-biblioref">1952</a>)</span> de considerar la expresión de la característica en dos ambientes como si se tratase de dos características diferentes y que presentan, por lo tanto, una correlación genética (aditiva). La idea nos remite directamente al “path analysis” de Sewall Wright y a la sección <a href="correlacionada.html#la-relación-entre-las-correlaciones-fenotípica-genética-y-ambiental">La relación entre las correlaciones fenotípica, genética y ambiental</a>. La idea se ilustra en la figura <a href="GxE.html#fig:gxeFalconer">15.4</a>, donde la misma característica se presenta en dos tratamientos diferentes, <span class="math inline">\(T1\)</span> y <span class="math inline">\(T2\)</span>. Podemos pensar en estos tratamientos como dos condiciones nutricionales diferentes, o de exposición diferente a desafíos sanitarios, o lo que se nos ocurra como los dos ambientes contrastantes donde queremos explorar el tema de interacción genotipo ambiente.</p>
+<p>Una simplificación notable en el tratamiento de la interacción entre genotipo y ambiente proviene de la idea de <span class="citation">Falconer (<a href="#ref-Falconer1952" role="doc-biblioref">1952</a>)</span> de considerar la expresión de la característica en dos ambientes como si se tratase de dos características diferentes y que presentan, por lo tanto, una correlación genética (aditiva). La idea nos remite directamente al “path analysis” de Sewall Wright y a la sección <a href="correlacionada.html#la-relación-entre-las-correlaciones-fenotípica-genética-y-ambiental">La relación entre las correlaciones fenotípica, genética y ambiental</a>. La idea se ilustra en la figura <a href="GxE.html#fig:gxeFalconer">15.4</a>, donde la misma característica se presenta en dos tratamientos diferentes, <span class="math inline">\(T1\)</span> y <span class="math inline">\(T2\)</span>. Podemos pensar en estos tratamientos como dos condiciones nutricionales diferentes, o de exposición diferente a desafíos sanitarios, o lo que se nos ocurra como los dos ambientes contrastantes donde queremos explorar el tema de interacción genotipo ambiente.</p>
 <p>Si observamos la figura, hay tres fuentes de variación que afectan a cada uno de los dos fenotipos: los dos genotipos, <span class="math inline">\(G_1\)</span> y <span class="math inline">\(G_2\)</span>; las diferencias ambientales dentro de cada tratamiento, <span class="math inline">\(T_1\)</span> y <span class="math inline">\(T_2\)</span>; y las diferencias ambientales no asociadas a los tratamientos, <span class="math inline">\(E_1\)</span> y <span class="math inline">\(E_2\)</span>. Los dos fenotipos, que en realidad es la <strong>misma característica medida en dos ambientes diferentes</strong>, están <strong>correlacionados por una vía genética</strong> y, posiblemente, por una vía ambiental. Por otra parte, los dos genotipos, $G_1 $y <span class="math inline">\(G_2\)</span>, están conectados por una correlación, <span class="math inline">\(r_G\)</span>.</p>
 <p>Como vimos en el capítulo <a href="correlacionada.html#correlacionada">Correlaciones y Respuesta Correlacionada</a>, esta correlación genética, junto con los coeficientes de paso, <span class="math inline">\(h_1\)</span> y <span class="math inline">\(h_2\)</span> (las raíces cuadradas de las dos heredabilidades), que relacionan el genotipo con el fenotipo son todo lo que se necesita para la solución del problema de determinar el coeficiente de correlación genética, ya que de acuerdo a la ecuación <a href="correlacionada.html#eq:respcor8">(12.32)</a>, si las intensidades de selección son las mismas en las dos características, entonces</p>
 <p><span class="math display">\[\begin{equation}
@@ -594,21 +662,21 @@ Figura 15.3: Representación esquemática de la interacción genotipo ambiente. 
 <p>Al tratarse como dos características diferentes, podemos considerar que los ambientes actúan de diferente forma en cada una y lo mismo la genética. Si desde el punto de vista genético el ordenamiento es exactamente igual en los dos ambientes y las distancias proporcionales, entonces <strong>la correlación genética debería ser igual a uno</strong>. Por el contrario, si de alguna manera el orden de los fenotipos se altera o aún las distancias entre ellos dejan de ser proporcionales, entonces la correlación será inferior a uno.</p>
 
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:gxeFalconer"></span>
-<img src="figuras/GxE2caract.png" alt="Diagrama para el estudio de la interacción genotipo-ambiente en dos ambientes, considerando la misma como una correlación genética entre dos características diferentes. En este diagrama \(T_1\) y \(T_2\) son los dos tratamientos diferentes, que pueden ser considerados como “macroambientes.” mientras que \(E_1\) y \(E_2\) son ambientes con una correlación entre ellos establecida en el modelo." width="80%" />
+<img src="figuras/GxE2caract.png" alt="Diagrama para el estudio de la interacción genotipo-ambiente en dos ambientes, considerando la misma como una correlación genética entre dos características diferentes. En este diagrama \(T_1\) y \(T_2\) son los dos tratamientos diferentes, que pueden ser considerados como “macroambientes”., mientras que \(E_1\) y \(E_2\) son ambientes con una correlación entre ellos establecida en el modelo." width="80%" />
 <p class="caption">
-Figura 15.4: Diagrama para el estudio de la interacción genotipo-ambiente en dos ambientes, considerando la misma como una correlación genética entre dos características diferentes. En este diagrama <span class="math inline">\(T_1\)</span> y <span class="math inline">\(T_2\)</span> son los dos tratamientos diferentes, que pueden ser considerados como “macroambientes.” mientras que <span class="math inline">\(E_1\)</span> y <span class="math inline">\(E_2\)</span> son ambientes con una correlación entre ellos establecida en el modelo.
+Figura 15.4: Diagrama para el estudio de la interacción genotipo-ambiente en dos ambientes, considerando la misma como una correlación genética entre dos características diferentes. En este diagrama <span class="math inline">\(T_1\)</span> y <span class="math inline">\(T_2\)</span> son los dos tratamientos diferentes, que pueden ser considerados como “macroambientes”., mientras que <span class="math inline">\(E_1\)</span> y <span class="math inline">\(E_2\)</span> son ambientes con una correlación entre ellos establecida en el modelo.
 </p>
 </div>
 <p><br />
 </p>
 <p>Una de las dificultades mayores con esta idea es la de determinar el fenotipo en dos tratamientos diferentes al mismo tiempo o al menos en tiempos suficientemente similares como que no sean importantes los factores de confusión. Por ejemplo, es imposible por este método determinar la existencia de interacción genotipo-ambiente en peso a los 18 meses para animales criados en confinamiento vs criados a campo, ya que un animal no puede estar en los dos estados (tratamientos) al mismo tiempo (excepto para el <strong>gato de Schrödinger</strong>, pero en este caso es bastante difícil medir los fenotipos). Para otras características, que de alguna manera se repiten en el animal, por ejemplo las lactancias, podemos ensayar los animales en las dos condiciones, pero resulta un factor importante de confusión la historia previa del animal antes de cada lactancia y además existe el factor de confusión que es el número de lactancia (cuando nos referimos a producción del animal).</p>
-<p>Una alternativa razonable es la experimentación con <strong>grupos de individuos</strong> con algún tipo de vinculación de parentesco entre ellos, como la unidad básica, en lugar del individuo. Es decir, podemos dividir a la mitad cada grupo (familia) y dejar una mitad en un tratamiento y la otra mitad en el otro tratamiento. Por comodidad, a veces vamos a llamar macroambiente al tratamiento, ya que se trata de un “ambiente” que afecta a todo un grupo de individuos (el que está sometido a ese tratamiento, que obviamente no es genético). En lo que sigue, en esta y en la próxima sección, vamos a seguir muy estrechamente el tratamiento del tema que le dan <span class="citation"><a href="#ref-LynchWalsh1998" role="doc-biblioref">Michael Lynch and Walsh</a> (<a href="#ref-LynchWalsh1998" role="doc-biblioref">1998</a>)</span>, por lo que nuevamente apelaremos a su notación.</p>
+<p>Una alternativa razonable es la experimentación con <strong>grupos de individuos</strong> con algún tipo de vinculación de parentesco entre ellos, como la unidad básica, en lugar del individuo. Es decir, podemos dividir a la mitad cada grupo (familia) y dejar una mitad en un tratamiento y la otra mitad en el otro tratamiento. Por comodidad, a veces vamos a llamar macroambiente al tratamiento, ya que se trata de un “ambiente” que afecta a todo un grupo de individuos (el que está sometido a ese tratamiento, que obviamente no es genético). En lo que sigue, en esta y en la próxima sección, vamos a seguir muy estrechamente el tratamiento del tema que le dan <span class="citation">Michael Lynch and Walsh (<a href="#ref-LynchWalsh1998" role="doc-biblioref">1998</a>)</span>, por lo que nuevamente apelaremos a su notación.</p>
 <p>Supongamos un experimento en el que pretendemos evaluar la interacción genotipo-ambiente entre dos macroambientes. Para eso, vamos a dividir todos los <strong>grupos genotípicos</strong> de interés (que pueden estar representados, por ejemplo, por familias) en dos, una mitad expresando la característica en un macroambiente, la otra mitad en el otro. En el presente contexto, podemos describir el fenotipo de un individuo que participa en nuestro experimento como</p>
 <p><span class="math display" id="eq:interGxE1">\[\begin{equation}
 z_{ijk}=\mu+G_j+I_{ij}+E_{g,i}+E_{s,ijk}
 \tag{15.2}
 \end{equation}\]</span></p>
-<p>donde <span class="math inline">\(\mu\)</span> es la media general, promediada sobre todos los genotipos en todos los ambientes, <span class="math inline">\(G_j\)</span> es el efecto del <span class="math inline">\(j\)</span>esimo grupo genotípico, promediado sobre todos los ambientes, <span class="math inline">\(E_{g,i}\)</span> es el efecto promedio del <span class="math inline">\(i\)</span>esimo ambiente sobre todos los genotipos, <span class="math inline">\(I = {ij}\)</span> es el efecto de interacción entre el genotipo <span class="math inline">\(j\)</span> y el ambiente <span class="math inline">\(i\)</span> y <span class="math inline">\(E_{s,ijk}\)</span> son los efectos ambientales particulares (error) de la réplica <span class="math inline">\(k\)</span> del genotipo <span class="math inline">\(j\)</span> en el ambiente <span class="math inline">\(i\)</span>. La notación de la letra <span class="math inline">\(g\)</span> en <span class="math inline">\(E_{g,i}\)</span> se refiere a que se trata de un efecto ambiental general (macroambiente, tratamiento <span class="math inline">\(T\)</span> en <span class="citation"><a href="#ref-Falconer1952" role="doc-biblioref">Falconer</a> (<a href="#ref-Falconer1952" role="doc-biblioref">1952</a>)</span>), mientras que la letra <span class="math inline">\(s\)</span> en <span class="math inline">\(E_{s,ijk}\)</span> se refiere al ambiente específico (<span class="math inline">\(E\)</span> en <span class="citation"><a href="#ref-Falconer1952" role="doc-biblioref">Falconer</a> (<a href="#ref-Falconer1952" role="doc-biblioref">1952</a>)</span>).</p>
+<p>donde <span class="math inline">\(\mu\)</span> es la media general, promediada sobre todos los genotipos en todos los ambientes, <span class="math inline">\(G_j\)</span> es el efecto del <span class="math inline">\(j\)</span>esimo grupo genotípico, promediado sobre todos los ambientes, <span class="math inline">\(E_{g,i}\)</span> es el efecto promedio del <span class="math inline">\(i\)</span>esimo ambiente sobre todos los genotipos, <span class="math inline">\(I = {ij}\)</span> es el efecto de interacción entre el genotipo <span class="math inline">\(j\)</span> y el ambiente <span class="math inline">\(i\)</span> y <span class="math inline">\(E_{s,ijk}\)</span> son los efectos ambientales particulares (error) de la réplica <span class="math inline">\(k\)</span> del genotipo <span class="math inline">\(j\)</span> en el ambiente <span class="math inline">\(i\)</span>. La notación de la letra <span class="math inline">\(g\)</span> en <span class="math inline">\(E_{g,i}\)</span> se refiere a que se trata de un efecto ambiental general (macroambiente, tratamiento <span class="math inline">\(T\)</span> en <span class="citation">Falconer (<a href="#ref-Falconer1952" role="doc-biblioref">1952</a>)</span>), mientras que la letra <span class="math inline">\(s\)</span> en <span class="math inline">\(E_{s,ijk}\)</span> se refiere al ambiente específico (<span class="math inline">\(E\)</span> en <span class="citation">Falconer (<a href="#ref-Falconer1952" role="doc-biblioref">1952</a>)</span>).</p>
 <p>De acuerdo con este modelo, el efecto del macroambiente <span class="math inline">\(i\)</span> podemos escribirlo como el desvío de la media de los todos los grupos en dicho macroambiente respecto a la media general, es decir</p>
 <p><span class="math display" id="eq:interGxE2">\[\begin{equation}
 E_{g,i}=\mu_i-\mu
@@ -636,8 +704,8 @@ I_{ij}=\mu_{ij}+\mu-\mu_i-\mu_j=0 \Leftrightarrow \mu_{ij}=-\mu+\mu_i+\mu_j  \Le
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-15.1" class="section level4 unnumbered">
-<h4>Ejemplo 15.1</h4>
+<div id="ejemplo-15.1" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 15.1<a href="GxE.html#ejemplo-15.1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>En un experimento se determinó que la producción de dos variedades determinadas de maíz en (kg/ha) son funciones lineales de la cantidad de agua disponible en el suelo en un momento específico del crecimiento, al menos en un rango muy estrecho, entre <span class="math inline">\(18\%-22\%\)</span>. Las funciones que describen las producciones de las dos variedades (<strong>A</strong> y <strong>B</strong>) en función de la humedad del suelo en el momento estudiado son:</p>
 <ul>
 <li><p><strong>A</strong>: <span class="math inline">\(P_A=[7800+h\% \times 250] \text{ kg}\)</span></p></li>
@@ -650,6 +718,11 @@ I_{ij}=\mu_{ij}+\mu-\mu_i-\mu_j=0 \Leftrightarrow \mu_{ij}=-\mu+\mu_i+\mu_j  \Le
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="16%" />
+<col width="12%" />
+<col width="70%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Variedad</th>
@@ -723,8 +796,8 @@ P_B=[5300+h\% \times 375] \text{ kg}=12.800 \text{ kg}
 </div>
 </div>
 </div>
-<div id="correlación-genética-a-través-de-dos-ambientes" class="section level2" number="15.3">
-<h2><span class="header-section-number">15.3</span> Correlación genética a través de dos ambientes</h2>
+<div id="correlación-genética-a-través-de-dos-ambientes" class="section level2 hasAnchor" number="15.3">
+<h2><span class="header-section-number">15.3</span> Correlación genética a través de dos ambientes<a href="GxE.html#correlación-genética-a-través-de-dos-ambientes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Para simplificar la notación y teniendo en cuenta que en el “error” pueden participar alguna otra fuente genética cuando el fenotipo es de un grupo de individuos, vamos a usar la notación <span class="math inline">\(e_{ijk}\)</span> en lugar de <span class="math inline">\(E_{s,ijk}\)</span>. Con esto en mente, los fenotipos de dos individuos <span class="math inline">\(k\)</span> y <span class="math inline">\(l\)</span>, ambos pertenecientes al mismo grupo genotípico <span class="math inline">\(j\)</span>, para la característica de interés en los dos ambientes, <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span> podemos escribirlos como</p>
 <p><span class="math display" id="eq:intergecor1">\[\begin{equation}
 z_{1jk}=\mu+G_j+I_{1j}+E_1+e_{1jk}\\
@@ -852,30 +925,28 @@ z_{2jl}=\mu+G_j-I_j-E+e_{2jl}\\
 <li><p>La <strong>covarianza genética de los grupos</strong> entre los dos ambientes será:
 <span class="math inline">\(\sigma_G(1,2)=\sigma^2_G-\sigma^2_I\)</span></p></li>
 <li><p>A su vez, el <strong>coeficiente de correlación genética (aditiva) entre ambientes</strong> quedó definido como: <span class="math inline">\(\rho_x=\frac{\sigma_G(1,2)}{\sigma_G(1)\ \sigma_G(2)}\)</span>.</p></li>
-</ul>
-<p>-Entonces, a partir de estimaciones de las varianzas (<span class="math inline">\(\sigma^2_G(1)\)</span> y <span class="math inline">\(\sigma^2_G(2)\)</span> ) y covarianzas (<span class="math inline">\(\sigma_G(1,2)\)</span> ) de <strong>familias</strong> podemos <strong>estimar la correlación genética de la característica entre ambientes diferentes</strong>.</p>
-<ul>
-<li>En caso de que la <strong>interacción genotipo-ambiente sea nula</strong>, entonces <span class="math inline">\(\sigma^2_I=\sigma_{G,I}=0\)</span> y por lo tanto la <strong>correlación genética entre ambientes es igual a uno</strong>, es decir, <strong>se trata de la misma característica</strong> (pese a haberla considerado como dos características diferentes para el análisis). Análogamente, si existe una correlación negativa perfecta entre los rankings de los grupos genéticos (familias) a través de los ambientes, entonces la varianza genética de los grupos es cero, es decir <span class="math inline">\(\sigma^2_G=0\)</span> y por lo tanto <span class="math inline">\(\sigma_{G,I}=0\)</span> (ya que es la covarianza de una variable aleatoria con una constante). Por lo que en ese caso, la <strong>correlación genética entre ambientes</strong> es -1.</li>
+<li><p>Entonces, a partir de estimaciones de las varianzas (<span class="math inline">\(\sigma^2_G(1)\)</span> y <span class="math inline">\(\sigma^2_G(2)\)</span> ) y covarianzas (<span class="math inline">\(\sigma_G(1,2)\)</span> ) de <strong>familias</strong> podemos <strong>estimar la correlación genética de la característica entre ambientes diferentes</strong>.</p></li>
+<li><p>En caso de que la <strong>interacción genotipo-ambiente sea nula</strong>, entonces <span class="math inline">\(\sigma^2_I=\sigma_{G,I}=0\)</span> y por lo tanto la <strong>correlación genética entre ambientes es igual a uno</strong>, es decir, <strong>se trata de la misma característica</strong> (pese a haberla considerado como dos características diferentes para el análisis). Análogamente, si existe una correlación negativa perfecta entre los rankings de los grupos genéticos (familias) a través de los ambientes, entonces la varianza genética de los grupos es cero, es decir <span class="math inline">\(\sigma^2_G=0\)</span> y por lo tanto <span class="math inline">\(\sigma_{G,I}=0\)</span> (ya que es la covarianza de una variable aleatoria con una constante). Por lo que en ese caso, la <strong>correlación genética entre ambientes</strong> es -1.</p></li>
 </ul>
 </div>
-<div id="procedimientos-de-estimación" class="section level3 unnumbered">
-<h3>Procedimientos de estimación</h3>
+<div id="procedimientos-de-estimación" class="section level3 unnumbered hasAnchor">
+<h3>Procedimientos de estimación<a href="GxE.html#procedimientos-de-estimación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A partir de los resultados obtenidos en la sección anterior resulta claro que la determinación de la existencia de interacción entre genotipo y ambiente a partir del método de la correlación consiste en estimar su valor y determinar si el mismo es <strong>significativamente menor a uno</strong>. Es decir, un valor de <span class="math inline">\(\rho_x=1\)</span> es indicación de que lo que consideramos como dos características desde el punto de vista genético es en realidad la misma y que por lo tanto no existe interacción GxE. El problema es que aún siendo la correlación igual a uno, el valor estimado es una variable aleatoria, con su propia distribución y que posiblemente casi siempre nos dé un valor estimado menor a uno, aún siendo uno su valor verdadero. Por lo tanto, tenemos dos problemas diferentes, uno de estimación y el otro de significación estadística.</p>
 <p>Para obtener un estimado <span class="math inline">\(r_x\)</span> de <span class="math inline">\(\rho_x\)</span>, el procedimiento más sencillo consiste en separar la familias en dos y ensayar cada mitad en uno de los ambientes. Eso nos proporcionará estimados de las varianzas entre familias en los dos ambientes (<span class="math inline">\(\sigma^2_G(1)\)</span> y <span class="math inline">\(\sigma^2_G(2)\)</span>), así como un estimado de la covarianza de familia entre ambientes (<span class="math inline">\(\sigma_G(1,2)\)</span>). A partir de esto, alcanza con sustituir los valores observados por los valores esperados en la ecuación <a href="GxE.html#eq:intergecor8">(15.13)</a>, es decir</p>
 <p><span class="math display">\[\begin{equation}
 \rho_x=\frac{\sigma_G(1,2)}{\sigma_G(1)\ \sigma_G(2)}
 \end{equation}\]</span></p>
 <p>El procedimientos más sencillo para obtener estimados de <span class="math inline">\(\sigma^2_G(1)\)</span> y <span class="math inline">\(\sigma^2_G(2)\)</span> es a través de un análisis de varianza, como el que hemos visto en capítulos precedentes, mientras que para la estimación de la covarianza en procedimiento más sencillo parece ser el cálculo de la covarianza observada entre medias familiares en los dos ambientes. Una advertencia importante aquí es la de evitar el uso de estructuras familiares en las que se compartan otros factores, por ejemplo los efectos maternales ya que estos contaminarán las estimaciones.</p>
-<p>Como la estimación de las varianzas y covarianzas son obtenidas indirectamente, las correlación obtenida por este método no se trata de una correlación producto-momento (la correlación clásica, o de Pearson) y por lo tanto las estimaciones pueden escaparse del intervalo natural (<span class="math inline">\(\pm 1\)</span>). Como <span class="citation"><a href="#ref-LynchWalsh1998" role="doc-biblioref">Michael Lynch and Walsh</a> (<a href="#ref-LynchWalsh1998" role="doc-biblioref">1998</a>)</span> sugieren, una forma sencilla de obtener una correlación producto-momento es a través de la regresión de las medias familiares en los dos ambientes, por ejemplo <span class="math inline">\(\bar z_{1j}\)</span> en <span class="math inline">\(\bar z_{2j}\)</span>.</p>
+<p>Como la estimación de las varianzas y covarianzas son obtenidas indirectamente, las correlación obtenida por este método no se trata de una correlación producto-momento (la correlación clásica, o de Pearson) y por lo tanto las estimaciones pueden escaparse del intervalo natural (<span class="math inline">\(\pm 1\)</span>). Como <span class="citation">Michael Lynch and Walsh (<a href="#ref-LynchWalsh1998" role="doc-biblioref">1998</a>)</span> sugieren, una forma sencilla de obtener una correlación producto-momento es a través de la regresión de las medias familiares en los dos ambientes, por ejemplo <span class="math inline">\(\bar z_{1j}\)</span> en <span class="math inline">\(\bar z_{2j}\)</span>.</p>
 <p>Otra alternativa usada en la de obtener <span class="math inline">\(r_x\)</span> directamente a partir de la correlación de las medias familiares <span class="math inline">\(r(\bar z_{1j},\bar z_{2j})\)</span> como un estimador de la correlación genética entre ambientes. Sin embargo, como estos autores remarcan, la correlación estimada de esta forma se encuentra sesgada hacia abajo, ya que en el denominador de la misma aparecen los efectos del error de medición y del ambiente inflando las correspondientes varianzas. Esto lleva a una tendencia a declarar la existencia de interacción genotipo-ambiente ya que puede sugerir valores significativamente menores a uno, aún cuando la correlación genética sea de uno.</p>
-<p>Cuando existen datos disponibles para más de dos ambientes una alternativa es el uso de un análisis de varianza de dos vías, siendo los dos factores los genotipos (familias) y los ambientes. Esto nos introduce en un tema de modelos con efectos aleatorios y una mezcla de efectos aleatorios y fijos, cuya interpretación es algo diferente entre ellos. Si consideramos que los genotipos son una muestra aleatoria de una distribución de genotipos posibles (por ejemplo, de “familias”), entonces los efectos macroambientales pueden ser considerados de dos maneras diferentes, como aleatorios o como fijos. En el primer caso se trataría de que los ambientes también son una muestra representativa de los ambientes posibles, como cuando elegimos al azar diferentes tambos, o regiones (macroambientes) para ensayar los genotipos, o cuando elegimos al azar parcelas donde probar variedades de maíz. En este caso, tenemos un modelo aleatorio, ya que tanto los genotipos como los macroambientes son ambos aleatorios. En el segundo caso, si consideramos una serie particular de ambientes de interés, por ejemplo diferentes países o regiones donde evaluar los genotipos, que son las únicas de interés, entonces vamos a tratar con modelos mixtos, ya que los genotipos serán aleatorios, mientras que los macroambientes serán considerados efectos fijos. Para entender las diferencias entre ambos tipos de modelos se recomienda la lectura del capítulo 22 de <span class="citation"><a href="#ref-LynchWalsh1998" role="doc-biblioref">Michael Lynch and Walsh</a> (<a href="#ref-LynchWalsh1998" role="doc-biblioref">1998</a>)</span>, en especial la sección “TWO-WAY ANALYSIS OF VARIANCE.”</p>
-<p>El uso de modelos mixtos para el estudio de la interacción genotipo ambiente a partir de datos existentes en las evaluaciones genéticas nacionales e internacionales ha sido extenso. Ejemplos locales y regionales incluyen los estudios realizados por <span class="citation"><a href="#ref-Naya2002" role="doc-biblioref">H. Naya, Urioste, and Franco</a> (<a href="#ref-Naya2002" role="doc-biblioref">2002</a>)</span> en vacas lecheras a partir de la definición de “clusters ambientales” obtenidos de los propios datos de la evaluación; el trabajo de <span class="citation"><a href="#ref-Espasandinetal2013" role="doc-biblioref">Espasandin et al.</a> (<a href="#ref-Espasandinetal2013" role="doc-biblioref">2013</a>)</span>, comparando las poblaciones Angus de Uruguay y Brasil o el trabajo de <span class="citation"><a href="#ref-Zwaldetal2003" role="doc-biblioref">Zwald et al.</a> (<a href="#ref-Zwaldetal2003" role="doc-biblioref">2003</a>)</span>, investigando los factores que afectan el resultado de vacas <strong>Holstein</strong> en 17 países que participaban de la evaluación <strong>MACE</strong> realizada por <strong>INTERBULL</strong>.</p>
+<p>Cuando existen datos disponibles para más de dos ambientes una alternativa es el uso de un análisis de varianza de dos vías, siendo los dos factores los genotipos (familias) y los ambientes. Esto nos introduce en un tema de modelos con efectos aleatorios y una mezcla de efectos aleatorios y fijos, cuya interpretación es algo diferente entre ellos. Si consideramos que los genotipos son una muestra aleatoria de una distribución de genotipos posibles (por ejemplo, de “familias”), entonces los efectos macroambientales pueden ser considerados de dos maneras diferentes, como aleatorios o como fijos. En el primer caso se trataría de que los ambientes también son una muestra representativa de los ambientes posibles, como cuando elegimos al azar diferentes tambos, o regiones (macroambientes) para ensayar los genotipos, o cuando elegimos al azar parcelas donde probar variedades de maíz. En este caso, tenemos un modelo aleatorio, ya que tanto los genotipos como los macroambientes son ambos aleatorios. En el segundo caso, si consideramos una serie particular de ambientes de interés, por ejemplo diferentes países o regiones donde evaluar los genotipos, que son las únicas de interés, entonces vamos a tratar con modelos mixtos, ya que los genotipos serán aleatorios, mientras que los macroambientes serán considerados efectos fijos. Para entender las diferencias entre ambos tipos de modelos se recomienda la lectura del capítulo 22 de <span class="citation">Michael Lynch and Walsh (<a href="#ref-LynchWalsh1998" role="doc-biblioref">1998</a>)</span>, en especial la sección “TWO-WAY ANALYSIS OF VARIANCE”.</p>
+<p>El uso de modelos mixtos para el estudio de la interacción genotipo ambiente a partir de datos existentes en las evaluaciones genéticas nacionales e internacionales ha sido extenso. Ejemplos locales y regionales incluyen los estudios realizados por <span class="citation">H. Naya, Urioste, and Franco (<a href="#ref-Naya2002" role="doc-biblioref">2002</a>)</span> en vacas lecheras a partir de la definición de “clusters ambientales” obtenidos de los propios datos de la evaluación; el trabajo de <span class="citation">Espasandin et al. (<a href="#ref-Espasandinetal2013" role="doc-biblioref">2013</a>)</span>, comparando las poblaciones Angus de Uruguay y Brasil o el trabajo de <span class="citation">Zwald et al. (<a href="#ref-Zwaldetal2003" role="doc-biblioref">2003</a>)</span>, investigando los factores que afectan el resultado de vacas <strong>Holstein</strong> en 17 países que participaban de la evaluación <strong>MACE</strong> realizada por <strong>INTERBULL</strong>.</p>
 </div>
 </div>
-<div id="genética-cuantitativa-de-la-interacción-gxe" class="section level2" number="15.4">
-<h2><span class="header-section-number">15.4</span> Genética cuantitativa de la interacción GxE</h2>
-<p>En todo el tratamiento que dimos previamente a la genética cuantitativa asumimos que genotipo era sinónimo de la acción de los genes sobre el fenotipo de los individuos y que podíamos aislar ese concepto del concepto de ambiente. Sin embargo, como lo muestra <span class="citation"><a href="#ref-deJong1990" role="doc-biblioref">Jong</a> (<a href="#ref-deJong1990" role="doc-biblioref">1990</a>)</span>, en el trabajo original de <span class="citation"><a href="#ref-Woltereck1909" role="doc-biblioref">Woltereck</a> (<a href="#ref-Woltereck1909" role="doc-biblioref">1909</a>)</span> donde aparece por primera vez el concepto de norma de reacción, el concepto del mismo Woltereck era de que ‘Der “Genotypus” (die genotyp. Grundlage) eines Quantitativmerkmals ist die vererbte Reaktionsnorm’ (‘El “genotipo” (la base genotípica) de un rasgo cuantitativo es la norma de reacción heredada’), a tal punto que el encabezado de la sección luce “Genotypus = Reaktionsnorm.” Es decir, en la concepción original de Woltereck aparece que no podemos separar genotipo de ambiente ya que para él, el concepto de genotipo es precisamente la forma específica de reaccionar a los ambientes que tienen los individuos con base genética.</p>
-<p>En este capítulo hemos ido avanzando en la comprensión de la importancia que tiene la interacción entre el genotipo y el ambiente, pero apenas nos hemos asomado en el impacto que tiene la misma en los principales resultados que hemos derivado para la genética cuantitativa. De acuerdo con <span class="citation"><a href="#ref-LynchWalsh1998" role="doc-biblioref">Michael Lynch and Walsh</a> (<a href="#ref-LynchWalsh1998" role="doc-biblioref">1998</a>)</span>, lamentablemente pocos avances se han hecho en la materia, aunque el trabajo de <span class="citation"><a href="#ref-deJong1990" role="doc-biblioref">Jong</a> (<a href="#ref-deJong1990" role="doc-biblioref">1990</a>)</span> sugiere un camino simple e interesante, por lo que vamos a delinear sus principios aquí como forma de conectar el contenido de este capítulo con los capítulos previos.</p>
+<div id="genética-cuantitativa-de-la-interacción-gxe" class="section level2 hasAnchor" number="15.4">
+<h2><span class="header-section-number">15.4</span> Genética cuantitativa de la interacción GxE<a href="GxE.html#genética-cuantitativa-de-la-interacción-gxe" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En todo el tratamiento que dimos previamente a la genética cuantitativa asumimos que genotipo era sinónimo de la acción de los genes sobre el fenotipo de los individuos y que podíamos aislar ese concepto del concepto de ambiente. Sin embargo, como lo muestra <span class="citation">Jong (<a href="#ref-deJong1990" role="doc-biblioref">1990</a>)</span>, en el trabajo original de <span class="citation">Woltereck (<a href="#ref-Woltereck1909" role="doc-biblioref">1909</a>)</span> donde aparece por primera vez el concepto de norma de reacción, el concepto del mismo Woltereck era de que ‘Der “Genotypus” (die genotyp. Grundlage) eines Quantitativmerkmals ist die vererbte Reaktionsnorm’ (‘El “genotipo” (la base genotípica) de un rasgo cuantitativo es la norma de reacción heredada’), a tal punto que el encabezado de la sección luce “Genotypus = Reaktionsnorm”. Es decir, en la concepción original de Woltereck aparece que no podemos separar genotipo de ambiente ya que para él, el concepto de genotipo es precisamente la forma específica de reaccionar a los ambientes que tienen los individuos con base genética.</p>
+<p>En este capítulo hemos ido avanzando en la comprensión de la importancia que tiene la interacción entre el genotipo y el ambiente, pero apenas nos hemos asomado en el impacto que tiene la misma en los principales resultados que hemos derivado para la genética cuantitativa. De acuerdo con <span class="citation">Michael Lynch and Walsh (<a href="#ref-LynchWalsh1998" role="doc-biblioref">1998</a>)</span>, lamentablemente pocos avances se han hecho en la materia, aunque el trabajo de <span class="citation">Jong (<a href="#ref-deJong1990" role="doc-biblioref">1990</a>)</span> sugiere un camino simple e interesante, por lo que vamos a delinear sus principios aquí como forma de conectar el contenido de este capítulo con los capítulos previos.</p>
 <p>Supongamos que tenemos una característica fenotípica que se encuentra gobernada por un gen con dos alelos, con frecuencias <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span> como usualmente. La única diferencia en nuestro planteo actual respecto a lo que vimos antes en el capítulo <a href="modelogenbas.html#el-modelo-genético-básico">El Modelo Genético Básico</a> es que ahora el <a href="modelogenbas.html#efecto-medio">Efecto medio</a> de los alelos ya no es independiente del ambiente sino que es una función lineal del mismo.
 Por lo tanto, con esta diferencia, los efectos medios de los alelos serán ahora del tipo</p>
 <p><span class="math display" id="eq:gcgxe1">\[\begin{equation}
@@ -917,7 +988,7 @@ R_{ij}=(a_i+a_j)+(c_i+c_j) E
 <p>es decir, la suma de las varianzas y covarianza de interceptos y pendientes que forman la norma de reacción.</p>
 <p>Por lo tanto, de acuerdo a la ecuación <a href="GxE.html#eq:gcgxe5">(15.22)</a>, la varianza aditiva de la característica no será más un valor solamente dependiente de <span class="math inline">\(\alpha\)</span> y de las frecuencias, sino que ahora será una función del macroambiente. De hecho, mirando la función <span class="math inline">\(\sigma^2_A(E)\)</span> apreciamos que se trata de una función parabólica. Como además las varianzas deben ser positivas, el coeficiente del término cuadrático (<span class="math inline">\(\sigma^2_c\)</span>) en la función es positivo y por lo tanto se trata de una parábola cóncava (con los brazos extendidos hacia arriba). El mínimo de la función estará dado además por el valor en que la derivada se hace cero, que es</p>
 <p><span class="math display">\[\begin{equation}
-\frac{d\sigma^2_A(E)}{dE}=\frac{d[\sigma^2_a+2E\sigma_{a,c}+E^2\sigma^2_c]}{dE}=2\sigma_{a,c}+2\sigma^2_cE \therefore \\ 
+\frac{d\sigma^2_A(E)}{dE}=\frac{d[\sigma^2_a+2E\sigma_{a,c}+E^2\sigma^2_c]}{dE}=2\sigma_{a,c}+2\sigma^2_cE \therefore \\
 2\sigma_{a,c}+2\sigma^2_cE=0 \Leftrightarrow E=-\frac{\sigma_{a,c}}{\sigma^2_c}=-\frac{(a_1-a_2)(c_1-c_2)}{(c_1-c_2)^2}
 \end{equation}\]</span></p>
 <p>En la figura <a href="GxE.html#fig:supervarArnl">15.7</a> se representa la superficie correspondiente a la varianza aditiva, tal cual aparece en la ecuación <a href="GxE.html#eq:gcgxe3">(15.20)</a>. La misma es función de la frecuencia de uno de los dos alelos, <span class="math inline">\(p\)</span> (ya que <span class="math inline">\(q=1-p\)</span>) y del macroambiente <span class="math inline">\(E\)</span> ya que en este caso las normas de reacción de los genotipos son lineales y no paralelas. Como es de esperar, la varianza tiene forma parabólica convexa con respecto a <span class="math inline">\(p\)</span> y con máximo en <span class="math inline">\(p=q=\frac{1}{2}\)</span>, mientras que también tiene forma parabólica, pero cónica con respecto al ambiente y con mínimo en <span class="math inline">\(E^{\star}\)</span>.</p>
@@ -938,14 +1009,14 @@ Figura 15.7: Superficie de la varianza aditiva para normas de reacción lineales
 <p>En el caso de que <span class="math inline">\(\alpha_1\)</span> y <span class="math inline">\(\alpha_2\)</span> no sean paralelas, entonces las mismas deben cortarse en algún punto. Si igualamos ambas funciones tenemos que</p>
 <p><span class="math display" id="eq:gcgxe6">\[\begin{equation}
 \alpha_1=\alpha_2 \Leftrightarrow a_1+c_1E=a_2+c_2E \Leftrightarrow E(c_1-c_2)=(a_2-a_1) \therefore\\
-E^{\star}=\frac{(a_1-a_2)}{(c_2-c_1)} 
+E^{\star}=\frac{(a_1-a_2)}{(c_2-c_1)}
 \tag{15.23}
 \end{equation}\]</span></p>
 <p>donde <span class="math inline">\(E^{\star}\)</span> es el ambiente correspondiente al punto de corte de las funciones de efecto medio. Si sustituimos dicho valor en la función de la varianza aditiva dada por la ecuación <a href="GxE.html#eq:gcgxe3">(15.20)</a> tenemos que</p>
 <p><span class="math display" id="eq:gcgxe7">\[\begin{equation}
-\sigma^2_A=2pq[(a_1-a_2)+(c_1-c_2)E]^2=2pq[(a_1-a_2)+(c_1-c_2)\frac{(a_1-a_2)}{(c_2-c_1)}]^2=\\ 
+\sigma^2_A=2pq[(a_1-a_2)+(c_1-c_2)E]^2=2pq[(a_1-a_2)+(c_1-c_2)\frac{(a_1-a_2)}{(c_2-c_1)}]^2=\\
 =2pq[(a_1-a_2)-(a_1-a_2)]^2=2pq [0]^2 \therefore \\
-\sigma^2_A=0 
+\sigma^2_A=0
 \tag{15.24}
 \end{equation}\]</span></p>
 <p>Por lo tanto, si tenemos que las normas de reacción son lineales y existe un efecto de interacción, entonce encontramos un valor ambiental en el que la varianza aditiva de la característica es igual a cero, por lo que no responderá a la selección (la heredabilidad de la característica es igual a cero). Como para cada <em>locus</em> los interceptos y pendientes son específicos, también lo serán los puntos de corte y por lo tanto para características poligénicas resulta difícil que en algún punto la varianza aditiva sea cero. Sin embargo, la posibilidad es firme de que exista uno o más puntos del macroambiente en que la varianza aditiva se vea reducida sustancialmente.</p>
@@ -958,15 +1029,15 @@ E^{\star}=\frac{(a_1-a_2)}{(c_2-c_1)}
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-15.2" class="section level4 unnumbered">
-<h4>Ejemplo 15.2</h4>
+<div id="ejemplo-15.2" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 15.2<a href="GxE.html#ejemplo-15.2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Una determinada característica fenotípica se encuentra determinada por un <em>locus</em> con dos alelos. Para esta característica existe interacción entre genotipo y ambiente ya que los efectos medios de los dos alelos son <span class="math inline">\(\alpha_1=6-E\)</span> y <span class="math inline">\(\alpha_2=4+2E\)</span>, siendo <span class="math inline">\(E\)</span> la variable (continua) ambiental que determina el valor de los alelos.</p>
 <p>Graficar los efectos medios de los genes en función del ambiente (entre <span class="math inline">\(E=0\)</span> y <span class="math inline">\(E=1\)</span>) y calcular el punto en que son iguales. Determinar la varianza aditiva de la característica como función del ambiente <span class="math inline">\(E\)</span> y graficarla entre los valores de <span class="math inline">\(E=0\)</span> y <span class="math inline">\(E=1\)</span> para una frecuencia del alelo <span class="math inline">\(A_1\)</span> <span class="math inline">\(p=0,25\)</span> y para <span class="math inline">\(p=0,50\)</span>.</p>
 <p><br />
 </p>
 <p>La figura <a href="GxE.html#fig:figura15p200">15.8</a> representa los efectos medios de ambos alelos como función del ambiente <span class="math inline">\(E\)</span>, entre los valores de <span class="math inline">\(E=0\)</span> y <span class="math inline">\(E=1\)</span>. De acuerdo a la ecuación <a href="GxE.html#eq:gcgxe6">(15.23)</a>, el punto de corte se va a encontrar en</p>
 <p><span class="math display">\[\begin{equation}
-E^{\star}=\frac{(a_1-a_2)}{(c_2-c_1)}=\frac{6-4}{2-(-1)}=\frac{2}{3}=0,666 
+E^{\star}=\frac{(a_1-a_2)}{(c_2-c_1)}=\frac{6-4}{2-(-1)}=\frac{2}{3}=0,666
 \end{equation}\]</span></p>
 <p>lo que aparece marcado en la figura.</p>
 <p><br />
@@ -1020,9 +1091,9 @@ con <span class="math inline">\(a_1\)</span> y <span class="math inline">\(a_2\)
 </div>
 </div>
 </div>
-<div id="otros-ejemplos-de-interacción-genotipo-ambiente" class="section level2" number="15.5">
-<h2><span class="header-section-number">15.5</span> Otros ejemplos de interacción genotipo-ambiente</h2>
-<p>En 1982, Gupta &amp; Lewontin (<span class="citation"><a href="#ref-GuptaLewontin1982" role="doc-biblioref">Gupta and Lewontin</a> (<a href="#ref-GuptaLewontin1982" role="doc-biblioref">1982</a>)</span>) realizaron un estudio sobre normas de reacción en la mosca <em>Drosophila pseudoobscura</em>, variando la densidad de huevos y la temperatura y midiendo el número de setas abdominales. Para ello usaron 32 cepas isocromosómicas para el segundo cromosma. En la figura <a href="GxE.html#fig:drosobrinumber">15.10</a> se ilustra alguno de los resultados obtenidos. Si bien los efectos medios del genotipo, el efecto de la temperatura y de la densidad fueron significativos, también aparecieron importantes efectos de interacción genotipo-ambiente, que en la figura aparecen como la falta de paralelismo en las líneas. Por otra parte, los autores observaron que alrededor del <span class="math inline">\(30-45\%\)</span> de las comparaciones por pares entre genotipos mostraron un cambio en la
+<div id="otros-ejemplos-de-interacción-genotipo-ambiente" class="section level2 hasAnchor" number="15.5">
+<h2><span class="header-section-number">15.5</span> Otros ejemplos de interacción genotipo-ambiente<a href="GxE.html#otros-ejemplos-de-interacción-genotipo-ambiente" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En 1982, Gupta &amp; Lewontin (<span class="citation">Gupta and Lewontin (<a href="#ref-GuptaLewontin1982" role="doc-biblioref">1982</a>)</span>) realizaron un estudio sobre normas de reacción en la mosca <em>Drosophila pseudoobscura</em>, variando la densidad de huevos y la temperatura y midiendo el número de setas abdominales. Para ello usaron 32 cepas isocromosómicas para el segundo cromosma. En la figura <a href="GxE.html#fig:drosobrinumber">15.10</a> se ilustra alguno de los resultados obtenidos. Si bien los efectos medios del genotipo, el efecto de la temperatura y de la densidad fueron significativos, también aparecieron importantes efectos de interacción genotipo-ambiente, que en la figura aparecen como la falta de paralelismo en las líneas. Por otra parte, los autores observaron que alrededor del <span class="math inline">\(30-45\%\)</span> de las comparaciones por pares entre genotipos mostraron un cambio en la
 posición relativa de los mismos al cambiar la temperatura. Por lo tanto, no es posible
 caracterizar un genotipo como si tuviera mayor número de setas que otro, ya que esto sólo puede
 ser determinado en forma relativo a un ambiente particular.</p>
@@ -1048,7 +1119,7 @@ El gen de la aldehído deshidrogenasa 2 (ALDH2) produce una enzima importante pa
 Se trata de una alteración congénita del metabolismo causada reducción o ausencia de la actividad en la enzima fenilalanina hidroxilasa, codificada por el gen PAH, localizado en el cromosoma 12. La misma tiene como cometido metabolizar el aminoácido fenilalanina (“Phe”). Se conocen más de 400 mutaciones en ese gen que producen una alteración en la capacidad metabólica del mismo, lo que lleva bajo una dieta normal a un incremento patológico en los niveles de fenilalanina. Sin embargo, en una dieta estrictamente controlada, con bajos niveles de fenilalanina la enfermedad no se manifiesta (en ninguno de los dos genotipos), lo que indica una interacción genotipo-ambiente.</p>
 <p><br />
 </p>
-<p>En plantas, los programas de mejora de cultivos disponen cada vez más de datos genómicos, así como de rendimiento en el campo y medioambientales. El análisis de esta información de forma integrada puede facilitar la predicción genómica dentro y entre ambientes, así como proporcionar información sobre la arquitectura genética de rasgos complejos y la naturaleza de las interacciones genotipo-ambiente. Para entender la relaciones entre varianzas aditiva y de dominancia, así como los efectos de la interacción genotipo-ambiente, <span class="citation"><a href="#ref-Rogersetal2021" role="doc-biblioref">Rogers et al.</a> (<a href="#ref-Rogersetal2021" role="doc-biblioref">2021</a>)</span> recopilaron y analizaron los datos genotípicos y fenotípicos de 1918 híbridos de maíz (<em>Zea mays L.</em>) y los datos ambientales de 65 ambientes de prueba. Para el rendimiento del grano, la varianza de dominancia fue similar en magnitud a la varianza aditiva, y las varianzas GxE fueron más importantes que las varianzas genéticas de efecto principal.</p>
+<p>En plantas, los programas de mejora de cultivos disponen cada vez más de datos genómicos, así como de rendimiento en el campo y medioambientales. El análisis de esta información de forma integrada puede facilitar la predicción genómica dentro y entre ambientes, así como proporcionar información sobre la arquitectura genética de rasgos complejos y la naturaleza de las interacciones genotipo-ambiente. Para entender la relaciones entre varianzas aditiva y de dominancia, así como los efectos de la interacción genotipo-ambiente, <span class="citation">Rogers et al. (<a href="#ref-Rogersetal2021" role="doc-biblioref">2021</a>)</span> recopilaron y analizaron los datos genotípicos y fenotípicos de 1918 híbridos de maíz (<em>Zea mays L.</em>) y los datos ambientales de 65 ambientes de prueba. Para el rendimiento del grano, la varianza de dominancia fue similar en magnitud a la varianza aditiva, y las varianzas GxE fueron más importantes que las varianzas genéticas de efecto principal.</p>
 <p>Para otros rasgos, como el tiempo de floración, la varianza GxE sólo representó una pequeña parte de la varianza fenotípica, lo que sugiere que puede ignorarse con seguridad al realizar
 selección para estas caarcterísticas. Los resultados de este estudio sugieren que, para la predicción genómica de rendimiento de los híbridos en función del ambiente, la dominancia
 y las interacciones GxE deberían incorporarse a los modelos de predicción. Por otra parte, los modelos que incluían tanto los efectos aditivos como los de dominancia fueron los que mejor se ajustaron a los datos, y la modelización de las covarianzas genéticas únicas entre todos los ambientes proporcionó la mejor caracterización de los patrones de interacción genotipo-ambiente. A su vez, la similitud del rendimiento relativo de los híbridos entre los ambientes se modificó en función de las variables climáticas subyacentes, lo que permitió identificar las covariables climáticas que impulsan las correlaciones de los efectos genéticos entre los entornos.</p>
@@ -1062,25 +1133,25 @@ y las interacciones GxE deberían incorporarse a los modelos de predicción. Por
 </div>
 <hr />
 </div>
-<div id="ejercicios-15" class="section level2 unnumbered">
-<h2>Ejercicios</h2>
-<div id="ejercicio-15.1" class="section level4 unnumbered">
-<h4>Ejercicio 15.1</h4>
+<div id="ejercicios-15" class="section level2 unnumbered hasAnchor">
+<h2>Ejercicios<a href="GxE.html#ejercicios-15" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ejercicio-15.1" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 15.1<a href="GxE.html#ejercicio-15.1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong><em>Solución</em></strong></p>
 </div>
-<div id="ejercicio-15.2" class="section level4 unnumbered">
-<h4>Ejercicio 15.2</h4>
+<div id="ejercicio-15.2" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 15.2<a href="GxE.html#ejercicio-15.2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong><em>Solución</em></strong></p>
 </div>
-<div id="ejercicio-15.3" class="section level4 unnumbered">
-<h4>Ejercicio 15.3</h4>
+<div id="ejercicio-15.3" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 15.3<a href="GxE.html#ejercicio-15.3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong><em>Solución</em></strong></p>
 <hr />
 
 </div>
 </div>
 </div>
-<h3>Bibliografía</h3>
+<h3>Bibliografía<a href="bibliografía.html#bibliografía" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Espasandinetal2013" class="csl-entry">
 Espasandin, A. C., J. I. Urioste, H. Naya, and M. M. Alencar. 2013. <span>“Genotype×production Environment Interaction for Weaning Weight in Angus Populations of Brazil and Uruguay.”</span> <em>Livestock Science</em> 151 (2): 264–70. https://doi.org/<a href="https://doi.org/10.1016/j.livsci.2012.11.015">https://doi.org/10.1016/j.livsci.2012.11.015</a>.
@@ -1126,7 +1197,6 @@ Zwald, N. R., K. A. Weigel, W. F. Fikse, and R. Rekaya. 2003. <span>“<span cla
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1167,7 +1237,7 @@ gitbook.start({
 },
 "download": ["ApuntesGeneticaII.pdf", "ApuntesGeneticaII.epub"],
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
@@ -1183,7 +1253,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
