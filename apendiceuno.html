@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
+  <title>Capítulo 16 APENDICE A: Conceptos Matemáticos Básicos | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
   <meta name="description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  <meta property="og:title" content="Capítulo 16 APENDICE A: Conceptos Matemáticos Básicos | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  <meta name="twitter:title" content="Capítulo 16 APENDICE A: Conceptos Matemáticos Básicos | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
   
   <meta name="twitter:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
   
@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="intro.html"/>
+<link rel="prev" href="GxE.html"/>
+<link rel="next" href="apendicedos.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -543,151 +543,488 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</h1>
-<p class="author"><em>Hugo Naya<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></em></p>
-<p class="author"><em>Federica Marín<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></em></p>
-<p class="author"><em>Mauricio Langleib<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></em></p>
-<p class="author"><em>(Jorge Urioste, María André, Andrea Larracharte, Washington Bell, Ana Laura Sánchez, Micaela Botta, Paula Batista, Rodrigo Vivián<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>, Paola Gaiero)<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>)</em></p>
-<p class="date"><em>2023-09-18</em></p>
-</div>
-<div id="prefacio" class="section level1 unnumbered hasAnchor">
-<h1>Prefacio<a href="index.html#prefacio" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>El curso de <strong><em>Genética de Poblaciones y Genética Cuantitativa</em></strong> (también conocido como <strong><em>Genética II</em></strong>) es, de alguna manera, la continuación natural del curso de <strong><em>Genética I</em></strong>. Ambos cursos fueron desarrollados en conjunto, de manera tal que permitiesen al estudiante ir avanzando en la comprensión de los conceptos, desde las bases moleculares de la herencia hasta sus implicancias en la evolución de las especies. En esta separación (algo arbitraria), el curso de <strong><em>Genética I</em></strong> hace más foco en mecanismos y procesos que se dan a nivel del individuo y que sientan las bases para entender la evolución al nivel de las poblaciones, mientras que el curso de <strong><em>Genética II</em></strong> aprovecha de esta construcción para comenzar a desarrollar nuestra comprensión sobre los fenómenos que ocurren a esta última escala.</p>
-<p>Cuando en conjunto con los docentes de otros cursos que involucran a la genética decidimos como organizar y distribuir los conocimientos en el marco del nuevo Plan de Estudios (2020), resultó que <strong><em>Genética II</em></strong> debería incorporar fuertes conocimientos en tres grandes temas: <strong>Genética de Poblaciones</strong>, <strong>Genética Cuantitativa</strong> y <strong>Genómica</strong>. Desafortunadamente, el número de créditos disponibles era bastante limitado, por lo que debíamos optar por armar un curso que sobrevolase los temas, sin dejar espacio para que los mismos sean tratados al nivel requerido o dejar fuera demasiados temas. Nuestra solución de compromiso fue de alguna manera ortogonal a estas opciones; hemos organizado el cursos en dos grandes bloques, el primero de <strong>Genética de Poblaciones</strong> y el segundo de <strong>Genética Cuantitativa</strong>, mientras que decidimos ubicar a la <strong>Genómica</strong> de manera transversal, motivándola especialmente a través de los ejemplos y ejercicios que surgen en los distintos capítulos.</p>
-<p>Una de las grandes diferencias que encontrarás entre el curso de <strong><em>Genética I</em></strong> y el de <strong><em>Genética II</em></strong> se encuentra en las herramientas que utilizaremos para comprender los fenómenos de nuestro interés. Mientras que en <strong><em>Genética I</em></strong> gran parte del esfuerzo fue en comprender e internalizar los conceptos mecanísticos de la herencia, en <strong><em>Genética II</em></strong> nos enfocaremos en entender y modelar los conceptos que surgen de la interacción de un número importante de individuos, así como de generar predicciones a corto, mediano y largo plazo de la evolución de las poblaciones. Esto nos lleva directamente a uno de los focos metodológicos del presente curso: la capacidad de modelar sistemas biológicos, de comprender las implicancias y limitaciones de nuestros modelos, así como de interpretar sus predicciones. En particular, nos interesa desarrollar en este curso tus habilidades para comprender las relaciones que se generan entre los aspectos determinísticos de los sistemas biológicos y los aspectos estocásticos (lo que hace al azar). Para esto, en el contexto de la genética, es necesario contar con un conjunto mínimo de habilidades matemáticas, sin las cuales sería imposible siquiera adentrarse a la tarea. Sin duda, todas estas habilidades y conocimientos has tenido la oportunidad de adquirirlos en todo tu transcurso por el sistema educativo, ya que no se trata de nada extraordinario: buenos conocimientos (y sobre todo mucha práctica) de aritmética y álgebra elemental, teoría combinatoria, conceptos básicos de cálculo integral y diferencial, algunas nociones de álgebra lineal, un conocimiento básico de teoría de probabilidad y distribuciones, así como algunos conceptos básicos de estadística. A lo anterior deberás agregarle, un buen dominio de los conocimientos biológicos adquiridos en <strong><em>Genética I</em></strong>, así como de las bases de la vida y las particularidades de la biología de los distintos dominios de la vida.</p>
-<p>Uno de los objetivos del presente curso es desarrollar tus capacidades de razonamiento, utilizando el modelado de fenómenos evolutivos como el medio con el cual vamos a trabajar. La comprensión cabal de los modelos requiere, por lo general, de la capacidad de resolver diversos ejercicios y problemas, con variados niveles de dificultad, por lo que harás uso abundante del papel y el lápiz. A decir verdad, posiblemente sea provechoso copiar e ir desarrollando por ti mismo las distintas ecuaciones que irán apareciendo en el texto. Además, otro de los objetivos comprende el desarrollo de tus capacidades científicas, experimentando, generando hipótesis, buscando como probarlas y reportando los resultados de tus experimentos. Para ello hemos desarrollado laboratorios virtuales, donde podrás experimentar a tu placer. Si además eres un estudiante al que le gustan los desafíos y oportunidades que brinda el poder desarrollar tu propio código, también contamos con la posibilidad de ayudarte a desarrollar los ejercicios en el software libre ‘R’.</p>
-<p>Por todo lo anterior, <strong><em>Genética II</em></strong> es un curso que probablemente requerirá de un importante esfuerzo de tu parte. Si bien hemos puesto todo nuestro esfuerzo en mantener la matemática empleada en el curso en un nivel básico, entendemos que reducirla más implicaría una perdida de calidad injustificable. Por lo tanto, para poder avanzar en forma razonable te aconsejamos enfáticamente que realices la prueba diagnóstica en la forma más honesta posible. El objetivo principal de la misma es ayudarte a detectar los principales temas, conceptos y habilidades que has olvidado y que te dificultarán el avance en nuestro curso. Te encontrarás que gran parte de las preguntas deberás resolverlas sin el auxilio de una calculadora ni computadora; esto es porque el seguimiento de una parte importante de nuestro curso se basa en tus habilidades algebraicas y capacidad de razonar en forma abstracta. Además, hemos puesto a tu disposición un material de apoyo sobre los conceptos y habilidades matemáticas básicas que asumimos para el desarrollo del curso. Puedes consultar este material antes o después de la prueba diagnóstica, como te resulte más cómodo y si aún así luego de leerlo no consigues buenos resultados estamos a tu disposición para ayudarte a encontrar la forma de superar tus dificultades.</p>
-<p><br />
-</p>
-<hr />
-<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional</a></p>
-<hr />
-<p><br />
-</p>
-<div id="nuestra-filosofía-del-no-tanto" class="section level2 unnumbered hasAnchor">
-<h2>Nuestra filosofía del NO (tanto)<a href="index.html#nuestra-filosofía-del-no-tanto" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li><p><strong>NO renunciamos a usar y enseñar matemáticas</strong> en los lugares y momentos que entendamos adecuados, para modelar y entender la realidad, para conectarnos con otras teorías o simplemente por diversión</p></li>
-<li><p><strong>NO nos molesta volver a explicar y trabajar los conceptos previos</strong>, solo pedimos tu compromiso con el aprendizaje (es posible que debas dedicar más horas de las previstas para poder alcanzar la nivelación de cada tema)</p></li>
-<li><p><strong>NO asumimos conocimientos previos profundos de matemáticas (ni de nada)</strong>, pero nos encantaría que antes de empezar te aseguraras de confirmar que posees (o estás dispuesto a repasar/aprender bajo nuestra guía):</p></li>
-<li><p>un manejo fluido de álgebra básica en los campos numéricos de reales, enteros y racionales (propiedades, operaciones, etc.)</p></li>
-<li><p>conceptos básicos de cálculo diferencial e integral, nociones de geometría analítica, así como idea de qué son las ecuaciones diferenciales</p></li>
-<li><p>nociones básicas de álgebra lineal en <span class="math inline">\(R^2\)</span> y <span class="math inline">\(R^3\)</span>, en especial operaciones con matrices y vectores</p></li>
-<li><p>rudimentos de teoría de probabilidad, conocimientos básicos de distribuciones (Normal, Binomial, Poisson, etc.)</p></li>
-<li><p>conceptos básicos de estadística, estadísticos resumen, prueba de hipótesis, análisis de varianza</p></li>
-<li><p>Bases de la genética mendeliana, conocimientos básicos de genética molecular y genómica</p></li>
-</ul>
-<hr />
-</div>
-<div id="qué-es-y-qué-no-es-este-libro" class="section level2 unnumbered hasAnchor">
-<h2>¿Qué ES y qué NO ES este libro?<a href="index.html#qué-es-y-qué-no-es-este-libro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>El curso de <strong>Genética II</strong>, con las bases de la genética de poblaciones y de la genética cuantitativa en un mismo material representa un gran desafío. Normalmente se trata de dos cursos separados, a veces conectados, pero los pocos casos que hemos podido encontrar con materiales disponibles no se ajustaban al nivel deseado, a los tiempos disponibles o ambas cosas. Más aún, existen diferentes libros disponibles (mayormente en inglés) que cubren todos los temas que trabajaremos en nuestro curso, pero los mismos suelen tratar solo uno de los dos grandes bloques temáticos, o casi en la totalidad dedicarse a uno de los dos con el otro apenas cubierto en uno o dos capítulos. Es por estas razones que nos hemos decidido a preparar nuestro propio material, siguiendo la estructura de temas en base semanal que tiene nuestro curso, de manera de hacerte más fácil el seguimiento del curso.</p>
-<p>Como verás al irlo leyendo, hemos procurado no asumir demasiados conocimientos previos, aunque estamos seguros que ya has pasado por ellos previamente. En este sentido, puede que sientas cierta pesadez en explicaciones detalladas “de más”, pero en cierto sentido es el precio a pagar para acompañar a los que llegan con menos práctica o conocimientos. Para nosotros, la matemática (elemental) en la que se basa nuestro curso es como la gimnasia o cualquier deporte; es posible que al comienzo aún la operación más sencilla te demande cierto esfuerzo mental y te sientas cansado al avanzar algunas pocas páginas. Como en la gimnasia o el deporte, la práctica progresiva, aumentando ligeramente la carga y dificultad de los ejercicios, te permitirá (con suerte) llegar en mucho mejor forma hacia el final del curso y con mucha más adrenalina y ganas de continuar aprendiendo.</p>
-<p>Este libro <strong>NO ES original</strong>, al menos en sus contenidos. Tampoco nos planteamos que lo fuese, pues nuestro objetivo era y es bien otro: preparar un material que se pudiese seguir (con voluntad y trabajo) por todos nuestros estudiantes, pese a las diferencias importantes en las historias de aprendizaje de cada uno, sin descuidar el rigor del tratamiento matemático de los problemas y sin renunciar al desarrollo de la capacidades que entendemos fundamentales en el estudiante de carreras con base científica. Es así que en muchos casos, luego de analizar y leer diferentes libros y materiales, nos hemos decidido por seguir determinada línea de tratamiento de cada tema, muchas veces bastante pegados a algún texto original (lo que reconocemos particularmente cuando sentimos que esto se aparta de lo esperado) en aras de una mejor comprensión de cada tema. Una virtud adicional de esta aproximación es la facilidad para que puedas extender tu conocimiento sin tener que cambiar de notación o de línea argumental. Sin duda la tentación de “reinventar la rueda” está presente en todos nosotros y es así que este enfoque nos representa un pequeño sacrificio: la originalidad. Creemos firmemente que nuestra pequeña renuncia será de enorme beneficio para nuestros estudiantes que quieran ampliar sus conocimientos.</p>
-<p>En particular, del libro de <span class="citation">John H. Gillespie (<a href="#ref-Gillespie2004" role="doc-biblioref">2004</a>)</span> sacamos la organización de capítulos para la parte de genética de poblaciones. Se trata de un excelente libro por el tratamiento conciso (como dice su título), con gran profundidad pero al mismo tiempo con un tratamiento riguroso y simple. De hecho, fue posiblemente uno de los grandes inspiradores, junto al libro de <span class="citation">Rice (<a href="#ref-Rice2004" role="doc-biblioref">2004</a>)</span> (dentro de nuestros 5 favoritos entre todos los campos) del deseo de escribir este manual (si bien en la extensión vamos en sentido contrario). Más aún, de <span class="citation">John H. Gillespie (<a href="#ref-Gillespie2004" role="doc-biblioref">2004</a>)</span> sacamos varias aproximaciones a diferentes secciones y capítulos, cosa que en algunos casos se aprecia notoriamente. Otro libro excelente para la parte de genética de poblaciones y de donde también hemos sacado abundante material o seguido sus líneas de razonamiento y exposición es el <span class="citation">Hartl and Clark (<a href="#ref-HartlClark2007" role="doc-biblioref">2007</a>)</span>. Sin duda un material que podría usarse directamente en un curso del nivel que nos proponemos, aunque se encuentra organizado como curso de genética de poblaciones, lo que lo hace extenso para la mitad de nuestro curso (a esto se suma de que se trata de un libro sin traducción al castellano, al menos hasta donde sabemos). Un tercer libro del que hemos sacado ideas es el de <span class="citation">Hamilton (<a href="#ref-Hamilton2009" role="doc-biblioref">2009</a>)</span>. Se trata de un libro que hace un esfuerzo importante por dar un tratamiento intuitivo a muchos temas y en algunos casos hemos sacado ideas o aún líneas de razonamiento del mismo. En lo que hace a la parte de genética cuantitativa, la principal referencia es sin dudas el libro de <span class="citation">Falconer and Mackay (<a href="#ref-FalconerMackay1996" role="doc-biblioref">1996</a>)</span>. Se trata de un libro excepcional, que ha permanecido a lo largo de los años como referencia y que hemos sabido usar como base de otros cursos (por ejemplo, en el curso de <strong>Zootecnia</strong> de Facultad de Agronomía). Nuevamente, se trata de un libro cuyo énfasis se encuentra en una de las partes del curso (genética cuantitativa), por lo que el tratamiento de la parte de genética de poblaciones es algo escasa para nuestro objetivos; de lo contrario hubiese sido nuestra elección primaria. Finalmente, las “biblias” de la genética cuantitativa evolutiva, el <span class="citation">Michael Lynch and Walsh (<a href="#ref-LynchWalsh1998" role="doc-biblioref">1998</a>)</span> y el <span class="citation">Walsh and Lynch (<a href="#ref-WalshLynch2018" role="doc-biblioref">2018</a>)</span>, constituyen la referencia última en casi cualquiera de los temas tratados en el presente manual. En algún caso, especialmente en algún tópico avanzado los hemos utilizado como referencia inmediata. Sin embargo, tanto el volumen y extensión del tratamiento (que juntan casi 2500 páginas entre los dos), así como la profundidad de tratamiento los dejan como material de consulta y profundización.</p>
-<p>Si algún dejo de originalidad aún le podemos encontrar a este libro, posiblemente la misma tenga que ver con el nivel de conocimientos previos esperados en relación a los objetivos planteados. Sin duda se trata de un plan ambicioso y para ello contamos con tu involucramiento. Con este objetivo en mente es que nos hemos esforzado por incluir la mayor cantidad posible de ejemplos y ejercicios que tengan que ver con tu futuro desarrollo profesional, intentando evitar al mismo tiempo demasiada estrechez de miras. Al mismo tiempo, al tratarse de un curso para la carrera de Ingeniero Agrónomo, al tiempo que nos obliga a un tratamiento inclusivo de casi todos los dominios de la vida y sus mecanismos de herencia, en cierta forma (por las limitaciones de tiempo y espacio) nos obliga a reducir en gran medida el tratamiento de los detalles de la evolución molecular. Lamentablemente, está también es una particularidad de este libro.</p>
-<hr />
-<p>Posiblemente a esta altura, en vista de todas las dificultades que te esperan, te estarás haciendo varias preguntas ¿Para qué tanta genética? ¿Tiene el Ingeniero Agrónomo que saber de genética de poblaciones y de genética cuantitativa? ¿Hace falta tener tanta matemática? ¿No alcanza con una descripción conceptual de los fenómenos que me quieren transmitir?. Nuestras respuestas a estas interrogantes, como te habrás imaginado, apuntan a que es necesario e importante construir de la forma que pretendemos en este curso. El Ingeniero Agrónomo, como todo ingeniero, debe ser capaz de trascender respuestas genéricas y responder a preguntas concretas con soluciones específicas y adaptadas a la situación particular de cada sistema de producción y cada productor. A eso solo se llega a través del análisis de alternativas y su contraste numérico, en busca de óptimos. Como en cualquier edificación, no se construyen complejos pisos sobre débiles cimientos. Tanto <strong><em>Genética I</em></strong> como <strong><em>Genética II</em></strong> fueron y son parte de una coordinación compleja entre docentes de diferentes materias, en especial lo que llamamos la <strong>secuencia de Genéticas</strong>, que te irán llevando desde las bases hacia las aplicaciones, cada vez más específicas, cada vez más profundas, posiblemente cada vez más cerca de ti y de lo que elegiste como vocación. Ya desde el próximo semestre de la carrera comenzarás a experimentar estos cursos más cercanos a la producción y disfrutarás de la base que adquiriste en <strong><em>Genética I</em></strong> y <strong><em>Genética II</em></strong>. Por ejemplo, tendrás el curso de <strong><em>Fitotecnia</em></strong> para el cual te serán fundamentales los conceptos de mecanismos de la herencia y equilibrio de Hardy-Weinberg, entre muchos otros. Además, si tu orientación es hacia la producción animal, tendrás el próximo semestre <strong><em>Genética IIIa</em></strong>, que será tu primera experiencia en <strong>mejoramiento genético animal</strong> y donde verás las distintas alternativas para incorporar el mejoramiento genético es especies domésticas.</p>
-<p>En resumen, ¡Ánimo! <em>No lo olvides</em>, estamos a tu disposición para ayudarte a avanzar y nuestro deseo más profundo es que más allá de todo el esfuerzo puedas disfrutar tanto de seguir nuestro curso como nosotros de armarlo para ti. ¡Qué tengas un muy buen comienzo!</p>
-<p><strong><em>El equipo docente de Genética II</em></strong></p>
-<hr />
-</div>
-<div id="bibliografía-recomendada-para-este-curso" class="section level2 unnumbered hasAnchor">
-<h2>Bibliografía recomendada para este curso<a href="index.html#bibliografía-recomendada-para-este-curso" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Los siguientes son una seria de libros que recomendamos tener a mano para seguir el curso y profundizar en aspectos que no hayan quedado claros con nuestro breve tratamiento. Los primeros son una lista de materiales en los que hemos basado gran parte de este libro, pero que en algunos de ellos los vas a encontrar a un nivel más profundo, en otros más claro, por lo que te recomendamos fuertemente tenerlos a mano.</p>
-<p><strong>Fuertemente recomendados para parte importante de los temas</strong></p>
-<ul>
-<li><p>“Population Genetics: a concise guide”, John H. Gillespie (The John Hopkins University Press 2nd. Edition)</p></li>
-<li><p>“Principles of Population Genetics”, Daniel L. Hartl &amp; Andrew G. Clark (SINAUER 4th Edition)</p></li>
-<li><p>“Introduction to Quantitative Genetics”, Douglas S. Falconer &amp; Trudy F.C. Mackay (Pearson Prentice Hall)</p></li>
-<li><p>“Population Genetics”, Matthew B Hamilton (WILEY-BLACKWELL)</p></li>
-<li><p>“Genética Cuantitativa”, Armando Caballero Rúa (Editorial SINTESIS)</p></li>
-</ul>
-<p><strong>Recomendada para diferentes temas</strong></p>
-<ul>
-<li><p>“Mejoramiento Genético Animal”, Ricardo Cardellino &amp; Jaime Rovira (Editorial Hemisferio Sur).</p></li>
-<li><p>“A Primer of Population Genetics and Genomics”, Daniel L. Hartl (OXFORD 4th Edition)</p></li>
-<li><p>“Population Genetics with R: An Introduction for Life Scientists”, Áki Jarl Láruson &amp; Floyd Allan Reed (OXFORD)</p></li>
-<li><p>“Genetics and Analysis of Quantitative Traits”, Michael Lynch &amp; Bruce Walsh (SINAUER)</p></li>
-<li><p>“Evolution and Selection of Quatitative Traits”, Bruce Walsh &amp; Michael Lynch (OXFORD)</p></li>
-<li><p>“Chance in Biology Using Probability to Explore Nature”, Mark Denny &amp; Steven Gaines (Princeton University Press)</p></li>
-<li><p>“Evolutionary Theory. Mathematical and Conceptual Foundations”, Sean H. Rice (SINAUER)</p></li>
-<li><p>“A Biologist’s Guide to Mathematical Modeling in Ecology and Evolution”, Sarah P. Otto &amp; Troy Day (Princeton University Press)</p></li>
-</ul>
-<p><br />
-</p>
-<hr />
-<p><br />
-</p>
-</div>
-<div id="responsabilidades-y-agradecimientos" class="section level2 unnumbered hasAnchor">
-<h2>Responsabilidades y Agradecimientos<a href="index.html#responsabilidades-y-agradecimientos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>El presente material es parte de un trabajo colectivo que hemos desarrollado para que los estudiantes del curso <strong>Genética II</strong> cuenten con lo necesario para introducirse en un enfoque ciertamente demandante de la genética. Estos materiales incluyen, además del presente libro, una <strong>Guía Práctica</strong> con abundantes ejercicios, una <strong>Guía de Referencia Rápida</strong> con los elementos imprescindibles para resolver los ejercicios, diferentes presentaciones que iremos poniendo a disposición con el avance del curso y la plataforma (<strong>AGROS</strong>) desde donde desarrollaremos el curso. Por lo tanto, es difícil delimitar las contribuciones y responsabilidades individuales concretas en todos los materiales, por lo que preferimos incluirnos todos entre los autores de esta obra, con poco detalle de tareas específicas.</p>
-<p>Sin embargo, hay responsabilidades y trabajos que corresponde sean reconocidos explícitamente. En primer lugar, la responsabilidad total sobre cualquier error u omisión en la obra es completamente del primer autor y coordinador del trabajo (HN), tanto por haberla cometido directamente o por no haber identificado la misma en los aportes de otros. El magnífico trabajo de <strong>edición</strong> fue responsabilidad de Federica Marín, que durante el transcurso de la escritura se encontró con innumerables errores de “tipeo” (cuando no ortográficos), algunas frases de difícil lectura y otras sin sentido aparente, todo superado en forma eficiente y con gran independencia. Además, Federica es responsable de una parte importante de los “<strong>PARA RECORDAR</strong>” que encontrarás al final de cada sección relevante del libro y que además constituyen la base de la <strong>Guía de Referencia Rápida</strong>.</p>
-<p>Otro aporte inestimable fue el del Profesor Jorge I. Urioste, Profesor Titular y responsable del Grupo Disciplinario de Mejoramiento Genético Animal durante muchísimos años y hasta hace poco. En buena parte este libro es resultado de diversas conversaciones que tuvimos a lo largo de los años donde siempre surgió la necesidad de generar materiales adaptados a los cursos de nuestra responsabilidad. En particular, el curso de “Zootecnia” siempre fue un ejemplo en este sentido ya que contaba con el libro de <span class="citation">Cardellino and Rovira (<a href="#ref-CardellinoRovira1987" role="doc-biblioref">1987</a>)</span> como referencia directa, casi capítulo a capítulo, lo que le permitía a los estudiantes poder seguirlo, aún sin poder asistir a los teóricos. Precisamente, la necesidad de actualizar el libro de <span class="citation">Cardellino and Rovira (<a href="#ref-CardellinoRovira1987" role="doc-biblioref">1987</a>)</span> para acomodar los enormes avances en genómica que ocurrieron desde su publicación original fue uno de los impulsores hacia aventurarnos en la tarea. Más allá del enorme aporte de Jorge en este sentido más general, concretamente para este libro su aporte más importante consistió en la lectura dedicada de cada capítulo, las abundantes correcciones señaladas y nuevamente, los aportes conceptuales sobre la docencia y la comunicación con los estudiantes.</p>
-<p>María André y Andrea Larracharte fueron las responsables de completar con ejemplos y ejercicios los diversos espacios disponibles a su arribo, que fueron numerosos, especialmente en la tercera parte del libro (la que tiene que ver con Genética Cuantitativa), así como aportar nuevos ejercicios a la <strong>Guía Práctica</strong>. Micaela Botta, Paula Batista y Washington Bell son los responsables del armado de la mayor parte de las <strong>presentaciones</strong> que acompañan al curso. Washington, es además co-responsable junto con Ana Laura Sánchez de la plataforma <strong>AGROS</strong>, donde Ana Laura se hizo cargo de crear la nueva base de datos con ejercicios y evaluaciones. Nicolás Vivián se responsabilizó del armado de la <strong>Guía de Referencia Rápida</strong>, utilizando el material del libro. Por último, tanto el resto del Grupo Disciplinario MGA (Ana Carolina Espasandín, Rodrigo López-Correa, Camila Etchevarría), como la gente del Departamento de Biología Vegetal (Clara Pritsch, Paola Gaiero y Marianella Quezada), siempre contribuyeron con comentarios y aportes, buscando una fuerte integración de los conceptos genéticos a lo largo de la carrera de Ingeniero Agrónomo. Otros varios amigos y colegas colaboraron con la lectura de algunos capítulos (Daniel Naya) o simplemente cubriéndonos en tareas de nuestra responsabilidad (Martín Graña, Lucía Spangenberg). En todo caso, <strong>cualquier error u omisión en cualquiera de los trabajos es completa responsabilidad del primer autor</strong> (HN).</p>
-<p>Finalmente, el pequeño espacio para un par de agradecimientos personales. Durante el año que llevó la escritura de los materiales, contamos (HN) con el apoyo institucional, tanto de la <strong>Facultad de Agronomía-Udelar</strong>, como del <strong><em>Institut Pasteur de Montevideo</em></strong>, lo que nos permitió dedicar gran parte de nuestro tiempo a la tarea (a veces en desmedro de otras actividades como la investigación). Sin embargo, el agradecimiento mayor es para Lucía, Guille, Agus, Marti, Alfo, Xime y Santi, así como para la familia toda, ya que aún en plena pandemia (con todas las dificultades adicionales que eso representa) sacrificaron una parte importante de los tiempos familiares para que pudiésemos concretar la tarea en tiempo y forma. Vaya para ellos entonces la dedicatoria de nuestro humilde trabajo.</p>
-<p><br />
-</p>
-
-<pre><code>if(!knitr:::is_html_output())
-{
-  options(&quot;width&quot;=56)
-  knitr::opts_chunk$set(tidy.opts=list(width.cutoff=56, indent = 2), tidy = TRUE)
-  knitr::opts_chunk$set(fig.pos = &#39;H&#39;)
-}
-options(&quot;knitr.graphics.auto_pdf&quot; = TRUE)
-</code></pre>
-</div>
-</div>
-
-
-
-<h3> Bibliografía {bibliografia}<a href="bibliografía-bibliografia.html#bibliografía-bibliografia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-CardellinoRovira1987" class="csl-entry">
-Cardellino, Ricardo, and Jaime Rovira. 1987. <em>Mejoramiento Gen<span>é</span>tico Animal</em>. 1era. ed. Editorial Hemisferio Sur.
-</div>
-<div id="ref-FalconerMackay1996" class="csl-entry">
-Falconer, Douglas S, and Trudy FC Mackay. 1996. <em>Quantitative Genetics</em>. Benjamin-Cummings Pub Co.
-</div>
-<div id="ref-Gillespie2004" class="csl-entry">
-Gillespie, John H. 2004. <em>Population Genetics. A Concise Guide</em>. The Johns Hopkins University Press.
-</div>
-<div id="ref-Hamilton2009" class="csl-entry">
-Hamilton, Matthew B. 2009. <em>Population Genetics</em>. Wiley-Blackwell.
-</div>
-<div id="ref-HartlClark2007" class="csl-entry">
-Hartl, Daniel L, and Andrew G Clark. 2007. <em>Principles of Population Genetics</em>. 4th. ed. Sinauer.
-</div>
-<div id="ref-LynchWalsh1998" class="csl-entry">
-Lynch, Michael, and Bruce Walsh. 1998. <em>Genetics and Analysis of Quantitative Traits</em>. Sinauer Associates (Oxford University Press).
-</div>
-<div id="ref-Rice2004" class="csl-entry">
-Rice, Sean H. 2004. <em>Evolutionary Theory: Mathematical and Conceptual Foundations</em>. Sinauer Associates (Oxford University Press).
-</div>
-<div id="ref-WalshLynch2018" class="csl-entry">
-Walsh, Bruce, and Michael Lynch. 2018. <em>Evolution and Selection of Quantitative Traits</em>. Oxford University Press.
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>Genética Cuantitativa Evolutiva/GD Mejoramiento Genético Animal, Facultad de Agronomía, <a href="mailto:hnaya@fagro.edu.uy" class="email">hnaya@fagro.edu.uy</a> &amp; Unidad de Bioinformática, Institut Pasteur de Montevideo, <a href="mailto:naya@pasteur.edu.uy" class="email">naya@pasteur.edu.uy</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>(EDICIÓN GENERAL, ejercicios, ejemplos, etc.), GD Mejoramiento Genético Animal, Departamento de Producción Animal y Pasturas, Facultad de Agronomía<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>(EDICIÓN GENERAL, ejercicios, ejemplos, etc.), GD Mejoramiento Genético Animal, Departamento de Producción Animal y Pasturas, Facultad de Agronomía<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
-<li id="fn4"><p>(ejercicios, ejemplos, presentaciones, plataforma), GD Mejoramiento Genético Animal, Departamento de Producción Animal y Pasturas, Facultad de Agronomía<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
-<li id="fn5"><p>(ejercicios, ejemplos, etc.), Departamento de Biología Vegetal, Facultad de Agronomía<a href="#fnref5" class="footnote-back">↩︎</a></p></li>
+<div id="apendiceuno" class="section level1 hasAnchor" number="16">
+<h1><span class="header-section-number">Capítulo 16</span> APENDICE A: Conceptos Matemáticos Básicos<a href="apendiceuno.html#apendiceuno" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>(Por María Federica Marín)</p>
+<p>En el curso de Genética II asumimos que los alumnos ya poseen ciertos
+conocimientos de matemática básica indispensables para comprender los
+conceptos del curso. Este breve capítulo está diseñado para repasar
+dichos conceptos y nivelar la comprensión de los mismos.</p>
+<ol start="0" style="list-style-type: decimal">
+<li><p>PROPORCIONALIDAD Y LA REGLA de TRES</p></li>
+<li><p>FRACCIONES</p></li>
+<li><p>FUNCIONES Y DESPEJES</p></li>
+<li><p>SUMATORIA</p></li>
+<li><p>INTEGRALES Y DERIVADAS</p></li>
+<li><p>DISTRIBUCIÓN NORMAL, DESVÍO, VARIANZA</p></li>
+<li><p>REGLAS DE OPERACIONES CON MEDIAS Y VARIANZAS</p></li>
+<li><p>MÍNIMOS CUADRADOS</p></li>
 </ol>
+<!-- -->
+<ol start="0" style="list-style-type: decimal">
+<li><p>PROPORCIONALIDAD Y LA REGLA de TRES</p></li>
+<li><p>FRACCIONES</p></li>
+</ol>
+<p>Una fracción es un cociente entre dos números enteros y esta representa
+un valor numérico. La misma consiste en un <strong>denominador</strong> (<em>b</em>) que
+indica el número de partes iguales en las que se ha dividido la unidad y
+un <strong>numerador</strong> (<em>a</em>) que indica el número de unidades fraccionarias
+elegidas. Como tal, la fracción expresa</p>
+<p>un valor respecto a un todo y representa una división.</p>
+<p>Las fracciones expresan la razón que guardan dos magnitudes
+proporcionales a la vez de actuar como operadores cuando son aplicadas a
+un número u otra fracción.</p>
+<ol style="list-style-type: decimal">
+<li>Transformaciones</li>
+</ol>
+<p><em>Fracciones equivalentes</em></p>
+<p>Se dice que dos fracciones son equivalentes cuando a pesar de tener
+distinto numerador y denominador representan el mismo valor. Cada
+fracción posee infinitas fracciones equivalentes a ella y podemos
+obtener las mismas mediante dos métodos: amplificación y simplificación.
+La amplificación consiste en la multiplicación de numerador y
+denominador por un mismo número mientras que la simplificación consiste
+en la división de los factores por un número (esto se podrá lograr
+únicamente si ambos factores son divisibles por el mismo). Si el número
+entre el que estamos dividiendo los términos es el máximo común
+denominador obtendremos una fracción irreducible. Una fracción
+irreducible es aquella que no se puede simplificar y esto sucede cuando
+numerador y denominador son primos entre si.</p>
+<p>Para comprobar si dos fracciones son equivalentes podemos utilizar el
+método de productos cruzados, es decir, multiplicar el numerador de una
+por el denominador de la otra y viceversa. Si ambos productos son
+iguales podemos decir que ambas fracciones son equivalentes.</p>
+<p><em>Común denominador</em></p>
+<p>Transformar varias fracciones a común denominador consiste en convertir
+cada una de ellas en otra fracción equivalente, pero teniendo el mismo
+denominador. A continuación, se presentan dos métodos para hallar el
+común denominador:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Multiplicar los denominadores entre si</li>
+</ol>
+<p>Para aplicar este método lo primero que se hará es multiplicar entre si
+los denominadores de las fracciones que queremos emplear. A
+continuación, será necesario modificar los numeradores para no modificar
+el valor de la fracción; para ello, dividiremos el denominador común
+encontrado entre cada uno de los denominadores de cada fracción inicial.
+Por último, el resultado de cada una de esas divisiones se multiplica
+por el numerador de cada fracción inicial.</p>
+<p>Este método a pesar de ser práctico puede llevarnos a trabajar con
+números bastante grandes lo que puede complicar futuros cálculos.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Mínimo común múltiplo (mcm)</li>
+</ol>
+<p>Para aplicar este método lo primero que debemos hacer es descomponer
+cada denominador en factores primos.</p>
+<p>A continuación, será necesario multiplicar todas las potencias producto
+de la descomposición, pero en caso de existir bases repetidas únicamente
+se utilizará la de mayor exponente.</p>
+<p>Para modificar los numeradores aplicaremos el mismo proceso que en el
+método anterior</p>
+<p>El mcm tiende a ser un método más laborioso que el primero, sin embargo,
+nos permite operar con valores más pequeños.</p>
+<p><strong>Saber aplicar todas las transformaciones detalladas en esta sección
+será fundamental al momento de operar con fracciones.</strong></p>
+<ol style="list-style-type: decimal">
+<li>Operaciones</li>
+</ol>
+<p><em>Suma y resta</em></p>
+<p>Solo se pueden sumar o restar fracciones que posean el <strong>mismo
+denominador</strong>. Una vez establecido esto, se procede a sumar o restar los
+numeradores manteniendo el denominador.</p>
+<p><em>Multiplicación</em></p>
+<p>El producto de fracciones es una fracción cuyo denominador es el
+resultado de la multiplicación de los denominadores y cuyo numerador es
+el producto de los numeradores.</p>
+<p><em>División</em></p>
+<p>La división de fracciones consiste en la multiplicación de la fracción
+que corresponde al dividendo por el inverso a la que corresponde al
+divisor; o lo que es lo mismo, es la multiplicación cruzada de numerador
+y denominador.</p>
+<p>La multiplicación y división de fracciones poseen los mismos criterios
+que una multiplicación o división de enteros por lo que en la primera el
+orden de los factores no alterará el producto. Sin embargo, en la
+segunda, no se podrá cambiar que fracción es el dividendo y cual el
+divisor por lo que <strong>NO</strong> es indiferente que fracción se invierte.</p>
+<p><em>Potencias</em></p>
+<p>Las operaciones con potencias en fracciones poseen ciertos criterios, a
+saber:</p>
+<ul>
+<li><p>Producto de potencias con la misma base</p></li>
+<li><p>División de potencias con la misma base</p></li>
+<li><p>Potencia de una potencia</p></li>
+</ul>
+<!-- -->
+<ul>
+<li><p>Producto de potencias de un mismo exponente</p></li>
+<li><p>Cociente de potencias con un mismo exponente</p></li>
+</ul>
+<p><em>Prioridades en operaciones combinadas utilizando fracciones</em></p>
+<p>Al momento de realizar operaciones combinadas, las prioridades a seguir
+son las mismas que cuando calculamos utilizando números enteros, así
+pues:</p>
+<ol style="list-style-type: decimal">
+<li><p>Calcular potencias y raíces</p></li>
+<li><p>Realizar las operaciones entre paréntesis o llaves</p></li>
+<li><p>Calcular los productos y cocientes</p></li>
+<li><p>Calcular sumas y restas</p></li>
+</ol>
+<!-- -->
+<ol style="list-style-type: decimal">
+<li>FUNCIONES Y DESPEJES</li>
+</ol>
+<p>Podemos decir que las funciones constituyen una relación entre
+variables. Para definir esta relación diremos que dados dos conjuntos no
+vacíos denominados D y C (dominio y codominio respectivamente);
+entenderemos por función de D en C a toda regla que hace corresponder a
+<strong>cada elemento</strong> de D (criterio de existencia) con un <strong>único
+elemento</strong> (criterio de unicidad) en C.</p>
+<p>D ⊆ R</p>
+<p>Básicamente, tendremos tres formas de expresar una función: mediante una
+tabla de valores, una gráfica o una ecuación. Sin dudas para nuestro
+trabajo la manera más practica de expresar una función es mediante una
+ecuación debido a que no solo es sintética, sino que mediante ella
+podemos obtener las otras dos representaciones.</p>
+<p>Para continuar esta idea, podemos tomar como ejemplo el cálculo del área
+de un círculo. Algebraicamente, podemos decir que <span class="math inline">\(A = \pi r^{2}\)</span> lo que
+nos permite crear una tabla y un grafico que ilustren dicha relación:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Radio</th>
+<th align="left">Área</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left"><span class="math display">\[\pi\]</span></td>
+</tr>
+<tr class="even">
+<td align="left">1,5</td>
+<td align="left">2,25<span class="math inline">\(\ \pi\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="left">16<span class="math inline">\(\ \pi\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">5,67</td>
+<td align="left">31,0249<span class="math inline">\(\ \pi\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">7,1</td>
+<td align="left">50,41<span class="math inline">\(\ \pi\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><em>Funciones potenciales</em></p>
+<p><em>Funciones exponenciales</em></p>
+<p><em>Funciones logarítmicas</em></p>
+<p><em>Funciones polinómicas</em></p>
+<p>Una función polinómica de grado n ∈ N ∪ {0} es una función del tipo</p>
+<p><em>f(x) = a<sub>0</sub> +a<sub>1</sub>x+a<sub>2</sub>x<sup>2</sup> +···+a<sub>n</sub>x<sup>n</sup>,</em></p>
+<p>donde a<sub>0</sub> , a<sub>1</sub> , . . . , a<sub>n</sub> ∈ R y se denominan coeficientes de la
+función polinómica. Una función polinómica tendrá como dominio a todo R.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Polinomios de primer grado</li>
+</ol>
+<p>Un polinomio de primer grado es una función de forma <em>f(x)=ax + b</em> donde
+su representación gráfica será siempre una recta.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Polinomios de segundo grado</li>
+</ol>
+<p>Un polinomio de segundo grado es una función de forma</p>
+<p><em>f(x)=ax2 +bx+c</em> donde a ≠ 0</p>
+<p>Su representación gráfica será siempre una parábola cuyo vértice estará
+por debajo de la parábola si a&gt;0 mientras que para a&lt;0 se encontrará
+por encima de la misma. El vértice se situ ́a en el punto x = −b /2a.</p>
+<p><em>Funciones racionales</em></p>
+<p>Una función racional es una función del tipo</p>
+<p><em>h(x) = f(x) / g(x)</em></p>
+<p>en donde f y g son funciones polinómicas, por lo que podemos definir la
+función racional como el cociente de dos funciones polinómicas. El
+dominio de este tipo de funciones será R exceptuando los valores en los
+que g(x) es nula.</p>
+<p><em>Límites</em></p>
+<p><em>Despeje de funciones o ecuaciones</em></p>
+<p>Frecuentemente nos encontraremos con situaciones en las que es necesario
+hallar un valor dentro una ecuación que no es el que fue planteado como
+incógnita al desarrollar la operación.</p>
+<p>La regla básica para despejar es que los valores pasan al otro lado de
+la igualdad realizando la operación contraria a la que hacían en su
+forma original:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Suma y resta</p></li>
+<li><p>Multiplicación y división</p></li>
+<li><p>Potencia y raíz</p></li>
+</ol>
+<p>Detallamos entonces como se realizan los despejes de operaciones
+particulares, sin embargo, es importante saber aplicar estos métodos en
+conjunto al momento de realizar un despeje en una ecuación. Veamos
+algunos ejemplos:</p>
+<ol start="2" style="list-style-type: decimal">
+<li>SUMATORIA</li>
+</ol>
+<p>La sumatoria se emplea para representar la suma de muchos o infinitos
+valores.</p>
+<p><span class="math display">\[\begin{equation}
+\sum_{i=1}^{n}
+\end{equation}\]</span></p>
+<p>Σ= sumatoria</p>
+<p>i: límite inferior</p>
+<p>n=limite superior</p>
+<p>Pongo ejercicios? Desarrollo propiedades? Lo saco?</p>
+<ol start="3" style="list-style-type: decimal">
+<li>DERIVADAS E INTEGRALES</li>
+</ol>
+<p>Ya hemos determinado el concepto de función y sus diferentes tipos de
+representaciones, entre ellas, la gráfica. Entonces, profundizando en
+este análisis, podríamos pensar cuales serían los valores máximos y
+mínimos de una función dada o qué área queda delimitada bajo la misma.
+Delimitar el máximo o el mínimo no es otra cosa que determinar la
+tangente a una curva en un punto, es decir, derivar la función.
+Determinar el área bajo la curva de una función no es otra cosa que
+derivar la misma.</p>
+<p><em>Derivada</em></p>
+<p>Inicialmente, las funciones se estudian de manera estática, es decir, se
+evalúa que valor adquiere la misma en un punto. Sin embargo, también
+podemos estudiarlas de manera dinámica, es decir, con que rapidez se
+produce la variación en la función. Con este fin, la derivada de una
+función puede ser definida como la pendiente de una curva o como la
+razón instantánea de cambio. Teóricamente, la derivada de una función se
+estudia a través del cálculo de límites, este sin embargo es un método
+que reviste cierta complejidad por lo que se pueden aplicar reglas para
+derivar.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Variación media</li>
+</ol>
+<p>Mediante la variación media (VM) podemos estudiar la variación de un a
+función por unidad de tiempo dentro de un intervalo:</p>
+<p><img src="/Users/kangu/apuntes/bookdown-demo-master/figuras/media/image2.png" style="width:6in;height:6in" /></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Variación instantánea o derivada en un punto</li>
+</ol>
+<p>Si disminuyéramos progresivamente el intervalo (a,b) hasta que
+practicamente ambos puntos se “junten”, obtenemos la variación
+instantánea mediante el uso de uns recta tangente a ese punto:
+<span class="math display">\[\begin{equation}
+F´(a)=\lim_{h \to 0} \frac{f(a+h)-f(a)}{h}\
+\end{equation}\]</span>\end{equation}</p>
+<p><strong>GRAFICA</strong></p>
+<ul>
+<li>Reglas de derivación</li>
+</ul>
+<p>Donde f(x) y g(x) son funciones, “a” y “b” son constantes</p>
+<p><img src="/Users/kangu/apuntes/bookdown-demo-master/figuras/media/image3.png" style="width:7in;height:4.5in" /></p>
+<ul>
+<li>Máximos y mínimos</li>
+</ul>
+<p>Un punto máximo (a) puede ser encontrado si F(a) es mayor o igual a
+cualquier otro F(x) del intervalo de estudio. Es decir, que ese punto es
+el más alto de la gráfica de la función en un intervalo dado.</p>
+<p>Un punto mínimo (a) puede ser encontrado si F(a) es menor o igual a
+cualquier otro F(x) del intervalo de estudio. Es decir, que ese punto es
+el más bajo de la gráfica de la función en un intervalo dado.</p>
+<p>Para que exista un punto extremo, la derivada de la función debe ser
+cero en ese punto, es decir f(a)=0. O de lo contrario, que la derivada
+de la función no esté definida para a. La explicación a esto la podremos
+ilustrar de la siguiente manera:</p>
+<p>En este caso, a la izquierda del punto, observamos como la pendiente es
+positiva y la gráfica va “creciendo” hasta llegar al máximo (pendiente
+0; F´(x)=0). A partir de ese momento, la función comienza a decrecer.</p>
+<p>Es importante saber que existen casos donde la pendiente es 0, pero que
+no exista un máximo ni un mínimo:</p>
+<p>La otra posibilidad que manejamos para detectar un máximo o mínimo era
+que la derivada de la función no estuviera definida para ese punto:</p>
+<ul>
+<li>Criterio de la primera derivada</li>
+</ul>
+<p>Para definir a un punto como máximo o mínimo nos basaremos en los puntos
+inmediatamente anteriores y posteriores al mismo. Dicho esto, para que
+un punto:</p>
+<ul>
+<li><p>Sea máximo, los puntos adyacentes a el deben ser menores a la vez
+que la pendiente a la izquierda de este será positiva y a la derecha
+negativa.</p></li>
+<li><p>Sea mínimo, los puntos adyacentes a el deben ser mayores a la vez
+que la pendiente a la izquierda de este será negativa y a la derecha
+positiva.</p></li>
+</ul>
+<p>Establecido esto, el criterio de la primera derivada establece que: una
+vez que encontramos un punto donde la derivada es cero <span class="math display">\[F´(x)=0\]</span> y a
+su izquierda la derivada es positiva y a la derecha negativa, nos
+encontramos frente a un máximo. Si por su parte a la izquierda del punto
+la derivada es negativa y a la derecha positiva, estamos frente a un
+mínimo. En el caso que a ambos lados del punto la derivada sea positiva
+o negativa, no hay ni máximo ni mínimo.</p>
+<p>Ilustremos un ejemplo trabajando con la primera derivada de la función
+F(x)=4x<sup>2</sup>-8x:</p>
+<ul>
+<li><p>La derivada de la función es F´(x)=8x-8, por lo que la igualaremos a
+cero en busca de un punto extremo. Despejando, llegamos a que x=1,
+por lo que ya tenemos la primera coordenada del punto.</p></li>
+<li><p>Para obtener el valor en y, sustituimos en la función original:
+F(1)=4(1)<sup>2</sup>-8(1)= -4.</p></li>
+<li><p>Ahora ya tenemos la ubicación del punto extremo “a” (1,-4).
+Procederemos entonces a investigar la derivada de dos puntos, uno a
+la izquierda y otro a la derecha de “a” para determinar el signo de
+la pendiente a cada lado.</p>
+<ul>
+<li><p>Comenzaremos tomando un punto a la izquierda, por ejemplo 0 y lo
+sustituimos en la derivada: F´(0)=8(0)-8= -8. Así definimos que
+a la izquierda del punto extremo “a” la derivada y con ella la
+pendiente de la función, es negativa.</p></li>
+<li><p>A continuación, asignamos un valor a la derecha, por ejemplo 2 y
+nuevamente sustituimos en la derivada: F´(2)=8(2)-8= 8. Así
+definimos que a la derecha del punto extremo “a” la derivada y
+con ella la pendiente de la función, es positiva.</p></li>
+</ul></li>
+</ul>
+<p>Una vez concluidos estos pasos y continuando con nuestro razonamiento
+inicial, podemos decir que el punto que encontramos es un mínimo.
+Gráficamente:</p>
+<blockquote>
+<p><img src="/Users/kangu/apuntes/bookdown-demo-master/figuras/media/image4.png" style="width:6in;height:6in" /></p>
+</blockquote>
+<ul>
+<li>Criterio de la segunda derivada</li>
+</ul>
+<p>Existe una alternativa más sencilla al momento de determinar la
+presencia de máximos y mínimos y corresponde al método de la segunda
+derivada. El criterio es el siguiente, si una función posee una segunda
+derivada y esta es positiva, estamos en presencia de un mínimo, si es
+negativa, de un máximo.</p>
+<ul>
+<li><p>Retomemos el primer ejemplo: F(x)= 4x<sup>2</sup>-8x</p>
+<ul>
+<li><p>F´(x)= 8x-8</p></li>
+<li><p>F´´(x)= 8</p></li>
+</ul></li>
+</ul>
+<p>De acuerdo con el criterio que planteamos y confirmamos con el método de
+la primera derivada estamos frente a un mínimo. Para determinar la
+ubicación del punto “a” donde se encuentra ese mínimo utilizaremos el
+mismo procedimiento que anteriormente donde igualamos la primera
+derivada a cero y posteriormente sustituimos con ese valor la ecuación
+original para obtener las coordenadas.</p>
+<ul>
+<li><p>Utilicemos un ejemplo más complejo donde: F(x)= x<sup>3</sup>-6x<sup>2</sup></p>
+<ul>
+<li><p>F´(x)= 3x<sup>2</sup>-12x</p></li>
+<li><p>F´´(x)= 6x-12</p></li>
+</ul></li>
+</ul>
+<p>Podemos ver en este caso que el signo de la segunda derivada no es
+evidente. Por ello, procederemos a igualar a cero la primera derivada
+para obtener la coordenada en x de los puntos extremos; así obtenemos
+que la función tiene dos puntos extremos, uno donde x=0 y otro donde
+x=4. A continuación buscaremos la ordenada de cada uno de esos puntos:</p>
+<ul>
+<li><p>Para x<sub>1</sub>: F(0)= (0)<sup>3</sup>-6(0)<sup>2</sup>= 0</p></li>
+<li><p>Para x<sub>2</sub>: F(4)= (4)<sup>3</sup>-6(4)<sup>2</sup>= -32</p></li>
+</ul>
+<p>Tenemos entonces las coordenadas de dos puntos extremos “a” (0,0) y “b”
+(4,-32). Como ultimo paso entonces nos queda determinar si los puntos
+representan un máximo o un mínimo, para ello, sustituiremos en valor de
+x en la segunda derivada y obtendremos así el signo de la misma para
+cada punto.</p>
+<ul>
+<li><p>Para a: F´´(0)= 6(0)-12= -12 (el punto es un máximo)</p></li>
+<li><p>Para b: F´´(4)= 6(4)-12= 12 (el punto es un mínimo)</p></li>
+</ul>
+<p><img src="/Users/kangu/apuntes/bookdown-demo-master/figuras/media/image5.png" style="width:6in;height:6in" /></p>
+<p><em>Integral</em></p>
+<p>El calculo integral puede ser utilizado fundamentalmente para dos fines:
+el primero consiste en la obtención de la función original a partir de
+su derivada (integral indefinida) o bien obtener el área comprendida
+bajo una curva (integral definida).</p>
+<ul>
+<li>Integral indefinida</li>
+</ul>
+<p>La notación de integral indefinida para cualquier función es:</p>
+<p><span class="math display">\[\int_{}^{}{F´(x) dx} = F(x) + k\]</span></p>
+<p>Donde: <span class="math inline">\(\int_{}^{}\text{es el simbolo de la integral}\)</span></p>
+<p><span class="math inline">\(F´(x)\)</span> es una derivada de <span class="math inline">\(F(x)\)</span></p>
+<p><span class="math inline">\(dx\)</span> (diferencial de x), indica la variable en relación a la que estamos
+integrando</p>
+<p><span class="math inline">\(k\)</span> es la constante de integración</p>
+<p>Reglas de derivación inmediata</p>
+<p><img src="/Users/kangu/apuntes/bookdown-demo-master/figuras/media/image6.png" style="width:6in;height:6in" /></p>
+<p>Podremos llegar a determinar el valor k, si tenemos algo mas de
+información de la función primitiva, por ejemplo…</p>
+<ul>
+<li>Integral definida</li>
+</ul>
+<p>La integral definida es un número real que implica una suma infinita de
+valores y representa el área comprendida entre la función y el eje de
+las abscisas.</p>
+<p><span class="math display">\[\int_{a}^{b}{F(x)\text{dx}}\]</span></p>
+<p>Donde: <span class="math inline">\(\int_{}^{}\text{es\ el\ simbolo\ de\ la\ integral}\)</span></p>
+<p>F(x) es la función a integrar</p>
+<p>dx (diferencial de x), indica la variable en relación a la que estamos
+integrando</p>
+<p>a, b son los límites de integración</p>
+<p>a b</p>
+<p>Es importante tener en cuenta que es necesario estudiar si la función es
+positiva, pues en caso de no serlo en todo intervalo, será necesario
+calcular una integral separada por intervalos según el signo y tomar su
+valor absoluto.</p>
+<p>Propiedades:</p>
+<p><img src="/Users/kangu/apuntes/bookdown-demo-master/figuras/media/image7.png" style="width:4in;height:2.90115in" /></p>
+<p>Pasos a seguir para obtener la integral definida:</p>
+<ul>
+<li><p>Determinar el valor de la integral indefinida</p></li>
+<li><p>Sustituír en ella los valores limites (a y b)</p></li>
+<li><p>Restar ambos valores para obtener el área</p></li>
+</ul>
+<p>EJEMPLO</p>
+<ol start="4" style="list-style-type: decimal">
+<li>DISTIBUCIÓN NORMAL, DESVÍO, VARIANZA</li>
+</ol>
+<p>Una distribución indica el patrón de ordenamiento que tienden a seguir
+una serie de datos. La distribución normal se presenta con forma de
+campana simétrica y está caracterizada por una media (µ) y un desvío
+estándar ().</p>
+<p>En este tipo de distribución, aproximadamente el 68% de los datos quedan
+comprendidos entre +/- 1 desvío estándar.</p>
+<p><img src="/Users/kangu/apuntes/bookdown-demo-master/figuras/media/image8.png" style="width:6in;height:6in" /></p>
+<p><span class="math display">\[\begin{equation}
+f(x)=\frac{1}{\sqrt{2\pi \sigma^2}}e^{\frac{(x-\mu)^2}{2\sigma^2}}
+\end{equation}\]</span></p>
+<p><img src="/Users/kangu/apuntes/bookdown-demo-master/figuras/media/image10.png" style="width:6in;height:6in" /></p>
+<p><em>Varias distribuciones normales con diferentes medias y varianzas</em></p>
+<p>Como vemos, las campanas roja, verde y azul tienen igual media (0), pero
+difieren en su varianza lo que afecta cuan “achatada” puede presentarse
+la gráfica. Consecuencia de esto, y a modo de ejemplo, podemos ver que
+el valor 3 es probable si estuviéramos dentro de la campana azul pero
+sería improbable si estuviéramos trabajando dentro de la campana roja.</p>
+<p><em>Media</em></p>
+<p>Es el promedio aritmético de todos los valores pertenecientes a
+determinada muestra o población. Sin embargo, como pudimos comprobar
+mediante la observación del gráfico anterior, la media no es informativa
+sobre la variación en la distribución de los datos.</p>
+<p><em>Variación</em></p>
+<ul>
+<li><p>Desvío de un registro: es la diferencia numérica existente entre un
+registro particular y la media poblacional</p></li>
+<li><p>Desvío estándar (): Gráficamente, es la distancia entre la media y
+el punto de inflexión de la curva de distribución normal. Es una
+medida de dispersión de los datos, podemos llegar a conceptualizarla
+como un “desvío promedio de la media” aunque matemáticamente no es
+así. Es la raíz cuadrada de la varianza.</p></li>
+<li><p>Varianza (): medida de dispersión al igual que es desvío estándar,
+es una propiedad muy informativa pero difícil de conceptualizar.</p></li>
+</ul>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="GxE.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="apendicedos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -718,7 +1055,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/16-apendice01.Rmd",
 "text": "Edit"
 },
 "history": {
