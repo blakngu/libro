@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 14 Endocría, exocría, consanguinidad y depresión endogámica | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
   <meta name="description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 14 Endocría, exocría, consanguinidad y depresión endogámica | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
@@ -28,7 +27,7 @@
 <meta name="author" content="(Paola Gaiero)" />
 
 
-<meta name="date" content="2022-06-14" />
+<meta name="date" content="2023-09-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -37,8 +36,8 @@
   
 <link rel="prev" href="selartifII.html"/>
 <link rel="next" href="GxE.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -54,16 +53,18 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -115,31 +116,38 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#variabilidad-genética"><i class="fa fa-check"></i><b>1.1</b> Variabilidad genética</a>
 <ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.1"><i class="fa fa-check"></i>Ejemplo 1.1</a></li>
 <li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#detectando-la-variabilidad-diferentes-técnicas"><i class="fa fa-check"></i><b>1.1.1</b> Detectando la variabilidad: diferentes técnicas</a></li>
-<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#metagenómica-y-metatranscriptómica"><i class="fa fa-check"></i><b>1.1.2</b> Metagenómica y Metatranscriptómica</a></li>
+<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#metagenomica-y-metatranscriptomica"><i class="fa fa-check"></i><b>1.1.2</b> Metagenómica y Metatranscriptómica</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.2"><i class="fa fa-check"></i>Ejemplo 1.2</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#genómica-composicional"><i class="fa fa-check"></i><b>1.2</b> Genómica composicional</a>
 <ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-gcskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones, GCskew</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-y-textgc_textskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones y <span class="math inline">\(\text{GC}_{\text{skew}}\)</span></a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#uso-de-codones"><i class="fa fa-check"></i>Uso de codones</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#exploración-multivariada-análisis-de-correspondencia"><i class="fa fa-check"></i>Exploración multivariada: Análisis de Correspondencia</a></li>
-<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i><b>1.2.1</b> Composición de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.3"><i class="fa fa-check"></i>Ejemplo 1.3</a></li>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#exploracion-multivariada"><i class="fa fa-check"></i><b>1.2.1</b> Exploración multivariada: Análisis de Correspondencia</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i><b>1.2.2</b> Composición de proteínas</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-en-propiedades-de-los-aas"><i class="fa fa-check"></i>Diferencias en propiedades de los AAs</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-de-composición-entre-clases-de-proteínas"><i class="fa fa-check"></i>Diferencias de composición entre clases de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.4"><i class="fa fa-check"></i>Ejemplo 1.4</a></li>
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#genómica-comparativa"><i class="fa fa-check"></i><b>1.3</b> Genómica comparativa</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#comparación-de-secuencias-génicas"><i class="fa fa-check"></i>Comparación de secuencias génicas</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección Positiva</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección positiva</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#vías"><i class="fa fa-check"></i>Vías</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#genómica-funcional"><i class="fa fa-check"></i><b>1.4</b> Genómica funcional</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#estudios-epigenéticos-y-epigenómicos"><i class="fa fa-check"></i>Estudios epigenéticos y epigenómicos</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#conclusión"><i class="fa fa-check"></i><b>1.5</b> Conclusión</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#actividades"><i class="fa fa-check"></i><b>1.6</b> Actividades</a>
 <ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicio-1.1"><i class="fa fa-check"></i>Ejercicio 1.1</a></li>
+<li class="chapter" data-level="1.6.1" data-path="intro.html"><a href="intro.html#control-de-lectura"><i class="fa fa-check"></i><b>1.6.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="1.6.2" data-path="intro.html"><a href="intro.html#verdadero-o-falso"><i class="fa fa-check"></i><b>1.6.2</b> ¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>Parte II: Genética de Poblaciones</b></span></li>
@@ -150,7 +158,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#supuestos-que-asumimos-se-cumplen-para-h-w"><i class="fa fa-check"></i>Supuestos que asumimos se cumplen para H-W</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-dioicas-dos-sexos"><i class="fa fa-check"></i><b>2.2</b> Hardy-Weinberg en especies dioicas (dos sexos)</a></li>
-<li class="chapter" data-level="2.3" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#h-w-la-frecuencia-de-heterocigotas-en-función-de-la-frecuencia-alélica"><i class="fa fa-check"></i><b>2.3</b> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
+<li class="chapter" data-level="2.3" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#heterocigotas-freq-alelica"><i class="fa fa-check"></i><b>2.3</b> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
 <li class="chapter" data-level="2.4" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo"><i class="fa fa-check"></i><b>2.4</b> El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo</a></li>
 <li class="chapter" data-level="2.5" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#tres-o-más-alelos"><i class="fa fa-check"></i><b>2.5</b> Tres o más alelos</a></li>
 <li class="chapter" data-level="2.6" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-y-el-equilibrio-o-no"><i class="fa fa-check"></i><b>2.6</b> La estimación de frecuencias y el equilibrio (o no)</a></li>
@@ -158,19 +166,33 @@ div.csl-indent {
 <li class="chapter" data-level="2.8" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#dónde-se-esconden-los-alelos-recesivos"><i class="fa fa-check"></i><b>2.8</b> ¿Dónde se “esconden” los alelos recesivos?</a></li>
 <li class="chapter" data-level="2.9" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-poliploides"><i class="fa fa-check"></i><b>2.9</b> Hardy-Weinberg en especies poliploides</a></li>
 <li class="chapter" data-level="2.10" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#geometría-y-genética-los-diagramas-de-de-finetti"><i class="fa fa-check"></i><b>2.10</b> Geometría y Genética: los diagramas de <em>de Finetti</em></a></li>
-<li class="chapter" data-level="2.11" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-en-el-locus-abo"><i class="fa fa-check"></i><b>2.11</b> La estimación de frecuencias en el locus ABO</a></li>
+<li class="chapter" data-level="2.11" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#estimacion-abo"><i class="fa fa-check"></i><b>2.11</b> La estimación de frecuencias en el locus ABO</a></li>
+<li class="chapter" data-level="2.12" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#conclusión-1"><i class="fa fa-check"></i><b>2.12</b> Conclusión</a></li>
+<li class="chapter" data-level="2.13" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#actividades-1"><i class="fa fa-check"></i><b>2.13</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="2.13.1" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#control-de-lectura-1"><i class="fa fa-check"></i><b>2.13.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="2.13.2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#verdadero-o-falso-1"><i class="fa fa-check"></i><b>2.13.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicios-2"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="deriva.html"><a href="deriva.html"><i class="fa fa-check"></i><b>3</b> Deriva Genética</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="deriva.html"><a href="deriva.html#el-rol-de-los-procesos-estocásticos-en-la-genética"><i class="fa fa-check"></i><b>3.1</b> El rol de los procesos estocásticos en la genética</a></li>
-<li class="chapter" data-level="3.2" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i><b>3.2</b> El modelo de Wright-Fisher</a></li>
+<li class="chapter" data-level="3.2" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i><b>3.2</b> El modelo de Wright-Fisher</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.1"><i class="fa fa-check"></i>Ejemplo 3.1</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="deriva.html"><a href="deriva.html#el-rol-de-la-subdivisión-poblacional-en-la-evolución-de-las-frecuencias-alélicas"><i class="fa fa-check"></i><b>3.3</b> El rol de la subdivisión poblacional en la evolución de las frecuencias alélicas</a>
 <ul>
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#homocigosidad-y-heterocigosidad"><i class="fa fa-check"></i>Homocigosidad y Heterocigosidad</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.2"><i class="fa fa-check"></i>Ejemplo 3.2</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="deriva.html"><a href="deriva.html#cadenas-de-markov"><i class="fa fa-check"></i><b>3.4</b> Cadenas de Markov</a></li>
-<li class="chapter" data-level="3.5" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i><b>3.5</b> Tamaño efectivo poblacional</a></li>
+<li class="chapter" data-level="3.5" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i><b>3.5</b> Tamaño efectivo poblacional</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.3"><i class="fa fa-check"></i>Ejemplo 3.3</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.4"><i class="fa fa-check"></i>Ejemplo 3.4</a></li>
+</ul></li>
 <li class="chapter" data-level="3.6" data-path="deriva.html"><a href="deriva.html#aproximación-de-difusión"><i class="fa fa-check"></i><b>3.6</b> Aproximación de difusión</a>
 <ul>
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#caminatas-al-azar-y-procesos-de-difusión"><i class="fa fa-check"></i>Caminatas al azar y procesos de difusión</a></li>
@@ -178,9 +200,18 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-backward-equation"><i class="fa fa-check"></i>Kolmogorov Backward Equation</a></li>
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#solución-de-las-ecuaciones"><i class="fa fa-check"></i>Solución de las ecuaciones</a></li>
 </ul></li>
-<li class="chapter" data-level="3.7" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i><b>3.7</b> Probabilidad de fijación y tiempos de fijación</a></li>
+<li class="chapter" data-level="3.7" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i><b>3.7</b> Probabilidad de fijación y tiempos de fijación</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.5"><i class="fa fa-check"></i>Ejemplo 3.5</a></li>
+</ul></li>
 <li class="chapter" data-level="3.8" data-path="deriva.html"><a href="deriva.html#el-modelo-coalescente"><i class="fa fa-check"></i><b>3.8</b> El modelo coalescente</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejercicios-3"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="3.9" data-path="deriva.html"><a href="deriva.html#conclusión-2"><i class="fa fa-check"></i><b>3.9</b> Conclusión</a></li>
+<li class="chapter" data-level="3.10" data-path="deriva.html"><a href="deriva.html#actividades-2"><i class="fa fa-check"></i><b>3.10</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="deriva.html"><a href="deriva.html#control-de-lectura-2"><i class="fa fa-check"></i><b>3.10.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="3.10.2" data-path="deriva.html"><a href="deriva.html#verdadero-o-falso-2"><i class="fa fa-check"></i><b>3.10.2</b> ¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="3.10.3" data-path="deriva.html"><a href="deriva.html#ejercicios"><i class="fa fa-check"></i><b>3.10.3</b> Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="seleccion.html"><a href="seleccion.html"><i class="fa fa-check"></i><b>4</b> Selección Natural</a>
 <ul>
@@ -200,7 +231,13 @@ div.csl-indent {
 <li class="chapter" data-level="4.6" data-path="seleccion.html"><a href="seleccion.html#la-fuerza-de-la-selección-natural"><i class="fa fa-check"></i><b>4.6</b> La fuerza de la selección natural</a></li>
 <li class="chapter" data-level="4.7" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-deriva"><i class="fa fa-check"></i><b>4.7</b> Equilibrio selección-deriva</a></li>
 <li class="chapter" data-level="4.8" data-path="seleccion.html"><a href="seleccion.html#otros-tipos-de-selección-y-complejidades"><i class="fa fa-check"></i><b>4.8</b> Otros tipos de selección y complejidades</a></li>
+<li class="chapter" data-level="4.9" data-path="seleccion.html"><a href="seleccion.html#conclusión-3"><i class="fa fa-check"></i><b>4.9</b> Conclusión</a></li>
+<li class="chapter" data-level="4.10" data-path="seleccion.html"><a href="seleccion.html#actividades-3"><i class="fa fa-check"></i><b>4.10</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="4.10.1" data-path="seleccion.html"><a href="seleccion.html#control-de-lectura-3"><i class="fa fa-check"></i><b>4.10.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="4.10.2" data-path="seleccion.html"><a href="seleccion.html#verdadero-o-falso-3"><i class="fa fa-check"></i><b>4.10.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#ejercicios-4"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="dosloci.html"><a href="dosloci.html"><i class="fa fa-check"></i><b>5</b> Dinámica de 2 <em>loci</em></a>
 <ul>
@@ -212,9 +249,9 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="dosloci.html"><a href="dosloci.html#selección-en-modelos-de-dos-loci"><i class="fa fa-check"></i><b>5.4</b> Selección en modelos de dos <em>loci</em></a>
 <ul>
-<li><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento">Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento"><i class="fa fa-check"></i>Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i><b>5.5</b> Arrastre genético (“genetic hitchhiking” o “genetic draft”)</a></li>
+<li class="chapter" data-level="5.5" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i><b>5.5</b> Arrastre genético (“<em>genetic hitchhiking</em>” o “<em>genetic draft</em>”)</a></li>
 <li class="chapter" data-level="5.6" data-path="dosloci.html"><a href="dosloci.html#causas-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i><b>5.6</b> Causas del desequilibrio de ligamiento</a>
 <ul>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-al-mestizaje"><i class="fa fa-check"></i>Desequilibrio debido al mestizaje</a></li>
@@ -222,20 +259,41 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#el-cromosoma-y"><i class="fa fa-check"></i>El cromosoma Y</a></li>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-a-recombinación-reducida"><i class="fa fa-check"></i>Desequilibrio debido a recombinación reducida</a></li>
 </ul></li>
+<li class="chapter" data-level="5.7" data-path="dosloci.html"><a href="dosloci.html#conclusión-4"><i class="fa fa-check"></i><b>5.7</b> Conclusión</a></li>
+<li class="chapter" data-level="5.8" data-path="dosloci.html"><a href="dosloci.html#actividades-4"><i class="fa fa-check"></i><b>5.8</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="5.8.1" data-path="dosloci.html"><a href="dosloci.html#control-de-lectura-4"><i class="fa fa-check"></i><b>5.8.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="5.8.2" data-path="dosloci.html"><a href="dosloci.html#verdadero-o-falso-4"><i class="fa fa-check"></i><b>5.8.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejercicios-5"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="aparnoalazar.html"><a href="aparnoalazar.html"><i class="fa fa-check"></i><b>6</b> Apareamientos no-aleatorios</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-concepto-de-identidad-por-ascendencia-ibd"><i class="fa fa-check"></i><b>6.1</b> El concepto de “identidad por ascendencia” (IBD)</a></li>
 <li class="chapter" data-level="6.2" data-path="aparnoalazar.html"><a href="aparnoalazar.html#generalización-de-hardy-weinberg-para-apareamientos-no-aleatorios"><i class="fa fa-check"></i><b>6.2</b> Generalización de Hardy-Weinberg para apareamientos no-aleatorios</a></li>
-<li class="chapter" data-level="6.3" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><b>6.3</b> <em>F</em> como correlación entre gametos unidos</a></li>
+<li class="chapter" data-level="6.3" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><b>6.3</b> <span class="math inline">\(F\)</span> como correlación entre gametos unidos</a></li>
 <li class="chapter" data-level="6.4" data-path="aparnoalazar.html"><a href="aparnoalazar.html#endocría-y-depresión-endogámica"><i class="fa fa-check"></i><b>6.4</b> Endocría y depresión endogámica</a></li>
 <li class="chapter" data-level="6.5" data-path="aparnoalazar.html"><a href="aparnoalazar.html#un-caso-extremo-la-autogamia"><i class="fa fa-check"></i><b>6.5</b> Un caso extremo: la autogamia</a></li>
-<li class="chapter" data-level="6.6" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-estadísticos-f"><i class="fa fa-check"></i><b>6.6</b> El Coeficiente de endocría y estadísticos <em>F</em></a></li>
-<li class="chapter" data-level="6.7" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i><b>6.7</b> El efecto Wahlund</a></li>
-<li class="chapter" data-level="6.8" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i><b>6.8</b> Subdivisión, migración y el modelo de islas</a></li>
+<li class="chapter" data-level="6.6" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-los-estadísticos-f"><i class="fa fa-check"></i><b>6.6</b> El coeficiente de endocría y los estadísticos <em>F</em></a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.1"><i class="fa fa-check"></i>Ejemplo 6.1</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i><b>6.7</b> El efecto Wahlund</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.2"><i class="fa fa-check"></i>Ejemplo 6.2</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i><b>6.8</b> Subdivisión, migración y el modelo de islas</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.3"><i class="fa fa-check"></i>Ejemplo 6.3</a></li>
+</ul></li>
 <li class="chapter" data-level="6.9" data-path="aparnoalazar.html"><a href="aparnoalazar.html#mecanismos-de-especiación"><i class="fa fa-check"></i><b>6.9</b> Mecanismos de especiación</a></li>
+<li class="chapter" data-level="6.10" data-path="aparnoalazar.html"><a href="aparnoalazar.html#conclusión-5"><i class="fa fa-check"></i><b>6.10</b> Conclusión</a></li>
+<li class="chapter" data-level="6.11" data-path="aparnoalazar.html"><a href="aparnoalazar.html#actividades-5"><i class="fa fa-check"></i><b>6.11</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="6.11.1" data-path="aparnoalazar.html"><a href="aparnoalazar.html#control-de-lectura-5"><i class="fa fa-check"></i><b>6.11.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="6.11.2" data-path="aparnoalazar.html"><a href="aparnoalazar.html#verdadero-o-falso-5"><i class="fa fa-check"></i><b>6.11.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejercicios-6"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="microbial.html"><a href="microbial.html"><i class="fa fa-check"></i><b>7</b> Genética de Poblaciones Microbianas</a>
 <ul>
@@ -243,20 +301,30 @@ div.csl-indent {
 <li class="chapter" data-level="7.2" data-path="microbial.html"><a href="microbial.html#dinámica-de-las-poblaciones-bacterianas"><i class="fa fa-check"></i><b>7.2</b> Dinámica de las poblaciones bacterianas</a>
 <ul>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-exponencial"><i class="fa fa-check"></i>El modelo exponencial</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.1"><i class="fa fa-check"></i>Ejemplo 7.1</a></li>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-logístico"><i class="fa fa-check"></i>El modelo logístico</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.2"><i class="fa fa-check"></i>Ejemplo 7.2</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="microbial.html"><a href="microbial.html#modelos-haploides-de-selección-natural"><i class="fa fa-check"></i><b>7.3</b> Modelos haploides de selección natural</a>
 <ul>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-discreto"><i class="fa fa-check"></i>Selección haploide: modelo discreto</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.3"><i class="fa fa-check"></i>Ejemplo 7.3</a></li>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-continuo"><i class="fa fa-check"></i>Selección haploide: modelo continuo</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.4"><i class="fa fa-check"></i>Ejemplo 7.4</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-versus-el-de-wright-fisher"><i class="fa fa-check"></i><b>7.4</b> Los modelos de Moran y de Fisión versus el de Wright-Fisher</a></li>
+<li class="chapter" data-level="7.4" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-vs-el-de-wright-fisher"><i class="fa fa-check"></i><b>7.4</b> Los modelos de Moran y de fisión <em>vs</em> el de Wright-Fisher</a></li>
 <li class="chapter" data-level="7.5" data-path="microbial.html"><a href="microbial.html#el-rol-de-la-transferencia-horizontal"><i class="fa fa-check"></i><b>7.5</b> El rol de la transferencia horizontal</a></li>
-<li class="chapter" data-level="7.6" data-path="microbial.html"><a href="microbial.html#selección-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i><b>7.6</b> Selección vs Neutralismo: los procariotas en el debate</a></li>
+<li class="chapter" data-level="7.6" data-path="microbial.html"><a href="microbial.html#seleccionismo-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i><b>7.6</b> Seleccionismo <em>vs</em> neutralismo: los procariotas en el debate</a></li>
 <li class="chapter" data-level="7.7" data-path="microbial.html"><a href="microbial.html#genómica-poblacional"><i class="fa fa-check"></i><b>7.7</b> Genómica poblacional</a></li>
 <li class="chapter" data-level="7.8" data-path="microbial.html"><a href="microbial.html#genes-de-resistencia"><i class="fa fa-check"></i><b>7.8</b> Genes de resistencia</a></li>
 <li class="chapter" data-level="7.9" data-path="microbial.html"><a href="microbial.html#introducción-a-la-epidemiología-modelos-compartimentales"><i class="fa fa-check"></i><b>7.9</b> Introducción a la epidemiología: modelos compartimentales</a></li>
+<li class="chapter" data-level="7.10" data-path="microbial.html"><a href="microbial.html#conclusión-6"><i class="fa fa-check"></i><b>7.10</b> Conclusión</a></li>
+<li class="chapter" data-level="7.11" data-path="microbial.html"><a href="microbial.html#actividades-6"><i class="fa fa-check"></i><b>7.11</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="7.11.1" data-path="microbial.html"><a href="microbial.html#control-de-lectura-6"><i class="fa fa-check"></i><b>7.11.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="7.11.2" data-path="microbial.html"><a href="microbial.html#verdadero-o-falso-6"><i class="fa fa-check"></i><b>7.11.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejercicios-7"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>Parte III: Genética Cuantitativa</b></span></li>
 <li class="chapter" data-level="8" data-path="modelogenbas.html"><a href="modelogenbas.html"><i class="fa fa-check"></i><b>8</b> El Modelo Genético Básico</a>
@@ -276,7 +344,7 @@ div.csl-indent {
 <li class="chapter" data-level="8.7" data-path="modelogenbas.html"><a href="modelogenbas.html#interacción-genotipo-x-ambiente"><i class="fa fa-check"></i><b>8.7</b> Interacción Genotipo x Ambiente</a></li>
 <li class="chapter" data-level="8.8" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-en-el-modelo-genético-básico"><i class="fa fa-check"></i><b>8.8</b> La Varianza en el modelo genético básico</a>
 <ul>
-<li><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos">Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos"><i class="fa fa-check"></i>Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
 <li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-ambiental"><i class="fa fa-check"></i>La varianza ambiental</a></li>
 <li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-de-la-interacción"><i class="fa fa-check"></i>La Varianza de la interacción</a></li>
 </ul></li>
@@ -352,7 +420,7 @@ div.csl-indent {
 <li class="chapter" data-level="11.3" data-path="selartifI.html"><a href="selartifI.html#diferencial-de-selección-e-intensidad-de-selección"><i class="fa fa-check"></i><b>11.3</b> Diferencial de selección e intensidad de selección</a></li>
 <li class="chapter" data-level="11.4" data-path="selartifI.html"><a href="selartifI.html#intensidad-de-selección-y-proporción-seleccionada"><i class="fa fa-check"></i><b>11.4</b> Intensidad de selección y proporción seleccionada</a>
 <ul>
-<li><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp">¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp"><i class="fa fa-check"></i>¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
 <li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#la-relación-entre-diferentes-formas-de-calcular-la-intensidad-de-selección"><i class="fa fa-check"></i>La relación entre diferentes formas de calcular la intensidad de selección</a></li>
 </ul></li>
 <li class="chapter" data-level="11.5" data-path="selartifI.html"><a href="selartifI.html#intervalo-generacional"><i class="fa fa-check"></i><b>11.5</b> Intervalo generacional</a></li>
@@ -476,8 +544,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="endoexo" class="section level1" number="14">
-<h1><span class="header-section-number">Capítulo 14</span> Endocría, exocría, consanguinidad y depresión endogámica</h1>
+<div id="endoexo" class="section level1 hasAnchor" number="14">
+<h1><span class="header-section-number">Capítulo 14</span> Endocría, exocría, consanguinidad y depresión endogámica<a href="endoexo.html#endoexo" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Hasta el momento, cuando nos manejamos a nivel de población generalmente
 supusimos y hemos aceptado como natural que la población se encontraba
 en equilibrio de Hardy-Weinberg, ignorando los efectos de un
@@ -493,14 +561,14 @@ asociado al fenómeno de la <strong>depresión endogámica</strong>.</p>
 <p>“The observations as I received them are shown in columns II. and III., where they certainly have no <em>primâ facie</em> appearance of regularity. But as soon as we arrange them the in order of their magnitudes, as in columns IV. and V., the case is materially altered. We now see, with few exceptions, that the largest plant on the crossed side in each pot exceeds the largest plant on the self-fertilised side, that the second exceeds the second, the third the third, and so on. Out of the fifteen cases in the table, there are only two exceptions to this rule. We may therefore confidently affirm that a crossed series will always be found to exceed a self-fertilised series, within the range of the conditions under which the present experiment has been made.”</p>
 <p><br />
 </p>
-<p><strong>Sir Francis Galton</strong> a <strong>Charles Darwin</strong>, en referencia a un ensayo con una población de plantas de maíz, entre otras varias especies ensayadas (citado en <span class="citation"><a href="#ref-Darwin1876" role="doc-biblioref">Darwin</a> (<a href="#ref-Darwin1876" role="doc-biblioref">1876</a>)</span>)</p>
+<p><strong>Sir Francis Galton</strong> a <strong>Charles Darwin</strong>, en referencia a un ensayo con una población de plantas de maíz, entre otras varias especies ensayadas (citado en <span class="citation">Darwin (<a href="#ref-Darwin1876" role="doc-biblioref">1876</a>)</span>)</p>
 <hr />
 <p>En el presente capítulo, por lo tanto, vamos a trabajar con los fenómenos que ocurren en poblaciones de tamaño finito y cómo eso afecta las características fenotípicas de interés. En el comienzo estableceremos la relación que existe entre el tamaño poblacional y el incremento en la consanguinidad esperada, algo que ya vimos en el capítulo <a href="aparnoalazar.html#aparnoalazar">Apareamientos no-aleatorios</a>, pero que veremos desde otra óptica, relacionaremos con otros parámetros de interés, como el número de machos y hembras en la población, o como el intervalo generacional. A continuación definiremos el concepto de depresión endogámica, veremos sus causas desde el punto de vista de los mecanismos genéticos que la producen y llegaremos a un modelo matemático muy sencillo para modelarla.</p>
 <p>En la segunda parte del capítulo veremos el fenómeno recíproco de la heterosis y su relación con la exocría, el apareamiento de individuos no emparentados (o al menos con menor parentesco que el promedio de la población total). Veremos cómo se conecta todo con la endocría, ya que las fuerzas que juegan son nuevamente la dominancia y abundancia relativa de los heterocigotos. Trabajaremos con un modelo gráfico que nos simplificará la comprensión de las bases genéticas de diferentes cruzamientos y finalmente desarrollaremos un modelo genético formal de cruzamientos, que nos permitirá describir cada tipo de cruzamiento y estimar los parámetros de relevancia.</p>
-<div id="el-aumento-de-la-consanguinidad-a-partir-del-número-de-individuos" class="section level2" number="14.1">
-<h2><span class="header-section-number">14.1</span> El aumento de la consanguinidad a partir del número de individuos</h2>
+<div id="el-aumento-de-la-consanguinidad-a-partir-del-número-de-individuos" class="section level2 hasAnchor" number="14.1">
+<h2><span class="header-section-number">14.1</span> El aumento de la consanguinidad a partir del número de individuos<a href="endoexo.html#el-aumento-de-la-consanguinidad-a-partir-del-número-de-individuos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En una población algo idealizada en la que los reproductores colocan sus
-gametos en un “pool,” resulta evidente que a medida que el número de
+gametos en un “pool”, resulta evidente que a medida que el número de
 reproductores disminuye, la probabilidad de que sus hijos sean parientes se
 incrementa, lo que en la siguiente generación llevará ineluctablemente a
 la aparición de consanguinidad. La pregunta, por lo tanto, es cómo será
@@ -598,7 +666,7 @@ nuevamente dividiendo entre el intervalo generacional de la población,</p>
 <p>Pero nuestros desarrollos basados en <span class="math inline">\(M\)</span> y <span class="math inline">\(H\)</span> contados como el número
 total de machos y hembras funcionan cuando las generaciones son
 no-solapantes, es decir cuando la generación de los padres deja de
-reproducirse cuando los hijos entran al “pool reproductivo.” La
+reproducirse cuando los hijos entran al “pool reproductivo”. La
 formulación alternativa de <span class="math inline">\(M\)</span> y <span class="math inline">\(H\)</span> para la situación en que las
 generaciones se superponen es <span class="math inline">\(M=m \cdot IG\)</span> y <span class="math inline">\(H=h \cdot IG\)</span>, con <span class="math inline">\(m\)</span> y
 <span class="math inline">\(h\)</span> el número de machos y hembras que entran por año, y con <span class="math inline">\(IG\)</span> el
@@ -682,8 +750,8 @@ Figura 14.2: (a) Tamaño efectivo de la población de acuerdo al número de mach
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-14.1" class="section level4 unnumbered">
-<h4>Ejemplo 14.1</h4>
+<div id="ejemplo-14.1" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 14.1<a href="endoexo.html#ejemplo-14.1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>El desequilibrio en el número de machos y hembras que entran cada año a la población es una causa importante de la reducción en el tamaño efectivo de la misma, en particular en poblciones de animales domésticos. Para visualizar, de alguna manera, lo que esto significa en términos de rodeos/majadas típicas de nuestro país, en la siguiente tabla se presentan diferentes situaciones de número de machos y hembras que ingresan por año a la población, y su consecuente tamaño efectivo. En todos los casos se considera un intervalo generacional promedio de la población de <span class="math inline">\(3\)</span> años:</p>
 <table>
 <colgroup>
@@ -772,7 +840,7 @@ Figura 14.2: (a) Tamaño efectivo de la población de acuerdo al número de mach
 <p><strong>PARA RECORDAR</strong></p>
 </div>
 <ul>
-<li><p>Si imaginamos que los reproductores colocan sus gametos en un “pool,” a <strong>medida que el número de reproductores disminuye, la probabilidad de que sus hijos sean parientes se incrementa</strong>, lo que en la siguiente generación llevará inevitablemente a la aparición de consanguinidad.</p></li>
+<li><p>Si imaginamos que los reproductores colocan sus gametos en un “pool”, a <strong>medida que el número de reproductores disminuye, la probabilidad de que sus hijos sean parientes se incrementa</strong>, lo que en la siguiente generación llevará inevitablemente a la aparición de consanguinidad.</p></li>
 <li><p>Si imaginamos una <strong>población con generaciones no solapantes</strong> y dónde los apareamientos se realizan al azar, con <em>M</em> machos y <em>H</em> hembras <strong>no emparentados</strong>, la probabilidad de que por azar, dentro del pool de gametos producidos por los machos, dos tomados al azar, provengan del mismo macho es <span class="math inline">\(\frac{1}{M}\)</span> y por lo tanto la probabilidad de que no provengan del
 mismo es <span class="math inline">\(\left(1 - \frac{1}{M} \right)\)</span>. Idéntico razonamiento se aplica a las hembras, pero ahora con H en lugar de M. Por lo tanto, la probabilidad de que los padres (machos) de A y B sean el mismo, pero no las madres, es <span class="math inline">\(\frac{1}{M} \left(1 - \frac{1}{H} \right)\)</span>. Del mismo modo, la probabilidad de que las madres de A y B, pero no los padres, sean las mismas es <span class="math inline">\(\frac{1}{H} \left(1 - \frac{1}{M} \right)\)</span>. Finalmente, la probabilidad de que el padre de A y B sea el mismo macho y al mismo tiempo la madre sea la misma hembra es <span class="math inline">\(\frac{1}{M} \frac{1}{H}\)</span>. Entonces:
 <span class="math inline">\(\Delta F_G = \frac{1}{8} \left( \frac{1}{M} + \frac{1}{H} \right) = \frac{1}{8} \left( \frac{M+H}{MH} \right)\)</span></p></li>
@@ -782,8 +850,8 @@ mismo es <span class="math inline">\(\left(1 - \frac{1}{M} \right)\)</span>. Id�
 </ul>
 </div>
 </div>
-<div id="qué-proporción-de-machos-es-necesaria-para-mantener-un-tamaño-efectivo-poblacional-mínimo" class="section level3 unnumbered">
-<h3>¿Qué proporción de machos es necesaria para mantener un tamaño efectivo poblacional mínimo?</h3>
+<div id="qué-proporción-de-machos-es-necesaria-para-mantener-un-tamaño-efectivo-poblacional-mínimo" class="section level3 unnumbered hasAnchor">
+<h3>¿Qué proporción de machos es necesaria para mantener un tamaño efectivo poblacional mínimo?<a href="endoexo.html#qué-proporción-de-machos-es-necesaria-para-mantener-un-tamaño-efectivo-poblacional-mínimo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Supongamos ahora que con un número determinado de hembras queremos saber
 el número mínimo de machos para mantener <span class="math inline">\(N_e\)</span> por encima de un valor.
 Podemos asumir sin pérdida de generalidad que el número de machos
@@ -846,8 +914,8 @@ IG_{138 Machos}-IG_{226 Machos} = 3-2,35 = 0,65\ \text{años}
 \end{equation}\]</span></p>
 <p><br />
 </p>
-<div id="ejemplo-14.2a" class="section level4 unnumbered">
-<h4>Ejemplo 14.2a</h4>
+<div id="ejemplo-14.2a" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 14.2a<a href="endoexo.html#ejemplo-14.2a" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Como vimos, la consanguinidad es el resultado de la endocría: un animal es consanguíneo únicamente si sus padres son parientes. El grado de consanguinidad que tenga un animal, depende del nivel de parentesco que tengan sus padres:</p>
 <p><span class="math display">\[\begin{equation}
 F_Z=\frac{1}{2}\times a_{X,Y}
@@ -857,6 +925,10 @@ Donde: <span class="math inline">\(F_Z\)</span>: coeficiente de consanguinidad d
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="38%" />
+<col width="61%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="center">Parentesco entre los padres</th>
@@ -919,8 +991,8 @@ Donde: <span class="math inline">\(F_Z\)</span>: coeficiente de consanguinidad d
 </p>
 <hr />
 </div>
-<div id="ejemplo-14.2b" class="section level4 unnumbered">
-<h4>Ejemplo 14.2b</h4>
+<div id="ejemplo-14.2b" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 14.2b<a href="endoexo.html#ejemplo-14.2b" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>(<strong>tasa de consanguinidad generacional</strong>)</p>
 <p>En la siguiente tabla, a modo de ejemplo, se presentan diferentes situaciones de número de machos y hembras que ingresan por año a la población, y su consecuente tasa de consanguinidad generacional, manteniendo en todas las situaciones, un intervalo generacional promedio de la población de <span class="math inline">\(2\)</span> años:</p>
 <p><br />
@@ -1004,8 +1076,8 @@ Donde: <span class="math inline">\(F_Z\)</span>: coeficiente de consanguinidad d
 <p><br />
 </p>
 </div>
-<div id="ejemplo-14.2c" class="section level4 unnumbered">
-<h4>Ejemplo 14.2c</h4>
+<div id="ejemplo-14.2c" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 14.2c<a href="endoexo.html#ejemplo-14.2c" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>(<strong>tasa de consanguinidad anual</strong>)</p>
 <p>En la siguiente tabla, a modo de ejemplo, se presentan diferentes situaciones de número de machos y hembras que ingresan por año a la población, y su consecuente tasa de consanguinidad anual, manteniendo en todas las situaciones, un intervalo generacional promedio de la población de <span class="math inline">\(2\)</span> años:</p>
 <p><br />
@@ -1099,8 +1171,8 @@ Donde: <span class="math inline">\(F_Z\)</span>: coeficiente de consanguinidad d
 <p><br />
 </p>
 </div>
-<div id="ejemplo-14.2d--tasa-de-consanguinidad-anual" class="section level4" number="14.1.0.1">
-<h4><span class="header-section-number">14.1.0.1</span> Ejemplo 14.2d{-} (tasa de consanguinidad anual)</h4>
+<div id="ejemplo-14.2d--tasa-de-consanguinidad-anual" class="section level4 hasAnchor" number="14.1.0.1">
+<h4><span class="header-section-number">14.1.0.1</span> Ejemplo 14.2d{-} (tasa de consanguinidad anual)<a href="endoexo.html#ejemplo-14.2d--tasa-de-consanguinidad-anual" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>En la siguiente tabla se presentan diferentes situaciones de tasa de incremento en la consanguinidad anual, y su consecuente número de machos necesarios que ingresen por año a la población, manteniendo en todas las situaciones, un intervalo generacional promedio de la población de <span class="math inline">\(4,5\)</span> años:</p>
 <p><br />
 </p>
@@ -1150,28 +1222,28 @@ Donde: <span class="math inline">\(F_Z\)</span>: coeficiente de consanguinidad d
 </div>
 </div>
 </div>
-<div id="el-coeficiente-de-consanguinidad-en-razas-lecheras" class="section level2" number="14.2">
-<h2><span class="header-section-number">14.2</span> El coeficiente de consanguinidad en razas lecheras</h2>
+<div id="el-coeficiente-de-consanguinidad-en-razas-lecheras" class="section level2 hasAnchor" number="14.2">
+<h2><span class="header-section-number">14.2</span> El coeficiente de consanguinidad en razas lecheras<a href="endoexo.html#el-coeficiente-de-consanguinidad-en-razas-lecheras" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Claramente, como vimos más arriba la relación entre la tasa de incremento de la consanguinidad y el tamaño efectivo de una población nos permite reflexionar sobre la estructura de diferentes poblaciones de animales domésticos y sus implicancias para el mejoramiento o aún la subsistencia a largo plazo de razas y especies. La producción lechera es un excelente caso de estudio ya que existen diferentes razas que han seguido trayectorias diferentes durante el siglo XX y que en algunos casos han soportado presiones de selección extremadamente elevadas. La búsqueda de los animales más productivos puede ser un excelente objetivo a corto plazo o aún a largo plazo para un establecimiento, pero sin duda es una estrategia pelogrosa para el largo plazo en toda una raza o aún en una especie.</p>
 <p>El problema es muy claro y lo podemos representar con una situación absurda por lo extrema: si elegimos al mejor toro como padre de toda la siguiente generación (cosa posible y que acontece), todos los individuos de la siguiente generación serán medios hermanos entre sí. Más aún, los <strong>cromosomas Y</strong> de los terneros machos serán todos iguales, desapareciendo toda la diversidad en ese cromosoma dentro de nuestro establecimiento. Pero peor aún es si todos los establecimientos del país utilizan el semen del mismo toro que elegimos nosotros, ya que claramente la situación se extenderá a toda la población nacional. Como toda la generación es hija del mismo toro, tenemos tres opciones: a) que los toros elegidos ahora sean de los que no consideramos óptimos en la generación anterior, b) utilizar el mismo semen, pero ahora con sus hijas y c) elegir toritos entre los medios hermanos de las vaquillonas. Claramente, ninguna de las opciones nos parece buena y esto viene de que el esquema que propusimos para representar el problema es absurdo. Sin embargo, a pesar de lo absurdo, la realidad en muchas razas no dista mucho de esto.</p>
-<p>En algunas razas, la introducción de la tecnología de inseminación artificial (<strong>IA</strong>) en la década de 1960, en los países con las mayores poblaciones de la raza, implicó un profundo impacto en la estructura del rodeo nacional y aún mundial. Un ejemplo extremo de esto es la raza <strong>Holstein</strong> (conocida como <strong>Holando</strong> en nuestro país), que vivió a nivel mundial una expansión gigantesca durante el siglo XX. De acuerdo a un estudio realizado por <span class="citation"><a href="#ref-Yueetal2015" role="doc-biblioref">Yue, Dechow, and Liu</a> (<a href="#ref-Yueetal2015" role="doc-biblioref">2015</a>)</span>, de los <span class="math inline">\(1.821\)</span> toros presentes en la década de 1960, que llamaron IA-fundadores, solamente 3 de ellos, HOUSA1427381 (<strong>Pawnee Farm Arlinda Chief</strong>, 5/9/1962), HOUSA1441440 (<strong>Penstate Ivanhoe Star</strong>, 20/01/1963) y HOUSA1491007 (<strong>Round Oak Rag Apple Elevation</strong>, 30/08/1965), estaban presentes con descendientes vivos en la década de 2010. Es decir, más allá de la posible importación de material de otros orígenes (lo autores observan lo mismo para los datos de <strong>INTERBULL</strong>, un consorcio internacional, en la evaluación <strong>MACE</strong>), casi todo el material genético específico de machos (cromosoma Y, donde se encuentran genes de fertilidad en machos) pertenece a estos fundadores. Más aún, dos de estos 3 fundadores se convirtieron en dominantes en la década de 2010, con el <span class="math inline">\(48,78\%\)</span> de todos los toros en el pedigrí de <strong>Pawnee Farm Arlinda Chief</strong>, y el <span class="math inline">\(51,06\%\)</span> en el pedigrí de <strong>Round Oak Rag Apple Elevation</strong>. A causa de que se trataba de un toro portador de dos enfermedades autosomales recesivas (CVM y BLAD), la contribución del tercer fundador (<strong>Penstate Ivanhoe Star</strong>) disminuyó gradualmente, pasando del <span class="math inline">\(10\%\)</span> en los años 90 a sólo un <span class="math inline">\(0,16\%\)</span> en la década de 2010, no sin antes haber provocado un importante daño, como veremos en la sección <a href="endoexo.html#los-riesgos-del-uso-masivo-de-reproductores-y-la-endogamia-elevada">Los riesgos del uso masivo de reproductores y la endogamia elevada</a>.</p>
-<p>Por otra parte, de acuerdo a los mismos autores, la tasa de crecimiento de la consanguinidad entre los años 2010 y 2014 fue de <span class="math inline">\(0,57\%\)</span> (determinado a partir de datos en <span class="citation">(<a href="#ref-cdcbinbreed" role="doc-biblioref">2021</a>)</span>). Asumiendo un intervalo generacional de 4 años para <strong>Holsteins de América del Norte</strong>, como <span class="math inline">\(\Delta F=\frac{1}{2N_e} \therefore N_e=\frac{1}{2 \Delta F}\)</span> y con esa tasa de incremento generacional el tamaño efectivo poblacional será igual a <span class="math inline">\(N_e=\frac{1}{2 \times 0,0057} \approx 88\)</span> individuos. En otras palabras, toda la población <strong>Holstein</strong> de América del Norte, que es de más de <span class="math inline">\(9\)</span> millones de individuos, sería equivalente a menos de 100 individuos reproduciéndose en condiciones ideales.</p>
-<p>La evolución de la consanguinidad en las poblaciones de las razas <strong>Holstein/Roja y Blanca</strong>* y <strong>Milking Shorthorn</strong> de América del Norte pueden observarse en la figura <a href="endoexo.html#fig:evolFHolstein">14.4</a> a partir de datos obtenidos de la base del “Council on Dairy Cattle Breeding” (<strong>CDCB</strong>). Claramente, en <strong>Holstein</strong> se observa una fuerte tendencia al crecimiento de la consanguinidad en el rodeo, tendencia que se ha visto acelerada en los últimos años, en particular desde el año 2014. Esto podría estar, al menos parcialmente, relacionado con el uso de información gemómica en las evaluaciones genéticas. De hecho, en toros jóvenes “genómicos,” el coeficiente de consanguinidad a partir del pedigree es superior al <span class="math inline">\(12\%\)</span> y superior al <span class="math inline">\(14\%\)</span> en el caso del coeficiente genómico. Dicho sea de paso, las correlaciones entre los coeficientes de consanguinidad obtenidos a partir del pedigree y los obtenidos a partir de datos genómicos no necesariamente tienen una alta correlación (<span class="citation"><a href="#ref-CortesHernandez2021" role="doc-biblioref">Cortes-Hernández et al.</a> (<a href="#ref-CortesHernandez2021" role="doc-biblioref">2021</a>)</span>), aunque sí la tienen entre las distintas forma de calcularlo a partir de datos genómicos (la matriz de parentesco, las corridas de homocigosidad <strong>ROH</strong>, etc.).</p>
+<p>En algunas razas, la introducción de la tecnología de inseminación artificial (<strong>IA</strong>) en la década de 1960, en los países con las mayores poblaciones de la raza, implicó un profundo impacto en la estructura del rodeo nacional y aún mundial. Un ejemplo extremo de esto es la raza <strong>Holstein</strong> (conocida como <strong>Holando</strong> en nuestro país), que vivió a nivel mundial una expansión gigantesca durante el siglo XX. De acuerdo a un estudio realizado por <span class="citation">Yue, Dechow, and Liu (<a href="#ref-Yueetal2015" role="doc-biblioref">2015</a>)</span>, de los <span class="math inline">\(1.821\)</span> toros presentes en la década de 1960, que llamaron IA-fundadores, solamente 3 de ellos, HOUSA1427381 (<strong>Pawnee Farm Arlinda Chief</strong>, 5/9/1962), HOUSA1441440 (<strong>Penstate Ivanhoe Star</strong>, 20/01/1963) y HOUSA1491007 (<strong>Round Oak Rag Apple Elevation</strong>, 30/08/1965), estaban presentes con descendientes vivos en la década de 2010. Es decir, más allá de la posible importación de material de otros orígenes (lo autores observan lo mismo para los datos de <strong>INTERBULL</strong>, un consorcio internacional, en la evaluación <strong>MACE</strong>), casi todo el material genético específico de machos (cromosoma Y, donde se encuentran genes de fertilidad en machos) pertenece a estos fundadores. Más aún, dos de estos 3 fundadores se convirtieron en dominantes en la década de 2010, con el <span class="math inline">\(48,78\%\)</span> de todos los toros en el pedigrí de <strong>Pawnee Farm Arlinda Chief</strong>, y el <span class="math inline">\(51,06\%\)</span> en el pedigrí de <strong>Round Oak Rag Apple Elevation</strong>. A causa de que se trataba de un toro portador de dos enfermedades autosomales recesivas (CVM y BLAD), la contribución del tercer fundador (<strong>Penstate Ivanhoe Star</strong>) disminuyó gradualmente, pasando del <span class="math inline">\(10\%\)</span> en los años 90 a sólo un <span class="math inline">\(0,16\%\)</span> en la década de 2010, no sin antes haber provocado un importante daño, como veremos en la sección <a href="endoexo.html#los-riesgos-del-uso-masivo-de-reproductores-y-la-endogamia-elevada">Los riesgos del uso masivo de reproductores y la endogamia elevada</a>.</p>
+<p>Por otra parte, de acuerdo a los mismos autores, la tasa de crecimiento de la consanguinidad entre los años 2010 y 2014 fue de <span class="math inline">\(0,57\%\)</span> (determinado a partir de datos en <span class="citation"> (<a href="#ref-cdcbinbreed" role="doc-biblioref">2021</a>)</span>). Asumiendo un intervalo generacional de 4 años para <strong>Holsteins de América del Norte</strong>, como <span class="math inline">\(\Delta F=\frac{1}{2N_e} \therefore N_e=\frac{1}{2 \Delta F}\)</span> y con esa tasa de incremento generacional el tamaño efectivo poblacional será igual a <span class="math inline">\(N_e=\frac{1}{2 \times 0,0057} \approx 88\)</span> individuos. En otras palabras, toda la población <strong>Holstein</strong> de América del Norte, que es de más de <span class="math inline">\(9\)</span> millones de individuos, sería equivalente a menos de 100 individuos reproduciéndose en condiciones ideales.</p>
+<p>La evolución de la consanguinidad en las poblaciones de las razas <strong>Holstein/Roja y Blanca</strong>* y <strong>Milking Shorthorn</strong> de América del Norte pueden observarse en la figura <a href="endoexo.html#fig:evolFHolstein">14.4</a> a partir de datos obtenidos de la base del “Council on Dairy Cattle Breeding” (<strong>CDCB</strong>). Claramente, en <strong>Holstein</strong> se observa una fuerte tendencia al crecimiento de la consanguinidad en el rodeo, tendencia que se ha visto acelerada en los últimos años, en particular desde el año 2014. Esto podría estar, al menos parcialmente, relacionado con el uso de información gemómica en las evaluaciones genéticas. De hecho, en toros jóvenes “genómicos”, el coeficiente de consanguinidad a partir del pedigree es superior al <span class="math inline">\(12\%\)</span> y superior al <span class="math inline">\(14\%\)</span> en el caso del coeficiente genómico. Dicho sea de paso, las correlaciones entre los coeficientes de consanguinidad obtenidos a partir del pedigree y los obtenidos a partir de datos genómicos no necesariamente tienen una alta correlación (<span class="citation">Cortes-Hernández et al. (<a href="#ref-CortesHernandez2021" role="doc-biblioref">2021</a>)</span>), aunque sí la tienen entre las distintas forma de calcularlo a partir de datos genómicos (la matriz de parentesco, las corridas de homocigosidad <strong>ROH</strong>, etc.).</p>
 <p><br />
 </p>
 
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:evolFHolstein"></span>
-<img src="ApuntesGeneticaII_files/figure-html/evolFHolstein-1.png" alt="Evolución de la consanguinidad promedio en vacas de acuerdo al año de nacimiento, para la población de las razas Holstein/Roja y Blanca (rojo) y Milking Shorthorn (azul) con registros en la base de datos del “Council on Dairy Cattle Breeding.” Las línea a trazos marcan laa tendencias lineales asumiendo que el valor de \(F=0\) en 1960 es un punto fijo. Realización propia sobre datos en https://queries.uscdcb.com/eval/summary/inbrd.cfm" width="80%" />
+<img src="ApuntesGeneticaII_files/figure-html/evolFHolstein-1.png" alt="Evolución de la consanguinidad promedio en vacas de acuerdo al año de nacimiento, para la población de las razas Holstein/Roja y Blanca (rojo) y Milking Shorthorn (azul) con registros en la base de datos del “Council on Dairy Cattle Breeding”. Las línea a trazos marcan laa tendencias lineales asumiendo que el valor de \(F=0\) en 1960 es un punto fijo. Realización propia sobre datos en https://queries.uscdcb.com/eval/summary/inbrd.cfm" width="80%" />
 <p class="caption">
-Figura 14.4: Evolución de la consanguinidad promedio en vacas de acuerdo al año de nacimiento, para la población de las razas <strong>Holstein/Roja y Blanca</strong> (rojo) y <strong>Milking Shorthorn</strong> (azul) con registros en la base de datos del “Council on Dairy Cattle Breeding.” Las línea a trazos marcan laa tendencias lineales asumiendo que el valor de <span class="math inline">\(F=0\)</span> en 1960 es un punto fijo. Realización propia sobre datos en <a href="https://queries.uscdcb.com/eval/summary/inbrd.cfm" class="uri">https://queries.uscdcb.com/eval/summary/inbrd.cfm</a>
+Figura 14.4: Evolución de la consanguinidad promedio en vacas de acuerdo al año de nacimiento, para la población de las razas <strong>Holstein/Roja y Blanca</strong> (rojo) y <strong>Milking Shorthorn</strong> (azul) con registros en la base de datos del “Council on Dairy Cattle Breeding”. Las línea a trazos marcan laa tendencias lineales asumiendo que el valor de <span class="math inline">\(F=0\)</span> en 1960 es un punto fijo. Realización propia sobre datos en <a href="https://queries.uscdcb.com/eval/summary/inbrd.cfm" class="uri">https://queries.uscdcb.com/eval/summary/inbrd.cfm</a>
 </p>
 </div>
 <p>Por otra parte, en el caso de la raza <strong>Milking Shorthorn</strong> la tendencia creciente que se observaba después de los años 60’s mostró una reducción importante y en la actualidad se encuentra bastante “estancada” (lo que sería muy deseable). En otras razas lecheras (<strong>Ayrshire</strong>, <strong>Brown Swiss</strong>, <strong>Guernsey</strong> y <strong>Jersey</strong>) de la misma base de datos las tendencias han sido bastante similares a la de <strong>Holstein</strong>, por lo que la raza <strong>Milking Shorthorn</strong> parece ser más la excepción que la regla. Mientras que se trata de una raza plenamente productiva y que no se encuentra en peligro a nivel mundial, la población de la raza original (<strong>Dairy Shorthorn</strong>), en el noreste de Inglaterra y que no ha sufrido del cruzamiento indiscriminado en el siglo XX sí se encuentra en el nivel máximo de riesgo de desaparecer.</p>
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-14.3" class="section level4 unnumbered">
-<h4>Ejemplo 14.3</h4>
+<div id="ejemplo-14.3" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 14.3<a href="endoexo.html#ejemplo-14.3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>De acuerdo a los datos del <strong>CDCB</strong>, la consanguinidad del rodeo <strong>Holstein/Red &amp; White</strong> de América del Norte pasó de <span class="math inline">\(F=7,72\%\)</span> a <span class="math inline">\(F=9,09\%\)</span> en los últimos 4 años (2018-2021), mientras que entre 1960 y 1963 pasó de <span class="math inline">\(F=0\%\)</span> a <span class="math inline">\(F=0,13\%\)</span>. Considerando que 4 años es el intervalo generacional de la raza, calcular el tamaño efectivo poblacional que se corresponde a cada uno de estos períodos. Asumiendo que el número de hembras es muchísimo mayor que el de machos, cosa que es cierta en este caso (más de 9 millones de vacas en el rodeo de América del Norte) ¿Cuántos machos estarían usando actualmente y cuántos se deberían usar para que la consanguinidad anual no aumente más de <span class="math inline">\(0,1\%\)</span>?</p>
 <p><br />
 </p>
@@ -1207,15 +1279,15 @@ m \approx \frac{1}{8 \times 0,001 \times 4^2}=7,81 \text{ machos}
 </div>
 </div>
 </div>
-<div id="depresión-endogámica" class="section level2" number="14.3">
-<h2><span class="header-section-number">14.3</span> Depresión endogámica</h2>
-<p>Una de las consecuencias que ya discutimos del incremento en la consanguinidad es el consiguiente aumento en la proporción de individuos homocigotos, a costa obviamente de la proporción de heterocigotos. Por otra parte, esto lleva a que algunas características donde <strong>la dominancia juega un papel relativamente importante</strong> se vean afectadas en su expresión, disminuyendo en general. En particular, dentro de este grupo de características parecen estar las que tienen directa incidencia en el <strong>fitness</strong> de los individuos (las reproductivas, por ejemplo) y las fisiológicas, que es la definición de <span class="citation"><a href="#ref-Falconer1983" role="doc-biblioref">Falconer</a> (<a href="#ref-Falconer1983" role="doc-biblioref">1983</a>)</span>, por ejemplo, aunque se ha observado en otros tipos de características. Es importante mencionar que cuando hablamos de depresión endogámica, generalmente nos referimos a la disminución de una media poblacional y no al efecto de un individuo en particular.</p>
-<p>Existen diferentes formas de estimar la depresión endogámica (<span class="citation"><a href="#ref-KellerWaller2002" role="doc-biblioref">Keller and Waller</a> (<a href="#ref-KellerWaller2002" role="doc-biblioref">2002</a>)</span>), dependiendo de la especie, los registros o recursos disponible. En algunos casos, alcanza con comparar una subpoblación creada con una determinada estructura de parentesco (un coeficiente de endocría particular) y comparar la media fenotípica a la de la población de referencia (que se asume con <span class="math inline">\(F=0\)</span>). Por ejemplo, en las poblaciones de plantas <strong>autógamas</strong>, la depresión por endogamia puede calcularse comparando la aptitud de la progenie <strong>autofecundada</strong> y la <strong>cruzada</strong>. Si se utiliza un progenitor no consanguíneo (<span class="math inline">\(F=0\)</span>), la progenie cruzada al azar también será no consanguínea (<span class="math inline">\(F=0\)</span>), mientras que la progenie autofecundada tendrá un <span class="math inline">\(F=\frac{1}{2}\)</span>.</p>
-<p>En otros casos, es posible explotar la información del pedigree de los individuos e incluir una covariable en el modelo que sea el coeficiente de consanguinidad del individuo (calculado a partir del pedigree como la mitad del parentesco entre sus progenitores). Por ejemplo, de acuerdo a <span class="citation"><a href="#ref-McParlandetal2007" role="doc-biblioref">Mc Parland et al.</a> (<a href="#ref-McParlandetal2007" role="doc-biblioref">2007</a>)</span>, en Irlanda una vaca <strong>Holstein</strong> primípara, con una consanguinidad de <span class="math inline">\(\frac{1}{8}=12,5\%\)</span> (es decir, tras el apareamiento de medios hermanos no consanguíneos), tuvo una disminución de <span class="math inline">\(-61,8\)</span> kg de leche, <span class="math inline">\(-5,3\)</span> kg de grasa y <span class="math inline">\(-1,2\)</span> kg de proteína en la lactancia. Además, las concentraciones de grasa y proteína se redujeron en <span class="math inline">\(0,05\)</span> y <span class="math inline">\(0,01\%\)</span>, respectivamente, mientras que el score de células somáticas (que se calcula como el logaritmo natural del recuento de células somáticas dividido por <span class="math inline">\(1.000\)</span>) aumentó en <span class="math inline">\(0,03\)</span>. Por otra parte, de acuerdo a las frecuencias alélicas de la población irlandesa de Holstein, en animales con este nivel de consanguinidad se espera una incidencia de distocia un <span class="math inline">\(2\%\)</span> mayor, un <span class="math inline">\(1\%\)</span> más de incidencia de mortinatos, un <span class="math inline">\(0,7\%\)</span> más de incidencia de terneros machos (es decir, una disminución en el número de reemplazos hembras, que son los importantes), un aumento del intervalo entre partos de <span class="math inline">\(8,8\)</span> días, un aumento de la edad al primer parto de <span class="math inline">\(2,5\)</span> días y una disminución del número de animales que llega a la segunda lactancia de <span class="math inline">\(-4\%\)</span>. Claramente, se trata de un nivel de consanguinidad muy importante y que debería resultar fácil de evitar, aún cuando la población de Holstein a nivel mundial muestra signos evidentes de consanguinidad elevada.</p>
-<p>Sin embargo, mientras que <span class="citation"><a href="#ref-Bezdiceketal2008" role="doc-biblioref">Bezdı́ček, Šubrt, and Filipčı́k</a> (<a href="#ref-Bezdiceketal2008" role="doc-biblioref">2008</a>)</span> confirman los hallazgos de la depresión endogámica para producción de leche en la población de vacas <strong>Holstein</strong> de la República Checa, los resultados para la concentración de grasa y proteína van en sentido contrario a los de <span class="citation"><a href="#ref-McParlandetal2007" role="doc-biblioref">Mc Parland et al.</a> (<a href="#ref-McParlandetal2007" role="doc-biblioref">2007</a>)</span>. Mientras que por cada incremento en la consanguinidad de <span class="math inline">\(F_x=1\%\)</span> se espera <strong>una reducción</strong> en la <strong>producción de leche</strong> de <span class="math inline">\(-59,75\)</span> kg, las concentraciones de grasa y proteína se incrementaron en <span class="math inline">\(+0,0112\%\)</span> y <span class="math inline">\(+0,0030\%\)</span> respectivamente. A primera vista parecería que los dos estudios difieren significativamente en las conclusiones alcanzadas respecto a grasa y proteína, mientras que coinciden para la producción lechera, pero si lo miramos con un poco más detenimiento las diferencias no vienen por ese lado. Una advertencia obvia es que se trata de dos estudios diferentes, en países completamente diferentes y con diferente tradición lechera y diferentes animales. Las diferencias en los estimados obtenidos para la depresión endogámica en producción lechera son enormes: asumiendo como cierta la linealidad de la depresión endogámica con el coeficiente de endocría (algo que veremos más adelante), si la reducción en leche es de <span class="math inline">\(-59,75\)</span> kg para un coeficiente de endocría de <span class="math inline">\(F_x=1\%\)</span>, entonces <strong>aplicando regla de tres</strong>, la reducción será igual <span class="math inline">\(-746,9\)</span> para un coeficiente de endocría de <span class="math inline">\(F_x=12,5\%\)</span> (el que aparece en <span class="citation"><a href="#ref-McParlandetal2007" role="doc-biblioref">Mc Parland et al.</a> (<a href="#ref-McParlandetal2007" role="doc-biblioref">2007</a>)</span> para una reducción equivalente a <span class="math inline">\(-61,8\)</span> kg). Claramente, la concentración de sólidos (grasa y proteína) es igual a la masa producida (en kg, por ejemplo) de dichos sólidos, dividida entre el volumen de leche. Como el mismo se redujo de una manera drástica, aunque la producción de sólidos también hubiese disminuido a causa de la depresión endogámica, si la proporción de reducción es menor que la observada para leche, entonces aumentará la concentración con la depresión endogámica, que es lo que se observa.</p>
-<p>Otro punto relevante al extrapolar resultados es la posible no-linealidad de la depresión endogámica con el coeficiente de consanguinidad, como es de esperar si la causa de la misma es la interacción epistática entre los genes. <span class="citation"><a href="#ref-Miglioretal1992" role="doc-biblioref">Miglior, Szkotnicki, and Burnside</a> (<a href="#ref-Miglioretal1992" role="doc-biblioref">1992</a>)</span> analizaron los registros de leche, grasa y porcentaje de grasa de la primera lactación de <span class="math inline">\(53.592\)</span> vacas Jersey. A partir de esos datos, los coeficientes de regresión de la leche, la grasa y el porcentaje de grasa en función de la consanguinidad fueron de <span class="math inline">\(-9,84\)</span> kg, <span class="math inline">\(-0,55\)</span> kg y <span class="math inline">\(-0,0011\%\)</span> por cada <span class="math inline">\(1\%\)</span> de aumento de la consanguinidad. Sin embargo, cuando el coeficiente de consanguinidad fue mayor a <span class="math inline">\(12,5\%\)</span> la depresión endogámica fue mucho mayor a la esperada.</p>
-<p>La depresión endogámica es un fenómeno que ha sido observado consistentemente, sin embargo, las causas biológicas del mismo aún no han sido totalmente clarificadas (<span class="citation"><a href="#ref-CharlesworthWillis2009" role="doc-biblioref">D. Charlesworth and Willis</a> (<a href="#ref-CharlesworthWillis2009" role="doc-biblioref">2009</a>)</span>). Esencialmente, para las características que tienen impacto directo en el <strong>fitness</strong>, tradicionalmente se han manejado tres hipótesis que podrían explicar la existencia del fenómeno: a) la <strong>hipótesis de la dominancia</strong>, b) la <strong>hipótesis de la sobredominancia</strong> y c) la <strong>hipótesis de la epistasis</strong>.</p>
-<p>En la primer hipótesis, se trata de que en presencia de alelos recesivos mayormente deletéreos gobernando la característica, en baja frecuencia, el incremento de los homocigotas llevaría a una depresión en la característica ya que al tratarse de recesivos se expresarán fenotípicamente solo en homocigosis. Por otro lado, en la segunda hipótesis, si el mecanismo de los genes que gobiernan una característica es la <strong>sobredominancia</strong>, es decir, el mayor <strong>fitness</strong> de los heterocigotas respecto a los homocigotas, la reducción en el número de heterocigotas (que son lo que tienen el “mejor” fenotipo) tendrá un impacto directo en la característica. Sin embargo, <span class="citation"><a href="#ref-CharlesworthWillis2009" role="doc-biblioref">D. Charlesworth and Willis</a> (<a href="#ref-CharlesworthWillis2009" role="doc-biblioref">2009</a>)</span> sugieren que la presencia de mutaciones deletéreas en (por ejemplo) dos genes <strong>en fase de repulsión</strong> se manifieste como una ventaja de los heterocigotos respecto a los dos haplotipos homocigotos (uno sería homocigoto para un alelo recesivo deletéreo en un gen y el otro para el alelo del otro gen). En este caso, si bien es difícil de distinguir en la práctica de la sobredominancia, en realidad, desde el punto de vista teórico se trata de una <strong>pseudo-sobredominancia</strong> causada por el desequilibrio de ligamiento entre los genes. Por último, en la hipótesis de la epistasis, la idea es que los heterocigotos son más libres de encontrar combinaciones óptimas y a diferencia de las otras dos hipótesis esta plantea un comportamiento no-lineal respecto al coeficiente de consanguinidad.</p>
+<div id="depresión-endogámica" class="section level2 hasAnchor" number="14.3">
+<h2><span class="header-section-number">14.3</span> Depresión endogámica<a href="endoexo.html#depresión-endogámica" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Una de las consecuencias que ya discutimos del incremento en la consanguinidad es el consiguiente aumento en la proporción de individuos homocigotos, a costa obviamente de la proporción de heterocigotos. Por otra parte, esto lleva a que algunas características donde <strong>la dominancia juega un papel relativamente importante</strong> se vean afectadas en su expresión, disminuyendo en general. En particular, dentro de este grupo de características parecen estar las que tienen directa incidencia en el <strong>fitness</strong> de los individuos (las reproductivas, por ejemplo) y las fisiológicas, que es la definición de <span class="citation">Falconer (<a href="#ref-Falconer1983" role="doc-biblioref">1983</a>)</span>, por ejemplo, aunque se ha observado en otros tipos de características. Es importante mencionar que cuando hablamos de depresión endogámica, generalmente nos referimos a la disminución de una media poblacional y no al efecto de un individuo en particular.</p>
+<p>Existen diferentes formas de estimar la depresión endogámica (<span class="citation">Keller and Waller (<a href="#ref-KellerWaller2002" role="doc-biblioref">2002</a>)</span>), dependiendo de la especie, los registros o recursos disponible. En algunos casos, alcanza con comparar una subpoblación creada con una determinada estructura de parentesco (un coeficiente de endocría particular) y comparar la media fenotípica a la de la población de referencia (que se asume con <span class="math inline">\(F=0\)</span>). Por ejemplo, en las poblaciones de plantas <strong>autógamas</strong>, la depresión por endogamia puede calcularse comparando la aptitud de la progenie <strong>autofecundada</strong> y la <strong>cruzada</strong>. Si se utiliza un progenitor no consanguíneo (<span class="math inline">\(F=0\)</span>), la progenie cruzada al azar también será no consanguínea (<span class="math inline">\(F=0\)</span>), mientras que la progenie autofecundada tendrá un <span class="math inline">\(F=\frac{1}{2}\)</span>.</p>
+<p>En otros casos, es posible explotar la información del pedigree de los individuos e incluir una covariable en el modelo que sea el coeficiente de consanguinidad del individuo (calculado a partir del pedigree como la mitad del parentesco entre sus progenitores). Por ejemplo, de acuerdo a <span class="citation">Mc Parland et al. (<a href="#ref-McParlandetal2007" role="doc-biblioref">2007</a>)</span>, en Irlanda una vaca <strong>Holstein</strong> primípara, con una consanguinidad de <span class="math inline">\(\frac{1}{8}=12,5\%\)</span> (es decir, tras el apareamiento de medios hermanos no consanguíneos), tuvo una disminución de <span class="math inline">\(-61,8\)</span> kg de leche, <span class="math inline">\(-5,3\)</span> kg de grasa y <span class="math inline">\(-1,2\)</span> kg de proteína en la lactancia. Además, las concentraciones de grasa y proteína se redujeron en <span class="math inline">\(0,05\)</span> y <span class="math inline">\(0,01\%\)</span>, respectivamente, mientras que el score de células somáticas (que se calcula como el logaritmo natural del recuento de células somáticas dividido por <span class="math inline">\(1.000\)</span>) aumentó en <span class="math inline">\(0,03\)</span>. Por otra parte, de acuerdo a las frecuencias alélicas de la población irlandesa de Holstein, en animales con este nivel de consanguinidad se espera una incidencia de distocia un <span class="math inline">\(2\%\)</span> mayor, un <span class="math inline">\(1\%\)</span> más de incidencia de mortinatos, un <span class="math inline">\(0,7\%\)</span> más de incidencia de terneros machos (es decir, una disminución en el número de reemplazos hembras, que son los importantes), un aumento del intervalo entre partos de <span class="math inline">\(8,8\)</span> días, un aumento de la edad al primer parto de <span class="math inline">\(2,5\)</span> días y una disminución del número de animales que llega a la segunda lactancia de <span class="math inline">\(-4\%\)</span>. Claramente, se trata de un nivel de consanguinidad muy importante y que debería resultar fácil de evitar, aún cuando la población de Holstein a nivel mundial muestra signos evidentes de consanguinidad elevada.</p>
+<p>Sin embargo, mientras que <span class="citation">Bezdı́ček, Šubrt, and Filipčı́k (<a href="#ref-Bezdiceketal2008" role="doc-biblioref">2008</a>)</span> confirman los hallazgos de la depresión endogámica para producción de leche en la población de vacas <strong>Holstein</strong> de la República Checa, los resultados para la concentración de grasa y proteína van en sentido contrario a los de <span class="citation">Mc Parland et al. (<a href="#ref-McParlandetal2007" role="doc-biblioref">2007</a>)</span>. Mientras que por cada incremento en la consanguinidad de <span class="math inline">\(F_x=1\%\)</span> se espera <strong>una reducción</strong> en la <strong>producción de leche</strong> de <span class="math inline">\(-59,75\)</span> kg, las concentraciones de grasa y proteína se incrementaron en <span class="math inline">\(+0,0112\%\)</span> y <span class="math inline">\(+0,0030\%\)</span> respectivamente. A primera vista parecería que los dos estudios difieren significativamente en las conclusiones alcanzadas respecto a grasa y proteína, mientras que coinciden para la producción lechera, pero si lo miramos con un poco más detenimiento las diferencias no vienen por ese lado. Una advertencia obvia es que se trata de dos estudios diferentes, en países completamente diferentes y con diferente tradición lechera y diferentes animales. Las diferencias en los estimados obtenidos para la depresión endogámica en producción lechera son enormes: asumiendo como cierta la linealidad de la depresión endogámica con el coeficiente de endocría (algo que veremos más adelante), si la reducción en leche es de <span class="math inline">\(-59,75\)</span> kg para un coeficiente de endocría de <span class="math inline">\(F_x=1\%\)</span>, entonces <strong>aplicando regla de tres</strong>, la reducción será igual <span class="math inline">\(-746,9\)</span> para un coeficiente de endocría de <span class="math inline">\(F_x=12,5\%\)</span> (el que aparece en <span class="citation">Mc Parland et al. (<a href="#ref-McParlandetal2007" role="doc-biblioref">2007</a>)</span> para una reducción equivalente a <span class="math inline">\(-61,8\)</span> kg). Claramente, la concentración de sólidos (grasa y proteína) es igual a la masa producida (en kg, por ejemplo) de dichos sólidos, dividida entre el volumen de leche. Como el mismo se redujo de una manera drástica, aunque la producción de sólidos también hubiese disminuido a causa de la depresión endogámica, si la proporción de reducción es menor que la observada para leche, entonces aumentará la concentración con la depresión endogámica, que es lo que se observa.</p>
+<p>Otro punto relevante al extrapolar resultados es la posible no-linealidad de la depresión endogámica con el coeficiente de consanguinidad, como es de esperar si la causa de la misma es la interacción epistática entre los genes. <span class="citation">Miglior, Szkotnicki, and Burnside (<a href="#ref-Miglioretal1992" role="doc-biblioref">1992</a>)</span> analizaron los registros de leche, grasa y porcentaje de grasa de la primera lactación de <span class="math inline">\(53.592\)</span> vacas Jersey. A partir de esos datos, los coeficientes de regresión de la leche, la grasa y el porcentaje de grasa en función de la consanguinidad fueron de <span class="math inline">\(-9,84\)</span> kg, <span class="math inline">\(-0,55\)</span> kg y <span class="math inline">\(-0,0011\%\)</span> por cada <span class="math inline">\(1\%\)</span> de aumento de la consanguinidad. Sin embargo, cuando el coeficiente de consanguinidad fue mayor a <span class="math inline">\(12,5\%\)</span> la depresión endogámica fue mucho mayor a la esperada.</p>
+<p>La depresión endogámica es un fenómeno que ha sido observado consistentemente, sin embargo, las causas biológicas del mismo aún no han sido totalmente clarificadas (<span class="citation">D. Charlesworth and Willis (<a href="#ref-CharlesworthWillis2009" role="doc-biblioref">2009</a>)</span>). Esencialmente, para las características que tienen impacto directo en el <strong>fitness</strong>, tradicionalmente se han manejado tres hipótesis que podrían explicar la existencia del fenómeno: a) la <strong>hipótesis de la dominancia</strong>, b) la <strong>hipótesis de la sobredominancia</strong> y c) la <strong>hipótesis de la epistasis</strong>.</p>
+<p>En la primer hipótesis, se trata de que en presencia de alelos recesivos mayormente deletéreos gobernando la característica, en baja frecuencia, el incremento de los homocigotas llevaría a una depresión en la característica ya que al tratarse de recesivos se expresarán fenotípicamente solo en homocigosis. Por otro lado, en la segunda hipótesis, si el mecanismo de los genes que gobiernan una característica es la <strong>sobredominancia</strong>, es decir, el mayor <strong>fitness</strong> de los heterocigotas respecto a los homocigotas, la reducción en el número de heterocigotas (que son lo que tienen el “mejor” fenotipo) tendrá un impacto directo en la característica. Sin embargo, <span class="citation">D. Charlesworth and Willis (<a href="#ref-CharlesworthWillis2009" role="doc-biblioref">2009</a>)</span> sugieren que la presencia de mutaciones deletéreas en (por ejemplo) dos genes <strong>en fase de repulsión</strong> se manifieste como una ventaja de los heterocigotos respecto a los dos haplotipos homocigotos (uno sería homocigoto para un alelo recesivo deletéreo en un gen y el otro para el alelo del otro gen). En este caso, si bien es difícil de distinguir en la práctica de la sobredominancia, en realidad, desde el punto de vista teórico se trata de una <strong>pseudo-sobredominancia</strong> causada por el desequilibrio de ligamiento entre los genes. Por último, en la hipótesis de la epistasis, la idea es que los heterocigotos son más libres de encontrar combinaciones óptimas y a diferencia de las otras dos hipótesis esta plantea un comportamiento no-lineal respecto al coeficiente de consanguinidad.</p>
 <p>En la sección <a href="aparnoalazar.html#endocría-y-depresión-endogámica">Endocría y depresión endogámica</a> del capítulo <a href="aparnoalazar.html#aparnoalazar">Apareamientos no-aleatorios</a> ya hicimos una introducción al modelado de la depresión en función del coeficiente de endocría, las frecuencias génicas y el modo de acción génica. En esta sección vamos a ver el tema desde un punto de vista ligeramente diferente y que nos llevará naturalmente a generalizar las conclusiones a características gobernadas por unos pocos o por muchos <em>loci</em>, sin distinción. Para eso vamos a partir de los cambios en las frecuencias genotípicas que podemos esperar en presencia de endogamia, respecto a la ausencia de la misma, en ambos casos asumiendo Hardy-Weinberg, en el segundo caso la <a href="aparnoalazar.html#generalización-de-hardy-weinberg-para-apareamientos-no-aleatorios">Generalización de Hardy-Weinberg para apareamientos no-aleatorios</a>.</p>
 <p>Supongamos primero que la característica está determinada por un solo <em>locus</em> con dos alelos, como ya vimos previamente. De acuerdo con lo esperado en presencia de endogamia, las frecuencias genotípicas serán <span class="math inline">\(\bar p^2+\bar{p}\bar{q}F\)</span> para los <span class="math inline">\({A_1A_1}\)</span>, <span class="math inline">\(2\bar{p}\bar{q}-2\bar{p}\bar{q}F\)</span> para los <span class="math inline">\({A_1A_2}\)</span> y <span class="math inline">\(\bar q^2+\bar{p}\bar{q}F\)</span> para <span class="math inline">\({A_2A_2}\)</span>. Como vimos en el capítulo <a href="modelogenbas.html#el-modelo-genético-básico">El Modelo Genético Básico</a>, los valores de estos genotipos serán <span class="math inline">\(+a\)</span> para el <span class="math inline">\({A_1A_1}\)</span>, <span class="math inline">\(d\)</span> para el <span class="math inline">\({A_1A_2}\)</span> y <span class="math inline">\(-a\)</span> para el <span class="math inline">\({A_2A_2}\)</span>, por lo que poniendo todo junto en una tabla tenemos:</p>
 <p><br />
@@ -1292,8 +1364,8 @@ M_F=M_0-2\sum_i \bar{p}_i\bar{q}_i d_iF
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-14.4a" class="section level4 unnumbered">
-<h4>Ejemplo 14.4a</h4>
+<div id="ejemplo-14.4a" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 14.4a<a href="endoexo.html#ejemplo-14.4a" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>En la siguiente tabla se presentan diferentes situaciones de porcentaje de consanguinidad anual, y su consecuente tiempo en disminuir cierto peso al destete promedio, manteniendo en todas las situaciones, una depresión endogámica para peso al destete de <span class="math inline">\(3,4\)</span> kg por cada <span class="math inline">\(1\%\)</span> de consanguinidad:</p>
 <p><br />
 </p>
@@ -1390,8 +1462,8 @@ M_F=M_0-2\sum_i \bar{p}_i\bar{q}_i d_iF
 <p><br />
 </p>
 </div>
-<div id="ejemplo-14.4b" class="section level4 unnumbered">
-<h4>Ejemplo 14.4b</h4>
+<div id="ejemplo-14.4b" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 14.4b<a href="endoexo.html#ejemplo-14.4b" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>En la siguiente tabla se presentan diferentes situaciones de porcentaje de consanguinidad generacional y su consecuente tiempo en disminuir cierto porcentaje de destete, manteniendo en todas las situaciones, una depresión endogámica para porcentaje de destete de <span class="math inline">\(1,5\%\)</span> por cada <span class="math inline">\(1\%\)</span> de consanguinidad:</p>
 <p><br />
 </p>
@@ -1500,17 +1572,17 @@ M_F=M_0-2\sum_i \bar{p}_i\bar{q}_i d_iF
 </ul>
 </div>
 </div>
-<div id="los-riesgos-del-uso-masivo-de-reproductores-y-la-endogamia-elevada" class="section level3 unnumbered">
-<h3>Los riesgos del uso masivo de reproductores y la endogamia elevada</h3>
+<div id="los-riesgos-del-uso-masivo-de-reproductores-y-la-endogamia-elevada" class="section level3 unnumbered hasAnchor">
+<h3>Los riesgos del uso masivo de reproductores y la endogamia elevada<a href="endoexo.html#los-riesgos-del-uso-masivo-de-reproductores-y-la-endogamia-elevada" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>La producción lechera es posiblemente el mejor ejemplo de un uso masivo y abusivo de un número pequeño de reproductores. Las claves de este uso indiscriminado de los mismos reproductores se encuentran en el deseo de maximizar las ganancias a corto plazo, considerando solamente aquellas características que rinden en lo inmediato y descuidando el incremento consiguiente de la consanguinidad, la reducción en la fertilidad, la reducción de la variabilidad genética y los riesgos de reproducir animales portadores de enfermedades de base recesiva. Claramente, pese a estas “motivaciones” importantes, al potencial desastre que enfrentamos solo fue posible arribar gracias a las tecnologías de reproducción masivas, en particular la producción de semen congelado y las técnicas de inseminación <em>in vitro</em>. Como ejemplo de esto mencionaremos solo algunas enfermedades de carácter autosomal recesivo y su impacto en la producción lechera.</p>
-<p><strong>Malformación Vertebral Compleja</strong> (<strong>CVM</strong>) Es una enfermedad responsable de terneros con malformaciones que abortan espontáneamente o mueren poco después de nacer. Está causada por una mutación de pérdida de sentido en el gen <strong>SLC35A3</strong> (<span class="citation"><a href="#ref-Thomsenetal2006" role="doc-biblioref">Thomsen et al.</a> (<a href="#ref-Thomsenetal2006" role="doc-biblioref">2006</a>)</span>) y fue reportada por primera vez en el año 1999. De acuerdo al genotipado realizado, dicha mutación se extendió en forma significativa a partir del uso masivo del toro <strong>Carlin-M Ivanhoe Bell</strong> (apodado <strong>Bell</strong>), nacido en 1974 y usado durante las décadas de 1980 y 1990, un toro de gran valor por la gran producción lechera de sus hijas (dejando una progenie de más de 80.000 individuos). Curiosamente, este toro es <strong>portador</strong> (es decir, al tratarse de enfermedades autosomales recesivas los portadores solo tienen una copia de la mutación) de una mutación para otra enfermedad autosomal recesiva conocida como <strong>BLAD</strong>, cuyo gen se encuentra en otro cromosoma y que veremos luego. El padre de <strong>Carlin-M Ivanhoe Bell</strong>, el toro <strong>Penstate Ivanhoe Starissa</strong> ya contaba con las dos mutaciones, pero no así su abuelo <strong>Osborndale Ivanhoe</strong> que solo era <strong>portador para BLAD</strong>. La incidencia de esta mutación es muy alta, alcanzando un porcentaje de portadores mayor al <span class="math inline">\(30\%\)</span> en rodeos de Dinamarca y Japón. Como solamente los homocigotos son afectados, pero en ese caso no hay descendencia (un <span class="math inline">\(88\%\)</span> abortan antes del día 260 desde la concepción y los que nacen no son viables), suponiendo esta frecuencia en machos y hembras del rodeo, entonces <span class="math inline">\(q^2=0,30^2=0,09\)</span>, o una <strong>reducción en la fertilidad del rodeo</strong> de <span class="math inline">\(9\%\)</span> (que puede ser aún mayor en presencia de endogamia).</p>
-<p><strong>Deficiencia de Adhesión Leucocitaria Bovina</strong> (<strong>BLAD</strong>) Es una enfermedad congénita autosómica recesiva de la raza <strong>Holstein</strong>, que se caracteriza por infecciones bacterianas recurrentes, retraso en la cicatrización de las heridas y retraso en el crecimiento, fiebre, úlceras graves, falta de apetito, neumonía crónica y diarrea y que también se asocia a una marcada neutrofilia persistente (<span class="citation"><a href="#ref-Nagahata2004" role="doc-biblioref">Nagahata</a> (<a href="#ref-Nagahata2004" role="doc-biblioref">2004</a>)</span>). Como vimos antes, su diseminación entre la población de ganado <strong>Holstein</strong> se puede remontar al toro <strong>Osborndale Ivanhoe</strong>, muy utilizado en las decadas de los 50’s y 60’s del siglo pasado. La base molecular de la enfermedad es una mutación puntual (de adenina a guanina) en la posición 383 del gen <strong>CD18</strong>, que provoca una <strong>sustitución de ácido aspártico por glicina</strong> en el aminoácido 128 (<strong>D128G</strong>) de la molécula de adhesión CD18. Como resultado de esto, los neutrófilos tienen una expresión alterada de la integrina beta2 (CD11a,b,c/CD18) de la molécula de adhesión leucocitaria. El ganado afectado muere a una edad temprana debido a las complicaciones infecciosas. Los programas de control de <strong>portadores</strong> que se han utilizado para la raza han sido relativamente exitosos para reducir la frecuencia de esta enfermedad.</p>
+<p><strong>Malformación Vertebral Compleja</strong> (<strong>CVM</strong>) Es una enfermedad responsable de terneros con malformaciones que abortan espontáneamente o mueren poco después de nacer. Está causada por una mutación de pérdida de sentido en el gen <strong>SLC35A3</strong> (<span class="citation">Thomsen et al. (<a href="#ref-Thomsenetal2006" role="doc-biblioref">2006</a>)</span>) y fue reportada por primera vez en el año 1999. De acuerdo al genotipado realizado, dicha mutación se extendió en forma significativa a partir del uso masivo del toro <strong>Carlin-M Ivanhoe Bell</strong> (apodado <strong>Bell</strong>), nacido en 1974 y usado durante las décadas de 1980 y 1990, un toro de gran valor por la gran producción lechera de sus hijas (dejando una progenie de más de 80.000 individuos). Curiosamente, este toro es <strong>portador</strong> (es decir, al tratarse de enfermedades autosomales recesivas los portadores solo tienen una copia de la mutación) de una mutación para otra enfermedad autosomal recesiva conocida como <strong>BLAD</strong>, cuyo gen se encuentra en otro cromosoma y que veremos luego. El padre de <strong>Carlin-M Ivanhoe Bell</strong>, el toro <strong>Penstate Ivanhoe Starissa</strong> ya contaba con las dos mutaciones, pero no así su abuelo <strong>Osborndale Ivanhoe</strong> que solo era <strong>portador para BLAD</strong>. La incidencia de esta mutación es muy alta, alcanzando un porcentaje de portadores mayor al <span class="math inline">\(30\%\)</span> en rodeos de Dinamarca y Japón. Como solamente los homocigotos son afectados, pero en ese caso no hay descendencia (un <span class="math inline">\(88\%\)</span> abortan antes del día 260 desde la concepción y los que nacen no son viables), suponiendo esta frecuencia en machos y hembras del rodeo, entonces <span class="math inline">\(q^2=0,30^2=0,09\)</span>, o una <strong>reducción en la fertilidad del rodeo</strong> de <span class="math inline">\(9\%\)</span> (que puede ser aún mayor en presencia de endogamia).</p>
+<p><strong>Deficiencia de Adhesión Leucocitaria Bovina</strong> (<strong>BLAD</strong>) Es una enfermedad congénita autosómica recesiva de la raza <strong>Holstein</strong>, que se caracteriza por infecciones bacterianas recurrentes, retraso en la cicatrización de las heridas y retraso en el crecimiento, fiebre, úlceras graves, falta de apetito, neumonía crónica y diarrea y que también se asocia a una marcada neutrofilia persistente (<span class="citation">Nagahata (<a href="#ref-Nagahata2004" role="doc-biblioref">2004</a>)</span>). Como vimos antes, su diseminación entre la población de ganado <strong>Holstein</strong> se puede remontar al toro <strong>Osborndale Ivanhoe</strong>, muy utilizado en las decadas de los 50’s y 60’s del siglo pasado. La base molecular de la enfermedad es una mutación puntual (de adenina a guanina) en la posición 383 del gen <strong>CD18</strong>, que provoca una <strong>sustitución de ácido aspártico por glicina</strong> en el aminoácido 128 (<strong>D128G</strong>) de la molécula de adhesión CD18. Como resultado de esto, los neutrófilos tienen una expresión alterada de la integrina beta2 (CD11a,b,c/CD18) de la molécula de adhesión leucocitaria. El ganado afectado muere a una edad temprana debido a las complicaciones infecciosas. Los programas de control de <strong>portadores</strong> que se han utilizado para la raza han sido relativamente exitosos para reducir la frecuencia de esta enfermedad.</p>
 <p><strong>Síndrome de Brachiespina Bovina</strong> Se trata de una enfermedad del ganado <strong>Holstein</strong> en la que
-el ternero nace muerto, con una drástica reducción del peso corporal, retraso en el crecimiento y acortamiento de la espina dorsal con malformaciones vertebrales asociados. Es causada por una deleción de 3,3 kb en el gen del grupo I de complementación de la <strong>anemia de Fanconi bovina</strong> (FANCI) en el cromosoma 21 (<span class="citation"><a href="#ref-Fangetal2013" role="doc-biblioref">Fang et al.</a> (<a href="#ref-Fangetal2013" role="doc-biblioref">2013</a>)</span>). Fue detectada en un principio en norteamérica y Dinamarca, luego en Asia y recientemente en nuestro país. En principio, su diseminación se puede trazar al uso del toro norteamericano <strong>Sweet Haven Tradition</strong>, usado a fines de los 70’s y durante los 80’s. Se estima que dentro de la raza <strong>Holstein</strong> de <span class="math inline">\(6\%\)</span> a <span class="math inline">\(7\%\)</span> son portadores.</p>
-<p><strong>Haplotipos de Fertilidad</strong> Se trata de regiones del genoma identificadas a partir de estudios genómicos (es decir, a partir de animales que poseen datos de genotipado masivo) y que implican una reducción en la fertilidad de los portadores de dichos haplotipos. Los conocidos son <strong>Holstein Haplotype 1-5</strong> (HH1, HH2, HH3, HH4, HH5), <strong>Jersey Haplotype 1</strong> (JH1), <strong>Brown Swiss Haplotype 1 y 2</strong> (BH1 y BH2), y <strong>Ayrshire Haplotype 1</strong> (AH1). Por lo general producen abortos a diferentes edades del feto, siendo las más perjudiciales desde el punto de vista económico aquellas que producen abortos tardíos. Afortunadamente, como su identificación ha sido en base al genotipado, pese a la complejidad de sus mecanismos moleculares (que en la mayor parte no han sido dilucidados) son fáciles de identificar a partir del genotipado, algo que ya es rutina para los machos muy usados en ganado lechero. En los catálogos la forma usual de identificar a los portadores es a través de la letra <strong>C</strong> (“carrier,” portador) luego del correspondiente haplotipo, por ejemplo <strong>HH3C</strong> o por la letra <strong>F</strong> para los no-portadores, por ejemplo <strong>HH3F</strong>.</p>
+el ternero nace muerto, con una drástica reducción del peso corporal, retraso en el crecimiento y acortamiento de la espina dorsal con malformaciones vertebrales asociados. Es causada por una deleción de 3,3 kb en el gen del grupo I de complementación de la <strong>anemia de Fanconi bovina</strong> (FANCI) en el cromosoma 21 (<span class="citation">Fang et al. (<a href="#ref-Fangetal2013" role="doc-biblioref">2013</a>)</span>). Fue detectada en un principio en norteamérica y Dinamarca, luego en Asia y recientemente en nuestro país. En principio, su diseminación se puede trazar al uso del toro norteamericano <strong>Sweet Haven Tradition</strong>, usado a fines de los 70’s y durante los 80’s. Se estima que dentro de la raza <strong>Holstein</strong> de <span class="math inline">\(6\%\)</span> a <span class="math inline">\(7\%\)</span> son portadores.</p>
+<p><strong>Haplotipos de Fertilidad</strong> Se trata de regiones del genoma identificadas a partir de estudios genómicos (es decir, a partir de animales que poseen datos de genotipado masivo) y que implican una reducción en la fertilidad de los portadores de dichos haplotipos. Los conocidos son <strong>Holstein Haplotype 1-5</strong> (HH1, HH2, HH3, HH4, HH5), <strong>Jersey Haplotype 1</strong> (JH1), <strong>Brown Swiss Haplotype 1 y 2</strong> (BH1 y BH2), y <strong>Ayrshire Haplotype 1</strong> (AH1). Por lo general producen abortos a diferentes edades del feto, siendo las más perjudiciales desde el punto de vista económico aquellas que producen abortos tardíos. Afortunadamente, como su identificación ha sido en base al genotipado, pese a la complejidad de sus mecanismos moleculares (que en la mayor parte no han sido dilucidados) son fáciles de identificar a partir del genotipado, algo que ya es rutina para los machos muy usados en ganado lechero. En los catálogos la forma usual de identificar a los portadores es a través de la letra <strong>C</strong> (“carrier”, portador) luego del correspondiente haplotipo, por ejemplo <strong>HH3C</strong> o por la letra <strong>F</strong> para los no-portadores, por ejemplo <strong>HH3F</strong>.</p>
 <p><strong>Sindactilia</strong> Es una enfermedad congénita de caracter autosomal recesivo, en principio causada por un solo gen. El resultado es la unión de las pezuñas en una sola. Se ha reportado en las razas Holstein, Aberdeen–Angus, Simmental, Brown Swiss, Chianina, Nativa Japonesa, Hariana, Sueca Roja y Blanca y Checa Negra y Blanca. En <strong>Holstein</strong> se puede trazar su aparición a un solo reproductor.
-Desde el punto de vista molecular la mayor parte de los casos en <strong>Holstein</strong> se deben a la sustitución de dos nucleótidos en el exón 33 del gen <strong>LRP4</strong>, aunque recientemente se revelaron nuevas <strong>mutaciones puntuales no-sinónimas</strong> de <strong>LRP4</strong> que coexisten en familias <strong>Holstein</strong>, <strong>Simmental alemán</strong> y <strong>Simmental-Charolais</strong> (<span class="citation"><a href="#ref-Drogemulleretal2007" role="doc-biblioref">Drögemüller et al.</a> (<a href="#ref-Drogemulleretal2007" role="doc-biblioref">2007</a>)</span>).</p>
-<p>Existen muchas otras enfermedades congénitas del ganado y en particular del ganado lechero, también autosomales recesivas, como la <strong>Mielopatía Degenerativa Progresiva Bovina</strong> conocida como <strong>Weaver</strong> por el andar errático de los animales, o la recientemente identificada como <strong>Haplotipo para la Deficiencia de Colesterol</strong> (<strong>HCD</strong>) que podría trazarse hacia el toro <strong>Maughlin Storm</strong>, un toro nacido en 1991 (<span class="citation"><a href="#ref-Kippetal2016" role="doc-biblioref">Kipp et al.</a> (<a href="#ref-Kippetal2016" role="doc-biblioref">2016</a>)</span>). El punto importante es que el uso masivo de toros portadores de enfermedades de caracter autosómico recesivo hace que sea difícil detectar el desastre que implica a mediano y largo plazo hasta que el mismo se encuentra en estado muy avanzado.</p>
+Desde el punto de vista molecular la mayor parte de los casos en <strong>Holstein</strong> se deben a la sustitución de dos nucleótidos en el exón 33 del gen <strong>LRP4</strong>, aunque recientemente se revelaron nuevas <strong>mutaciones puntuales no-sinónimas</strong> de <strong>LRP4</strong> que coexisten en familias <strong>Holstein</strong>, <strong>Simmental alemán</strong> y <strong>Simmental-Charolais</strong> (<span class="citation">Drögemüller et al. (<a href="#ref-Drogemulleretal2007" role="doc-biblioref">2007</a>)</span>).</p>
+<p>Existen muchas otras enfermedades congénitas del ganado y en particular del ganado lechero, también autosomales recesivas, como la <strong>Mielopatía Degenerativa Progresiva Bovina</strong> conocida como <strong>Weaver</strong> por el andar errático de los animales, o la recientemente identificada como <strong>Haplotipo para la Deficiencia de Colesterol</strong> (<strong>HCD</strong>) que podría trazarse hacia el toro <strong>Maughlin Storm</strong>, un toro nacido en 1991 (<span class="citation">Kipp et al. (<a href="#ref-Kippetal2016" role="doc-biblioref">2016</a>)</span>). El punto importante es que el uso masivo de toros portadores de enfermedades de caracter autosómico recesivo hace que sea difícil detectar el desastre que implica a mediano y largo plazo hasta que el mismo se encuentra en estado muy avanzado.</p>
 <p>La endogamia elevada tiene otro efecto importante desde el punto de vista cuantitativo. Como vimos antes, bajo endogamia el coeficiente de endocría aumenta y esto lleva a un incremento en los homocigotos respecto a los heterocigotos. De hecho, como vimos en la sección <a href="aparnoalazar.html#generalización-de-hardy-weinberg-para-apareamientos-no-aleatorios">Generalización de Hardy-Weinberg para apareamientos no-aleatorios</a>, en el caso de dos alelos, las frecuencias de los homocigotos pasan a ser <span class="math inline">\(p^2+pqF\)</span> y <span class="math inline">\(q^2+pqF\)</span>. Supongamos que, sin pérdida de generalidad, <span class="math inline">\(q\)</span> representa la frecuencia del alelo recesivo. Por lo tanto, en ausencia de endogamia la frecuencia esperada de la enfermedad (autosomal recesiva) será igual a la frecuencia de homocigotos con ese alelo, que es <span class="math inline">\(q^2\)</span>. Sin embargo, en presencia de endogamia, con un coeficiente de endocría de <span class="math inline">\(F\)</span> la frecuencia de homocigotos del alelo recesivo será <span class="math inline">\(q^2+pqF\)</span>, que será la frecuencia de afectados. Como <span class="math inline">\(pqF \geqslant 0\)</span> y solo será <span class="math inline">\(0\)</span> cuando <span class="math inline">\(F=0\)</span> (ausencia de endogamia) o <span class="math inline">\(pq=0\)</span>, esto último implicando la fijación de uno de los dos alelos (en cuyo caso no hay más enfermedad, tanto por ausencia de afectados o porque desaparecerían los sanos), entonces <span class="math inline">\(pqF\)</span> aumenta la frecuencia de afectados.</p>
 <p>Una forma de ver la importancia relativa de las dos fuentes es estudiar su relación, es decir, la función <span class="math inline">\(f(q)=\frac{pqF}{q^2}=\frac{(1-q)F}{q}\)</span>. En la figura <a href="endoexo.html#fig:relaendo">14.5</a> podemos observar el comportamiento de esta función para cuatro valores del coeficiente de endocría <span class="math inline">\(F\)</span>. La línea a trazos en <span class="math inline">\(1\)</span> representa el valor en que ambos componentes, numerador y denominador son iguales, o dicho de otra forma, los aportes <strong>debidos a la endogamia</strong> y los correspondientes a la ausencia de la misma son iguales. Claramente, a valores bajos de <span class="math inline">\(q\)</span> (o sea, cuanto más raro es el alelo recesivo) más importante en términos relativos es el aporte debido a la endogamia y el comportamiento es no lineal, más importante cuanto más cerca estemos de <span class="math inline">\(q=0\)</span>. Por otra parte, para valores muy bajos del coeficiente de endocría, la importancia del componente debido a la endogamia solo empieza a notarse a frecuencias muy bajas del alelo recesivo, mientras que a valores un poco más altos de <span class="math inline">\(F\)</span> las frecuencias de <span class="math inline">\(q\)</span> a las que empieza a observarse el aporte importante de la endogamia son mucho más altas. La igualdad del aporte de los dos componentes se da cuando</p>
 <p><span class="math display">\[\begin{equation}
@@ -1530,8 +1602,8 @@ Figura 14.5: Relación entre el aporte de homocigotos <strong>debido a la endoga
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-14.5" class="section level4 unnumbered">
-<h4>Ejemplo 14.5</h4>
+<div id="ejemplo-14.5" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 14.5<a href="endoexo.html#ejemplo-14.5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Es conocido que la raza <strong>Holstein</strong> presenta un elevado nivel de consanguinidad tanto a nivel de la población mundial como en particular en determinadas poblaciones locales. Asumiendo que la frecuencia del alelo recesivo en el gen <strong>SLC35A3</strong> que causa la <strong>Malformación Vertebral Compleja</strong> tiene una frecuencia de <span class="math inline">\(q=0,15\)</span> en una población determinada, calcular la proporción de afectados cuando no existe consanguinidad (<span class="math inline">\(F=0\)</span>) y cuando el coeficiente de endocría es igual a <span class="math inline">\(F=0,08\)</span>.</p>
 <p><br />
 </p>
@@ -1548,9 +1620,9 @@ Figura 14.5: Relación entre el aporte de homocigotos <strong>debido a la endoga
 </div>
 </div>
 </div>
-<div id="redistribución-en-la-varianza-genética" class="section level3 unnumbered">
-<h3>Redistribución en la varianza genética</h3>
-<p>La presencia de endogamia va a alterar la distribución de frecuencias alélicas entre un conjunto de poblaciones, respecto a esa evolución bajo un proceso de deriva en (sub)poblaciones de tamaño infinito. Mientras que el cálculo de cómo se distribuirá la varianza genética en presencia de endogamia entre línea y dentro de líneas es relativamente sencillo para genes completamente aditivos, el cálculo en presencia de dominancia es mucho más complejo y su resultados de escasa utilidad práctica. En el caso de los genes completamente aditivos, la partición de varianzas (como veremos) no depende de las frecuencias alélicas iniciales, mientras que en el caso de genes con dominancia esto no es así. Lo que sigue está basado en lo expuesto en <span class="citation"><a href="#ref-Falconer1983" role="doc-biblioref">Falconer</a> (<a href="#ref-Falconer1983" role="doc-biblioref">1983</a>)</span>, que además da un tratamiento mucho más exhaustivo al tema de las diferentes fuentes de varianza y presenta numerosos ejemplos con datos reales.</p>
+<div id="redistribución-en-la-varianza-genética" class="section level3 unnumbered hasAnchor">
+<h3>Redistribución en la varianza genética<a href="endoexo.html#redistribución-en-la-varianza-genética" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La presencia de endogamia va a alterar la distribución de frecuencias alélicas entre un conjunto de poblaciones, respecto a esa evolución bajo un proceso de deriva en (sub)poblaciones de tamaño infinito. Mientras que el cálculo de cómo se distribuirá la varianza genética en presencia de endogamia entre línea y dentro de líneas es relativamente sencillo para genes completamente aditivos, el cálculo en presencia de dominancia es mucho más complejo y su resultados de escasa utilidad práctica. En el caso de los genes completamente aditivos, la partición de varianzas (como veremos) no depende de las frecuencias alélicas iniciales, mientras que en el caso de genes con dominancia esto no es así. Lo que sigue está basado en lo expuesto en <span class="citation">Falconer (<a href="#ref-Falconer1983" role="doc-biblioref">1983</a>)</span>, que además da un tratamiento mucho más exhaustivo al tema de las diferentes fuentes de varianza y presenta numerosos ejemplos con datos reales.</p>
 <p>Supongamos que tenemos la población total dividida en diferentes subpoblaciones de tamaño <span class="math inline">\(N\)</span>. Vamos primero a considerar el caso de un solo <em>locus</em>, con dos alelos, como de costumbre, aunque la generalización del resultado es inmediata. Supongamos que las frecuencias iniciales globales de los dos alelos son <span class="math inline">\(p_0\)</span> y <span class="math inline">\(q_0\)</span>.</p>
 <p>Recordando que la varianza aditiva era <span class="math inline">\(2pq\alpha^2\)</span>, con <span class="math inline">\(\alpha=a+d(q-p)\)</span> y dado que <span class="math inline">\(d=0 \therefore 2pq\alpha^2=2pqa^2\)</span>, la varianza genética será entonces</p>
 <p><span class="math display" id="eq:depre10">\[\begin{equation}
@@ -1589,7 +1661,7 @@ M_i=a(p_i-q_i)+2p_iq_id=a(p_i-q_i)
 \sigma^2_M=4a^2 \sigma^2_q
 \tag{14.13}
 \end{equation}\]</span></p>
-<p>Ahora, como vimos en <a href="aparnoalazar.html#el-coeficiente-de-endocría-y-estadísticos-f">El Coeficiente de endocría y estadísticos <em>F</em></a>, si re-arreglamos la ecuación <a href="aparnoalazar.html#eq:fst2">(6.37)</a>, la varianza en frecuencias alélicas en presencia de endogamia (que es una función del tiempo) será</p>
+<p>Ahora, como vimos en [El Coeficiente de endocría y estadísticos <em>F</em>], si re-arreglamos la ecuación <a href="aparnoalazar.html#eq:fst2">(6.37)</a>, la varianza en frecuencias alélicas en presencia de endogamia (que es una función del tiempo) será</p>
 <p><span class="math display" id="eq:depre21">\[\begin{equation}
 \sigma^2_q=p_0q_0F=p_0q_0\left[\left(1-\frac{1}{2N}\right)^t\right]
 \tag{14.14}
@@ -1657,8 +1729,8 @@ V_{G_F}=(1+F)\ V_G \approx (1+1)\ V_G=2\ V_G
 </div>
 </div>
 </div>
-<div id="exocría-y-heterosis" class="section level2" number="14.4">
-<h2><span class="header-section-number">14.4</span> Exocría y Heterosis</h2>
+<div id="exocría-y-heterosis" class="section level2 hasAnchor" number="14.4">
+<h2><span class="header-section-number">14.4</span> Exocría y Heterosis<a href="endoexo.html#exocría-y-heterosis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Hasta ahora, en diferentes capítulos pero en particular en este, hemos trabajado el tema de cómo la separación de una población en varias produce diferentes fenómenos evolutivos, entre ellos la divergencia en frecuencias alélicas debido al tamaño finito de las subpoblaciones, que entre otras cosas lleva a eventos como la especiación. En particular, en este capítulo hemos trabajado sobre el fenomeno de la endogamia, un fenómeno inevitable cuando las poblaciones son pequeñas y como en algunos casos eso lleva a la depresión endogámica. Pero si se piensa este fenómeno desde el lado opuesto, la pregunta sería ¿qué ocurre cuando combinamos diferentes poblaciones?</p>
 <hr />
 <p><strong>Exocría</strong> es el proceso reproductivo (o una forma de reproducción) donde el <strong>apareamiento</strong> se produce entre individuos <strong>menos emparentados que la media de la población total</strong>.</p>
@@ -1666,7 +1738,7 @@ V_{G_F}=(1+F)\ V_G \approx (1+1)\ V_G=2\ V_G
 <p>Dicho de otra forma, la pregunta anterior se refiere a que si al separar poblaciones se dan determinados procesos, qué ocurrirá si juntamos poblaciones que han sido separadas un determinado tiempo atrás. Algo de esto ya intuimos a partir del capítulo <a href="variación-y-equilibrio-de-hardy-weinberg.html#variación-y-equilibrio-de-hardy-weinberg">Variación y equilibrio de Hardy-Weinberg</a> y vimos en mayor detalle en el capítulo <a href="aparnoalazar.html#aparnoalazar">Apareamientos no-aleatorios</a> cuando discutimos <a href="aparnoalazar.html#el-efecto-wahlund">El efecto Wahlund</a>. Por un lado, poblaciones separadas suelen acumular diferencias a nivel genómico y a nivel fenotípico a medida de que pasa el tiempo. La causa de los procesos de diferenciación a nivel genómico los hemos venido discutiendo y pueden resumirse, en selección natural y artificial, deriva genética, mutación y migración (además de otros como los procesos de recombinación, etc.). Los principales procesos que nosotros hemos seguido hasta acá tienen que ver con el cambio de las frecuencias alélicas en los genes, ya que no hemos trabajado otros fenómenos como los re-arreglos cromosómicos, las duplicaciones génicas y una pléyade de otros eventos que ocurren en los genomas.</p>
 <p>En el capítulo sobre <a href="deriva.html#deriva">Deriva Genética</a> realizamos una analogía sobre los procesos de muestreos con jarras conteniendo bolitas de colores. Para pensar en lo que sigue del presente capítulo podemos manejarnos con la misma analogía: tenemos dos jarras que difieren en las proporciones de bolitas rojas y azules. El proceso de exocría será similar a combinar las dos jarras y a partir de ello muestrear, como hacíamos en el capítulo de <a href="deriva.html#deriva">Deriva Genética</a>.</p>
 <p>Cuando previamente discutimos la depresión endogámica, vimos que las posibles causas tenían que ver con la existencia del fenómeno de dominancia, de sobredominancia o de epistasis. Dejando de lado la última, ya que el tratamiento es mucho más elaborado de los objetivos que nos hemos trazado y su importancia es debatible, las otras dos causas involucran la dominancia. Más adelante, en la sección <a href="endoexo.html#un-modelo-sencillo-de-heterosis-bajo-exocría">Un modelo sencillo de heterosis bajo exocría</a> desarrollaremos un modelo matemático muy sencillo que nos permitirá entender el rol de la dominancia y del cambio de las frecuencias genotípicas bajo exocría, pero por ahora nos alcanza con suponer (usando un argumento de simetría con la endocría) que los heterocigotos jugarán también un papel muy relevante acá.</p>
-<p>Cuando se produce un cruzamiento entre dos poblaciones de la misma especie, por ejemplo entre dos razas, si todos los genes que determinan desde el punto de vista genético la característica tienen un modo de acción aditivo, entonces lo esperable para el promedio fenotípico de los <strong>individuos cruza</strong> sería estar en el punto medio de los fenotipos de las poblaciones “parentales”puras" (que dan origen a la cruza) de la misma generación. Esto, en particular, si los ambientes en los que se expresa la característica fenotípica son idénticos para las tres poblaciones (las dos originales y la cruza). Es importante aclarar aquí que <strong>siempre trataremos de comparaciones entre poblaciones en la misma generación</strong>, ya que así eliminamos otros efectos del ambiente o de selección.</p>
+<p>Cuando se produce un cruzamiento entre dos poblaciones de la misma especie, por ejemplo entre dos razas, si todos los genes que determinan desde el punto de vista genético la característica tienen un modo de acción aditivo, entonces lo esperable para el promedio fenotípico de los <strong>individuos cruza</strong> sería estar en el punto medio de los fenotipos de las poblaciones “parentales”puras” (que dan origen a la cruza) de la misma generación. Esto, en particular, si los ambientes en los que se expresa la característica fenotípica son idénticos para las tres poblaciones (las dos originales y la cruza). Es importante aclarar aquí que <strong>siempre trataremos de comparaciones entre poblaciones en la misma generación</strong>, ya que así eliminamos otros efectos del ambiente o de selección.</p>
 <p>A pesar de nuestras expectativas, en muchos casos se puede observar que el fenotipo de los individuos cruza es mejor (tiene un <strong>fitness</strong> más alto) que el promedio de las poblaciones o razas que originaron la cruza. Más aún, en muchos casos no resulta idéntico el fenotipo de los cruzamiento en un sentido, es decir machos de la primer población con hembras de la segunda, que el cruzamiento recíproco (hembras de la primera con machos de la segunda). Pronto analizaremos las causas de esto en particular, pero por ahora nos manejaremos con el promedio de los cruzamientos recíprocos para definir la heterosis.</p>
 <hr />
 <p>Definimos <strong>heterosis</strong> como la diferencia entre el fenotipo promedio de las cruzas (recíprocas) y el promedio de las poblaciones “puras” que las originaron.</p>
@@ -1677,9 +1749,9 @@ V_{G_F}=(1+F)\ V_G \approx (1+1)\ V_G=2\ V_G
 h_{AB}=\frac{\bar X_{AB}+\bar X_{BA}}{2}-\frac{\bar X_{AA}+\bar X_{BB}}{2}
 \tag{14.18}
 \end{equation}\]</span></p>
-<p>Notar que <span class="math inline">\(h_{AB}=h_{BA}\)</span> ya que la definición de heterosis involucra el promedio de las cruzas recíprocas y también el promedio de ambas “puras,” pero en forma simétrica respecto al sexo de padres y madres.</p>
+<p>Notar que <span class="math inline">\(h_{AB}=h_{BA}\)</span> ya que la definición de heterosis involucra el promedio de las cruzas recíprocas y también el promedio de ambas “puras”, pero en forma simétrica respecto al sexo de padres y madres.</p>
 <p>Como todas las cantidades que aparecen en la ecuación <a href="endoexo.html#eq:hetero1">(14.18)</a> tienen las unidades de la característica fenotípica de interés, también la heterosis tendrá dicha unidad. Esto nos deja sin la posibilidad de comparar características que se expresan en diferentes unidades, obviamente, pero también características que se expresan en las mismas unidades pero que no tienen nada que ver. Claramente, no tiene ningún sentido compara kilogramos de heterosis en producción de leche con kilogramos de heterosis en peso de vellón limpio.</p>
-<p>Una forma de eliminar este problema es estandarizando la heterosis de cada característica, refiriéndola por ejemplo al promedio de la característica en las “puras.” En términos matemáticos, la “heterosis porcentual” la podemos calcular de la siguiente manera</p>
+<p>Una forma de eliminar este problema es estandarizando la heterosis de cada característica, refiriéndola por ejemplo al promedio de la característica en las “puras”. En términos matemáticos, la “heterosis porcentual” la podemos calcular de la siguiente manera</p>
 <p><span class="math display" id="eq:hetero2">\[\begin{equation}
 h_{AB\%}=\frac{h_{AB}}{\frac{\bar X_{AA}+\bar X_{BB}}{2}} \times 100=\frac{\frac{\bar X_{AB}+\bar X_{BA}}{2}-\frac{\bar X_{AA}+\bar X_{BB}}{2}}{\frac{\bar X_{AA}+\bar X_{BB}}{2}} \times 100
 \tag{14.19}
@@ -1687,13 +1759,18 @@ h_{AB\%}=\frac{h_{AB}}{\frac{\bar X_{AA}+\bar X_{BB}}{2}} \times 100=\frac{\frac
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-14.5-1" class="section level4 unnumbered">
-<h4>Ejemplo 14.5</h4>
+<div id="ejemplo-14.5-1" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 14.5<a href="endoexo.html#ejemplo-14.5-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>A fin de aumentar la producción de lana coloreada y mejorar la adaptación a nuestras condiciones productivas se realizó un experimento de cruzamiento entre individuos de las <strong>ovejas verdes</strong> e individuos de la raza Corriedale.</p>
 <p>La siguiente tabla representa los promedios obtenidos en Peso de Vellón Limpio (<strong>PVL</strong>), tanto para los animales puros como para la cruzas de la misma generación:</p>
 <p><br />
 </p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="30%" />
+<col width="34%" />
+<col width="34%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Padres/Madres</th>
@@ -1725,7 +1802,7 @@ h_{VC}=\frac{\bar X_{VC}+\bar X_{CV}}{2}-\frac{\bar X_{VV}+\bar X_{CC}}{2}
 \end{equation}\]</span></p>
 <p>por lo que en nuestro caso, utilizando los valores de la tabla tenemos que</p>
 <p><span class="math display">\[\begin{equation}
-h_{VC}=\frac{4,225+4,055}{2}-\frac{3,275+3,925}{2} \text{ kg}=0,540 \text{ kg} 
+h_{VC}=\frac{4,225+4,055}{2}-\frac{3,275+3,925}{2} \text{ kg}=0,540 \text{ kg}
 \end{equation}\]</span></p>
 <p>es decir, 540 gramos. Expresado como porcentaje respecto a las puras, utilizando la ecuación <a href="endoexo.html#eq:hetero2">(14.19)</a>, la heterosis individual queda como</p>
 <p><span class="math display">\[\begin{equation}
@@ -1733,7 +1810,7 @@ h_{VC\%}=\frac{h_{VC}}{\frac{\bar X_{VV}+\bar X_{CC}}{2}} \times 100=\frac{\frac
 \end{equation}\]</span></p>
 <p>y sustituyendo valores, como el numerador equivale a la heterosis individual en unidades de la característica</p>
 <p><span class="math display">\[\begin{equation}
-h_{VC\%}=\frac{0,540 \text{ kg}}{\frac{3,275+3,925}{2} \text{ kg}}=\frac{0,540  \text{ kg}}{3,600 \text{ kg}}=0,15=15 \% 
+h_{VC\%}=\frac{0,540 \text{ kg}}{\frac{3,275+3,925}{2} \text{ kg}}=\frac{0,540  \text{ kg}}{3,600 \text{ kg}}=0,15=15 \%
 \end{equation}\]</span></p>
 <p><br />
 </p>
@@ -1768,8 +1845,8 @@ h^M_{AB}=\frac{\bar X_{C(AB)}+\bar X_{C(BA)}}{2}-\frac{\bar X_{C(AA)}+\bar X_{C(
 </ul>
 </div>
 </div>
-<div id="el-modelo-del-templo-griego" class="section level3 unnumbered">
-<h3>El modelo del templo griego</h3>
+<div id="el-modelo-del-templo-griego" class="section level3 unnumbered hasAnchor">
+<h3>El modelo del templo griego<a href="endoexo.html#el-modelo-del-templo-griego" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Como vimos en el capítulo <a href="modelogenbas.html#el-modelo-genético-básico">El Modelo Genético Básico</a>, para el modelo de un <em>locus</em> con dos alelos y apareamientos que cumplen <strong>Hardy-Weinberg</strong>, la media de la población en la escala transformada era igual a <span class="math inline">\(M=a(p-q)+2pqd\)</span>. A un nivel determinado de dominancia la media es una función de la proporción de heterocigotos, el <span class="math inline">\(2pq\)</span> del segundo término del lado derecho de la igualdad. Más aún, si consideramos fijas las frecuencias de los alelos, <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span>, la media es una función lineal del grado de dominancia en el <em>locus</em> en cuestión, cosa que puede extenderse fácilmente a muchos <em>loci</em> en ausencia de epistasis. La figura <a href="endoexo.html#fig:templog1">14.6</a> representa los diferentes niveles de dominancia que cambian la denominación del tipo de acción génica y que como vimos en la sección <a href="endoexo.html#depresión-endogámica">Depresión endogámica</a>, pueden estar detrás de los mecanismos que explican la depresión endogámica.</p>
 <p><br />
 </p>
@@ -1782,7 +1859,7 @@ Figura 14.6: Representación de los valores genotípicos correspondiente a los d
 </div>
 <p><br />
 </p>
-<p>Cuando realizamos un cruzamiento entre razas, las frecuencias de los alelos en los distintos <em>locus</em> serán el promedio de las frecuencias en cada una de las razas, ya que los individuos cruza tendrán exactamente la mitad del genoma nuclear proveniente de una raza y la otra mitad de la otra raza. <span class="citation"><a href="#ref-Cunningham1987" role="doc-biblioref">Cunningham</a> (<a href="#ref-Cunningham1987" role="doc-biblioref">1987</a>)</span> plantea la posibilidad de representar la heterosis a partir de un modelo gráfico sencillo, que llamó de <strong>“templo griego”</strong> ya que en algunos casos parece la vista frontal de un templo griego (aunque con menos pretensiones también podría haber sido llamado “modelo de la casita,” entre otros muchos nombres posibles). La idea aparece representada en la figura <a href="endoexo.html#fig:templog2">14.7</a>, donde el cruzamiento de dos razas <strong>A</strong> y <strong>B</strong>, produce individuos cruza <strong>AB</strong>. Los fenotipos de cada genotipo se representan en el eje de la ordenadas. La “proporción de cada raza” (en el genoma) de los individuos cruza es <span class="math inline">\(\frac{1}{2}\)</span>. Si todos los genes que participan en la definición del fenotipo tuviesen un modo de acción completamente aditivo, de acuerdo lo que vimos en la figura <a href="endoexo.html#fig:templog1">14.6</a>, el fenotipo esperable para los individuos cruza estaría en la mitad exacta en <span class="math inline">\(P1\)</span> y <span class="math inline">\(P2\)</span>, es decir, en <span class="math inline">\(\frac{P1+P2}{2}\)</span> (“prom.” en la figura). Sin embargo, el fenotipo observado de las cruzas se encuentra por encima de ese valor, en <span class="math inline">\(F1\)</span>. Si volvemos a mirar la figura <a href="endoexo.html#fig:templog1">14.6</a>, esto nos recuerda de alguna manera a la “dominancia parcial.” Claramente, los efectos aditivos no explican totalmente el fenotipo promedio de los individuos cruza. La diferencia entre el fenotipo promedio observado para los individuos cruza y el promedio de las “razas parentales,” es decir <span class="math inline">\(F1-\frac{P1+P2}{2}\)</span>, es la <strong>heterosis observada</strong>.</p>
+<p>Cuando realizamos un cruzamiento entre razas, las frecuencias de los alelos en los distintos <em>locus</em> serán el promedio de las frecuencias en cada una de las razas, ya que los individuos cruza tendrán exactamente la mitad del genoma nuclear proveniente de una raza y la otra mitad de la otra raza. <span class="citation">Cunningham (<a href="#ref-Cunningham1987" role="doc-biblioref">1987</a>)</span> plantea la posibilidad de representar la heterosis a partir de un modelo gráfico sencillo, que llamó de <strong>“templo griego”</strong> ya que en algunos casos parece la vista frontal de un templo griego (aunque con menos pretensiones también podría haber sido llamado “modelo de la casita”, entre otros muchos nombres posibles). La idea aparece representada en la figura <a href="endoexo.html#fig:templog2">14.7</a>, donde el cruzamiento de dos razas <strong>A</strong> y <strong>B</strong>, produce individuos cruza <strong>AB</strong>. Los fenotipos de cada genotipo se representan en el eje de la ordenadas. La “proporción de cada raza” (en el genoma) de los individuos cruza es <span class="math inline">\(\frac{1}{2}\)</span>. Si todos los genes que participan en la definición del fenotipo tuviesen un modo de acción completamente aditivo, de acuerdo lo que vimos en la figura <a href="endoexo.html#fig:templog1">14.6</a>, el fenotipo esperable para los individuos cruza estaría en la mitad exacta en <span class="math inline">\(P1\)</span> y <span class="math inline">\(P2\)</span>, es decir, en <span class="math inline">\(\frac{P1+P2}{2}\)</span> (“prom.” en la figura). Sin embargo, el fenotipo observado de las cruzas se encuentra por encima de ese valor, en <span class="math inline">\(F1\)</span>. Si volvemos a mirar la figura <a href="endoexo.html#fig:templog1">14.6</a>, esto nos recuerda de alguna manera a la “dominancia parcial”. Claramente, los efectos aditivos no explican totalmente el fenotipo promedio de los individuos cruza. La diferencia entre el fenotipo promedio observado para los individuos cruza y el promedio de las “razas parentales”, es decir <span class="math inline">\(F1-\frac{P1+P2}{2}\)</span>, es la <strong>heterosis observada</strong>.</p>
 <p><br />
 </p>
 
@@ -1792,22 +1869,22 @@ Figura 14.6: Representación de los valores genotípicos correspondiente a los d
 Figura 14.7: Modelo del templo griego para el cruzamiento de dos razas, <strong>A</strong> y <strong>B</strong>. En el eje de las abscizas se representa la proporción de la raza <strong>B</strong> en cada uno de los genotipo (0 para los individuos de la raza <strong>A</strong>, <span class="math inline">\(\frac{1}{2}\)</span> para los <strong>AB</strong> y 1 para los <strong>B</strong>). En el eje de las ordenadas se representan los valores fenotípicos del promedio de los individuos de cada genotipo. Si todos los <em>loci</em> que participan en la característica fuesen aditivos, la media de los individuos cruza debería estar en el promedio (punto de color verde oscuro). En realidad, el promedio de los individuos cruza se encuentra en <span class="math inline">\(F1\)</span> y <strong>la diferencia</strong> <span class="math inline">\(F1-\frac{P1+P2}{2}\)</span> es <strong>la heterosis observada</strong> (segmento en verde oscuro).
 </p>
 </div>
-<p>El modelo del templo griego nos permite representar de forma gráfica el comportamiento de diferentes cruzas, así como también ayuda a entender lo que ocurre en determinadas situaciones. La figura <a href="endoexo.html#fig:templog3">14.8</a> representa un ejemplo tomado de <span class="citation"><a href="#ref-Cunningham1987" role="doc-biblioref">Cunningham</a> (<a href="#ref-Cunningham1987" role="doc-biblioref">1987</a>)</span> de interacción entre el ambiente y los efectos aditivos, pero también con los de heterosis. La figura representa el comportamiento de dos razas (por ejemplo, en producción lechera), una local, la raza <strong>A</strong> y una raza exótica <strong>B</strong>, en dos ambientes contrastantes: a la izquierda en el ambiente favorable y a la derecha en el ambiente desfavorable (o pobre). En el ambiente favorable la raza exótica supera ampliamente a la raza local, esencialmente debido a diferencia aditivas, que en este caso alcanzan las <span class="math inline">\(50\)</span> unidades (de lo que sea). En ese ambiente, la cruza presenta una heterosis de <span class="math inline">\(H=10\)</span>, bastante menor en comparación a lo que aportan las diferencias entre razas. Esto apunta a que posiblemente la mejor estrategia sea ir sustituyendo a la raza local por la raza exótica (en la medida de que el resto de los factores, incliyendo resistencia a parásitos, a la temperatura, fertilidad, etc. lo hagan posible). Por otro lado, en el ambiente pobre las diferencias entre razas son bastante menores, <span class="math inline">\(A=10\)</span>, marcando una interacción <strong>aditivo-ambiental</strong>. A su vez, en este ambiente la heterosis aparece como muy importante, con <span class="math inline">\(H=50\)</span>, marcando una interacción <strong>heterosis-ambiental</strong>. En este segundo caso resulta mucho más claro que las <strong>F1</strong> son una excelente apuesta. Sin embargo, en muchos casos resulta impráctico trabajar con las <strong>F1</strong> ya que se debe mantener una estructura de al menos dos rodeos, uno reproductivo (por ejemplo de la raza <strong>A</strong>, inseminado con la raza <strong>B</strong>) y otro productivo de animales <strong>AB</strong>. En este caso, un cruce rotacional podría ser una alternativa y posiblemente mucho más práctico, el uso de una raza sintética derivada a partir de la libre reproducción de los individuos <strong>F1</strong> entre sí, que se estabiliza en la <strong>F2</strong>, como veremos más adelante.</p>
+<p>El modelo del templo griego nos permite representar de forma gráfica el comportamiento de diferentes cruzas, así como también ayuda a entender lo que ocurre en determinadas situaciones. La figura <a href="endoexo.html#fig:templog3">14.8</a> representa un ejemplo tomado de <span class="citation">Cunningham (<a href="#ref-Cunningham1987" role="doc-biblioref">1987</a>)</span> de interacción entre el ambiente y los efectos aditivos, pero también con los de heterosis. La figura representa el comportamiento de dos razas (por ejemplo, en producción lechera), una local, la raza <strong>A</strong> y una raza exótica <strong>B</strong>, en dos ambientes contrastantes: a la izquierda en el ambiente favorable y a la derecha en el ambiente desfavorable (o pobre). En el ambiente favorable la raza exótica supera ampliamente a la raza local, esencialmente debido a diferencia aditivas, que en este caso alcanzan las <span class="math inline">\(50\)</span> unidades (de lo que sea). En ese ambiente, la cruza presenta una heterosis de <span class="math inline">\(H=10\)</span>, bastante menor en comparación a lo que aportan las diferencias entre razas. Esto apunta a que posiblemente la mejor estrategia sea ir sustituyendo a la raza local por la raza exótica (en la medida de que el resto de los factores, incliyendo resistencia a parásitos, a la temperatura, fertilidad, etc. lo hagan posible). Por otro lado, en el ambiente pobre las diferencias entre razas son bastante menores, <span class="math inline">\(A=10\)</span>, marcando una interacción <strong>aditivo-ambiental</strong>. A su vez, en este ambiente la heterosis aparece como muy importante, con <span class="math inline">\(H=50\)</span>, marcando una interacción <strong>heterosis-ambiental</strong>. En este segundo caso resulta mucho más claro que las <strong>F1</strong> son una excelente apuesta. Sin embargo, en muchos casos resulta impráctico trabajar con las <strong>F1</strong> ya que se debe mantener una estructura de al menos dos rodeos, uno reproductivo (por ejemplo de la raza <strong>A</strong>, inseminado con la raza <strong>B</strong>) y otro productivo de animales <strong>AB</strong>. En este caso, un cruce rotacional podría ser una alternativa y posiblemente mucho más práctico, el uso de una raza sintética derivada a partir de la libre reproducción de los individuos <strong>F1</strong> entre sí, que se estabiliza en la <strong>F2</strong>, como veremos más adelante.</p>
 <p><br />
 </p>
 
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:templog3"></span>
 <img src="ApuntesGeneticaII_files/figure-html/templog3-1.png" alt="Interacción entre ambiente y los efectos aditivos y de heterosis. La figura de la izquierda representa lo observado en un ambiente favorable, mientras que la figura de la derecha representa un ambiente pobre. Claramente, cambian los valores aditivos relativos entre genotipos, pero también cambian los efectos de la heterosis. Los valores de \(A\) y \(H\) reportados son, respectivamente, las diferencias en valores aditivos entre razas y los efectos de heterosis. Realización propia sobre idea en Cunningham (1987)." width="80%" />
 <p class="caption">
-Figura 14.8: Interacción entre ambiente y los efectos aditivos y de heterosis. La figura de la izquierda representa lo observado en un <strong>ambiente favorable</strong>, mientras que la figura de la derecha representa un <strong>ambiente pobre</strong>. Claramente, cambian los valores aditivos relativos entre genotipos, pero también cambian los efectos de la heterosis. Los valores de <span class="math inline">\(A\)</span> y <span class="math inline">\(H\)</span> reportados son, respectivamente, las diferencias en valores aditivos entre razas y los efectos de heterosis. Realización propia sobre idea en <span class="citation"><a href="#ref-Cunningham1987" role="doc-biblioref">Cunningham</a> (<a href="#ref-Cunningham1987" role="doc-biblioref">1987</a>)</span>.
+Figura 14.8: Interacción entre ambiente y los efectos aditivos y de heterosis. La figura de la izquierda representa lo observado en un <strong>ambiente favorable</strong>, mientras que la figura de la derecha representa un <strong>ambiente pobre</strong>. Claramente, cambian los valores aditivos relativos entre genotipos, pero también cambian los efectos de la heterosis. Los valores de <span class="math inline">\(A\)</span> y <span class="math inline">\(H\)</span> reportados son, respectivamente, las diferencias en valores aditivos entre razas y los efectos de heterosis. Realización propia sobre idea en <span class="citation">Cunningham (<a href="#ref-Cunningham1987" role="doc-biblioref">1987</a>)</span>.
 </p>
 </div>
 <p><br />
 </p>
 <hr />
 </div>
-<div id="un-modelo-sencillo-de-heterosis-bajo-exocría" class="section level3 unnumbered">
-<h3>Un modelo sencillo de heterosis bajo exocría</h3>
+<div id="un-modelo-sencillo-de-heterosis-bajo-exocría" class="section level3 unnumbered hasAnchor">
+<h3>Un modelo sencillo de heterosis bajo exocría<a href="endoexo.html#un-modelo-sencillo-de-heterosis-bajo-exocría" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Antes manejamos que la heterosis es un fenómeno que podría explicarse en buena medida por el efecto de la dominancia actuando en un <em>locus</em> o más, unido al incremento en la frecuencia de los heterocigotos, pero no hicimos ningún esfuerzo por cuantificar esto a partir de un modelo. Para eso vamos a recurrir a un modelo muy simple y ya conocido por nosotros y luego veremos que la extensión a múltiples <em>loci</em> es trivial bajo determinados supuestos.</p>
 <p>Supongamos que tenemos dos poblaciones, una <strong>P1</strong> con frecuencias <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span> para los alelos <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span>, respectivamente y la otra <strong>P2</strong> con frecuencias <span class="math inline">\(p&#39;\)</span> y <span class="math inline">\(q&#39;\)</span> para los mismos alelos. Además, como siempre, al haber solo dos alelos se cumple <span class="math inline">\(p+q=1\)</span> (población <strong>P1</strong>) y <span class="math inline">\(p&#39;+q&#39;=1\)</span> (población <strong>P2</strong>). Supongamos que a la diferencia de frecuencias para el alelo <span class="math inline">\(A_1\)</span> entre las dos poblaciones es igual a <span class="math inline">\(y\)</span>, es decir <span class="math inline">\(p-p&#39;=y\)</span>. Por lo tanto, de acuerdo a todo lo anterior</p>
 <p><span class="math display" id="eq:hetero10">\[\begin{equation}
@@ -1819,6 +1896,11 @@ p&#39;+q&#39;=1 \Leftrightarrow q&#39;=1-(p-y) \Leftrightarrow q&#39;=(1-p)+y \L
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="28%" />
+<col width="35%" />
+<col width="36%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">población P1/población P2</th>
@@ -1860,6 +1942,12 @@ fr(A_2A_2)=q^2+qy+\frac{y^2}{2}
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="13%" />
+<col width="25%" />
+<col width="36%" />
+<col width="25%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Genotipo</th>
@@ -1922,6 +2010,12 @@ fr(A_2A_2)=\left(q+\frac{y}{2}\right)^2=q^2+py+\frac{y^2}{4}
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="12%" />
+<col width="31%" />
+<col width="33%" />
+<col width="22%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Genotipo</th>
@@ -1964,8 +2058,8 @@ h_{F2}=\frac{y^2d}{2}
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-14.6" class="section level4 unnumbered">
-<h4>Ejemplo 14.6</h4>
+<div id="ejemplo-14.6" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 14.6<a href="endoexo.html#ejemplo-14.6" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Un característica se encuentra determinada por dos <em>loci</em> (<strong>A</strong> y <strong>B</strong>), en los que ambos tienen dos alelos. En una población, las frecuencias en los dos <em>loci</em> son <span class="math inline">\(p_{A_1}=0,75\)</span> para el alelo <span class="math inline">\(A_1\)</span> y <span class="math inline">\(p_{B_1}=0,25\)</span> para el alelo <span class="math inline">\(B_1\)</span>. En una segunda población, las frecuencias son <span class="math inline">\(p&#39;_{A_1}=0,45\)</span> para el alelo <span class="math inline">\(A_1\)</span> y <span class="math inline">\(p&#39;_{B_1}=0,85\)</span> para el alelo <span class="math inline">\(B_1\)</span>. Si los valores de dominancia para los dos <em>loci</em> son respectivamente <span class="math inline">\(d_A=12 \text{ unidades}\)</span> y <span class="math inline">\(d_B=8 \text{ unidades}\)</span>, determinar la heterosis en la generación <strong>F1</strong>.</p>
 <p><br />
 </p>
@@ -1975,6 +2069,15 @@ h_{F1}=\sum_i y^2_i\ d_i=\sum_i (p_i-p&#39;_i)^2\ d_i
 \end{equation}\]</span></p>
 <p>Si ponemos los valores de frecuencias y dominancias en una tabla y realizamos los calculos, llegamos a que:</p>
 <table>
+<colgroup>
+<col width="9%" />
+<col width="21%" />
+<col width="22%" />
+<col width="12%" />
+<col width="9%" />
+<col width="10%" />
+<col width="13%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><em>locus</em></th>
@@ -2018,8 +2121,8 @@ h_{F1}=\sum_i y^2_i\ d_i=\sum_i (p_i-p&#39;_i)^2\ d_i
 </div>
 </div>
 </div>
-<div id="complementariedad" class="section level3 unnumbered">
-<h3>Complementariedad</h3>
+<div id="complementariedad" class="section level3 unnumbered hasAnchor">
+<h3>Complementariedad<a href="endoexo.html#complementariedad" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Cada una de las razas para una especie dada presenta algunas características para la que es ventajosa y otras características para las que no lo es tanto, o es simplemente deficiente. Una forma adicional de aprovechar los cruzamientos es usando la complementariedad que existe entre las razas a cruzar.</p>
 <p>Por ejemplo, existen determinadas razas con fuertes habilidades maternas, es decir, capacidad de hacer crecer mejor a sus (posiblemente más) crías. En esto influyen diferentes factores genéticos, como la fertilidad, la capacidad de producir leche, la capacidad de buscar refugio adecuado o de protegerlas de depredadores. Posiblemente estas razas no posean los mejores atributos desde el punto de vista de la producción terminal de carne y sean superadas por otras razas que poseen, por ejemplo, mayor velocidad de crecimiento. En este sentido, se puede utilizar la complementariedad entre razas en un cruzamiento, eligiendo madres de la primera raza y padres de otra raza de buena calidad de carne y alta velocidad de crecimiento. Dicho de otra forma, la complementariedad entre razas se explotará cuando se puedan combinar estos recursos genéticos (cada uno con aptitudes diferentes) dentro de un mismo sistema de producción manteniendo o aumentando la eficiencia de dicho sistema.</p>
 <!-- \ -->
@@ -2028,8 +2131,8 @@ h_{F1}=\sum_i y^2_i\ d_i=\sum_i (p_i-p&#39;_i)^2\ d_i
 <!-- \ -->
 <hr />
 </div>
-<div id="tipos-de-cruzamientos" class="section level3 unnumbered">
-<h3>Tipos de cruzamientos</h3>
+<div id="tipos-de-cruzamientos" class="section level3 unnumbered hasAnchor">
+<h3>Tipos de cruzamientos<a href="endoexo.html#tipos-de-cruzamientos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Existen diferentes tipos de cruzamiento, cada uno de ellos explotando diferentes efectos en diferentes proporciones. Además, cada tipo de cruzamiento presenta dificultades diferentes a la hora de implementarlo, principalmente debido al mantenimiento de diferentes poblaciones que coexisten, tanto en lo requerido de instalaciones como en los requerimientos de manejo. En mucho casos implica además una separación entre rodeo reproductivo y productivo, lo que lleva a la posbilidad de considerar las razas sintéticas como alternativa. Existen una infinidad de sistemas de cruzamiento propuestos y nosotros solo mencionaremos unos pocos para visualizar las ventajas y complejidades involucradas.</p>
 <p><strong>Cruzamiento simple</strong> Es el cruzamiento más simple posible y consiste en aparear hembras de una raza con machos de otra raza. Permite utilizar además de los efectos raciales la complementariedad y la heterosis del cruzamiento. Un ejemplo típico de esto es cuando se elige como raza de las hembras una raza con habilidad materna, por ejemplo cerdas <strong>Pampa</strong> y machos de una raza terminal como la <strong>Duroc</strong>.</p>
 <p><strong>Cruzamiento rotacional</strong> Es un cruzamiento relativamente sencillo de implementar, donde al principio hembras de una raza se aparean con machos de otra. La descendencia hembras de este cruzamiento se aparean ahora con machos de la otra raza respecto a los primeros machos. Luego, la descendencia de esta cruza se apareará con machos del mismo tipo que la primera vez. Es decir, vamos alternando la raza de machos sobre la población de hembras cruza. Este tipo de cruza permite explotar <span class="math inline">\(2/3\)</span> de la heterosis individual y materna. La principal desventaja de este sistema es la complejidad de mantener dos rodeos y además mantener identificada la paternidad de cada animal. Como principal ventaja la posibilidad de utilizar la heterosis individual y maternal en todo el rodeo, aunque no en su máximo potencial. Además, como es un sistema en el que siempre alternan los efectos raciales es necesario trabajar con razas relativamente compatibles en tamaño y otras características.</p>
@@ -2037,10 +2140,10 @@ h_{F1}=\sum_i y^2_i\ d_i=\sum_i (p_i-p&#39;_i)^2\ d_i
 <p><strong>Razas sintéticas</strong> Se trata de una alternativa muy práctica cuando se consigue un producto razonable y adecuado a los sistemas de producción. Se trata de crear una combinación de razas que a partir de determinado momento se empiezan a reproducir dentro de la misma población. No utlizan al máximo la heterosis y se pierde el efecto de la complementariedad, pero pueden constituir una excelente alternativa cuando no se cuenta con instalaciones ni personal para manejos más complicados. Presentan el riesgo de un incremento importante en la consanguinidad si el rodeo se cierra muy rápido y no se permiten ingresar “sangres” diferentes. Entre otros aspectos interesantes de este tipo de estrategia está la posibilidad de incorporar características de resistencia a parásitos y climáticas en razas de alta producción. Ejemplo de esto son la raza Barzona ( Africander, Hereford, Beef Shorthorn y Angus), la Santa Gertrudis (la idea fue de crearla con 37% cebuina y 62%; entre 1923 y 1935 fue usado en forma extensiva un toro llamado <strong>Monkey</strong> y todo el ganado actual desciende del mismo), o la lechera Girolando (5/8 Holstein y 3/8 Gyr, una raza cebuina).</p>
 </div>
 </div>
-<div id="modelo-genético-de-cruzamientos" class="section level2" number="14.5">
-<h2><span class="header-section-number">14.5</span> Modelo genético de cruzamientos</h2>
+<div id="modelo-genético-de-cruzamientos" class="section level2 hasAnchor" number="14.5">
+<h2><span class="header-section-number">14.5</span> Modelo genético de cruzamientos<a href="endoexo.html#modelo-genético-de-cruzamientos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Hasta acá, en lo que hace a exocría y cruzamientos hemos visto los principios generales y que ocurre en particular cuando cruzamos dos poblaciones que presentan diferencias en las frecuencias alélicas. Sin embargo, aún no hemos desarrollado un modelo que nos permita entender diferentes tipos de cruzamientos e interpretar los parámetros estimados a partir del modelo. Claramente, esta es la forma de poder tomar decisiones importantes acerca de la mejor estrategia para el uso de la genética como herramienta para mejorar la producción, por lo que ahora supliremos esta carencia desarrollando un <strong>modelo genético básico para los cruzamientos</strong>.</p>
-<p>El desarrollo del mismo se debe a <span class="citation"><a href="#ref-Dickerson1973" role="doc-biblioref">Dickerson</a> (<a href="#ref-Dickerson1973" role="doc-biblioref">1973</a>)</span> y es rico en extremo, por lo que en general seguiremos su notación, de forma que el artículo mencionado quede como material de consulta adicional. Si llamamos <span class="math inline">\(\bar G\)</span> a la media de la población o cruza considerada, <span class="math inline">\(G_I\)</span> a los efectos directos del individuo (también llamados individuales) y <span class="math inline">\(G_M\)</span> a los efectos maternales, entonces podemos establecer un modelo básico para cruzamientos que sería:</p>
+<p>El desarrollo del mismo se debe a <span class="citation">Dickerson (<a href="#ref-Dickerson1973" role="doc-biblioref">1973</a>)</span> y es rico en extremo, por lo que en general seguiremos su notación, de forma que el artículo mencionado quede como material de consulta adicional. Si llamamos <span class="math inline">\(\bar G\)</span> a la media de la población o cruza considerada, <span class="math inline">\(G_I\)</span> a los efectos directos del individuo (también llamados individuales) y <span class="math inline">\(G_M\)</span> a los efectos maternales, entonces podemos establecer un modelo básico para cruzamientos que sería:</p>
 <p><span class="math display" id="eq:modgencruza1">\[\begin{equation}
 \bar G=\mu+G_I+G_M
 \tag{14.27}
@@ -2051,6 +2154,12 @@ h_{F1}=\sum_i y^2_i\ d_i=\sum_i (p_i-p&#39;_i)^2\ d_i
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="35%" />
+<col width="21%" />
+<col width="21%" />
+<col width="21%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Efectos</th>
@@ -2088,6 +2197,12 @@ h_{F1}=\sum_i y^2_i\ d_i=\sum_i (p_i-p&#39;_i)^2\ d_i
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="42%" />
+<col width="19%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Coeficientes de Efectos</th>
@@ -2119,7 +2234,7 @@ h_{F1}=\sum_i y^2_i\ d_i=\sum_i (p_i-p&#39;_i)^2\ d_i
 </table>
 <p><br />
 </p>
-<p>La idea es sencilla y se puede representar con una analogía alcohólica. Disponemos de una serie de “bebidas base,” por ejemplo whisky, vodka, ron, gin, jugos de naranja, jugo de frutilla, agua tónica, así como hielo, etc. Las bebidas base son los efectos genéticos del modelo. Si nos piden un “gin tonic,” debemos mezclar gin y agua tónica. ¿En qué proporción debemos mezclarlos? Esos son los coeficientes en nuestro modelo. Claramente, podemos tomar whisky solo o podemos también tomar agua mineral sola, pero el “Twice Up” es una mezcla de iguales proporciones de ambos (<span class="math inline">\(50\%\)</span> y <span class="math inline">\(50\%\)</span>) y el “Mizuwari” japonés una mezcla de <span class="math inline">\(1/3\)</span> whisky con <span class="math inline">\(2/3\)</span> de agua.</p>
+<p>La idea es sencilla y se puede representar con una analogía alcohólica. Disponemos de una serie de “bebidas base”, por ejemplo whisky, vodka, ron, gin, jugos de naranja, jugo de frutilla, agua tónica, así como hielo, etc. Las bebidas base son los efectos genéticos del modelo. Si nos piden un “gin tonic”, debemos mezclar gin y agua tónica. ¿En qué proporción debemos mezclarlos? Esos son los coeficientes en nuestro modelo. Claramente, podemos tomar whisky solo o podemos también tomar agua mineral sola, pero el “Twice Up” es una mezcla de iguales proporciones de ambos (<span class="math inline">\(50\%\)</span> y <span class="math inline">\(50\%\)</span>) y el “Mizuwari” japonés una mezcla de <span class="math inline">\(1/3\)</span> whisky con <span class="math inline">\(2/3\)</span> de agua.</p>
 <hr />
 <p>Es fundamental entender las <strong>diferencias</strong> entre los <strong>efectos causales</strong> que participan en el modelo de un cruzamiento dado <strong>y los correspondientes coeficientes</strong>. Cuáles efectos participan en determinado cruzamiento y sus correspondientes coeficientes se puede determinar del análisis teórico del cruzamiento. La <strong>estimación de los efectos</strong> correspondientes es una tarea posterior a establecer el modelo y <strong>se equiere de datos reales</strong> (observaciones) para poder realizar las estimaciones.</p>
 <hr />
@@ -2174,7 +2289,7 @@ k^P_ik^P_j+k^P_ik^M_j+k^M_ik^P_j+k^M_ik^M_j-k^P_ik^M_j-k^M_ik^P_j=k^P_ik^P_j+k^M
 <p>lo que la deja en función de los coeficientes de los efectos directos de las razas <span class="math inline">\(i\)</span> y <span class="math inline">\(j\)</span>, así como del coeficiente de heterosis entre las razas <span class="math inline">\(i\)</span> y <span class="math inline">\(j\)</span>.</p>
 <p><br />
 </p>
-<p>Veamos ahora cómo expresar el modelo genético de cruzamientos en función de los efectos y de sus coeficientes respectivos. Para los efectos individuales tenemos que, sumando todos los componentes (“aditivos,” de heterosis y de pérdidas por recombinación), podemos expresarlos como</p>
+<p>Veamos ahora cómo expresar el modelo genético de cruzamientos en función de los efectos y de sus coeficientes respectivos. Para los efectos individuales tenemos que, sumando todos los componentes (“aditivos”, de heterosis y de pérdidas por recombinación), podemos expresarlos como</p>
 <p><span class="math display" id="eq:modgencruza10">\[\begin{equation}
 G_I=\sum_i k^I_i\ g^I_i+\sum_{i&lt;j}  k^I_{ij}\ h^I_{ij} + \sum_{i&lt;j}[4\ k^I_i\ k^I_j-k^I_{ij}]\ r^I_{ij}
 \tag{14.36}
@@ -2186,12 +2301,17 @@ G_M=\sum_i k^M_i\ g^M_i+\sum_{i&lt;j}  k^M_{ij}\ h^M_{ij} + \sum_{i&lt;j}[4\ k^M
 \end{equation}\]</span></p>
 <p>Claramente, recordando la ecuación inicial <span class="math inline">\(\bar G=\mu+G_I+G_M\)</span>, si solo consideramos los efectos directos y los maternales alcanza con sumar ambos aportes a la media de población para describir el producto de una cruza.</p>
 <hr />
-<div id="ejemplo-14.7" class="section level4 unnumbered">
-<h4>Ejemplo 14.7</h4>
+<div id="ejemplo-14.7" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 14.7<a href="endoexo.html#ejemplo-14.7" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Veamos un ejemplo sencillo, que servirá para entender el como específicamos un modelo, obtenemos los coeficientes correspondientes a los efectos que se incluyen y obtenemos los estimados. A fin de intentar mejorar el peso en animales adultos, se realizó un cruzamiento entre nuestras ovejas verdes (raza <strong>V</strong>) y las Scottish Blackface de las Hébridas Exteriores (<strong>S</strong>). El cruzamiento lo podemos representar por <span class="math inline">\({V \times S}\)</span> y el cruzamiento recíproco por <span class="math inline">\({S \times V}\)</span>. Esto nos dejó con la siguiente tabla de pesos promedios</p>
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="25%" />
+<col width="37%" />
+<col width="37%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Machos/Hembras</th>
@@ -2239,7 +2359,16 @@ k^I_{SV}=k^P_S\ k^M_V+k^M_S\ k^P_V=(1 \times 1)+(0 \times 0)=1
 <p>Poniendo todo esto junto tenemos la siguiente tabla de coeficientes del modelo</p>
 <p><br />
 </p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="17%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Constitución</th>
@@ -2299,7 +2428,16 @@ h_{SV}=\frac{\bar X_{SV}+\bar X_{VS}}{2}-\frac{\bar X_{SS}+\bar X_{VV}}{2}=\\
 =\frac{84+76}{2}-\frac{90+60}{2}=\frac{160}{2}-\frac{150}{2}=80-75=5 \text{ kg}
 \end{equation}\]</span></p>
 <p>La relación con el modelo genético de cruzamiento es obvia si tratamos la tabla de coeficientes como los coeficientes de ecuaciones. El promedio de las dos últimas líneas de la tabla es</p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="17%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Constitución</th>
@@ -2347,7 +2485,16 @@ h_{SV}=\frac{\bar X_{SV}+\bar X_{VS}}{2}-\frac{\bar X_{SS}+\bar X_{VV}}{2}=\\
 \tag{14.38}
 \end{equation}\]</span></p>
 <p>De la misma manera, el promedio de las puras (las dos primeras líneas de la tabla de coeficientes) será</p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="17%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Constitución</th>
@@ -2405,7 +2552,16 @@ h^I_{SV}=80-75=5 \text{ kg}
 <p>Vamos a utilizar esta misma aproximación de operación sobre las ecuaciones que describen a cada constitución genética para estimar ahora los efectos genéticos maternos. Si observamos con cuidado la constitución genética de las cruzas recíprocas enseguida nos percatamos que la única diferencia aparece en los coeficientes de los efectos maternales, por lo que si las restamos tenemos</p>
 <p><br />
 </p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="17%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Constitución</th>
@@ -2449,7 +2605,7 @@ h^I_{SV}=80-75=5 \text{ kg}
 </table>
 <p>que se traduce en</p>
 <p><span class="math display" id="eq:ejer14p4">\[\begin{equation}
- {SV-VS}=-g^M_S+g^M_V=g^M_V-g^M_S=84-76=8 \text{ kg}
+{SV-VS}=-g^M_S+g^M_V=g^M_V-g^M_S=84-76=8 \text{ kg}
 \tag{14.41}
 \end{equation}\]</span></p>
 <p>Ahora, de acuerdo a la ecuación <a href="endoexo.html#eq:ejer14p4">(14.41)</a> tenemos dos parámetros a determinar y un solo valor numérico, por lo que la única opción que nos queda para levantar esta indeterminación es tomar una resolución arbitraria, por ejemplo asumir que <span class="math inline">\(g^M_V+g^M_S=0 \Leftrightarrow g^M_V=-g^M_S\)</span>. Sustituyendo en la ecuación <a href="endoexo.html#eq:ejer14p4">(14.41)</a>, tenemos ahora que</p>
@@ -2461,11 +2617,11 @@ g^M_V=\frac{8}{2}=4  \text{ kg}
 <p>y por lo tanto <span class="math inline">\(g^M_S=-g^M_V=-4 \text{ kg}\)</span>.</p>
 <p>Para estimar los efectos directos de raza alcanza con observar los coeficientes de las razas puras. Por ejemplo, para <strong>S</strong> tenemos</p>
 <p><span class="math display">\[\begin{equation}
- {SS}=1\ g^I_S+1\ g^M_S \Leftrightarrow g^I_S= {SS}-g^M_S=90-(-4)=94 \text{ kg} 
+{SS}=1\ g^I_S+1\ g^M_S \Leftrightarrow g^I_S= {SS}-g^M_S=90-(-4)=94 \text{ kg}
 \end{equation}\]</span></p>
 <p>y para <strong>V</strong></p>
 <p><span class="math display">\[\begin{equation}
- {VV}=1\ g^I_V+1\ g^M_V \Leftrightarrow g^I_V= {VV}-g^M_V=60-4=56 \text{ kg} 
+{VV}=1\ g^I_V+1\ g^M_V \Leftrightarrow g^I_V= {VV}-g^M_V=60-4=56 \text{ kg}
 \end{equation}\]</span></p>
 <hr />
 <div class="graybox">
@@ -2493,10 +2649,10 @@ g^M_V=\frac{8}{2}=4  \text{ kg}
 </div>
 </div>
 </div>
-<div id="ejercicios-14" class="section level2 unnumbered">
-<h2>Ejercicios</h2>
-<div id="ejercicio-14.1" class="section level4 unnumbered">
-<h4>Ejercicio 14.1</h4>
+<div id="ejercicios-14" class="section level2 unnumbered hasAnchor">
+<h2>Ejercicios<a href="endoexo.html#ejercicios-14" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ejercicio-14.1" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 14.1<a href="endoexo.html#ejercicio-14.1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Tú tienes información de un experimento de cruzamientos entre las razas A y B para peso al destete (kg):</p>
 <p><br />
 </p>
@@ -2641,16 +2797,16 @@ A(AB)=\frac{3}{4}\times 165+\frac{1}{4}\times 155+\frac{1}{2}\times 15+\frac{1}{
 <p><br />
 </p>
 </div>
-<div id="ejercicio-14.2" class="section level4 unnumbered">
-<h4>Ejercicio 14.2</h4>
+<div id="ejercicio-14.2" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 14.2<a href="endoexo.html#ejercicio-14.2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Es conocido que la raza <strong>Holstein</strong> presenta un elevado nivel de consanguinidad tanto a nivel de la población mundial como en particular en determinadas poblaciones locales. Asumiendo que la frecuencia del alelo recesivo en el gen <strong>SLC35A3</strong> que causa la <strong>Malformación Vertebral Compleja</strong> tiene una frecuencia de <span class="math inline">\(q=0,15\)</span> en una población determinada, calcular la proporción de afectados cuando no existe consanguinidad (<span class="math inline">\(F=0\)</span>) y cuando el coeficiente de endocría es igual a <span class="math inline">\(F=0,08\)</span>.</p>
 <p><strong><em>Solución</em></strong></p>
 <p>En el primer caso, la frecuencia esperada de homocigotos (afectados) es <span class="math inline">\(q^2=0,15^2=0,0225=2,225\%\)</span>. En el segundo caso, que parece describir mejor la situación en la raza <strong>Holstein</strong>, la frecuencia esperada de homocigotos será de <span class="math inline">\(q^2+pqF=q^2+(1-q)qF=0,15^2+0,85 \times 0,15 \times 0,08=0,0327=3,27\%\)</span>. Por lo tanto, <span class="math inline">\(\frac{3,27\%}{2,225\%}=1,453\)</span>, es decir que tendremos <span class="math inline">\(45,3\%\)</span> más de terneros perdidos por la enfermedad a causa del incremento en la endogamia del rodeo.</p>
 <p><br />
 </p>
 </div>
-<div id="ejercicio-14.3" class="section level4 unnumbered">
-<h4>Ejercicio 14.3</h4>
+<div id="ejercicio-14.3" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 14.3<a href="endoexo.html#ejercicio-14.3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>De acuerdo a los datos del <strong>CDCB</strong>, la consanguinidad del rodeo <strong>Holstein/Red &amp; White</strong> de América del Norte pasó de <span class="math inline">\(F=7,72\%\)</span> a <span class="math inline">\(F=9,09\%\)</span> en los últimos 4 años (2018-2021), mientras que entre 1960 y 1963 pasó de <span class="math inline">\(F=0\%\)</span> a <span class="math inline">\(F=0,13\%\)</span>. Considerando que 4 años es el intervalo generacional de la raza, calcular el tamaño efectivo poblacional que se corresponde a cada uno de estos períodos. Asumiendo que el número de hembras es muchísimo mayor que el de machos, cosa que es cierta en este caso (más de 9 millones de vacas en el rodeo de América del Norte) ¿Cuántos machos estarían usando actualmente y cuantos se deberían usar para que la consanguinidad anual no aumente más de <span class="math inline">\(0,1\%\)</span>?</p>
 <p><strong><em>Solución</em></strong></p>
 <p>Utilizando la ecuación que nos relaciona el incremento en la consanguinidad de una generación con el tamaño efectivo poblacional, tenemos que</p>
@@ -2676,15 +2832,15 @@ m \approx \frac{1}{8 \times 0,001 \times 4^2}=7,81 \text{ machos}
 <hr />
 </div>
 </div>
-<div id="notas-al-pie" class="section level2 unnumbered">
-<h2>Notas al pie</h2>
+<div id="notas-al-pie" class="section level2 unnumbered hasAnchor">
+<h2>Notas al pie<a href="endoexo.html#notas-al-pie" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
-<h3>Bibliografía</h3>
+<h3>Bibliografía<a href="bibliografía.html#bibliografía" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-cdcbinbreed" class="csl-entry">
-2021. <a href="https://queries.uscdcb.com/eval/summary/inbrd.cfm">https://queries.uscdcb.com/eval/summary/inbrd.cfm</a>.
+———. 2021. <a href="https://queries.uscdcb.com/eval/summary/inbrd.cfm">https://queries.uscdcb.com/eval/summary/inbrd.cfm</a>.
 </div>
 <div id="ref-Bezdiceketal2008" class="csl-entry">
 Bezdı́ček, J., J. Šubrt, and R. Filipčı́k. 2008. <span>“The Effect of Inbreeding on Milk Traits in Holstein Cattle in the Czech Republic.”</span> <em>Archives Animal Breeding</em> 51 (5): 415–25. <a href="https://doi.org/10.5194/aab-51-415-2008">https://doi.org/10.5194/aab-51-415-2008</a>.
@@ -2745,7 +2901,6 @@ Yue, X. P., C. Dechow, and W. S. Liu. 2015. <span>“<span class="nocase"><span>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -2786,7 +2941,7 @@ gitbook.start({
 },
 "download": ["ApuntesGeneticaII.pdf", "ApuntesGeneticaII.epub"],
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
@@ -2802,7 +2957,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

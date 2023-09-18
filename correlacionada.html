@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 12 Correlaciones y Respuesta Correlacionada | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
   <meta name="description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 12 Correlaciones y Respuesta Correlacionada | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
@@ -28,7 +27,7 @@
 <meta name="author" content="(Paola Gaiero)" />
 
 
-<meta name="date" content="2022-05-27" />
+<meta name="date" content="2023-09-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -37,8 +36,8 @@
   
 <link rel="prev" href="selartifI.html"/>
 <link rel="next" href="selartifII.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -54,16 +53,18 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -115,31 +116,38 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#variabilidad-genética"><i class="fa fa-check"></i><b>1.1</b> Variabilidad genética</a>
 <ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.1"><i class="fa fa-check"></i>Ejemplo 1.1</a></li>
 <li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#detectando-la-variabilidad-diferentes-técnicas"><i class="fa fa-check"></i><b>1.1.1</b> Detectando la variabilidad: diferentes técnicas</a></li>
-<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#metagenómica-y-metatranscriptómica"><i class="fa fa-check"></i><b>1.1.2</b> Metagenómica y Metatranscriptómica</a></li>
+<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#metagenomica-y-metatranscriptomica"><i class="fa fa-check"></i><b>1.1.2</b> Metagenómica y Metatranscriptómica</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.2"><i class="fa fa-check"></i>Ejemplo 1.2</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#genómica-composicional"><i class="fa fa-check"></i><b>1.2</b> Genómica composicional</a>
 <ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-gcskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones, GCskew</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-y-textgc_textskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones y <span class="math inline">\(\text{GC}_{\text{skew}}\)</span></a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#uso-de-codones"><i class="fa fa-check"></i>Uso de codones</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#exploración-multivariada-análisis-de-correspondencia"><i class="fa fa-check"></i>Exploración multivariada: Análisis de Correspondencia</a></li>
-<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i><b>1.2.1</b> Composición de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.3"><i class="fa fa-check"></i>Ejemplo 1.3</a></li>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#exploracion-multivariada"><i class="fa fa-check"></i><b>1.2.1</b> Exploración multivariada: Análisis de Correspondencia</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i><b>1.2.2</b> Composición de proteínas</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-en-propiedades-de-los-aas"><i class="fa fa-check"></i>Diferencias en propiedades de los AAs</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-de-composición-entre-clases-de-proteínas"><i class="fa fa-check"></i>Diferencias de composición entre clases de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.4"><i class="fa fa-check"></i>Ejemplo 1.4</a></li>
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#genómica-comparativa"><i class="fa fa-check"></i><b>1.3</b> Genómica comparativa</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#comparación-de-secuencias-génicas"><i class="fa fa-check"></i>Comparación de secuencias génicas</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección Positiva</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección positiva</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#vías"><i class="fa fa-check"></i>Vías</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#genómica-funcional"><i class="fa fa-check"></i><b>1.4</b> Genómica funcional</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#estudios-epigenéticos-y-epigenómicos"><i class="fa fa-check"></i>Estudios epigenéticos y epigenómicos</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#conclusión"><i class="fa fa-check"></i><b>1.5</b> Conclusión</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#actividades"><i class="fa fa-check"></i><b>1.6</b> Actividades</a>
 <ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicio-1.1"><i class="fa fa-check"></i>Ejercicio 1.1</a></li>
+<li class="chapter" data-level="1.6.1" data-path="intro.html"><a href="intro.html#control-de-lectura"><i class="fa fa-check"></i><b>1.6.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="1.6.2" data-path="intro.html"><a href="intro.html#verdadero-o-falso"><i class="fa fa-check"></i><b>1.6.2</b> ¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>Parte II: Genética de Poblaciones</b></span></li>
@@ -150,7 +158,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#supuestos-que-asumimos-se-cumplen-para-h-w"><i class="fa fa-check"></i>Supuestos que asumimos se cumplen para H-W</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-dioicas-dos-sexos"><i class="fa fa-check"></i><b>2.2</b> Hardy-Weinberg en especies dioicas (dos sexos)</a></li>
-<li class="chapter" data-level="2.3" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#h-w-la-frecuencia-de-heterocigotas-en-función-de-la-frecuencia-alélica"><i class="fa fa-check"></i><b>2.3</b> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
+<li class="chapter" data-level="2.3" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#heterocigotas-freq-alelica"><i class="fa fa-check"></i><b>2.3</b> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
 <li class="chapter" data-level="2.4" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo"><i class="fa fa-check"></i><b>2.4</b> El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo</a></li>
 <li class="chapter" data-level="2.5" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#tres-o-más-alelos"><i class="fa fa-check"></i><b>2.5</b> Tres o más alelos</a></li>
 <li class="chapter" data-level="2.6" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-y-el-equilibrio-o-no"><i class="fa fa-check"></i><b>2.6</b> La estimación de frecuencias y el equilibrio (o no)</a></li>
@@ -158,19 +166,33 @@ div.csl-indent {
 <li class="chapter" data-level="2.8" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#dónde-se-esconden-los-alelos-recesivos"><i class="fa fa-check"></i><b>2.8</b> ¿Dónde se “esconden” los alelos recesivos?</a></li>
 <li class="chapter" data-level="2.9" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-poliploides"><i class="fa fa-check"></i><b>2.9</b> Hardy-Weinberg en especies poliploides</a></li>
 <li class="chapter" data-level="2.10" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#geometría-y-genética-los-diagramas-de-de-finetti"><i class="fa fa-check"></i><b>2.10</b> Geometría y Genética: los diagramas de <em>de Finetti</em></a></li>
-<li class="chapter" data-level="2.11" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-en-el-locus-abo"><i class="fa fa-check"></i><b>2.11</b> La estimación de frecuencias en el locus ABO</a></li>
+<li class="chapter" data-level="2.11" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#estimacion-abo"><i class="fa fa-check"></i><b>2.11</b> La estimación de frecuencias en el locus ABO</a></li>
+<li class="chapter" data-level="2.12" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#conclusión-1"><i class="fa fa-check"></i><b>2.12</b> Conclusión</a></li>
+<li class="chapter" data-level="2.13" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#actividades-1"><i class="fa fa-check"></i><b>2.13</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="2.13.1" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#control-de-lectura-1"><i class="fa fa-check"></i><b>2.13.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="2.13.2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#verdadero-o-falso-1"><i class="fa fa-check"></i><b>2.13.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicios-2"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="deriva.html"><a href="deriva.html"><i class="fa fa-check"></i><b>3</b> Deriva Genética</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="deriva.html"><a href="deriva.html#el-rol-de-los-procesos-estocásticos-en-la-genética"><i class="fa fa-check"></i><b>3.1</b> El rol de los procesos estocásticos en la genética</a></li>
-<li class="chapter" data-level="3.2" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i><b>3.2</b> El modelo de Wright-Fisher</a></li>
+<li class="chapter" data-level="3.2" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i><b>3.2</b> El modelo de Wright-Fisher</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.1"><i class="fa fa-check"></i>Ejemplo 3.1</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="deriva.html"><a href="deriva.html#el-rol-de-la-subdivisión-poblacional-en-la-evolución-de-las-frecuencias-alélicas"><i class="fa fa-check"></i><b>3.3</b> El rol de la subdivisión poblacional en la evolución de las frecuencias alélicas</a>
 <ul>
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#homocigosidad-y-heterocigosidad"><i class="fa fa-check"></i>Homocigosidad y Heterocigosidad</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.2"><i class="fa fa-check"></i>Ejemplo 3.2</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="deriva.html"><a href="deriva.html#cadenas-de-markov"><i class="fa fa-check"></i><b>3.4</b> Cadenas de Markov</a></li>
-<li class="chapter" data-level="3.5" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i><b>3.5</b> Tamaño efectivo poblacional</a></li>
+<li class="chapter" data-level="3.5" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i><b>3.5</b> Tamaño efectivo poblacional</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.3"><i class="fa fa-check"></i>Ejemplo 3.3</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.4"><i class="fa fa-check"></i>Ejemplo 3.4</a></li>
+</ul></li>
 <li class="chapter" data-level="3.6" data-path="deriva.html"><a href="deriva.html#aproximación-de-difusión"><i class="fa fa-check"></i><b>3.6</b> Aproximación de difusión</a>
 <ul>
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#caminatas-al-azar-y-procesos-de-difusión"><i class="fa fa-check"></i>Caminatas al azar y procesos de difusión</a></li>
@@ -178,9 +200,18 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-backward-equation"><i class="fa fa-check"></i>Kolmogorov Backward Equation</a></li>
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#solución-de-las-ecuaciones"><i class="fa fa-check"></i>Solución de las ecuaciones</a></li>
 </ul></li>
-<li class="chapter" data-level="3.7" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i><b>3.7</b> Probabilidad de fijación y tiempos de fijación</a></li>
+<li class="chapter" data-level="3.7" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i><b>3.7</b> Probabilidad de fijación y tiempos de fijación</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.5"><i class="fa fa-check"></i>Ejemplo 3.5</a></li>
+</ul></li>
 <li class="chapter" data-level="3.8" data-path="deriva.html"><a href="deriva.html#el-modelo-coalescente"><i class="fa fa-check"></i><b>3.8</b> El modelo coalescente</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejercicios-3"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="3.9" data-path="deriva.html"><a href="deriva.html#conclusión-2"><i class="fa fa-check"></i><b>3.9</b> Conclusión</a></li>
+<li class="chapter" data-level="3.10" data-path="deriva.html"><a href="deriva.html#actividades-2"><i class="fa fa-check"></i><b>3.10</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="deriva.html"><a href="deriva.html#control-de-lectura-2"><i class="fa fa-check"></i><b>3.10.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="3.10.2" data-path="deriva.html"><a href="deriva.html#verdadero-o-falso-2"><i class="fa fa-check"></i><b>3.10.2</b> ¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="3.10.3" data-path="deriva.html"><a href="deriva.html#ejercicios"><i class="fa fa-check"></i><b>3.10.3</b> Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="seleccion.html"><a href="seleccion.html"><i class="fa fa-check"></i><b>4</b> Selección Natural</a>
 <ul>
@@ -200,7 +231,13 @@ div.csl-indent {
 <li class="chapter" data-level="4.6" data-path="seleccion.html"><a href="seleccion.html#la-fuerza-de-la-selección-natural"><i class="fa fa-check"></i><b>4.6</b> La fuerza de la selección natural</a></li>
 <li class="chapter" data-level="4.7" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-deriva"><i class="fa fa-check"></i><b>4.7</b> Equilibrio selección-deriva</a></li>
 <li class="chapter" data-level="4.8" data-path="seleccion.html"><a href="seleccion.html#otros-tipos-de-selección-y-complejidades"><i class="fa fa-check"></i><b>4.8</b> Otros tipos de selección y complejidades</a></li>
+<li class="chapter" data-level="4.9" data-path="seleccion.html"><a href="seleccion.html#conclusión-3"><i class="fa fa-check"></i><b>4.9</b> Conclusión</a></li>
+<li class="chapter" data-level="4.10" data-path="seleccion.html"><a href="seleccion.html#actividades-3"><i class="fa fa-check"></i><b>4.10</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="4.10.1" data-path="seleccion.html"><a href="seleccion.html#control-de-lectura-3"><i class="fa fa-check"></i><b>4.10.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="4.10.2" data-path="seleccion.html"><a href="seleccion.html#verdadero-o-falso-3"><i class="fa fa-check"></i><b>4.10.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#ejercicios-4"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="dosloci.html"><a href="dosloci.html"><i class="fa fa-check"></i><b>5</b> Dinámica de 2 <em>loci</em></a>
 <ul>
@@ -212,9 +249,9 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="dosloci.html"><a href="dosloci.html#selección-en-modelos-de-dos-loci"><i class="fa fa-check"></i><b>5.4</b> Selección en modelos de dos <em>loci</em></a>
 <ul>
-<li><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento">Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento"><i class="fa fa-check"></i>Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i><b>5.5</b> Arrastre genético (“genetic hitchhiking” o “genetic draft”)</a></li>
+<li class="chapter" data-level="5.5" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i><b>5.5</b> Arrastre genético (“<em>genetic hitchhiking</em>” o “<em>genetic draft</em>”)</a></li>
 <li class="chapter" data-level="5.6" data-path="dosloci.html"><a href="dosloci.html#causas-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i><b>5.6</b> Causas del desequilibrio de ligamiento</a>
 <ul>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-al-mestizaje"><i class="fa fa-check"></i>Desequilibrio debido al mestizaje</a></li>
@@ -222,20 +259,41 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#el-cromosoma-y"><i class="fa fa-check"></i>El cromosoma Y</a></li>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-a-recombinación-reducida"><i class="fa fa-check"></i>Desequilibrio debido a recombinación reducida</a></li>
 </ul></li>
+<li class="chapter" data-level="5.7" data-path="dosloci.html"><a href="dosloci.html#conclusión-4"><i class="fa fa-check"></i><b>5.7</b> Conclusión</a></li>
+<li class="chapter" data-level="5.8" data-path="dosloci.html"><a href="dosloci.html#actividades-4"><i class="fa fa-check"></i><b>5.8</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="5.8.1" data-path="dosloci.html"><a href="dosloci.html#control-de-lectura-4"><i class="fa fa-check"></i><b>5.8.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="5.8.2" data-path="dosloci.html"><a href="dosloci.html#verdadero-o-falso-4"><i class="fa fa-check"></i><b>5.8.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejercicios-5"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="aparnoalazar.html"><a href="aparnoalazar.html"><i class="fa fa-check"></i><b>6</b> Apareamientos no-aleatorios</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-concepto-de-identidad-por-ascendencia-ibd"><i class="fa fa-check"></i><b>6.1</b> El concepto de “identidad por ascendencia” (IBD)</a></li>
 <li class="chapter" data-level="6.2" data-path="aparnoalazar.html"><a href="aparnoalazar.html#generalización-de-hardy-weinberg-para-apareamientos-no-aleatorios"><i class="fa fa-check"></i><b>6.2</b> Generalización de Hardy-Weinberg para apareamientos no-aleatorios</a></li>
-<li class="chapter" data-level="6.3" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><b>6.3</b> <em>F</em> como correlación entre gametos unidos</a></li>
+<li class="chapter" data-level="6.3" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><b>6.3</b> <span class="math inline">\(F\)</span> como correlación entre gametos unidos</a></li>
 <li class="chapter" data-level="6.4" data-path="aparnoalazar.html"><a href="aparnoalazar.html#endocría-y-depresión-endogámica"><i class="fa fa-check"></i><b>6.4</b> Endocría y depresión endogámica</a></li>
 <li class="chapter" data-level="6.5" data-path="aparnoalazar.html"><a href="aparnoalazar.html#un-caso-extremo-la-autogamia"><i class="fa fa-check"></i><b>6.5</b> Un caso extremo: la autogamia</a></li>
-<li class="chapter" data-level="6.6" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-estadísticos-f"><i class="fa fa-check"></i><b>6.6</b> El Coeficiente de endocría y estadísticos <em>F</em></a></li>
-<li class="chapter" data-level="6.7" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i><b>6.7</b> El efecto Wahlund</a></li>
-<li class="chapter" data-level="6.8" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i><b>6.8</b> Subdivisión, migración y el modelo de islas</a></li>
+<li class="chapter" data-level="6.6" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-los-estadísticos-f"><i class="fa fa-check"></i><b>6.6</b> El coeficiente de endocría y los estadísticos <em>F</em></a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.1"><i class="fa fa-check"></i>Ejemplo 6.1</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i><b>6.7</b> El efecto Wahlund</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.2"><i class="fa fa-check"></i>Ejemplo 6.2</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i><b>6.8</b> Subdivisión, migración y el modelo de islas</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.3"><i class="fa fa-check"></i>Ejemplo 6.3</a></li>
+</ul></li>
 <li class="chapter" data-level="6.9" data-path="aparnoalazar.html"><a href="aparnoalazar.html#mecanismos-de-especiación"><i class="fa fa-check"></i><b>6.9</b> Mecanismos de especiación</a></li>
+<li class="chapter" data-level="6.10" data-path="aparnoalazar.html"><a href="aparnoalazar.html#conclusión-5"><i class="fa fa-check"></i><b>6.10</b> Conclusión</a></li>
+<li class="chapter" data-level="6.11" data-path="aparnoalazar.html"><a href="aparnoalazar.html#actividades-5"><i class="fa fa-check"></i><b>6.11</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="6.11.1" data-path="aparnoalazar.html"><a href="aparnoalazar.html#control-de-lectura-5"><i class="fa fa-check"></i><b>6.11.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="6.11.2" data-path="aparnoalazar.html"><a href="aparnoalazar.html#verdadero-o-falso-5"><i class="fa fa-check"></i><b>6.11.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejercicios-6"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="microbial.html"><a href="microbial.html"><i class="fa fa-check"></i><b>7</b> Genética de Poblaciones Microbianas</a>
 <ul>
@@ -243,20 +301,30 @@ div.csl-indent {
 <li class="chapter" data-level="7.2" data-path="microbial.html"><a href="microbial.html#dinámica-de-las-poblaciones-bacterianas"><i class="fa fa-check"></i><b>7.2</b> Dinámica de las poblaciones bacterianas</a>
 <ul>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-exponencial"><i class="fa fa-check"></i>El modelo exponencial</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.1"><i class="fa fa-check"></i>Ejemplo 7.1</a></li>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-logístico"><i class="fa fa-check"></i>El modelo logístico</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.2"><i class="fa fa-check"></i>Ejemplo 7.2</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="microbial.html"><a href="microbial.html#modelos-haploides-de-selección-natural"><i class="fa fa-check"></i><b>7.3</b> Modelos haploides de selección natural</a>
 <ul>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-discreto"><i class="fa fa-check"></i>Selección haploide: modelo discreto</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.3"><i class="fa fa-check"></i>Ejemplo 7.3</a></li>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-continuo"><i class="fa fa-check"></i>Selección haploide: modelo continuo</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.4"><i class="fa fa-check"></i>Ejemplo 7.4</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-versus-el-de-wright-fisher"><i class="fa fa-check"></i><b>7.4</b> Los modelos de Moran y de Fisión versus el de Wright-Fisher</a></li>
+<li class="chapter" data-level="7.4" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-vs-el-de-wright-fisher"><i class="fa fa-check"></i><b>7.4</b> Los modelos de Moran y de fisión <em>vs</em> el de Wright-Fisher</a></li>
 <li class="chapter" data-level="7.5" data-path="microbial.html"><a href="microbial.html#el-rol-de-la-transferencia-horizontal"><i class="fa fa-check"></i><b>7.5</b> El rol de la transferencia horizontal</a></li>
-<li class="chapter" data-level="7.6" data-path="microbial.html"><a href="microbial.html#selección-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i><b>7.6</b> Selección vs Neutralismo: los procariotas en el debate</a></li>
+<li class="chapter" data-level="7.6" data-path="microbial.html"><a href="microbial.html#seleccionismo-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i><b>7.6</b> Seleccionismo <em>vs</em> neutralismo: los procariotas en el debate</a></li>
 <li class="chapter" data-level="7.7" data-path="microbial.html"><a href="microbial.html#genómica-poblacional"><i class="fa fa-check"></i><b>7.7</b> Genómica poblacional</a></li>
 <li class="chapter" data-level="7.8" data-path="microbial.html"><a href="microbial.html#genes-de-resistencia"><i class="fa fa-check"></i><b>7.8</b> Genes de resistencia</a></li>
 <li class="chapter" data-level="7.9" data-path="microbial.html"><a href="microbial.html#introducción-a-la-epidemiología-modelos-compartimentales"><i class="fa fa-check"></i><b>7.9</b> Introducción a la epidemiología: modelos compartimentales</a></li>
+<li class="chapter" data-level="7.10" data-path="microbial.html"><a href="microbial.html#conclusión-6"><i class="fa fa-check"></i><b>7.10</b> Conclusión</a></li>
+<li class="chapter" data-level="7.11" data-path="microbial.html"><a href="microbial.html#actividades-6"><i class="fa fa-check"></i><b>7.11</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="7.11.1" data-path="microbial.html"><a href="microbial.html#control-de-lectura-6"><i class="fa fa-check"></i><b>7.11.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="7.11.2" data-path="microbial.html"><a href="microbial.html#verdadero-o-falso-6"><i class="fa fa-check"></i><b>7.11.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejercicios-7"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>Parte III: Genética Cuantitativa</b></span></li>
 <li class="chapter" data-level="8" data-path="modelogenbas.html"><a href="modelogenbas.html"><i class="fa fa-check"></i><b>8</b> El Modelo Genético Básico</a>
@@ -276,7 +344,7 @@ div.csl-indent {
 <li class="chapter" data-level="8.7" data-path="modelogenbas.html"><a href="modelogenbas.html#interacción-genotipo-x-ambiente"><i class="fa fa-check"></i><b>8.7</b> Interacción Genotipo x Ambiente</a></li>
 <li class="chapter" data-level="8.8" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-en-el-modelo-genético-básico"><i class="fa fa-check"></i><b>8.8</b> La Varianza en el modelo genético básico</a>
 <ul>
-<li><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos">Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos"><i class="fa fa-check"></i>Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
 <li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-ambiental"><i class="fa fa-check"></i>La varianza ambiental</a></li>
 <li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-de-la-interacción"><i class="fa fa-check"></i>La Varianza de la interacción</a></li>
 </ul></li>
@@ -352,7 +420,7 @@ div.csl-indent {
 <li class="chapter" data-level="11.3" data-path="selartifI.html"><a href="selartifI.html#diferencial-de-selección-e-intensidad-de-selección"><i class="fa fa-check"></i><b>11.3</b> Diferencial de selección e intensidad de selección</a></li>
 <li class="chapter" data-level="11.4" data-path="selartifI.html"><a href="selartifI.html#intensidad-de-selección-y-proporción-seleccionada"><i class="fa fa-check"></i><b>11.4</b> Intensidad de selección y proporción seleccionada</a>
 <ul>
-<li><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp">¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp"><i class="fa fa-check"></i>¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
 <li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#la-relación-entre-diferentes-formas-de-calcular-la-intensidad-de-selección"><i class="fa fa-check"></i>La relación entre diferentes formas de calcular la intensidad de selección</a></li>
 </ul></li>
 <li class="chapter" data-level="11.5" data-path="selartifI.html"><a href="selartifI.html#intervalo-generacional"><i class="fa fa-check"></i><b>11.5</b> Intervalo generacional</a></li>
@@ -476,27 +544,36 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="correlacionada" class="section level1" number="12">
-<h1><span class="header-section-number">Capítulo 12</span> Correlaciones y Respuesta Correlacionada</h1>
+<div id="correlacionada" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">Capítulo 12</span> Correlaciones y Respuesta Correlacionada<a href="correlacionada.html#correlacionada" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Hasta ahora, en la mayor parte de nuestro recorrido nos hemos limitado a examinar un solo fenotipo cada vez. Hemos construido modelos sobre el genotipo, descomponiendo su expresión en la suma de los aportes genéticos y ambientales y en algunos casos su interacción. Más aún, en el capítulo <a href="selartifI.html#selartifI">Selección Artificial I</a> estudiamos cómo sería la respuesta a nuestro esfuerzo de selección direccional en función de la presión de selección que ejercemos y de los parámetros genéticos asociados a la característica. Sin embargo, por lo general estamos interesados en mejorar más de un fenotipo en los individuos. En ovinos deseamos aumentar el peso del vellón, pero al mismo tiempo deseamos reducir el diámetro de las fibras. En producción lechera (en nuestro país) deseamos aumentar la producción de grasa y de proteína (en kg), pero al mismo tiempo deseamos reducir los litros de leche (ya que la industria castiga el volumen), reducir el recuento de células somáticas (al premiado por la industria) y al menos mantener el nivel de fertilidad del rodeo. En el capítulo <a href="selartifII.html#selartifII">Selección Artificial II</a> veremos diferentes estrategias para alcanzar estos objetivos múltiples, pero para llegar a eso primero debemos entender la base causal de las relaciones entre diferentes características fenotípicas.</p>
 <p>En el presente capítulo definiremos los tipos de correlaciones fenotípica (observable), genética (aditiva) y ambiental, en un modelo genético simplificado, donde el ambiente extendido contendrá además de los efectos ambientales propiamente dichos, todos los efectos genéticos no-aditivos. Esto nos permitirá simplificar en gran medida los análisis. Discutiremos las causas que se encuentran por detrás de las correlaciones genéticas (pleiotropía y ligamiento) y ambientales. Veremos también que la correlación fenotípica no es la suma de las correlaciones genética y ambiental, para lo que primero introduciremos una herramienta fundamental: el “path analysis” (o análisis de coeficientes de paso). A partir de esto descubriremos que la relación entre los tres tipos de correlaciones (fenotípica, genética y ambiental) también incluye las raíces cuadradas de las heredabilidades de las dos características analizadas. Veremos otra forma de llegar al mism resultado de la relación entre las tres correlaciones y discutiremos el comportamiento de esta función de varias variables. Cerraremos esta parte discutiendo algunos métodos que nos permiten estimar el valor de las correlaciones genética y ambiental, ya que ninguna de las dos es observable.</p>
 <p>En la parte final de este capítulo veremos el tema desde el punto de vista de la selección. Primero analizaremos la respuesta correlacionada que aparece en una característica cuando estamos seleccionando por otra. Esto nos permitirá desarrollar una estrategia de selección en una característica basada en la información de otra correlacionada, por lo que nalizaremos también la eficiencia relativa de las dos estrategias. Veremos una forma interesante de organizar la información genética, ambiental y fenotípica, a través de las matrices de varianza-covarianza y veremos como calcular los parámetros genéticos a partir de ellas. Finalmente, para cerrar el capítulo, veremos la generalización de la <strong>ecuación del criador</strong> a varias características a la vez a través de la <strong>ecuación de Lande</strong>, discutiremos la información que aporta la matriz <span class="math inline">\(\mathbf{G}\)</span> de varianza-covarianza genética acerca de las posibles líneas a través de las cuales la selección puede ser exitosa y de las restricciones que la misma impone a la evolución de las características.</p>
-<div id="causas-genéticas-y-ambientales-de-las-correlaciones" class="section level2" number="12.1">
-<h2><span class="header-section-number">12.1</span> Causas genéticas y ambientales de las correlaciones</h2>
+<div id="causas-genéticas-y-ambientales-de-las-correlaciones" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> Causas genéticas y ambientales de las correlaciones<a href="correlacionada.html#causas-genéticas-y-ambientales-de-las-correlaciones" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>El fenotipo, de acuerdo a nuestro modelo genético básico, lo hemos descompuesto en los aportes genéticos y los aportes ambientales, más (en algunos casos) los aportes de la interacción entre el genotipo y el ambiente. Por lo tanto, cuando hablamos de correlaciones fenotípicas entre características que observamos en los individuos, no es de extrañar que la base de estas correlaciones se puedan descomponer también en los aportes de la genética, es decir las correlaciones genéticas y los aportes ambientales y sus correspondientes correlaciones. En la presente sección vamos a discutir las bases biológicas y causales de estas correlaciones, mientras que en las siguientes secciones de este capítulo desarrollaremos la teoría para interpretarlas y cuantificarlas.</p>
 <hr />
 <p><strong>Correlación fenotípica</strong> entre dos características, medidas ambas en los mismos individuos <strong>es la correlación entre los valores fenotípicos</strong> (observables) de cada individuo en ambas características.</p>
 <hr />
-<div id="causas-de-las-correlaciones-genéticas" class="section level3 unnumbered">
-<h3>Causas de las correlaciones genéticas</h3>
+<div id="causas-de-las-correlaciones-genéticas" class="section level3 unnumbered hasAnchor">
+<h3>Causas de las correlaciones genéticas<a href="correlacionada.html#causas-de-las-correlaciones-genéticas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Claramente, podemos calcular correlaciones entre cualquier par de mediciones que tengamos en los mismos individuos y por lo tanto podemos luego buscar las causas, genética y ambientales de los resultados obtenidos. Sin embargo, en algunos casos las características que pretendemos medir como dos características diferentes son apenas distinguibles entre sí, por lo que no es sorprendente que en esos casos la correlación genética se explique por sí sola. Por ejemplo, si pesamos a los individuos en una balanza que usa el Sistema Internacional de Unidades (SI, kg) y luego las pesamos en otra balanza que utiliza las unidades del sistema imperial Británico (libras), la correlación entre las dos características debería ser muy alta, particularmente si las balanzas funcionan bien y el intervalo entre las dos medidas realizadas es corto. Técnicamente son dos características distintas, peso en la primer balanza y peso en la segunda balanza, pero más allá de factores que podemos asociar al error (calibración y variaciones temporales mínimas, por ejemplo una vaca que orinó entre medidas), la variable biológica de interés es exactamente la misma. Por lo tanto, la genética que controla el peso de los individuos es la misma y no hace falta buscar causas misteriosas. De hecho, si las estimaciones de la correlación genética entre ambas características nos dieran un valor bajo, deberíamos sospechar fuertemente de problemas serios en el estudio. Sin duda se trata de un caso extremo, pero en general resulta útil reflexionar sobre el origen posible de cualquier correlación entre características para las que obtengamos estimaciones de correlaciones fenotípicas, genéticas y ambientales.</p>
 <hr />
 <p><strong>Correlación genética (aditiva)</strong> entre dos características, medidas ambas en los mismos individuos <strong>es la correlación entre los valores de cría</strong> de cada individuo en ambas características.</p>
 <hr />
-<p>Desde el <strong>punto de vista genético</strong> hay dos causas que claramente pueden estar por detrás de la correlación entre dos mediciones realizadas en individuos (muestreados al azar) de la población: <strong>pleiotropía</strong> y <strong>ligamiento</strong>. En el capítulo <a href="dosloci.html#dosloci">Dinámica de 2 <em>loci</em></a> discutimos lo que acontecía cuando la proximidad física de los <em>loci</em> disminuía la probabilidad de recombinación entre los mismos. En ese caso, determinadas combinaciones de alelos (<strong>haplotipos</strong>) tienden a aparecer con mayor frecuencia de lo que sería esperable por azar <strong>si no estuviesen “ligados”</strong> (que sería el producto de las frecuencias de cada alelo). Si, por ejemplo, dos <em>loci</em> se encuentran fuertemente “ligados” y cada uno de ellos controla (genes de efecto mayor) una característica diferente, entonces valores específicos en una característica estarán asociados a valores específicos en otra característica, lo que genera correlación. Supongamos un caso sencillo, dos <em>loci</em> <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, cada uno gobernando una característica diferente, con dos alelos cada uno: <span class="math inline">\(A=5\)</span>, <span class="math inline">\(a=1\)</span> para la primera característica, <span class="math inline">\(B=4\)</span>, <span class="math inline">\(b=2\)</span> para la segunda característica. Si los dos <em>loci</em> no se encuentran ligados, la segregación distribuirá los gametos en forma independiente para los dos <em>loci</em> y por lo tanto no existirá correlación de valores entre las dos características. Sin embargo, en el caso de que se encuentren totalmente “ligados,” supongamos que <span class="math inline">\(A\)</span> va siempre con <span class="math inline">\(B\)</span> y que <span class="math inline">\(a\)</span> va siempre con <span class="math inline">\(b\)</span>. En ese caso, solo tendremos dos haplotipos posibles: <span class="math inline">\(AB\)</span> y <span class="math inline">\(ab\)</span>. Sin pérdida de generalidad, supongamos que las frecuencias de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son iguales a <span class="math inline">\(\frac{1}{2}\)</span>, por lo que los haplotipos <span class="math inline">\(AB\)</span> y <span class="math inline">\(ab\)</span> tendrán también frecuencias de <span class="math inline">\(\frac{1}{2}\)</span>. Ahora, los posibles genotipos y sus valores para las dos características serán</p>
+<p>Desde el <strong>punto de vista genético</strong> hay dos causas que claramente pueden estar por detrás de la correlación entre dos mediciones realizadas en individuos (muestreados al azar) de la población: <strong>pleiotropía</strong> y <strong>ligamiento</strong>. En el capítulo <a href="dosloci.html#dosloci">Dinámica de 2 <em>loci</em></a> discutimos lo que acontecía cuando la proximidad física de los <em>loci</em> disminuía la probabilidad de recombinación entre los mismos. En ese caso, determinadas combinaciones de alelos (<strong>haplotipos</strong>) tienden a aparecer con mayor frecuencia de lo que sería esperable por azar <strong>si no estuviesen “ligados”</strong> (que sería el producto de las frecuencias de cada alelo). Si, por ejemplo, dos <em>loci</em> se encuentran fuertemente “ligados” y cada uno de ellos controla (genes de efecto mayor) una característica diferente, entonces valores específicos en una característica estarán asociados a valores específicos en otra característica, lo que genera correlación. Supongamos un caso sencillo, dos <em>loci</em> <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, cada uno gobernando una característica diferente, con dos alelos cada uno: <span class="math inline">\(A=5\)</span>, <span class="math inline">\(a=1\)</span> para la primera característica, <span class="math inline">\(B=4\)</span>, <span class="math inline">\(b=2\)</span> para la segunda característica. Si los dos <em>loci</em> no se encuentran ligados, la segregación distribuirá los gametos en forma independiente para los dos <em>loci</em> y por lo tanto no existirá correlación de valores entre las dos características. Sin embargo, en el caso de que se encuentren totalmente “ligados”, supongamos que <span class="math inline">\(A\)</span> va siempre con <span class="math inline">\(B\)</span> y que <span class="math inline">\(a\)</span> va siempre con <span class="math inline">\(b\)</span>. En ese caso, solo tendremos dos haplotipos posibles: <span class="math inline">\(AB\)</span> y <span class="math inline">\(ab\)</span>. Sin pérdida de generalidad, supongamos que las frecuencias de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son iguales a <span class="math inline">\(\frac{1}{2}\)</span>, por lo que los haplotipos <span class="math inline">\(AB\)</span> y <span class="math inline">\(ab\)</span> tendrán también frecuencias de <span class="math inline">\(\frac{1}{2}\)</span>. Ahora, los posibles genotipos y sus valores para las dos características serán</p>
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="14%" />
+<col width="19%" />
+<col width="16%" />
+<col width="16%" />
+<col width="11%" />
+<col width="11%" />
+<col width="10%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Genotipo</th>
@@ -552,13 +629,13 @@ div.csl-indent {
 <p>Arriba, <strong>Dif. 1</strong> y <strong>Dif.2</strong> representan las diferencias de los valores de cada genotipo respecto a las medias correspondientes de cada característica (que están en la última línea de la tabla, en la columna respectiva), mientras que <strong>Prod.1,2</strong> se refiere al producto cruzado de esas diferencias.</p>
 <p>Las varianzas de las características 1 y 2 y la covarianza entre ellas se calculan como de costumbre, es decir</p>
 <p><span class="math display">\[\begin{equation}
- {\sigma^2_1=\frac{1}{4}(4)^2+\frac{1}{2}(0)^2+\frac{1}{4}(-4)^2=4+0+4=8}\\
- {\sigma^2_2=\frac{1}{4}(2)^2+\frac{1}{2}(0)^2+\frac{1}{4}(-2)^2=1+0+1=2}\\
- {\sigma_{12}=\frac{1}{4}8+\frac{1}{2}0+\frac{1}{4}8=2+0+2=4}
+{\sigma^2_1=\frac{1}{4}(4)^2+\frac{1}{2}(0)^2+\frac{1}{4}(-4)^2=4+0+4=8}\\
+{\sigma^2_2=\frac{1}{4}(2)^2+\frac{1}{2}(0)^2+\frac{1}{4}(-2)^2=1+0+1=2}\\
+{\sigma_{12}=\frac{1}{4}8+\frac{1}{2}0+\frac{1}{4}8=2+0+2=4}
 \end{equation}\]</span></p>
 <p>De acuerdo a la definición del coeficiente de correlación, podemos calcularla a partir de los datos de la tabla de arriba como</p>
 <p><span class="math display">\[\begin{equation}
- {r_{12}=\frac{\sigma_{12}}{\sqrt{\sigma^2_1\ \sigma^2_2}}=\frac{4}{\sqrt{8 \times 2}}=\frac{4}{\sqrt{16}}=\frac{4}{4}=1}
+{r_{12}=\frac{\sigma_{12}}{\sqrt{\sigma^2_1\ \sigma^2_2}}=\frac{4}{\sqrt{8 \times 2}}=\frac{4}{\sqrt{16}}=\frac{4}{4}=1}
 \end{equation}\]</span></p>
 <p>Es decir, en este caso, la correlación genética (aditiva) entre las dos características es igual a 1. Como no hemos invocado ningún otro fenómeno, solo el <strong>ligamiento completo</strong> entre estos dos <em>loci</em>, pese a que hemos tomado valores arbitrarios para los alelos, la posibilidad de que el ligamiento sea causa de la correlación genética queda asentado.</p>
 <p>En el caso de la correlación inducida por el desequilibrio de ligamiento, se trata de un fenómeno de carácter temporal; excepto en las regiones cromosómica que no poseen recombinación, en la medida de que discurra el tiempo, dependiendo de la tasa de recombinación, en algún momento se producirán dichos eventos de recombinación entre los <em>loci</em> y por lo tanto el fenómeno de ligamiento tenderá a desaparecer, como vimos en la sección <a href="dosloci.html#la-evolución-en-el-tiempo-del-desequilibrio-de-ligamiento">La evolución en el tiempo del desequilibrio de ligamiento</a> del capítulo <a href="dosloci.html#dosloci">Dinámica de 2 <em>loci</em></a>. De hecho, como vimos en dicha sección, la tasa de decaimiento del ligamiento es aproximadamente exponencial, ya que para una tasa de recombinación <span class="math inline">\(r\)</span>, el desequilibrio en el tiempo <span class="math inline">\(t\)</span> (medido en generaciones) es igual a</p>
@@ -583,13 +660,13 @@ Figura 12.1: Ilustración de algunos mecanismos moleculares que generan pleiotro
 </p>
 <p>Como hemos discutido previamente en otros capítulos, son raras las características de interés cuantitativas gobernadas por un solo gen y no demasiadas las que parecen gobernadas por unos pocos genes de efecto mayor. Esto lleva a una dificultad importante a la hora de identificar el mecanismo preciso a nivel molecular y estimar sus efectos: existen pocas características cuantitativas gobernadas por muy pocos genes, donde se podrían identificar en forma relativamente sencilla los mecanismos de las interacciones. La mayoría están gobernadas por muchos genes, donde por lo tanto resulta casi imposible determinar todas las posibles interacciones entre los mismos (reguladores, inhibidores, etc.) y mucho menos estimar sus efectos. Sin embargo, entre las correlaciones genéticas estudiadas hay muchas que son fuertes o moderadamente fuertes y que persisten a lo largo del tiempo, por lo que debemos suponer que existe un nivel importante de pleiotropía para las mismas.</p>
 <p>Existen numerosos ejemplos de pleiotropía en características más cualitativas que cuantitativas (en muchos casos porque las mismas resultan difíciles de cuantificar, como por ejemplo con el grado de padecimiento de una enfermedad). Un ejemplo clásico de pleiotropía a nivel de enfermedades que se ven en humanos es la <strong>fenilcetonuria</strong> (también conocida como <strong>PKU</strong>), una alteración congénita del metabolismo causada por reducción o ausencia de la actividad en la enzima <strong>fenilalanina hidroxilasa</strong>. Esta última enzima es codificada por el gen PAH, localizado en el cromosoma 12 entre las bandas 12q22-q24.2 y tiene como cometido metabolizar el aminoácido <strong>fenilalanina</strong> (“Phe”), convirtiéndolo en otros metabolitos útiles para el cuerpo, es especial el aminoácido <strong>tirosina</strong> (“Tyr”). Se conocen más de 400 mutaciones en ese gen que producen una alteración en la capacidad metabólica del mismo, lo que lleva bajo una dieta normal a un incremento patológico en los niveles de fenilalanina. Estos niveles elevados de fenilalanina dañan el cerebro (usualmente en recién nacidos), provocando anormalidades en su funcionamiento, microencefalia, discapacidad intelectual, desórdenes de conducta, pero también otras manifestaciones físicas como decoloración de cabellos y piel, un olor muy particular y eccema. Claramente, el efecto genético de un gen (PAH) se manifiesta en diferentes características fenotípica, lo que es nuestra definición de pleiotropía. Afortunadamente, en nuestro país y en gran parte del mundo se les realiza a los recién nacidos un test que se conoce como <strong>despistaje de enfermedades metabólicas</strong> (y que en nuestro país incluye Hipotiroidismo congénito, Fenilcetonuria, Hiperplasia suprarrenal congénita y Fibrosis quística) por lo que detectada en forma temprana alcanza con un control estricto de la dieta para eliminar sus consecuencias.</p>
-<p>Entre los animales domésticos se debate el rol que pudo (y puede haber tenido la pleiotropía) en los procesos de domesticación. De hecho, pese a que hemos domesticado a diferentes especies, de grupos tan distantes como las aves y los mamíferos, en general determinadas características se repiten cuando comparamos la especie domesticada con la correspondiente salvaje (mansedumbre, tolerancia al humano, menor curiosidad, menor tamaño de las glándulas suprarrenales, etc.). Sin duda que podemos apelar en algunos casos al ligamiento entre características y en algunos casos se han encontrado determinantes genéticos en el mismo entorno genómico, pero parece difícil de generalizar a todas las características. Sin embargo, por las dificultades que hemos mencionado previamente para identificar las bases moleculares de la pleiotropía en características cuantitativas, ha resultado una teoría con poco sustento (<span class="citation"><a href="#ref-Wright2015" role="doc-biblioref">D. Wright</a> (<a href="#ref-Wright2015" role="doc-biblioref">2015</a>)</span>).</p>
-<p>Un ejemplo de pleiotropía en animales es el de la sordera en gatos blancos de ojos azules, donde el 40% de estos padecen la enfermedad. Una pista acerca de la base genética de esta enfermedad proviene de que los gatos con un ojo amarillo y el otro azul solo son sordos del lado del ojo azul. Se trata de una patología no exclusivamente observable en gatos, ya que por ejemplo, el síndrome de Waardenburg (SW) en humanos es un trastorno que se caracteriza por sordera (en grados variables) y en anomalías en la pigmentación de los ojos, cabello y piel (todas ellas estructuras derivadas de la cresta neural). Otro ejemplo de pleiotropía en animales domésticos es la que produce el gen “frizzle” en aves, por ejemplo la raza Kirin de gallinas. En efecto, mutaciones en este gen provocan un curvado hacia afuera de las plumas, en lugar de su disposición paralela al cuerpo original. Pero además de ese llamativo fenotipo, dicho gen también incrementa la temperatura corporal, aumenta la tasa metabólica y el flujo de sangre, además de incrementar la capacidad digestiva y disminuir la producción de huevos (<span class="citation"><a href="#ref-Lobo2008" role="doc-biblioref">Lobo</a> (<a href="#ref-Lobo2008" role="doc-biblioref">2008</a>)</span>).</p>
+<p>Entre los animales domésticos se debate el rol que pudo (y puede haber tenido la pleiotropía) en los procesos de domesticación. De hecho, pese a que hemos domesticado a diferentes especies, de grupos tan distantes como las aves y los mamíferos, en general determinadas características se repiten cuando comparamos la especie domesticada con la correspondiente salvaje (mansedumbre, tolerancia al humano, menor curiosidad, menor tamaño de las glándulas suprarrenales, etc.). Sin duda que podemos apelar en algunos casos al ligamiento entre características y en algunos casos se han encontrado determinantes genéticos en el mismo entorno genómico, pero parece difícil de generalizar a todas las características. Sin embargo, por las dificultades que hemos mencionado previamente para identificar las bases moleculares de la pleiotropía en características cuantitativas, ha resultado una teoría con poco sustento (<span class="citation">D. Wright (<a href="#ref-Wright2015" role="doc-biblioref">2015</a>)</span>).</p>
+<p>Un ejemplo de pleiotropía en animales es el de la sordera en gatos blancos de ojos azules, donde el 40% de estos padecen la enfermedad. Una pista acerca de la base genética de esta enfermedad proviene de que los gatos con un ojo amarillo y el otro azul solo son sordos del lado del ojo azul. Se trata de una patología no exclusivamente observable en gatos, ya que por ejemplo, el síndrome de Waardenburg (SW) en humanos es un trastorno que se caracteriza por sordera (en grados variables) y en anomalías en la pigmentación de los ojos, cabello y piel (todas ellas estructuras derivadas de la cresta neural). Otro ejemplo de pleiotropía en animales domésticos es la que produce el gen “frizzle” en aves, por ejemplo la raza Kirin de gallinas. En efecto, mutaciones en este gen provocan un curvado hacia afuera de las plumas, en lugar de su disposición paralela al cuerpo original. Pero además de ese llamativo fenotipo, dicho gen también incrementa la temperatura corporal, aumenta la tasa metabólica y el flujo de sangre, además de incrementar la capacidad digestiva y disminuir la producción de huevos (<span class="citation">Lobo (<a href="#ref-Lobo2008" role="doc-biblioref">2008</a>)</span>).</p>
 <p><br />
 </p>
 </div>
-<div id="causas-de-las-correlaciones-ambientales" class="section level3 unnumbered">
-<h3>Causas de las correlaciones ambientales</h3>
+<div id="causas-de-las-correlaciones-ambientales" class="section level3 unnumbered hasAnchor">
+<h3>Causas de las correlaciones ambientales<a href="correlacionada.html#causas-de-las-correlaciones-ambientales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Muchas de las características fenotípicas de interés poseen, por varias razones, una base causal muy similar y que a veces subyace a varias características. Por ejemplo, todas aquellas características que aumentan su expresión con el tamaño de los animales tendrán una correlación derivada de esa base común. Resulta lógico que, dentro de la misma población y de la misma raza, ovejas más grandes (más pesadas) tiendan a producir una mayor superficie de cuero y un vellón mayor (más pesado) ya que tienen más superficie. Por lo tanto, para las características de superficie de cuero ovino y peso de vellón limpio esperamos una correlación fenotípica positiva. Pero, ¿cuál es la base causal de esta correlación? Como lo expresamos antes, la causa está en que, a una densidad de fibras determinada, la superficie se vincula directamente con el número de fibras totales. Si nos ponemos más finos en la búsqueda de las causas, podríamos pensar que el tamaño (volumen) de los animales influencia directamente la superficie, ya que las formas de las ovejas son bastante similares (hay pocas ovejas esféricas, mucho menos cúbicas y no conocemos reportes de ovejas cónicas) y por lo tanto, dentro de una misma raza y población las relación superficie/volumen es una función relativamente estable. De hecho, esta relación tiene que ver con el tamaño de los animales y con el clima donde viven, ya que el calor se genera proporcionalmente al volumen, mientras que se disipa en proporción al área. Como dato curioso, <strong>algunos osos</strong> que habitan en climas muy fríos son, desde este punto de vista <strong>casi “esféricos”</strong>, ya que la esfera es el cuerpo con menor relación superficie volumen.</p>
 <hr />
 <p><strong>Correlación ambiental</strong> entre dos características, medidas ambas en los mismos individuos, estrictamente <strong>es la correlación entre los desvíos ambientales</strong> que forman parte del valor fenotípico de cada individuo en ambas características. Usualmente, en la práctica se considera un ambiente extendido, que incluye <strong>además del ambiente propiamente dichos los desvíos genéticos no-aditivos</strong>.</p>
@@ -606,7 +683,7 @@ Figura 12.1: Ilustración de algunos mecanismos moleculares que generan pleiotro
 <li><p>Llamaremos <strong>correlación fenotípica</strong> entre dos características, medidas ambas en los mismos individuos a la correlación entre los valores fenotípicos (observables) de cada individuo en ambas características.</p></li>
 <li><p>Llamaremos <strong>correlación genética (aditiva)</strong> entre dos características, medidas ambas en los mismos individuos a la correlación entre los valores de cría de cada individuo en ambas características.</p></li>
 <li><p>Desde el punto de vista genético existen dos causas aparentes para que exista corelación entre carácterísticas, ellas son la <strong>pleitropía</strong> y el <strong>ligamiento</strong>.</p></li>
-<li><p>En el <strong>caso del ligamiento</strong>, determinadas combinaciones de alelos (haplotipos) tienden a aparecer con mayor frecuencia de lo que sería esperable por azar si no estuviesen “ligados.” En este caso,si por ejemplo, dos loci se encuentran fuertemente “ligados” y cada uno de ellos controla (genes de efecto mayor) una característica diferente, entonces valores específicos en una característica estarán asociados a valores específicos en otra característica, lo que genera correlación.</p></li>
+<li><p>En el <strong>caso del ligamiento</strong>, determinadas combinaciones de alelos (haplotipos) tienden a aparecer con mayor frecuencia de lo que sería esperable por azar si no estuviesen “ligados”. En este caso,si por ejemplo, dos loci se encuentran fuertemente “ligados” y cada uno de ellos controla (genes de efecto mayor) una característica diferente, entonces valores específicos en una característica estarán asociados a valores específicos en otra característica, lo que genera correlación.</p></li>
 <li><p>En el caso de la correlación inducida por el <strong>desequilibrio de ligamiento</strong>, se trata de un fenómeno de carácter temporal; excepto en las regiones cromosómica que no poseen recombinación, en la medida de que discurra el tiempo, dependiendo de la tasa de recombinación, en algún momento se producirán dichos eventos de recombinación entre los <em>loci</em> y por lo tanto el fenómeno de ligamiento tenderá a desaparecer.</p></li>
 <li><p>En el caso de la <strong>pleitropía</strong>, la misma se entiende como el efecto que un <em>locus</em> produce en más de una característica fenotípica, sea esta entendida en el sentido tradicional o en el extendido que incluye, por ejemplo, la expresión génica.</p></li>
 <li><p>Llamaremos <strong>correlación ambiental</strong> entre dos características, medidas ambas en los mismos individuos, a estrictamente la correlacción entre los desvíos ambientales que forman parte del valor fenotípico de cada individuo en ambas características. Usualmente, en la práctica se considera un ambiente extendido, que incluye además del ambiente propiamente dichos los desvíos genéticos no-aditivos.</p></li>
@@ -614,10 +691,10 @@ Figura 12.1: Ilustración de algunos mecanismos moleculares que generan pleiotro
 </div>
 </div>
 </div>
-<div id="introducción-al-path-analysis" class="section level2" number="12.2">
-<h2><span class="header-section-number">12.2</span> Introducción al “path analysis”</h2>
-<p>En muchos casos podemos observar correlaciones entre variables (que por lo tanto son observables), pero sabemos que dichas correlaciones son producto de relaciones entre otras variables que las explican, pero que no son observables. De hecho, en muchos casos podemos establecer modelos claros con las relaciones entre las distintas variables, tanto las observables como las no-observables. El objetivo pasa a ser entonces entender y estimar los coeficientes del modelo. Con eso en mente, Sewall Wright (<span class="citation"><a href="#ref-Wright1918" role="doc-biblioref">S. Wright</a> (<a href="#ref-Wright1918" role="doc-biblioref">1918</a>)</span>; <span class="citation"><a href="#ref-Wright1934b" role="doc-biblioref">Sewall Wright</a> (<a href="#ref-Wright1934b" role="doc-biblioref">1934b</a>)</span>) desarrolló el método conocido como de los <strong>coeficientes de paso</strong> (“path coefficients” en inglés).</p>
-<p>La idea es sencilla, como se ilustra en la figura <a href="correlacionada.html#fig:pathcoeff">12.2</a>. Supongamos que tenemos una serie de variables, representadas con letras mayúsculas en la figura. Tenemos dos tipos básicos de relaciones entre variables: a) las “causales,” que vamos a representar con flechas rectas y con una sola punta, que apuntan desde la variable que explica a la explicada y b) las “no-causales,” que representan asociación de algún tipo entre variables (posiblemente debido a una causa común, no modelada), que vamos a representar con flechas curvas de dos puntas. A las variables que <strong>no reciben ninguna flecha recta</strong> (es decir, que no son explicadas por otras en el modelo) se las conoce como <strong>exógenas</strong>, mientras que <strong>las que reciben alguna flecha recta</strong> se las conoce como <strong>endógenas</strong>. Las flechas rectas representan, en un modelo lineal, variables que explican la variable a la que apuntan y por lo tanto, cuando trabajamos con correlaciones entre variables (es decir, variables estandarizadas), los coeficientes correspondientes serán los <strong>coeficientes de regresión estandarizados</strong>. Las coeficientes correspondientes a las flechas curvas de dos puntas serán simplemente los coeficientes de correlación entre las dos variables, marcando una situación de simetría que no tienen las flechas rectas.</p>
+<div id="introducción-al-path-analysis" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> Introducción al “path analysis”<a href="correlacionada.html#introducción-al-path-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En muchos casos podemos observar correlaciones entre variables (que por lo tanto son observables), pero sabemos que dichas correlaciones son producto de relaciones entre otras variables que las explican, pero que no son observables. De hecho, en muchos casos podemos establecer modelos claros con las relaciones entre las distintas variables, tanto las observables como las no-observables. El objetivo pasa a ser entonces entender y estimar los coeficientes del modelo. Con eso en mente, Sewall Wright (<span class="citation">S. Wright (<a href="#ref-Wright1918" role="doc-biblioref">1918</a>)</span>; <span class="citation">Sewall Wright (<a href="#ref-Wright1934b" role="doc-biblioref">1934b</a>)</span>) desarrolló el método conocido como de los <strong>coeficientes de paso</strong> (“path coefficients” en inglés).</p>
+<p>La idea es sencilla, como se ilustra en la figura <a href="correlacionada.html#fig:pathcoeff">12.2</a>. Supongamos que tenemos una serie de variables, representadas con letras mayúsculas en la figura. Tenemos dos tipos básicos de relaciones entre variables: a) las “causales”, que vamos a representar con flechas rectas y con una sola punta, que apuntan desde la variable que explica a la explicada y b) las “no-causales”, que representan asociación de algún tipo entre variables (posiblemente debido a una causa común, no modelada), que vamos a representar con flechas curvas de dos puntas. A las variables que <strong>no reciben ninguna flecha recta</strong> (es decir, que no son explicadas por otras en el modelo) se las conoce como <strong>exógenas</strong>, mientras que <strong>las que reciben alguna flecha recta</strong> se las conoce como <strong>endógenas</strong>. Las flechas rectas representan, en un modelo lineal, variables que explican la variable a la que apuntan y por lo tanto, cuando trabajamos con correlaciones entre variables (es decir, variables estandarizadas), los coeficientes correspondientes serán los <strong>coeficientes de regresión estandarizados</strong>. Las coeficientes correspondientes a las flechas curvas de dos puntas serán simplemente los coeficientes de correlación entre las dos variables, marcando una situación de simetría que no tienen las flechas rectas.</p>
 <p>De hecho, al observar con atención la figura <a href="correlacionada.html#fig:pathcoeff">12.2</a> vemos que hay un “tercer tipo” de flecha, representadas en color verde, que son flechas rectas pero que no salen desde ninguna variable específica. Estas flechas se usan para representar la variación residual, es decir, la no explicada por el modelo. En ciertos casos estas flechas son omitidas de los diagramas, pero deben ser tenidas en cuenta a la hora de entender la varianza explicada por las distintas variables del modelo. En algunos casos, como veremos más adelante, el residuo se modela específicamente (por ejemplo, dentro del ambiente), por lo que este tipo de flechas no aparece en dichos diagramas.</p>
 <p><br />
 </p>
@@ -640,20 +717,20 @@ Figura 12.2: Ejemplo de un diagrama de caminos (o de paso), ilustrando las relac
 </p>
 <p>Veamos algún ejemplo, utilizando la figura <a href="correlacionada.html#fig:pathcoeff">12.2</a> antes de pasar a la aplicación en genética que es de nuestro interés. La correlación entre <span class="math inline">\({A}\)</span> y <span class="math inline">\({B}\)</span> está determinada por el coeficiente correspondiente al único camino que cumple las tres reglas, es decir <span class="math inline">\({g}\)</span>. Lo mismo, para cualquiera de los pares de variables exógenas (<span class="math inline">\({A}\)</span>, <span class="math inline">\({B}\)</span> y <span class="math inline">\({C}\)</span>), con los coeficientes <span class="math inline">\({h}\)</span> e <span class="math inline">\({i}\)</span>. Si queremos ahora calcular la correlación entre <span class="math inline">\({A}\)</span> y <span class="math inline">\({D}\)</span>, que denotaremos como <span class="math inline">\({r_{AD}}\)</span>, tenemos un camino directo entre <span class="math inline">\({A}\)</span> y <span class="math inline">\({D}\)</span>, con coeficiente <span class="math inline">\({a}\)</span> y otro camino indirecto, desde <span class="math inline">\({A}\)</span> hacia <span class="math inline">\({B}\)</span> y luego hacia <span class="math inline">\({D}\)</span>, es decir, con coeficientes <span class="math inline">\(g\)</span> y <span class="math inline">\(b\)</span> (que deben multiplicarse). Sumando los dos caminos, tenemos entonces que</p>
 <p><span class="math display">\[\begin{equation}
- {r_{AD}=a+b\cdot g}
+{r_{AD}=a+b\cdot g}
 \end{equation}\]</span></p>
 <p>Pongámosle números a los coeficientes y veamos si podemos calcular alguna correlación más compleja. Supongamos que los coeficientes estimados (de alguna forma) son los siguientes: <span class="math inline">\({a=0,3; b=0,1;c=0,4;d=0,2;e=0,15;f=0,25;g=0,05;h=0,05;i=0,15}\)</span>. Vamos a calcular la correlación esperada entre <span class="math inline">\({A}\)</span> y <span class="math inline">\({E}\)</span>. De acuerdo a las tres reglas que vimos más arriba, los caminos posibles son: <span class="math inline">\({a\cdot d}\)</span>, <span class="math inline">\({g \cdot b \cdot d}\)</span> y <span class="math inline">\({i\cdot c}\)</span>. Por lo tanto, la correlación buscada será</p>
 <p><span class="math display">\[\begin{equation}
- {r_{AE}=a \cdot d + g \cdot b \cdot d + i\cdot c=0,3 \cdot 0,2 + 0,05 \cdot 0,1 \cdot 0,2 + 0,15 \cdot 0,40=0,121}
+{r_{AE}=a \cdot d + g \cdot b \cdot d + i\cdot c=0,3 \cdot 0,2 + 0,05 \cdot 0,1 \cdot 0,2 + 0,15 \cdot 0,40=0,121}
 \end{equation}\]</span></p>
-<p>La idea es bastante sencilla, aunque la estimación estadística de los coeficientes suele ser relativamente compleja y la especificación de los modelos muy importante. Al mismo tiempo que no deben faltar variables que sean relevantes, ya que sesgarían los estimados de los coeficientes, el agregar flechas innecesarias vuelve inestable las estimación de los coeficientes y por lo tanto representa modelos poco fiables a la hora de extraer conclusiones de los mismos. Existen muchos tratados sobre el tema, pero un excelente tratamiento del método y sus aplicaciones se encuentra en <span class="citation"><a href="#ref-LoehlinBeaujean2017" role="doc-biblioref">Loehlin and Beaujean</a> (<a href="#ref-LoehlinBeaujean2017" role="doc-biblioref">2017</a>)</span>.</p>
-<div id="la-relación-entre-las-correlaciones-fenotípica-genética-y-ambiental" class="section level3 unnumbered">
-<h3>La relación entre las correlaciones fenotípica, genética y ambiental</h3>
-<p>La pregunta que se nos viene en mente es cómo se relaciona esto con la genética, y en particular con con la correlaciones fenotípicas, genéticas y ambientales que trataremos en este capítulo. Un excelente y extenso tratamiento del tema se puede ver en el libro <span class="citation"><a href="#ref-Li1955" role="doc-biblioref">Li</a> (<a href="#ref-Li1955" role="doc-biblioref">1955</a>)</span>, que se recomienda como lectura suplementaria. Como vimos previamente en el capítulo <a href="modelogenbas.html#el-modelo-genético-básico">El modelo genético básico</a>, por lo general solo observamos los fenotipos de los individuos, no los diferentes efectos genéticos y ambientales. Pero como vimos antes también, la correlación que observamos entre dos características medidas en cada uno de los individuos de una población posee, en general, una base genética y una base ambiental. La tentación inicial sería entonces de suponer (en forma errónea) que la correlación fenotípica es la suma de las correlaciones genética y ambiental. Sin embargo, tenemos una situación un poco más compleja y para modelarla vamos a utilizar el método de los coeficientes de paso desarrollado por Sewall Wright.</p>
-<p>Para simplicar nuestro modelo, supongamos que solamente vamos a modelar el fenotipo de cada característica como la suma de los efectos aditivos y el resto de los componentes, que llamaremos “ambiente,” pero que tiene también los componentes genéticos no-aditivos y los errores de medición. Es decir, si llamamos <span class="math inline">\({E^{*}}\)</span> al ambiente propiamente dicho (más los errores de medición, entonces los fenotipos de las dos características que consideramos los modelamos como</p>
+<p>La idea es bastante sencilla, aunque la estimación estadística de los coeficientes suele ser relativamente compleja y la especificación de los modelos muy importante. Al mismo tiempo que no deben faltar variables que sean relevantes, ya que sesgarían los estimados de los coeficientes, el agregar flechas innecesarias vuelve inestable las estimación de los coeficientes y por lo tanto representa modelos poco fiables a la hora de extraer conclusiones de los mismos. Existen muchos tratados sobre el tema, pero un excelente tratamiento del método y sus aplicaciones se encuentra en <span class="citation">Loehlin and Beaujean (<a href="#ref-LoehlinBeaujean2017" role="doc-biblioref">2017</a>)</span>.</p>
+<div id="la-relación-entre-las-correlaciones-fenotípica-genética-y-ambiental" class="section level3 unnumbered hasAnchor">
+<h3>La relación entre las correlaciones fenotípica, genética y ambiental<a href="correlacionada.html#la-relación-entre-las-correlaciones-fenotípica-genética-y-ambiental" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La pregunta que se nos viene en mente es cómo se relaciona esto con la genética, y en particular con con la correlaciones fenotípicas, genéticas y ambientales que trataremos en este capítulo. Un excelente y extenso tratamiento del tema se puede ver en el libro <span class="citation">Li (<a href="#ref-Li1955" role="doc-biblioref">1955</a>)</span>, que se recomienda como lectura suplementaria. Como vimos previamente en el capítulo <a href="modelogenbas.html#el-modelo-genético-básico">El modelo genético básico</a>, por lo general solo observamos los fenotipos de los individuos, no los diferentes efectos genéticos y ambientales. Pero como vimos antes también, la correlación que observamos entre dos características medidas en cada uno de los individuos de una población posee, en general, una base genética y una base ambiental. La tentación inicial sería entonces de suponer (en forma errónea) que la correlación fenotípica es la suma de las correlaciones genética y ambiental. Sin embargo, tenemos una situación un poco más compleja y para modelarla vamos a utilizar el método de los coeficientes de paso desarrollado por Sewall Wright.</p>
+<p>Para simplicar nuestro modelo, supongamos que solamente vamos a modelar el fenotipo de cada característica como la suma de los efectos aditivos y el resto de los componentes, que llamaremos “ambiente”, pero que tiene también los componentes genéticos no-aditivos y los errores de medición. Es decir, si llamamos <span class="math inline">\({E^{*}}\)</span> al ambiente propiamente dicho (más los errores de medición, entonces los fenotipos de las dos características que consideramos los modelamos como</p>
 <p><span class="math display" id="eq:modcor12">\[\begin{equation}
- {P_1=A_1+E_1;\ E_1=D_1+I_1+E^{*}_1} \\
- {P_2=A_2+E_2;\ E_2=D_2+I_2+E^{*}_2}
+{P_1=A_1+E_1;\ E_1=D_1+I_1+E^{*}_1} \\
+{P_2=A_2+E_2;\ E_2=D_2+I_2+E^{*}_2}
 \tag{12.1}
 \end{equation}\]</span></p>
 <p>En la figura <a href="correlacionada.html#fig:corrfga">12.3</a> podemos observar una representación del diagrama de paso que representa la relación entre las variables correspondientes a las dos características (por ejemplo, entre Peso de Vellón Limpio y Diámetro de Fibra, entre Peso al Destete y Peso a los 18 meses, etc.). De acuerdo a nuestro modelo especificado en las ecuaciones <a href="correlacionada.html#eq:modcor12">(12.1)</a>, no existe interacción entre genotipo y ambiente, por lo que estas variables (y los caminos que las conectan) serán independientes. La línea horizontal a trazos representa la separación entre lo observable y lo no observable. **La flecha curva a trazos NO se especifíca normalmente en los diagramas ya que precisamente dicha correlación es la que el diagrama intenta explicar (con las otras variables); por dicha razón aparece representada a trazos y algo separada.</p>
@@ -671,54 +748,54 @@ Figura 12.3: Método de los “coeficientes de paso” para determinar las relac
 <p>Existen entonces dos caminos independientes que debemos sumar, el genético (aditivo) y el ambiental. Para ello necesitamos obtener los coeficientes asociados a cada uno de los pasos. Los coeficientes de las flechas curvas son precisamente las correlaciones genética y ambiental, que dependerán de cada característica y que aún no sabemos cómo estimar (lo veremos más adelante), pero que a los fines de esta sección (relación entre correlaciones) nos alcanza con dejar así. Por otra parte, si recordamos de más arriba que los coeficientes de las líneas rectas eran los coeficientes de regresión estandarizados, debemos entonces determinar su valor.</p>
 <p>Primero procederemos con los coeficientes de paso que unen a las variables <span class="math inline">\({A_1 \rightarrow P_1}\)</span> y <span class="math inline">\({A_2 \rightarrow P_2}\)</span>. De acuerdo a la definición de coeficiente de regresión estandarizado, <span class="math inline">\({\beta^{*}_{yx}=b_{yx}\frac{\sigma_x}{\sigma_y}}\)</span>, si <strong>el fenotipo es la variable dependiente</strong> y <strong>el valor de cría la independiente</strong> (es decir, la que explica parcialmente el fenotipo), el correspondiente coeficiente de regresión estandarizado sería</p>
 <p><span class="math display" id="eq:corrap">\[\begin{equation}
- {\beta^{*}_{PA}=b_{PA}\frac{\sigma_A}{\sigma_P}=\frac{Cov(A,P)}{\sigma^2_A}\frac{\sigma_A}{\sigma_P}=\frac{\sigma^2_A}{\sigma^2_A}\frac{\sigma_A}{\sigma_P}=\frac{\sigma_A}{\sigma_P}=h}
+{\beta^{*}_{PA}=b_{PA}\frac{\sigma_A}{\sigma_P}=\frac{Cov(A,P)}{\sigma^2_A}\frac{\sigma_A}{\sigma_P}=\frac{\sigma^2_A}{\sigma^2_A}\frac{\sigma_A}{\sigma_P}=\frac{\sigma_A}{\sigma_P}=h}
 \tag{12.2}
 \end{equation}\]</span></p>
 <p>Por lo tanto, el coeficiente de paso para <span class="math inline">\({A_1 \rightarrow P_1}\)</span> será <span class="math inline">\({h_1}\)</span> y el correspondiente a <span class="math inline">\({A_2 \rightarrow P_2}\)</span> será <span class="math inline">\({h_2}\)</span>.</p>
 <p>Es conocido (de los cursos previos de estadística) que la proporción de la varianza explicada por una variable en la regresión lineal es el coeficiente de regresión estandarizado elevado al cuadrado (conocido como <span class="math inline">\(R^2\)</span>, no confundir esta <span class="math inline">\(R\)</span> con la respuesta a la selección para la que también usamos <span class="math inline">\({R}\)</span>, o con la repetibilidad, que en algunos textos también utilizan la misma letra), por lo que lo explicado por los efectos genéticos aditivos sería, para la característica 1, <span class="math inline">\({(h_1)^2=h^2_1}\)</span>, es decir la heredabilidad. Como hay solo dos variables independientes para cada fenotipo (lo genético-aditivo y el resto, ambiente más genética no-aditiva, incluyendo el error), entonces el otro componente debe explicar el resto de la varianza, es decir</p>
 <p><span class="math display" id="eq:path10">\[\begin{equation}
- {(h_1)^2+(e_1)^2=1} \therefore  {e^2_1=1-h^2_1 \therefore e_1=\sqrt{1-h^2_1}}
+{(h_1)^2+(e_1)^2=1} \therefore  {e^2_1=1-h^2_1 \therefore e_1=\sqrt{1-h^2_1}}
 \tag{12.3}
 \end{equation}\]</span></p>
 <p>De la misma manera, para la segunda característica</p>
 <p><span class="math display" id="eq:path11">\[\begin{equation}
- {(h_2)^2+(e_2)^2=1} \therefore  {e^2_2=1-h^2_2 \therefore e_2=\sqrt{1-h^2_2}}
+{(h_2)^2+(e_2)^2=1} \therefore  {e^2_2=1-h^2_2 \therefore e_2=\sqrt{1-h^2_2}}
 \tag{12.4}
 \end{equation}\]</span></p>
 <p>Aplicando la reglas de Wright, solo hay dos caminos posibles para explicar la correlación entre <span class="math inline">\({P_1}\)</span> y <span class="math inline">\({P_2}\)</span>, el camino formado por <span class="math inline">\({h_1\ r_{A_{12}}\ h_2}\)</span> y el camino formado por <span class="math inline">\({e_1\ r_{E_{12}}\ e_2}\)</span> y por lo tanto debemos sumarlos. Por lo tanto (reordenando los términos en cada camino), la correlación fenotípica observada es igual a</p>
 <p><span class="math display" id="eq:path15">\[\begin{equation}
- {r_{P_{12}}=h_1\cdot h_2\cdot r_{A_{12}}+e_1\cdot e_2\cdot r_{E_{12}}}
+{r_{P_{12}}=h_1\cdot h_2\cdot r_{A_{12}}+e_1\cdot e_2\cdot r_{E_{12}}}
 \tag{12.5}
 \end{equation}\]</span></p>
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-12.1" class="section level4 unnumbered">
-<h4>Ejemplo 12.1</h4>
+<div id="ejemplo-12.1" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 12.1<a href="correlacionada.html#ejemplo-12.1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>En las <strong>ovejas verdes</strong> se observa una correlación (fenotípica) entre el Peso al Año de edad (PA) y el Peso de Vellón Sucio (PVS) de <span class="math inline">\({r_P}=0,70\)</span> (no vamos a usar los subíndices <span class="math inline">\(_{12}\)</span> en las correlaciones para simplificar la notación). Las heredabilidades de ambas características fueron estimadas en <span class="math inline">\(h^2_{PA}=0,49\)</span> y <span class="math inline">\(h^2_{PA}=0,36\)</span>. Por otra parte, un estudio reciente determinó que el mejor estimado de la correlación genética (aditiva) entre ambas características es de <span class="math inline">\({r_A}=0,55\)</span>. Estimar la correlación ambiental (en sentido amplio) y discutir los resultados.</p>
 <p><br />
 </p>
 <p>De acuerdo a la ecuación <a href="correlacionada.html#eq:path15">(12.5)</a>, la relación entre las correlaciones fenotípica, genética (aditiva) y ambiental es</p>
 <p><span class="math display">\[\begin{equation}
- {r_P=h_1\cdot h_2\cdot r_{A}+e_1\cdot e_2\cdot r_{E}}
+{r_P=h_1\cdot h_2\cdot r_{A}+e_1\cdot e_2\cdot r_{E}}
 \end{equation}\]</span></p>
 <p>Por lo tanto, si despejamos la correlación ambiental, tenemos que</p>
 <p><span class="math display">\[\begin{equation}
- {r_{E_{12}}=\frac{r_{P_{12}}-h_1\cdot h_2\cdot r_{A_{12}}}{e_1\cdot e_2}}
+{r_{E_{12}}=\frac{r_{P_{12}}-h_1\cdot h_2\cdot r_{A_{12}}}{e_1\cdot e_2}}
 \end{equation}\]</span></p>
 <p>Los coeficientes de paso genéticos se calculan directamente haciendo la raíz cuadrada de las correspondientes heredabilidades, es decir</p>
 <p><span class="math display">\[\begin{equation}
- {h_{PA}=\sqrt{h^2_{PA}}=\sqrt{0,36}=0,6}\\
- {h_{PVS}=\sqrt{h^2_{PVS}}=\sqrt{0,49}=0,7}
+{h_{PA}=\sqrt{h^2_{PA}}=\sqrt{0,36}=0,6}\\
+{h_{PVS}=\sqrt{h^2_{PVS}}=\sqrt{0,49}=0,7}
 \end{equation}\]</span></p>
 <p>Por otra parte, los coeficientes de paso ambientales se calculan utilizando los resultados de la ecuaciones <a href="correlacionada.html#eq:path10">(12.3)</a> y <a href="correlacionada.html#eq:path11">(12.4)</a></p>
 <p><span class="math display">\[\begin{equation}
- {e_{PA}=\sqrt{1-h^2_{PA}}=\sqrt{1-0,36}=\sqrt{0,64}=0,80} \\
- {e_{PVS}=\sqrt{1-h^2_{PVS}}=\sqrt{1-0,49}=\sqrt{0,51} \approx 0,71}
+{e_{PA}=\sqrt{1-h^2_{PA}}=\sqrt{1-0,36}=\sqrt{0,64}=0,80} \\
+{e_{PVS}=\sqrt{1-h^2_{PVS}}=\sqrt{1-0,49}=\sqrt{0,51} \approx 0,71}
 \end{equation}\]</span></p>
 <p>Ahora, poniendo estos valores en la ecuación para <span class="math inline">\({r_{E_{12}}}\)</span>, tenemos</p>
 <p><span class="math display">\[\begin{equation}
- {r_{E}=\frac{r_{P}-h_{PA}\cdot h_{PVS}\cdot r_{A}}{e_{PA}\cdot e_{PVS}}=\frac{0,70-0,6 \cdot 0,7 \cdot 0,55}{0,80 \cdot 0,71} \approx 0,83}
+{r_{E}=\frac{r_{P}-h_{PA}\cdot h_{PVS}\cdot r_{A}}{e_{PA}\cdot e_{PVS}}=\frac{0,70-0,6 \cdot 0,7 \cdot 0,55}{0,80 \cdot 0,71} \approx 0,83}
 \end{equation}\]</span></p>
 <p>Por lo tanto, observamos que tanto la correlación fenotípica, como la genética (aditiva) y la ambiental son todas positivas y de carácter importante. La razón de la correlación genética entre las dos características consideradas es bastante esperable (dentro de la misma raza y población) ya que animales más pesados suelen ser más grandes y por lo tanto tener mayor superficie para generar lana. Se trata de una relación que estaría fundamentada, de alguna manera, en la pleiotropía, ya que los genes que regulan el crecimiento afectan a ambas características. Al mismo tiempo, la correlación ambiental también parece esperable, por similares razones a las de la correlación genética: animales que crecen más (por factores ambientales), van a producir medidas más altas en las dos características.</p>
 <p><br />
@@ -747,10 +824,10 @@ Figura 12.3: Método de los “coeficientes de paso” para determinar las relac
 </div>
 </div>
 </div>
-<div id="métodos-para-determinar-la-correlación-genética" class="section level2" number="12.3">
-<h2><span class="header-section-number">12.3</span> Métodos para determinar la correlación genética</h2>
+<div id="métodos-para-determinar-la-correlación-genética" class="section level2 hasAnchor" number="12.3">
+<h2><span class="header-section-number">12.3</span> Métodos para determinar la correlación genética<a href="correlacionada.html#métodos-para-determinar-la-correlación-genética" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Hasta acá hemos discutido acerca de los distintos tipos de correlaciones, fenotípica, genética (aditiva) y ambiental, sin preocuparnos demasiado en su determinación. De hecho, la correlación fenotípica se puede calcular directamente de las observaciones. Por otra parte, también vimos la relación entre las tres correlaciones, por lo que si contamos con dos de ellas y las heredabilidades también podemos estimar la faltante. Más aún, veremos más adelante como calcular la correlación genética a partir de la matriz de varianza-covarianza genética <span class="math inline">\(\mathbf{G}\)</span>, pero no discutimos cómo llegamos a la determinación de los elementos de la misma (las varianzas y covarianzas genéticas).</p>
-<p>Históricamente, los métodos experimentales que se usaron para estimar la correlación genética fueron los mismos que se usaron para determinar las heredabilidades de las característícas. De hecho, con un mínimo de planificación, el mismo experimento permite obtener todas las estimaciones de interés. En la actualidad, la mayor parte de las estimaciones se realizan a través de modelos mixtos lineales en su forma multivariada, usando métodos iterativos sobre la versión multivariada del BLUP, propuesta inicialmente por <span class="citation"><a href="#ref-HendersonQuaas1976" role="doc-biblioref">C. R. Henderson and Quaas</a> (<a href="#ref-HendersonQuaas1976" role="doc-biblioref">1976</a>)</span> y que veremos en el capítulo <a href="selartifII.html#selartifII">Selección Artificial II</a>.</p>
+<p>Históricamente, los métodos experimentales que se usaron para estimar la correlación genética fueron los mismos que se usaron para determinar las heredabilidades de las característícas. De hecho, con un mínimo de planificación, el mismo experimento permite obtener todas las estimaciones de interés. En la actualidad, la mayor parte de las estimaciones se realizan a través de modelos mixtos lineales en su forma multivariada, usando métodos iterativos sobre la versión multivariada del BLUP, propuesta inicialmente por <span class="citation">C. R. Henderson and Quaas (<a href="#ref-HendersonQuaas1976" role="doc-biblioref">1976</a>)</span> y que veremos en el capítulo <a href="selartifII.html#selartifII">Selección Artificial II</a>.</p>
 <p>De cualquier manera, simplemente como forma de comprender las bases de la estimación vamos a ver uno de los diseños experimentales posibles. La idea es obtener estimaciones a través de un diseño del tipo <strong>progenitor-progenie</strong>. Para eso vamos a medir las dos características en todas las parejas de progenitor-progenie. Vamos a llamar <span class="math inline">\({X}\)</span> a los progenitores e <span class="math inline">\({Y}\)</span> a las progenies, mientras que vamos a utilizar los subíndices <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span> para las dos características.</p>
 <p>De acuerdo con la notación anterior, vamos a obtener las siguientes 4 covarianzas:</p>
 <p><br />
@@ -763,29 +840,29 @@ Figura 12.3: Método de los “coeficientes de paso” para determinar las relac
 </ul>
 <p>La fórmula para las covarianzas observadas, para <span class="math inline">\(N\)</span> parejas de progenitor progenie es</p>
 <p><span class="math display" id="eq:metestcora1">\[\begin{equation}
- {Cov_{XY}\frac{\sum XY-\frac{\sum X \sum Y}{N}}{N-1}}
+{Cov_{XY}\frac{\sum XY-\frac{\sum X \sum Y}{N}}{N-1}}
 \tag{12.6}
 \end{equation}\]</span></p>
 <p>Desde el punto de vista causal, las <strong>covarianzas cruzadas</strong> (una característica en el progenitor y la otra, diferente, en la progenie) se pueden describir como</p>
 <p><span class="math display" id="eq:metestcora2">\[\begin{equation}
- {Cov_{X_{1}Y_{2}}=Cov_{X_{2}Y_{1}}=\frac{1}{2}Cov_{A_{12}}+\frac{1}{4}Cov_{AA_{12}}+...}
+{Cov_{X_{1}Y_{2}}=Cov_{X_{2}Y_{1}}=\frac{1}{2}Cov_{A_{12}}+\frac{1}{4}Cov_{AA_{12}}+...}
 \tag{12.7}
 \end{equation}\]</span></p>
 <p>es decir, un medio de la covarianza aditiva entre las características <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span>, un cuarto de la covarianza epistática del tipo <span class="math inline">\({A \times A}\)</span>, etc.</p>
 <p>Por otro lado, como vimos en la sección <a href="parentesco.html#semejanza-entre-parientes">Semejanza entre parientes</a>, las covarianzas fenotípicas progenitor-progenie estiman un medio de varianza aditiva, por lo que</p>
 <p><span class="math display" id="eq:metestcora3">\[\begin{equation}
- {Cov_{X_{1}Y_{1}}=\frac{1}{2} V_{A_{1}}} \\
- {Cov_{X_{2}Y_{2}}=\frac{1}{2} V_{A_{2}}}
+{Cov_{X_{1}Y_{1}}=\frac{1}{2} V_{A_{1}}} \\
+{Cov_{X_{2}Y_{2}}=\frac{1}{2} V_{A_{2}}}
 \tag{12.8}
 \end{equation}\]</span></p>
 <p>Por lo tanto, si despreciamos en la ecuación <a href="correlacionada.html#eq:metestcora2">(12.7)</a> los términos epistáticos, un estimador razonable de la correlación genética entre las dos características sería</p>
 <p><span class="math display" id="eq:metestcora4">\[\begin{equation}
- {\hat r_{A_{12}}=\frac{Cov_{X_{1}Y_{2}}+Cov_{X_{2}Y_{1}}}{2 \sqrt{Cov_{X_{1}Y_{1}}\cdot Cov_{X_{2}Y_{2}}}}}
+{\hat r_{A_{12}}=\frac{Cov_{X_{1}Y_{2}}+Cov_{X_{2}Y_{1}}}{2 \sqrt{Cov_{X_{1}Y_{1}}\cdot Cov_{X_{2}Y_{2}}}}}
 \tag{12.9}
 \end{equation}\]</span></p>
-<p>Siempre es importante recordar que se trata de un estimador del “verdadero” valor de un parámetro genético y por lo tanto, la estimación es función de una o más variables aleatorias, es decir, con incertidumbre asociada a la estimación. Aunque la derivación escapa el alcance de la presente sección (<span class="citation"><a href="#ref-Robertson1959" role="doc-biblioref">Robertson</a> (<a href="#ref-Robertson1959" role="doc-biblioref">1959</a>)</span>; <span class="citation"><a href="#ref-Tallis1959" role="doc-biblioref">Tallis</a> (<a href="#ref-Tallis1959" role="doc-biblioref">1959</a>)</span>), un estimador aproximado del error estándar (<span class="math inline">\({EE()}\)</span>) del estimador de la correlación genética es</p>
+<p>Siempre es importante recordar que se trata de un estimador del “verdadero” valor de un parámetro genético y por lo tanto, la estimación es función de una o más variables aleatorias, es decir, con incertidumbre asociada a la estimación. Aunque la derivación escapa el alcance de la presente sección (<span class="citation">Robertson (<a href="#ref-Robertson1959" role="doc-biblioref">1959</a>)</span>; <span class="citation">Tallis (<a href="#ref-Tallis1959" role="doc-biblioref">1959</a>)</span>), un estimador aproximado del error estándar (<span class="math inline">\({EE()}\)</span>) del estimador de la correlación genética es</p>
 <p><span class="math display" id="eq:metestcora5">\[\begin{equation}
- {EE(r_A) \approx (1-r^2_A)\sqrt{\frac{EE(h^2_1)\ EE(h^2_2)}{2\ h^2_1\ h^2_2}}}
+{EE(r_A) \approx (1-r^2_A)\sqrt{\frac{EE(h^2_1)\ EE(h^2_2)}{2\ h^2_1\ h^2_2}}}
 \tag{12.10}
 \end{equation}\]</span></p>
 <p><br />
@@ -843,12 +920,12 @@ r_{A_{XY}}=\frac{cov_B}{\sigma_{BX}\ \sigma_{BY}}=\frac{\frac{Cov_{A_{XY}}}{4}}{
 \tag{12.12}
 \end{equation}\]</span></p>
 <p>que es el estimador de la correlación genética aditiva para este <strong>diseño de medio hermanos</strong>.</p>
-<p>Un tratamiento mucho más detallado, así como diferentes estimados de correlaciones genéticas para diferentes características de interés productivo se encuentra en <span class="citation"><a href="#ref-CardellinoRovira1987" role="doc-biblioref">Cardellino and Rovira</a> (<a href="#ref-CardellinoRovira1987" role="doc-biblioref">1987</a>)</span>. También, en la sección <a href="correlacionada.html#respuesta-correlacionada">Respuesta correlacionada</a> veremos un procedimiento sencillo para estimar la correlación genética entre dos características, basado en la medición simultanea de la respuesta directa y la respuesta correlacionada.</p>
+<p>Un tratamiento mucho más detallado, así como diferentes estimados de correlaciones genéticas para diferentes características de interés productivo se encuentra en <span class="citation">Cardellino and Rovira (<a href="#ref-CardellinoRovira1987" role="doc-biblioref">1987</a>)</span>. También, en la sección <a href="correlacionada.html#respuesta-correlacionada">Respuesta correlacionada</a> veremos un procedimiento sencillo para estimar la correlación genética entre dos características, basado en la medición simultanea de la respuesta directa y la respuesta correlacionada.</p>
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-12.2" class="section level4 unnumbered">
-<h4>Ejemplo 12.2</h4>
+<div id="ejemplo-12.2" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 12.2<a href="correlacionada.html#ejemplo-12.2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>La morfometría craneal en ovinos es un área de investigación en expansión. En un experimento para determinar la correlación genética entre el largo de la sutura frontal (<strong>Lsf</strong>) y el largo del hueso parietal (<strong>Lhp</strong>) en <strong>ovejas verdes</strong>, se midieron ambas variables en un conjunto de 100 cráneos, obtenidos de 50 parejas madre-hija.</p>
 <p>Los resultados del experimento se pueden resumir de la siguiente manera</p>
 <p><br />
@@ -912,8 +989,8 @@ estimador razonable de la correlación genética entre ambas sería: <span class
 </p>
 </div>
 </div>
-<div id="la-correlación-fenotípica-y-su-relación-con-la-correlación-genética-aditiva-y-ambiental" class="section level2" number="12.4">
-<h2><span class="header-section-number">12.4</span> La correlación fenotípica y su relación con la correlación genética aditiva y ambiental</h2>
+<div id="la-correlación-fenotípica-y-su-relación-con-la-correlación-genética-aditiva-y-ambiental" class="section level2 hasAnchor" number="12.4">
+<h2><span class="header-section-number">12.4</span> La correlación fenotípica y su relación con la correlación genética aditiva y ambiental<a href="correlacionada.html#la-correlación-fenotípica-y-su-relación-con-la-correlación-genética-aditiva-y-ambiental" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Más arriba, en la sección [Introducción al “path analysis”], dedujimos la relación entre las correlaciones fenotípica, genética y ambiental usando esa herramienta poderosa. Ahora vamos a arribar al mismo resultado partiendo desde otra perspectiva y discutiremos algunas restricciones asociadas a la relación entre las tres correlaciones y las heredabilidades de las dos características.</p>
 <p>Nuevamente, como hicimos antes, usaremos una versión simplificada de nuestro modelo genético
 básico, <span class="math inline">\({P=A+E}\)</span>, con <span class="math inline">\({E=D+I+E^{*}}\)</span> y <span class="math inline">\({E^{*}}\)</span> representando el ambiente propiamente dicho, más los errores de medición. La simplificación anterior significa que <strong>nuestro fenotipo ahora solo lo dividimos</strong> en el componente <strong>genético aditivo</strong> y <strong>el resto</strong>,
@@ -923,15 +1000,15 @@ las reglas que ya conocemos para las covarianzas y asumiendo que no
 existe co-variación entre el componente aditivo de un individuo y el
 ambiente (extendido) en el otro,</p>
 <p><span class="math display" id="eq:corrpae1">\[\begin{equation}
- {P=A+E}\\
- {Cov(P_1,P_2)=Cov(A_1+E_1,A_2+E_2)=Cov(A_1,A_2)+Cov(E_1,E_2)}
+{P=A+E}\\
+{Cov(P_1,P_2)=Cov(A_1+E_1,A_2+E_2)=Cov(A_1,A_2)+Cov(E_1,E_2)}
 \tag{12.13}
 \end{equation}\]</span></p>
 <p>A su vez, a partir de la definición de coeficiente de correlación,</p>
 <p><span class="math display" id="eq:corrpae2">\[\begin{equation}
- {r_{P_{12}}=\frac{Cov(P_1,P_2)} {\hat \sigma_{P_{1}}\ \hat \sigma_{P_{2}}}  \iff  Cov(P_1,P_2)= r_{P_{12}}\ \hat \sigma_{P_{1}}\ \hat \sigma_{P_{2}}} \\
- {r_{A_{12}}=\frac{Cov(A_1,A_2)} {\hat \sigma_{A_{1}}\ \hat \sigma_{A_{2}}}  \iff  Cov(A_1,A_2)= r_{A_{12}}\ \hat \sigma_{A_{1}}\ \hat \sigma_{A_{2}}} \\
- {r_{E_{12}}=\frac{Cov(E_1,E_2)} {\hat \sigma_{E_{1}}\ \hat \sigma_{E_{2}}}}  \iff   {Cov(E_1,E_2)= r_{E_{12}}\ \hat \sigma_{E_{1}}\ \hat \sigma_{E_{2}}}
+{r_{P_{12}}=\frac{Cov(P_1,P_2)} {\hat \sigma_{P_{1}}\ \hat \sigma_{P_{2}}}  \iff  Cov(P_1,P_2)= r_{P_{12}}\ \hat \sigma_{P_{1}}\ \hat \sigma_{P_{2}}} \\
+{r_{A_{12}}=\frac{Cov(A_1,A_2)} {\hat \sigma_{A_{1}}\ \hat \sigma_{A_{2}}}  \iff  Cov(A_1,A_2)= r_{A_{12}}\ \hat \sigma_{A_{1}}\ \hat \sigma_{A_{2}}} \\
+{r_{E_{12}}=\frac{Cov(E_1,E_2)} {\hat \sigma_{E_{1}}\ \hat \sigma_{E_{2}}}}  \iff   {Cov(E_1,E_2)= r_{E_{12}}\ \hat \sigma_{E_{1}}\ \hat \sigma_{E_{2}}}
 \tag{12.14}
 \end{equation}\]</span></p>
 <p>Si asumimos que la heredabilidad representa la partición de la
@@ -940,27 +1017,27 @@ coeficiente de “ambientalidad” (que claramente no representa el
 ambiente, sino todo lo que no es heredable), que sumado a la
 heredabilidad debe dar 1 (el todo):</p>
 <p><span class="math display" id="eq:corrpae3">\[\begin{equation}
- {h^2_1+e^2_1=1 \iff e^2_1=1-h^2_1 \iff e_1=\sqrt{1-h^2_1}} \\
- {h^2_2+e^2_2=1 \iff e^2_2=1-h^2_2 \iff e_2=\sqrt{1-h^2_2}} \\
- {h_1=\sqrt{h^2_1}=\sqrt{\frac{\sigma^{2}_{A_1}}{\sigma^{2}_{P_1}}}= \frac{\sigma_{A_1}}{\sigma_{P_1}}} \\
- {h_2=\sqrt{h^2_2}=\sqrt{\frac{\sigma^{2}_{A_2}}{\sigma^{2}_{P_2}}}= \frac{\sigma_{A_2}}{\sigma_{P_2}}} \\
- {r_{P_{12}}=r_{A_{12}}\ h_1\ h_2\ + r_{E_{12}}\ e_1\ e_2}
+{h^2_1+e^2_1=1 \iff e^2_1=1-h^2_1 \iff e_1=\sqrt{1-h^2_1}} \\
+{h^2_2+e^2_2=1 \iff e^2_2=1-h^2_2 \iff e_2=\sqrt{1-h^2_2}} \\
+{h_1=\sqrt{h^2_1}=\sqrt{\frac{\sigma^{2}_{A_1}}{\sigma^{2}_{P_1}}}= \frac{\sigma_{A_1}}{\sigma_{P_1}}} \\
+{h_2=\sqrt{h^2_2}=\sqrt{\frac{\sigma^{2}_{A_2}}{\sigma^{2}_{P_2}}}= \frac{\sigma_{A_2}}{\sigma_{P_2}}} \\
+{r_{P_{12}}=r_{A_{12}}\ h_1\ h_2\ + r_{E_{12}}\ e_1\ e_2}
 \tag{12.15}
 \end{equation}\]</span></p>
 <p>Ahora, sustituyendo las covarianzas en la parte de más arriba por su
 correspondiente producto del coeficiente de correlación multiplicado por
 los devíos estándar, tenemos</p>
 <p><span class="math display" id="eq:corrpae4">\[\begin{equation}
- {Cov(P_1,P_2)=Cov(A_1,A_2)+Cov(E_1,E_2) \iff} \\
- {r_{P_{12}}\ \hat \sigma_{P_{1}}\ \hat \sigma_{P_{2}}= r_{A_{12}}\ \hat \sigma_{A_{1}}\ \hat \sigma_{A_{2}} + r_{E_{12}}\ \hat \sigma_{E_{1}}\ \hat \sigma_{E_{2}}}  \\
- {r_{P_{12}}=\frac{r_{A_{12}}\ \hat \sigma_{A_{1}}\ \hat \sigma_{A_{2}} + r_{E_{12}}\ \hat \sigma_{E_{1}}\ \hat \sigma_{E_{2}}}{\hat \sigma_{P_{1}}\ \hat \sigma_{P_{2}}}
+{Cov(P_1,P_2)=Cov(A_1,A_2)+Cov(E_1,E_2) \iff} \\
+{r_{P_{12}}\ \hat \sigma_{P_{1}}\ \hat \sigma_{P_{2}}= r_{A_{12}}\ \hat \sigma_{A_{1}}\ \hat \sigma_{A_{2}} + r_{E_{12}}\ \hat \sigma_{E_{1}}\ \hat \sigma_{E_{2}}}  \\
+{r_{P_{12}}=\frac{r_{A_{12}}\ \hat \sigma_{A_{1}}\ \hat \sigma_{A_{2}} + r_{E_{12}}\ \hat \sigma_{E_{1}}\ \hat \sigma_{E_{2}}}{\hat \sigma_{P_{1}}\ \hat \sigma_{P_{2}}}
 =\frac{r_{A_{12}}\ \hat \sigma_{A_{1}}\ \hat \sigma_{A_{2}}}{\hat \sigma_{P_{1}}\ \hat \sigma_{P_{2}}} +\frac{r_{E_{12}}\ \hat \sigma_{E_{1}}\ \hat \sigma_{E_{2}}}{\hat \sigma_{P_{1}}\ \hat \sigma_{P_{2}}}} \\
- {r_{P_{12}}=r_{A_{12}}\ \frac{\hat \sigma_{A_{1}}}{\hat \sigma_{P_{1}}}\ \frac{\hat \sigma_{A_{2}}}{\hat \sigma_{P_{2}}}\ + r_{E_{12}}\ \frac{\hat \sigma_{E_{1}}}{\hat \sigma_{P_{1}}}\ \frac{\hat \sigma_{E_{2}}}{\hat \sigma_{P_{2}}}}
+{r_{P_{12}}=r_{A_{12}}\ \frac{\hat \sigma_{A_{1}}}{\hat \sigma_{P_{1}}}\ \frac{\hat \sigma_{A_{2}}}{\hat \sigma_{P_{2}}}\ + r_{E_{12}}\ \frac{\hat \sigma_{E_{1}}}{\hat \sigma_{P_{1}}}\ \frac{\hat \sigma_{E_{2}}}{\hat \sigma_{P_{2}}}}
 \tag{12.16}
 \end{equation}\]</span></p>
 <p>Lo que nos lleva, finalmente a la relación</p>
 <p><span class="math display" id="eq:eqcorrP">\[\begin{equation}
- {r_{P_{12}}=r_{A_{12}}\ h_1\ h_2+ r_{E_{12}}\ e_1\ e_2}
+{r_{P_{12}}=r_{A_{12}}\ h_1\ h_2+ r_{E_{12}}\ e_1\ e_2}
 \tag{12.17}
 \end{equation}\]</span></p>
 <p>Claramente, la correlación fenotípica no solo depende de las
@@ -983,8 +1060,8 @@ aditiva, mientras que para la correlación fenotípica, a partir de las
 heredabilidades, tenemos</p>
 <p><span class="math display" id="eq:corrpae5">\[\begin{equation}
 {e_1=\sqrt{1-h^2_1}\ \text{y}\ e_2=\sqrt{1-h^2_2} \therefore \\
- e_1 \cdot e_2 = \sqrt{1-h^2_1} \cdot \sqrt{1-h^2_2} = \sqrt{(1-h^2_1) \cdot (1-h^2_2)}}\\
- {e_1 \cdot e_2 = \sqrt{1-h^2_1-h^2_2+h^2_1 \cdot h^2_2}}
+e_1 \cdot e_2 = \sqrt{1-h^2_1} \cdot \sqrt{1-h^2_2} = \sqrt{(1-h^2_1) \cdot (1-h^2_2)}}\\
+{e_1 \cdot e_2 = \sqrt{1-h^2_1-h^2_2+h^2_1 \cdot h^2_2}}
 \tag{12.18}
 \end{equation}\]</span></p>
 <p>Ahora, claramente no alcanza con una función que tome el producto de las
@@ -996,7 +1073,7 @@ para ilustrar el comportamiento de la correlación fenotípica respecto a
 la genética y la ambiental, asumiendo para simplificar que
 <span class="math inline">\({h^2_1 = h^2_2 = h^2}\)</span>, tenemos</p>
 <p><span class="math display" id="eq:corrpae6">\[\begin{equation}
- {\sqrt{(1-h^2_1) \cdot (1-h^2_2)} = \sqrt{1-2 \cdot h^2 + (h^2)^2}}
+{\sqrt{(1-h^2_1) \cdot (1-h^2_2)} = \sqrt{1-2 \cdot h^2 + (h^2)^2}}
 \tag{12.19}
 \end{equation}\]</span></p>
 <p>Es decir, bajo el supuesto anterior, a partir del producto de las
@@ -1005,12 +1082,12 @@ función de las correlaciones genética y ambiental. Los resultados de
 este análisis, para distintos valores del producto de heredabilidades se
 pueden observar en la figura <a href="correlacionada.html#fig:corrP">12.4</a>. Si llamamos</p>
 <p><span class="math display" id="eq:corrpae7">\[\begin{equation}
- {a = \sqrt{(h^2)^2} = h^2\ \text{y}\ b = \sqrt{1-2 \cdot h^2 + (h^2)^2}}
+{a = \sqrt{(h^2)^2} = h^2\ \text{y}\ b = \sqrt{1-2 \cdot h^2 + (h^2)^2}}
 \tag{12.20}
 \end{equation}\]</span></p>
 <p>entonces</p>
 <p><span class="math display" id="eq:corrpae8">\[\begin{equation}
- {r_{P_{12}} = a \cdot r_{A_{12}}\ + b \cdot r_{E_{12}}}
+{r_{P_{12}} = a \cdot r_{A_{12}}\ + b \cdot r_{E_{12}}}
 \tag{12.21}
 \end{equation}\]</span></p>
 <p>O sea, dado el producto de las heredabilidades (bajo el supuesto de que
@@ -1019,22 +1096,22 @@ combinación lineal de las correlaciones genética y ambiental. Más aún,
 se trata de una combinación lineal aunque no se cumpla la igualdad de
 heredabilidades, solo que ahora</p>
 <p><span class="math display" id="eq:corrpae9">\[\begin{equation}
- {b=\sqrt{1-h^2_1-h^2_2+h^2_1 \cdot h^2_2}}
+{b=\sqrt{1-h^2_1-h^2_2+h^2_1 \cdot h^2_2}}
 \tag{12.22}
 \end{equation}\]</span></p>
 <p>y por lo tanto será en
 general menor que cuando son idénticas las heredabilidades. Para
 demostrar esto último, basta que se cumpla</p>
 <p><span class="math display" id="eq:corrpae10">\[\begin{equation}
- {\sqrt{1-h^2_1-h^2_2+h^2_1 \cdot h^2_2} \leq \sqrt{1-2 \cdot h^2 + (h^2)^2}}
+{\sqrt{1-h^2_1-h^2_2+h^2_1 \cdot h^2_2} \leq \sqrt{1-2 \cdot h^2 + (h^2)^2}}
 \tag{12.23}
 \end{equation}\]</span></p>
 <p>para lo que alcanza con que</p>
 <p><span class="math display" id="eq:corrpae11">\[\begin{equation}
- {h^2_1+h^2_2 \geq 2 \cdot h^2\ \text{ya que}\ (h^2)^2 = h^2_1 \cdot h^2_2\ \therefore} \\
- {h^2_1+h^2_2 \geq 2 \cdot \sqrt{h^2_1 \cdot h^2_2}  \iff (h^2_1+h^2_2)^2 \geq 4 \cdot h^2_1 \cdot h^2_2} \\
- {(h^2_1)^2 + 2 \cdot h^2_1 \cdot h^2_2 + (h^2_2)^2 \geq 4 \cdot h^2_1 \cdot h^2_2 \iff (h^2_1)^2 - 2 \cdot h^2_1 \cdot h^2_2 + (h^2_2)^2 \geq 0} \\
- {\iff (h^2_1 - h^2_2)^2 \geq 0}
+{h^2_1+h^2_2 \geq 2 \cdot h^2\ \text{ya que}\ (h^2)^2 = h^2_1 \cdot h^2_2\ \therefore} \\
+{h^2_1+h^2_2 \geq 2 \cdot \sqrt{h^2_1 \cdot h^2_2}  \iff (h^2_1+h^2_2)^2 \geq 4 \cdot h^2_1 \cdot h^2_2} \\
+{(h^2_1)^2 + 2 \cdot h^2_1 \cdot h^2_2 + (h^2_2)^2 \geq 4 \cdot h^2_1 \cdot h^2_2 \iff (h^2_1)^2 - 2 \cdot h^2_1 \cdot h^2_2 + (h^2_2)^2 \geq 0} \\
+{\iff (h^2_1 - h^2_2)^2 \geq 0}
 \tag{12.24}
 \end{equation}\]</span></p>
 <p>El único caso donde el lado
@@ -1063,12 +1140,12 @@ irse hacia la vertical (donde <span class="math inline">\({r_{P_{12}}=r_{A_{12}}
 figura se observa claramente la relación lineal entre las tres
 correlaciones ya que cualquier curva de nivel (correlación fenotípica)
 se puede construir como combinación lineal de las otras dos
-correlaciones. Una discusión interesante de este tema se puede encontrar en <span class="citation"><a href="#ref-Searle1961" role="doc-biblioref">Searle</a> (<a href="#ref-Searle1961" role="doc-biblioref">1961</a>)</span>.</p>
+correlaciones. Una discusión interesante de este tema se puede encontrar en <span class="citation">Searle (<a href="#ref-Searle1961" role="doc-biblioref">1961</a>)</span>.</p>
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-12.3" class="section level4 unnumbered">
-<h4>Ejemplo 12.3</h4>
+<div id="ejemplo-12.3" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 12.3<a href="correlacionada.html#ejemplo-12.3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Dos características fenotípicas se encuentran correlacionadas a través de una correlación genética <span class="math inline">\(r_A\)</span> y una correlación ambiental <span class="math inline">\(r_E\)</span>. Si las heredabilidades de las dos características son <span class="math inline">\(h^2_1=0,25\)</span> y <span class="math inline">\(h^2_2=0,75\)</span>, ¿cuál es la relación entre el aporte de la correlación genética y la ambiental a la correlación fenotípica? ¿Cuáles son las ponderaciones de la correlación genética y de la correlación ambiental?</p>
 <p>Si las heredabilidades fuesen <span class="math inline">\(h^2_1=0,40\)</span> y <span class="math inline">\(h^2_2=0,60\)</span>, ¿cuál sería la relación? ¿Cuáles son ahora las ponderaciones de la correlación genética y de la correlación ambiental?</p>
 <p><br />
@@ -1108,35 +1185,35 @@ correlaciones. Una discusión interesante de este tema se puede encontrar en <sp
 </div>
 </div>
 </div>
-<div id="respuesta-correlacionada" class="section level2" number="12.5">
-<h2><span class="header-section-number">12.5</span> Respuesta correlacionada</h2>
+<div id="respuesta-correlacionada" class="section level2 hasAnchor" number="12.5">
+<h2><span class="header-section-number">12.5</span> Respuesta correlacionada<a href="correlacionada.html#respuesta-correlacionada" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Hasta ahora hemos venido trabajando las correlaciones entre características desde el punto de vista de la observación de sus efectos y de las relaciones entre ellas (fenotípica, genética y ambiental). Sin embargo, desde el punto de vista del mejoramiento genético es fundamental entender lo que sucede con las características que están correlacionadas desde el punto de vista genético con las características por las que realizamos la selección. Es decir, si dos características se encuentran correlacionadas genéticamente, al realizar selección en una de ellas, también estaremos desplazando la media de la otra característica, a pesar de no haber realizado ninguna selección en forma explícita en ella.</p>
 <p>Para analizar cómo la selección en una característica afecta a las características correlacionadas genéticamente vamos a suponer que tenemos dos características, una que llamaremos <span class="math inline">\({X}\)</span> y sobre la que realizaremos la selección y una segunda característica <span class="math inline">\({Y}\)</span>, que se encuentra correlacionada con la primera (notar el cambio de notación que hicimos, ya que en lugar de llamarlas <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span> vamos a usar las tradicionales <span class="math inline">\({X}\)</span> e <span class="math inline">\({Y}\)</span>).</p>
 <p>Como vimos antes, la respuesta en la característica bajo selección, <span class="math inline">\({X}\)</span> en nuestro caso, es equivalente al valor reproductivo medio de los individuos seleccionados (porque es lo que se transmite completamente). Al mismo tiempo, el cambio que ocurrirá en <span class="math inline">\({Y}\)</span>, es decir la respuesta, lo podemos plantear entonces como la regresión de los valores reproductivos de <span class="math inline">\({Y}\)</span> en <span class="math inline">\({X}\)</span>. El coeficiente de esta regresión sería por lo tanto</p>
 <p><span class="math display" id="eq:respcor1">\[\begin{equation}
- { b_{A_{YX}}=\frac{Cov_{A}(X,Y)}{\sigma^2_{A_{X}}}}
+{ b_{A_{YX}}=\frac{Cov_{A}(X,Y)}{\sigma^2_{A_{X}}}}
 \tag{12.25}
 \end{equation}\]</span></p>
 <p>Pero de la ecuación <a href="correlacionada.html#eq:corrpae2">(12.14)</a> sabemos que la relación entre la covarianza genética (aditiva) y su correspondientes coeficiente de correlación nos permite escribirla como</p>
 <p><span class="math display" id="eq:respcor2">\[\begin{equation}
- {r_{A_{XY}}=\frac{Cov_{A}(X,Y)}{\sigma_{A_{X}}\sigma_{A_{Y}}} \therefore Cov_{A}(X,Y)=r_{A_{XY}} \sigma_{A_{X}}\sigma_{A_{Y}}}
+{r_{A_{XY}}=\frac{Cov_{A}(X,Y)}{\sigma_{A_{X}}\sigma_{A_{Y}}} \therefore Cov_{A}(X,Y)=r_{A_{XY}} \sigma_{A_{X}}\sigma_{A_{Y}}}
 \tag{12.26}
 \end{equation}\]</span></p>
 <p>por lo que, sustituyendo este último resultado en la ecuación <a href="correlacionada.html#eq:respcor1">(12.25)</a>, tenemos que el coeficiente de regresión es igual a</p>
 <p><span class="math display" id="eq:respcor3">\[\begin{equation}
- {b_{A_{YX}}=\frac{r_{A_{XY}} \sigma_{A_{X}}\sigma_{A_{Y}}}{\sigma^2_{A_{X}}}=r_{A_{XY}}\frac{\sigma_{A_{Y}}}{\sigma_{A_{X}}}}
+{b_{A_{YX}}=\frac{r_{A_{XY}} \sigma_{A_{X}}\sigma_{A_{Y}}}{\sigma^2_{A_{X}}}=r_{A_{XY}}\frac{\sigma_{A_{Y}}}{\sigma_{A_{X}}}}
 \tag{12.27}
 \end{equation}\]</span></p>
 <p>Como vimos en el capítulo <a href="selartifI.html#selartifI">Selección Artificial I</a>, la respuesta a la selección (en una generación realizando selección individual) para la característica <span class="math inline">\({X}\)</span> la podemos escribir como</p>
 <p><span class="math display" id="eq:respcor4">\[\begin{equation}
- {R_X=i_X\ h_X\ \sigma_{A_{X}}}
+{R_X=i_X\ h_X\ \sigma_{A_{X}}}
 \tag{12.28}
 \end{equation}\]</span></p>
 <p>Por lo tanto, la respuesta correlacionada en la característíca <span class="math inline">\({Y}\)</span> es</p>
 <p><span class="math display" id="eq:respcor5">\[\begin{equation}
- {RC_Y=b_{A_{YX}}\ R_X=b_{A_{YX}}\ i_X\ h_x\ \sigma_{A_{X}}=}\\
- {=r_{A_{XY}}\frac{\sigma_{A_{Y}}}{\sigma_{A_{X}}} \ i_X\ h_X\ \sigma_{A_{X}} \therefore}\\
- {RC_Y=i_X\ h_X\ r_{A_{XY}}\ \sigma_{A_{Y}}}
+{RC_Y=b_{A_{YX}}\ R_X=b_{A_{YX}}\ i_X\ h_x\ \sigma_{A_{X}}=}\\
+{=r_{A_{XY}}\frac{\sigma_{A_{Y}}}{\sigma_{A_{X}}} \ i_X\ h_X\ \sigma_{A_{X}} \therefore}\\
+{RC_Y=i_X\ h_X\ r_{A_{XY}}\ \sigma_{A_{Y}}}
 \tag{12.29}
 \end{equation}\]</span></p>
 <p>El resultado de la ecuación anterior es intuitivo y fácil de interpretar. El cambio que vamos a esperar en la característica <span class="math inline">\({Y}\)</span> cuando se realiza selección en la característica <span class="math inline">\({X}\)</span> es igual a la intensidad de selección (en <span class="math inline">\({X}\)</span>) multiplicada por el desvío estándar aditivo de la característica <span class="math inline">\({Y}\)</span> (que es la que estamos observando y que, además, debe tener las unidades de la respuesta) y por un “coeficiente de paso” formado por <span class="math inline">\({h_X\ r_{A_{XY}}}\)</span>. Si observamos nuevamente la figura <a href="correlacionada.html#fig:corrfga">12.3</a>, vemos que <span class="math inline">\({A_2}\)</span> (que actúa con efecto <span class="math inline">\({h_2}\)</span> sobre <span class="math inline">\({P_2}\)</span>) podría ser sustituida por <span class="math inline">\({h_1\ r_{A_{12}}}\)</span> (la correlación entre <span class="math inline">\({A_2}\)</span> y <span class="math inline">\({P_1}\)</span>). Cambiando <span class="math inline">\(1\)</span> por <span class="math inline">\({X}\)</span> y <span class="math inline">\(2\)</span> por <span class="math inline">\({Y}\)</span>, se entiende perfectamente el rol que juega el producto <span class="math inline">\({h_X\ r_{A_{XY}}}\)</span> en lugar de <span class="math inline">\({h_Y}\)</span>.</p>
@@ -1148,30 +1225,36 @@ RC_Y=i_X\ h_X\ r_{A_{XY}}\ \sigma_{A_{Y}}=i_X\ h_X\ r_{A_{XY}}\ h_Y\ \sigma_{P_{
 <p>que en lugar de depender del desvío aditivo de la característica, depende ahora del desvío fenotípico de la misma.</p>
 <p>De hecho, estas últimas ecuaciones sugieren un método para estimar la correlación genética entre las dos características. La idea es sencilla: separamos la población en dos grupos, uno sobre el que vamos a realizar selección directa en la característica <span class="math inline">\({X}\)</span> y el otro sobre el que vamos a realizar selección directa sobre la característica <span class="math inline">\({Y}\)</span>. En ambos grupos realizamos la misma presión de selección, por lo que <span class="math inline">\({i_X=i_Y=i}\)</span> y en ambos vamos a medir la respuesta a la selección en ambas características, la seleccionada directamente y la correlacionada. El cociente entre selección directa e indirecta para la característica <span class="math inline">\({X}\)</span> es igual a</p>
 <p><span class="math display" id="eq:respcor7">\[\begin{equation}
- {\frac{RC_X}{R_X}=\frac{i_Y\ h_Y\ r_{A_{XY}}\ \sigma_{A_{X}}}{i_X\ h_X\ \sigma_{A_{X}}}=\frac{h_Y}{h_X}\ r_{A_{XY}}}
+{\frac{RC_X}{R_X}=\frac{i_Y\ h_Y\ r_{A_{XY}}\ \sigma_{A_{X}}}{i_X\ h_X\ \sigma_{A_{X}}}=\frac{h_Y}{h_X}\ r_{A_{XY}}}
 \tag{12.31}
 \end{equation}\]</span></p>
 <p>mientras que para la característica <span class="math inline">\({Y}\)</span> es igual a</p>
 <p><span class="math display" id="eq:respcor8">\[\begin{equation}
- {\frac{RC_Y}{R_Y}=\frac{i_X\ h_X\ r_{A_{XY}}\ \sigma_{A_{Y}}}{i_Y\ h_Y\ \sigma_{A_{Y}}}=\frac{h_X}{h_Y}\ r_{A_{XY}}}
+{\frac{RC_Y}{R_Y}=\frac{i_X\ h_X\ r_{A_{XY}}\ \sigma_{A_{Y}}}{i_Y\ h_Y\ \sigma_{A_{Y}}}=\frac{h_X}{h_Y}\ r_{A_{XY}}}
 \tag{12.32}
 \end{equation}\]</span></p>
 <p>Ahora, si multiplicamos los resultados de las ecuaciones <a href="correlacionada.html#eq:respcor7">(12.31)</a> y <a href="correlacionada.html#eq:respcor8">(12.32)</a>, tenemos que</p>
 <p><span class="math display" id="eq:respcor9">\[\begin{equation}
- {\frac{RC_X}{R_X}\frac{RC_Y}{R_Y}=\frac{h_Y}{h_X}\ r_{A_{XY}} \frac{h_X}{h_Y}\ r_{A_{XY}}=\frac{h_Y}{h_X} \frac{h_X}{h_Y}\ (r_{A_{XY}})^2 \therefore}\\
- {r^2_{A_{XY}}=\frac{RC_X}{R_X}\frac{RC_Y}{R_Y}}
+{\frac{RC_X}{R_X}\frac{RC_Y}{R_Y}=\frac{h_Y}{h_X}\ r_{A_{XY}} \frac{h_X}{h_Y}\ r_{A_{XY}}=\frac{h_Y}{h_X} \frac{h_X}{h_Y}\ (r_{A_{XY}})^2 \therefore}\\
+{r^2_{A_{XY}}=\frac{RC_X}{R_X}\frac{RC_Y}{R_Y}}
 \tag{12.33}
 \end{equation}\]</span></p>
 <p>que es un buen estimador de la correlación genética (aditiva) entre las dos características, siempre y cuando las respuestas recíprocas coincidan, de acuerdo a lo esperado por la teoría.</p>
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-12.4" class="section level4 unnumbered">
-<h4>Ejemplo 12.4</h4>
+<div id="ejemplo-12.4" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 12.4<a href="correlacionada.html#ejemplo-12.4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>La oveja galesa de montaña <strong>Balwen</strong> (<strong>Balwen Welsh Mountain</strong>), figura <a href="correlacionada.html#fig:balwen">12.5</a>, es una raza que se cría especialmente para carne. A fin de definir estrategias para mejorar su producción de lana, para estimar la correlación genética entre peso de vellón sucio (<strong>PVS</strong>) y peso de vellón limpio (<strong>PVL</strong>) se realizó un experimento de selección directa y selección indirecta para ambas características, donde se obtuvieron las siguiente respuestas en una generación:</p>
 <p><br />
 </p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="32%" />
+<col width="30%" />
+<col width="14%" />
+<col width="22%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Característica Seleccionada</th>
@@ -1248,22 +1331,22 @@ r_{A_{XY}}=\sqrt{r^2_{A_{XY}}}=\sqrt{0,6035}=0,7769
 </div>
 <hr />
 </div>
-<div id="eficiencia-en-relación-a-la-selección-directa" class="section level3 unnumbered">
-<h3>Eficiencia en relación a la selección directa</h3>
+<div id="eficiencia-en-relación-a-la-selección-directa" class="section level3 unnumbered hasAnchor">
+<h3>Eficiencia en relación a la selección directa<a href="correlacionada.html#eficiencia-en-relación-a-la-selección-directa" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Los resultados obtenidos respecto al cambio de la media (respuesta, progreso genético generacional) en una característica cuando se selecciona por otra sugiere la posibilidad de hacer <strong>selección indirecta</strong>, es decir usar criterios de una característica (su fenotipo, intensidad de selección, etc.) para mejorar otra, la de nuestro interés.</p>
 <p>Supongamos que queremos mejorar la característica <span class="math inline">\({Y}\)</span> y estamos analizando la posibilidad de hacerlo directamente, o como alternativa, utilizar la información de la característica <span class="math inline">\({X}\)</span> y realizar selección indirecta. Como vimos en la ecuación <a href="correlacionada.html#eq:respcor8">(12.32)</a>, el cociente entre los dos tipos de selección, <strong>indirecta</strong> en el numerador, <strong>directa</strong> en el denominador, es igual a</p>
 <p><span class="math display" id="eq:respcor10">\[\begin{equation}
- {\frac{RC_Y}{R_Y}=\frac{i_X\ h_X\ r_{A_{XY}}\ \sigma_{A_{Y}}}{i_Y\ h_Y\ \sigma_{A_{Y}}}=\frac{i_X}{i_Y} \frac{h_X}{h_Y}\ r_{A_{XY}}}
+{\frac{RC_Y}{R_Y}=\frac{i_X\ h_X\ r_{A_{XY}}\ \sigma_{A_{Y}}}{i_Y\ h_Y\ \sigma_{A_{Y}}}=\frac{i_X}{i_Y} \frac{h_X}{h_Y}\ r_{A_{XY}}}
 \tag{12.34}
 \end{equation}\]</span></p>
 <p>En general, cuando por razones de manejo de la población (rodeo, majada, piara, etc.) debemos retener una determinada proporción de animales como reproductores, la misma proporción será retenida más allá del criterio o característica por la que realicemos la selección. Más aún, si las dos características <span class="math inline">\({X}\)</span> e <span class="math inline">\({Y}\)</span> poseen distribución normal, como vimos previamente en la sección <a href="selartifI.html#intensidad-de-selección-y-proporción-seleccionada">Intensidad de selección y proporción seleccionada</a>, la intensidad de selección es una función de la proporción <span class="math inline">\({p}\)</span> seleccionada (<span class="math inline">\({i=\frac{z}{p}}\)</span>) y por lo tanto, <span class="math inline">\({i_X=i_Y}\)</span>. En ese caso, la ecuación <a href="correlacionada.html#eq:respcor10">(12.34)</a> se transforma en</p>
 <p><span class="math display" id="eq:respcor11">\[\begin{equation}
- {\frac{RC_Y}{R_Y}=\frac{h_X}{h_Y}\ r_{A_{XY}}}
+{\frac{RC_Y}{R_Y}=\frac{h_X}{h_Y}\ r_{A_{XY}}}
 \tag{12.35}
 \end{equation}\]</span></p>
 <p>lo que es una expresión muy sencilla de evaluar. Para que nos convenga el método de <strong>selección indirecta</strong>, el cociente <span class="math inline">\({\frac{RC_Y}{R_Y}}\)</span> debe ser mayor a <span class="math inline">\(1\)</span>. Por lo tanto, aplicando este criterio en la ecuación <a href="correlacionada.html#eq:respcor11">(12.35)</a> tenemos que la condición puede expresarse como</p>
 <p><span class="math display" id="eq:respcor12">\[\begin{equation}
- {\frac{h_X}{h_Y}\ r_{A_{XY}} &gt; 1 \Leftrightarrow r_{A_{XY}} &gt; \frac{h_Y}{h_X}}
+{\frac{h_X}{h_Y}\ r_{A_{XY}} &gt; 1 \Leftrightarrow r_{A_{XY}} &gt; \frac{h_Y}{h_X}}
 \tag{12.36}
 \end{equation}\]</span></p>
 <p>Dicho de otra forma, para que nos convenga utilizar <strong>selección indirecta</strong> (usando información de <span class="math inline">\({X}\)</span> para seleccionar en <span class="math inline">\({Y}\)</span>), la correlación aditiva entre las características debe ser mayor que la relación entre las precisiones <span class="math inline">\({\frac{h_Y}{h_X}}\)</span>. Cuanto mayor sea la precisión para selección fenotípica individual en la característica indirecta (<span class="math inline">\({h_X}\)</span>), menor será el cociente <span class="math inline">\({\frac{h_Y}{h_X}}\)</span> y mayor la probabilidad de que <span class="math inline">\({r_{A_{XY}}}\)</span> lo supere. Entendido todo esto, igualmente es necesario comprender que los principales motivos para realizar selección indirecta no se basan en estos conceptos, sino que la facilicidad y el bajo costo de medición de la característica correlacionada respecto a la de interés son lo que usualmente motiva la aplicación de este tipo de selección.</p>
@@ -1273,8 +1356,8 @@ r_{A_{XY}}=\sqrt{r^2_{A_{XY}}}=\sqrt{0,6035}=0,7769
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-12.5" class="section level4 unnumbered">
-<h4>Ejemplo 12.5</h4>
+<div id="ejemplo-12.5" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 12.5<a href="correlacionada.html#ejemplo-12.5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>En una población de ganado de la raza <strong>Braunvieh</strong> el peso al destete (<strong>PD</strong>) tiene una heredabilidad de <span class="math inline">\(h^2_{PD}= 0,36\)</span>, mientras el peso a los 18 meses (<strong>P18</strong>) tiene una heredabilidad de <span class="math inline">\(h^2_P18=0,25\)</span>. Suponiendo que los animales se aparean por primera vez a los 2 años y que la característica que nos interesa mejorar es <strong>P18</strong>, teniendo en cuenta que la correlación genética (aditiva) entre <strong>PD</strong> y <strong>P18</strong> es de <span class="math inline">\(r_A=0,5\)</span>, ¿seleccionaríamos en forma <strong>directa</strong> por <strong>peso a los 18 meses</strong> o <strong>indirectamente</strong> por <strong>peso al destete</strong> para mejorar P18?</p>
 <p><br />
 </p>
@@ -1304,8 +1387,8 @@ RC/RD = \frac{0,5 \times\sqrt{0,36}}{\sqrt{0,25}}=\frac{0,5 \times 0,6}{0,5}=0,6
 <hr />
 </div>
 </div>
-<div id="el-signo-de-la-correlación-y-el-beneficio-demérito-de-la-misma" class="section level3 unnumbered">
-<h3>El signo de la correlación y el beneficio-demérito de la misma</h3>
+<div id="el-signo-de-la-correlación-y-el-beneficio-demérito-de-la-misma" class="section level3 unnumbered hasAnchor">
+<h3>El signo de la correlación y el beneficio-demérito de la misma<a href="correlacionada.html#el-signo-de-la-correlación-y-el-beneficio-demérito-de-la-misma" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Un detalle a considerar en nuestras disquisiciones anteriores sobre el mérito relativo de la selección indirecta es el del signo de la correlación genética. Si la correlación es fuertemente negativa, pongamos por ejemplo <span class="math inline">\({r_{A_{XY}}=-1}\)</span>, sustituyendo ese valor en la ecuación <a href="correlacionada.html#eq:respcor12">(12.36)</a> tendríamos que <span class="math inline">\({-1 &gt; \frac{h_Y}{h_X} \Leftrightarrow \frac{h_Y}{h_X}&lt; -1}\)</span>, lo que claramente es imposible para cualquier valor de <span class="math inline">\({h_Y}\)</span> y <span class="math inline">\({h_X}\)</span> ya que los mismos deben ser positivos (son las raíces cuadradas de heredabilidades).</p>
 <p>Dicho de otra forma, pese a que existe una asociación perfecta entre variables, como el signo de la misma es negativo no podríamos usarla para realizar <strong>selección indirecta</strong>. Claramente, debe existir una inconsistencia en nuestro razonamiento que lleva a este absurdo. La inconsistencia proviene del supuesto que <span class="math inline">\({i_X=i_y=i}\)</span> que nos permitía simplificar la relación de la ecuación <a href="correlacionada.html#eq:respcor10">(12.34)</a> a la de la ecuación <a href="correlacionada.html#eq:respcor11">(12.35)</a>, de donde derivamos la ecuación <a href="correlacionada.html#eq:respcor12">(12.36)</a>. De hecho, en términos generales <span class="math inline">\({i=\frac{S}{\sigma_P}}\)</span>. Como el diferencial de selección tiene signo y el desvío estándar fenotípico es siempre positivo (raíz cuadrada de una varianza), entonces la intensidad de selección tendrá signo también. Asumiendo que seleccionamos la misma proporción de individuos para cualquiera de los dos métodos (directo e indirecto), como los sentidos son opuestos (signo negativo de la correlación aditiva), entonces su cociente será igual a <span class="math inline">\(-1\)</span> y por lo tanto la ecuación equivalente a la ecuación <a href="correlacionada.html#eq:respcor12">(12.36)</a> <span class="math inline">\({-r_{A_{XY}} &gt; \frac{h_Y}{h_X}}\)</span>.</p>
 <p>Por otra parte, es importante entender que el signo de una correlación, por ejemplo la genética, no habla de por sí de si la misma es favorable o desfavorable. Pongamos un ejemplo sencillo de entender. En la producción lanera, en las condiciones actuales, el ingreso por venta de lana que tienen los productores es función directa de la cantidad (Kg) de lana producida e inversa al diámetro de las fibras. Esto se debe, entre otras cosas, a que la lana fina produce una mejor sensación al tacto y por lo tanto se usa preferentemente para vestimenta de alta calidad. En ausencia de otros grandes defectos en la lana (color, fibras pigmentadas, largo de mecha), los objetivos de mejora del productor lanero deberían ser aumentar el peso de vellón (limpio, por ejemplo) y disminuir el diámetro de las fibras. Desafortundamente para el productor lanero, la naturaleza tenía otra cosa en mente al desarrollar el “pelaje” de los mamíferos. En una oveja de un tamaño determinado, por ejemplo, hay tres formas en las que la naturaleza podría incrementar el peso del vellón limpio anual, a saber: a) aumentar el número de folículos por unidad de superficie, b) aumentar la velocidad de crecimiento (largo) de las fibras, c) aumentar el diámetro de las mismas (es decir, el área de la sección transversal). Sin descartar la importancia de las dos primeras, la tercera sin duda juega un papel importante: fibras de mayor diámetro tienen mayor superficie en la sección transversal (aún siendo relativamente huecas), que se transforman en mayor volumen (al mismo largo) y si no disminuye la densidad del material, mayor peso. Esto explica la <strong>correlación positiva</strong> entre peso de vellón y diámetro, que desafortunadamente va en contra de los criterios de pago del mercado actual. Por lo tanto, <strong>esta correlación genética es desfavorable</strong>, positiva y desfavorable. Si por alguna extraña razón, por ejemplo, si no existiese más interés en elaborar prendas finas de lana y el la gente deseara sentir un fuerte escozor al usar prendas de lana, posiblemente el mercado pagaría más por las lanas gruesas, por lo que ahora <strong>la misma correlación genética positiva pasaría a ser favorable</strong>.</p>
@@ -1324,12 +1407,12 @@ RC/RD = \frac{0,5 \times\sqrt{0,36}}{\sqrt{0,25}}=\frac{0,5 \times 0,6}{0,5}=0,6
 <hr />
 </div>
 </div>
-<div id="matrices-de-varianza-covarianza" class="section level2" number="12.6">
-<h2><span class="header-section-number">12.6</span> Matrices de varianza-covarianza</h2>
+<div id="matrices-de-varianza-covarianza" class="section level2 hasAnchor" number="12.6">
+<h2><span class="header-section-number">12.6</span> Matrices de varianza-covarianza<a href="correlacionada.html#matrices-de-varianza-covarianza" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Como vimos antes, para cada par de características de interés es posible, en principio, estimar las covarianzas correspondientes a nuestro modelo simplificado. En particular, las covarianzas genético-aditivas, las covarianzas ambientales y las covarianzas fenotípicas. Si tenemos dos características, existirá una sola covarianza de cada tipo (genético-aditiva, ambiental, fenotípica), pero cuando consideramos más características debemos considerar todos los pares de variables posibles para cada tipo de covarianza. Por ejemplo, si tenemos tres características de interés, las covarianzas genético-aditivas serán <span class="math inline">\({Cov(A_1,A_2)}\)</span>, <span class="math inline">\({Cov(A_1,A_3)}\)</span> y <span class="math inline">\({Cov(A_2,A_3)}\)</span>, o usando una notación más sintética <span class="math inline">\(\sigma_{A_{1,2}}\)</span>, <span class="math inline">\(\sigma_{A_{1,3}}\)</span> y <span class="math inline">\(\sigma_{A_{2,3}}\)</span>. Claramente, cuando tenemos <span class="math inline">\(k\)</span> características en consideración, habrá <span class="math inline">\(k(k-1)/2\)</span> pares posibles de características (asumiendo que el orden no es relevante, es decir <span class="math inline">\(\sigma_{A_{i,j}}=\sigma_{A_{j,i}}\)</span>).</p>
 <p>Por otro lado, la covarianza de una variable consigo misma es igual a la varianza de dicha variable, ya que</p>
 <p><span class="math display">\[\begin{equation}
- {Cov(x,x)=\frac{1}{n-1} \sum (x-\bar x) (x-\bar x)=\frac{1}{n-1} \sum (x-\bar x)^2=Var(x)}
+{Cov(x,x)=\frac{1}{n-1} \sum (x-\bar x) (x-\bar x)=\frac{1}{n-1} \sum (x-\bar x)^2=Var(x)}
 \end{equation}\]</span></p>
 <p>Puesto en la notación anterior, <span class="math inline">\(\sigma_{A_{i,i}}=\sigma^2_{A_i}\)</span>. De estas varianzas, habrá <span class="math inline">\(k\)</span> para <span class="math inline">\(k\)</span> características, es decir, una por característica. Esto nos lleva a que el número de <strong>parámetros</strong> para cada uno de los tipos de covarianza (genético-aditiva, ambiental, fenotípica) será igual a</p>
 <p><span class="math display">\[\begin{equation}
@@ -1358,7 +1441,7 @@ Figura 12.7: La matriz de varianza-covarianza fenotípica para 3 característica
 <p>Como veremos más adelante en este capítulo, organizar todos los parámetros en forma matricial nos premitirá extender la <strong>ecuación del criador</strong> a varias características en forma simultanea manteniendo la notación muy sencilla, y como veremos en el próximo capítulo, será esencial en el desarrollo de los métodos de predicción de valores de cría. Sin embargo, antes de entrar en esos temas, veamos en forma sencilla cómo podemos obtener correlaciones genéticas (aditivas) y fenotípicas, así como las heredabilidades de las características, a partir de las matrices <span class="math inline">\(\mathbf{G}\)</span> y <span class="math inline">\(\mathbf{P}\)</span>. Los diferentes programas que se utilizan en mejoramiento genético o en genética cuantitativa para estimar los parámetros genéticos suelen reportarnos ambas matrices y a partir de ellas debemos ser capaces de calcular los parámetros genéticos más relevantes para las decisiones de mejoramiento, usualmente las heredabilidades y las correlaciones genéticas (aditivas) entre características. Supongamos que nos encontramos estudiando <span class="math inline">\(k\)</span> características diferentes y que obtuvimos las correspondientes matrices <span class="math inline">\(\mathbf{G}\)</span> y <span class="math inline">\(\mathbf{P}\)</span>, ambas de orden <span class="math inline">\(k\)</span> (<span class="math inline">\(k\)</span> filas y <span class="math inline">\(k\)</span> columnas).</p>
 <p>De acuerdo a la definición, la correlación genética entre la característica <span class="math inline">\(i\)</span> y la característica <span class="math inline">\(j\)</span> estará dada por</p>
 <p><span class="math display" id="eq:corra1">\[\begin{equation}
- {r_{A_{i,j}}=\frac{Cov(A_i,A_j)}{\sqrt{Var(A_i) Var(A_j)}}=\frac{\sigma_{A_{i,j}}}{\sqrt{\sigma^2_{A_{i}}\sigma^2_{A_{j}}}}=\frac{\sigma_{A_{i,j}}}{\sigma_{A_{i}}\sigma_{A_{j}}}}
+{r_{A_{i,j}}=\frac{Cov(A_i,A_j)}{\sqrt{Var(A_i) Var(A_j)}}=\frac{\sigma_{A_{i,j}}}{\sqrt{\sigma^2_{A_{i}}\sigma^2_{A_{j}}}}=\frac{\sigma_{A_{i,j}}}{\sigma_{A_{i}}\sigma_{A_{j}}}}
 \tag{12.37}
 \end{equation}\]</span></p>
 <p>Por lo tanto, para calcular la correlación genética (aditiva) entre la característica <span class="math inline">\(i\)</span> y la característica <span class="math inline">\(j\)</span> a partir de la matriz <span class="math inline">\(\mathbf{G}\)</span> el procedimiento es muy sencillo:</p>
@@ -1367,34 +1450,34 @@ Figura 12.7: La matriz de varianza-covarianza fenotípica para 3 característica
 <p>3- Dividir la covarianza obtenida en el punto 1 entre el producto de los desvíos estándar obtenidos en el punto 2. Ese será el valor de la correlación genética (aditiva) entre las características <span class="math inline">\(i\)</span> y <span class="math inline">\(j\)</span>.</p>
 <p>De la misma manera, las correlaciones fenotípicas quedan definidas por</p>
 <p><span class="math display" id="eq:corrp1">\[\begin{equation}
- {r_{P_{i,j}}=\frac{Cov(P_i,P_j)}{\sqrt{Var(P_i) Var(P_j)}}=\frac{\sigma_{P_{i,j}}}{\sqrt{\sigma^2_{P_{i}}\sigma^2_{P_{j}}}}=\frac{\sigma_{P_{i,j}}}{\sigma_{P_{i}}\sigma_{P_{j}}}}
+{r_{P_{i,j}}=\frac{Cov(P_i,P_j)}{\sqrt{Var(P_i) Var(P_j)}}=\frac{\sigma_{P_{i,j}}}{\sqrt{\sigma^2_{P_{i}}\sigma^2_{P_{j}}}}=\frac{\sigma_{P_{i,j}}}{\sigma_{P_{i}}\sigma_{P_{j}}}}
 \tag{12.38}
 \end{equation}\]</span></p>
 <p>por lo que el procedimiento para obtener las correlaciones fenotípicas será igual al descrito más arriba para las correlaciones genéticas, pero ahora usando la matriz <span class="math inline">\(\mathbf{P}\)</span> en lugar de la matriz <span class="math inline">\(\mathbf{G}\)</span>.</p>
 <p>Para calcular las heredabilidades de las diferentes características a partir de las matrices <span class="math inline">\(\mathbf{G}\)</span> y <span class="math inline">\(\mathbf{P}\)</span>, el procedimiento es aún más sencillo, ya que solo haremos uso de las diagonales de ambas matrices. De acuerdo a la definición de <a href="pargen.html#heredabilidad">Heredabilidad</a> que vimos en el capítulo <a href="pargen.html#pargen">Parámetros Genéticos: Heredabilidad y Repetibilidad</a>, para la característica <span class="math inline">\(i\)</span> la misma sería</p>
 <p><span class="math display" id="eq:heremult1">\[\begin{equation}
- {h^2_i=\frac{Var(A_i)}{Var(P_i)}=\frac{\sigma^2_{A_{i}}}{\sigma^2_{P_{i}}}}
+{h^2_i=\frac{Var(A_i)}{Var(P_i)}=\frac{\sigma^2_{A_{i}}}{\sigma^2_{P_{i}}}}
 \tag{12.39}
 \end{equation}\]</span></p>
 <p>Por lo tanto, el procedimiento para calcular nuestra estimación de la heredabilidad de cada característica es trivial: dividir cada elemento de la diagonal de <span class="math inline">\(\mathbf{G}\)</span> entre el correspondiente elemento de la diagonal en la matriz <span class="math inline">\(\mathbf{P}\)</span>, es decir</p>
 <p><span class="math display" id="eq:heremult2">\[\begin{equation}
- {h^2_i}=\frac{G_{i,i}}{P_{i,i}}
+{h^2_i}=\frac{G_{i,i}}{P_{i,i}}
 \tag{12.40}
 \end{equation}\]</span></p>
 <p>Como vimos previamente, la relación entre las correlaciones fenotípicas, genéticas (aditivas) y ambientales viene dada por</p>
 <p><span class="math display">\[\begin{equation}
- {r_{P_{i,j}}=h_i\cdot h_j\cdot r_{A_{i,j}}+e_i\cdot e_j\cdot r_{E_{i,j}}}
+{r_{P_{i,j}}=h_i\cdot h_j\cdot r_{A_{i,j}}+e_i\cdot e_j\cdot r_{E_{i,j}}}
 \end{equation}\]</span></p>
 <p>Por lo que, recordando que <span class="math inline">\({e_i=\sqrt{1-h_i}}\)</span>, <span class="math inline">\({e_j=\sqrt{1-h_j}}\)</span>, podemos obtener también la correlación ambiental (más allá de que a veces tenemos la matriz <span class="math inline">\(\mathbf{E}\)</span> disponible) a partir de</p>
 <p><span class="math display" id="eq:corre1">\[\begin{equation}
- {r_{E_{i,j}}=\frac{r_{P_{i,j}}-h_i\cdot h_j\cdot r_{A_{i,j}}}{e_i\cdot e_j}=\frac{r_{P_{i,j}}-h_i\cdot h_j\cdot r_{A_{i,j}}}{\sqrt{1-h^2_i}\sqrt{1-h^2_j}}=\frac{r_{P_{i,j}}-h_i\cdot h_j\cdot r_{A_{i,j}}}{\sqrt{(1-h^2_i)(1-h^2_j)}}}
+{r_{E_{i,j}}=\frac{r_{P_{i,j}}-h_i\cdot h_j\cdot r_{A_{i,j}}}{e_i\cdot e_j}=\frac{r_{P_{i,j}}-h_i\cdot h_j\cdot r_{A_{i,j}}}{\sqrt{1-h^2_i}\sqrt{1-h^2_j}}=\frac{r_{P_{i,j}}-h_i\cdot h_j\cdot r_{A_{i,j}}}{\sqrt{(1-h^2_i)(1-h^2_j)}}}
 \tag{12.41}
 \end{equation}\]</span></p>
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-12.6" class="section level4 unnumbered">
-<h4>Ejemplo 12.6</h4>
+<div id="ejemplo-12.6" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 12.6<a href="correlacionada.html#ejemplo-12.6" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>A partir de un experimento donde se midieron en todos los animales el largo de la pata trasera izquierda (en cm) y el peso (en kg) a los dos años en <strong>ovejas verdes</strong>, mediante un modelo <strong>BLUP</strong> se pudieron determinar las siguientes matrices de varianza-covarianza:</p>
 <p><span class="math display">\[\begin{equation}
 \mathbf{G}=\left(\begin{matrix}100 &amp; 180\\180 &amp; 800\end{matrix}\right)
@@ -1462,12 +1545,12 @@ r_{E_{12}}=\frac{r_{P_{12}}-h_1 h_2 r_{A_{12}}}{e_1e_2}=\frac{0,4906-(0,6364 \ti
 </p>
 </div>
 </div>
-<div id="la-forma-generalizada-de-la-ecuación-del-criador" class="section level2" number="12.7">
-<h2><span class="header-section-number">12.7</span> La forma generalizada de la ecuación del criador</h2>
+<div id="la-forma-generalizada-de-la-ecuación-del-criador" class="section level2 hasAnchor" number="12.7">
+<h2><span class="header-section-number">12.7</span> La forma generalizada de la ecuación del criador<a href="correlacionada.html#la-forma-generalizada-de-la-ecuación-del-criador" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>(<strong>Tópico avanzado</strong>)</p>
 <p>En el capítulo <a href="pargen.html#pargen">Parámetros Genéticos: Heredabilidad y Repetibilidad</a> estudiamos diferentes definiciones de la heredabilidad (como relación de varianzas o como regresión), pero siempre nuestro contexto fue <strong>univariado</strong>, es decir, estudiamos cada característica de nuestro interés como si no tuviera ningún tipo de relación, dependencia o restricción, con otras características. Más aún, vimos el concepto de <a href="pargen.html#heredabilidad-lograda">Heredabilidad lograda</a>, lo que nos permitió una primera conexión entre los conceptos de <strong>heredabilidad</strong> y <strong>progreso genético</strong>. Más adelante, en el capítulo [Selección Artifical I] formalizamos la <strong>ecuación del criador</strong>, <span class="math inline">\({R=S\ h^2}\)</span>, que nos permitía predecir la respuesta (o progreso genético) a la selección direccional en una generación.</p>
 <p>A partir de la ecuación del criador, teniendo en cuenta las definiciones de heredabilidad y de intensidad de selección (para características con distribución normal) derivamos la expresión de la ecuación <a href="selartifI.html#eq:pga3">(11.22)</a>, <span class="math inline">\({R=i\ h\ \sigma_A}\)</span> que nos muestra que la respuesta a la selección está directamente relacionada con la varianza aditiva de la característica, algo que reafirmamos en la ecuación <a href="selartifI.html#eq:cambfr10">(11.42)</a> <span class="math inline">\(R=\sigma^2_A \frac{s}{2a}\)</span> para el modelo de un locus con dos alelos, o en términos más generales en la <strong>identidad de Robertson-Price</strong>, ecuación <a href="selartifI.html#eq:rp11">(11.52)</a> <span class="math inline">\(R=\sigma_A^2 b_{w(z),z}\)</span>. En función de esto, no pasó desapercibido el hecho que características que poseían importante varianza aditiva y que se encontraban sujetas a una importante selección direccional no mostrasen casi respuesta a la selección. Dicho de otra manera, todo el marco teórico que venimos desarrollando hasta el momento deja de funcionar en ciertas circunstancias, por lo que es necesario entender las razones y atenderlas en un nuevo marco teórico. Una de las razones posibles a considerar es el hecho de que por lo general nunca la selección actúa en una sola dirección o es posible realizar selección exclusivamente por una característica. Por ejemplo, más allá de nuestro esfuerzo por seleccionar solo una característica de interés, la selección natural actúa de formas muchas veces desconocidas para nosotros y que por lo tanto no podemos evitar. Como vimos antes, existen bases genéticas para la correlación entre muchas características de interés y el éxito reproductivo de los individuos, por lo que muchas veces al seleccionar por determinada característica (es decir, incrementando el <strong>fitness</strong> de dicho fenotipo) estamos eligiendo individuos con menor <strong>fitness</strong> y que por lo tanto dejaran menos descendencia. Es por lo tanto fundamental el mayor conjunto de características posibles en nuestro estudio de la respuesta a la selección.</p>
-<p>El primero en desarrollar una teoría formal de la selección multivariada fue <span class="citation"><a href="#ref-Lande1979" role="doc-biblioref">Lande</a> (<a href="#ref-Lande1979" role="doc-biblioref">1979</a>)</span>, quien propuso que la ecuación del criador se podía extender fácilmente a una forma <strong>multivariada</strong> de acuerdo a la siguiente ecuación matricial</p>
+<p>El primero en desarrollar una teoría formal de la selección multivariada fue <span class="citation">Lande (<a href="#ref-Lande1979" role="doc-biblioref">1979</a>)</span>, quien propuso que la ecuación del criador se podía extender fácilmente a una forma <strong>multivariada</strong> de acuerdo a la siguiente ecuación matricial</p>
 <p><span class="math display" id="eq:lande1">\[\begin{equation}
 \mathbf{R}=\Delta \bar z=\mathbf{G}\mathbf{P}^{-1}\mathbf{S}
 \tag{12.42}
@@ -1494,7 +1577,7 @@ w=a+\sum_{i=1}^k \beta_i z_i+e_i
 \mathbf{R}=\mathbf{G}\mathbf{P}^{-1}\mathbf{S}=\mathbf{G}\mathbf{\beta}
 \tag{12.45}
 \end{equation}\]</span></p>
-<p>que se conoce como la <strong>ecuación de Lande</strong>. Si los fenotipos son multivariados normales, <span class="citation"><a href="#ref-Lande1979" role="doc-biblioref">Lande</a> (<a href="#ref-Lande1979" role="doc-biblioref">1979</a>)</span> muestra que <span class="math inline">\(\mathbf{\beta}\)</span> es el gradiente del logaritmo del <strong>fitness medio</strong>, es decir</p>
+<p>que se conoce como la <strong>ecuación de Lande</strong>. Si los fenotipos son multivariados normales, <span class="citation">Lande (<a href="#ref-Lande1979" role="doc-biblioref">1979</a>)</span> muestra que <span class="math inline">\(\mathbf{\beta}\)</span> es el gradiente del logaritmo del <strong>fitness medio</strong>, es decir</p>
 <p><span class="math display" id="eq:lande5">\[\begin{equation}
 \mathbf{\beta=P^{-1}S=\nabla\ln \bar W}
 \tag{12.46}
@@ -1519,15 +1602,15 @@ cos(\theta)=\mathbf{\frac{R \cdot \beta}{||R|| \ ||\beta||}}
 \end{equation}\]</span></p>
 <p>es decir, aquellos vectores <span class="math inline">\(\mathbf{v}\)</span> que al ser multiplicados por la matriz no cambiaban de dirección. El <strong>valor propio</strong> es el factor de escalado en la multiplicación. Utilizando esto, las direcciones de vectores que no cambiarán al ser multiplicados por <span class="math inline">\(\mathbf{G}\)</span> serán las de los <strong>vectores propios</strong> de la misma. Más aún, entre ellos, los que más responderán serán, en orden, los de mayor valor, por lo que el primer vector propio (el de mayor valor) será la dirección preferida para la evolución de acuerdo a las restricciones de la arquitectura genética de las características. Más aún, en el caso de que la matriz tenga valores propios iguales a cero, aplicando la definición de ecuación <a href="correlacionada.html#eq:lande8">(12.49)</a> a la matriz <span class="math inline">\(\mathbf{G}\)</span> tenemos</p>
 <p><span class="math display" id="eq:lande9">\[\begin{equation}
-\mathbf{Gv=}c\mathbf{v=0}\ \mathbf{v=0} 
+\mathbf{Gv=}c\mathbf{v=0}\ \mathbf{v=0}
 \tag{12.50}
 \end{equation}\]</span></p>
-<p>lo que significa que no habrá respuesta ninguna en dicha dirección. Usualmente, en mejoramiento genético, se realizan estimaciones regulares de las varianzas y covarianzas genéticas, pero no existe una fuerte tradición en la interpretación de la evolución de las mismas a lo largo del tiempo, asumiendo de alguna forma que los cambios se deben a problemas de estimación. En realidad, a medida de que avanzamos en la selección direccional las varianzas aditivas de las características de interés suelen disminuir, pero también se modifican las covarianzas entre las características, por lo que aún existiendo varianza aditiva disponible en ciertos casos no hay respuesta a la selección. Por lo tanto, es fundamental entender que al mismo tiempo que la respuesta está condicionada por la matriz <span class="math inline">\(\mathbf{G}\)</span>, las restricciones también pueden evolucionar, cambiando la matriz <span class="math inline">\(\mathbf{G}\)</span> en un juego complejo y dinámico. Un tratamiento más profundo y al mismo tiempo ameno se encuentra en <span class="citation"><a href="#ref-BlowsWalsh2009" role="doc-biblioref">Blows and Walsh</a> (<a href="#ref-BlowsWalsh2009" role="doc-biblioref">2009</a>)</span>.</p>
+<p>lo que significa que no habrá respuesta ninguna en dicha dirección. Usualmente, en mejoramiento genético, se realizan estimaciones regulares de las varianzas y covarianzas genéticas, pero no existe una fuerte tradición en la interpretación de la evolución de las mismas a lo largo del tiempo, asumiendo de alguna forma que los cambios se deben a problemas de estimación. En realidad, a medida de que avanzamos en la selección direccional las varianzas aditivas de las características de interés suelen disminuir, pero también se modifican las covarianzas entre las características, por lo que aún existiendo varianza aditiva disponible en ciertos casos no hay respuesta a la selección. Por lo tanto, es fundamental entender que al mismo tiempo que la respuesta está condicionada por la matriz <span class="math inline">\(\mathbf{G}\)</span>, las restricciones también pueden evolucionar, cambiando la matriz <span class="math inline">\(\mathbf{G}\)</span> en un juego complejo y dinámico. Un tratamiento más profundo y al mismo tiempo ameno se encuentra en <span class="citation">Blows and Walsh (<a href="#ref-BlowsWalsh2009" role="doc-biblioref">2009</a>)</span>.</p>
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-12.7" class="section level4 unnumbered">
-<h4>Ejemplo 12.7</h4>
+<div id="ejemplo-12.7" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 12.7<a href="correlacionada.html#ejemplo-12.7" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Las ovejas verdes tienen una tendencia importante a la esfericidad de sus cuerpos, lo que dificulta enormemente el esquilado, por lo que uno de los objetivos de selección planteados para mejorar la majada experimental es hacerlos más cilíndricos. Para ello se desarrolló un índice que es igual al diámetro de la panza en la zona media divida entre el largo del cuerpo y multiplicado por 100, es decir</p>
 <p><span class="math display">\[\begin{equation}
 I_e=100 \times \frac{D_{panza}}{L_{cuerpo}}
@@ -1569,7 +1652,7 @@ R=\mathbf{G \beta}=\left(\begin{matrix}100 &amp; 0\\0 &amp; 800\end{matrix}\righ
 \end{equation}\]</span></p>
 <p>lo que coincide casi exactamente con la dirección elegida para la selección, por lo que esta no tendrá respuesta. Esto no debería sorprendernos, ya que en este caso, la correlación genética entre ambas características, de acuerdo a la ecuación <a href="correlacionada.html#eq:corra1">(12.37)</a> es de</p>
 <p><span class="math display">\[\begin{equation}
- {r_A=\frac{\sigma_{A_{i,j}}}{\sigma_{A_{i}}\sigma_{A_{j}}}=\frac{282,8}{\sqrt{100 \times 800}}=0,9999}
+{r_A=\frac{\sigma_{A_{i,j}}}{\sigma_{A_{i}}\sigma_{A_{j}}}=\frac{282,8}{\sqrt{100 \times 800}}=0,9999}
 \end{equation}\]</span></p>
 <p>es decir, queda muy poco espacio disponible para selección de ambas características en sentido opuesto.</p>
 <p><br />
@@ -1587,10 +1670,10 @@ R=\mathbf{G \beta}=\left(\begin{matrix}100 &amp; 0\\0 &amp; 800\end{matrix}\righ
 <hr />
 </div>
 </div>
-<div id="ejercicios-12" class="section level2 unnumbered">
-<h2>Ejercicios</h2>
-<div id="ejercicio-12.1" class="section level4 unnumbered">
-<h4>Ejercicio 12.1</h4>
+<div id="ejercicios-12" class="section level2 unnumbered hasAnchor">
+<h2>Ejercicios<a href="correlacionada.html#ejercicios-12" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ejercicio-12.1" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 12.1<a href="correlacionada.html#ejercicio-12.1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>En las ovejas verdes se observa una correlación (fenotípica) entre el Peso al Año de edad (PA) y el Peso de Vellón Sucio (PVS) de <span class="math inline">\(\mathrm{r_P}=0,70\)</span> (no vamos a usar los subíndices <span class="math inline">\(_{12}\)</span> en las correlaciones para simplificar la notación). Las heredabilidades de ambas características fueron estimadas en <span class="math inline">\(h^2_{PA}=0,49\)</span> y <span class="math inline">\(h^2_{PA}=0,36\)</span>. Por otra parte, un estudio reciente determinó que el mejor estimado de la correlación genética (aditiva) entre ambas características es de <span class="math inline">\(\mathrm{r_A}=0,55\)</span>. Estimar la correlación ambiental (en sentido amplio) y discutir los resultados.</p>
 <p><strong><em>Solución</em></strong></p>
 <p>De acuerdo a la ecuación <a href="correlacionada.html#eq:path15">(12.5)</a>, la relación entre las correlaciones fenotípica, genética (aditiva) y ambiental es</p>
@@ -1619,8 +1702,8 @@ R=\mathbf{G \beta}=\left(\begin{matrix}100 &amp; 0\\0 &amp; 800\end{matrix}\righ
 <p><br />
 </p>
 </div>
-<div id="ejercicio-12.2" class="section level4 unnumbered">
-<h4>Ejercicio 12.2</h4>
+<div id="ejercicio-12.2" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 12.2<a href="correlacionada.html#ejercicio-12.2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Las ovejas verdes tienen una tendencia importante a la esfericidad de sus cuerpos, lo que dificulta enormemente el esquilado, por lo que uno de los objetivos de selección planteados para mejorar la majada experimental es hacerlos más cilíndricos. Para ello se desarrolló un índice que es igual al diámetro de la panza en la zona media divida entre el largo del cuerpo y multiplicado por 100, es decir</p>
 <p><span class="math display">\[\begin{equation}
 I_e=100 \times \frac{D_{panza}}{L_{cuerpo}}
@@ -1672,7 +1755,7 @@ R=\mathbf{G \beta}=\left(\begin{matrix}100 &amp; 0\\0 &amp; 800\end{matrix}\righ
 </div>
 </div>
 </div>
-<h3>Bibliografía</h3>
+<h3>Bibliografía<a href="bibliografía.html#bibliografía" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-BlowsWalsh2009" class="csl-entry">
 Blows, Mark, and Bruce Walsh. 2009. <span>“Spherical Cows Grazing in Flatland: Constraints to Selection and Adaptation.”</span> In <em>Adaptation and Fitness in Animal Populations: Evolutionary and Breeding Perspectives on Genetic Resource Management</em>, edited by Julius van der Werf, Hans-Ulrich Graser, Richard Frankham, and Cedric Gondro, 83–101. Dordrecht: Springer Netherlands. <a href="https://doi.org/10.1007/978-1-4020-9005-9_6">https://doi.org/10.1007/978-1-4020-9005-9_6</a>.
@@ -1724,7 +1807,6 @@ Wright, S. 1918. <span>“<span class="nocase"><span>O</span>n the <span>N</span
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1765,7 +1847,7 @@ gitbook.start({
 },
 "download": ["ApuntesGeneticaII.pdf", "ApuntesGeneticaII.epub"],
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
@@ -1781,7 +1863,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

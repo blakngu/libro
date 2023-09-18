@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 8 El Modelo Genético Básico | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
   <meta name="description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 8 El Modelo Genético Básico | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
@@ -28,7 +27,7 @@
 <meta name="author" content="(Paola Gaiero)" />
 
 
-<meta name="date" content="2022-04-29" />
+<meta name="date" content="2023-09-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -37,8 +36,8 @@
   
 <link rel="prev" href="microbial.html"/>
 <link rel="next" href="parentesco.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -54,16 +53,18 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -115,31 +116,38 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#variabilidad-genética"><i class="fa fa-check"></i><b>1.1</b> Variabilidad genética</a>
 <ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.1"><i class="fa fa-check"></i>Ejemplo 1.1</a></li>
 <li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#detectando-la-variabilidad-diferentes-técnicas"><i class="fa fa-check"></i><b>1.1.1</b> Detectando la variabilidad: diferentes técnicas</a></li>
-<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#metagenómica-y-metatranscriptómica"><i class="fa fa-check"></i><b>1.1.2</b> Metagenómica y Metatranscriptómica</a></li>
+<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#metagenomica-y-metatranscriptomica"><i class="fa fa-check"></i><b>1.1.2</b> Metagenómica y Metatranscriptómica</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.2"><i class="fa fa-check"></i>Ejemplo 1.2</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#genómica-composicional"><i class="fa fa-check"></i><b>1.2</b> Genómica composicional</a>
 <ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-gcskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones, GCskew</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-y-textgc_textskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones y <span class="math inline">\(\text{GC}_{\text{skew}}\)</span></a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#uso-de-codones"><i class="fa fa-check"></i>Uso de codones</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#exploración-multivariada-análisis-de-correspondencia"><i class="fa fa-check"></i>Exploración multivariada: Análisis de Correspondencia</a></li>
-<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i><b>1.2.1</b> Composición de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.3"><i class="fa fa-check"></i>Ejemplo 1.3</a></li>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#exploracion-multivariada"><i class="fa fa-check"></i><b>1.2.1</b> Exploración multivariada: Análisis de Correspondencia</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i><b>1.2.2</b> Composición de proteínas</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-en-propiedades-de-los-aas"><i class="fa fa-check"></i>Diferencias en propiedades de los AAs</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-de-composición-entre-clases-de-proteínas"><i class="fa fa-check"></i>Diferencias de composición entre clases de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.4"><i class="fa fa-check"></i>Ejemplo 1.4</a></li>
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#genómica-comparativa"><i class="fa fa-check"></i><b>1.3</b> Genómica comparativa</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#comparación-de-secuencias-génicas"><i class="fa fa-check"></i>Comparación de secuencias génicas</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección Positiva</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección positiva</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#vías"><i class="fa fa-check"></i>Vías</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#genómica-funcional"><i class="fa fa-check"></i><b>1.4</b> Genómica funcional</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#estudios-epigenéticos-y-epigenómicos"><i class="fa fa-check"></i>Estudios epigenéticos y epigenómicos</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#conclusión"><i class="fa fa-check"></i><b>1.5</b> Conclusión</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#actividades"><i class="fa fa-check"></i><b>1.6</b> Actividades</a>
 <ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicio-1.1"><i class="fa fa-check"></i>Ejercicio 1.1</a></li>
+<li class="chapter" data-level="1.6.1" data-path="intro.html"><a href="intro.html#control-de-lectura"><i class="fa fa-check"></i><b>1.6.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="1.6.2" data-path="intro.html"><a href="intro.html#verdadero-o-falso"><i class="fa fa-check"></i><b>1.6.2</b> ¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>Parte II: Genética de Poblaciones</b></span></li>
@@ -150,7 +158,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#supuestos-que-asumimos-se-cumplen-para-h-w"><i class="fa fa-check"></i>Supuestos que asumimos se cumplen para H-W</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-dioicas-dos-sexos"><i class="fa fa-check"></i><b>2.2</b> Hardy-Weinberg en especies dioicas (dos sexos)</a></li>
-<li class="chapter" data-level="2.3" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#h-w-la-frecuencia-de-heterocigotas-en-función-de-la-frecuencia-alélica"><i class="fa fa-check"></i><b>2.3</b> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
+<li class="chapter" data-level="2.3" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#heterocigotas-freq-alelica"><i class="fa fa-check"></i><b>2.3</b> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
 <li class="chapter" data-level="2.4" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo"><i class="fa fa-check"></i><b>2.4</b> El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo</a></li>
 <li class="chapter" data-level="2.5" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#tres-o-más-alelos"><i class="fa fa-check"></i><b>2.5</b> Tres o más alelos</a></li>
 <li class="chapter" data-level="2.6" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-y-el-equilibrio-o-no"><i class="fa fa-check"></i><b>2.6</b> La estimación de frecuencias y el equilibrio (o no)</a></li>
@@ -158,19 +166,33 @@ div.csl-indent {
 <li class="chapter" data-level="2.8" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#dónde-se-esconden-los-alelos-recesivos"><i class="fa fa-check"></i><b>2.8</b> ¿Dónde se “esconden” los alelos recesivos?</a></li>
 <li class="chapter" data-level="2.9" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-poliploides"><i class="fa fa-check"></i><b>2.9</b> Hardy-Weinberg en especies poliploides</a></li>
 <li class="chapter" data-level="2.10" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#geometría-y-genética-los-diagramas-de-de-finetti"><i class="fa fa-check"></i><b>2.10</b> Geometría y Genética: los diagramas de <em>de Finetti</em></a></li>
-<li class="chapter" data-level="2.11" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-en-el-locus-abo"><i class="fa fa-check"></i><b>2.11</b> La estimación de frecuencias en el locus ABO</a></li>
+<li class="chapter" data-level="2.11" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#estimacion-abo"><i class="fa fa-check"></i><b>2.11</b> La estimación de frecuencias en el locus ABO</a></li>
+<li class="chapter" data-level="2.12" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#conclusión-1"><i class="fa fa-check"></i><b>2.12</b> Conclusión</a></li>
+<li class="chapter" data-level="2.13" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#actividades-1"><i class="fa fa-check"></i><b>2.13</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="2.13.1" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#control-de-lectura-1"><i class="fa fa-check"></i><b>2.13.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="2.13.2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#verdadero-o-falso-1"><i class="fa fa-check"></i><b>2.13.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicios-2"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="deriva.html"><a href="deriva.html"><i class="fa fa-check"></i><b>3</b> Deriva Genética</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="deriva.html"><a href="deriva.html#el-rol-de-los-procesos-estocásticos-en-la-genética"><i class="fa fa-check"></i><b>3.1</b> El rol de los procesos estocásticos en la genética</a></li>
-<li class="chapter" data-level="3.2" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i><b>3.2</b> El modelo de Wright-Fisher</a></li>
+<li class="chapter" data-level="3.2" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i><b>3.2</b> El modelo de Wright-Fisher</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.1"><i class="fa fa-check"></i>Ejemplo 3.1</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="deriva.html"><a href="deriva.html#el-rol-de-la-subdivisión-poblacional-en-la-evolución-de-las-frecuencias-alélicas"><i class="fa fa-check"></i><b>3.3</b> El rol de la subdivisión poblacional en la evolución de las frecuencias alélicas</a>
 <ul>
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#homocigosidad-y-heterocigosidad"><i class="fa fa-check"></i>Homocigosidad y Heterocigosidad</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.2"><i class="fa fa-check"></i>Ejemplo 3.2</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="deriva.html"><a href="deriva.html#cadenas-de-markov"><i class="fa fa-check"></i><b>3.4</b> Cadenas de Markov</a></li>
-<li class="chapter" data-level="3.5" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i><b>3.5</b> Tamaño efectivo poblacional</a></li>
+<li class="chapter" data-level="3.5" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i><b>3.5</b> Tamaño efectivo poblacional</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.3"><i class="fa fa-check"></i>Ejemplo 3.3</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.4"><i class="fa fa-check"></i>Ejemplo 3.4</a></li>
+</ul></li>
 <li class="chapter" data-level="3.6" data-path="deriva.html"><a href="deriva.html#aproximación-de-difusión"><i class="fa fa-check"></i><b>3.6</b> Aproximación de difusión</a>
 <ul>
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#caminatas-al-azar-y-procesos-de-difusión"><i class="fa fa-check"></i>Caminatas al azar y procesos de difusión</a></li>
@@ -178,9 +200,18 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-backward-equation"><i class="fa fa-check"></i>Kolmogorov Backward Equation</a></li>
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#solución-de-las-ecuaciones"><i class="fa fa-check"></i>Solución de las ecuaciones</a></li>
 </ul></li>
-<li class="chapter" data-level="3.7" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i><b>3.7</b> Probabilidad de fijación y tiempos de fijación</a></li>
+<li class="chapter" data-level="3.7" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i><b>3.7</b> Probabilidad de fijación y tiempos de fijación</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.5"><i class="fa fa-check"></i>Ejemplo 3.5</a></li>
+</ul></li>
 <li class="chapter" data-level="3.8" data-path="deriva.html"><a href="deriva.html#el-modelo-coalescente"><i class="fa fa-check"></i><b>3.8</b> El modelo coalescente</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejercicios-3"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="3.9" data-path="deriva.html"><a href="deriva.html#conclusión-2"><i class="fa fa-check"></i><b>3.9</b> Conclusión</a></li>
+<li class="chapter" data-level="3.10" data-path="deriva.html"><a href="deriva.html#actividades-2"><i class="fa fa-check"></i><b>3.10</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="deriva.html"><a href="deriva.html#control-de-lectura-2"><i class="fa fa-check"></i><b>3.10.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="3.10.2" data-path="deriva.html"><a href="deriva.html#verdadero-o-falso-2"><i class="fa fa-check"></i><b>3.10.2</b> ¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="3.10.3" data-path="deriva.html"><a href="deriva.html#ejercicios"><i class="fa fa-check"></i><b>3.10.3</b> Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="seleccion.html"><a href="seleccion.html"><i class="fa fa-check"></i><b>4</b> Selección Natural</a>
 <ul>
@@ -200,7 +231,13 @@ div.csl-indent {
 <li class="chapter" data-level="4.6" data-path="seleccion.html"><a href="seleccion.html#la-fuerza-de-la-selección-natural"><i class="fa fa-check"></i><b>4.6</b> La fuerza de la selección natural</a></li>
 <li class="chapter" data-level="4.7" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-deriva"><i class="fa fa-check"></i><b>4.7</b> Equilibrio selección-deriva</a></li>
 <li class="chapter" data-level="4.8" data-path="seleccion.html"><a href="seleccion.html#otros-tipos-de-selección-y-complejidades"><i class="fa fa-check"></i><b>4.8</b> Otros tipos de selección y complejidades</a></li>
+<li class="chapter" data-level="4.9" data-path="seleccion.html"><a href="seleccion.html#conclusión-3"><i class="fa fa-check"></i><b>4.9</b> Conclusión</a></li>
+<li class="chapter" data-level="4.10" data-path="seleccion.html"><a href="seleccion.html#actividades-3"><i class="fa fa-check"></i><b>4.10</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="4.10.1" data-path="seleccion.html"><a href="seleccion.html#control-de-lectura-3"><i class="fa fa-check"></i><b>4.10.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="4.10.2" data-path="seleccion.html"><a href="seleccion.html#verdadero-o-falso-3"><i class="fa fa-check"></i><b>4.10.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#ejercicios-4"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="dosloci.html"><a href="dosloci.html"><i class="fa fa-check"></i><b>5</b> Dinámica de 2 <em>loci</em></a>
 <ul>
@@ -212,9 +249,9 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="dosloci.html"><a href="dosloci.html#selección-en-modelos-de-dos-loci"><i class="fa fa-check"></i><b>5.4</b> Selección en modelos de dos <em>loci</em></a>
 <ul>
-<li><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento">Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento"><i class="fa fa-check"></i>Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i><b>5.5</b> Arrastre genético (“genetic hitchhiking” o “genetic draft”)</a></li>
+<li class="chapter" data-level="5.5" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i><b>5.5</b> Arrastre genético (“<em>genetic hitchhiking</em>” o “<em>genetic draft</em>”)</a></li>
 <li class="chapter" data-level="5.6" data-path="dosloci.html"><a href="dosloci.html#causas-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i><b>5.6</b> Causas del desequilibrio de ligamiento</a>
 <ul>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-al-mestizaje"><i class="fa fa-check"></i>Desequilibrio debido al mestizaje</a></li>
@@ -222,20 +259,41 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#el-cromosoma-y"><i class="fa fa-check"></i>El cromosoma Y</a></li>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-a-recombinación-reducida"><i class="fa fa-check"></i>Desequilibrio debido a recombinación reducida</a></li>
 </ul></li>
+<li class="chapter" data-level="5.7" data-path="dosloci.html"><a href="dosloci.html#conclusión-4"><i class="fa fa-check"></i><b>5.7</b> Conclusión</a></li>
+<li class="chapter" data-level="5.8" data-path="dosloci.html"><a href="dosloci.html#actividades-4"><i class="fa fa-check"></i><b>5.8</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="5.8.1" data-path="dosloci.html"><a href="dosloci.html#control-de-lectura-4"><i class="fa fa-check"></i><b>5.8.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="5.8.2" data-path="dosloci.html"><a href="dosloci.html#verdadero-o-falso-4"><i class="fa fa-check"></i><b>5.8.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejercicios-5"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="aparnoalazar.html"><a href="aparnoalazar.html"><i class="fa fa-check"></i><b>6</b> Apareamientos no-aleatorios</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-concepto-de-identidad-por-ascendencia-ibd"><i class="fa fa-check"></i><b>6.1</b> El concepto de “identidad por ascendencia” (IBD)</a></li>
 <li class="chapter" data-level="6.2" data-path="aparnoalazar.html"><a href="aparnoalazar.html#generalización-de-hardy-weinberg-para-apareamientos-no-aleatorios"><i class="fa fa-check"></i><b>6.2</b> Generalización de Hardy-Weinberg para apareamientos no-aleatorios</a></li>
-<li class="chapter" data-level="6.3" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><b>6.3</b> <em>F</em> como correlación entre gametos unidos</a></li>
+<li class="chapter" data-level="6.3" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><b>6.3</b> <span class="math inline">\(F\)</span> como correlación entre gametos unidos</a></li>
 <li class="chapter" data-level="6.4" data-path="aparnoalazar.html"><a href="aparnoalazar.html#endocría-y-depresión-endogámica"><i class="fa fa-check"></i><b>6.4</b> Endocría y depresión endogámica</a></li>
 <li class="chapter" data-level="6.5" data-path="aparnoalazar.html"><a href="aparnoalazar.html#un-caso-extremo-la-autogamia"><i class="fa fa-check"></i><b>6.5</b> Un caso extremo: la autogamia</a></li>
-<li class="chapter" data-level="6.6" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-estadísticos-f"><i class="fa fa-check"></i><b>6.6</b> El Coeficiente de endocría y estadísticos <em>F</em></a></li>
-<li class="chapter" data-level="6.7" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i><b>6.7</b> El efecto Wahlund</a></li>
-<li class="chapter" data-level="6.8" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i><b>6.8</b> Subdivisión, migración y el modelo de islas</a></li>
+<li class="chapter" data-level="6.6" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-los-estadísticos-f"><i class="fa fa-check"></i><b>6.6</b> El coeficiente de endocría y los estadísticos <em>F</em></a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.1"><i class="fa fa-check"></i>Ejemplo 6.1</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i><b>6.7</b> El efecto Wahlund</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.2"><i class="fa fa-check"></i>Ejemplo 6.2</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i><b>6.8</b> Subdivisión, migración y el modelo de islas</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.3"><i class="fa fa-check"></i>Ejemplo 6.3</a></li>
+</ul></li>
 <li class="chapter" data-level="6.9" data-path="aparnoalazar.html"><a href="aparnoalazar.html#mecanismos-de-especiación"><i class="fa fa-check"></i><b>6.9</b> Mecanismos de especiación</a></li>
+<li class="chapter" data-level="6.10" data-path="aparnoalazar.html"><a href="aparnoalazar.html#conclusión-5"><i class="fa fa-check"></i><b>6.10</b> Conclusión</a></li>
+<li class="chapter" data-level="6.11" data-path="aparnoalazar.html"><a href="aparnoalazar.html#actividades-5"><i class="fa fa-check"></i><b>6.11</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="6.11.1" data-path="aparnoalazar.html"><a href="aparnoalazar.html#control-de-lectura-5"><i class="fa fa-check"></i><b>6.11.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="6.11.2" data-path="aparnoalazar.html"><a href="aparnoalazar.html#verdadero-o-falso-5"><i class="fa fa-check"></i><b>6.11.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejercicios-6"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="microbial.html"><a href="microbial.html"><i class="fa fa-check"></i><b>7</b> Genética de Poblaciones Microbianas</a>
 <ul>
@@ -243,20 +301,30 @@ div.csl-indent {
 <li class="chapter" data-level="7.2" data-path="microbial.html"><a href="microbial.html#dinámica-de-las-poblaciones-bacterianas"><i class="fa fa-check"></i><b>7.2</b> Dinámica de las poblaciones bacterianas</a>
 <ul>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-exponencial"><i class="fa fa-check"></i>El modelo exponencial</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.1"><i class="fa fa-check"></i>Ejemplo 7.1</a></li>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-logístico"><i class="fa fa-check"></i>El modelo logístico</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.2"><i class="fa fa-check"></i>Ejemplo 7.2</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="microbial.html"><a href="microbial.html#modelos-haploides-de-selección-natural"><i class="fa fa-check"></i><b>7.3</b> Modelos haploides de selección natural</a>
 <ul>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-discreto"><i class="fa fa-check"></i>Selección haploide: modelo discreto</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.3"><i class="fa fa-check"></i>Ejemplo 7.3</a></li>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-continuo"><i class="fa fa-check"></i>Selección haploide: modelo continuo</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.4"><i class="fa fa-check"></i>Ejemplo 7.4</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-versus-el-de-wright-fisher"><i class="fa fa-check"></i><b>7.4</b> Los modelos de Moran y de Fisión versus el de Wright-Fisher</a></li>
+<li class="chapter" data-level="7.4" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-vs-el-de-wright-fisher"><i class="fa fa-check"></i><b>7.4</b> Los modelos de Moran y de fisión <em>vs</em> el de Wright-Fisher</a></li>
 <li class="chapter" data-level="7.5" data-path="microbial.html"><a href="microbial.html#el-rol-de-la-transferencia-horizontal"><i class="fa fa-check"></i><b>7.5</b> El rol de la transferencia horizontal</a></li>
-<li class="chapter" data-level="7.6" data-path="microbial.html"><a href="microbial.html#selección-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i><b>7.6</b> Selección vs Neutralismo: los procariotas en el debate</a></li>
+<li class="chapter" data-level="7.6" data-path="microbial.html"><a href="microbial.html#seleccionismo-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i><b>7.6</b> Seleccionismo <em>vs</em> neutralismo: los procariotas en el debate</a></li>
 <li class="chapter" data-level="7.7" data-path="microbial.html"><a href="microbial.html#genómica-poblacional"><i class="fa fa-check"></i><b>7.7</b> Genómica poblacional</a></li>
 <li class="chapter" data-level="7.8" data-path="microbial.html"><a href="microbial.html#genes-de-resistencia"><i class="fa fa-check"></i><b>7.8</b> Genes de resistencia</a></li>
 <li class="chapter" data-level="7.9" data-path="microbial.html"><a href="microbial.html#introducción-a-la-epidemiología-modelos-compartimentales"><i class="fa fa-check"></i><b>7.9</b> Introducción a la epidemiología: modelos compartimentales</a></li>
+<li class="chapter" data-level="7.10" data-path="microbial.html"><a href="microbial.html#conclusión-6"><i class="fa fa-check"></i><b>7.10</b> Conclusión</a></li>
+<li class="chapter" data-level="7.11" data-path="microbial.html"><a href="microbial.html#actividades-6"><i class="fa fa-check"></i><b>7.11</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="7.11.1" data-path="microbial.html"><a href="microbial.html#control-de-lectura-6"><i class="fa fa-check"></i><b>7.11.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="7.11.2" data-path="microbial.html"><a href="microbial.html#verdadero-o-falso-6"><i class="fa fa-check"></i><b>7.11.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejercicios-7"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>Parte III: Genética Cuantitativa</b></span></li>
 <li class="chapter" data-level="8" data-path="modelogenbas.html"><a href="modelogenbas.html"><i class="fa fa-check"></i><b>8</b> El Modelo Genético Básico</a>
@@ -276,7 +344,7 @@ div.csl-indent {
 <li class="chapter" data-level="8.7" data-path="modelogenbas.html"><a href="modelogenbas.html#interacción-genotipo-x-ambiente"><i class="fa fa-check"></i><b>8.7</b> Interacción Genotipo x Ambiente</a></li>
 <li class="chapter" data-level="8.8" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-en-el-modelo-genético-básico"><i class="fa fa-check"></i><b>8.8</b> La Varianza en el modelo genético básico</a>
 <ul>
-<li><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos">Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos"><i class="fa fa-check"></i>Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
 <li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-ambiental"><i class="fa fa-check"></i>La varianza ambiental</a></li>
 <li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-de-la-interacción"><i class="fa fa-check"></i>La Varianza de la interacción</a></li>
 </ul></li>
@@ -352,7 +420,7 @@ div.csl-indent {
 <li class="chapter" data-level="11.3" data-path="selartifI.html"><a href="selartifI.html#diferencial-de-selección-e-intensidad-de-selección"><i class="fa fa-check"></i><b>11.3</b> Diferencial de selección e intensidad de selección</a></li>
 <li class="chapter" data-level="11.4" data-path="selartifI.html"><a href="selartifI.html#intensidad-de-selección-y-proporción-seleccionada"><i class="fa fa-check"></i><b>11.4</b> Intensidad de selección y proporción seleccionada</a>
 <ul>
-<li><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp">¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp"><i class="fa fa-check"></i>¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
 <li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#la-relación-entre-diferentes-formas-de-calcular-la-intensidad-de-selección"><i class="fa fa-check"></i>La relación entre diferentes formas de calcular la intensidad de selección</a></li>
 </ul></li>
 <li class="chapter" data-level="11.5" data-path="selartifI.html"><a href="selartifI.html#intervalo-generacional"><i class="fa fa-check"></i><b>11.5</b> Intervalo generacional</a></li>
@@ -476,15 +544,15 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="modelogenbas" class="section level1" number="8">
-<h1><span class="header-section-number">Capítulo 8</span> El Modelo Genético Básico</h1>
-<p>En la última parte de nuestro curso nos enfocaremos en la Genética Cuantitativa, es decir, la genética de características que en principio son cuantificables. En general, a nivel agronómico, la mayor parte de las características que deseamos mejorar son de este tipo y por eso la importancia en nuestro curso. Ejemplos de las mismas que han experimentado un “avance” sostenido durante el siglo XX, avance mayormente determinado por la selección artificial, lo constituyen la producción de leche en bovinos, el tamaño de “pollos parrilleros,” la concentración de proteína y grasa en la leche, la producción de la mayor parte de los cultivares y casi todas las características que han mostrado cierta respuesta a la selección.</p>
-<p>A diferencia de los modelos que hemos utilizado en la Parte II, en general el modelo de un <em>locus</em> con dos alelos no alcanzará para explicar la variación cuantitativa observada y deberemos construir modelos más generales, con menos detalle al nivel de <em>locus</em>, pero con mucha mayor capacidad de explicar los aportes de las distintas componentes que afectan la expresión de una característica. En general, vamos a trabajar asumiendo que el fenotipo observado de una característica se encuentra explicado por los aportes de la genética del individuo y su ambiente, así como por la interacción de la genética y el ambiente. Más aún, pasaremos de modelos centrados en el individuo, para los que era necesario conocer la configuración genética y ambiental completa, a pensar en los individuos como integrantes de poblaciones, que tienen una distribución aleatoria particular y por lo tanto nos enfocaremos en hacer predicciones sobre los mismos y su descendencia. Como lo notarás rápidamente, esta última parte del curso recurrirá a un tratamiento estadístico de la mayor parte de los problemas y por lo tanto es necesario tener frescos los conceptos de distribuciones, esperanzas, varianzas, momentos, correlación y regresión, entre otros. Si bien existen diferentes materiales que explican mejor o complementan lo escrito por nosotros, gran parte de lo que trabajaremos en esta última parte del curso está basado en el libro de <span class="citation"><a href="#ref-FalconerMackay1996" role="doc-biblioref">Falconer and Mackay</a> (<a href="#ref-FalconerMackay1996" role="doc-biblioref">1996</a>)</span> (o en la vieja versión en castellano <span class="citation"><a href="#ref-Falconer1983" role="doc-biblioref">Falconer</a> (<a href="#ref-Falconer1983" role="doc-biblioref">1983</a>)</span>), que sigue siendo una referencia hoy en día. Un excelente complemento se encuentra en el libro de <span class="citation"><a href="#ref-LynchWalsh1998" role="doc-biblioref">Michael Lynch and Walsh</a> (<a href="#ref-LynchWalsh1998" role="doc-biblioref">1998</a>)</span>, aunque el nivel de profundidad es bastante mayor.</p>
+<div id="modelogenbas" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Capítulo 8</span> El Modelo Genético Básico<a href="modelogenbas.html#modelogenbas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>En la última parte de nuestro curso nos enfocaremos en la Genética Cuantitativa, es decir, la genética de características que en principio son cuantificables. En general, a nivel agronómico, la mayor parte de las características que deseamos mejorar son de este tipo y por eso la importancia en nuestro curso. Ejemplos de las mismas que han experimentado un “avance” sostenido durante el siglo XX, avance mayormente determinado por la selección artificial, lo constituyen la producción de leche en bovinos, el tamaño de “pollos parrilleros”, la concentración de proteína y grasa en la leche, la producción de la mayor parte de los cultivares y casi todas las características que han mostrado cierta respuesta a la selección.</p>
+<p>A diferencia de los modelos que hemos utilizado en la Parte II, en general el modelo de un <em>locus</em> con dos alelos no alcanzará para explicar la variación cuantitativa observada y deberemos construir modelos más generales, con menos detalle al nivel de <em>locus</em>, pero con mucha mayor capacidad de explicar los aportes de las distintas componentes que afectan la expresión de una característica. En general, vamos a trabajar asumiendo que el fenotipo observado de una característica se encuentra explicado por los aportes de la genética del individuo y su ambiente, así como por la interacción de la genética y el ambiente. Más aún, pasaremos de modelos centrados en el individuo, para los que era necesario conocer la configuración genética y ambiental completa, a pensar en los individuos como integrantes de poblaciones, que tienen una distribución aleatoria particular y por lo tanto nos enfocaremos en hacer predicciones sobre los mismos y su descendencia. Como lo notarás rápidamente, esta última parte del curso recurrirá a un tratamiento estadístico de la mayor parte de los problemas y por lo tanto es necesario tener frescos los conceptos de distribuciones, esperanzas, varianzas, momentos, correlación y regresión, entre otros. Si bien existen diferentes materiales que explican mejor o complementan lo escrito por nosotros, gran parte de lo que trabajaremos en esta última parte del curso está basado en el libro de <span class="citation">Falconer and Mackay (<a href="#ref-FalconerMackay1996" role="doc-biblioref">1996</a>)</span> (o en la vieja versión en castellano <span class="citation">Falconer (<a href="#ref-Falconer1983" role="doc-biblioref">1983</a>)</span>), que sigue siendo una referencia hoy en día. Un excelente complemento se encuentra en el libro de <span class="citation">Michael Lynch and Walsh (<a href="#ref-LynchWalsh1998" role="doc-biblioref">1998</a>)</span>, aunque el nivel de profundidad es bastante mayor.</p>
 <p>Todos somos capaces de observar a diario que más allá de la similaridad que presentan determinados organismos cuando los comparamos con otros muy diferentes (de otra especie, por ejemplo), la misma es bastante parcial y reconocemos fácilmente que ningún ser vivo es exactamente igual a otro ser vivo. Esto nos lleva a intentar entender la base de la similaridad y de las diferencias entre organismos. Al mismo tiempo que (en general) distinguimos claramente a hermanos, unos de otros, también reconocemos que se parecen más a un padre que a otro, pero que a su vez en general se parecen más a alguno de sus padres que al resto de los vecinos del barrio. Además, desde los experimentos de Gregor Mendel, hemos venido confirmando la base genética de muchas características y aún somos capaces de predecir razonablemente bien cómo será la descendencia de determinada pareja de progenitores. Sin duda, para características discretas gobernadas por un <em>locus</em> o a lo sumo muy pocos <em>loci</em>, conociendo los diferentes alelos existentes, esto es un ejercicio bastante sencillo. Sin embargo, cuando las características presentan variación continua (por ejemplo, pesos, alturas, producción de leche, volumen, etc.) el sencillo <strong>modelo mendeliano</strong> básico ya no puede dar cuenta de las diferencias observadas y necesitamos construir un modelo que tenga en cuenta tanto los aspectos genéticos como los efectos ambientales que afectan la expresión de la característica.</p>
 <p>En el presente capítulo vamos a elaborar un modelo que nos permita interpretar la variabilidad fenotípica (es decir, lo observable) a la luz de los componentes genéticos y ambientales que la afectan. Para ello, primero introduciremos el tema de los tipos de variación, continua y discreta, así como el hecho de que la suma de diferentes (muchas) variables aleatorias produce una variación casi-continua (es decir, el <strong>teorema del límite central</strong>). Esto a su vez nos permitirá vincular el modelo mendeliano de herencia con los enfoques biométricos de la misma, lo que fue un hito en la construcción de la <strong>síntesis Darwiniana</strong> y que resolvió varias contradicciones de ambos enfoques previos. Más aún, esto será la base del <strong>modelo infinitesimal</strong>, que supone que las características continuas pueden consistir de la suma infinitesimal de los aportes de un número infinito de <em>loci</em>. Si bien totalmente incorrecto a la luz de nuestro conocimiento (el tamaño del genoma es finito), este enfoque permite construir modelos sencillos pero de gran poder predictivo y de comprensión de los fenómenos subyacentes.</p>
 <p>A partir de nuestro modelo genético básico, que asume que el fenotipo de cualquier individuo es la suma de los efectos genéticos y ambientales en el mismo, más la interacción entre ambos tipos de efectos, iremos disgregando tanto los efectos genético como los ambientales en componentes que nos permitan entender sus interrelaciones. Veremos que podemos descomponer los efectos genéticos en <strong>efectos de carácter aditivo</strong> (es decir, que se puede sumar directamente el efecto de cada alelo presente en el individuo), los desvíos de la aditividad de la combinación particular de alelos que tiene cada genotipo, que llamaremos <strong>desvío de dominancia</strong> y finalmente los desvíos de interacción de los efectos entre diferentes <em>loci</em>, que llamaremos <strong>efectos epistáticos</strong>. Además, para los efectos aditivos y de dominancia, analizaremos en detalle el modelo de un <strong>gen de efecto mayor</strong>, donde una característica está básicamente gobernada por un solo gen con dos alelos. Finalmente, extenderemos nuestros análisis al nivel de las poblaciones, buscando entender la importancia relativa de las distintas componentes a partir de las varianzas que generan las mismas.</p>
-<div id="variación-continua-y-discreta" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Variación continua y discreta</h2>
+<div id="variación-continua-y-discreta" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Variación continua y discreta<a href="modelogenbas.html#variación-continua-y-discreta" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Hasta el momento hemos basado todo el desarrollo del curso casi exclusivamente en razonamientos obtenidos a partir de un <em>locus</em> o de un par de <em>loci</em> con dos alelos. En organismos haploides, suponiendo que el efecto de cada alelo sea constante en un determinado momento en el tiempo, es decir de que no dependa de otros factores, apenas se pueden tener dos genotipos distintos y poco cambia la situación el que los organismos sean diploides, donde aparecen tres genotipos posibles. Cuando el tipo de característica que analizamos es categórica, por ejemplo el color verde o amarillo de los guisantes de Mendel (<em>Pisum sativum</em>), todo los resultados entran en alguna de las categorías permitidas o definidas y entonces mientras el número de categorías sea menor o igual al número de genotipos, tenemos alguna esperanza de vincular el genotipo con el fenotipo. Es decir, si las categorías son “verde” y “amarillo” es porque asumimos que las pequeñas variaciones de color son irrelevantes para nosotros o sencillamente ellas no existen (cosa que parece totalmente improbable) y solo tenemos que asociar algún (o algunos) genotipos con un color y el resto con el otro. Claramente, en un <em>locus</em> diploide con dos alelos podemos acomodar hasta tres genotipos, por lo que podríamos acomodar un nuevo color de guisantes tan extraño como el “tan” (sí, es un color), por ejemplo, o un color intermedio entre el verde y el amarillo; las diferencias entre estas alternativas están en la base bioquímica del color, pero no hay una imposibilidad matemática de nuestro modelo para acomodarlas. Sin embargo, cuando la paleta de colores de nuestros guisantes hipotéticos es un poco más amplia, por ejemplo 14 colores, entramos en una imposibilidad para describirla directamente con un <strong>mapeo unívoco</strong> de genotipos a colores. Dicho de otra forma, cada genotipo debería estar asociado a más de un color, lo que implica involucrar otros tipos de factores, ambientales o genéticos, pero estos últimos fuera de nuestro <em>locus</em>. Pese a ello sigue siendo un tipo de variación <strong>categórica</strong> ya que nuestra paleta tiene un número finito, contable, de colores y que no tiene un sentido matemático la distancia entre esos colores. Claramente esto podemos “arreglarlo” invocando otros <em>loci</em>, o sencillamente colocando más alelos en nuestro <em>locus</em> original; si suponemos además que cada combinación de dos alelos produce un color diferente entonces con <span class="math inline">\(k\)</span> alelos podemos formar <span class="math inline">\(n=k(k+1)/2\)</span> genotipos diploides diferentes (incluyendo los homocigotos). Por ejemplo, con <span class="math inline">\(k=5\)</span> alelos podemos formar <span class="math inline">\(n=5(5+1)/2=15\)</span> genotipos diferentes que nos permitirían codificar esos 14 colores y aún nos sobraría capacidad de acomodar uno nuevo. Todo esto es apenas una disgresión acerca de las posibilidades matemáticas de nuestros modelos, pero obviamente la base bioquímica y molecular de la herencia del color será la que mande y nuestro modelo deberá ser capaz de representar esa realidad.</p>
 <p>Otro tipo de variables de interés agronómico y biológico suelen producir resultados que son contables pero que, ahora sí, tienen sentido las distancias entre observaciones. Por ejemplo, el número de granos de maíz en una mazorca es, en principio, contable y si una mazorca me da 483 granos y otra 497, puedo calcular su diferencia como <span class="math inline">\(497-483=14\)</span> granos. Claramente, no podía realizar esta operación con los colores, al menos como los definimos previamente en <strong>categorías</strong>. A las características que tienen este tipo de variación se les llama a veces <strong>merísticas</strong> y poseen una distribución <strong>discreta</strong>, en contraposición a <strong>continua</strong>; son además del tipo de variables cuyo resultado se obtiene de contar el número de elementos que hay en ellas y que los mismos (los elementos) siguen un ordenamiento natural, donde la “distancia” entre elementos tiene sentido. Como vimos más arriba, en principio alcanzaría con <span class="math inline">\(k=\frac{-1+\sqrt{1+8n}}{2}\)</span> (el resultado de resolver <span class="math inline">\(n=k(k+1)/2\)</span>) alelos en un <em>locus</em> para acomodar todas las categorías posibles de una característica como el color. Sin embargo, esto tiene poco sentido en variables discretas donde cada combinación (genotipo) debería acomodarse en el ordenamiento discreto posible. Por ejemplo, para acomodar la posibilidad de tener entre 1 y 528 granos por mazorca alcanzaría en un <em>locus</em> diploide con 32 alelos, pero sus combinaciones deberían de alguna manera tener un ordenamiento lógico (a nivel bioquímico) que se traduzca en conteos del 1 al 528. Una alternativa más razonable parece ser invocar más <em>loci</em> y asumir, en principio, que los efectos de los alelos son aditivos (es decir, se pueden sumar), tanto dentro de cada <em>locus</em> como entre <em>loci</em>. En la figura <a href="modelogenbas.html#fig:figura8p1">8.1</a> podemos ver el resultado de una simulación particular de este modelo, para un solo <em>locus</em> (izquierda arriba), así como para 5, 10 y 50 <em>loci</em> en un gen de organismos diploide, con dos alelos en cada <em>loci</em> y frecuencias de <span class="math inline">\(p=q=\frac{1}{2}\)</span> en cada uno. Para cada situación se simularon los valores de <span class="math inline">\(100.000\)</span> individuos, suponiendo además que cada copia de uno de los dos alelos suma una unidad (1) a la característica, mientras que el otro alelo no suma nada (0). Claramente, con 1 <em>locus</em> solo hay 3 genotipos posibles, es decir 0, 1 o 2 copias del alelo que suma una unidad y por lo tanto los valores posibles son 0, 1 y 2. Con 5 <em>loci</em> tenemos mucha más variación posible. Primero, los límites serán ahora 0 copias del alelo que suma, es decir 0, y hacia arriba será (5 loci <span class="math inline">\(\times\)</span> 2 copias que suman)=10 unidades. Pero por otro lado, comenzamos a apreciar un fenómeno interesante: la distribución de los valores no es uniforme y los valores centrales tienen mayor cantidad de datos (individuos que tienen ese valor genotípico) y a medida de que vamos hacia los extremos del rango de valores posibles las barras disminuyen de tamaño, es decir hay menos individuos con esos valores.</p>
 
@@ -497,7 +565,7 @@ Figura 8.1: Distribución de valores al sumar los efectos de diferente número d
 <p><br />
 </p>
 <p>La situación se ve aún más clara cuando tenemos 10 <em>loci</em>. Con la misma cuenta que antes para 5, tenemos que los límites de valores serán 0 cuando el individuo no tenga ningún alelo que aporte valor, a un máximo de 20 (2 copias en los 10 <em>loci</em>). Además, la tendencia sobre la forma de la distribución instalada en la gráfica de 5 <em>loci</em> se ve plenamente confirmada en la gráfica de 10 <em>loci</em>, con la masa concentrada en los valores centrales y disminuyendo hacia los extremos. En la última gráfica, la correspondiente a 50 <em>loci</em> se aprecia otro fenómeno interesante: si bien los límites son ahora de 0 y de 100, ya no apreciamos que ninguna barra se encuentra cerca de esos valores, al menos con <span class="math inline">\(100.000\)</span> individuos simulados. De hecho, es fácil calcular la probabilidad de cualquiera de los dos eventos extremos en las colas. Por ejemplo, para que el valor de un individuo sea 100 es necesario que los 50 <em>loci</em> sean homocigotos para el alelo que aporta una unidad (y por lo tanto aportan 2 unidades por <em>locus</em>). Asumiendo equilibrio de Hardy-Weinberg con una probabilidad <span class="math inline">\(p=q=\frac{1}{2}\)</span> como hemos usado en la figura <a href="modelogenbas.html#fig:figura8p1">8.1</a>, la probabilidad en un <em>locus</em> de que sea homocigoto para el alelo que aporta una unidad es <span class="math inline">\(\left(\frac{1}{2}\right)^2=\frac{1}{4}\)</span>. Como todos los <em>loci</em> son independientes, la probabilidade de que en todos se dé esa situación es el producto de cada una de las probabilidades, o lo que es lo mismo <span class="math inline">\(\left(\frac{1}{4}\right)^{50} \approx 7,89\times 10^{-31} \approx 0\)</span> en términos prácticos, ya que apenas hemos muestreado 100 mil individuos. La otra cosa intersante acerca de esta distribución es que a medida de que aumentamos el número de <em>loci</em> en consideración, también aumenta el número de categorías de valores (barras en el gráfico) y rápidamente el gráfico empieza a insinuar que una línea continua podería ser trazada sin gran pérdida de precisión. Más aún, si recuerdas la forma de la distribución normal, la misma se asemeja bastante a la que observamos en la gráfica de 50 <em>loci</em>. Esto no nos debería sorprender para nada, ya que si recordamos el enunciado del teorema del límite central, la suma de variables aleatorias independientes e idénticamente distribuidas tiende a la distribución normal a medida que el número de variables sumadas se incrementa.</p>
-<p>Lo anterior es mucho más relevante de lo que imaginamos. Durante el comienzo del siglo XX se desarrolló un intenso debate entre la escuela Mendeliana (que enfocaban el problema como Mendel había definido el problema de los guisantes) y la escuela biométrica (mucho más enfocada en lo continuo de la variabilidad), ambos manteniendo posiciones irreconciliables sobre los mecanismos de la herencia, que en ese momento eran desconocidos. Sin embargo, la posibilidad de aproximarse a distribuciones continuas simplemente a partir de la suma de variables discretas genera un puente conceptual entre las dos visiones. Más aún, si a esta variabilidad casi-continua le solapamos el efecto de la variabilidad ambiental, dada la “discretitud” (permítasenos acuñar este término) de las escalas “reglas” con las que usualmente medimos, entonces estamos frente a una situación donde resulta muchas veces indistinguible si se trata de una variable discreta o continua. Aportes sustantivos en este sentido fueron los realizados por George Udny Yule<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a> <span class="citation">(<a href="#ref-Yule1902" role="doc-biblioref">Yule 1902</a>)</span> y Wilhelm Johannsen <span class="citation">(<a href="#ref-Johannsen1903" role="doc-biblioref">Johannsen 1903</a>)</span>, que fueron fundamentales para los posteriores trabajos que llevaron a la “ley” de Hardy-Weinberg <span class="citation">(<a href="#ref-castle1903" role="doc-biblioref">Castle 1903</a>; <a href="#ref-pmid17779291" role="doc-biblioref">Hardy 1908</a>; <a href="#ref-weinberg1908" role="doc-biblioref">Weinberg 1908</a>)</span> y que contribuyeron a reconciliar ambas posiciones en lo que luego terminaría siendo la síntesis neo-Darwinista.</p>
+<p>Lo anterior es mucho más relevante de lo que imaginamos. Durante el comienzo del siglo XX se desarrolló un intenso debate entre la escuela Mendeliana (que enfocaban el problema como Mendel había definido el problema de los guisantes) y la escuela biométrica (mucho más enfocada en lo continuo de la variabilidad), ambos manteniendo posiciones irreconciliables sobre los mecanismos de la herencia, que en ese momento eran desconocidos. Sin embargo, la posibilidad de aproximarse a distribuciones continuas simplemente a partir de la suma de variables discretas genera un puente conceptual entre las dos visiones. Más aún, si a esta variabilidad casi-continua le solapamos el efecto de la variabilidad ambiental, dada la “discretitud” (permítasenos acuñar este término) de las escalas “reglas” con las que usualmente medimos, entonces estamos frente a una situación donde resulta muchas veces indistinguible si se trata de una variable discreta o continua. Aportes sustantivos en este sentido fueron los realizados por George Udny Yule<a href="#fn80" class="footnote-ref" id="fnref80"><sup>80</sup></a> <span class="citation">(<a href="#ref-Yule1902" role="doc-biblioref">Yule 1902</a>)</span> y Wilhelm Johannsen <span class="citation">(<a href="#ref-Johannsen1903" role="doc-biblioref">Johannsen 1903</a>)</span>, que fueron fundamentales para los posteriores trabajos que llevaron a la “ley” de Hardy-Weinberg <span class="citation">(<a href="#ref-castle1903" role="doc-biblioref">Castle 1903</a>; <a href="#ref-pmid17779291" role="doc-biblioref">Hardy 1908</a>; <a href="#ref-weinberg1908" role="doc-biblioref">Weinberg 1908</a>)</span> y que contribuyeron a reconciliar ambas posiciones en lo que luego terminaría siendo la síntesis neo-Darwinista.</p>
 <p>Muchas de las características en genética cuantitativa pueden describirse por alguno de los dos tipos de variables que vimos más arriba, <strong>discretas</strong> y <strong>continuas</strong>. Algunas otras características, sin embargo, tienen una distribución donde es posible tomar uno solo de unos pocos valores posibles y que los mismos tienen un ordenamiento natural, o que se trata de características del tipo presencia-ausencia. Por ejemplo, en el caso de enfermedades o patologías con cierta base genética, ciertas veces la causa es multifactorial y su base genética es poligénica, es decir, influenciada por muchos genes. En esos casos, también es posible pensar que existe una característica subyacente no observable, que es continua y que al sobrepasar un determinado valor de umbral, entonces la enfermedad se manifiesta. Esta forma de pensar las características y modelarlas, los modelos <strong>umbral</strong> <span class="citation">(<a href="#ref-Wright1934" role="doc-biblioref">Sewall Wright 1934a</a>)</span>, puede tener una base molecular y funcional real o puede ser sencillamente un truco adecuado para modelarla, pero el hecho es que suele ser una buena alternativa en mejoramiento genético para varias características <span class="citation">(<a href="#ref-Gianola1982" role="doc-biblioref">Daniel Gianola 1982</a>)</span>.</p>
 <p><br />
 </p>
@@ -515,8 +583,8 @@ Figura 8.1: Distribución de valores al sumar los efectos de diferente número d
 </div>
 <hr />
 </div>
-<div id="el-modelo-genético-básico" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> El modelo genético básico</h2>
+<div id="el-modelo-genético-básico" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> El modelo genético básico<a href="modelogenbas.html#el-modelo-genético-básico" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En general, para la mayoría de las características que poseen una componente genética en su expresión estamos limitados en un principio a observar su manifestación <strong>fenotípica</strong>, sin poder acceder a identificar directamente el genotipo de cada individuo. Esto es así, por ejemplo, en las características productivas de interés económico en ganado, como el peso en distintos momentos de su vida, la producción de leche, grasa y proteína, pero también en humanos (la altura, el peso, la presión sanguínea) o en plantas. Claramente, lo que observamos puede tener un componente genético, pero también existe en esas observaciones un “ruido” superpuesto y que en general es a este nivel imposible de eliminar y que “contamina” nuestras estimaciones sobre el efecto de genes y alelos. Es decir, aún si una característica cuantitativa se encontrara <span class="math inline">\(100\%\)</span> determinada por los efectos genéticos, las mediciones que realizamos de la misma tienen, de forma ineluctable, un error de medición, como toda medida. Esto nos lleva a que nuestro modelos de lo que observamos deben incluir, al menos, estos dos factores: el genotipo y los errores de medición. Más en general, el ambiente tiene una influencia importante o determinante en la mayor parte de las características cuantitativas de interés. Si bien todos reconocemos que la altura de los padres es de alguna manera heredable, también todos sabemos que la altura de las poblaciones humanas ha ido aumentando a medida de que el ambiente (alimentación, deportes, hábitos, salud) han ido cambiando, en particular durante el siglo XX. Más directamente vinculado a la producción, todos sabemos que la producción de leche por vaca ha aumentado dramáticamente durante la segunda mitad del siglo XX, en gran parte por el mejoramiento genético, pero sin embargo, aún la misma vaca incorrectamente alimentada apenas producirá una fracción de todo su potencial genético. De hecho, como nosotros en este curso estamos mayormente interesados en la genética, podemos considerar que los errores de medición son a nuestros efectos parte del ambiente. Eso nos lleva a una primera aproximación, algo rústica, al modelado de los fenotipos. Es decir, podemos considerar que el <strong>fenotipo de cada individuo</strong>, al que identificamos con la letra <span class="math inline">\(P\)</span> (por su nombre en inglés, “phenotype” y para diferenciarlo claramente de la <span class="math inline">\(F\)</span> que hemos usado para el índice de fijación) es la <strong>suma</strong> de los <strong>efectos genéticos</strong> (que notamos con <span class="math inline">\(G\)</span>) y los <strong>efectos ambientales</strong> (que notamos con <span class="math inline">\(E\)</span> de “environment”), o de otra forma</p>
 <p><span class="math display" id="eq:modgenbas1">\[\begin{equation}
 P=G+E
@@ -550,7 +618,14 @@ I=I_{AA}+I_{AD}+I_{DD}+I_{AAA}+I_{AAD}+...
 <p>Veamos ahora un ejemplo de dos <em>loci</em> que se comportan en forma aditiva. En el <em>locus</em> <span class="math inline">\(A\)</span> tenemos dos alelos, con valores <span class="math inline">\(A_1=2\)</span>, <span class="math inline">\(A_2=-2\)</span>, mientras que para el segundo <em>locus</em>, sus alelos aportan <span class="math inline">\(B_1=1\)</span> y <span class="math inline">\(B_2=-1\)</span>. En el cuadro siguiente tenemos todas las 9 combinaciones posibles de los genotipos en los dos <em>loci</em> y los valores correspondientes, que surgen de sumar los efectos de los alelos presentes en cada uno:</p>
 <p><br />
 </p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="21%" />
+<col width="21%" />
+<col width="20%" />
+<col width="20%" />
+<col width="16%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -597,7 +672,14 @@ I=I_{AA}+I_{AD}+I_{DD}+I_{AAA}+I_{AAD}+...
 <p>Veamos ahora qué ocurre cuando aparece el efecto de dominancia en uno de los <em>locus</em>. En el cuadro siguiente los efectos aditivos son idénticos que en el cuadro anterior, pero ahora aparece un efecto de dominancia en el <em>locus</em> <span class="math inline">\(A\)</span>. Mientras que si nos movemos verticalmente, es decir cambiamos en el número de copias de los alelos <span class="math inline">\(B_1\)</span> y <span class="math inline">\(B_2\)</span>, las distancias entre celdas contiguas se mantienen, es decir hay aditividad, si nos movemos en sentido horizontal la situación cambia. No solo cambia respecto al cuadro anterior, sino que tambien cambia dependiendo de en que columna me pare. Por ejemplo, la distancia entre cualquier celda de la primer columna (que corresponde al genotipo <span class="math inline">\(A_1A_1\)</span>) a la contigua de la segunda columna (que corresponde al genotipo <span class="math inline">\(A_1A_2\)</span>) es de <span class="math inline">\(\Delta=-3\)</span> unidades, mientras que de la segunda a la tercera columna (que corresponde al genotipo <span class="math inline">\(A_2A_2\)</span>) el cambio es de <span class="math inline">\(\Delta=-5\)</span> unidades. Claramente el promedio no coincide en ningún caso con el valor del genotipo de <span class="math inline">\(B\)</span> correspondiente a esa fila, como sí ocurría en el cuadro de arriba (aditividad en los dos <em>loci</em>).</p>
 <p><br />
 </p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="21%" />
+<col width="21%" />
+<col width="20%" />
+<col width="20%" />
+<col width="16%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -643,7 +725,14 @@ I=I_{AA}+I_{AD}+I_{DD}+I_{AAA}+I_{AAD}+...
 <p>Finalmente, en el cuadro siguiente le hemos agregado al cuadro de efectos aditivos un efecto de interacción <strong>aditivo x aditivo</strong>, sencillamente como el producto de los valores del efecto aditivo de los dos <em>loci</em> para cada par de genotipos (las funciones de interacción pueden ser infinitas, esta es una sola, elegida por sencilla para representar el fenómeno). El primer valor de cada celda corresponde al efecto aditivo y el segundo al <strong>efecto de epistasis</strong> del tipo <span class="math inline">\(I_{AA}\)</span>. Además de haberse alterado los valores de casi todas las celdas, el cambio entre celdas contiguas experimenta ahora algunos valores leves y otros abruptos, en los dos sentidos. Por ejemplo, pasar de <span class="math inline">\(A_1A_1/B_1B_1\)</span> a <span class="math inline">\(A_1A2/B_1B_1\)</span> significa solo <span class="math inline">\(\Delta=14-2=12\)</span> unidades, mientras que de <span class="math inline">\(A_1A_1/B_2B_2\)</span> a <span class="math inline">\(A_1A_2/B_2B_2\)</span> el cambio correspondiente es de <span class="math inline">\(\Delta=-6-(-2)=-4\)</span> unidades. Claramente, los efectos epistáticos pueden cambiar totalmente la configuración de los genotipos respecto a la aditividad o a la dominancia.</p>
 <p><br />
 </p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="21%" />
+<col width="21%" />
+<col width="20%" />
+<col width="20%" />
+<col width="16%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -727,10 +816,10 @@ I=I_{AA}+I_{AD}+I_{DD}+I_{AAA}+I_{AAD}+...
 </div>
 <hr />
 </div>
-<div id="modelo-genético-básico-un-locus-con-dos-alelos" class="section level2" number="8.3">
-<h2><span class="header-section-number">8.3</span> Modelo Genético Básico: un <em>locus</em> con dos alelos</h2>
+<div id="modelo-genético-básico-un-locus-con-dos-alelos" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Modelo Genético Básico: un <em>locus</em> con dos alelos<a href="modelogenbas.html#modelo-genético-básico-un-locus-con-dos-alelos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Como hemos mencionado antes, en general, la mayor parte de las características de interés para la genética cuantitativa son de herencia poligénica, es decir, controlada por el efecto de alelos en varios (muchos) genes. Esto, sumado a la imposibilidad de conocer para cada uno de esos genes sus estados alélicos, además de los efectos de cada alelo, ha llevado a la genética cuantitativa del siglo XX a desarrollarse basada en una aproximación estadística simple y potente, llamada <strong>el modelo infinitesimal</strong>. La misma traslada el problema de conocer el efecto de cada gen y de cada alelo a un problema de distribuciones estadísticas, que asumiendo un número de <em>loci</em> razonablemente grande y una pequeña contribución de cada <em>loci</em>, nos permite invocar el teorema del límite central, como ya vimos antes también. Una porción importante de esta <strong>Parte III</strong> del libro estará basada en dicho modelo, por lo que será de gran relevancia para nosotros.</p>
-<p>Por el contrario, los genes de <strong>efecto mayor</strong>, aquellos genes en que algunas o todas las variantes (alelos) marcan una diferencia importante en el fenotipo, son relativamente escasos en la genética cuantitativa, aunque a veces determinantes en diferencias importante en producción, o entre razas de la misma especie. En una revisión reciente, <span class="citation"><a href="#ref-Wright2015" role="doc-biblioref">D. Wright</a> (<a href="#ref-Wright2015" role="doc-biblioref">2015</a>)</span> identifica varios de ellos en especies animales domésticas. Por ejemplo, en el perro el largo de patas estaría gobernado en gran medida por el gen <span class="math inline">\(FGF4\)</span>, mientras que el tamaño corporal estaría determinado por el gen <span class="math inline">\(IGF1\)</span>. En ganado vacuno el crecimiento muscular estaría determinado en gran medida por el gen <span class="math inline">\(MSTN\)</span>, el (mal) olor en la leche por el gen <span class="math inline">\(FMO3\)</span>, mientras que la producción de leche estaría influenciada por el gen <span class="math inline">\(DGAT1\)</span> y la composición influenciada por las variantes en el gen <span class="math inline">\(ABCG1\)</span>. En ovinos, la tasa de ovulación incrementada y la tasa de melliceros estaría influenciada por el gen <span class="math inline">\(BMP15\)</span>, mientras que el conocido gen del efecto <em>Booroola</em> estaría determinado por las variantes en el gen <span class="math inline">\(BMPR1B\)</span>. En caballo, mientras tanto, el tipo de paso estaría determinado por el gen <span class="math inline">\(DMRT3\)</span>. Finalmente, en cerdos, la hipertermia maligna viene dada por variantes en el gen <span class="math inline">\(RYR1\)</span>, el contenido de glicógeno en músculo por el gen <span class="math inline">\(PRKAG3\)</span>, el tamaño de las orejas por el gen <span class="math inline">\(PPARD\)</span>, la muscularidad y la grasa dorsal influenciados por el gen <span class="math inline">\(IGF2\)</span>, mientras que la terneza de la carne estaría gobernado por el gen <span class="math inline">\(CAST\)</span>.</p>
+<p>Por el contrario, los genes de <strong>efecto mayor</strong>, aquellos genes en que algunas o todas las variantes (alelos) marcan una diferencia importante en el fenotipo, son relativamente escasos en la genética cuantitativa, aunque a veces determinantes en diferencias importante en producción, o entre razas de la misma especie. En una revisión reciente, <span class="citation">D. Wright (<a href="#ref-Wright2015" role="doc-biblioref">2015</a>)</span> identifica varios de ellos en especies animales domésticas. Por ejemplo, en el perro el largo de patas estaría gobernado en gran medida por el gen <span class="math inline">\(FGF4\)</span>, mientras que el tamaño corporal estaría determinado por el gen <span class="math inline">\(IGF1\)</span>. En ganado vacuno el crecimiento muscular estaría determinado en gran medida por el gen <span class="math inline">\(MSTN\)</span>, el (mal) olor en la leche por el gen <span class="math inline">\(FMO3\)</span>, mientras que la producción de leche estaría influenciada por el gen <span class="math inline">\(DGAT1\)</span> y la composición influenciada por las variantes en el gen <span class="math inline">\(ABCG1\)</span>. En ovinos, la tasa de ovulación incrementada y la tasa de melliceros estaría influenciada por el gen <span class="math inline">\(BMP15\)</span>, mientras que el conocido gen del efecto <em>Booroola</em> estaría determinado por las variantes en el gen <span class="math inline">\(BMPR1B\)</span>. En caballo, mientras tanto, el tipo de paso estaría determinado por el gen <span class="math inline">\(DMRT3\)</span>. Finalmente, en cerdos, la hipertermia maligna viene dada por variantes en el gen <span class="math inline">\(RYR1\)</span>, el contenido de glicógeno en músculo por el gen <span class="math inline">\(PRKAG3\)</span>, el tamaño de las orejas por el gen <span class="math inline">\(PPARD\)</span>, la muscularidad y la grasa dorsal influenciados por el gen <span class="math inline">\(IGF2\)</span>, mientras que la terneza de la carne estaría gobernado por el gen <span class="math inline">\(CAST\)</span>.</p>
 <p>Veamos, a partir de un ejemplo ficticio, como actúa un gen de efecto mayor y hasta dónde podemos llegar con el análisis del mismo. La figura <a href="modelogenbas.html#fig:figura8p2">8.3</a> muestra el comportamiento <strong>fenotípico</strong> de un gen en un organismo diploide, con dos alelos, <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span>, con frecuencias <span class="math inline">\(p=0,6\)</span> y <span class="math inline">\(q=0,4\)</span>, respectivamente, en una característica como peso al año en una raza vacuna. Supongamos que se trata de una característica en que conocemos la base molecular de la misma y que tenemos un <strong>test genético</strong> para determinar a que genotipo corresponde cada animal (por ejemplo, a partir de un <strong>chip de genotipado</strong> o a partir de un <strong>ensayo de PCR</strong>). El genotipo <span class="math inline">\(A_1A_1\)</span> produce animales con un peso de <span class="math inline">\(180\)</span> Kg, el genotipo <span class="math inline">\(A_2A_2\)</span> produce animales de <span class="math inline">\(120\)</span> Kg de peso, mientras que el heterocigoto produce animales de <span class="math inline">\(160\)</span> Kg de peso, cada uno de ellos marcado en la figura <a href="modelogenbas.html#fig:figura8p2">8.3</a> como una línea rayada vertical del color correspondiente al genotipo. Sin embargo, como existe <strong>variabilidad ambiental</strong>, definida como <strong>variabilidad no-genética</strong>, los animales de cada genotipo se distribuirán alrededor del valor correspondiente en forma aleatoria. En este caso asumimos que la variabilidad ambiental no depende del genotipo, es decir que es igual para todos los animales, algo que discutiremos más adelante, y por lo tanto, como de acuerdo a la ecuación <a href="modelogenbas.html#eq:modgenbas1">(8.1)</a> el fenotipo es igual a <span class="math inline">\(G+E\)</span>, si <span class="math inline">\(G\)</span> es un valor fijo para cada genotipo (<span class="math inline">\(G_{11}\)</span>, <span class="math inline">\(G_{12}\)</span> y <span class="math inline">\(G_{22}\)</span>), entonces los fenotipos correspondientes a cada genotipo seguirán una distribución aleatoria con media en su correspondiente valor genotípico y varianza igual a la varianza ambiental (que llamaremos <span class="math inline">\(\sigma_E^2\)</span>). Es decir,</p>
 <p><span class="math display" id="eq:modgenbas2">\[\begin{equation}
 P_{11}=G_{11}+N(0,\sigma_E^2)=N(G_{11},\sigma_E^2) \\
@@ -750,9 +839,9 @@ Figura 8.3: Distribución de pesos en una población compuesta de tres genotipos
 </p>
 <p>En nuestro caso particular, hemos asumido además que la población se encuentra en equilibrio de Hardy-Weinberg, por lo que las frecuencias de cada genotipo serán</p>
 <p><span class="math display">\[\begin{equation}
- {fr}(A_1A_1)=p^2=0,6^2=0,36 \\
- {fr}(A_1A_2)=2pq=2 \times 0,6 \times 0,4=0,48 \\
- {fr}(A_2A_2)=q^2=0,4^2=0,16
+{fr}(A_1A_1)=p^2=0,6^2=0,36 \\
+{fr}(A_1A_2)=2pq=2 \times 0,6 \times 0,4=0,48 \\
+{fr}(A_2A_2)=q^2=0,4^2=0,16
 \end{equation}\]</span></p>
 <p>lo que se aprecia claramente por el área de cada curva en la figura. Si juntamos las tres curvas, es decir unimos las sub-poblaciones con distinto genotipo, entonces tenemos toda la población, representada por la curva negra. La media de la población general se encuentra representada por una línea continua de color negro, a la derecha de la línea rayada violeta que corresponde al genotipo heterocigoto. Finalmente, esta figura también muestra un aspecto interesante, que suele confundir a muchos cuando trabajamos con modelos lineales, por ejemplo. Pese a que las distribuciones de valores de los individuos pertenecientes a cada genotipo es normal y con la misma varianza, la distribución resultante de combinar los individuos de todos los genotipos <strong>no es normal</strong>. Esto no suele representar ningún problema cuando el modelo es infinitesimal porque no existe un número pequeño de clases, como en nuestro caso de la figura <a href="modelogenbas.html#eq:modgenbas1">(8.1)</a> y como cada clase está formada por diferentes combinaciones (suma) de contribuciones infinitesimales, entonces la distribución es aproximadamente normal en esos casos. En estadística, el supuesto de normalidad en modelos lineales (en ANOVA, por ejemplo) se refiere a la distribución de los residuos (es decir, luego de descontados los efectos del modelo), no de los datos originales.</p>
 <p>En la figura <a href="modelogenbas.html#fig:figura8p2">8.3</a> hemos colocado una línea vertical en el valor correspondiente a cada uno de los genotipos, pero hasta ahora no hemos mencionado de dónde salieron esos valores. Es decir, el <strong>test genético</strong> lo único que es capaz de decirme son los genotipos de cada animal al que le realizamos el ensayo, pero no puede decirme cuánto vale ese genotipo. ¿De dónde sale entonces esa información? Si consideramos que los valores de los genotipos son independientes de otro tipo de información genómica y que la distribución de valores <strong>fenotípicos</strong> alrededor de cada valor <strong>genotípico</strong> es la misma, una distribución normal producto de la <strong>variabilidad ambiental</strong>, entonces las <strong>medias de los fenotipos de cada clase</strong> se corresponderá con el consiguiente <strong>valor genotípico</strong>. Es decir, si se cumplen nuestros supuestos, entonces, usando los resultados de la ecuación <a href="modelogenbas.html#eq:modgenbas2">(8.7)</a>, tenemos que</p>
@@ -762,7 +851,7 @@ Figura 8.3: Distribución de pesos en una población compuesta de tres genotipos
 \bar{P}_{22}=\mathbb{E}(P_{22})=\mathbb{E}[G_{22}+N(0,\sigma_E^2)]=\mathbb{E}[N(G_{22},\sigma_E^2)]= G_{22}
 \tag{8.8}
 \end{equation}\]</span></p>
-<p>Dicho de otra forma, si conocemos los pesos de cada animal y su genotipo, separamos a los animales por genotipo y calculamos el promedio de cada grupo, obteniendo entonces el valor esperado para ese genotipo, que asumimos se corresponde sin error al “verdadero” valor del mismo<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a>. Pasamos entonces, ahora, de manejarnos con una distribución de <strong>valores fenotípicos</strong> a un conjunto de 3 valores genotípicos. Antes de comenzar a trabajar con estos valores genotípicos, veamos si podemos reducir el número de parámetros de 3 a 2, de forma tal de simplificar nuestras ecuaciones futuras. De todas las transformaciones imaginables, posiblemente la más utilizada en los textos de genética cuantitativa es la que aparece representada en la figura <a href="modelogenbas.html#fig:modgenbas">8.4</a>. En la parte superior de la misma vemos representados los valores de los tres genotipos (<span class="math inline">\(G_{11}\)</span>, <span class="math inline">\(G_{12}\)</span>, <span class="math inline">\(G_{22}\)</span>), o lo que es lo mismo las medias de las clases fenotípicas (<span class="math inline">\(\bar{P}_{11}\)</span>, <span class="math inline">\(\bar{P}_{12}\)</span>, <span class="math inline">\(\bar{P}_{22}\)</span>) en la <strong>escala original</strong>, es decir, la escala en la que se tomó la medida. En nuestro caso, con los valores de la figura <a href="modelogenbas.html#fig:figura8p2">8.3</a>, <span class="math inline">\(G_{11}=180\)</span> Kg, <span class="math inline">\(G_{12}=160\)</span> Kg y <span class="math inline">\(G_{22}=120\)</span> Kg. También sobre la misma escala, podemos ahora identificar el <strong>punto medio entre los homocigotas</strong>, que llamaremos <span class="math inline">\(m\)</span> y cuyo valor está dado por</p>
+<p>Dicho de otra forma, si conocemos los pesos de cada animal y su genotipo, separamos a los animales por genotipo y calculamos el promedio de cada grupo, obteniendo entonces el valor esperado para ese genotipo, que asumimos se corresponde sin error al “verdadero” valor del mismo<a href="#fn81" class="footnote-ref" id="fnref81"><sup>81</sup></a>. Pasamos entonces, ahora, de manejarnos con una distribución de <strong>valores fenotípicos</strong> a un conjunto de 3 valores genotípicos. Antes de comenzar a trabajar con estos valores genotípicos, veamos si podemos reducir el número de parámetros de 3 a 2, de forma tal de simplificar nuestras ecuaciones futuras. De todas las transformaciones imaginables, posiblemente la más utilizada en los textos de genética cuantitativa es la que aparece representada en la figura <a href="modelogenbas.html#fig:modgenbas">8.4</a>. En la parte superior de la misma vemos representados los valores de los tres genotipos (<span class="math inline">\(G_{11}\)</span>, <span class="math inline">\(G_{12}\)</span>, <span class="math inline">\(G_{22}\)</span>), o lo que es lo mismo las medias de las clases fenotípicas (<span class="math inline">\(\bar{P}_{11}\)</span>, <span class="math inline">\(\bar{P}_{12}\)</span>, <span class="math inline">\(\bar{P}_{22}\)</span>) en la <strong>escala original</strong>, es decir, la escala en la que se tomó la medida. En nuestro caso, con los valores de la figura <a href="modelogenbas.html#fig:figura8p2">8.3</a>, <span class="math inline">\(G_{11}=180\)</span> Kg, <span class="math inline">\(G_{12}=160\)</span> Kg y <span class="math inline">\(G_{22}=120\)</span> Kg. También sobre la misma escala, podemos ahora identificar el <strong>punto medio entre los homocigotas</strong>, que llamaremos <span class="math inline">\(m\)</span> y cuyo valor está dado por</p>
 <p><span class="math display" id="eq:modgenbas4">\[\begin{equation}
 m=\frac{G_{11}+G_{22}}{2}
 \tag{8.9}
@@ -795,9 +884,9 @@ Figura 8.4: Transformación de escalas entre las mediciones originales, en la <s
 </p>
 </div>
 <hr />
-<div id="ejemplo-8.1" class="section level4 unnumbered">
-<h4>Ejemplo 8.1</h4>
-<p>En un estudio sobre el efecto de los genes de la miostatina y la <span class="math inline">\(\mu\)</span>-calpaína sobre características de la carcasa, <span class="citation"><a href="#ref-Bennettetal2019" role="doc-biblioref">Bennett et al.</a> (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span> eligen el marcador (SNP) <strong>rs110065568</strong> para el gen de la <strong>miostatina</strong> (en el cromosoma <strong>BTA2</strong>), que se trata de una sustitución de Fenilalanina (<strong>F</strong>) por Leucina (<strong>L</strong>) en la posición del aminoácido 94 (<strong>F94L</strong>). El gen de la miostatina es el responsable principal del fenotipo <strong>doble musculado</strong> común a varias razas de ganado, como el toro de la raza <strong>Belgian Blue</strong> que aparece en la figura <a href="modelogenbas.html#fig:belblue">8.5</a> y aún a diferentes especies de interés doméstico.</p>
+<div id="ejemplo-8.1" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 8.1<a href="modelogenbas.html#ejemplo-8.1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En un estudio sobre el efecto de los genes de la miostatina y la <span class="math inline">\(\mu\)</span>-calpaína sobre características de la carcasa, <span class="citation">Bennett et al. (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span> eligen el marcador (SNP) <strong>rs110065568</strong> para el gen de la <strong>miostatina</strong> (en el cromosoma <strong>BTA2</strong>), que se trata de una sustitución de Fenilalanina (<strong>F</strong>) por Leucina (<strong>L</strong>) en la posición del aminoácido 94 (<strong>F94L</strong>). El gen de la miostatina es el responsable principal del fenotipo <strong>doble musculado</strong> común a varias razas de ganado, como el toro de la raza <strong>Belgian Blue</strong> que aparece en la figura <a href="modelogenbas.html#fig:belblue">8.5</a> y aún a diferentes especies de interés doméstico.</p>
 
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:belblue"></span>
 <img src="figuras/Spitzenbulle.JPG" alt="Toro de la raza Belgian Blue mostrando su impresionante musculatura (de wikipedia, autor: Mastiff, CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0, via Wikimedia Commons)." width="80%" />
@@ -809,6 +898,12 @@ Figura 8.5: Toro de la raza <strong>Belgian Blue</strong> mostrando su impresion
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="41%" />
+<col width="19%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Característica</th>
@@ -859,10 +954,16 @@ A_{FF}=G_{FF}-m=(89-96) \text{ cm}^2=-7 \text{ cm}^2=-a
 <p><br />
 </p>
 </div>
-<div id="media-de-la-población" class="section level3 unnumbered">
-<h3>Media de la población</h3>
+<div id="media-de-la-población" class="section level3 unnumbered hasAnchor">
+<h3>Media de la población<a href="modelogenbas.html#media-de-la-población" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A partir del cambio de escala que realizamos previmamente, los valores genotípicos quedarán expresados como desvíos del punto medio (<span class="math inline">\(m\)</span>) entre los homocigotas. En general, dicho punto no coincide con la media de la población ya que el mismo se desplazará de acuerdo a la importancia de <span class="math inline">\(d\)</span> en relación a <span class="math inline">\(a\)</span> y de las frecuencias de los alelos. Para calcular la media procedemos como de costumbre, multiplicando el valor de cada categoría por su frecuencia relativa. Asumiendo que los genotipos están en equilibrio de Hardy-Weinberg, las frecuencias de los 3 genotipos (<span class="math inline">\(A_1A_1\)</span>, <span class="math inline">\(A_1A_2\)</span> y <span class="math inline">\(A_2A_2\)</span>) serán <span class="math inline">\(p^2\)</span>, <span class="math inline">\(2pq\)</span> y <span class="math inline">\(q^2\)</span>, mientras que los valores genotípicos correspondientes (en la escala transformada) serán <span class="math inline">\(a\)</span>, <span class="math inline">\(d\)</span> y <span class="math inline">\(-a\)</span>. Poniendo todo junto en un cuadro, lo anterior queda de la siguiente manera:</p>
 <table>
+<colgroup>
+<col width="22%" />
+<col width="22%" />
+<col width="27%" />
+<col width="28%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><strong>Genotipo</strong></th>
@@ -927,9 +1028,9 @@ M=\sum_i a_i(p_i-q_i)+2\sum_i p_iq_id_i
 \end{equation}\]</span></p>
 <p>que es la generalización de la ecuación <a href="modelogenbas.html#eq:modgenbas9">(8.14)</a> asumiendo aditividad entre <em>loci</em></p>
 <hr />
-<div id="ejemplo-8.2" class="section level4 unnumbered">
-<h4>Ejemplo 8.2</h4>
-<p>En el mismo estudio de <span class="citation"><a href="#ref-Bennettetal2019" role="doc-biblioref">Bennett et al.</a> (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span>, los autores encuentran que en una de las razas evaluadas la frecuencia del alelo <span class="math inline">\(L\)</span> (<strong>F94LaL</strong>) es de <span class="math inline">\(20,7\%\)</span>. Calcular las medias de la población para las dos características analizadas en el <a href="modelogenbas.html#ejemplo-8.1">Ejemplo 8.1</a>.</p>
+<div id="ejemplo-8.2" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 8.2<a href="modelogenbas.html#ejemplo-8.2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En el mismo estudio de <span class="citation">Bennett et al. (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span>, los autores encuentran que en una de las razas evaluadas la frecuencia del alelo <span class="math inline">\(L\)</span> (<strong>F94LaL</strong>) es de <span class="math inline">\(20,7\%\)</span>. Calcular las medias de la población para las dos características analizadas en el <a href="modelogenbas.html#ejemplo-8.1">Ejemplo 8.1</a>.</p>
 <p><br />
 </p>
 <p>Si <span class="math inline">\(p=0,207 \Rightarrow q=1-p=1-0,207=0,793\)</span>, con los valores de la primer característica (peso al nacimiento) <span class="math inline">\(a=1,3\)</span> y <span class="math inline">\(d=-0,6\)</span> y usando la ecuación <a href="modelogenbas.html#eq:modgenbas8">(8.13)</a>, tenemos</p>
@@ -978,13 +1079,20 @@ M=a(p-q)+2pqd
 </div>
 </div>
 </div>
-<div id="efecto-medio" class="section level2" number="8.4">
-<h2><span class="header-section-number">8.4</span> Efecto medio</h2>
+<div id="efecto-medio" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Efecto medio<a href="modelogenbas.html#efecto-medio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Hasta ahora hemos discutido la separación de lo genético y lo ambiental, asumiendo que el genotipo es lo relevante desde el punto de vista genético, ya que lo que identifica a los individuos desde ese punto de vista es no solo la suma de los valores de los alelos presentes sino también el aporte de las combinaciones específicas, tanto <strong>intra-<em>locus</em> </strong> como <strong>inter-<em>loci</em> </strong>. Sin embargo, cuando nos interesa entender la capacidad de transmitir un determinado valor genético de un individuo a sus descendientes, entonces debemos enfocarnos en los mecanismos de herencia y en la forma en que los individuos transmiten información a sus descendientes. En los organismos diploides con dos sexos, cada individuo transmite a su descendencia solamente la mitad de la información que este tendrá para cada posición del <strong>genoma autosomal</strong> (esto no es cierto para los cromosomas sexuales, por ejemplo, ni para los genomas de organelos como la mitocondria), viniendo la otra mitad del otro padre (o madre). Dicho de otra forma, los padres/madres transmiten a sus hijos uno de los dos alelos que cada uno de ellos posee en cada <em>loci</em> del genoma. Como nunca transmiten el par de alelos que cada padre/madre posee, entonces nunca transmiten genotipos y por lo tanto mal podrían transmitir su correspondiente valor.</p>
 <p>En este sentido, es necesario entender cuál es el impacto en el cambio de valor medio de una población que proporciona un alelo cuando es introducido en la misma. Supongamos que tenemos una población que tiene dos alelos, <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span>, con frecuencias <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span>, tanto en machos como en hembras. Supongamos ahora que elegimos como reproductor macho uno o más animales que son homocigotos para el alelo <span class="math inline">\(A_1\)</span>, es decir es <span class="math inline">\(A_1A_1\)</span>. Eso nos asegura que los gametos producidos por los machos serán <span class="math inline">\(A_1\)</span> (el mismo razonamiento vale si intercambiamos el rol de los sexos). Esos gametos se unirán a los gametos producidos por la hembras, que como son sacados al azar de la población estarán en frecuencias <span class="math inline">\(p\)</span> el alelo <span class="math inline">\(A_1\)</span> y <span class="math inline">\(q=1-p\)</span> el alelo <span class="math inline">\(A_2\)</span>. Si ponemos está información en un cuadro, donde la frecuencia del macho aparece en la primera fila y las frecuencias de los gametos en las hembras en las columnas, tenemos el siguiente resumen de la situación:</p>
 <p><br />
 </p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="25%" />
+<col width="12%" />
+<col width="25%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -1033,6 +1141,13 @@ q[d+a-2pd]=q[a+d(1-2p)]=q[a+d(p+q-2p)]=q[a+d(q-p)]
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="31%" />
+<col width="10%" />
+<col width="23%" />
+<col width="10%" />
+<col width="23%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -1074,6 +1189,15 @@ M_1-M_0=dp-qa-[a(p-q)+2pqd]=dp-qa-pa+qa-2pqd \Leftrightarrow \\
 <p>que es el <strong>efecto medio del alelo <span class="math inline">\(A_2\)</span></strong>.</p>
 <p>Resumiendo, podemos juntar ambos cuadros y tenemos el cambio en la media genotípica de la población correspondiente a cada alelo:</p>
 <table>
+<colgroup>
+<col width="13%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="14%" />
+<col width="19%" />
+<col width="21%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Gameto</th>
@@ -1125,9 +1249,9 @@ M_1-M_0=dp-qa-[a(p-q)+2pqd]=dp-qa-pa+qa-2pqd \Leftrightarrow \\
 \end{equation}\]</span></p>
 <p>que es lo que queríamos mostrar.</p>
 <hr />
-<div id="ejemplo-8.3" class="section level4 unnumbered">
-<h4>Ejemplo 8.3</h4>
-<p>Usando los datos previos del estudio de <span class="citation"><a href="#ref-Bennettetal2019" role="doc-biblioref">Bennett et al.</a> (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span>, calcular el <strong>efecto medio</strong> de los alelos <span class="math inline">\(L\)</span> y <span class="math inline">\(F\)</span> para la característica peso al nacimiento, así como el <strong>efecto de sustitución</strong> correspondiente.</p>
+<div id="ejemplo-8.3" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 8.3<a href="modelogenbas.html#ejemplo-8.3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Usando los datos previos del estudio de <span class="citation">Bennett et al. (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span>, calcular el <strong>efecto medio</strong> de los alelos <span class="math inline">\(L\)</span> y <span class="math inline">\(F\)</span> para la característica peso al nacimiento, así como el <strong>efecto de sustitución</strong> correspondiente.</p>
 <p><br />
 </p>
 <p>Tenemos varias formas de llegar a lo mismo, pero una de ellas es primero estimar el <strong>efecto de sustitución</strong> (<span class="math inline">\(\alpha\)</span>) y luego usarlo para calcular <span class="math inline">\(\alpha_1\)</span> y <span class="math inline">\(\alpha_2\)</span>.De acuerdo a la definición <span class="math inline">\(\alpha=a+d(q-p)\)</span>. Como ya tenemos todos los valores se trata solo de sustituirlos</p>
@@ -1155,8 +1279,8 @@ M_1-M_0=dp-qa-[a(p-q)+2pqd]=dp-qa-pa+qa-2pqd \Leftrightarrow \\
 <hr />
 </div>
 </div>
-<div id="valor-reproductivo-o-valor-de-cría" class="section level2" number="8.5">
-<h2><span class="header-section-number">8.5</span> Valor reproductivo (o valor de cría)</h2>
+<div id="valor-reproductivo-o-valor-de-cría" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> Valor reproductivo (o valor de cría)<a href="modelogenbas.html#valor-reproductivo-o-valor-de-cría" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Como vimos antes, en organismos diploides con el modo de reproducción sexual, los mismos transmiten a su descendencia la mitad de sus alelos. Este proceso es aleatorio en el sentido de que la combinación particular de alelos que va en cada gameto está determinada por el azar, ya que además de los procesos de recombinación a nivel de cada cromosoma, la combinación de cromosomas que va a cada gameto es también al azar (en el sentido de que puede ir la copia “paterna” o “materna” que tiene el organismo que se reproduce, no en qué número de cromosomas van). Más aún, como vimos más arriba, los organismos diploides de reproducción sexual pasan a los descendientes solamente alelos, no genotipos, por lo que fue necesario definir el <strong>efecto medio de un alelo</strong> precisamente como el efecto teórico de introducir dicho alelo de forma obligatoria en todos los genotipos de la nueva generación.</p>
 <p>En genética animal, por ejemplo, una posibilidad de conocer el <strong>valor reproductivo</strong> (también llamado valor de cría o EBV -estimated breeding value- según sus siglas en inglés) de un individuo determinado sería realizar en la práctica el experimento conceptual que nos permitió definir el concepto de <strong>efecto medio de un alelo</strong>, es decir, aparear a nuestro candidato con una muestra lo más amplia y representativa posible de la población. Los hijos de nuestro candidato se distribuirán en forma aleatoria en torno a un valor medio particular que en general no coincidirá con la media de la población. El desvío de la media de los hijos de nuestro candidato respecto a la media de la población será un estimador de <strong>la mitad del valor cría</strong> (o del valor reproductivo) del candidato. Será la mitad porque el candidato le aporta a sus hijos solo la mitad de sus alelos, la otra mitad viniendo al azar del otro progenitor. Es de destacar que cuanto más descendientes se evalúen más cerca estaremos del <strong>verdadero valor de cría</strong> del candidato (que se alcanzaría perfectamente si el mismo se aparease con un número infinito de individuos de la población) y por esto el término <strong>estimador</strong> (que como todo estimador posee una incertidumbre asociada, algo que veremos más adelante).</p>
 <p>Como el valor reproductivo se trata del efecto que cada alelo aporta al individuo, en nuestro modelo se trata de <strong>efectos aditivos</strong> y debemos sumarlos. En el caso de un <em>locus</em> con dos alelos las posibilidades se reducen al cuadro siguiente:</p>
@@ -1225,10 +1349,10 @@ Figura 8.7: <strong>Valor de cría</strong> (o reproductivo) de un individuo dip
 </div>
 <p>Si bien hemos dado dos definiciones diferentes del valor de cría, una de base teórica basada en el <strong>efecto medio de los alelos</strong> y otra más práctica, basada en la descendencia del candidato, ambas son estrictamente equivalentes cuando no existen efectos epistáticos, ya que si existe desequilibrio de ligamiento los alelos de diferentes <em>loci</em> van a ir juntos en relaciones distintas al producto de sus frecuencias y por lo tanto determinadas combinaciones (efectos epistáticos) serán más o menos frecuentes.</p>
 <hr />
-<div id="ejemplo-8.4" class="section level4 unnumbered">
-<h4>Ejemplo 8.4</h4>
-<p>En el trabajo de <span class="citation"><a href="#ref-Bennettetal2019" role="doc-biblioref">Bennett et al.</a> (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span>, los autores describen, además del gen de la miostatina, el aporte de los diplotipos (un par determinado de haplotipos) <strong>CC-CC</strong>, <strong>CC-NN</strong> y <strong>NN-NN</strong> en el gen de la <span class="math inline">\(\mu\)</span>-calpaína. Para este gen se utilizaron dos marcadores (SNP), el CAPN1_316 (BTA29; rs17872000) y el CAPN1_4751 (BTA29;rs17872050). El marcador CAPN1_316 segrega los alelos C y G, mientras que CAPN1_4751 segrega los alelos C y T. Un haplotipo común es el <strong>CC</strong> (o sea, una C en el CAPN1_316 junto con una C en el CAPN1_4751), por lo que el resto se consideraron en conjunto como <strong>NN</strong> (es decir, alelos no-C en los dos marcadores).</p>
-<p>En un estudio de simulación (hipotético) sobre datos del estudio de <span class="citation"><a href="#ref-Bennettetal2019" role="doc-biblioref">Bennett et al.</a> (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span>, se llega a la conclusión de que con frecuencias del alelo <span class="math inline">\(L\)</span> de <span class="math inline">\(p_{MSTN}=0,20\)</span>, el efecto de sustitución en dicha población es de <span class="math inline">\(\alpha_{MSTN}=6,6 \text{ cm}^2\)</span> para área del ojo del bife, mientras que para el diplotipo <span class="math inline">\(CC\)</span>, con frecuencia de <span class="math inline">\(p_{CAPN1}=0,45\)</span>, el efecto de sustitución en dicha población es de <span class="math inline">\(\alpha_{CAPN1}=0,3 \text{ cm}^2\)</span>. Calcular los valores de cría de los 9 genotipos posibles (3 genotipos de <strong>MSTN</strong> x 3 diplotipos de <strong>CAPN1</strong>).</p>
+<div id="ejemplo-8.4" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 8.4<a href="modelogenbas.html#ejemplo-8.4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En el trabajo de <span class="citation">Bennett et al. (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span>, los autores describen, además del gen de la miostatina, el aporte de los diplotipos (un par determinado de haplotipos) <strong>CC-CC</strong>, <strong>CC-NN</strong> y <strong>NN-NN</strong> en el gen de la <span class="math inline">\(\mu\)</span>-calpaína. Para este gen se utilizaron dos marcadores (SNP), el CAPN1_316 (BTA29; rs17872000) y el CAPN1_4751 (BTA29;rs17872050). El marcador CAPN1_316 segrega los alelos C y G, mientras que CAPN1_4751 segrega los alelos C y T. Un haplotipo común es el <strong>CC</strong> (o sea, una C en el CAPN1_316 junto con una C en el CAPN1_4751), por lo que el resto se consideraron en conjunto como <strong>NN</strong> (es decir, alelos no-C en los dos marcadores).</p>
+<p>En un estudio de simulación (hipotético) sobre datos del estudio de <span class="citation">Bennett et al. (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span>, se llega a la conclusión de que con frecuencias del alelo <span class="math inline">\(L\)</span> de <span class="math inline">\(p_{MSTN}=0,20\)</span>, el efecto de sustitución en dicha población es de <span class="math inline">\(\alpha_{MSTN}=6,6 \text{ cm}^2\)</span> para área del ojo del bife, mientras que para el diplotipo <span class="math inline">\(CC\)</span>, con frecuencia de <span class="math inline">\(p_{CAPN1}=0,45\)</span>, el efecto de sustitución en dicha población es de <span class="math inline">\(\alpha_{CAPN1}=0,3 \text{ cm}^2\)</span>. Calcular los valores de cría de los 9 genotipos posibles (3 genotipos de <strong>MSTN</strong> x 3 diplotipos de <strong>CAPN1</strong>).</p>
 <p>Primero, usando la información de los efectos de sustitución y de las frecuencias para cada gen, calculamos los efectos medios de los alelos (los haplotipos pueden considerarse alelos). Es decir, para la miostatina (MSTN), tenemos</p>
 <p><span class="math display">\[\begin{equation}
 \alpha_{MSTNaL}=q(\alpha_{MSTN})=(1-0,20)6,6\text{ cm}^2=0,8\times 6,6\text{ cm}^2=5,28\text{ cm}^2\\
@@ -1241,6 +1365,12 @@ Figura 8.7: <strong>Valor de cría</strong> (o reproductivo) de un individuo dip
 \end{equation}\]</span></p>
 <p>Poniendo todo junto en el cuadro, recordando que los efectos aditivos de los alelos presentes se suman, tenemos (expresados en cm<span class="math inline">\(^2\)</span>)</p>
 <table>
+<colgroup>
+<col width="5%" />
+<col width="32%" />
+<col width="32%" />
+<col width="28%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -1272,10 +1402,10 @@ Figura 8.7: <strong>Valor de cría</strong> (o reproductivo) de un individuo dip
 </table>
 <hr />
 </div>
-<div id="derivación-de-los-efectos-medios-por-mínimos-cuadrados" class="section level3 unnumbered">
-<h3>Derivación de los efectos medios por mínimos cuadrados</h3>
+<div id="derivación-de-los-efectos-medios-por-mínimos-cuadrados" class="section level3 unnumbered hasAnchor">
+<h3>Derivación de los efectos medios por mínimos cuadrados<a href="modelogenbas.html#derivación-de-los-efectos-medios-por-mínimos-cuadrados" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Una forma alternativa de derivar los efectos de sustitución es a partir del método de mínimos cuadrados, buscando los valores de los parámetros <span class="math inline">\(\alpha1\)</span> y <span class="math inline">\(\alpha2\)</span> de tal manera que minimicen las distancias entre los genotipos y la recta que pasa por los valores reproductivos. Esto podemos hacerlo tanto en la <strong>escala transformada</strong> (con el cero igual al punto medio entre los homocigotas) o como desvíos de la media <span class="math inline">\(M\)</span>. De hecho, es posible la transformación entre ambas escalas de forma muy sencilla, como veremos en la siguiente sección. Por lo tanto, haremos la derivación en la escala transformada y al final, cambiaremos de escala para verificar que es el mismo resultado obtenido previamente como desvíos de la media poblacional.</p>
-<p>Si, siguiendo la notación de <span class="citation"><a href="#ref-Gillespie2004" role="doc-biblioref">John H. Gillespie</a> (<a href="#ref-Gillespie2004" role="doc-biblioref">2004</a>)</span>, llamamos <span class="math inline">\(Q(\alpha1,\alpha2)\)</span> a la función que establece la distancia de los genotipos a la recta de valores reproductivos, entonces</p>
+<p>Si, siguiendo la notación de <span class="citation">John H. Gillespie (<a href="#ref-Gillespie2004" role="doc-biblioref">2004</a>)</span>, llamamos <span class="math inline">\(Q(\alpha1,\alpha2)\)</span> a la función que establece la distancia de los genotipos a la recta de valores reproductivos, entonces</p>
 <p><span class="math display" id="eq:mincuad1">\[\begin{equation}
 Q(\alpha1,\alpha2)=p^2(a-2\alpha_1)^2+2pq(d-\alpha_1-\alpha_2)^2+q^2(-a-2\alpha_2)^2
 \tag{8.28}
@@ -1351,8 +1481,8 @@ A=\sum_{k=1}^n \alpha_{k,1} + \sum_{k=1}^n \alpha_{k,2} = \sum_{j=1,k=1}^{j=2,k=
 <hr />
 </div>
 </div>
-<div id="desvío-de-dominancia" class="section level2" number="8.6">
-<h2><span class="header-section-number">8.6</span> Desvío de dominancia</h2>
+<div id="desvío-de-dominancia" class="section level2 hasAnchor" number="8.6">
+<h2><span class="header-section-number">8.6</span> Desvío de dominancia<a href="modelogenbas.html#desvío-de-dominancia" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En la sección anterior avanzamos en la comprensión de uno de los componentes del genotipo, el que tiene que ver con los valores aditivos de los alelos que lo constituyen. Pero como hemos discutido previamente, en general la expresión de los alelos presentes en un <em>locus</em> trasciende el valor de cada uno en particular. La razón de esto es fácil de imaginar en la biología subyacente al problema. Por un lado, no necesariamente las dos copias presentes en un <em>locus</em> determinado tienen por que transcribirse/traducirse (por ejemplo, en determinadas regiones de cromosomas como el X). Por el otro, la cinética de las reacciones, en el caso de que se trate de un <em>locus</em> que produce un sustrato enzimático, no suele ser simplemente aditiva ya que el comportamiento es varias veces sigmoidal. Todas estas razones nos llevan a pensar que, en general, debemos considerar en forma matemática el desvío correspondiente a la interacción entre alelos dentro del <em>locus</em> como una posibilidad bastante razonable.</p>
 <p>De acuerdo a nuestro modelo genético para el caso de un solo <em>locus</em>, como no consideramos los efectos epistáticos ya que no hay otro <em>locus</em> con el cual interactuar, entonces <span class="math inline">\(G=A+D*I=A+D\)</span> y por lo tanto,</p>
 <p><span class="math display" id="eq:ddom1">\[\begin{equation}
@@ -1385,7 +1515,13 @@ G=A+D \Leftrightarrow D=G-A
 \tag{8.38}
 \end{equation}\]</span></p>
 <p>Una forma sencilla de entender el procedimiento que hemos utilizado es organizar toda la información en un cuadro como el siguiente:</p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="39%" />
+<col width="18%" />
+<col width="22%" />
+<col width="19%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -1441,7 +1577,7 @@ G=A+D \Leftrightarrow D=G-A
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura8p5"></span>
 <img src="ApuntesGeneticaII_files/figure-html/figura8p5-1.png" alt="Representación gráfica de los valores genotípicos, círculos negros, valores de cría (o reproductivos), círculos rojos y la desviación entre ambos valores correspondiente al desvío de dominancia. La línea roja a trazos representa la recta de regresión de los valores genotípicos en el número de copias del alelo \(A_1\). La pendientes de dicha recta es \(\alpha\) (el efecto de sustitución) y los valores de las ordenadas de dicha recta para los puntos en las abscisas 0, 1 y 2 se corresponden con los valores de cría de los genotipos con dichos número de copias del alelo \(A_1\). Mientras que el eje de la izquierda refiere a los valores de los genotipos en la escala transformada, los valores del eje a la derecha se corresponden a desvíos de la media \(M=a(p-q)+2pqd\). Los valores usados para la representación fueron \(d=\frac{3}{4}a\) y \(p=\frac{3}{4}\). Figura de elaboración propia sobre idea en Falconer (1983)." width="80%" />
 <p class="caption">
-Figura 8.8: Representación gráfica de los valores genotípicos, círculos negros, valores de cría (o reproductivos), círculos rojos y la desviación entre ambos valores correspondiente al desvío de dominancia. La línea roja a trazos representa la recta de regresión de los valores genotípicos en el número de copias del alelo <span class="math inline">\(A_1\)</span>. La pendientes de dicha recta es <span class="math inline">\(\alpha\)</span> (el efecto de sustitución) y los valores de las ordenadas de dicha recta para los puntos en las abscisas 0, 1 y 2 se corresponden con los valores de cría de los genotipos con dichos número de copias del alelo <span class="math inline">\(A_1\)</span>. Mientras que el eje de la izquierda refiere a los valores de los genotipos en la escala transformada, los valores del eje a la derecha se corresponden a desvíos de la media <span class="math inline">\(M=a(p-q)+2pqd\)</span>. Los valores usados para la representación fueron <span class="math inline">\(d=\frac{3}{4}a\)</span> y <span class="math inline">\(p=\frac{3}{4}\)</span>. Figura de elaboración propia sobre idea en <span class="citation"><a href="#ref-Falconer1983" role="doc-biblioref">Falconer</a> (<a href="#ref-Falconer1983" role="doc-biblioref">1983</a>)</span>.
+Figura 8.8: Representación gráfica de los valores genotípicos, círculos negros, valores de cría (o reproductivos), círculos rojos y la desviación entre ambos valores correspondiente al desvío de dominancia. La línea roja a trazos representa la recta de regresión de los valores genotípicos en el número de copias del alelo <span class="math inline">\(A_1\)</span>. La pendientes de dicha recta es <span class="math inline">\(\alpha\)</span> (el efecto de sustitución) y los valores de las ordenadas de dicha recta para los puntos en las abscisas 0, 1 y 2 se corresponden con los valores de cría de los genotipos con dichos número de copias del alelo <span class="math inline">\(A_1\)</span>. Mientras que el eje de la izquierda refiere a los valores de los genotipos en la escala transformada, los valores del eje a la derecha se corresponden a desvíos de la media <span class="math inline">\(M=a(p-q)+2pqd\)</span>. Los valores usados para la representación fueron <span class="math inline">\(d=\frac{3}{4}a\)</span> y <span class="math inline">\(p=\frac{3}{4}\)</span>. Figura de elaboración propia sobre idea en <span class="citation">Falconer (<a href="#ref-Falconer1983" role="doc-biblioref">1983</a>)</span>.
 </p>
 </div>
 <p><br />
@@ -1451,7 +1587,7 @@ Figura 8.8: Representación gráfica de los valores genotípicos, círculos negr
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura8p6"></span>
 <img src="ApuntesGeneticaII_files/figure-html/figura8p6-1.png" alt="Representación gráfica de los valores genotípicos (círculos azules) y la correspondiente recta de regresión de los valores genotípicos en el número de copias del alelo \(A_1\) (cuya pendiente es \(\alpha\)) para diferentes combinaciones de frecuencias del alelo \(A_1\) (de izquierda a derecha, \(p=0,50\), \(p=0,75\) y \(p=0,90\)) y de el desvío del heterocigoto respecto al punto medio de los homocigotos (de arriba a abajo, \(d=0\), \(d=0,75a\) y \(d=1,75a\)). Las áreas de cada círculo son proporcionales a la frecuencia de cada genotipo (dentro de cada gráfico). Figura de elaboración propia sobre idea en Michael Lynch and Walsh (1998)." width="80%" />
 <p class="caption">
-Figura 8.9: Representación gráfica de los valores genotípicos (círculos azules) y la correspondiente recta de regresión de los valores genotípicos en el número de copias del alelo <span class="math inline">\(A_1\)</span> (cuya pendiente es <span class="math inline">\(\alpha\)</span>) para diferentes combinaciones de frecuencias del alelo <span class="math inline">\(A_1\)</span> (de izquierda a derecha, <span class="math inline">\(p=0,50\)</span>, <span class="math inline">\(p=0,75\)</span> y <span class="math inline">\(p=0,90\)</span>) y de el desvío del heterocigoto respecto al punto medio de los homocigotos (de arriba a abajo, <span class="math inline">\(d=0\)</span>, <span class="math inline">\(d=0,75a\)</span> y <span class="math inline">\(d=1,75a\)</span>). Las áreas de cada círculo son proporcionales a la frecuencia de cada genotipo (dentro de cada gráfico). Figura de elaboración propia sobre idea en <span class="citation"><a href="#ref-LynchWalsh1998" role="doc-biblioref">Michael Lynch and Walsh</a> (<a href="#ref-LynchWalsh1998" role="doc-biblioref">1998</a>)</span>.
+Figura 8.9: Representación gráfica de los valores genotípicos (círculos azules) y la correspondiente recta de regresión de los valores genotípicos en el número de copias del alelo <span class="math inline">\(A_1\)</span> (cuya pendiente es <span class="math inline">\(\alpha\)</span>) para diferentes combinaciones de frecuencias del alelo <span class="math inline">\(A_1\)</span> (de izquierda a derecha, <span class="math inline">\(p=0,50\)</span>, <span class="math inline">\(p=0,75\)</span> y <span class="math inline">\(p=0,90\)</span>) y de el desvío del heterocigoto respecto al punto medio de los homocigotos (de arriba a abajo, <span class="math inline">\(d=0\)</span>, <span class="math inline">\(d=0,75a\)</span> y <span class="math inline">\(d=1,75a\)</span>). Las áreas de cada círculo son proporcionales a la frecuencia de cada genotipo (dentro de cada gráfico). Figura de elaboración propia sobre idea en <span class="citation">Michael Lynch and Walsh (<a href="#ref-LynchWalsh1998" role="doc-biblioref">1998</a>)</span>.
 </p>
 </div>
 <p>En el caso del valor de cría, vimos previamente en la ecuación <a href="modelogenbas.html#eq:vc0">(8.26)</a> que el valor medio de la población era igual a cero. Veamos ahora que ocurre con el desvío de dominancia promedio. Nuevamente, multiplicando los valores de desvío de cada genotipo por las frecuencias correspondientes y sumando tenemos</p>
@@ -1469,9 +1605,9 @@ p^2[(2q\alpha)(-2q^2d)]+2pq[(q-p)\alpha(2pqd)]+q^2[(-2p\alpha)(-2p^2d)]= \\
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-8.5" class="section level4 unnumbered">
-<h4>Ejemplo 8.5</h4>
-<p>Asumiendo que los genotipos se encuentran en equilibrio de Hardy-Weinberg, calcular el desvío de dominancia para los tres genotipos del gen de la miostatina, para la característica área del ojo del bife, con los datos del estudio de <span class="citation"><a href="#ref-Bennettetal2019" role="doc-biblioref">Bennett et al.</a> (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span> que aparecen en el <a href="modelogenbas.html#ejemplo-8.1">Ejemplo 8.1</a> y recordando que la frecuencia del alelo <span class="math inline">\(L\)</span> era <span class="math inline">\(p=0,207 \Rightarrow q=1-p=0,793\)</span>.</p>
+<div id="ejemplo-8.5" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 8.5<a href="modelogenbas.html#ejemplo-8.5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Asumiendo que los genotipos se encuentran en equilibrio de Hardy-Weinberg, calcular el desvío de dominancia para los tres genotipos del gen de la miostatina, para la característica área del ojo del bife, con los datos del estudio de <span class="citation">Bennett et al. (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span> que aparecen en el <a href="modelogenbas.html#ejemplo-8.1">Ejemplo 8.1</a> y recordando que la frecuencia del alelo <span class="math inline">\(L\)</span> era <span class="math inline">\(p=0,207 \Rightarrow q=1-p=0,793\)</span>.</p>
 <p><br />
 </p>
 <p>Usando los resultado del <a href="modelogenbas.html#ejemplo-8.1">Ejemplo 8.1</a>, tenemos que los genotipos en la escala transformada eran</p>
@@ -1482,7 +1618,7 @@ A_{FF}=G_{FF}-m=(89-96) \text{ cm}^2=-7 \text{ cm}^2=-a
 \end{equation}\]</span></p>
 <p>Ahora, a partir de la ecuación <a href="modelogenbas.html#eq:ddom4">(8.39)</a>, tenemos</p>
 <p><span class="math display">\[\begin{equation}
-\delta_{LL}=-2q^2d=-2 \times 0,793^2 (-3  \text{ cm}^2)=3,773  \text{ cm}^2 \\ 
+\delta_{LL}=-2q^2d=-2 \times 0,793^2 (-3  \text{ cm}^2)=3,773  \text{ cm}^2 \\
 \delta_{FL}=2pqd=2 \times 0,207 \times 0,793 (-3  \text{ cm}^2)=-0,985 \text{ cm}^2  \\
 \delta_{FF}=-2p^2d=-2 \times 0,207^2 (-3  \text{ cm}^2)=0,257  \text{ cm}^2
 \end{equation}\]</span></p>
@@ -1507,8 +1643,8 @@ A_{FF}=G_{FF}-m=(89-96) \text{ cm}^2=-7 \text{ cm}^2=-a
 <hr />
 </div>
 </div>
-<div id="interacción-genotipo-x-ambiente" class="section level2" number="8.7">
-<h2><span class="header-section-number">8.7</span> Interacción Genotipo x Ambiente</h2>
+<div id="interacción-genotipo-x-ambiente" class="section level2 hasAnchor" number="8.7">
+<h2><span class="header-section-number">8.7</span> Interacción Genotipo x Ambiente<a href="modelogenbas.html#interacción-genotipo-x-ambiente" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Como discutimos en la propuesta original del modelo genético básico, consideramos el fenotipo de un individuo como la resultante de los aportes de su genética y del ambiente en que expresa la característica. Sin embargo, vimos que considerar exclusivamente estas dos fuentes de variabilidad a partir de la suma de los aportes de cada una podía ser extremadamente limitado para describir las observaciones fenotípicas. De hecho, el mismo genotipo suele tener un comportamiento fuertemente dependiente del ambiente en que se expresa y los distintos genotipos son diferentes también en como responden a estos cambios de ambiente.</p>
 <p>La figura <a href="modelogenbas.html#fig:figura8p3">8.10</a> muestra un ejemplo de falta de interacción y de una importante interacción <strong>GxE</strong> en ganado lechero. Las razas lecheras tradicionales, como Holstein, Jersey, Guernsey, etc. producirán leche en grandes cantidades si cuentan con comida <em>ad libitum</em> en climas templados y mejor aún en climas fríos. En la gráfica de la izquierda vemos la comparación de dos razas lecheras en dos ambientes contrastantes, el trópico y un clima templado. Claramente, ambas razas sufren del estress térmico asociado a la producción en el trópico y su producción es sustancialmente menor que en clima templado, pero las diferencias entre razas en los dos ambientes se mantienen y por lo tanto las líneas son paralelas, por lo que no existe interacción genotipo-ambiente. Por otro lado, la raza cebuina Gyr, aún con comida <em>ad libitum</em> producirá bastante menos leche aún en óptimas condiciones climáticas ya que posee menor capacidad genética para producirla. En la gráfica de la derecha vemos la comparación de Gyr y Holstein en los mismos dos ambientes contrastantes. Cuando comparamos la producción de ambas razas en el trópico, donde la temperatura puede ser agobiante, la enorme diferencia que podemos observar en climas templado se ve completamente reducida en el trópico. Claramente, ambas razas producen menos en el trópico que en climas templados, pero mientras que en el trópico la producción de la vaca Holstein caerá enormemente, el animal Gyr continuará produciendo leche en forma razonable en proporción a su máxima capacidad genética.</p>
 
@@ -1524,8 +1660,8 @@ Figura 8.10: Interacción GxE en ganado lechero. En la gráfica de la izquierda,
 <p><br />
 </p>
 </div>
-<div id="la-varianza-en-el-modelo-genético-básico" class="section level2" number="8.8">
-<h2><span class="header-section-number">8.8</span> La Varianza en el modelo genético básico</h2>
+<div id="la-varianza-en-el-modelo-genético-básico" class="section level2 hasAnchor" number="8.8">
+<h2><span class="header-section-number">8.8</span> La Varianza en el modelo genético básico<a href="modelogenbas.html#la-varianza-en-el-modelo-genético-básico" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Hasta el momento hemos trabajado en este capítulo considerando lo que le ocurre a cada individuo en particular y hemos visto cómo podemos modelar su fenotipo, es decir, la observación o medición directa de una característica en el individuo. Sin embargo, como también hemos discutido en forma abundante, los individuos pertenecen a poblaciones y los distintos fenotipos de los integrantes de las mismas están sujetos a distintos factores estocásticos, tanto en lo que hace a la genética de los mismos, como a los ambientes. Con esto en mente, resulta muy claro que no alcanza con las medias de cada uno de los componentes para describir la importancia relativa de las distintas fuentes de variabilidad y debemos recurrir a otros descriptores de las mismas.</p>
 <p>En general, con distribuciones que <strong>se comportan en forma razonable</strong>, la varianza (el segundo momento centrado de una distribución) es un buen indicador de la dispersión y variabilidad de las observaciones. Más aún, para conocer la importancia relativa de las distintas fuentes de variabilidad y su importancia estadística, por ejemplo la genética en relación a la ambiental, la forma usual de hacerlo es comparando las varianzas, una aproximación que introdujo Ronald Fisher con su <strong>análisis de varianza</strong>. Si recordamos nuestro modelo genético básico, en una de sus formas más simplificadas establecía que el fenotipo de un individuo era la suma de los efectos del genotipo y del ambiente en el mismo, más un componente referido a la interacción genotipo ambiente, es decir <span class="math inline">\(P=G+E+I_{GxE}\)</span>. Como cada individuo de nuestra población podemos considerarlo como una extracción al azar de los factores genéticos y ambientales, entonces los fenotipos serán un también una extracción al azar de una distribución aleatoria. Por lo tanto, aplicando la regla para el cálculo de la varianza de una suma de variables aleatorias, tenemos que</p>
 <p><span class="math display" id="eq:var1">\[\begin{equation}
@@ -1541,12 +1677,19 @@ V_P=\mathbb{V}(G+E+I_{GxE})=(V_A+V_D+V_I)+V_E+V_{GxE}+2 {Cov}_{GE}
 <p>que es una de las maneras de descomponerla que más usaremos en el curso (tanto la varianza de efectos epistáticos, como la varianza ambiental se pueden descomponer aún más, pero el uso de estas divisiones será muy pautado).</p>
 <p><br />
 </p>
-<div id="componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos" class="section level3 unnumbered">
-<h3>Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</h3>
+<div id="componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos" class="section level3 unnumbered hasAnchor">
+<h3>Componentes genéticos de la varianza: un <em>locus</em> con dos alelos<a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>En el caso de la varianza genética, cuando reducimos nuestro modelo al caso de un <em>locus</em> con dos alelos, podemos continuar el análisis que realizamos previamente para deducir el valor reproductivo y los desvíos de dominancia. Comencemos entonces por la varianza aditiva. Como los valores reproductivos ya están medidos como desvíos de la media de la población, entonces la varianza es solamente la suma de los productos de las frecuencias por el cuadrado del valor reproductivo de cada genotipo. Si organizamos la información de los valores reproductivos y las frecuencias de cada genotipo en un cuadro, así como los cuadrados de los valores reproductivos y el producto de las frecuencias por los cuadrados, tenemos la siguiente información:</p>
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="13%" />
+<col width="14%" />
+<col width="22%" />
+<col width="21%" />
+<col width="28%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Genotipo</th>
@@ -1603,6 +1746,13 @@ V_A=4p^2q^2 \alpha^2+(2pq-8p^2q^2) \alpha^2+4p^2q^2 \alpha^2=2pq\alpha^2[2pq+1-4
 <p><br />
 </p>
 <table>
+<colgroup>
+<col width="13%" />
+<col width="14%" />
+<col width="23%" />
+<col width="21%" />
+<col width="26%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Genotipo</th>
@@ -1670,8 +1820,8 @@ Figura 8.11: Partición de la varianza genética de acuerdo a la frecuencia del 
 <p><br />
 </p>
 <hr />
-<div id="ejemplo-8.6" class="section level4 unnumbered">
-<h4>Ejemplo 8.6</h4>
+<div id="ejemplo-8.6" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplo 8.6<a href="modelogenbas.html#ejemplo-8.6" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Calcular la varianza genética aditiva, de dominancia y varianza genética total si el fenotipo de la característica área del ojo del bife en la raza Limousin (figura <a href="modelogenbas.html#fig:limousin">8.12</a>) estuviese genéticamente determinada exclusivamente por los alelos <span class="math inline">\(L\)</span> y <span class="math inline">\(F\)</span> del marcador <span class="math inline">\(F94L\)</span> del gen de la miostatina, con frecuencias y valores genotípicos como en el <a href="modelogenbas.html#ejercicio-8.1">Ejercicio 8.1</a>. Discutir la importancia relativa de la varianza aditiva y de la de dominancia.</p>
 <p><br />
 </p>
@@ -1706,9 +1856,9 @@ V_G=V_A+V_D=(9,0213+0,9700) \text{ cm}^2=9,9913 \text{ cm}^4
 <hr />
 </div>
 </div>
-<div id="la-varianza-ambiental" class="section level3 unnumbered">
-<h3>La varianza ambiental</h3>
-<p>La varianza ambiental es, por definición, la varianza de todos los efectos que no sean genéticos. De otra forma, en el “ambiente” englobamos todo aquello que no podemos modelar como genético. Sin duda se trata de una definición de ambiente apenas operativa, es decir, por conveniencia y que nada tiene que ver con las definiciones de ambiente más aceptadas en otras disciplinas científicas. Por ejemplo, como usualmente no podemos incorporar explícitamente los errores de medición (ya que no los conocemos, porque suelen ser aleatorios), esto pasa a formar parte de la variación no-genética, y nuestra única posibilidad de acomodarla en el modelo genético básico es que forme parte de los “efectos del ambiente.”</p>
+<div id="la-varianza-ambiental" class="section level3 unnumbered hasAnchor">
+<h3>La varianza ambiental<a href="modelogenbas.html#la-varianza-ambiental" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La varianza ambiental es, por definición, la varianza de todos los efectos que no sean genéticos. De otra forma, en el “ambiente” englobamos todo aquello que no podemos modelar como genético. Sin duda se trata de una definición de ambiente apenas operativa, es decir, por conveniencia y que nada tiene que ver con las definiciones de ambiente más aceptadas en otras disciplinas científicas. Por ejemplo, como usualmente no podemos incorporar explícitamente los errores de medición (ya que no los conocemos, porque suelen ser aleatorios), esto pasa a formar parte de la variación no-genética, y nuestra única posibilidad de acomodarla en el modelo genético básico es que forme parte de los “efectos del ambiente”.</p>
 <p>Esta forma de considerar la partición de efectos y varianzas, si entendemos el significado e interpretación de la misma, no tiene más consecuencias que el sobre-uso de un término para referirnos de manera genérica a todo lo que no es genético, que es el foco de nuestro curso. De hecho, nada nos impide de escribir todos los términos de efectos y varianzas ambientales que se nos ocurra o nos guste en nuestro modelo sin que ninguna de las conclusiones se vea alterada, en la medida de que los mismos no afecten de manera novedosa lo genético. Por ejemplo, si una característica se ve afectada por la temperatura y yo registro en forma consistente la misma, nada me impide incluirla en forma explícita en mis modelos.</p>
 <p>En otras partes del curso procederemos a descomponer la varianza ambiental de diferentes formas, de acuerdo a las necesidades o conveniencias de cada tema o enfoque. Por ejemplo, en medidas que se repiten en la vida de un organismo es posible descomponer la varianza ambiental en temporal y permanente, la primera referida a los cambios que atañen a una sola observación, la segunda a aquellos que afectan todas las mediciones del organismo. Es decir,</p>
 <p><span class="math display">\[\begin{equation}
@@ -1720,8 +1870,8 @@ V_E=V_{Ep}+V_{Et}
 <p><br />
 </p>
 </div>
-<div id="la-varianza-de-la-interacción" class="section level3 unnumbered">
-<h3>La Varianza de la interacción</h3>
+<div id="la-varianza-de-la-interacción" class="section level3 unnumbered hasAnchor">
+<h3>La Varianza de la interacción<a href="modelogenbas.html#la-varianza-de-la-interacción" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Como vimos antes, los efectos epistáticos son aquellos producto de la interacción entre dos o más <em>loci</em>. Como hasta ahora hemos ido construyendo el modelo genético capa por capa, es decir, primero los efectos aditivos explicando el máximo posible de la varianza (con la restricción de aditividad), sobre estos estimamos los efectos de dominancia como desvíos del comportamiento aditivo dentro de cada <em>locus</em> y luego recién estamos por estimar los efectos epistáticos, los mismos serán desvíos, tanto del comportamiento aditivo dentro de cada <em>locus</em> como de la suma de los mismos y de los efectos de dominancia correspondientes a los genotipos en los diferentes <em>loci</em>. Claramente, podemos a su vez ir construyendo la estimación de estos efectos usando un diferentes número de <em>loci</em>, empezando por las interacciones entre todos los pares de <em>loci</em>, pasando luego a interacciones entre tríos de <em>loci</em> y así sucesivamente. A cada capa que vamos agregando quedará menos varianza por explicar, por lo que no suelen considerarse las interacciones de más de a dos <em>loci</em> por vez.</p>
 <p>Por otro lado, dentro las posibles interacciones entre dos <em>loci</em> podemos distinguir tres tipos: 1) interacciones entre los efectos aditivos en cada <em>loci</em>, 2) las interacciones entre efectos aditivos en un <em>locus</em> y los efectos de dominancia en el otro <em>locus</em>, y 3) las interacciones entre efectos de dominancia en ambos <em>loci</em>. Poniendo todo esto junto y asumiendo que despreciamos los efectos de orden 3 y mayores, tenemos que la varianza de los efectos epistáticos puede escribirse como</p>
 <p><span class="math display" id="eq:varint1">\[\begin{equation}
@@ -1745,11 +1895,11 @@ V_I=V_{AA}+V_{AD}+V_{DD}+... \approx V_{AA}+V_{AD}+V_{DD}
 <hr />
 </div>
 </div>
-<div id="ejercicios-8" class="section level2 unnumbered">
-<h2>Ejercicios</h2>
-<div id="ejercicio-8.1" class="section level4 unnumbered">
-<h4>Ejercicio 8.1</h4>
-<p>Usando los datos previos del estudio de <span class="citation"><a href="#ref-Bennettetal2019" role="doc-biblioref">Bennett et al.</a> (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span>, calcular el <strong>efecto medio</strong> de los alelos <span class="math inline">\(L\)</span> y <span class="math inline">\(F\)</span> para la característica peso al nacimiento, así como el <strong>efecto de sustitución</strong> correspondiente.</p>
+<div id="ejercicios-8" class="section level2 unnumbered hasAnchor">
+<h2>Ejercicios<a href="modelogenbas.html#ejercicios-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ejercicio-8.1" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 8.1<a href="modelogenbas.html#ejercicio-8.1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Usando los datos previos del estudio de <span class="citation">Bennett et al. (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span>, calcular el <strong>efecto medio</strong> de los alelos <span class="math inline">\(L\)</span> y <span class="math inline">\(F\)</span> para la característica peso al nacimiento, así como el <strong>efecto de sustitución</strong> correspondiente.</p>
 <p><strong><em>Solución</em></strong></p>
 <p>Tenemos varias formas de llegar a lo mismo, pero una de ellas es primero estimar el <strong>efecto de sustitución</strong> (<span class="math inline">\(\alpha\)</span>) y luego usarlo para calcular <span class="math inline">\(\alpha_1\)</span> y <span class="math inline">\(\alpha_2\)</span>.De acuerdo a la definición <span class="math inline">\(\alpha=a+d(q-p)\)</span>. Como ya tenemos todos los valores se trata solo de sustituirlos</p>
 <p><span class="math display">\[\begin{equation}
@@ -1764,9 +1914,9 @@ V_I=V_{AA}+V_{AD}+V_{DD}+... \approx V_{AA}+V_{AD}+V_{DD}
 <p><br />
 </p>
 </div>
-<div id="ejercicio-8.2" class="section level4 unnumbered">
-<h4>Ejercicio 8.2</h4>
-<p>Asumiendo que los genotipos se encuentran en equilibrio de Hardy-Weinberg, calcular el desvío de dominancia para los tres genotipos del gen de la miostatina, para la característica área del ojo del bife, con los datos del estudio de <span class="citation"><a href="#ref-Bennettetal2019" role="doc-biblioref">Bennett et al.</a> (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span> que aparecen en el <a href="modelogenbas.html#ejemplo-8.1">Ejemplo 8.1</a> y recordando que la frecuencia del alelo <span class="math inline">\(L\)</span> era <span class="math inline">\(p=0,207 \Rightarrow q=1-p=0,793\)</span>.</p>
+<div id="ejercicio-8.2" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 8.2<a href="modelogenbas.html#ejercicio-8.2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Asumiendo que los genotipos se encuentran en equilibrio de Hardy-Weinberg, calcular el desvío de dominancia para los tres genotipos del gen de la miostatina, para la característica área del ojo del bife, con los datos del estudio de <span class="citation">Bennett et al. (<a href="#ref-Bennettetal2019" role="doc-biblioref">2019</a>)</span> que aparecen en el <a href="modelogenbas.html#ejemplo-8.1">Ejemplo 8.1</a> y recordando que la frecuencia del alelo <span class="math inline">\(L\)</span> era <span class="math inline">\(p=0,207 \Rightarrow q=1-p=0,793\)</span>.</p>
 <p><strong><em>Solución</em></strong></p>
 <p>Usando los resultado del <a href="modelogenbas.html#ejemplo-8.1">Ejemplo 8.1</a>, tenemos que los genotipos en la escala transformada eran</p>
 <p><span class="math display">\[\begin{equation}
@@ -1776,7 +1926,7 @@ A_{FF}=G_{FF}-m=(89-96) \text{ cm}^2=-7 \text{ cm}^2=-a
 \end{equation}\]</span></p>
 <p>Ahora, a partir de la ecuación <a href="modelogenbas.html#eq:ddom4">(8.39)</a>, tenemos</p>
 <p><span class="math display">\[\begin{equation}
-\delta_{LL}=-2q^2d=-2 \times 0,793^2 (-3  \text{ cm}^2)=3,773  \text{ cm}^2 \\ 
+\delta_{LL}=-2q^2d=-2 \times 0,793^2 (-3  \text{ cm}^2)=3,773  \text{ cm}^2 \\
 \delta_{FL}=2pqd=2 \times 0,207 \times 0,793 (-3  \text{ cm}^2)=-0,985 \text{ cm}^2  \\
 \delta_{FF}=-2p^2d=-2 \times 0,207^2 (-3  \text{ cm}^2)=0,257  \text{ cm}^2
 \end{equation}\]</span></p>
@@ -1784,8 +1934,8 @@ A_{FF}=G_{FF}-m=(89-96) \text{ cm}^2=-7 \text{ cm}^2=-a
 <p><br />
 </p>
 </div>
-<div id="ejercicio-8.3" class="section level4 unnumbered">
-<h4>Ejercicio 8.3</h4>
+<div id="ejercicio-8.3" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 8.3<a href="modelogenbas.html#ejercicio-8.3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Supongamos que el peso a la faena en conejos está determinado por un solo locus, cuyos dos alelos son <span class="math inline">\(Z\)</span> y <span class="math inline">\(z\)</span>. Las frecuencias alélicas son <span class="math inline">\(p = 0,6\)</span> y <span class="math inline">\(q =0,4\)</span>, y la población se encuentra en equilibrio Hardy-Weinberg:</p>
 <table>
 <thead>
@@ -1829,8 +1979,8 @@ Q=\frac{\text{número de animales }zz}{\text{número de animales total}}=\frac{1
 <p><br />
 </p>
 </div>
-<div id="ejercicio-8.4" class="section level4 unnumbered">
-<h4>Ejercicio 8.4</h4>
+<div id="ejercicio-8.4" class="section level4 unnumbered hasAnchor">
+<h4>Ejercicio 8.4<a href="modelogenbas.html#ejercicio-8.4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Supongamos que el peso a la faena en conejos está determinado por un solo locus, cuyos dos alelos son <span class="math inline">\(Z\)</span> y <span class="math inline">\(z\)</span>. Las frecuencias alélicas son <span class="math inline">\(p = 0,6\)</span> y <span class="math inline">\(q =0,4\)</span>, y la población se encuentra en equilibrio Hardy-Weinberg. El efecto medio del alelo <span class="math inline">\(Z\)</span> es <span class="math inline">\(0,176\)</span> kg y el efecto medio del alelo <span class="math inline">\(z\)</span> es -0,264 kg.
 ¿Cuánto valen los valores de cría de los conejos cuyos genotipos son <span class="math inline">\(ZZ\)</span>, <span class="math inline">\(Zz\)</span> y <span class="math inline">\(zz\)</span>?</p>
 <p><strong><em>Solución</em></strong></p>
@@ -1848,7 +1998,7 @@ VC_{zz}= \alpha_{z}+ \alpha_{z}=-0,264-0,264=-0,53 \text{ kg}
 </div>
 </div>
 </div>
-<h3>Bibliografía</h3>
+<h3>Bibliografía<a href="bibliografía.html#bibliografía" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Bennettetal2019" class="csl-entry">
 Bennett, G. L., R. G. Tait, S. D. Shackelford, T. L. Wheeler, D. A. King, E. Casas, and T. P. L. Smith. 2019. <span>“<span class="nocase"><span>E</span>nhanced estimates of carcass and meat quality effects for polymorphisms in myostatin and µ-calpain genes</span>.”</span> <em>J Anim Sci</em> 97 (2): 569–77.
@@ -1892,9 +2042,9 @@ Yule, George Udny. 1902. <span>“MENDEL’s LAWS AND THEIR PROBABLE RELATIONS T
 </div>
 <div class="footnotes">
 <hr />
-<ol start="37">
-<li id="fn37"><p>George Udny Yule (18 de febrero 1871 – 26 junio 1951) fue un estadístico escocés, alumno de Karl Pearson y conocido por la distribución que lleva su nombre, además de por sus trabajos fundacionales en bioestadística.<a href="modelogenbas.html#fnref37" class="footnote-back">↩︎</a></p></li>
-<li id="fn38"><p>Obviamente que toda estimación tiene error, pero el concepto de “verdadero” es parte de la base filosófica del problema, ya que para la escuela estadística bayesiana lo único real y “verdadero” son los datos, no el valor de un parámetro <strong>ficticio</strong>, que depende del modelo que estemos usando<a href="modelogenbas.html#fnref38" class="footnote-back">↩︎</a></p></li>
+<ol start="80">
+<li id="fn80"><p>George Udny Yule (18 de febrero 1871 – 26 junio 1951) fue un estadístico escocés, alumno de Karl Pearson y conocido por la distribución que lleva su nombre, además de por sus trabajos fundacionales en bioestadística.<a href="modelogenbas.html#fnref80" class="footnote-back">↩︎</a></p></li>
+<li id="fn81"><p>Obviamente que toda estimación tiene error, pero el concepto de “verdadero” es parte de la base filosófica del problema, ya que para la escuela estadística bayesiana lo único real y “verdadero” son los datos, no el valor de un parámetro <strong>ficticio</strong>, que depende del modelo que estemos usando<a href="modelogenbas.html#fnref81" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -1907,7 +2057,6 @@ Yule, George Udny. 1902. <span>“MENDEL’s LAWS AND THEIR PROBABLE RELATIONS T
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1948,7 +2097,7 @@ gitbook.start({
 },
 "download": ["ApuntesGeneticaII.pdf", "ApuntesGeneticaII.epub"],
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
@@ -1964,7 +2113,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

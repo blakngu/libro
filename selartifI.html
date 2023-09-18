@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 11 Selección Artificial I | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
   <meta name="description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
-  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 11 Selección Artificial I | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
   <meta property="og:type" content="book" />
@@ -27,7 +27,7 @@
 <meta name="author" content="(Paola Gaiero)" />
 
 
-<meta name="date" content="2023-05-23" />
+<meta name="date" content="2023-09-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -58,11 +58,13 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -114,31 +116,38 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#variabilidad-genética"><i class="fa fa-check"></i><b>1.1</b> Variabilidad genética</a>
 <ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.1"><i class="fa fa-check"></i>Ejemplo 1.1</a></li>
 <li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#detectando-la-variabilidad-diferentes-técnicas"><i class="fa fa-check"></i><b>1.1.1</b> Detectando la variabilidad: diferentes técnicas</a></li>
-<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#metagenómica-y-metatranscriptómica"><i class="fa fa-check"></i><b>1.1.2</b> Metagenómica y Metatranscriptómica</a></li>
+<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#metagenomica-y-metatranscriptomica"><i class="fa fa-check"></i><b>1.1.2</b> Metagenómica y Metatranscriptómica</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.2"><i class="fa fa-check"></i>Ejemplo 1.2</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#genómica-composicional"><i class="fa fa-check"></i><b>1.2</b> Genómica composicional</a>
 <ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-gcskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones, GCskew</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-y-textgc_textskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones y <span class="math inline">\(\text{GC}_{\text{skew}}\)</span></a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#uso-de-codones"><i class="fa fa-check"></i>Uso de codones</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#exploración-multivariada-análisis-de-correspondencia"><i class="fa fa-check"></i>Exploración multivariada: Análisis de Correspondencia</a></li>
-<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i><b>1.2.1</b> Composición de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.3"><i class="fa fa-check"></i>Ejemplo 1.3</a></li>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#exploracion-multivariada"><i class="fa fa-check"></i><b>1.2.1</b> Exploración multivariada: Análisis de Correspondencia</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i><b>1.2.2</b> Composición de proteínas</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-en-propiedades-de-los-aas"><i class="fa fa-check"></i>Diferencias en propiedades de los AAs</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-de-composición-entre-clases-de-proteínas"><i class="fa fa-check"></i>Diferencias de composición entre clases de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.4"><i class="fa fa-check"></i>Ejemplo 1.4</a></li>
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#genómica-comparativa"><i class="fa fa-check"></i><b>1.3</b> Genómica comparativa</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#comparación-de-secuencias-génicas"><i class="fa fa-check"></i>Comparación de secuencias génicas</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección Positiva</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección positiva</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#vías"><i class="fa fa-check"></i>Vías</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#genómica-funcional"><i class="fa fa-check"></i><b>1.4</b> Genómica funcional</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#estudios-epigenéticos-y-epigenómicos"><i class="fa fa-check"></i>Estudios epigenéticos y epigenómicos</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#conclusión"><i class="fa fa-check"></i><b>1.5</b> Conclusión</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#actividades"><i class="fa fa-check"></i><b>1.6</b> Actividades</a>
 <ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicio-1.1"><i class="fa fa-check"></i>Ejercicio 1.1</a></li>
+<li class="chapter" data-level="1.6.1" data-path="intro.html"><a href="intro.html#control-de-lectura"><i class="fa fa-check"></i><b>1.6.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="1.6.2" data-path="intro.html"><a href="intro.html#verdadero-o-falso"><i class="fa fa-check"></i><b>1.6.2</b> ¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>Parte II: Genética de Poblaciones</b></span></li>
@@ -149,7 +158,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#supuestos-que-asumimos-se-cumplen-para-h-w"><i class="fa fa-check"></i>Supuestos que asumimos se cumplen para H-W</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-dioicas-dos-sexos"><i class="fa fa-check"></i><b>2.2</b> Hardy-Weinberg en especies dioicas (dos sexos)</a></li>
-<li class="chapter" data-level="2.3" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#h-w-la-frecuencia-de-heterocigotas-en-función-de-la-frecuencia-alélica"><i class="fa fa-check"></i><b>2.3</b> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
+<li class="chapter" data-level="2.3" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#heterocigotas-freq-alelica"><i class="fa fa-check"></i><b>2.3</b> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
 <li class="chapter" data-level="2.4" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo"><i class="fa fa-check"></i><b>2.4</b> El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo</a></li>
 <li class="chapter" data-level="2.5" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#tres-o-más-alelos"><i class="fa fa-check"></i><b>2.5</b> Tres o más alelos</a></li>
 <li class="chapter" data-level="2.6" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-y-el-equilibrio-o-no"><i class="fa fa-check"></i><b>2.6</b> La estimación de frecuencias y el equilibrio (o no)</a></li>
@@ -157,19 +166,33 @@ div.csl-indent {
 <li class="chapter" data-level="2.8" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#dónde-se-esconden-los-alelos-recesivos"><i class="fa fa-check"></i><b>2.8</b> ¿Dónde se “esconden” los alelos recesivos?</a></li>
 <li class="chapter" data-level="2.9" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-poliploides"><i class="fa fa-check"></i><b>2.9</b> Hardy-Weinberg en especies poliploides</a></li>
 <li class="chapter" data-level="2.10" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#geometría-y-genética-los-diagramas-de-de-finetti"><i class="fa fa-check"></i><b>2.10</b> Geometría y Genética: los diagramas de <em>de Finetti</em></a></li>
-<li class="chapter" data-level="2.11" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-en-el-locus-abo"><i class="fa fa-check"></i><b>2.11</b> La estimación de frecuencias en el locus ABO</a></li>
+<li class="chapter" data-level="2.11" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#estimacion-abo"><i class="fa fa-check"></i><b>2.11</b> La estimación de frecuencias en el locus ABO</a></li>
+<li class="chapter" data-level="2.12" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#conclusión-1"><i class="fa fa-check"></i><b>2.12</b> Conclusión</a></li>
+<li class="chapter" data-level="2.13" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#actividades-1"><i class="fa fa-check"></i><b>2.13</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="2.13.1" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#control-de-lectura-1"><i class="fa fa-check"></i><b>2.13.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="2.13.2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#verdadero-o-falso-1"><i class="fa fa-check"></i><b>2.13.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicios-2"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="deriva.html"><a href="deriva.html"><i class="fa fa-check"></i><b>3</b> Deriva Genética</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="deriva.html"><a href="deriva.html#el-rol-de-los-procesos-estocásticos-en-la-genética"><i class="fa fa-check"></i><b>3.1</b> El rol de los procesos estocásticos en la genética</a></li>
-<li class="chapter" data-level="3.2" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i><b>3.2</b> El modelo de Wright-Fisher</a></li>
+<li class="chapter" data-level="3.2" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i><b>3.2</b> El modelo de Wright-Fisher</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.1"><i class="fa fa-check"></i>Ejemplo 3.1</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="deriva.html"><a href="deriva.html#el-rol-de-la-subdivisión-poblacional-en-la-evolución-de-las-frecuencias-alélicas"><i class="fa fa-check"></i><b>3.3</b> El rol de la subdivisión poblacional en la evolución de las frecuencias alélicas</a>
 <ul>
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#homocigosidad-y-heterocigosidad"><i class="fa fa-check"></i>Homocigosidad y Heterocigosidad</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.2"><i class="fa fa-check"></i>Ejemplo 3.2</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="deriva.html"><a href="deriva.html#cadenas-de-markov"><i class="fa fa-check"></i><b>3.4</b> Cadenas de Markov</a></li>
-<li class="chapter" data-level="3.5" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i><b>3.5</b> Tamaño efectivo poblacional</a></li>
+<li class="chapter" data-level="3.5" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i><b>3.5</b> Tamaño efectivo poblacional</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.3"><i class="fa fa-check"></i>Ejemplo 3.3</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.4"><i class="fa fa-check"></i>Ejemplo 3.4</a></li>
+</ul></li>
 <li class="chapter" data-level="3.6" data-path="deriva.html"><a href="deriva.html#aproximación-de-difusión"><i class="fa fa-check"></i><b>3.6</b> Aproximación de difusión</a>
 <ul>
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#caminatas-al-azar-y-procesos-de-difusión"><i class="fa fa-check"></i>Caminatas al azar y procesos de difusión</a></li>
@@ -177,9 +200,18 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-backward-equation"><i class="fa fa-check"></i>Kolmogorov Backward Equation</a></li>
 <li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#solución-de-las-ecuaciones"><i class="fa fa-check"></i>Solución de las ecuaciones</a></li>
 </ul></li>
-<li class="chapter" data-level="3.7" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i><b>3.7</b> Probabilidad de fijación y tiempos de fijación</a></li>
+<li class="chapter" data-level="3.7" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i><b>3.7</b> Probabilidad de fijación y tiempos de fijación</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.5"><i class="fa fa-check"></i>Ejemplo 3.5</a></li>
+</ul></li>
 <li class="chapter" data-level="3.8" data-path="deriva.html"><a href="deriva.html#el-modelo-coalescente"><i class="fa fa-check"></i><b>3.8</b> El modelo coalescente</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejercicios-3"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="3.9" data-path="deriva.html"><a href="deriva.html#conclusión-2"><i class="fa fa-check"></i><b>3.9</b> Conclusión</a></li>
+<li class="chapter" data-level="3.10" data-path="deriva.html"><a href="deriva.html#actividades-2"><i class="fa fa-check"></i><b>3.10</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="deriva.html"><a href="deriva.html#control-de-lectura-2"><i class="fa fa-check"></i><b>3.10.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="3.10.2" data-path="deriva.html"><a href="deriva.html#verdadero-o-falso-2"><i class="fa fa-check"></i><b>3.10.2</b> ¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="3.10.3" data-path="deriva.html"><a href="deriva.html#ejercicios"><i class="fa fa-check"></i><b>3.10.3</b> Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="seleccion.html"><a href="seleccion.html"><i class="fa fa-check"></i><b>4</b> Selección Natural</a>
 <ul>
@@ -199,7 +231,13 @@ div.csl-indent {
 <li class="chapter" data-level="4.6" data-path="seleccion.html"><a href="seleccion.html#la-fuerza-de-la-selección-natural"><i class="fa fa-check"></i><b>4.6</b> La fuerza de la selección natural</a></li>
 <li class="chapter" data-level="4.7" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-deriva"><i class="fa fa-check"></i><b>4.7</b> Equilibrio selección-deriva</a></li>
 <li class="chapter" data-level="4.8" data-path="seleccion.html"><a href="seleccion.html#otros-tipos-de-selección-y-complejidades"><i class="fa fa-check"></i><b>4.8</b> Otros tipos de selección y complejidades</a></li>
+<li class="chapter" data-level="4.9" data-path="seleccion.html"><a href="seleccion.html#conclusión-3"><i class="fa fa-check"></i><b>4.9</b> Conclusión</a></li>
+<li class="chapter" data-level="4.10" data-path="seleccion.html"><a href="seleccion.html#actividades-3"><i class="fa fa-check"></i><b>4.10</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="4.10.1" data-path="seleccion.html"><a href="seleccion.html#control-de-lectura-3"><i class="fa fa-check"></i><b>4.10.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="4.10.2" data-path="seleccion.html"><a href="seleccion.html#verdadero-o-falso-3"><i class="fa fa-check"></i><b>4.10.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#ejercicios-4"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="dosloci.html"><a href="dosloci.html"><i class="fa fa-check"></i><b>5</b> Dinámica de 2 <em>loci</em></a>
 <ul>
@@ -213,7 +251,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento"><i class="fa fa-check"></i>Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i><b>5.5</b> Arrastre genético (“genetic hitchhiking” o “genetic draft”)</a></li>
+<li class="chapter" data-level="5.5" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i><b>5.5</b> Arrastre genético (“<em>genetic hitchhiking</em>” o “<em>genetic draft</em>”)</a></li>
 <li class="chapter" data-level="5.6" data-path="dosloci.html"><a href="dosloci.html#causas-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i><b>5.6</b> Causas del desequilibrio de ligamiento</a>
 <ul>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-al-mestizaje"><i class="fa fa-check"></i>Desequilibrio debido al mestizaje</a></li>
@@ -221,20 +259,41 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#el-cromosoma-y"><i class="fa fa-check"></i>El cromosoma Y</a></li>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-a-recombinación-reducida"><i class="fa fa-check"></i>Desequilibrio debido a recombinación reducida</a></li>
 </ul></li>
+<li class="chapter" data-level="5.7" data-path="dosloci.html"><a href="dosloci.html#conclusión-4"><i class="fa fa-check"></i><b>5.7</b> Conclusión</a></li>
+<li class="chapter" data-level="5.8" data-path="dosloci.html"><a href="dosloci.html#actividades-4"><i class="fa fa-check"></i><b>5.8</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="5.8.1" data-path="dosloci.html"><a href="dosloci.html#control-de-lectura-4"><i class="fa fa-check"></i><b>5.8.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="5.8.2" data-path="dosloci.html"><a href="dosloci.html#verdadero-o-falso-4"><i class="fa fa-check"></i><b>5.8.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejercicios-5"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="aparnoalazar.html"><a href="aparnoalazar.html"><i class="fa fa-check"></i><b>6</b> Apareamientos no-aleatorios</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-concepto-de-identidad-por-ascendencia-ibd"><i class="fa fa-check"></i><b>6.1</b> El concepto de “identidad por ascendencia” (IBD)</a></li>
 <li class="chapter" data-level="6.2" data-path="aparnoalazar.html"><a href="aparnoalazar.html#generalización-de-hardy-weinberg-para-apareamientos-no-aleatorios"><i class="fa fa-check"></i><b>6.2</b> Generalización de Hardy-Weinberg para apareamientos no-aleatorios</a></li>
-<li class="chapter" data-level="6.3" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><b>6.3</b> <em>F</em> como correlación entre gametos unidos</a></li>
+<li class="chapter" data-level="6.3" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><b>6.3</b> <span class="math inline">\(F\)</span> como correlación entre gametos unidos</a></li>
 <li class="chapter" data-level="6.4" data-path="aparnoalazar.html"><a href="aparnoalazar.html#endocría-y-depresión-endogámica"><i class="fa fa-check"></i><b>6.4</b> Endocría y depresión endogámica</a></li>
 <li class="chapter" data-level="6.5" data-path="aparnoalazar.html"><a href="aparnoalazar.html#un-caso-extremo-la-autogamia"><i class="fa fa-check"></i><b>6.5</b> Un caso extremo: la autogamia</a></li>
-<li class="chapter" data-level="6.6" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-estadísticos-f"><i class="fa fa-check"></i><b>6.6</b> El Coeficiente de endocría y estadísticos <em>F</em></a></li>
-<li class="chapter" data-level="6.7" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i><b>6.7</b> El efecto Wahlund</a></li>
-<li class="chapter" data-level="6.8" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i><b>6.8</b> Subdivisión, migración y el modelo de islas</a></li>
+<li class="chapter" data-level="6.6" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-los-estadísticos-f"><i class="fa fa-check"></i><b>6.6</b> El coeficiente de endocría y los estadísticos <em>F</em></a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.1"><i class="fa fa-check"></i>Ejemplo 6.1</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i><b>6.7</b> El efecto Wahlund</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.2"><i class="fa fa-check"></i>Ejemplo 6.2</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i><b>6.8</b> Subdivisión, migración y el modelo de islas</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.3"><i class="fa fa-check"></i>Ejemplo 6.3</a></li>
+</ul></li>
 <li class="chapter" data-level="6.9" data-path="aparnoalazar.html"><a href="aparnoalazar.html#mecanismos-de-especiación"><i class="fa fa-check"></i><b>6.9</b> Mecanismos de especiación</a></li>
+<li class="chapter" data-level="6.10" data-path="aparnoalazar.html"><a href="aparnoalazar.html#conclusión-5"><i class="fa fa-check"></i><b>6.10</b> Conclusión</a></li>
+<li class="chapter" data-level="6.11" data-path="aparnoalazar.html"><a href="aparnoalazar.html#actividades-5"><i class="fa fa-check"></i><b>6.11</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="6.11.1" data-path="aparnoalazar.html"><a href="aparnoalazar.html#control-de-lectura-5"><i class="fa fa-check"></i><b>6.11.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="6.11.2" data-path="aparnoalazar.html"><a href="aparnoalazar.html#verdadero-o-falso-5"><i class="fa fa-check"></i><b>6.11.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejercicios-6"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="microbial.html"><a href="microbial.html"><i class="fa fa-check"></i><b>7</b> Genética de Poblaciones Microbianas</a>
 <ul>
@@ -242,20 +301,30 @@ div.csl-indent {
 <li class="chapter" data-level="7.2" data-path="microbial.html"><a href="microbial.html#dinámica-de-las-poblaciones-bacterianas"><i class="fa fa-check"></i><b>7.2</b> Dinámica de las poblaciones bacterianas</a>
 <ul>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-exponencial"><i class="fa fa-check"></i>El modelo exponencial</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.1"><i class="fa fa-check"></i>Ejemplo 7.1</a></li>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-logístico"><i class="fa fa-check"></i>El modelo logístico</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.2"><i class="fa fa-check"></i>Ejemplo 7.2</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="microbial.html"><a href="microbial.html#modelos-haploides-de-selección-natural"><i class="fa fa-check"></i><b>7.3</b> Modelos haploides de selección natural</a>
 <ul>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-discreto"><i class="fa fa-check"></i>Selección haploide: modelo discreto</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.3"><i class="fa fa-check"></i>Ejemplo 7.3</a></li>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-continuo"><i class="fa fa-check"></i>Selección haploide: modelo continuo</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.4"><i class="fa fa-check"></i>Ejemplo 7.4</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-versus-el-de-wright-fisher"><i class="fa fa-check"></i><b>7.4</b> Los modelos de Moran y de Fisión versus el de Wright-Fisher</a></li>
+<li class="chapter" data-level="7.4" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-vs-el-de-wright-fisher"><i class="fa fa-check"></i><b>7.4</b> Los modelos de Moran y de fisión <em>vs</em> el de Wright-Fisher</a></li>
 <li class="chapter" data-level="7.5" data-path="microbial.html"><a href="microbial.html#el-rol-de-la-transferencia-horizontal"><i class="fa fa-check"></i><b>7.5</b> El rol de la transferencia horizontal</a></li>
-<li class="chapter" data-level="7.6" data-path="microbial.html"><a href="microbial.html#selección-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i><b>7.6</b> Selección vs Neutralismo: los procariotas en el debate</a></li>
+<li class="chapter" data-level="7.6" data-path="microbial.html"><a href="microbial.html#seleccionismo-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i><b>7.6</b> Seleccionismo <em>vs</em> neutralismo: los procariotas en el debate</a></li>
 <li class="chapter" data-level="7.7" data-path="microbial.html"><a href="microbial.html#genómica-poblacional"><i class="fa fa-check"></i><b>7.7</b> Genómica poblacional</a></li>
 <li class="chapter" data-level="7.8" data-path="microbial.html"><a href="microbial.html#genes-de-resistencia"><i class="fa fa-check"></i><b>7.8</b> Genes de resistencia</a></li>
 <li class="chapter" data-level="7.9" data-path="microbial.html"><a href="microbial.html#introducción-a-la-epidemiología-modelos-compartimentales"><i class="fa fa-check"></i><b>7.9</b> Introducción a la epidemiología: modelos compartimentales</a></li>
+<li class="chapter" data-level="7.10" data-path="microbial.html"><a href="microbial.html#conclusión-6"><i class="fa fa-check"></i><b>7.10</b> Conclusión</a></li>
+<li class="chapter" data-level="7.11" data-path="microbial.html"><a href="microbial.html#actividades-6"><i class="fa fa-check"></i><b>7.11</b> Actividades</a>
+<ul>
+<li class="chapter" data-level="7.11.1" data-path="microbial.html"><a href="microbial.html#control-de-lectura-6"><i class="fa fa-check"></i><b>7.11.1</b> Control de lectura</a></li>
+<li class="chapter" data-level="7.11.2" data-path="microbial.html"><a href="microbial.html#verdadero-o-falso-6"><i class="fa fa-check"></i><b>7.11.2</b> ¿Verdadero o falso?</a></li>
 <li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejercicios-7"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>Parte III: Genética Cuantitativa</b></span></li>
 <li class="chapter" data-level="8" data-path="modelogenbas.html"><a href="modelogenbas.html"><i class="fa fa-check"></i><b>8</b> El Modelo Genético Básico</a>
@@ -477,7 +546,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="selartifI" class="section level1 hasAnchor" number="11">
 <h1><span class="header-section-number">Capítulo 11</span> Selección Artificial I<a href="selartifI.html#selartifI" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Alcanza con observar las diferentes formas de los organismos vivientes para comprender, a la luz de la teoría de la evolución, el rol que la selección natural ha jugado en la adaptación de los organismos al ambiente. En lo que llevamos avanzado del presente material, hemos intentado ponderar el rol de las distintas fuerzas aleatorias y determinísticas en la evolución de los organismos. En el capítulo dedicado a la <a href="seleccion.html#seleccion">Selección Natural</a> estudiamos, a través de modelos muy simples y estilizados cómo la selección natural puede cambiar las frecuencias de los alelos en un <em>locus</em> o apenas en un par de <em>loci</em>. Claramente, la selección natural llamó la atención de Charles Darwin<a href="#fn44" class="footnote-ref" id="fnref44"><sup>44</sup></a> de tal manera que la experiencia como naturalista a bordo durante la expedición del “Beagle” le permitió formular las bases de teoría evolutiva a partir de la selección natural. Sin embargo, la comprensión del mecanismo subyacente fue en gran parte a través de la observación del proceso de selección artificial que realizaban y realizan los mejoradores de diferentes razas de animales domésticos o de producción (y de los colombófilos).</p>
+<p>Alcanza con observar las diferentes formas de los organismos vivientes para comprender, a la luz de la teoría de la evolución, el rol que la selección natural ha jugado en la adaptación de los organismos al ambiente. En lo que llevamos avanzado del presente material, hemos intentado ponderar el rol de las distintas fuerzas aleatorias y determinísticas en la evolución de los organismos. En el capítulo dedicado a la <a href="seleccion.html#seleccion">Selección Natural</a> estudiamos, a través de modelos muy simples y estilizados cómo la selección natural puede cambiar las frecuencias de los alelos en un <em>locus</em> o apenas en un par de <em>loci</em>. Claramente, la selección natural llamó la atención de Charles Darwin<a href="#fn87" class="footnote-ref" id="fnref87"><sup>87</sup></a> de tal manera que la experiencia como naturalista a bordo durante la expedición del “Beagle” le permitió formular las bases de teoría evolutiva a partir de la selección natural. Sin embargo, la comprensión del mecanismo subyacente fue en gran parte a través de la observación del proceso de selección artificial que realizaban y realizan los mejoradores de diferentes razas de animales domésticos o de producción (y de los colombófilos).</p>
 <p>En efecto, alcanza con observar la variedad de razas de perros para entender que la fuerte presión de selección por desarrollar determinadas características puede tener una respuesta concomitante en relativamente pocas generaciones. De hecho, la mayor parte de las razas de perros que conocemos en la actualidad surgieron a mitad del siglo XIX, en plena revolución industrial. Pese a tratarse de animales de la misma especie, resulta difícil imaginarse el apareamiento de un Gran Danés con un Chihuahua (en realidad artificialmente es posible lograr crías de una hembra de Gran Danés con un macho Chihuahua, al revés es imposible la gestación). Todos los cambios y la diversidad observada desde el ancestro lobo domesticado se han obtenido como resultado de ese esfuerzo por modelar esta especie de acuerdo a nuestros gustos, costumbres y necesidades.</p>
 <p>Lo mismo es posible de observar en cada especie que tiene alguna importancia económica o cultural en nuestra vida diaria. En las diferentes razas bovinas vemos animales completamente especializados en la producción de leche, mientras que otros se especializan en la producción de carne. Las diferencias morfológicas son notables, pero aún más lo son en las características de interés productivo. El tamaño de los pollos parrilleros en los EEUU creció más de 4 veces desde 1957 a 1991 (<span class="citation">Havenstein et al. (<a href="#ref-Havensteinetal1994" role="doc-biblioref">1994</a>)</span>), en gran parte debido a la selección especializada para carne o producción de huevos.</p>
 <p>En el presente capítulo vamos a comenzar a estudiar la selección artificial para características métricas. Para ello usaremos un escenario sencillo, esencialmente basado en lo que se conoce como selección por truncamiento, en el que solo los individuos que sobrepasen un valor umbral de la característica (asumiendo que los mejores se corresponden a valores altos, al revés si los mejores son los valores bajos) son considerados como reproductores y progenitores de la siguiente generación. Para entender la relación entre las medias de la población en la generación actual, la media de los individuos seleccionados y la respuesta a la selección definiremos el concepto de <strong>diferencial de selección direccional</strong>, reforzando la idea de que estamos realizando de manera artificial <strong>selección direccional</strong> y veremos cómo se relacionan estas medias con la heredabilidad de la característica bajo selección. Esto nos permitirá definir la <strong>ecuación del criador</strong>, posiblemente una de las ecuaciones más importantes para el mejoramiento genético animal. Como alternativa para poder comparar la presión de selección ejercida en diferentes características definiremos el concepto de <strong>intensidad de selección</strong> y discutiremos su relación con la proporción de individuos seleccionados, bajo el supuesto de normalidad de la característica de interés. Más adelante definiremos el concepto de intervalo generacional y lo utilizaremos para calcular la respuesta a la selección en base anual. Finalmente, estudiaremos el cambio en las frecuencias alélicas que se corresponden con una determinada intensidad de selección en un <em>locus</em> con dos alelos y cerraremos el capítulo con otra perspectiva acerca del diferencial de selección direccional que proviene de la <strong>identidad de Robertson-Price</strong>.</p>
@@ -1056,7 +1125,7 @@ Figura 11.6: Proporción de selección representada gráficamente, suponiendo ca
 <div id="intensidad-de-selección-y-proporción-seleccionada" class="section level2 hasAnchor" number="11.4">
 <h2><span class="header-section-number">11.4</span> Intensidad de selección y proporción seleccionada<a href="selartifI.html#intensidad-de-selección-y-proporción-seleccionada" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>La definición de intensidad de selección que hemos dado, es decir, el diferencial de selección estandarizado, nos deja con una medida de presión de selección que es sencilla de obtener si conocemos tanto el diferencial de selección como el desvío fenotípico de la característica. Sin embargo, en muchos casos no podemos darnos el lujo de determinar un valor dado de umbral para la característica ya que podría comprometer la sostenibilidad del sistema o implicar una presión de selección mucho menor que la posible y deseable. Por ejemplo, si fijamos un umbral tan alto que restrinja el número de hembras por debajo de las necesarias para generar reemplazos de la primera categoría en el rodeo, entoces comenzarermos un proceso de reducción en el tamaño del mismo, a menos que compensemos de otra forma. Esto nos lleva a la posibilidad de que el determinante para la presión de selección posible sea la proporción de individuos que debo quedarme como reproductores.</p>
-<p>En general, para distribuciones arbitrarias esto implicaría obtener la media de los individuos que quedan en la proporción seleccionada, lo que puede resultar algo complejo de derivar. Para distribuciones conocidas una alternativa adecuada a los tiempos es recurrir a algún software que permita hacer los cálculos basados en las distribuciones o aún realizar simulaciones (<span class="citation">R Core Team (<a href="#ref-R2021" role="doc-biblioref">2021</a>)</span>) y obtener una buena estimación de esta media y del desvío estándar de la característica. Claramente, esto implica conocer la distribución, así como un estimado razonable de sus parámetros. Afortunadamente, la mayor parte de las características productivas siguen una distribución normal, con media <span class="math inline">\(\mu\)</span> y varianza <span class="math inline">\(\sigma_P^2\)</span>, es decir <span class="math inline">\(N(\mu,\sigma^2)\)</span>. El diferencial de selección es igual a la media de los seleccionados menos la media de la población, por lo que al restarle la media de la población a los todos los datos los mismos quedan centrados en cero (ya que si <span class="math inline">\(\mu=x_0\)</span>, entonces la nueva media al restarle <span class="math inline">\(x_0\)</span> será <span class="math inline">\(\mu=x_0-x_0=0\)</span>). Esta operación solo desplaza la distribución centrándola en <span class="math inline">\(\mu=0\)</span>, es decir, cada valor será un desvío de la media, pero no cambia su varianza. Sin embargo, en la definición de intensidad de selección que vimos, <span class="math inline">\({\mathrm i=\frac{\mathrm S}{\sigma_P}}\)</span>. Ahora, si a esta distribución centrada en cero la dividimos entre el desvío estándar fenotípico, es decir <span class="math inline">\(\sigma_P\)</span>, tenemos que los datos tienen ahora distribución <span class="math inline">\(N(0,1)\)</span>.</p>
+<p>En general, para distribuciones arbitrarias esto implicaría obtener la media de los individuos que quedan en la proporción seleccionada, lo que puede resultar algo complejo de derivar. Para distribuciones conocidas una alternativa adecuada a los tiempos es recurrir a algún software que permita hacer los cálculos basados en las distribuciones o aún realizar simulaciones (<span class="citation">R Core Team (<a href="#ref-R2021" role="doc-biblioref">2021</a>)</span>) y obtener una buena estimación de esta media y del desvío estándar de la característica. Claramente, esto implica conocer la distribución, así como un estimado razonable de sus parámetros. Afortunadamente, la mayor parte de las características productivas siguen una distribución normal, con media <span class="math inline">\(\mu\)</span> y varianza <span class="math inline">\(\sigma_P^2\)</span>, es decir <span class="math inline">\(N(\mu,\sigma^2)\)</span>. El diferencial de selección es igual a la media de los seleccionados menos la media de la población, por lo que al restarle la media de la población a los todos los datos los mismos quedan centrados en cero (ya que si <span class="math inline">\(\mu=x_0\)</span>, entonces la nueva media al restarle <span class="math inline">\(x_0\)</span> será <span class="math inline">\(\mu=x_0-x_0=0\)</span>). Esta operación solo desplaza la distribución centrándola en <span class="math inline">\(\mu=0\)</span>, es decir, cada valor será un desvío de la media, pero no cambia su varianza. Sin embargo, en la definición de intensidad de selección que vimos, <span class="math inline">\({\mathrm i=\frac{\mathrm S}{\sigma_P}}\)</span>. Ahora, si a esta distribución centrada en cero la dividimos entre el desvío estándar fenotípico, es decir <span class="math inline">\(\sigma_P^2\)</span>, tenemos que los datos tienen ahora distribución <span class="math inline">\(N(0,1)\)</span>.</p>
 <p>Dicho de otra forma, haciendo las operaciones clásicas que haríamos para obtener la intensidad de selección a partir del diferencial de selección, lo que estamos haciendo es obtener el apartamiento para la media de los individuos seleccionados en una distribución normal estandarizada, es decir <span class="math inline">\(N(0,1)\)</span>. Esto que puede parecer trivial es de suma importancia ya que la distribución normal estandarizada nos permite obtener varios resultados importantes sin tener que hacer cuentas específicas para cada combinación de <span class="math inline">\(x_0\)</span> y <span class="math inline">\(\sigma_P^2\)</span>.</p>
 <p>Como muestra la figura <a href="selartifI.html#fig:izp">11.7</a>, <strong>en una distribución normal estandarizada la media de los individuos seleccionados es exactamente la intensidad de selección</strong>. Es decir, para estandarizar una distribución normal <span class="math inline">\(N(x_0, \sigma_P^2)\)</span> primero le restamos <span class="math inline">\(x_0\)</span> a todas las observaciones y luego dividimos esto entre el desvío estándar de la distribución (<span class="math inline">\(\sigma_P\)</span>). La primera operación deja la media de los individuos seleccionados exactamente igual al diferencial de selección ya que <span class="math inline">\(\mathrm{x_S-x_0=S}\)</span>, mientras que la segunda transforma el diferencial de selección en la intensidad de selección ya que <span class="math inline">\({\frac{\mathrm S}{\sigma_P}=\mathrm i}\)</span>. Ahora, basados en las propiedades de la distribución normal estándar, la media de la región seleccionada es igual a la altura del punto de truncamiento dividido entre el área bajo la curva a partir del límite de truncamiento y hasta <span class="math inline">\(+\infty\)</span>.</p>
 
@@ -1940,6 +2009,7 @@ partir del punto de truncamiento. En el caso de la distribución normal, la
 Función de Densidad Acumulada es</p>
 <p><span class="math display">\[\begin{equation}
 \Phi_{\mu,\sigma^2}(x)=  \frac{1}{\sigma \sqrt{2 \pi}} \int^x_{-\infty} e^{- \frac{(u-\mu)^2}{2 \sigma^2}} du
+= 1- \frac{1}{\sigma \sqrt{2 \pi}} \int^{X_u}_{-\infty} e^{- \frac{(u-\mu)^2}{2 \sigma^2}} du
 \end{equation}\]</span></p>
 <p>por lo que la proporción <span class="math inline">\(p\)</span> de individuos seleccionados a partir de un
 valor <span class="math inline">\(X_u\)</span> en una <span class="math inline">\(\sim N(0,1)\)</span> será</p>
@@ -2787,8 +2857,8 @@ R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</
 </div>
 <div class="footnotes">
 <hr />
-<ol start="44">
-<li id="fn44"><p>Charles Darwin (12 febrero 1809 – 19 abril 1882) fue un naturalista inglés, fundador de la teoría de la selección natural. En el segundo viaje del HMS-Beagle, con el objetivo primario de cartografiar la costa sudamericana, Darwin viajó como naturalista, recogiendo observaciones geológicas y diferentes especímenes biológicos. Su obra más famosa, “On the Origin of Species”, fue publicada por primera vez en 1859.<a href="selartifI.html#fnref44" class="footnote-back">↩︎</a></p></li>
+<ol start="87">
+<li id="fn87"><p>Charles Darwin (12 febrero 1809 – 19 abril 1882) fue un naturalista inglés, fundador de la teoría de la selección natural. En el segundo viaje del HMS-Beagle, con el objetivo primario de cartografiar la costa sudamericana, Darwin viajó como naturalista, recogiendo observaciones geológicas y diferentes especímenes biológicos. Su obra más famosa, “On the Origin of Species”, fue publicada por primera vez en 1859.<a href="selartifI.html#fnref87" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
