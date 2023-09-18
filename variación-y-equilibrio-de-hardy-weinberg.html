@@ -1,0 +1,2221 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 2 Variación y equilibrio de Hardy-Weinberg | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
+  <meta name="description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 2 Variación y equilibrio de Hardy-Weinberg | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 2 Variación y equilibrio de Hardy-Weinberg | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  
+  <meta name="twitter:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
+  
+
+<meta name="author" content="Hugo Naya" />
+<meta name="author" content="(Federica Marín)" />
+<meta name="author" content="(Jorge Urioste, María André, Andrea Larracharte, Washington Bell," />
+<meta name="author" content="Ana Laura Sánchez, Micaela Botta, Paula Batista, Rodrigo Vivián)" />
+<meta name="author" content="(Paola Gaiero)" />
+
+
+<meta name="date" content="2022-07-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="deriva.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Genética II</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nuestra-filosofía-del-no-tanto"><i class="fa fa-check"></i>Nuestra filosofía del NO (tanto)</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#qué-es-y-qué-no-es-este-libro"><i class="fa fa-check"></i>¿Qué ES y qué NO ES este libro?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#bibliografía-recomendada-para-este-curso"><i class="fa fa-check"></i>Bibliografía recomendada para este curso</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#responsabilidades-y-agradecimientos"><i class="fa fa-check"></i>Responsabilidades y Agradecimientos</a></li>
+</ul></li>
+<li class="part"><span><b>Parte I: Genómica</b></span></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introducción a la Genómica</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#variabilidad-genética"><i class="fa fa-check"></i><b>1.1</b> Variabilidad genética</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#detectando-la-variabilidad-diferentes-técnicas"><i class="fa fa-check"></i><b>1.1.1</b> Detectando la variabilidad: diferentes técnicas</a></li>
+<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#metagenómica-y-metatranscriptómica"><i class="fa fa-check"></i><b>1.1.2</b> Metagenómica y Metatranscriptómica</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#genómica-composicional"><i class="fa fa-check"></i><b>1.2</b> Genómica composicional</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-gcskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones, GCskew</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#uso-de-codones"><i class="fa fa-check"></i>Uso de codones</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#exploración-multivariada-análisis-de-correspondencia"><i class="fa fa-check"></i>Exploración multivariada: Análisis de Correspondencia</a></li>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i><b>1.2.1</b> Composición de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-en-propiedades-de-los-aas"><i class="fa fa-check"></i>Diferencias en propiedades de los AAs</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-de-composición-entre-clases-de-proteínas"><i class="fa fa-check"></i>Diferencias de composición entre clases de proteínas</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#genómica-comparativa"><i class="fa fa-check"></i><b>1.3</b> Genómica comparativa</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#comparación-de-secuencias-génicas"><i class="fa fa-check"></i>Comparación de secuencias génicas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección Positiva</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#vías"><i class="fa fa-check"></i>Vías</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#genómica-funcional"><i class="fa fa-check"></i><b>1.4</b> Genómica funcional</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#estudios-epigenéticos-y-epigenómicos"><i class="fa fa-check"></i>Estudios epigenéticos y epigenómicos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicio-1.1"><i class="fa fa-check"></i>Ejercicio 1.1</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Parte II: Genética de Poblaciones</b></span></li>
+<li class="chapter" data-level="2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html"><i class="fa fa-check"></i><b>2</b> Variación y equilibrio de Hardy-Weinberg</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#el-equilibrio-de-hardy-weinberg"><i class="fa fa-check"></i><b>2.1</b> El equilibrio de Hardy-Weinberg</a>
+<ul>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#supuestos-que-asumimos-se-cumplen-para-h-w"><i class="fa fa-check"></i>Supuestos que asumimos se cumplen para H-W</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-dioicas-dos-sexos"><i class="fa fa-check"></i><b>2.2</b> Hardy-Weinberg en especies dioicas (dos sexos)</a></li>
+<li class="chapter" data-level="2.3" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#h-w-la-frecuencia-de-heterocigotas-en-función-de-la-frecuencia-alélica"><i class="fa fa-check"></i><b>2.3</b> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
+<li class="chapter" data-level="2.4" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo"><i class="fa fa-check"></i><b>2.4</b> El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo</a></li>
+<li class="chapter" data-level="2.5" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#tres-o-más-alelos"><i class="fa fa-check"></i><b>2.5</b> Tres o más alelos</a></li>
+<li class="chapter" data-level="2.6" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-y-el-equilibrio-o-no"><i class="fa fa-check"></i><b>2.6</b> La estimación de frecuencias y el equilibrio (o no)</a></li>
+<li class="chapter" data-level="2.7" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#el-sistema-abo"><i class="fa fa-check"></i><b>2.7</b> El sistema ABO</a></li>
+<li class="chapter" data-level="2.8" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#dónde-se-esconden-los-alelos-recesivos"><i class="fa fa-check"></i><b>2.8</b> ¿Dónde se “esconden” los alelos recesivos?</a></li>
+<li class="chapter" data-level="2.9" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#hardy-weinberg-en-especies-poliploides"><i class="fa fa-check"></i><b>2.9</b> Hardy-Weinberg en especies poliploides</a></li>
+<li class="chapter" data-level="2.10" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#geometría-y-genética-los-diagramas-de-de-finetti"><i class="fa fa-check"></i><b>2.10</b> Geometría y Genética: los diagramas de <em>de Finetti</em></a></li>
+<li class="chapter" data-level="2.11" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#la-estimación-de-frecuencias-en-el-locus-abo"><i class="fa fa-check"></i><b>2.11</b> La estimación de frecuencias en el locus ABO</a></li>
+<li class="chapter" data-level="" data-path="variación-y-equilibrio-de-hardy-weinberg.html"><a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicios-2"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="deriva.html"><a href="deriva.html"><i class="fa fa-check"></i><b>3</b> Deriva Genética</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="deriva.html"><a href="deriva.html#el-rol-de-los-procesos-estocásticos-en-la-genética"><i class="fa fa-check"></i><b>3.1</b> El rol de los procesos estocásticos en la genética</a></li>
+<li class="chapter" data-level="3.2" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i><b>3.2</b> El modelo de Wright-Fisher</a></li>
+<li class="chapter" data-level="3.3" data-path="deriva.html"><a href="deriva.html#el-rol-de-la-subdivisión-poblacional-en-la-evolución-de-las-frecuencias-alélicas"><i class="fa fa-check"></i><b>3.3</b> El rol de la subdivisión poblacional en la evolución de las frecuencias alélicas</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#homocigosidad-y-heterocigosidad"><i class="fa fa-check"></i>Homocigosidad y Heterocigosidad</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="deriva.html"><a href="deriva.html#cadenas-de-markov"><i class="fa fa-check"></i><b>3.4</b> Cadenas de Markov</a></li>
+<li class="chapter" data-level="3.5" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i><b>3.5</b> Tamaño efectivo poblacional</a></li>
+<li class="chapter" data-level="3.6" data-path="deriva.html"><a href="deriva.html#aproximación-de-difusión"><i class="fa fa-check"></i><b>3.6</b> Aproximación de difusión</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#caminatas-al-azar-y-procesos-de-difusión"><i class="fa fa-check"></i>Caminatas al azar y procesos de difusión</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-forward-equation"><i class="fa fa-check"></i>Kolmogorov Forward Equation</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-backward-equation"><i class="fa fa-check"></i>Kolmogorov Backward Equation</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#solución-de-las-ecuaciones"><i class="fa fa-check"></i>Solución de las ecuaciones</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i><b>3.7</b> Probabilidad de fijación y tiempos de fijación</a></li>
+<li class="chapter" data-level="3.8" data-path="deriva.html"><a href="deriva.html#el-modelo-coalescente"><i class="fa fa-check"></i><b>3.8</b> El modelo coalescente</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejercicios-3"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="seleccion.html"><a href="seleccion.html"><i class="fa fa-check"></i><b>4</b> Selección Natural</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="seleccion.html"><a href="seleccion.html#el-concepto-de-fitness"><i class="fa fa-check"></i><b>4.1</b> El concepto de “fitness”</a></li>
+<li class="chapter" data-level="4.2" data-path="seleccion.html"><a href="seleccion.html#selección-natural-en-el-modelo-de-un-locus-con-dos-alelos"><i class="fa fa-check"></i><b>4.2</b> Selección natural en el modelo de un locus con dos alelos</a></li>
+<li class="chapter" data-level="4.3" data-path="seleccion.html"><a href="seleccion.html#diferentes-formas-de-selección"><i class="fa fa-check"></i><b>4.3</b> Diferentes formas de selección</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="seleccion.html"><a href="seleccion.html#selección-direccional"><i class="fa fa-check"></i><b>4.3.1</b> Selección direccional</a></li>
+<li class="chapter" data-level="4.3.2" data-path="seleccion.html"><a href="seleccion.html#selección-estabilizadora"><i class="fa fa-check"></i><b>4.3.2</b> Selección estabilizadora</a></li>
+<li class="chapter" data-level="4.3.3" data-path="seleccion.html"><a href="seleccion.html#selección-disruptiva"><i class="fa fa-check"></i><b>4.3.3</b> Selección disruptiva</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="seleccion.html"><a href="seleccion.html#el-teorema-fundamental-de-la-selección-natural"><i class="fa fa-check"></i><b>4.4</b> El teorema fundamental de la selección natural</a></li>
+<li class="chapter" data-level="4.5" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-mutación"><i class="fa fa-check"></i><b>4.5</b> Equilibrio selección-mutación</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="seleccion.html"><a href="seleccion.html#el-principio-de-haldane-muller"><i class="fa fa-check"></i><b>4.5.1</b> El principio de Haldane-Muller</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="seleccion.html"><a href="seleccion.html#la-fuerza-de-la-selección-natural"><i class="fa fa-check"></i><b>4.6</b> La fuerza de la selección natural</a></li>
+<li class="chapter" data-level="4.7" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-deriva"><i class="fa fa-check"></i><b>4.7</b> Equilibrio selección-deriva</a></li>
+<li class="chapter" data-level="4.8" data-path="seleccion.html"><a href="seleccion.html#otros-tipos-de-selección-y-complejidades"><i class="fa fa-check"></i><b>4.8</b> Otros tipos de selección y complejidades</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#ejercicios-4"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="dosloci.html"><a href="dosloci.html"><i class="fa fa-check"></i><b>5</b> Dinámica de 2 <em>loci</em></a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-de-ligamiento-y-recombinación"><i class="fa fa-check"></i><b>5.1</b> Desequilibrio de ligamiento y recombinación</a></li>
+<li class="chapter" data-level="5.2" data-path="dosloci.html"><a href="dosloci.html#la-evolución-en-el-tiempo-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i><b>5.2</b> La evolución en el tiempo del desequilibrio de ligamiento</a></li>
+<li class="chapter" data-level="5.3" data-path="dosloci.html"><a href="dosloci.html#otras-medidas-de-asociación"><i class="fa fa-check"></i><b>5.3</b> Otras medidas de asociación</a>
+<ul>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejemplo-5.3"><i class="fa fa-check"></i>Ejemplo 5.3</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="dosloci.html"><a href="dosloci.html#selección-en-modelos-de-dos-loci"><i class="fa fa-check"></i><b>5.4</b> Selección en modelos de dos <em>loci</em></a>
+<ul>
+<li><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento">Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i><b>5.5</b> Arrastre genético (“genetic hitchhiking” o “genetic draft”)</a></li>
+<li class="chapter" data-level="5.6" data-path="dosloci.html"><a href="dosloci.html#causas-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i><b>5.6</b> Causas del desequilibrio de ligamiento</a>
+<ul>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-al-mestizaje"><i class="fa fa-check"></i>Desequilibrio debido al mestizaje</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-inducido-por-el-sistema-de-apareamiento"><i class="fa fa-check"></i>Desequilibrio inducido por el sistema de apareamiento</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#el-cromosoma-y"><i class="fa fa-check"></i>El cromosoma Y</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-a-recombinación-reducida"><i class="fa fa-check"></i>Desequilibrio debido a recombinación reducida</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejercicios-5"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="aparnoalazar.html"><a href="aparnoalazar.html"><i class="fa fa-check"></i><b>6</b> Apareamientos no-aleatorios</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-concepto-de-identidad-por-ascendencia-ibd"><i class="fa fa-check"></i><b>6.1</b> El concepto de “identidad por ascendencia” (IBD)</a></li>
+<li class="chapter" data-level="6.2" data-path="aparnoalazar.html"><a href="aparnoalazar.html#generalización-de-hardy-weinberg-para-apareamientos-no-aleatorios"><i class="fa fa-check"></i><b>6.2</b> Generalización de Hardy-Weinberg para apareamientos no-aleatorios</a></li>
+<li class="chapter" data-level="6.3" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><b>6.3</b> <em>F</em> como correlación entre gametos unidos</a></li>
+<li class="chapter" data-level="6.4" data-path="aparnoalazar.html"><a href="aparnoalazar.html#endocría-y-depresión-endogámica"><i class="fa fa-check"></i><b>6.4</b> Endocría y depresión endogámica</a></li>
+<li class="chapter" data-level="6.5" data-path="aparnoalazar.html"><a href="aparnoalazar.html#un-caso-extremo-la-autogamia"><i class="fa fa-check"></i><b>6.5</b> Un caso extremo: la autogamia</a></li>
+<li class="chapter" data-level="6.6" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-estadísticos-f"><i class="fa fa-check"></i><b>6.6</b> El Coeficiente de endocría y estadísticos <em>F</em></a></li>
+<li class="chapter" data-level="6.7" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i><b>6.7</b> El efecto Wahlund</a></li>
+<li class="chapter" data-level="6.8" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i><b>6.8</b> Subdivisión, migración y el modelo de islas</a></li>
+<li class="chapter" data-level="6.9" data-path="aparnoalazar.html"><a href="aparnoalazar.html#mecanismos-de-especiación"><i class="fa fa-check"></i><b>6.9</b> Mecanismos de especiación</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejercicios-6"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="microbial.html"><a href="microbial.html"><i class="fa fa-check"></i><b>7</b> Genética de Poblaciones Microbianas</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="microbial.html"><a href="microbial.html#genómica-y-mecanismos-de-herencia-en-procariotas"><i class="fa fa-check"></i><b>7.1</b> Genómica y mecanismos de herencia en procariotas</a></li>
+<li class="chapter" data-level="7.2" data-path="microbial.html"><a href="microbial.html#dinámica-de-las-poblaciones-bacterianas"><i class="fa fa-check"></i><b>7.2</b> Dinámica de las poblaciones bacterianas</a>
+<ul>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-exponencial"><i class="fa fa-check"></i>El modelo exponencial</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-logístico"><i class="fa fa-check"></i>El modelo logístico</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="microbial.html"><a href="microbial.html#modelos-haploides-de-selección-natural"><i class="fa fa-check"></i><b>7.3</b> Modelos haploides de selección natural</a>
+<ul>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-discreto"><i class="fa fa-check"></i>Selección haploide: modelo discreto</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-continuo"><i class="fa fa-check"></i>Selección haploide: modelo continuo</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-versus-el-de-wright-fisher"><i class="fa fa-check"></i><b>7.4</b> Los modelos de Moran y de Fisión versus el de Wright-Fisher</a></li>
+<li class="chapter" data-level="7.5" data-path="microbial.html"><a href="microbial.html#el-rol-de-la-transferencia-horizontal"><i class="fa fa-check"></i><b>7.5</b> El rol de la transferencia horizontal</a></li>
+<li class="chapter" data-level="7.6" data-path="microbial.html"><a href="microbial.html#selección-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i><b>7.6</b> Selección vs Neutralismo: los procariotas en el debate</a></li>
+<li class="chapter" data-level="7.7" data-path="microbial.html"><a href="microbial.html#genómica-poblacional"><i class="fa fa-check"></i><b>7.7</b> Genómica poblacional</a></li>
+<li class="chapter" data-level="7.8" data-path="microbial.html"><a href="microbial.html#genes-de-resistencia"><i class="fa fa-check"></i><b>7.8</b> Genes de resistencia</a></li>
+<li class="chapter" data-level="7.9" data-path="microbial.html"><a href="microbial.html#introducción-a-la-epidemiología-modelos-compartimentales"><i class="fa fa-check"></i><b>7.9</b> Introducción a la epidemiología: modelos compartimentales</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejercicios-7"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="part"><span><b>Parte III: Genética Cuantitativa</b></span></li>
+<li class="chapter" data-level="8" data-path="modelogenbas.html"><a href="modelogenbas.html"><i class="fa fa-check"></i><b>8</b> El Modelo Genético Básico</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="modelogenbas.html"><a href="modelogenbas.html#variación-continua-y-discreta"><i class="fa fa-check"></i><b>8.1</b> Variación continua y discreta</a></li>
+<li class="chapter" data-level="8.2" data-path="modelogenbas.html"><a href="modelogenbas.html#el-modelo-genético-básico"><i class="fa fa-check"></i><b>8.2</b> El modelo genético básico</a></li>
+<li class="chapter" data-level="8.3" data-path="modelogenbas.html"><a href="modelogenbas.html#modelo-genético-básico-un-locus-con-dos-alelos"><i class="fa fa-check"></i><b>8.3</b> Modelo Genético Básico: un <em>locus</em> con dos alelos</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#media-de-la-población"><i class="fa fa-check"></i>Media de la población</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="modelogenbas.html"><a href="modelogenbas.html#efecto-medio"><i class="fa fa-check"></i><b>8.4</b> Efecto medio</a></li>
+<li class="chapter" data-level="8.5" data-path="modelogenbas.html"><a href="modelogenbas.html#valor-reproductivo-o-valor-de-cría"><i class="fa fa-check"></i><b>8.5</b> Valor reproductivo (o valor de cría)</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#derivación-de-los-efectos-medios-por-mínimos-cuadrados"><i class="fa fa-check"></i>Derivación de los efectos medios por mínimos cuadrados</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="modelogenbas.html"><a href="modelogenbas.html#desvío-de-dominancia"><i class="fa fa-check"></i><b>8.6</b> Desvío de dominancia</a></li>
+<li class="chapter" data-level="8.7" data-path="modelogenbas.html"><a href="modelogenbas.html#interacción-genotipo-x-ambiente"><i class="fa fa-check"></i><b>8.7</b> Interacción Genotipo x Ambiente</a></li>
+<li class="chapter" data-level="8.8" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-en-el-modelo-genético-básico"><i class="fa fa-check"></i><b>8.8</b> La Varianza en el modelo genético básico</a>
+<ul>
+<li><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos">Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-ambiental"><i class="fa fa-check"></i>La varianza ambiental</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-de-la-interacción"><i class="fa fa-check"></i>La Varianza de la interacción</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejercicios-8"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="parentesco.html"><a href="parentesco.html"><i class="fa fa-check"></i><b>9</b> Parentesco y Semejanza entre Parientes</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="parentesco.html"><a href="parentesco.html#parentesco-1"><i class="fa fa-check"></i><b>9.1</b> Parentesco</a></li>
+<li class="chapter" data-level="9.2" data-path="parentesco.html"><a href="parentesco.html#parentesco-aditivo"><i class="fa fa-check"></i><b>9.2</b> Parentesco aditivo</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#consanguinidad"><i class="fa fa-check"></i>Consanguinidad</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#diagramas-de-flechas"><i class="fa fa-check"></i>Diagramas de flechas</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#el-método-tabular"><i class="fa fa-check"></i>El método tabular</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="parentesco.html"><a href="parentesco.html#parentesco-de-dominancia"><i class="fa fa-check"></i><b>9.3</b> Parentesco de dominancia</a></li>
+<li class="chapter" data-level="9.4" data-path="parentesco.html"><a href="parentesco.html#semejanza-entre-parientes"><i class="fa fa-check"></i><b>9.4</b> Semejanza entre parientes</a></li>
+<li class="chapter" data-level="9.5" data-path="parentesco.html"><a href="parentesco.html#estimación-de-las-varianzas-aditiva-y-de-dominancia"><i class="fa fa-check"></i><b>9.5</b> Estimación de las varianzas aditiva y de dominancia</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#propiedades-deseables-de-los-estimadores"><i class="fa fa-check"></i>Propiedades deseables de los estimadores</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estimación-de-la-varianza-aditiva-a-partir-del-análisis-de-varianza-anova"><i class="fa fa-check"></i>Estimación de la varianza aditiva a partir del análisis de varianza (ANOVA)</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estimaciones-basadas-en-modelos-mixtos-lineales"><i class="fa fa-check"></i>Estimaciones basadas en modelos mixtos lineales</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="parentesco.html"><a href="parentesco.html#parentesco-genómico"><i class="fa fa-check"></i><b>9.6</b> Parentesco genómico</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#contenido-génico"><i class="fa fa-check"></i>Contenido génico</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#la-matriz-de-similaridad-genómica"><i class="fa fa-check"></i>La matriz de similaridad genómica</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="parentesco.html"><a href="parentesco.html#estudios-de-ascendencia-ancestría"><i class="fa fa-check"></i><b>9.7</b> Estudios de ascendencia (“ancestría”)</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#ejercicios-9"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="pargen.html"><a href="pargen.html"><i class="fa fa-check"></i><b>10</b> Parámetros Genéticos: Heredabilidad y Repetibilidad</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="pargen.html"><a href="pargen.html#heredabilidad"><i class="fa fa-check"></i><b>10.1</b> Heredabilidad</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-heredabilidad-como-relación-de-varianzas"><i class="fa fa-check"></i>La heredabilidad como relación de varianzas</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-heredabilidad-como-regresión"><i class="fa fa-check"></i>La heredabilidad como regresión</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-de-cría-en-el-fenotipo-individual"><i class="fa fa-check"></i>Regresión del valor de cría en el fenotipo individual</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-fenotípico-de-los-hijos-sobre-el-fenotipo-de-un-progenitor"><i class="fa fa-check"></i>Regresión del valor fenotípico de los hijos sobre el fenotipo de un progenitor</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-fenotípico-de-los-hijos-sobre-el-fenotipo-de-ambos-progenitores"><i class="fa fa-check"></i>Regresión del valor fenotípico de los hijos sobre el fenotipo de ambos progenitores</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#precisión-en-las-estimaciones-de-heredabilidad-varianza-del-estimador"><i class="fa fa-check"></i>Precisión en las estimaciones de heredabilidad: varianza del estimador</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-sentido-amplio-y-sentido-estricto"><i class="fa fa-check"></i><b>10.2</b> Heredabilidad en sentido amplio y sentido estricto</a></li>
+<li class="chapter" data-level="10.3" data-path="pargen.html"><a href="pargen.html#heredabilidad-lograda"><i class="fa fa-check"></i><b>10.3</b> Heredabilidad lograda</a></li>
+<li class="chapter" data-level="10.4" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-poblaciones-agronómicas-y-de-laboratorio-vs-poblaciones-naturales"><i class="fa fa-check"></i><b>10.4</b> Heredabilidad en poblaciones agronómicas y de laboratorio vs poblaciones naturales</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-animales-domésticos"><i class="fa fa-check"></i>Estimaciones de heredabilidad en animales domésticos</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-plantas"><i class="fa fa-check"></i>Estimaciones de heredabilidad en plantas</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-condiciones-naturales"><i class="fa fa-check"></i>Estimaciones de heredabilidad en condiciones naturales</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="pargen.html"><a href="pargen.html#heredabilidad-y-filogenética"><i class="fa fa-check"></i><b>10.5</b> Heredabilidad y filogenética</a></li>
+<li class="chapter" data-level="10.6" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-la-era-genómica"><i class="fa fa-check"></i><b>10.6</b> Heredabilidad en la era genómica</a></li>
+<li class="chapter" data-level="10.7" data-path="pargen.html"><a href="pargen.html#métodos-más-avanzados-de-estimación"><i class="fa fa-check"></i><b>10.7</b> Métodos más avanzados de estimación</a></li>
+<li class="chapter" data-level="10.8" data-path="pargen.html"><a href="pargen.html#repetibilidad"><i class="fa fa-check"></i><b>10.8</b> Repetibilidad</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-cociente-de-varianzas"><i class="fa fa-check"></i>La repetibilidad como cociente de varianzas</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-coeficiente-de-correlación-intraclase"><i class="fa fa-check"></i>La repetibilidad como coeficiente de correlación intraclase</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-relación-entre-la-heredabilidad-y-la-repetibilidad"><i class="fa fa-check"></i>La relación entre la heredabilidad y la repetibilidad</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-reducción-en-la-varianza-fenotípica-con-varias-medidas"><i class="fa fa-check"></i>La reducción en la varianza fenotípica con varias medidas</a></li>
+</ul></li>
+<li class="chapter" data-level="10.9" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-herramienta-en-la-predicción"><i class="fa fa-check"></i><b>10.9</b> La repetibilidad como herramienta en la predicción</a></li>
+<li class="chapter" data-level="10.10" data-path="pargen.html"><a href="pargen.html#evolucionabilidad"><i class="fa fa-check"></i><b>10.10</b> Evolucionabilidad</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#ejercicios-10"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="selartifI.html"><a href="selartifI.html"><i class="fa fa-check"></i><b>11</b> Selección Artificial I</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección"><i class="fa fa-check"></i><b>11.1</b> Factores de corrección</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-aditivos"><i class="fa fa-check"></i>Factores de corrección aditivos</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-multiplicativos"><i class="fa fa-check"></i>Factores de corrección multiplicativos</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-lineales"><i class="fa fa-check"></i>Factores de corrección lineales</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="selartifI.html"><a href="selartifI.html#la-respuesta-a-la-selección-y-su-predicción"><i class="fa fa-check"></i><b>11.2</b> La respuesta a la selección y su predicción</a></li>
+<li class="chapter" data-level="11.3" data-path="selartifI.html"><a href="selartifI.html#diferencial-de-selección-e-intensidad-de-selección"><i class="fa fa-check"></i><b>11.3</b> Diferencial de selección e intensidad de selección</a></li>
+<li class="chapter" data-level="11.4" data-path="selartifI.html"><a href="selartifI.html#intensidad-de-selección-y-proporción-seleccionada"><i class="fa fa-check"></i><b>11.4</b> Intensidad de selección y proporción seleccionada</a>
+<ul>
+<li><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp">¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#la-relación-entre-diferentes-formas-de-calcular-la-intensidad-de-selección"><i class="fa fa-check"></i>La relación entre diferentes formas de calcular la intensidad de selección</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="selartifI.html"><a href="selartifI.html#intervalo-generacional"><i class="fa fa-check"></i><b>11.5</b> Intervalo generacional</a></li>
+<li class="chapter" data-level="11.6" data-path="selartifI.html"><a href="selartifI.html#medidas-de-la-respuesta"><i class="fa fa-check"></i><b>11.6</b> Medidas de la respuesta</a></li>
+<li class="chapter" data-level="11.7" data-path="selartifI.html"><a href="selartifI.html#progreso-genético-generacional-y-anual"><i class="fa fa-check"></i><b>11.7</b> Progreso genético generacional y anual</a></li>
+<li class="chapter" data-level="11.8" data-path="selartifI.html"><a href="selartifI.html#cambio-en-las-frecuencias-alélicas-bajo-selección-artificial"><i class="fa fa-check"></i><b>11.8</b> Cambio en las frecuencias alélicas bajo selección artificial</a></li>
+<li class="chapter" data-level="11.9" data-path="selartifI.html"><a href="selartifI.html#el-diferencial-de-selección-direccional-y-la-identidad-de-robertson-price"><i class="fa fa-check"></i><b>11.9</b> El diferencial de selección direccional y la identidad de Robertson-Price</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#ejercicios-11"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="correlacionada.html"><a href="correlacionada.html"><i class="fa fa-check"></i><b>12</b> Correlaciones y Respuesta Correlacionada</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="correlacionada.html"><a href="correlacionada.html#causas-genéticas-y-ambientales-de-las-correlaciones"><i class="fa fa-check"></i><b>12.1</b> Causas genéticas y ambientales de las correlaciones</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#causas-de-las-correlaciones-genéticas"><i class="fa fa-check"></i>Causas de las correlaciones genéticas</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#causas-de-las-correlaciones-ambientales"><i class="fa fa-check"></i>Causas de las correlaciones ambientales</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="correlacionada.html"><a href="correlacionada.html#introducción-al-path-analysis"><i class="fa fa-check"></i><b>12.2</b> Introducción al “path analysis”</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#la-relación-entre-las-correlaciones-fenotípica-genética-y-ambiental"><i class="fa fa-check"></i>La relación entre las correlaciones fenotípica, genética y ambiental</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="correlacionada.html"><a href="correlacionada.html#métodos-para-determinar-la-correlación-genética"><i class="fa fa-check"></i><b>12.3</b> Métodos para determinar la correlación genética</a></li>
+<li class="chapter" data-level="12.4" data-path="correlacionada.html"><a href="correlacionada.html#la-correlación-fenotípica-y-su-relación-con-la-correlación-genética-aditiva-y-ambiental"><i class="fa fa-check"></i><b>12.4</b> La correlación fenotípica y su relación con la correlación genética aditiva y ambiental</a></li>
+<li class="chapter" data-level="12.5" data-path="correlacionada.html"><a href="correlacionada.html#respuesta-correlacionada"><i class="fa fa-check"></i><b>12.5</b> Respuesta correlacionada</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#eficiencia-en-relación-a-la-selección-directa"><i class="fa fa-check"></i>Eficiencia en relación a la selección directa</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#el-signo-de-la-correlación-y-el-beneficio-demérito-de-la-misma"><i class="fa fa-check"></i>El signo de la correlación y el beneficio-demérito de la misma</a></li>
+</ul></li>
+<li class="chapter" data-level="12.6" data-path="correlacionada.html"><a href="correlacionada.html#matrices-de-varianza-covarianza"><i class="fa fa-check"></i><b>12.6</b> Matrices de varianza-covarianza</a></li>
+<li class="chapter" data-level="12.7" data-path="correlacionada.html"><a href="correlacionada.html#la-forma-generalizada-de-la-ecuación-del-criador"><i class="fa fa-check"></i><b>12.7</b> La forma generalizada de la ecuación del criador</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#ejercicios-12"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="selartifII.html"><a href="selartifII.html"><i class="fa fa-check"></i><b>13</b> Selección Artificial II</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="selartifII.html"><a href="selartifII.html#criterios-y-objetivos-de-selección"><i class="fa fa-check"></i><b>13.1</b> Criterios y objetivos de selección</a></li>
+<li class="chapter" data-level="13.2" data-path="selartifII.html"><a href="selartifII.html#selección-basada-en-un-solo-tipo-de-fuente-de-información"><i class="fa fa-check"></i><b>13.2</b> Selección basada en un solo tipo de fuente de información</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#diferentes-tipos-de-selección-basados-en-estructuras-de-parentesco-definidas"><i class="fa fa-check"></i>Diferentes tipos de selección basados en estructuras de parentesco definidas</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-las-heredabilidades-en-los-distintos-tipos-de-selección"><i class="fa fa-check"></i>Cálculo de las heredabilidades en los distintos tipos de selección</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="selartifII.html"><a href="selartifII.html#combinando-la-información-proporcionada-por-diferentes-tipos-de-parientes"><i class="fa fa-check"></i><b>13.3</b> Combinando la información proporcionada por diferentes tipos de parientes</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-los-elementos-de-la-matriz-de-varianzas-covarianzas-fenotípica"><i class="fa fa-check"></i>Cálculo de los elementos de la matriz de varianzas-covarianzas fenotípica</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-los-elementos-del-vector-de-varianzas-covarianzas-genéticas"><i class="fa fa-check"></i>Cálculo de los elementos del vector de varianzas-covarianzas genéticas</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#información-propia-y-de-un-progenitor"><i class="fa fa-check"></i>Información propia y de un progenitor</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#información-propia-y-de-varios-hermanos-enteros"><i class="fa fa-check"></i>Información propia y de varios hermanos enteros</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#pruebas-de-progenie"><i class="fa fa-check"></i>Pruebas de progenie</a></li>
+<li class="chapter" data-level="13.3.1" data-path="selartifII.html"><a href="selartifII.html#límites-de-la-eficiencia-en-pruebas-de-progenie"><i class="fa fa-check"></i><b>13.3.1</b> Límites de la eficiencia en pruebas de progenie</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#precisión-del-valor-de-cría-a-partir-del-índice"><i class="fa fa-check"></i>Precisión del valor de cría a partir del índice</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="selartifII.html"><a href="selartifII.html#métodos-de-selección-para-varias-características"><i class="fa fa-check"></i><b>13.4</b> Métodos de selección para varias características</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#selección-en-tandem"><i class="fa fa-check"></i>Selección en tandem</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#niveles-independientes-de-rechazo"><i class="fa fa-check"></i>Niveles Independientes de Rechazo</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#índices-de-selección"><i class="fa fa-check"></i>Índices de Selección</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="selartifII.html"><a href="selartifII.html#índices-de-selección-para-múltiples-características"><i class="fa fa-check"></i><b>13.5</b> Índices de selección para múltiples características</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#el-índice-de-smith-hazel"><i class="fa fa-check"></i>El índice de Smith-Hazel</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="selartifII.html"><a href="selartifII.html#métodos-y-técnicas-avanzadas-de-selección"><i class="fa fa-check"></i><b>13.6</b> Métodos y técnicas avanzadas de selección</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#blup-las-ecuaciones-del-modelo-mixto-lineal"><i class="fa fa-check"></i>BLUP: las ecuaciones del modelo mixto lineal</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#ejercicios-13"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="endoexo.html"><a href="endoexo.html"><i class="fa fa-check"></i><b>14</b> Endocría, exocría, consanguinidad y depresión endogámica</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="endoexo.html"><a href="endoexo.html#el-aumento-de-la-consanguinidad-a-partir-del-número-de-individuos"><i class="fa fa-check"></i><b>14.1</b> El aumento de la consanguinidad a partir del número de individuos</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#qué-proporción-de-machos-es-necesaria-para-mantener-un-tamaño-efectivo-poblacional-mínimo"><i class="fa fa-check"></i>¿Qué proporción de machos es necesaria para mantener un tamaño efectivo poblacional mínimo?</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="endoexo.html"><a href="endoexo.html#el-coeficiente-de-consanguinidad-en-razas-lecheras"><i class="fa fa-check"></i><b>14.2</b> El coeficiente de consanguinidad en razas lecheras</a></li>
+<li class="chapter" data-level="14.3" data-path="endoexo.html"><a href="endoexo.html#depresión-endogámica"><i class="fa fa-check"></i><b>14.3</b> Depresión endogámica</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#los-riesgos-del-uso-masivo-de-reproductores-y-la-endogamia-elevada"><i class="fa fa-check"></i>Los riesgos del uso masivo de reproductores y la endogamia elevada</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#redistribución-en-la-varianza-genética"><i class="fa fa-check"></i>Redistribución en la varianza genética</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="endoexo.html"><a href="endoexo.html#exocría-y-heterosis"><i class="fa fa-check"></i><b>14.4</b> Exocría y Heterosis</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#el-modelo-del-templo-griego"><i class="fa fa-check"></i>El modelo del templo griego</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#un-modelo-sencillo-de-heterosis-bajo-exocría"><i class="fa fa-check"></i>Un modelo sencillo de heterosis bajo exocría</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#complementariedad"><i class="fa fa-check"></i>Complementariedad</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#tipos-de-cruzamientos"><i class="fa fa-check"></i>Tipos de cruzamientos</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="endoexo.html"><a href="endoexo.html#modelo-genético-de-cruzamientos"><i class="fa fa-check"></i><b>14.5</b> Modelo genético de cruzamientos</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#ejercicios-14"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#notas-al-pie"><i class="fa fa-check"></i>Notas al pie</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="GxE.html"><a href="GxE.html"><i class="fa fa-check"></i><b>15</b> Normas de reacción e interacción Genotipo x Ambiente</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="GxE.html"><a href="GxE.html#plasticidad-fenotípica-y-normas-de-reacción"><i class="fa fa-check"></i><b>15.1</b> Plasticidad fenotípica y normas de reacción</a></li>
+<li class="chapter" data-level="15.2" data-path="GxE.html"><a href="GxE.html#interacción-gxe-en-dos-ambientes"><i class="fa fa-check"></i><b>15.2</b> Interacción GxE en dos ambientes</a></li>
+<li class="chapter" data-level="15.3" data-path="GxE.html"><a href="GxE.html#correlación-genética-a-través-de-dos-ambientes"><i class="fa fa-check"></i><b>15.3</b> Correlación genética a través de dos ambientes</a>
+<ul>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#procedimientos-de-estimación"><i class="fa fa-check"></i>Procedimientos de estimación</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="GxE.html"><a href="GxE.html#genética-cuantitativa-de-la-interacción-gxe"><i class="fa fa-check"></i><b>15.4</b> Genética cuantitativa de la interacción GxE</a></li>
+<li class="chapter" data-level="15.5" data-path="GxE.html"><a href="GxE.html#otros-ejemplos-de-interacción-genotipo-ambiente"><i class="fa fa-check"></i><b>15.5</b> Otros ejemplos de interacción genotipo-ambiente</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#ejercicios-15"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apendice-a-conceptos-matemáticos-básicos.html"><a href="apendice-a-conceptos-matemáticos-básicos.html"><i class="fa fa-check"></i>APENDICE A: Conceptos Matemáticos Básicos</a></li>
+<li class="chapter" data-level="" data-path="apendice-b-cálculo-diferencial-e-integral-ecuaciones-diferenciales.html"><a href="apendice-b-cálculo-diferencial-e-integral-ecuaciones-diferenciales.html"><i class="fa fa-check"></i>APENDICE B: Cálculo Diferencial e Integral, ecuaciones diferenciales</a></li>
+<li class="chapter" data-level="" data-path="bibliografía.html"><a href="bibliografía.html"><i class="fa fa-check"></i>Bibliografía</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="variación-y-equilibrio-de-hardy-weinberg" class="section level1" number="2">
+<h1><span class="header-section-number">Capítulo 2</span> Variación y equilibrio de Hardy-Weinberg</h1>
+<p>Una de las características evidentes de la vida en nuestro planeta es la
+heterogeneidad de los organismos, aún dentro del nivel taxonómico más
+bajo que se nos ocurra para clasificarlos razonablemente (por ejemplo,
+especie o sub-especie). Es decir, aún a simple vista podemos usualmente
+distinguir esa “falta de uniformidad” como una de las características
+<strong>aparentemente</strong> distintivas de los seres vivos (pensemos en
+contraposición con el resultado de los productos industriales, como
+autos, lámparas LED, televisores, etc.), más allá de que el uso de todas
+estas cosas las transforma de alguna manera en únicas (en general luego
+de un tiempo y más allá de la matrícula o el número de chasis, todos
+somos capaces de reconocer nuestro propio vehículo, especialmente si en
+el mismo viajan 4 niñas pequeñas). Como veremos y analizaremos más
+adelante, el <strong>fenotipo</strong>, aquello que podemos observar (usualmente a
+simple vista en los organismos macroscópicos, luego veremos definiciones
+más precisas) es el producto de la información contenida en el
+<strong>genotipo</strong> (la información genética, aunque veremos que esto no es muy
+preciso dicho así) y de su interacción con el <strong>ambiente</strong>, que a los
+efectos operacionales termina siendo todo lo no-genético.</p>
+<p>La importancia de “lo genético” en el fenotipo no deja lugar a dudas:
+por un lado, los individuos “similares” se aparean entre ellos y no con
+los “distintos” (tanto sea a nivel de especie, o sub-especie, por
+ejemplo) y por otro lado, en un mismo ambiente co-existen individuos muy
+distintos, es decir individuos pertenecientes a especies diferentes, por
+lo que el ambiente <em>per se</em> no estaría determinando una gran parte de
+los fenotipos. Pese a esta importancia de lo genético, entender los
+mecanismos que están por detrás de este proceso fue un proceso largo y
+complejo que recién pasada la mitad del siglo XX permitió elaborar una
+teoría relativamente completa a los distintos niveles involucrados
+(desde el nivel macro de los organismos, al nivel molecular del ADN,
+pasando por los niveles de organización intermedia de la información y
+sus formas de transferencia). Más aún, gran parte de la teoría en
+genética fue desarrollada sin conocer los mecanismos explícitos
+subyacentes, lo que llevó a interesantes confrontaciones académicas
+entre teorías que explicaban mejor o peor una parte de los datos (el
+debate del inicio del siglo XX entre Mendelianos y biométricos, por
+ejemplo). Esto viene a colación porque el concepto de gen ha ido
+cambiando con el paso del siglo, así como la interpretación del concepto
+de alelo, pensada originalmente como una de pocas formas alternativas
+posibles (estados) de un gen. Desde hace muchos años, la comprensión de
+las bases moleculares de la herencia (o de algunas, al menos) nos ha
+permitido entender que la variabilidad subyacente es enorme (el número
+de SNPs en diferentes especies de mamíferos, por ejemplo, del orden de 1
+cada 1000 bases, o la existencia de “indels,” las variantes en el número
+de copias -CNVs-, etc.), por lo que el número de formas alternativas del
+gen en la población también puede ser enorme y solemos recurrir a un
+concepto más operacional del término alelo (una forma alternativa del
+gen que tiene consecuencias para nuestro fenotipo).</p>
+<p>En un sentido importante la realidad de la genética ha experimentado un
+cambio trascendental en los últimos decenios: hasta hace relativamente
+poco (aunque parezca increíble para los lectores más jóvenes) el
+genotipo real de los individuos era en general desconocido y muchas
+veces imposible de determinar, excepto a través de experimentos o de un
+gran número de descendientes. Sin embargo, con la aparición de las
+tecnologías de genotipado y de secuenciado masivo (NGS, Next Generation
+Sequencing, por ejemplo) esto ha cambiado definitivamente y hoy en día
+es no solo posible sino una alternativa real en mejoramiento genético
+(por ejemplo genotipado de reproductores en varios programas de
+mejoramiento genético). Más allá de la definición que usemos para el
+concepto de alelo y en qué nivel de variación estemos pensando, en este
+capítulo analizaremos la relación esperada entre la frecuencia de los
+distintos alelos y los genotipos que se forman por su combinación al
+azar.</p>
+<div id="el-equilibrio-de-hardy-weinberg" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> El equilibrio de Hardy-Weinberg</h2>
+<p>La “ley de Hardy-Weinberg,” a veces conocida también como de
+Hardy-Weinberg-Castle por los trabajos de <span class="citation"><a href="#ref-castle1903" role="doc-biblioref">Castle</a> (<a href="#ref-castle1903" role="doc-biblioref">1903</a>)</span>, <span class="citation"><a href="#ref-pmid17779291" role="doc-biblioref">Hardy</a> (<a href="#ref-pmid17779291" role="doc-biblioref">1908</a>)</span>
+y <span class="citation"><a href="#ref-weinberg1908" role="doc-biblioref">Weinberg</a> (<a href="#ref-weinberg1908" role="doc-biblioref">1908</a>)</span>,<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> es posiblemente uno de los resultados mejor
+conocidos de la genética de poblaciones. La misma permite predecir la
+composición de genotipos en un locus determinado, una vez alcanzado el
+equilibrio, a partir de la frecuencia de los alelos, cuando se cumplen
+una serie de condiciones, básicamente el apareamiento aleatorio entre
+los individuos de la población. La base de la misma es conceptualmente
+sencilla: en un individuo diploide, la probabilidad de observar un
+genotipo en particular en un locus autosómico determinado (es decir, no
+se encuentra en los cromosomas “sexuales”) es el producto de la
+frecuencia de los gametos que lo formaron. Pongamos un ejemplo sencillo
+para mostrarlo; supongamos un <u>locus autosómico</u> con dos alelos,
+<span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span>, con frecuencias <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span> (siendo <span class="math inline">\(q=1-p\)</span> donde la suma de las frecuencias
+de los dos alelos debe ser 1 ya que asumimos que este locus solo tiene 2
+alelos). Más aún, supongamos que se trata de una especie diploide
+hermafrodita, es decir, todos los individuos producen gametos masculinos
+y femeninos y para simplificar aún más asumamos que estos gametos se
+colocan en dos “pools,” uno de gametos masculinos y otro de gametos
+femeninos, todos los individuos produciendo exactamente la misma
+cantidad de gametos (para simplificar el efecto del tamaño poblacional
+asumimos también que dos gametos provenientes del mismo individuo, uno
+masculino y otro femenino se pueden combinar). Finalmente, aseguremos
+que los apareamientos sean completamente al azar, una condición que se
+conoce como <strong>panmixia</strong>. Para “crear” los individuos de la nueva
+generación extraemos un gameto de cada “pool.” Por lo tanto, la
+probabilidad de cada genotipo estará dada por la probabilidad de extraer
+esa combinación, que al tratarse de eventos independientes (el gameto
+masculino del femenino) es el producto de ambas probabilidades. Es
+decir:</p>
+<p><span class="math display" id="eq:eqHW">\[\begin{equation}
+\begin{split}
+P(A_1A_1)=P(A_1)\cdot P(A_1)=p\cdot p=p^2\\
+P(A_1A_2)=2\cdot P(A_1)\cdot P(A_2)=2\cdot p\cdot q=2pq\\
+P(A_2A_2)=P(A_2)\cdot P(A_2)=q\cdot q=q^2\\
+\end{split}
+\tag{2.1}
+\end{equation}\]</span></p>
+<p>que es la expresión más sencilla de la ley de Hardy-Weinberg. Es de
+notar que el factor 2 que aparece multiplicando la frecuencia de los
+genotipos heterocigotos (<span class="math inline">\(A_1A_2\)</span>) se debe a que existen dos formas de
+obtener estos individuos: a) sacando un alelo <span class="math inline">\(A_1\)</span> del “pool” masculino
+y un <span class="math inline">\(A_2\)</span> del “pool” femenino y b) sacando un alelo <span class="math inline">\(A_2\)</span> del “pool”
+masculino y un <span class="math inline">\(A_1\)</span> del “pool” femenino, ambas con la misma
+probabilidad (<span class="math inline">\(pq\)</span>).<br />
+</p>
+<p>Lo primero que debemos verificar es que estas <strong>frecuencias sumen a 1</strong>, ya
+que no existen otros genotipos posibles (recordemos que <span class="math inline">\(q=1-p\)</span>):</p>
+<p><span class="math display">\[\begin{equation}
+p^2+2pq+q^2=p^2+2p(1-p)+(1-p)^2=p^2+2p-2p^2+1-2p+p^2=\\
+=(2p^2-2p^2)+(2p-2p)+1=0+0+1=1
+\end{equation}\]</span></p>
+<p>Una vez verificado esto,
+el siguiente paso será determinar las nuevas frecuencias de los alelos
+<span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span>, llamémosles <span class="math inline">\(p&#39;\)</span> y <span class="math inline">\(q&#39;\)</span>. Lo podemos hacer sumando los
+aportes de alelos de cada genotipo (los heterocigotos aportan la mitad
+de su frecuencia para cada tipo de alelo, <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span>, mientras que
+los homocigotos aportan toda su frecuencia del respectivo alelo):</p>
+<p><span class="math display">\[\begin{equation}
+p&#39;=p^2+\frac{1}{2} 2pq=p^2+pq=p(p+q)=p(1)=p\\
+q&#39;=q^2+\frac{1}{2} 2pq=q^2+pq=q(q+p)=q(1)=q
+\end{equation}\]</span></p>
+<p>Por lo tanto, después de una generación bajo este apareamiento al azar
+en nuestra especie hermafrodita, las frecuencias alélicas permanecen
+inalteradas, <span class="math inline">\(p=p&#39;\)</span> y <span class="math inline">\(q=q&#39;\)</span>. Obviamente ocurrirá lo mismo para las
+siguientes generaciones, tanto a nivel de la frecuencia de los genotipos
+como de los alelos (las frecuencias de los genotipos solo dependen de
+las frecuencias de los alelos, como vimos en la ecuaciones
+<a href="variación-y-equilibrio-de-hardy-weinberg.html#eq:eqHW">(2.1)</a> y siguientes), por lo que luego de una generación hemos alcanzado el
+equilibrio: esta condición se conoce como <strong>equilibrio de Hardy-Weinberg</strong>.</p>
+<p><br />
+</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:HWpunnett"></span>
+<img src="ApuntesGeneticaII_files/figure-html/HWpunnett-1.png" alt="Cuadrado de Punnett con frecuencias $p=0,6$ y $q=0,4$. Las áreas de los rectángulos/cuadrados representan las frecuencias de los genotipos. Figura tomada de Wikipedia (CC0), modificada a partir de @pmid26354973" width="80%" />
+<p class="caption">
+Figura 2.1: Cuadrado de Punnett con frecuencias <span class="math inline">\(p=0,6\)</span> y <span class="math inline">\(q=0,4\)</span>. Las áreas de los rectángulos/cuadrados representan las frecuencias de los genotipos. Figura tomada de Wikipedia (CC0), modificada a partir de <span class="citation"><a href="#ref-pmid26354973" role="doc-biblioref">Rosenberg and Kang</a> (<a href="#ref-pmid26354973" role="doc-biblioref">2015</a>)</span>
+</p>
+</div>
+<p><br />
+</p>
+<p>Una forma gráfica de ver estos resultados son los llamados “cuadrados de
+Punnett”<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>, como el que se aprecia en la figura <a href="variación-y-equilibrio-de-hardy-weinberg.html#fig:HWpunnett">2.1</a>.
+En la misma, en el eje horizontal tenemos la frecuencia con la que
+aparecen los gametos masculinos, mientras que en el vertical aparecen
+las frecuencias de los gametos femeninos; por lo tanto, el producto de
+estas frecuencias será el área de los rectángulos y cuadrados
+correspondientes (de geometría elemental, el área de cuadrados y
+rectángulos es el producto de dos lados contiguos). Se observa además
+claramente el origen del factor 2 en los heterocigotos (la suma de las 2
+áreas coloreadas en rojo, cada una con valor <span class="math inline">\(pq\)</span>).</p>
+<p><br />
+</p>
+<div class="graybox">
+<div class="center">
+<p><strong>PARA RECORDAR</strong></p>
+</div>
+<p>Hardy-Weinberg en <strong>un locus con dos alelos</strong>, especie <strong>hermafrodita diploide</strong></p>
+<ul>
+<li><p>En el equilibrio, las frecuencias de los genotipos <span class="math inline">\(A_1A_1\)</span>,
+<span class="math inline">\(A_1A_2\)</span> y <span class="math inline">\(A_2A_2\)</span> serán <span class="math inline">\(p^2\)</span>, <span class="math inline">\(2pq\)</span> y <span class="math inline">\(q^2\)</span>.</p></li>
+<li><p>Las frecuencias de los alelos (<span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span>) no cambian luego de una
+generación de apareamiento y por lo tanto, como este razonamiento se
+puede extender a la próxima generación también, no cambiará nunca
+(mientras no intervengan otras fuerzas evolutivas como la selección
+o la deriva y el apareamiento sea al azar).</p></li>
+<li><p>Las frecuencias de los genotipos quedan completamente determinados
+por la frecuencia de los alelos en la generación previa (porque son
+las frecuencias de los gametos, haploides) y en el caso particular
+de nuestro modelo de un locus con dos alelos, todo queda determinado
+por la frecuencia de uno de los dos alelos (<span class="math inline">\(p\)</span>, por ejemplo).</p></li>
+<li><p>Además, en el caso particular de nuestro modelo, población
+hermafrodita, el equilibrio definitivo de las frecuencias de los
+genotipos se alcanza en una sola generación de apareamientos.</p></li>
+</ul>
+</div>
+<hr />
+<div id="supuestos-que-asumimos-se-cumplen-para-h-w" class="section level3 unnumbered">
+<h3>Supuestos que asumimos se cumplen para H-W</h3>
+<ol style="list-style-type: decimal">
+<li><p>Todos los genotipos poseen el mismo “fitness” (es decir, ningún genotipo posee una ventaja respecto al número de descendientes que deja)</p></li>
+<li><p>La población debe estar formada por un número infinitamente grande de individuos</p></li>
+<li><p>El apareamiento al azar debe producirse en toda la población</p></li>
+<li><p>No debe existir migración que altere las frecuencias</p></li>
+<li><p>Debe existir un equilibrio mutacional (es decir, las frecuencias de los alelos no varían pese a existir mutaciones).</p></li>
+</ol>
+<hr />
+</div>
+</div>
+<div id="hardy-weinberg-en-especies-dioicas-dos-sexos" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Hardy-Weinberg en especies dioicas (dos sexos)</h2>
+<p>Nuestro modelo previo fue extremadamente sencillo, pero su aplicación se ve
+reducida a aquellas especies que son hermafroditas. Veamos entonces qué
+ocurre en especies dioicas (dos sexos separados). Supongamos, para mayor
+generalidad que las frecuencias iniciales en los dos sexos son
+diferentes, por lo que en la generación inicial tenemos <span class="math inline">\(p_{M}\)</span> y
+<span class="math inline">\(p_{H}\)</span> (y por lo tanto <span class="math inline">\(q_{M}=1-p_{M}\)</span> y
+<span class="math inline">\(q_{H}=1-p_{H}\)</span>). Ahora, los diferentes genotipos serán el
+producto de combinar estos estos alelos con diferentes frecuencias en
+machos y hembras:</p>
+<p><span class="math display" id="eq:eqHWdioicas">\[\begin{equation}
+\begin{split}
+P(A_1A_1)=P(A_{1M})\cdot P(A_{1H})=p_{M}\cdot p_{H}\\
+P(A_1A_2)=P(A_{1M})\cdot P(A_{2H})+P(A_{2M})\cdot P(A_{1H})=\\=p_{M}\cdot q_{H}+q_{M}\cdot p_{H}\\
+P(A_2A_2)=P(A_{2M})\cdot P(A_{2H})=q_{M}\cdot q_{H}\\
+\end{split}
+\tag{2.2}
+\end{equation}\]</span></p>
+<p>Como de estos apareamientos no esperamos diferencias en el número de
+machos y hembras en cada una de las clases, a partir de ahora tanto
+machos como hembras tendrán la misma frecuencia de los alelos <span class="math inline">\(A_1\)</span> y
+<span class="math inline">\(A_2\)</span>. ¿Pero cuál es esa frecuencia? Para encontrarla, simplemente
+volveremos a sumar los alelos que aporta cada una de las clases,
+ponderados por su frecuencia. Es decir, para el alelo <span class="math inline">\(A_1\)</span>, tendremos
+que la nueva frecuencia <span class="math inline">\(p&#39;\)</span> se puede obtener sumando las contribuciones
+de <span class="math inline">\(P(A_1A_1)\)</span> y <span class="math inline">\(P(A_1A_2)\)</span>:</p>
+<p><span class="math display" id="eq:eqHWdioicas2">\[\begin{equation}
+\begin{split}
+p&#39;=P(A_1A_1)+\frac{1}{2} P(A_1A_2)=p_{M}\cdot p_{H}+\frac{1}{2}(p_{M}\cdot q_{H}+q_{M}\cdot p_{H})
+\end{split}
+\tag{2.3}
+\end{equation}\]</span></p>
+<p>Multiplicando por 2 ambos lados de la ecuación y separando términos
+obtenemos:</p>
+<p><span class="math display" id="eq:eqHWdioicas3">\[\begin{equation}
+\begin{split}
+2p&#39;=2p_{M}\cdot p_{H}+p_{M}\cdot q_{H}+q_{M}\cdot p_{H} \\
+2p&#39;=p_{M}\cdot p_{H}+p_{M}\cdot p_{H}+p_{M}\cdot q_{H}+q_{M}\cdot p_{H}
+\end{split}
+\tag{2.4}
+\end{equation}\]</span></p>
+<p>Reordenando y sacando factor común, tenemos:</p>
+<p><span class="math display" id="eq:eqHWdioicas4">\[\begin{equation}
+\begin{split}
+2p&#39;=(p_{M}\cdot p_{H}+p_{M}\cdot q_{H})+(p_{M}\cdot p_{H}+q_{M}\cdot p_{H})\\
+2p&#39;=p_{M} (p_{H}+q_{H}) + p_{H} (p_{M}+q_{M})= p_{M} (1) + p_{H} (1) \\
+2p&#39;= p_{M}+ p_{H} \Leftrightarrow p&#39;=\frac{p_{M}+ p_{H}}{2}\
+\end{split}
+\tag{2.5}
+\end{equation}\]</span></p>
+<p>Es decir, <strong>luego de la primer generación de apareamiento entre machos y hembras con diferentes frecuencias de los alelos <span class="math inline">\(A_1\)</span> y<span class="math inline">\(A_2\)</span>, la frecuencia de ambos alelos será igual en machos y en hembras y su valor será <span class="math inline">\(p&#39;=\frac{p_{M}+ p_{H}}{2}\)</span> para el alelo <span class="math inline">\(A_1\)</span> y <span class="math inline">\(q&#39;=\frac{q_{M}+ q_{H}}{2}\)</span> para el alelo <span class="math inline">\(A_2\)</span></strong>. A este último resultado se puede llegar razonando por simetría o haciendo las cuentas:</p>
+<p><span class="math display" id="eq:eqHWdioicas5">\[\begin{equation}
+\begin{split}
+p&#39;=\frac{p_{M}+ p_{H}}{2}=\frac{(1-q_{M})+(1-q_{H})}{2}=\\
+=\frac{2-q_{M}-q_{H}}{2}=1-\frac{(q_{M}+q_{H})}{2} \therefore\\
+\frac{(q_{M}+q_{H})}{2}=1-p&#39;=q&#39;
+\end{split}
+\tag{2.6}
+\end{equation}\]</span></p>
+<p>(el último resultado justificado además porque la suma de los alelos siempre debe
+dar una frecuencia relativa de 1). Más allá de todas las cuentas que nos
+han llevado a estos resultados en forma analítica, una alternativa
+primera sería utilizar el argumento de que el aporte de material
+genético para formar la siguiente generación debe ser igual en machos
+que en hembras, es decir, cada sexo aporta la mitad del material
+genético (autosómico) de la nueva generación. Por lo tanto, la
+frecuencia de los alelos en la generación de hijos debe ser el promedio
+de las frecuencias en sus padres, que es el resultado que hemos visto.</p>
+<hr />
+<div id="ejemplo-2.1" class="section level4 unnumbered">
+<h4>Ejemplo 2.1</h4>
+<p>El genotipado molecular (“chips”) nos permite conocer
+las bases (A, C, G, T) particulares que presenta un animal en diferentes
+posiciones del genoma, desde unas pocas posiciones a centenas de miles
+(por ejemplo, alrededor de 700 mil, en algunos “chips”). Estos
+marcadores se conocen como SNPs (“Single Nucleotide Polymorphism”) y si
+bien son relativamente poco informativos como marcadores (se suelen
+escoger marcadores bi-alélicos en el diseño), su elevado número los
+transforma en una herramienta sumamente poderosa. Usando un “chip”
+comercial para bovinos en 1000 animales no emparentados de la raza
+“Guernsey” se encontró que el SNP <strong>rs43375517</strong>, en la región 5’UTR del
+gen ARL4A y asociado a la producción de leche a 305 días en varios
+estudios presentaba las siguientes frecuencias de genotipos: CC 372, CG
+476, GG 152. Calcular la frecuencia relativa de ambos alelos, así como
+la esperanza del número observado de cada genotipo si la población se
+encontrase en equilibrio de Hardy-Weinberg para este marcador.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:IlluminaBovineSNP50v3"></span>
+<img src="figuras/IlluminaBovineSNP50v3.png" alt="Chip &quot;BovineSNP50 v3&quot; de genotipado Bovino, de la empresa Illumina, con capacidad para analizar simultaneamente en 24 muestras 53218 SNPs altamente informativos (fotografía e información de la página de Illumina)." width="80%" />
+<p class="caption">
+Figura 2.2: Chip “BovineSNP50 v3” de genotipado Bovino, de la empresa Illumina, con capacidad para analizar simultaneamente en 24 muestras 53218 SNPs altamente informativos (fotografía e información de la página de Illumina).
+</p>
+</div>
+<p>Dado que tenemos 1000 individuos genotipados (372+476+152=1000), el
+número total de alelos en genotipados es 2000 (son individuos
+diploides). La frecuencia relativa del alelo ‘C,’ llamémosle <span class="math inline">\(p\)</span> es:</p>
+<p><span class="math display">\[\begin{equation}
+p=\frac{2\times 372+1\times 476}{2000}=\frac{744+476}{2000}=\frac{1220}{2000}=0,61,
+\end{equation}\]</span></p>
+<p>por lo que, la frecuencia relativa del alelo ‘G’ es <span class="math inline">\(q=1-p=0,39\)</span>. Si la
+población se encontrase en equilibrio de Hardy-Weinberg, con 1000
+individuos genotipados esperaríamos obtener las siguientes frecuencias:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+CC=p^2\times 1000=0,61^2\times 1000=0,3721\times 1000=372,1\\
+CG=2pq\times 1000=2\times 0,61\times 0,39=0,4758\times 1000=475,8\\
+GG=q^2\times 1000=0,39^2\times 1000=0,1521\times 1000=152,1,
+\end{split}
+\end{equation}\]</span></p>
+<p>lo que más allá de las diferencias atribuibles al redondeo (es imposible genotipar
+fracciones de individuo, pero incrementando el tamaño de la muestra
+estos errores pueden reducirse más), tenemos un ajuste casi perfecto a
+las expectativas del equilibrio Hardy-Weinberg.</p>
+<hr />
+</div>
+</div>
+<div id="h-w-la-frecuencia-de-heterocigotas-en-función-de-la-frecuencia-alélica" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</h2>
+<p>En un locus con dos alelos, ¿a qué frecuencia del alelo <span class="math inline">\(p\)</span> podemos
+observar la mayor frecuencia de heterocigotas, asumiendo que la
+población se encuentra en equilibrio de Hardy-Weinberg?
+La alternativa más sencilla para tener una idea aproximada del
+comportamiento del número de heterocigotas bajo estos supuestos es
+graficar la misma como función de <span class="math inline">\(p\)</span>, <span class="math inline">\(2pq=2p(1-p)\)</span> en cualquier
+software que permita graficar funciones, calculadora, o aún en una
+planilla electrónica, por ejemplo generando una serie en el intervalo
+0-1. La figura <a href="variación-y-equilibrio-de-hardy-weinberg.html#fig:HWheterop">2.3</a> es el resultado de graficar esta función, donde
+se ve que la máxima frecuencia de heterocigotas se encuentra en el
+entorno de <span class="math inline">\(p=0,5\)</span>, o sea en frecuencias intermedias de los dos alelos y
+que la máxima proporción de heterocigotas esperable para una población
+en equilibrio de HW es <span class="math inline">\(0,5\)</span>.</p>
+<!-- ```{r HWheterop,fig.align="center",echo = FALSE, out.width="80%", fig.cap = 'Frecuencia de heterocigotas en función de la frecuencia del alelo $p$ en un modelo de un locus con dos alelos, bajo equilibrio Hardy-Weinberg.'} -->
+<!-- knitr::include_graphics("figuras/HW_hetero_p.png",dpi=240) -->
+<!-- ``` -->
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:HWheterop"></span>
+<img src="ApuntesGeneticaII_files/figure-html/HWheterop-1.png" alt="Frecuencia de heterocigotas en función de la frecuencia del alelo $p$ en un modelo de un locus con dos alelos, bajo equilibrio Hardy-Weinberg. En azul la frecuencia de los heterocigotas, rojo y verde los homocigotas." width="80%" />
+<p class="caption">
+Figura 2.3: Frecuencia de heterocigotas en función de la frecuencia del alelo <span class="math inline">\(p\)</span> en un modelo de un locus con dos alelos, bajo equilibrio Hardy-Weinberg. En azul la frecuencia de los heterocigotas, rojo y verde los homocigotas.
+</p>
+</div>
+<p>Una forma más precisa, complementaria con la anterior, es el estudio
+analítico de esta función. Es decir, dada la función
+<span class="math inline">\(f_{Het}(p)=2pq=2p(1-p)=2p-2p^2\)</span>, podemos reconocer los extremos relativos
+(máximos y mínimos) de la misma como los lugares donde la pendiente de
+la recta tangente es igual a cero, o lo que es equivalente, los puntos
+donde la derivada primera se hace cero. Por lo tanto, derivando la
+función obtenemos:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+f_{Het}(p)=2pq=2p(1-p)=2p-2p^2\\
+\frac{d f_{Het}}{dp}=2-4p\\
+2-4p=0  \Leftrightarrow p=\frac{1}{2}
+\end{split}
+\end{equation}\]</span></p>
+<p>Es decir, la función tiene un solo máximo o mínimo en <span class="math inline">\(p=\frac{1}{2}=0,5\)</span>, pero para
+reconocer de cuál de los dos se trata es necesario ver el signo de la
+derivada segunda (lo que hacemos volviendo a derivar la derivada primera):</p>
+<p><span class="math display">\[\begin{equation}
+\frac{d^2 f_{Het}(p)}{dp^2}=-4
+\end{equation}\]</span></p>
+<p>Como el signo es negativo, se trata de un máximo. Más aún, la forma de función original
+(<span class="math inline">\(f_{Het}=2p-2p^2\)</span>) es claramente reconocible como la de una parábola
+con forma de “U” invertida y cuyas intersecciones con el eje de las
+abcsisas (raíces) son 0 y 1, por lo que por simetría el vértice debe
+estar en el punto medio, es decir <span class="math inline">\(\frac{1}{2}\)</span>. Sustituyendo, tenemos:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+f_{Het_{max}}(p=\frac{1}{2})=2p-2p^2=2 \frac{1}{2}-2\left(\frac{1}{2}\right)^2=\\
+=2 \frac{1}{2} -2 \frac{1}{4} =1- \frac{1}{2}=\frac{1}{2}
+\end{split}
+\end{equation}\]</span></p>
+<hr />
+</div>
+<div id="el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo</h2>
+<p>En los razonamientos previos hemos asumido que el locus de interés era
+autosómico, es decir que no estaba en uno de los cromosomas sexuales
+¿Qué ocurriría si este locus se encuentra en el cromosoma X del sistema
+<strong>XY</strong> de determinación del sexo?<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a><br />
+A diferencia de antes, los machos poseen ahora solo un cromosoma X (son
+hemicigotas), que es donde está nuestro locus de interés y que por lo
+tanto tienen el alelo <span class="math inline">\(A_1\)</span> con probabilidad <span class="math inline">\(p_{M}\)</span> y el alelo
+<span class="math inline">\(A_2\)</span> con probabilidad <span class="math inline">\(q_{M}=1-p_{M}\)</span>. En las hembras tenemos
+los dos cromosomas X y en ambos los alelos <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span> tendrán
+probabilidad <span class="math inline">\(p_{H}\)</span> y <span class="math inline">\(q_{H}\)</span>
+respectivamente (con <span class="math inline">\(q_{H}=1-p_{H}\)</span>). Las hembras descendientes de este cruzamiento tendrán
+dos cromosomas X, uno del padre y otro de la madre y las frecuencias de
+los genotipos serán equivalentes a los de las ecuaciones
+<a href="variación-y-equilibrio-de-hardy-weinberg.html#eq:eqHWdioicas">(2.2)</a> y siguientes. En cambio, los machos tienen un
+solo cromosoma X, aportado por la madre (el padre aporta el cromosoma Y)
+y por lo tanto las frecuencias de los alelos <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span> en esta nueva
+generación de machos serán iguales a las frecuencias del respectivo
+alelo en las hembras de la generación anterior.</p>
+<p>En resumen, en la nueva generación de machos y hembras (la distinguimos
+de la anterior con ’) tendremos ahora las siguientes frecuencias:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+p&#39;_{H}=\frac{p_{M}+ p_{H}}{2} \\
+q&#39;_{H}=\frac{q_{M}+ q_{H}}{2} \\
+p&#39;_{M}=p_{H} \\
+q&#39;_{M}=q_{H}
+\end{split}
+\end{equation}\]</span></p>
+<p>El mismo razonamiento lo podemos extender para la próxima generación (la distinguimos de la anterior con "), por lo que ahora tendremos:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+p&#39;&#39;_{H}=\frac{p&#39;_{M}+ p&#39;_{H}}{2}=\frac{p_{H}+\frac{p_{M}+ p_{H}}{2}}{2}  \\
+q&#39;&#39;_{H}=\frac{q&#39;_{M}+ q&#39;_{H}}{2}=\frac{q_{H}+\frac{q_{M}+ q_{H}}{2}}{2} \\
+p&#39;&#39;_{M}=p&#39;_{H}= \frac{p_{M}+ p_{H}}{2} \\
+q&#39;&#39;_{M}=q&#39;_{H}=\frac{q_{M}+ q_{H}}{2}
+\end{split}
+\end{equation}\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:HWcromosomaX"></span>
+<img src="figuras/HW_cromosomaX.png" alt="Evolución de las frecuencias alélicas en machos (cuadrados rojos) y hembras (círculos azules) en un locus perteneciente al cromosoma X en especies en que el Y determina el sexo. La línea a trazos negros representa la media de la población. Las frecuencias de partida (generación 0) son $p_{M}=0,3$ y $p_{H}=0,8$." width="80%" />
+<p class="caption">
+Figura 2.4: Evolución de las frecuencias alélicas en machos (cuadrados rojos) y hembras (círculos azules) en un locus perteneciente al cromosoma X en especies en que el Y determina el sexo. La línea a trazos negros representa la media de la población. Las frecuencias de partida (generación 0) son <span class="math inline">\(p_{M}=0,3\)</span> y <span class="math inline">\(p_{H}=0,8\)</span>.
+</p>
+</div>
+<p>O sea, hemos establecido una regla de recurrencia para calcular las
+frecuencias de <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span> a partir de la generación anterior, que se
+puede llegar hasta la generación inicial, pero aún no hemos estudiado el
+comportamiento a largo plazo de este proceso. Para entenderlo mejor
+podemos resumir la información, como aparece en el siguiente cuadro, donde además de
+las frecuencias del alelo <span class="math inline">\(A_1\)</span> para hembras y machos en las 3 primeras
+generaciones también calculamos la frecuencia del alelo en toda la
+población (media) y la diferencia de frecuencias entre hembras y machos.</p>
+<table>
+<colgroup>
+<col width="7%" />
+<col width="26%" />
+<col width="16%" />
+<col width="17%" />
+<col width="31%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Generación</strong></th>
+<th align="center"><strong><span class="math inline">\(A_{1H}\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(A_{1M}\)</span></strong></th>
+<th align="center"><strong>media</strong></th>
+<th align="center"><strong>diferencia</strong> (-)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center"><span class="math inline">\(p_{H}\)</span></td>
+<td align="center"><span class="math inline">\(p_{M}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{2 p_{H}+p_{M}}{3}\)</span></td>
+<td align="center"><span class="math inline">\(p_{H}-p_{M}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{p_{M}+ p_{H}}{2}\)</span></td>
+<td align="center"><span class="math inline">\(p_{H}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{2 p_{H}+p_{M}}{3}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{p_{M}-p_{H}}{2}=-\frac{(p_{H}-p_{M})}{2}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(\frac{p_{H}+\frac{p_{M}+ p_{H}}{2}}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{p_{M}+ p_{H}}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{2 p_{H}+p_{M}}{3}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{p_{H}-p_{M}}{4}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Es de notar que para calcular la frecuencia del alelo en la población,
+debemos ponderar la frecuencia en hembras por 2/3 y la de machos por
+1/3, ya que esas son las proporciones de cromosomas X que aportan cada
+uno de los sexos a la población.</p>
+<p>Si nos fijamos en la columna de la media en el cuadro anterior, lo primero que
+observamos es que la misma no cambia con el tiempo. Es decir, la
+frecuencia general en la población de los alelos <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span> están
+determinados desde el principio y su valor es <span class="math inline">\(p=(2 p_{H}+p_{M})/3\)</span>. Lo segundo que podemos apreciar, si
+observamos la columna que muestra la diferencia entre los dos sexos es
+que el valor absoluto de esta diferencia se va reduciendo a la mitad en
+cada generación, mientras que el signo de la misma alterna de generación
+en generación. Con esto en mano es fácil entender que el proceso de
+igualar las frecuencias entre los dos sexos (asumiendo que parten de
+valores diferentes en machos y hembras), si bien teóricamente nunca
+llega a alcanzarse, desde el punto de vista práctico la diferencia es
+despreciable a partir de unas pocas generaciones y en general los
+procesos estocásticos (la deriva, por ejemplo, que veremos más adelante)
+tendrán un impacto mucho mayor que estas diferencias.<br />
+El comportamiento de estas frecuencias puede observarse gráficamente
+también, como lo muestra por ejemplo la figura
+<a href="variación-y-equilibrio-de-hardy-weinberg.html#fig:HWcromosomaX">2.4</a>,
+partiendo en este caso de <span class="math inline">\(p_{M}=0,3\)</span> y <span class="math inline">\(p_{H}=0,8\)</span>. Se
+aprecia claramente en esta figura que a) la frecuencia en machos es igual a
+la frecuencia en las hembras de la generación anterior, b) que la
+frecuencia en hembras es el promedio de las frecuencias de machos y
+hembras en la generación anterior, c) que la media de la población
+permanece estable (línea a trazos negros) y d) que la
+diferencia entre machos y hembras se reduce a la mitad en cada
+generación.</p>
+<p><br />
+</p>
+<div class="graybox">
+<div class="center">
+<p><strong>PARA RECORDAR</strong></p>
+</div>
+<p>El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo, asumiendo que el macho es el sexo heterogamético (al revés si la hembra lo es):</p>
+<ul>
+<li><p>La frecuencia del alelo <span class="math inline">\(\bf{A_1}\)</span> en <strong>machos</strong>, <span class="math inline">\(p_M\)</span> de la generación <span class="math inline">\(t\)</span> es igual a <span class="math inline">\(p_H\)</span> en la generación <span class="math inline">\(t-1\)</span>.</p></li>
+<li><p>La frecuencia del alelo <span class="math inline">\(\bf{A_1}\)</span> en <strong>hembras</strong>, <span class="math inline">\(p_H\)</span> de la generación <span class="math inline">\(t\)</span> es igual a <span class="math inline">\(\frac{p_H+p_M}{2}\)</span> en la generación <span class="math inline">\(t-1\)</span>.</p></li>
+<li><p>Este proceso converge relativamente rápido al valor <span class="math inline">\(p=\frac{(2p_H+p_M)}{3}\)</span>, que es la frecuencia inicial de alelos <span class="math inline">\(p\)</span> en el <strong>pool de gametos</strong>.</p></li>
+</ul>
+</div>
+</div>
+<div id="tres-o-más-alelos" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Tres o más alelos</h2>
+<p>Hasta ahora hemos manejado los diferentes problemas asumiendo que se
+trataba de un locus con únicamente dos alelos, lo que en principio
+permite simplificar algunas cuentas ya que la frecuencia de <span class="math inline">\(q\)</span> queda
+determinada por la frecuencia de <span class="math inline">\(p\)</span> (es decir, <span class="math inline">\(q=1-p\)</span>). Sin embargo,
+la extensión a tres o más alelos es relativamente sencilla y no requiere
+de cosas nuevas, por más que aprovecharemos la oportunidad para
+presentar el resultado central del equilibrio de Hardy-Weinberg de una
+forma diferente.</p>
+<p>Si recordamos nuestro modelo de dos alelos, podíamos representar el
+conjunto de los alelos en la población como la suma de <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span>, es
+decir <span class="math inline">\((p+q)\)</span>. Cuando hacemos el apareamiento en condiciones de
+panmixia, estamos cruzando este <span class="math inline">\((p+q)\)</span> con otro similar (porque los
+alelos salen de la misma población), o lo que es equivalente:</p>
+<p><span class="math display">\[\begin{equation}
+(p+q)(p+q)=(p+q)^2=p^2+2pq+q^2
+\end{equation}\]</span></p>
+<p>De lo anterior surge
+claro que podemos representar las frecuencias genotípicas esperadas en
+el equilibrio Hardy-Weinberg como el cuadrado del binomio formado por
+las frecuencias alélicas en la generación previa (frecuencias
+gaméticas). Con esto en mano, resulta tentador extender este resultado a
+más de 2 alelos. Supongamos entonces que tenemos un locus con 3 alelos,
+<span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span> y <span class="math inline">\(A_3\)</span>, con frecuencias respectivas <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span> y <span class="math inline">\(r\)</span>.
+Nuestro “todo” estará ahora conformado por la suma de <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span> y <span class="math inline">\(r\)</span>, es
+decir <span class="math inline">\((p+q+r)\)</span> y el cruzamiento resultará en:</p>
+<p><span class="math display">\[\begin{equation}
+(p+q+r)(p+q+r)=(p+q+r)^2=p^2+q^2+r^2+2pq+2pr+2qr
+\end{equation}\]</span></p>
+<p>Es decir, si llamamos <span class="math inline">\(A_i\)</span> a los <span class="math inline">\(i=1...k\)</span> alelos diferentes, y <span class="math inline">\(p_i\)</span> a
+las frecuencias correspondientes, la frecuencia de los genotipos
+homocigotas estará determinada por <span class="math inline">\(p_{i}p_{i}=p_{i}^2\)</span> y la de los
+heterocigotas por <span class="math inline">\(2p_{i}p_{j}, i \neq j\)</span>. Obviamente, el razonamiento
+del binomio y del trinomio se puede extender a un número mayor de
+alelos.</p>
+<p>En general, para <span class="math inline">\(k\)</span> alelos diferentes, el número de genotipos
+heterocigotas es igual a <span class="math inline">\(k(k-1)/2\)</span>. Para ver de dónde se desprende
+esto, es fácil imaginar un “cuadrado de Punnett,” ahora con 3 o más
+alelos. El total de celdas del cuadrado es <span class="math inline">\(k*k=k^2\)</span>, de las cuales, los
+homocigotas serán las celdas que se encuentren en la diagonal, o sea <span class="math inline">\(k\)</span>
+celdas. Esto nos deja <span class="math inline">\(k^2-k=k(k-1)\)</span>. Sin embargo, las celdas simétricas
+respecto a la diagonal representan el mismo genotipo, es decir
+<span class="math inline">\(p_{ij} \equiv p_{ji}, \forall i \neq j\)</span> (de ahí el factor 2 para los
+heterocigotas), por lo que al total de celdas que nos quedaban debemos
+dividirlo entre 2 para tener el número de genotipos heterocigotos y de
+ahí que este sea igual a <span class="math inline">\(k(k-1)/2\)</span>. Finalmente, el número total de
+genotipos es la suma de homocigotos (<span class="math inline">\(k\)</span>) y heterocigotos <span class="math inline">\(k(k-1)/2\)</span>, es
+decir <span class="math inline">\(k+k(k-1)/2=(2k/2)+k(k-1)/2=k(k+1)/2\)</span>.<br />
+De acuerdo a lo anterior, la frecuencia total de homocigotos será:</p>
+<p><span class="math display">\[\begin{equation}
+G=\sum_{i=1}^{k} p_{i}^2,
+\end{equation}\]</span></p>
+<p>lo que nos deja la posibilidad
+de definir la heterocigosis del locus como lo que falta para completar
+la totalidad, o sea:</p>
+<p><span class="math display">\[\begin{equation}
+H=1-G=1-\sum_{i=1}^{k} p_{i}^2
+\end{equation}\]</span></p>
+<p>Es importante entender que
+la fórmula anterior no es función de la proporción real de heterocigotos
+que existen en una población determinada para un locus dado, sino que se
+trata de la esperanza en función de las frecuencias alélicas, si se
+cumpliera el equilibrio de Hardy-Weinberg.</p>
+<p><br />
+</p>
+<div class="graybox">
+<div class="center">
+<p><strong>PARA RECORDAR</strong></p>
+</div>
+<ul>
+<li>Para 3 alelos el equilibrio de Hardy-Weinberg es la expansión del cuadrado del trinomio, es decir para los alelos <span class="math inline">\(\bf{A_1}\)</span>, <span class="math inline">\(\bf{A_2}\)</span>, <span class="math inline">\(\bf{A_3}\)</span>, con frecuencias respectivas <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span> y <span class="math inline">\(r\)</span>, <span class="math inline">\(p+q+r=1\)</span>,</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+(p+q+r)^2=p^2+q^2+r^2+2pq+2pr+2qr
+\end{equation}\]</span></p>
+<p>los 3 primeros términos de la derecha correspondientes a los homocigotos <span class="math inline">\(\bf{A_1A_1}\)</span>, <span class="math inline">\(\bf{A_2A_2}\)</span>, <span class="math inline">\(\bf{A_3A_3}\)</span> y el resto a los heterocigotos <span class="math inline">\(\bf{A_1A_2}\)</span>, <span class="math inline">\(\bf{A_1A_3}\)</span> y <span class="math inline">\(\bf{A_2A_3}\)</span>.</p>
+<ul>
+<li>La ecuación anterior es generalizable a un número <span class="math inline">\(k\)</span> de alelos, <span class="math inline">\(\bf{A_1}, \bf{A_2}, ..., \bf{A_k}\)</span> de acuerdo a</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+(p_1+p_2+p_3...+p_k)^2
+\end{equation}\]</span></p>
+<ul>
+<li>Bajo equilibrio de Hardy-Weinberg, la proporción esperada de <strong>homocigotas</strong> será</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+G=\sum_{i=1}^{k} p_{i}^2,
+\end{equation}\]</span></p>
+<p>por lo que la heterocigosis del <em>locus</em> quedará como lo que falta para completar
+la totalidad, o sea:</p>
+<p><span class="math display">\[\begin{equation}
+H=1-G=1-\sum_{i=1}^{k} p_{i}^2
+\end{equation}\]</span></p>
+</div>
+</div>
+<div id="la-estimación-de-frecuencias-y-el-equilibrio-o-no" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> La estimación de frecuencias y el equilibrio (o no)</h2>
+<p>En una población con un gran número de individuos, tendiendo a
+infinito, si la población se encuentra en equilibrio de Hardy-Weinberg
+el número de individuos de los distintos genotipos coincidirá
+estrechamente con las esperanzas de los mismos a partir las frecuencias
+de los alelos. Es decir, la variación estocástica en cada uno de los
+apareamientos (o en la unión de los gametos) tiende a cancelarse cuando
+consideramos el gran número de individuos en la población. Sin embargo,
+aún en esas grandes poblaciones no solemos tener acceso a la información
+de todos los individuos y sí, solamente, a la información de una
+<strong>muestra aleatoria</strong> de la misma. El concepto de muestra aleatoria es
+fundamental ya que será el que nos permitirá extender nuestras
+conclusiones de la muestra hacia la población, que en última instancia
+suele ser lo que nos interesa. Al trabajar con una muestra aleatoria
+relativamente reducida de la población, los números ahora serán mucho
+menores y por lo tanto los efectos del azar se verán incrementados.<br />
+Supongamos, para ver el impacto del tamaño de la muestra, que tenemos
+interés en estimar las frecuencias de los dos alelos en un locus
+autosomal de una especie diploide en una población determinada. Como se
+trata de una especie salvaje, difícil de capturar para muestrear, nos
+contentamos con los 5 individuos que pudimos genotipar para este locus;
+sin duda es mucho mejor que no tener nada. Como se trata de una especie
+diploide, si tenemos <span class="math inline">\(n\)</span> individuos vamos a tener <span class="math inline">\(2n\)</span> alelos
+genotipados, es decir, en nuestro caso un total de 10 alelos
+genotipados. Supongamos ahora que de esos 10 alelos genotipados, 3
+fueron del alelo <span class="math inline">\(A_1\)</span> y 7 del alelo <span class="math inline">\(A_2\)</span>. Es decir, la proporción de
+<span class="math inline">\(A_1\)</span> es igual a <span class="math inline">\(p=3/10=0,3\)</span>, mientras que la del alelo <span class="math inline">\(A_2\)</span> es de
+<span class="math inline">\(q=7/10=0,7\)</span> (hubiésemos llegado también a este resultado como <span class="math inline">\(q=1-p\)</span>).
+Parece razonable usar este valor de <span class="math inline">\(p\)</span> como un <strong>estimador</strong> del
+“verdadero valor”<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a> del parámetro en la población, en este caso la
+frecuencia del alelo <span class="math inline">\(A_1\)</span>, tanto que coincide con el estimador por
+máxima verosimilitud (es decir, escogemos como valor estimado aquel que tiene mayor probabilidad de ocurrir de acuerdo a lo que hemos observado).</p>
+<p>Ahora, ¿que certeza tenemos que este valor que estimamos esté cerca del
+“verdadero valor?” En principio, como solo tenemos 10 alelos
+genotipados, nuestras estimaciones irán de 10% en 10% (los saltos en la
+cuenta de alelos son de a 1, pero en 10 total, así que tenemos
+<span class="math inline">\(\frac{1}{10}=0,1=10\%\)</span>). O sea, la precisión de nuestra estimación es
+realmente baja.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:HWmuestrapeque2"></span>
+<img src="figuras/HW_muestrapeque2.png" alt="Probabilidad de observar un conteo de alelos determinado en una muestra de 5 individuos (a) y en una muestra de 50 individuos (b), dado que la frecuencia del mismo en la población es de 0,5." width="80%" />
+<p class="caption">
+Figura 2.5: Probabilidad de observar un conteo de alelos determinado en una muestra de 5 individuos (a) y en una muestra de 50 individuos (b), dado que la frecuencia del mismo en la población es de 0,5.
+</p>
+</div>
+<p>Otra forma de ver este problema es pensar en cuál sería la probabilidad
+de observar este conteo de alelos <span class="math inline">\(A_1\)</span>, por ejemplo, dado que conocemos
+el verdadero valor del parámetro. Si suponemos que los individuos
+representan un muestreo al azar de los gametos en la población y que los
+individuos de la muestra fueron seleccionados al azar, entonces la
+probabilidad de observar un conteo <span class="math inline">\(x\)</span> en particular, dado el número
+total de alelos genotipados <span class="math inline">\(n\)</span>, se puede describir por la distribución
+binomial (en nuestro caso de dos alelos):</p>
+<p><span class="math display" id="eq:binomi">\[\begin{equation}
+\begin{split}
+f(x)={n\choose x} p^x (1-p)^{n-x}
+\end{split}
+\tag{2.7}
+\end{equation}\]</span></p>
+<p>con las combinaciones
+de <span class="math inline">\(n\)</span> elementos tomados de a <span class="math inline">\(x\)</span> elementos iguales a:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+{n\choose x}=\frac{n!}{x!(n-x)!}
+\end{split}
+\end{equation}\]</span></p>
+<p>Por ejemplo, si la frecuencia “real” en la población entera para el alelo <span class="math inline">\(A_1\)</span> es de
+<span class="math inline">\(p=0,5\)</span>, ¿cuál sería la probabilidad de observar este conteo de 3
+alelos en los 10 que genotipamos? De acuerdo a la ecuación
+<a href="variación-y-equilibrio-de-hardy-weinberg.html#eq:binomi">(2.7)</a>, la
+probabilidad de obtener 3 conteos en una muestra de 10, con una
+probabilidad <span class="math inline">\(p=0,5\)</span> en la población es de:
+<span class="math display">\[\begin{equation}
+f(3)={10\choose 3} (0,5)^3 (1-0,5)^{10-3}=\frac{10!}{7! 3!} (0,5)^3 (0,5)^{7}=\frac{10*9*8}{6} (0,5)^{10}=0,1171875 \sim 11,7\%.
+\end{equation}\]</span>
+Es decir, aún cuando la frecuencia real en la población es de <span class="math inline">\(p=0,5\)</span>,
+en más de 1 de cada 10 muestras que tomemos, solo por azar, observaremos
+un conteo de 3 alelos. Esto puede parecer poco, pero si nos fijamos en
+la figura <a href="variación-y-equilibrio-de-hardy-weinberg.html#fig:HWmuestrapeque2">2.5</a>(a), donde graficamos la probabilidad de
+observar cada uno de los 11 conteos posibles (de 0 a 10 alelos <span class="math inline">\(A_1\)</span>),
+resulta claro que la probabilidad de no acertar en el único número
+correcto (5 alelos), es realmente alta. De hecho, si calculamos la
+probabilidad de observar exactamente 5 alelos en 10, dada la frecuencia
+real de <span class="math inline">\(p=0,5\)</span>, esta probabilidad es igual a <span class="math inline">\(0,2460938\)</span>, por lo que la
+probabilidad de <strong>NO</strong> obtener el “verdadero” valor de <span class="math inline">\(p\)</span> en una muestra de
+este tamaño es igual a <span class="math inline">\(1-0,2460938=0,7539062 \sim 75,4\%\)</span>. Por otro
+lado, la probabilidad de tener un estimado de <span class="math inline">\(p \leq 0,3\)</span> es la suma de
+las probabilidades de obtener 0, 1, 2 o 3 conteos y esto es igual a
+<span class="math inline">\(0,171875 \sim 17,2\%\)</span> (el lector lo puede verificar fácilmente).<br />
+Claramente, de lo anterior surge que este tamaño muestral de 5
+individuos no nos conducirá a nada muy razonable. ¿Qué ocurriría si
+conseguimos aumentar el tamaño muestral a 50 individuos? Las
+probabilidades esperadas de los distintos conteos en la muestra
+aleatoria se grafican en la figura
+<a href="variación-y-equilibrio-de-hardy-weinberg.html#fig:HWmuestrapeque2">2.5</a>(b). Ahora resulta claro que, por un lado,
+la “granularidad” de las barras es mucho más fina, es decir que la
+“precisión” de nuestros estimados podría ser mucho mayor y por el otro,
+que las estimaciones muy alejadas del “verdadero valor” son bastante
+improbables. Por ejemplo, ¿cuál sería la probabilidad de tener un
+estimado de <span class="math inline">\(p \leq 0,3\)</span>? En este caso se trata de la suma de las
+probabilidades de todos los conteos, de 0 a 30 (<span class="math inline">\(30/100=0,3\)</span>). En decir,
+se trata de la <strong>función de distribución</strong> (a veces conocida como
+probabilidad acumulada, o también CDF en inglés), que en este caso de la
+binomial, para un valor <span class="math inline">\(k\)</span> (30 en nuestro caso), sería</p>
+<p><span class="math display" id="eq:CDFbinom">\[\begin{equation}
+\begin{split}
+Pr(X \leq k)=\sum_{x=0}^{k} {n\choose x} p^x (1-p)^{n-x}
+\end{split}
+\tag{2.8}
+\end{equation}\]</span></p>
+<p>Sería algo tedioso calcularlo a mano, pero una
+primer idea del valor se puede tener observando la figura
+<a href="variación-y-equilibrio-de-hardy-weinberg.html#fig:HWmuestrapeque2">2.5</a>(b), donde resulta claro que las
+probabilidades para conteos de hasta 30, son despreciables. De hecho,
+utilizando la función de distribución en cualquier software que la tenga
+implementada, la probabilidad de observar un conteo de 30 o menos alelos
+en 100 genotipados es de 3,92507x10<sup>-5</sup> (<span class="math inline">\(\sim 0,004\%\)</span>) si la
+frecuencia del alelo <span class="math inline">\(A_1\)</span> en la población es <span class="math inline">\(p=0,5\)</span>; o sea,
+prácticamente improbable. Si bien ahora también bajó la probabilidad de
+acertar exactamente en un estimado de <span class="math inline">\(p=0,5\)</span>
+(<span class="math inline">\(Pr(x=50)=0,07958924 \sim 8\%\)</span>), si aceptamos por comparación con la
+muestra de 5 individuos donde la probabilidad de observar exactamente 5
+alelos (probabilidades entre <span class="math inline">\(0,45\)</span> y <span class="math inline">\(0,55\)</span>) era de <span class="math inline">\(\sim 24,6\%\)</span>,
+ahora la posibilidad de observar entre 45 y 54 alelos (un intervalo de
+frecuencias equivalente), ahora con 50 individuos, concentra <span class="math inline">\(\sim 63\%\)</span>
+de la probabilidad. O dicho de otra manera, con una probabilidad similar
+a la de la muestra de 5 individuos, ahora los resultados se concentrarán
+(aproximadamente) entre 49 y 51 alelos. Claramente, nuestras
+estimaciones se vuelven mucho más precisas y útiles.</p>
+<p>Hasta acá, hicimos nuestras estimaciones de las frecuencias alélicas
+poblacionales (y por lo tanto la posibilidad de conocer nuestras
+expectativas para el equilibrio de Hardy-Weinberg) de una manera
+bastante sencilla ya que asumimos que, genómica mediante, podemos
+acceder al verdadero estado alélico (ADN, por ejemplo) de cada una de
+las muestras. Sin embargo, en muchos casos esto no es posible (porque,
+por ejemplo, no se conoce la base molecular de diferencias fenotípicas)
+o resulta impráctico y la única información disponible es la fenotípica.
+Es decir, ahora solo contamos con el conteo de los distintos fenotipos.
+Esto introduce un nuevo factor en el problema: es necesario conocer el
+modelo de herencia (mendeliana,
+<span acronym-label="codominancia" acronym-form="singular+short">codominancia</span>, etc.) para poder pasar de los fenotipos
+a los genotipos y de allí a las frecuencias de los alelos.</p>
+<p>Supongamos, para comenzar que <strong>el modelo de herencia es de <span acronym-label="codominancia" acronym-form="singular+short">codominancia</span></strong> en un locus autosomal con dos alelos (<span class="math inline">\(A_1\)</span>
+y <span class="math inline">\(A_2\)</span> en una especie diploide, es decir, ambos alelos se expresan en
+el fenotipo y hay una correspondencia biunívoca entre fenotipo y
+genotipo. En este caso, con dos alelos tenemos tres genotipos (que son
+identificables directamente), por lo que, en una muestra de <span class="math inline">\(n\)</span>
+individuos la frecuencia relativa (muestral) del alelo <span class="math inline">\(A_1\)</span> será igual
+a la suma de 2 veces el número de homocigotas <span class="math inline">\(A_1\)</span> más el número de
+heterocigotas, todo dividido entre 2 veces el número de individuos:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+p=\frac{2n_{A_1A_1}+n_{A_1A_2}}{2n}, q=\frac{2n_{A_2A_2}+n_{A_1A_2}}{2n}\\
+n=n_{A_1A_1}+n_{A_1A_2}+n_{A_2A_2}
+\end{split}
+\end{equation}\]</span></p>
+<p>En todo caso, si conocemos los genotipos a nivel molecular (ver <a href="variación-y-equilibrio-de-hardy-weinberg.html#ejemplo-2.1">Ejemplo 2.1</a>) la
+forma de resolverlo es análoga a si los genotipos se pueden “mapear” en
+forma biunívoca con los fenotipos (el fenotipo sería ahora igual al
+genotipo). Tanto si se trata de
+<span acronym-label="codominancia" acronym-form="singular+short">codominancia</span> como de
+dominancia parcial, lo relevante aquí es la posibilidad de
+distinguir los heterocigotos de ambos homocigotos, lo que nos permite
+simplemente hacer el “conteo” de alelos, ya que la base genética es
+clara (en diploides, los homocigotos poseen dos alelos del mismo tipo y
+los heterocigotos poseen uno de cada tipo).</p>
+<p>Las cosas empiezan a complicarse un poco más cuando <strong>aparece el efecto de dominancia</strong>. Supongamos, por ejemplo, que en el locus anterior (autosomal
+en especie diploide, con dos alelos), el alelo <span class="math inline">\(A_1\)</span> domina
+completamente al <span class="math inline">\(A_2\)</span>, es decir, tanto el <span class="math inline">\(A_1A_1\)</span> como el <span class="math inline">\(A_1A_2\)</span>
+tendrán idéntico fenotipo, mientras que el <span class="math inline">\(A_2A_2\)</span> tendrá un fenotipo
+diferente. Ahora el “conteo” de alelos en los fenotipos no alcanza para
+determinar las frecuencias de los dos alelos ya que los conteos del
+fenotipo <span class="math inline">\(A_1\)</span> corresponde al de dos genotipos (<span class="math inline">\(G_{11}=A_1A_1\)</span> y
+<span class="math inline">\(G_{12}=A_1A_2\)</span>), ambos con diferentes números de alelos <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span>
+(2 y 0 para el homocigoto, 1 y 1 para el heterocigoto). Dicho de otra
+forma, sabemos calcular las frecuencias alélicas a partir de los 3
+genotipos, pero solo tenemos dos fenotipos (el del alelo dominante y el
+del alelo recesivo). De hecho, con solo esta información se trata de un
+problema indeterminado y para poder salir de esta situación debemos
+agregar algún tipo de información adicional. Una alternativa sencilla
+(suponiendo que no podemos conocer los genotipos, lo que resolvería
+todo) es <strong>asumir que la población se encuentra en equilibrio de Hardy-Weinberg, lo que establece una relación explícita entre frecuencias alélicas (lo desconocido) y genotipos</strong>. Es decir, si la
+población se encuentra en equilibrio de Hardy-Weinberg sabemos que la
+esperanza del número de individuos (homocigotos) <span class="math inline">\(A_2A_2\)</span>, la única
+clase de genotipo que en nuestro caso “mapea” a un solo fenotipo, es
+igual a <span class="math inline">\(nq^2\)</span>, con <span class="math inline">\(n=G_{1}.+G_{22}\)</span> y <span class="math inline">\(G_{1}.=G_{11}+G_{12}\)</span> el número
+de individuos con el fenotipo dominante. Esto nos deja con la
+posibilidad de despejar <span class="math inline">\(q\)</span>,
+<span class="math display" id="eq:HWrecesivos">\[\begin{equation}
+\begin{split}
+G_{22}=nq^2 \therefore q=\pm \sqrt{\frac{G_{22}}{n}}=\pm \sqrt{\frac{G_{22}}{G_1.+G_{22}}}
+\end{split}
+\tag{2.9}
+\end{equation}\]</span>
+Es decir, de las dos raíces que tiene esta ecuación, una positiva y otra
+negativa, nuestra solución será la positiva, ya que no existen
+frecuencias negativas y por lo tanto no se trata de una solución válida.
+Es importante recalcar en este punto que la validez de nuestra
+estimación depende de que la población se encuentre en equilibrio de
+Hardy-Weinberg, pues de lo contrario no será una estimación que tenga
+alguna base teórica.<br />
+</p>
+<hr />
+<div id="ejemplo-2.2" class="section level4 unnumbered">
+<h4>Ejemplo 2.2</h4>
+<p>La fenilcetonuria (PKU) es un error innato del
+metabolismo que resulta en una disminución del metabolismo del
+aminoácido fenilalanina como resultado de una deficiencia en la enzima
+fenilalanina hidroxilasa. El resultado de esto es la acumulación de
+fenilalanina a niveles potencialmente tóxicos. Desde el punto de vista
+del modelo de herencia se comporta como autosómica recesiva, por lo que
+es necesario heredar dos copias “defectuosas” del gen PAH (a decir
+verdad, que tengan actividad seriamente disminuída) para que la
+enfermedad se manifieste. La incidencia es muy variable de población en
+población, pero dos casos extremos podrían ser la población de
+Finlandia, con 1 afectado en 200 mil nacimientos y la población de
+Turquía, con 1 afectado en 2600 nacimientos. Calcular para ambas
+poblaciones la frecuencia de “el”<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> alelo defectuoso, así como la
+proporción de portadores (que no manifiestan la enfermedad), asumiendo
+que las poblaciones se encuentran en equilibrio de Hardy-Weinberg.<br />
+Utilizando la ecuación <a href="variación-y-equilibrio-de-hardy-weinberg.html#eq:HWrecesivos">(2.9)</a>, tenemos para los dos casos</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+q_{Fin}=\sqrt{\frac{1}{200000}}=0,002236068 \sim 0,22\% \\
+q_{Tur}=\sqrt{\frac{1}{2600}}=0,01961161 \sim 1,96\%
+\end{split}
+\end{equation}\]</span></p>
+<p>Los portadores serán los heterocigotos, por lo que, si asumimos que las
+poblaciones se encuentran en equilibrio de Hardy-Weinberg, entonces
+tendremos</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+Het_{Fin}=2p_{Fin}q_{Fin}=2*(1-0,002236068)*0,002236068=0,004462136\sim 0,45\% \\
+Het_{Tur}=2p_{Tur}q_{Tur}=2*(1-0,01961161)*0,01961161=0,038454 \sim 3,85\%
+\end{split}
+\end{equation}\]</span></p>
+<p><br />
+</p>
+<hr />
+</div>
+</div>
+<div id="el-sistema-abo" class="section level2" number="2.7">
+<h2><span class="header-section-number">2.7</span> El sistema ABO</h2>
+<p>En general la relación entre los distintos alelos de un locus suele ser
+más complicada, en principio porque existen más de dos alelos cuyo
+impacto en el fenotipo es distinguible, así como las relaciones entre
+los mismos, que muchas veces implican diferentes modos de herencia (por
+ejemplo, dominancia y codominancia en el mismo locus). Un ejemplo de
+esto es el sistema de grupos sanguíneos ABO, el más importante en
+humanos,<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> cuya herencia (en forma simplificada) puede apreciarse en
+la figura <a href="variación-y-equilibrio-de-hardy-weinberg.html#fig:ABOsystem">2.6</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ABOsystem"></span>
+<img src="figuras/ABOsystem.png" alt="Sistema de determinación sanguínea ABO. Los alelos A y B muestran codominancia entre sí, mientras que ambos son dominantes respecto al O. Figura de Dominio Público tomada de Wikipedia (&quot;ABO system codominance.svg&quot;)." width="80%" />
+<p class="caption">
+Figura 2.6: Sistema de determinación sanguínea ABO. Los alelos A y B muestran codominancia entre sí, mientras que ambos son dominantes respecto al O. Figura de Dominio Público tomada de Wikipedia (“ABO system codominance.svg”).
+</p>
+</div>
+<p>Básicamente, mientras que tanto el alelo <em><span class="math inline">\(I^A\)</span></em> como el <em><span class="math inline">\(I^B\)</span></em>
+producen antígenos de superficie en los eritrocitos (glóbulos rojos de
+la sangre) , respectivamente <strong>A</strong> y <strong>B</strong>, y dominan al alelo <em><span class="math inline">\(i\)</span></em> que
+no produce antígenos de superficie (<strong>O</strong>), la relación entre el <em><span class="math inline">\(I^A\)</span></em>
+y el <em><span class="math inline">\(I^B\)</span></em> es de codominancia, expresándose ambos antígenos en la
+superficie de los eritrocitos. En función de esto, tendremos desde el
+punto de vista fenotípico para los test de aglutinación (test
+inmunológico de rutina) cuatro fenotipos diferentes (supongamos que las
+frecuencias de <em><span class="math inline">\(I^A\)</span></em>, <em><span class="math inline">\(I^B\)</span></em> e <em><span class="math inline">\(i\)</span></em> son <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span> y <span class="math inline">\(r\)</span>
+respectivamente):</p>
+<ul>
+<li><p>A, formado por los homocigotos del alelo <em><span class="math inline">\(I^A\)</span></em> , más los
+heterocigotos del alelo <em><span class="math inline">\(I^A\)</span></em> y el alelo <em><span class="math inline">\(i\)</span></em> (<span class="math inline">\(p^2+2pr\)</span>)</p></li>
+<li><p>B, formado por los homocigotos del alelo <em><span class="math inline">\(I^B\)</span></em> , más los
+heterocigotos del alelo <em><span class="math inline">\(I^B\)</span></em> y el alelo <em><span class="math inline">\(i\)</span></em> (<span class="math inline">\(q^2+2qr\)</span>)</p></li>
+<li><p>AB, formado por los heterocigotos del alelo <em><span class="math inline">\(I^A\)</span></em> y el alelo
+<em><span class="math inline">\(I^B\)</span></em> (<span class="math inline">\(2pq\)</span>)</p></li>
+<li><p>O, formado por los homocigotos del alelo <em><span class="math inline">\(i\)</span></em> (<span class="math inline">\(r^2\)</span>)</p></li>
+</ul>
+<p>Ahora, la estimación de las tres frecuencias a partir del conteo ya no
+es tan sencillo como ahora. Por un lado tenemos 3 alelos en lugar de
+dos, pero lo que realmente complica el panorama es la relación de
+dominancia-codominancia entre alelos. De hecho, ya no hay un mapeo entre
+los homocigotos y fenotipos particulares, lo que solo ocurre en el caso
+del O.<br />
+</p>
+</div>
+<div id="dónde-se-esconden-los-alelos-recesivos" class="section level2" number="2.8">
+<h2><span class="header-section-number">2.8</span> ¿Dónde se “esconden” los alelos recesivos?</h2>
+<p>Muchas mutaciones tienen consecuencias deletéreas o muy graves cuando
+están presentes en homocigosis, pero no tienen mayores consecuencias
+para el individuo heterocigota (por ejemplo, una enzima en la cual una
+copia funcional es suficiente para mantener la actividad necesaria). Más
+aún, en ciertos casos una característica favorable evolutivamente se ha
+transformado con el paso del tiempo en algo negativo debido a las
+implicancias para la domesticación, por ejemplo los cuernos en el
+bovino. En las razas bovinas “británicas,” pese a que la ausencia de
+cuernos (mochos, “polled”) se trata de una característica que muestra un
+evidente modo de herencia dominante y que se ha podido “mapear” la
+ubicación de la característica en el genoma bovino, aún resulta bastante
+elusivo el mecanismo que genera esta ausencia (<span class="citation"><a href="#ref-pmid23717440" role="doc-biblioref">Allais-Bonnet et al.</a> (<a href="#ref-pmid23717440" role="doc-biblioref">2013</a>)</span>;
+<span class="citation"><a href="#ref-pmid22737241" role="doc-biblioref">Medugorac et al.</a> (<a href="#ref-pmid22737241" role="doc-biblioref">2012</a>)</span>). Pese a esto, dado que los individuos con ambos alelos
+astados son astados, resulta bastante tentador evitar que se
+reproduzcan, lo que permitiría avanzar rápidamente en la eliminación de
+este alelo de la población. Sin embargo, este rápido avance es apenas
+una ilusión inicial que se torna cada vez más lejana. El principal
+problema con esta idea es que al tratarse de un alelo recesivo el que
+queremos eliminar, los heterocigotos no se pueden distinguir de los
+homocigotos con el alelo dominante. Para entenderlo, veamos qué ocurre
+con la relación entre los heterocigotas y los homocigotas con el alelo
+recesivo (que sin pérdida de generalidad supondremos es el <span class="math inline">\(A_2\)</span>, con
+frecuencia <span class="math inline">\(q\)</span>) cuando nos acercamos a la eliminación del alelo <span class="math inline">\(A_2\)</span> y
+por lo tanto la frecuencia del <span class="math inline">\(A_1\)</span> se aproxima a 1:</p>
+<p><span class="math display">\[\begin{equation}
+\frac{2pq}{q^2}=\frac{2p}{q}=\frac{2(1-q)}{q}\approx \frac{2}{q} \therefore \lim_{q \to 0} \frac{2pq}{q^2}=+\infty
+\end{equation}\]</span></p>
+<p>Es decir, a medida que <span class="math inline">\(q\)</span> tiende a cero, la relación tenderá a
+infinito, o dicho de otra forma, casi todos los alelos recesivos estarán
+en los individuos heterocigotas, los que son fenotípicamente imposibles
+de distinguir de los homocigotas con el alelo favorable. La figura
+<a href="variación-y-equilibrio-de-hardy-weinberg.html#fig:HWheterohomoq">2.7</a> muestra gráficamente esta relación. A medida
+que nos acercamos hacia la frecuencia de cero en el alelo <span class="math inline">\(A_2\)</span> (<span class="math inline">\(q\)</span>),
+la pendiente de la relación se incrementa en valor absoluto (la derivada
+primera es igual a <span class="math inline">\(-2/q^2\)</span>) y rápidamente la función aparece como
+vertical, es decir, casi todos los alelos provienen de los
+heterocigotas. A una frecuencia <span class="math inline">\(q=0,02\)</span>, es decir el 2% de los alelos
+son <span class="math inline">\(A_2\)</span>, hay 98 veces más individuos heterocigotos que homocigotos
+recesivos. Pese a esto, si bien es imposible eliminar los alelos de la
+población por este mecanismo, sí es posible reducir sustancialmente su
+incidencia si mantener el criterio de “refugo” no tuviese otras
+implicancias asociadas.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:HWheterohomoq"></span>
+<img src="figuras/HW_heterohomo_q.png" alt="Relación del número de heterocigotas a homocigotas recesivos en función de la frecuencia del alelo $q$ en un modelo de un locus con dos alelos, bajo equilibrio Hardy-Weinberg." width="80%" />
+<p class="caption">
+Figura 2.7: Relación del número de heterocigotas a homocigotas recesivos en función de la frecuencia del alelo <span class="math inline">\(q\)</span> en un modelo de un locus con dos alelos, bajo equilibrio Hardy-Weinberg.
+</p>
+</div>
+<hr />
+<div id="ejemplo-2.3" class="section level4 unnumbered">
+<h4>Ejemplo 2.3</h4>
+<p>Con los datos del <a href="variación-y-equilibrio-de-hardy-weinberg.html#ejemplo-2.2">Ejemplo 2.2</a>,
+calcular la relación entre el número de portadores y el número de
+individuos que padecerán la enfermedad, asumiendo que las poblaciones se
+encuentran en equilibrio de Hardy-Weinberg.</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+q_{Fin}=\sqrt{\frac{1}{200000}}=0,002236068 \sim 0,22\% \\
+q_{Tur}=\sqrt{\frac{1}{2600}}=0,01961161 \sim 1,96\%
+\end{split}
+\end{equation}\]</span></p>
+<p>Los portadores serán los heterocigotos, por lo que, si asumimos que las
+poblaciones se encuentran en equilibrio de Hardy-Weinberg, entonces
+tendremos</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+\frac{Het_{Fin}}{HomR_{Fin}}=\frac{2p_{Fin}}{q_{Fin}}=2*(1-0,002236068)/0,002236068=892,43 \\
+\frac{Het_{Tur}}{HomR_{Tur}}=\frac{2p_{Tur}}{q_{Tur}}=2*(1-0,01961161)/0,01961161=99,98
+\end{split}
+\end{equation}\]</span></p>
+<p>Es decir, en la población de Turquía tenemos casi 100 portadores por
+cada enfermo, mientras que en la de Finlandia la relación es de
+aproximadamente 892 portadores por cada enfermo.</p>
+<p><br />
+</p>
+<div class="graybox">
+<div class="center">
+<p><strong>PARA RECORDAR</strong></p>
+</div>
+<ul>
+<li>La relación entre los heterocigotas y los homocigotas con el alelo
+recesivo (que sin pérdida de generalidad supondremos es el <span class="math inline">\(A_2\)</span>, con
+frecuencia <span class="math inline">\(q\)</span>) cuando nos acercamos a la eliminación del alelo <span class="math inline">\(A_2\)</span> y
+por lo tanto la frecuencia del <span class="math inline">\(A_1\)</span> se aproxima a 1 será:</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+\frac{2pq}{q^2}=\frac{2p}{q}=\frac{2(1-q)}{q}\approx \frac{2}{q} \therefore \lim_{q \to 0} \frac{2pq}{q^2}=+\infty
+\end{equation}\]</span></p>
+<ul>
+<li>Es decir, a medida que <span class="math inline">\(q\)</span> tiende a cero, la relación tenderá a
+infinito, o dicho de otra forma, <strong>casi todos los alelos recesivos estarán
+en los individuos heterocigotas</strong>, los que son fenotípicamente imposibles
+de distinguir de los homocigotas con el alelo favorable.</li>
+</ul>
+</div>
+<p><br />
+</p>
+</div>
+</div>
+<div id="hardy-weinberg-en-especies-poliploides" class="section level2" number="2.9">
+<h2><span class="header-section-number">2.9</span> Hardy-Weinberg en especies poliploides</h2>
+<p>El fenómeno de la poliploidia (varias copias del genoma) representa un
+importante factor evolutivo que lleva a la especiación y es bastante
+usual en diferentes especies, en todos los dominios de la vida, como se observa en la figura <a href="variación-y-equilibrio-de-hardy-weinberg.html#fig:PaleopolyploidyTree">2.8</a>. En particular la poliploidía es frecuente en muchas de las especies vegetales y algunas animales de interés productivo. Ejemplo de esto son las bananas
+y sandías sin semillas (triploides), el maní y las moras (tetraploides),
+el trigo y el boniato (hexaploides), o en algunos casos como la frutilla
+el número básico de cromosomas (7), es repetido diferente número de
+veces en las más de 20 especies (diploides, tetraploides, hexaploides,
+octaploides y hasta decaploides).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:PaleopolyploidyTree"></span>
+<img src="figuras/PaleopolyploidyTree.png" alt="Eventos de PaleoPloidía en la evolución, con evidencia fuerte (puntos rojos) y eventos putativos (puntos amarillos). Figura extraída de wikipedia, creada por Peter Zhang, (CC BY-SA 3.0)" width="80%" />
+<p class="caption">
+Figura 2.8: Eventos de PaleoPloidía en la evolución, con evidencia fuerte (puntos rojos) y eventos putativos (puntos amarillos). Figura extraída de wikipedia, creada por Peter Zhang, (CC BY-SA 3.0)
+</p>
+</div>
+<p>Existe una generalización de la
+fórmula que describe el equilibrio de Hardy-Weinberg que usamos para
+especies diploides. Si recordamos del diagrama de Punnett que las
+frecuencias genotípicas que obtenemos para el caso diploide son el
+resultado de multiplicar las frecuencias de las combinaciones de alelos
+correspondientes, podemos describir este resultado como</p>
+<p><span class="math display">\[\begin{equation}
+(f_{\bf{A}}+f_{\bf{a}})(f_{\bf{A}}+f_{\bf{a}}))=(p+q)(p+q)=(p+q)^2
+\end{equation}\]</span></p>
+<p>En el caso diploide, el producto de dos paréntesis <span class="math inline">\((p+q)\)</span> representa el
+producto de dos eventos independientes, en este caso la generación de
+gametos. En el caso de los poliploides, pongamos por caso un
+tetraploide, existe el proceso de sorteo aleatorio de qué par de alelos
+terminarán en el mismo gameto y luego la combinación con el otro gameto
+para producir el cigoto. Es decir, en el caso del tetraploide hay 4
+multiplicaciones de las frecuencias de los alelos <strong>A</strong> y <strong>a</strong>, por lo
+que ahora, la distribución de las frecuencias de los distintos genotipos
+será</p>
+<p><span class="math display">\[\begin{equation}
+(f_{\bf{A}}+f_{\bf{a}})(f_{\bf{A}}+f_{\bf{a}}))(f_{\bf{A}}+f_{\bf{a}})(f_{\bf{A}}+f_{\bf{a}}))=(p+q)(p+q)(p+q)(p+q)=(p+q)^4
+\end{equation}\]</span></p>
+<p>Para el caso de un locus con dos alelos en una especie tetraploide, el
+desarrollo de la fórmula anterior nos lleva a la distribución de las
+frecuencias que se puede observar en el cuadro siguiente:</p>
+<p><br />
+</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Genotipo</th>
+<th align="left">frecuencia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>AAAA</strong></td>
+<td align="left"><span class="math inline">\(p^4\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>AAAa</strong></td>
+<td align="left"><span class="math inline">\(4p^3q\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>AAaa</strong></td>
+<td align="left"><span class="math inline">\(6p^2q^2\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Aaaa</strong></td>
+<td align="left"><span class="math inline">\(4pq^3\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>aaaa</strong></td>
+<td align="left"><span class="math inline">\(q^4\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<p>Claramente esto es generalizable a otras ploidias, al menos a las pares
+(recordar que las ploidias impares suelen tener problemas de
+segregación), de acuerdo a</p>
+<p><span class="math display">\[\begin{equation}
+(f_{\bf{A}}+f_{\bf{a}})*...*(f_{\bf{A}}+f_{\bf{a}}))=(p+q)*...*(p+q)=(p+q)^n
+\end{equation}\]</span></p>
+<p>con <span class="math inline">\(n\)</span> la ploidia (<span class="math inline">\(n=2\)</span> para diploides, <span class="math inline">\(n=4\)</span> para tetraploides, <span class="math inline">\(n=6\)</span>
+para hexaploides, etc.). Obviamente, al tratarse de un locus con dos
+alelos, los coeficientes que aparecen en el cuadro de más arriba
+y que surgen de la generalización son los coeficientes del “binomio de
+Newton,” o lo que es equivalente del “triángulo de Pascal” (o de
+Tartaglia, pese a que el desarrollo del mismo claramente antecede a
+ambos).</p>
+<p><br />
+</p>
+<div class="graybox">
+<div class="center">
+<p><strong>PARA RECORDAR</strong></p>
+</div>
+<p>Al estimar frecuencias en un sistema de un <em>locus</em> con dos alelos:</p>
+<ul>
+<li>Si suponemos que los individuos representan un muestreo al azar de los gametos en la población y que los individuos de la muestra fueron seleccionados al azar, entonces la probabilidad de observar un conteo <span class="math inline">\(x\)</span> en particular, dado el número total de alelos genotipados <span class="math inline">\(n\)</span>, se puede describir por la distribución binomial: <span class="math inline">\(f(x)={n\choose x} p^x (1-p)^{n-x}\)</span> con las combinaciones de <span class="math inline">\(n\)</span> elementos tomados de a <span class="math inline">\(x\)</span> elementos iguales <span class="math inline">\({n\choose x}=\frac{n!}{x!(n-x)!}\)</span></li>
+</ul>
+<p>Hardy-Weinberg en especies poliploides</p>
+<ul>
+<li><p>Por ejemplo, en el caso del tetraploides hay 4 multiplicaciones de las frecuencias de los alelos <strong>A</strong> y <strong>a</strong>, por lo que ahora, la distribución de las frecuencias de los distintos genotipos será <span class="math inline">\((p+q)^4\)</span>.</p></li>
+<li><p>Esto es generalizable a otras ploidias, al menos a las pares de acuerdo a
+<span class="math inline">\((f_{\bf{A}}+f_{\bf{a}})*...*(f_{\bf{A}}+f_{\bf{a}}))=(p+q)*...*(p+q)=(p+q)^n\)</span></p></li>
+</ul>
+</div>
+<hr />
+</div>
+<div id="geometría-y-genética-los-diagramas-de-de-finetti" class="section level2" number="2.10">
+<h2><span class="header-section-number">2.10</span> Geometría y Genética: los diagramas de <em>de Finetti</em></h2>
+<p>(<strong>Tópico avanzado</strong>)</p>
+<p>Aunque nos pueda parecer algo extraño, existe una fuerte conexión entre
+genética y geometría. De hecho, como veremos más adelante, Sewall Wright<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a> <span class="citation"><a href="#ref-Wright1932" role="doc-biblioref">S. Wright</a> (<a href="#ref-Wright1932" role="doc-biblioref">1932</a>)</span> imaginó la evolución como un paisaje adaptativo, con
+picos y valles por los que se movían las poblaciones, lo que conecta
+mentalmente de inmediato a un mundo de formas geométricas. Sin embargo,
+ya antes de esa fecha, Bruno de Finetti <span class="citation"><a href="#ref-deFinetti1926" role="doc-biblioref">Finetti</a> (<a href="#ref-deFinetti1926" role="doc-biblioref">1926</a>)</span> había
+establecido que gran parte de los mecanismos y resultados de la genética
+mendeliana se podían obtener de consideraciones geométricas. Uno de los
+aportes más relevantes en este sentido es la idea de que para un locus
+con dos alelos en una especie diploide es posible representar todas las
+combinaciones posibles de las frecuencias genotípicas como los puntos
+interiores a un triángulo equilátero. Para ello, de Finetti hace uso del
+resultado del teorema de Viviani, por lo que primero veremos qué dice
+este teorema.<br />
+El teorema de Viviani<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a> establece que para triángulos equiláteros, la
+suma de las distancias desde cualquier punto interno del mismo a los
+tres lados es igual a la altura del triángulo. Para demostrarlo nos
+basaremos en el esquema de la figura <a href="variación-y-equilibrio-de-hardy-weinberg.html#fig:Viviani">2.9</a>, donde dentro
+del triángulo de vértices <strong>A</strong>, <strong>B</strong> y <strong>C</strong>, con altura <span class="math inline">\(h\)</span> y lado
+<span class="math inline">\(a\)</span>, tenemos al punto <strong>P</strong>. Llamemos <strong>s</strong>, <strong>t</strong> y <strong>u</strong> a las
+distancias de <strong>P</strong> a los lados <span class="math inline">\(\overline{\rm AB}\)</span>, <span class="math inline">\(\overline{\rm BC}\)</span>
+y <span class="math inline">\(\overline{\rm CA}\)</span>, respectivamente, que son las alturas (por
+definición) de los tres triángulos internos de vértices <strong>APB</strong>, <strong>BPC</strong>
+y <strong>CPA</strong>. Estos triángulos, a su vez completan toda el área del
+triángulo de vértices <strong>ABC</strong>. Como el área de un triángulo es igual a
+<span class="math inline">\(\frac{base . altura}{2}\)</span>, tenemos entonces que</p>
+<p><span class="math display">\[\begin{equation}
+\frac{a.s}{2}+\frac{a.t}{2}+\frac{a.u}{2}=\frac{a.h}{2} \Leftrightarrow \frac{a}{2}(s+t+u)=\frac{a}{2} h \Leftrightarrow s+t+u=h
+\end{equation}\]</span></p>
+<p>por lo que queda demostrado este teorema. Dicho de otra manera, la
+significación de este teorema es que para cualquier punto interno a un
+triángulo equilátero, la suma de distancias a los lados es constante e
+igual a la altura del triángulo.<br />
+</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Viviani"></span>
+<img src="figuras/Viviani_theorem.png" alt="Triángulo usado para demostrar el teorema de Viviani. Figura tomada de Wikipedia, CC0 (Archivo:Viviani Theorem.svg)." width="80%" />
+<p class="caption">
+Figura 2.9: Triángulo usado para demostrar el teorema de Viviani. Figura tomada de Wikipedia, CC0 (Archivo:Viviani Theorem.svg).
+</p>
+</div>
+<p>Veamos ahora cómo se relaciona este teorema con la genética. Supongamos
+que tenemos un locus con dos alelos. Asignamos los tres genotipos
+posibles a los vértices de un triángulo equilátero de altura igual a 1,
+sin pérdida de generalidad, pongamos por ejemplo los homocigotos en la
+base (es un triángulo equilátero, por lo que todos sus lados son
+iguales) como muestra la figura <a href="#deFinetti" reference-type="ref" reference="deFinetti">2.10</a>, con <span class="math inline">\(p\)</span> la frecuencia del alelo <span class="math inline">\(A\)</span> y <span class="math inline">\(q=1-p\)</span> la
+frecuencia del alelo <span class="math inline">\(a\)</span>. Ahora, de acuerdo al teorema de Viviani,
+sabemos que para cualquier punto interno del tríangulo la suma de
+distancias a los lados es igual a 1, pero ¿qué representan estas
+distancias? Para entender lo que representan, imaginemos primero que
+estamos en el vértice <strong>AA</strong> (abajo a la derecha): ahora la distancia de
+este punto hasta el lado opuesto es igual a 1 (la altura del triángulo);
+lo mismo ocurrirá con los otros dos vértices, es decir, que cuando
+estamos en algún vértice, la distancia al lado opuesto es igual a 1, o
+lo que es lo mismo, la frecuencia del correspondiente genotipo es de 1
+(todos los individuos son de ese genotipo). Es decir, cada distancia a
+un lado del triángulo representa la frecuencia del genotipo en el
+vértice opuesto. A medida de que nos apartamos de los vértices,
+comienzan a aparecer distancias no nulas a los dos otros lados (además
+de al lado opuesto al vértice). En forma gráfica, podemos ver lo
+anterior en la figura <a href="variación-y-equilibrio-de-hardy-weinberg.html#fig:deFinetti">2.10</a>, donde las distancias <strong>x</strong>, <strong>y</strong> y <strong>z</strong>
+representan respectivamente la frecuencias de los genotipos <strong>AA</strong>,
+<strong>Aa</strong> y <strong>aa</strong>. Que la suma de las frecuencias de los genotipos sea
+igual a 1 está garantizado por el teorema de Viviani.</p>
+<p><br />
+</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:deFinetti"></span>
+<img src="figuras/deFinetti_diagram.png" alt="Diagrama de de Finetti.Figura tomada de Wikipedia, CC BY-SA 2.5 (Archivo:De Finetti diagram.svg)." width="80%" />
+<p class="caption">
+Figura 2.10: Diagrama de de Finetti.Figura tomada de Wikipedia, CC BY-SA 2.5 (Archivo:De Finetti diagram.svg).
+</p>
+</div>
+<p><br />
+</p>
+<p>Más aún, el punto de intersección de la distancia <strong>y</strong> con el eje
+formado por los vértices <strong>AA</strong> y <strong>aa</strong> separa a este lado en dos
+segmentos, el de la izquierda proporcional a la frecuencia del alelo
+<strong>A</strong> (<span class="math inline">\(p\)</span>), mientras que el de la derecha proporcional a la frecuencia
+del alelo <strong>a</strong> (<span class="math inline">\(p=1-q\)</span>). La distancia <strong>y</strong> representa la frecuencia
+de los heterocigotas (<strong>Aa</strong>) y como ya vimos previamente, bajo
+equilibrio de Hardy-Weinberg la misma describe una parábola en función
+de la frecuencia del alelo <strong>A</strong> (<span class="math inline">\(p\)</span>, o en forma alternativa del otro
+alelo). Por lo tanto, el equilibrio de Hardy-Weinberg se encuentra
+representado en la figura <a href="variación-y-equilibrio-de-hardy-weinberg.html#fig:deFinetti">2.10</a> por la curva que va desde el vértice <strong>aa</strong> al
+vértice <strong>AA</strong>. Es decir, solo los puntos que se encuentran en esta
+curva (y por lo tanto las distancias asociadas a los lados) representan
+configuraciones de genotipos que se encuentran en equilibrio de
+Hardy-Weinberg.</p>
+<p>Un ejemplo de la utilidad de lo anterior es la demostración visual de un
+efecto que veremos más adelante: la unión de (los individuos de) dos
+poblaciones en equilibrio de Hardy-Weinberg usualmente no produce una
+población conjunta en equilibrio H-W (antes de la reproducción) y el
+resultado suele ser la deficiencia en el número de heterocigotos
+respecto a la frecuencia esperada del promedio de las frecuencias
+alélicas en las dos poblaciones. Para ver esto en la figura
+<a href="variación-y-equilibrio-de-hardy-weinberg.html#fig:deFinetti">2.10</a>, supongamos que tenemos dos poblaciones, <strong>1</strong> y <strong>2</strong> (del mismo tamaño)
+que se encuentran en equilibrio H-W y por lo tanto son puntos sobre la
+curva. La frecuencias del alelo <strong>A</strong> en cada una de esta poblaciones
+será el segmento de recta izquierdo en el eje entre los vértices <strong>AA</strong>
+y <strong>aa</strong>, <span class="math inline">\(p_1\)</span> y <span class="math inline">\(p_2\)</span>, cuyo promedio es <span class="math inline">\(\bar p\)</span>. Si ahora subimos
+<span class="math inline">\(\bar p\)</span> hasta la curva de equilibrio, vemos que la intersección con el
+segmento de recta que une los puntos <strong>1</strong> y <strong>2</strong> (el promedio de las
+frecuencias genotípicas entre estas poblaciones) ocurre antes que con la
+curva, o lo que es equivalente, la distancia que representa la
+frecuencia de los heterocigotas es menor a la del equilibrio H-W.</p>
+<p>Un análisis más exhaustivo sobre las posibilidades del diagrama de
+Finetti se encuentra en <span class="citation"><a href="#ref-pmid5673165" role="doc-biblioref">Cannings and Edwards</a> (<a href="#ref-pmid5673165" role="doc-biblioref">1968</a>)</span>, donde por ejemplo los autores
+muestran que la endocría (“inbreeding,” que veremos también más
+adelante) produce una parábola por debajo de la que corresponde al
+equilibrio de H-W, mientras que los procesos de selección producen una
+serie de “cónicas” (curvas resultantes de cortar un cono variando el
+ángulo del plano de corte) que también pasan por los vértices <strong>AA</strong> y
+<strong>aa</strong>.</p>
+<hr />
+</div>
+<div id="la-estimación-de-frecuencias-en-el-locus-abo" class="section level2" number="2.11">
+<h2><span class="header-section-number">2.11</span> La estimación de frecuencias en el locus ABO</h2>
+<p>(<strong>Tópico avanzado</strong>)</p>
+<p>Los métodos elaborados para la estimación de las frecuencias hacen
+uso del concepto de máxima verosimilitud, pero <span class="citation">(<a href="#ref-pmid6598211" role="doc-biblioref">Yasuda 1984</a>)</span> propuso un
+método sencillo basado en conteo. Supongamos que <span class="math inline">\(T=A+B+AB+O\)</span>, es decir
+el total de individuos de los distintos fenotipos. Trabajaremos con la
+determinación de <span class="math inline">\(p\)</span>, la frecuencia del alelo <span class="math inline">\(I^A\)</span>, pero para <span class="math inline">\(q\)</span> (la
+frecuencia del <span class="math inline">\(I^B\)</span>) la situación es idéntica por simetría y basta con
+sustituir A por B e <span class="math inline">\(I^A\)</span> por <span class="math inline">\(I^B\)</span>. La frecuencia del alelo <span class="math inline">\(I^A\)</span> será
+igual a la cantidad total de alelos <span class="math inline">\(I^A\)</span> en los fenotipos que tienen
+este alelo, es decir A (<span class="math inline">\(I^AI^A\)</span>) y AO (<span class="math inline">\(I^Ai\)</span>) que solo expresan el A,
+más el AB (<span class="math inline">\(I^AI^B\)</span>) que expresa los dos alelos, todo dividido entre
+<span class="math inline">\(2T\)</span> que es el número total de alelos en los individuos. En el primer
+caso hay dos alelos <span class="math inline">\(I^A\)</span> por cada individuo, mientras que en los otros
+dos hay solo un alelo por individuo. Sin embargo, nosotros no podemos
+distinguir los 3 fenotipos, ya que tanto el A como el AO solo expresan
+el alelo <span class="math inline">\(I^A\)</span>, por lo que debemos buscar una forma de separar el aporte
+de cada uno de estos genotipos al conteo. Mientras que el <span class="math inline">\(I^Ai\)</span> aporta
+un alelo <span class="math inline">\(I^A\)</span>, el <span class="math inline">\(I^AI^A\)</span> aporta dos alelos, por lo que todos los
+fenotipos A aportarán un alelo, mientras que una cierta fracción (los
+homocigotos) aportará un segundo alelo también. ¿Cuál es la fracción
+del fenotipo A que corresponde a los homocigotas <span class="math inline">\(I^AI^A\)</span>? De acuerdo a
+lo predicho por el equilibrio de Hardy-Weinberg, los homocigotas
+<span class="math inline">\(I^AI^A\)</span> serán <span class="math inline">\(p^2\)</span>, mientras que los heterocigotas <span class="math inline">\(I^Ai\)</span> serán <span class="math inline">\(2pr\)</span>,
+por lo que la fracción de homocigotas <span class="math inline">\(h_A\)</span> será</p>
+<p><span class="math display" id="eq:hA">\[\begin{equation}
+h_A=\frac{p^2}{p^2+2pr}=\frac{p^2}{p(p+2r)}=\frac{p}{p+2r}
+\tag{2.10}
+\end{equation}\]</span></p>
+<p>Es decir, si sumamos las contribuciones de AB, todos los A y el resto de
+los A homocigotos, tenemos</p>
+<p><span class="math display" id="eq:pYasuda">\[\begin{equation}
+p=\frac{[AB+A+Ah_A]}{2T}
+\tag{2.11}
+\end{equation}\]</span></p>
+<p>Si definimos a partir de los fenotipos observables A y O, <span class="math inline">\(k_A=O/(A+O)\)</span>, entonces podemos expresar
+<span class="math inline">\(k_A\)</span> en términos de lo esperable bajo equilibrio Hardy-Weinberg como</p>
+<p><span class="math display" id="eq:kA">\[\begin{equation}
+\begin{split}
+k_A=\frac{Tr^2}{T(p^2+2pr)+Tr^2}= \frac{r^2}{p^2+2pr+r^2}=\frac{r^2}{(p+r)^2}=[r/(p+r)]^2\\
+\therefore \sqrt{k_A}=\frac{r}{(p+r)}
+\end{split}
+\tag{2.12}
+\end{equation}\]</span></p>
+<p>¿Cuál es la relación entre <span class="math inline">\(h_A\)</span> y <span class="math inline">\(k_A\)</span>? Usando las definiciones de <span class="math inline">\(h_A\)</span> (ecuación <a href="variación-y-equilibrio-de-hardy-weinberg.html#eq:hA">(2.10)</a>) y <span class="math inline">\(k_A\)</span> (ecuación <a href="variación-y-equilibrio-de-hardy-weinberg.html#eq:kA">(2.12)</a>), tenemos que</p>
+<p><span class="math display" id="eq:hAkA">\[\begin{equation}
+\begin{split}
+h_A=\frac{p}{p+2r}=\frac{p+r-r}{p+r+r}=\frac{\frac{p+r-r}{p+r}}{\frac{p+r+r}{p+r}}=\frac{\frac{p+r}{p+r}-\frac{r}{p+r}}{\frac{p+r}{p+r}+\frac{r}{p+r}}=\\
+=\frac{1-\frac{r}{p+r}}{1+\frac{r}{p+r}}=\frac{1-\sqrt{k_A}}{1+\sqrt{k_A}}\\
+h_A=\frac{1-\sqrt{k_A}}{1+\sqrt{k_A}}=\frac{(1-\sqrt{k_A})}{(1+\sqrt{k_A})} \frac{(1-\sqrt{k_A})}{(1-\sqrt{k_A})}=\\
+=\frac{(1-\sqrt{k_A})^2}{1-k_A}
+\end{split}
+\tag{2.13}
+\end{equation}\]</span></p>
+<p>¡Excelente! Tenemos la relación entre <span class="math inline">\(h_A\)</span> y <span class="math inline">\(k_A\)</span> (expresada de dos
+formas), pero aún nos falta llegar a una forma de <span class="math inline">\(h_A\)</span> que sea una
+función de cantidades observables, es decir los fenotipos. Si recordamos
+la definición de <span class="math inline">\(k_A\)</span> a partir de los fenotipos observables
+(<span class="math inline">\(k_A=O/(A+O)\)</span>) y sustituimos en la ecuación
+<a href="variación-y-equilibrio-de-hardy-weinberg.html#eq:hAkA">(2.13)</a>, tenemos</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+h_A=\frac{(1-\sqrt{k_A})^2}{1-k_A}  \Leftrightarrow  h_A (1-k_A)=(1-\sqrt{k_A})^2 \Leftrightarrow h_A (1-\frac{O}{A+O})=1-2\sqrt{k_A}+k_A\\
+h_A \frac{A+O-O}{A+O}=1-\sqrt{\frac{O}{A+O}}+\frac{O}{A+O} \Leftrightarrow h_A \frac{A}{A+O}=\\
+=\frac{A+O}{A+O} \frac{\sqrt{A+O}\sqrt{O}}{\sqrt{A+O}\sqrt{A+O}}+\frac{O}{A+O}=\frac{(A+O)-2\sqrt{O(A+O)}+O}{A+O} \Leftrightarrow \\
+Ah_A=A+O-2\sqrt{O(A+O)}+O \therefore Ah_A=A+2O-2\sqrt{O(A+O)}
+\end{split}
+\end{equation}\]</span></p>
+<p>Finalmente, si volvemos al principio con este resultado y sustituimos en
+<a href="variación-y-equilibrio-de-hardy-weinberg.html#eq:pYasuda">(2.11)</a>, tenemos el estimador basado en conteo</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+\hat{p}=\frac{[AB+A+Ah_A]}{2T}=\frac{[AB+A+A+2O-2\sqrt{O(A+O)}]}{2T} \therefore \\
+\hat{p}=\frac{[(1/2)AB+A+O-\sqrt{O(A+O)}]}{T}
+\end{split}
+\end{equation}\]</span></p>
+<p>Analogamente, por simetría, para la estimación de <span class="math inline">\(q\)</span> tenemos</p>
+<p><span class="math display">\[\begin{equation}
+\hat{q}=\frac{[(1/2)AB+B+O-\sqrt{O(B+O)}]}{T}
+\end{equation}\]</span></p>
+<p>y por lo tanto, <span class="math inline">\(\hat{r}=1-\hat{p}-\hat{q}\)</span>. Sencillo, ¿no?</p>
+<hr />
+<div id="ejemplo-2.4" class="section level4 unnumbered">
+<h4>Ejemplo 2.4</h4>
+<p>Entre donantes de sangre de la ciudad de Ankara
+(Turquía) se determinó que de 1500 donantes sanos se observaron 669 del
+grupo A, 484 del grupo O, 232 del grupo B y 115 del grupo AB. Utilizando
+los estimadores que propuso <span class="citation">(<a href="#ref-pmid6598211" role="doc-biblioref">Yasuda 1984</a>)</span> estimar las frecuencias de
+los alelos <span class="math inline">\(I^A\)</span>, <span class="math inline">\(I^B\)</span> e <span class="math inline">\(i\)</span>, así como el número esperado de los
+distintos fenotipos si la población estuviese en equilibrio de
+Hardy-Weinberg.<br />
+</p>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+\hat{p}=\frac{[(1/2)AB+A+O-\sqrt{O(A+O)}]}{T}=\frac{((115/2)+669+484-\sqrt{(484(669+484))})}{1500}=0,3089808 \\
+\hat{q}=\frac{[(1/2)AB+B+O-\sqrt{O(B+O)}]}{T}=\frac{((115/2)+232+484-\sqrt{(484(232+484))})}{1500}=0,1232134 \\
+\hat{r}=1-\hat{p}-\hat{q}=1-0,3089808-0,1232134=0,5678058
+\end{split}
+\end{equation*}\]</span></p>
+<p>De acuerdo a las frecuencias estimadas previamente, el número esperado
+de cada fenotipo sería</p>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+E(A)=(p^2+2pr)T=(0,3089808^2+2\cdot 0,3089808\cdot 0,5678058)\cdot 1500=669,527
+\sim 670\\
+E(B)=(q^2+2qr)T=(0,1232134^2+2\cdot 0,1232134\cdot 0,5678058)\cdot 1500=232,6562
+\sim 233\\
+E(AB)=2pqT=2\cdot 0,3089808\cdot 0,1232134\cdot 1500=114,2117 \sim 114 \\
+E(O)=r^2T=0,5678058^2\cdot 1500=483,6051=484,
+\end{split}
+\end{equation*}\]</span></p>
+<p>lo que coincide estrechamente con los números observados, por lo que <strong>no podemos descartar que la población se encuentre en equilibrio Hardy-Weinberg</strong> (en general no podemos resolver a favor de una hipótesis alternativa basados en la estadística, a lo sumo podemos afirmar que la misma es completamente improbable dados los supuestos del test que aplicamos).</p>
+<hr />
+<p><br />
+</p>
+</div>
+</div>
+<div id="ejercicios-2" class="section level2 unnumbered">
+<h2>Ejercicios</h2>
+<div id="ejercicio-2.1" class="section level4 unnumbered">
+<h4>Ejercicio 2.1</h4>
+<p>En la especie <em>Antirrhinum majus</em>, conocida vulgarmente como “boca de
+dragón,” dos alelos en un gen que determina el color de las flores
+(<strong>R</strong> rojo y <strong>W</strong> blanco), cuando se encuentran en estado homocigoto
+producen (respectivamente) flores rojas y blancas, pero cuando se
+encuentran en estado heterocigoto producen flores rosadas; esto permite
+identificar claramente a los heterocigotos. En una población natural, en
+un área relativamente pequeña se contaron 122 flores rojas, 127 rosadas
+y 33 blancas. ¿Cuáles son las frecuencias estimadas de los alelos <strong>R</strong>
+y <strong>W</strong>? ¿Cuáles son las frecuencias esperadas para los distintos
+genotipos si la población estuviese en equilibrio de Hardy-Weinberg?
+¿Podemos afirmar (estadísticamente) que la población no se encuentra en
+equilibrio de Hardy-Weinberg?</p>
+<p><strong><em>Solución</em></strong>
+<span class="math display">\[\begin{equation*}
+\begin{split}
+fr(R)=\frac{(2*fr(RR)+fr(RW))}{2*(fr(RR)+fr(RW)+fr(WW))}=\frac{2*122+127}{2*(122+127+33)}==\\
+=\frac{371}{564}=0,6578014\\
+fr(W)=1-0,6578014=0,3421986 &amp; \\
+E(fr(RR))_{HW}=Np^2=282*(0,6578014)^2=0,4327027*282=122,0222 \sim 122\\
+E(fr(RW))_{HW}=2Npq=564*(0,6578014*0,3421986)=126,9557 \sim 127 \\
+E(fr(WW))_{HW}=Nq^2=282*(0,3421986)^2=33,02217 \sim 33
+\end{split}
+\end{equation*}\]</span></p>
+<p>El ajuste, más allá del redondeo, es casi perfecto, por lo que dado el
+número relativamente bajo de individuos y los pocos grados de libertad
+implicados (3 genotipos - 2 alelos = 1 grado de libertad) hacen
+innecesario el test estadístico más usual (test de <span class="math inline">\(\chi^2\)</span>), pero el
+lector puede verificarlo fácilmente.</p>
+</div>
+<div id="ejercicio-2.2" class="section level4 unnumbered">
+<h4>Ejercicio 2.2</h4>
+<p>Estimaciones obtenidas en un trabajo previo realizado en una raza de
+gallinas en una población de otro país, la frecuencia del alelo <strong>R</strong>,
+en un locus autosomal con dos alelos (el otro es <strong>r</strong>) en una especie
+diploide es de <span class="math inline">\(p=0,20\)</span> (se desconoce el error estándar de los
+estimados, pero se asume muy bajo porque es el resultado de genotipar
+miles de individuos). Para determinar si la frecuencia del alelo <strong>R</strong>
+en nuestra población se realiza el genotipado de 20 animales y se
+observa un conteo de 5 alelos <strong>R</strong>. Calcular la probabilidad de
+observar exactamente ese conteo y luego calcular la de uno igual o menor
+si nuestra población tuviese las mismas frecuencias que la población del
+trabajo previo.</p>
+<p><strong><em>Solución</em></strong>
+La probabilidad de obtener un conteo de 5 alelos <strong>R</strong> es la
+<span acronym-label="fdp" acronym-form="singular+short">fdp</span> binomial, o sea</p>
+<p><span class="math display">\[\begin{equation}
+Pr(X=5)={40\choose 5} 0,2^{5} (1-0,2)^{40-5}={40\choose 5} 0,2^{5} (0,8)^{35}=0,08541432 \sim 8,54\%
+\end{equation}\]</span></p>
+<p>La probabilidad de obtener un conteo de 5 o menos alelos <strong>R</strong> es la
+<span acronym-label="fda" acronym-form="singular+short">fda</span> binomial, o
+sea, la suma de las probabilidades de obtener conteos de 0, 1, 2, 3, 4 y
+5</p>
+<p><span class="math display">\[\begin{equation}
+Pr(X \leq 5)=\sum_{x=0}^{5} {40\choose x} p^x (1-p)^{40-x}=0,1613288 \sim 16,13\%
+\end{equation}\]</span></p>
+</div>
+<div id="ejercicio-2.3" class="section level4 unnumbered">
+<h4>Ejercicio 2.3</h4>
+<p>En un hospital se determinó que de 1000 pacientes, 350 eran del grupo
+sanguíneo A, 280 del grupo O, 180 del grupo B y 190 del grupo AB.
+Utilizando los estimadores que propuso <span class="citation"><a href="#ref-pmid6598211" role="doc-biblioref">Yasuda</a> (<a href="#ref-pmid6598211" role="doc-biblioref">1984</a>)</span> estimar las
+frecuencias de los alelos <span class="math inline">\(I^A\)</span>, <span class="math inline">\(I^B\)</span> e <span class="math inline">\(i\)</span>, así como el número
+esperado de los distintos fenotipos si la población estuviese en
+equilibrio de Hardy-Weinberg.</p>
+<p><strong><em>Solución</em></strong></p>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+\hat{p}=\frac{[(1/2)AB+A+O-\sqrt{O(A+O)}]}{T}=\frac{((190/2)+350+280-\sqrt{(280*(350+280))})}{1000} \sim 0,3050 \\
+\hat{q}=\frac{[(1/2)AB+B+O-\sqrt{O(B+O)}]}{T}=\frac{((190/2)+180+280-\sqrt{(280*(180+280))})}{1000} \sim 0,1961 \\
+\hat{r}=1-\hat{p}-\hat{q}=1-0,3050-0,2022=0,4989
+\end{split}
+\end{equation*}\]</span></p>
+<p>De acuerdo a las frecuencias estimadas previamente, el número esperado
+de cada fenotipo sería</p>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+E(A)=(p^2+2pr)T=(0,3050^2+2*0,3050*0,4989)*1000 \sim 397\\
+E(B)=(q^2+2qr)T=(0,1961^2+2*0,1961*0,4989)*1000 \sim 234\\
+E(AB)=2pqT=2*0,3050*0,1961*1000 \sim 120\\
+E(O)=r^2T=0,4989^2*1000=483,6051 \sim 249,
+\end{split}
+\end{equation*}\]</span></p>
+<p>Claramente, hay una diferencia importante entre lo observado y lo
+predicho, por lo que la validez de nuestras estimaciones es nula
+(<span class="math inline">\(\chi^2\)</span>=27,9, <span class="math inline">\(gl=3\)</span>, p-value= 3,811e-06).</p>
+</div>
+<div id="ejercicio-2.4" class="section level4 unnumbered">
+<h4>Ejercicio 2.4</h4>
+<p>Asumiendo que las poblaciones en las que se va a aplicar se encuentran
+en equilibrio de Hardy-Weinberg, desarrollar un estimador de las
+frecuencias de los tres alelos del grupo sanguíneo ABO (<span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span> y <span class="math inline">\(r\)</span>)
+basado en el conteo de los individuos O y AB (desambiguando <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span> si
+fuese necesario a través de sus respectivos conteos). ¿Qué problema
+obvio tiene este estimador? A partir de las siguentes frecuencias genotípicas
+estimar las frecuencias alélicas y fenotípicas y comentarlas en relación
+a los datos observados: 669 del grupo A, 484 del grupo O, 232 del grupo B y 115 del grupo AB.</p>
+<p><strong><em>Solución</em></strong>
+Tanto el fenotipo O como el AB mapean cada uno a un solo genotipo, por
+lo que su conteo no implica suma de aportes de genotipos diferentes. Si
+asumimos equilibrio de Hardy-Weinberg y que <span class="math inline">\(T=A+B+O+AB\)</span>, <span class="math inline">\(p+q+r=1\)</span>,
+tenemos
+<span class="math display" id="eq:ejHWABOe1">\[\begin{equation*}
+\begin{split}
+AB=2pqT \\
+O=r^2T \Leftrightarrow r=\sqrt{\frac{O}{T}} \\
+p+q+r=1 \Rightarrow p+q+\sqrt{\frac{O}{T}}=1 \Leftrightarrow \\
+\end{split}
+\tag{2.14}
+\end{equation*}\]</span></p>
+<p><span class="math display" id="eq:ejHWABOe2">\[\begin{equation*}
+\begin{split}
+ \Leftrightarrow p=1-q-\sqrt{\frac{O}{T}}
+\end{split}
+\tag{2.15}
+\end{equation*}\]</span></p>
+<p>Sustituyendo <a href="variación-y-equilibrio-de-hardy-weinberg.html#eq:ejHWABOe2">(2.15)</a> en <a href="variación-y-equilibrio-de-hardy-weinberg.html#eq:ejHWABOe1">(2.14)</a> para quedarnos con una sola variable (<span class="math inline">\(q\)</span>),
+tenemos</p>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+2qT(1-q-\sqrt{\frac{O}{T}})=AB \Leftrightarrow 2q-2q^2-2q\sqrt{\frac{O}{T}}=\frac{AB}{T} \Leftrightarrow q^2+(\sqrt{\frac{O}{T}}-1)q+\frac{AB}{2T}=0 \\
+\end{split}
+\end{equation*}\]</span></p>
+<p>Se trata de una ecuación de segundo grado, por lo que utilizando la
+fórmula clásica (atribuida al matemático indio Bhaskaracharya), tenemos
+que nuestro estimador de <span class="math inline">\(q\)</span> es</p>
+<p><span class="math display">\[\begin{equation*}
+\hat{q}=\frac{(1-\sqrt{\frac{O}{T}}) \pm \sqrt{(\sqrt{\frac{O}{T}}-1)^2-\frac{2AB}{T}}}{2}
+\end{equation*}\]</span></p>
+<p>Es de notar que esto nos deja con dos soluciones, pero como con la
+información que utilizamos <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span> no son identificables (si
+hubiésemos cambiado <span class="math inline">\(p\)</span> por <span class="math inline">\(q\)</span> el resultado sería idéntico), debemos
+usar la información de conteo de A y B para desambiguar las dos
+soluciones de nuestro estimador (la solución mayor correponde al conteo
+mayor entre A y B). El defecto obvio es que nuestro estimador no hace
+uso de toda la información disponible, una propiedad indeseable de los
+estimadores que discutiremos en otro capítulo.</p>
+<p>Para determinar la frecuencia de <span class="math inline">\(r\)</span> hacemos
+<span class="math inline">\(r=\sqrt{O/T}=\sqrt{484/1500}=0,5680376\)</span>, mientras que para las de <span class="math inline">\(p\)</span> y
+<span class="math inline">\(q\)</span> aplicamos la de nuestro estimador anterior</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+\hat{q}=\frac{(1-\sqrt{\frac{O}{T}}) \pm \sqrt{(\sqrt{\frac{O}{T}}-1)^2-\frac{2AB}{T}}}{2}=\frac{(1-\sqrt{\frac{484}{1500}}) \pm \sqrt{(\sqrt{\frac{484}{1500}}-1)^2-\frac{2*115}{1500}}}{2}=\\
+=[0,3071654(+), 0,124797(-)]
+\end{split}
+\end{equation}\]</span></p>
+<p>La primera correspondería a <span class="math inline">\(p\)</span> (por el mayor conteo de A respecto a B).
+Ahora, la frecuencias esperadas de los distintos fenotipos serían</p>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+E(A)=(p^2+2pr)T=(0,3071654^2+2*0,3071654*0,5680376)*1500=664.9704
+\sim 665 (669)\\
+E(B)=(q^2+2qr)T=(0,124797^2+2*0,124797*0,5680376)*1500=236,0296
+\sim 236 (232)\\
+E(AB)=2pqT=2*0,3071654*0,124797*1500=114,2117 \sim 115 (115)\\
+E(O)=r^2T=0,5680376^2*1500=484,0001 \sim 484 (484),
+\end{split}
+\end{equation*}\]</span></p>
+<p>Por lo tanto, si bien existe un ajuste razonable en este caso
+particular, existen algunas diferencias respecto a los datos observados
+en los dos fenotipos de los cuales no usamos la información (excepto
+marginalmente para decidir cuál solución debería ser <span class="math inline">\(p\)</span> y cuál <span class="math inline">\(q\)</span>).</p>
+</div>
+<div id="ejercicio-2.5" class="section level4 unnumbered">
+<h4>Ejercicio 2.5</h4>
+<p>Demostrar (a) que para un locus con dos alelos en una especie diploide
+en equilibrio Hardy-Weinberg, la diferencia de frecuencias alélicas es
+igual a la diferencia de frecuencia entre los homocigotos respectivos y
+(b) que esta diferencia es igual a <span class="math inline">\(2p -1\)</span>.</p>
+<p><strong><em>Solución</em></strong>
+Supongamos que llamamos <span class="math inline">\(p\)</span> y <span class="math inline">\(q=1-p\)</span> a las frecuencias de los dos
+alelos. Para la parte (a) debemos demostrar que su diferencia es igual a
+la diferencia entre los genotipos homocigotos, es decir, <span class="math inline">\(p-q=p^2-q^2\)</span>.
+Para ellos utilizaremos el hecho de que multiplicar por 1 ambos lados de
+la ecuación y el hecho de que <span class="math inline">\(p+q=1\)</span>.</p>
+<p><span class="math display">\[\begin{equation}
+(p-q)=1*(p-q)=(p+q)(p-q)=p^2+pq-pq-q^2=p^2-q^2
+\end{equation}\]</span></p>
+<p>En tanto, para la parte (b) utilizaremos que <span class="math inline">\(q=1-p\)</span>, por lo que</p>
+<p><span class="math display">\[\begin{equation}
+p-q=p-(1-p)=p-1+p=2p-1
+\end{equation}\]</span></p>
+<p><br />
+</p>
+</div>
+<div id="ejercicio-2.6" class="section level4 unnumbered">
+<h4>Ejercicio 2.6</h4>
+<p>En general, si bien en muchas enfermedades humanas y animales que se
+clasifican como de herencia mendeliana se considera que se trata de un
+solo alelo recesivo, a nivel molecular suelen co-existir varios alelos
+deletéreos que producen similar fenotipo. Demostrar que si en un locus
+existen dos alelos deletéreos recesivos respecto al alelo normal, bajo
+equilibrio de Hardy-Weinberg los resultados respecto al número de
+portadores y de enfermos son equivalentes a considerarlos como un solo
+alelo defectuoso.</p>
+<p><strong><em>Solución</em></strong>
+Supongamos que llamamos <span class="math inline">\(A_1\)</span> al alelo normal y <span class="math inline">\(A_2\)</span> y <span class="math inline">\(A_3\)</span> a los
+alelos defectuosos, con frecuencias respectivas <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span> y <span class="math inline">\(r\)</span>,
+<span class="math inline">\(p+q+r=1\)</span>. Llamemos <span class="math inline">\(u=q+r\)</span> a la frecuencia de los dos alelos
+defectuosos sumados, o lo que es lo mismo, a la frecuencia de alelos
+defectuosos (como si fuera uno solo). De acuerdo a lo visto para más de
+un alelo, las frecuencias esperadas bajo equilibrio Hardy-Weinberg serán</p>
+<p><span class="math display">\[\begin{equation}
+(p+q+r)^2=p^2+q^2+r^2+2pq+2pr+2qr
+\end{equation}\]</span></p>
+<p>De estos genotipos, los
+enfermos serán aquellos que tengan 2 alelos defectuosos, sean cuales
+sean, o sea <span class="math inline">\(A_2A_2\)</span>, <span class="math inline">\(A_3A_3\)</span> y <span class="math inline">\(A_2A3\)</span>, es decir</p>
+<p><span class="math display">\[\begin{equation}
+q^2+r^2+2qr=(q+r)^2=u^2
+\end{equation}\]</span></p>
+<p>Es decir, demostramos que el
+número de enfermos esperados es equivalente a considerarlo como un solo
+alelo. Ahora, el número de portadores será la suma de los genotipos que
+tienen un solo alelo defectuoso y el otro normal, o sea <span class="math inline">\(A_1A_2\)</span> y
+<span class="math inline">\(A_1A_3\)</span>, es decir</p>
+<p><span class="math display">\[\begin{equation}
+2pq+2pr=2p(q+r)=2pu
+\end{equation}\]</span></p>
+<p>con lo que queda demostrado que
+también la frecuencia de portadores es equivalente a considerarlo un
+solo alelo defectuoso.</p>
+<p><br />
+</p>
+</div>
+<div id="ejercicio-2.7" class="section level4 unnumbered">
+<h4>Ejercicio 2.7</h4>
+<p>En muchos casos las ecuaciones que derivamos se simplifican enormemente debido a la restricción <span class="math inline">\(p+q=1\)</span>. Demostrar que las siguientes relaciones son válidas (adaptado de <span class="citation"><a href="#ref-HartlClark2007" role="doc-biblioref">Hartl and Clark</a> (<a href="#ref-HartlClark2007" role="doc-biblioref">2007</a>)</span>)</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+p^2-q^2=p-q \\
+p^2+pq=p \\
+p-q=1-2q \\
+p^2+q^2=1-2pq \\
+(p-q)^2=1-4pq
+\end{split}
+\end{equation}\]</span></p>
+<p><strong><em>Solución</em></strong>
+Haciendo uso de que <span class="math inline">\(p+q=1\)</span>, por lo que también <span class="math inline">\((p+q)^2=p^2+2pq+q^2=1\)</span> (ya que lo que está dentro del paréntesis vale <span class="math inline">\(1\)</span> y <span class="math inline">\(1^2=1\)</span>), tenemos que</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+p^2-q^2=(p+q)(p-q)=(1)(p-q)=p-q \\
+p^2+pq=p(p+q)=p(1)=p \\
+p-q=(1-q)-q=1-q-q=1-2q \\
+p^2+q^2=1-2pq \Leftrightarrow p^2+q^2+2pq=1 \Leftrightarrow (p+q)^2=1 \Leftrightarrow 1^2=1\\
+(p-q)^2=p^2-2pq+q^2=p^2-2pq+q^2+2pq-2pq=p^2+2pq+q^2-2pq-2pq=(p+q)^2-4pq=1-4pq
+\end{split}
+\end{equation}\]</span></p>
+<p><br />
+</p>
+<hr />
+<hr />
+
+</div>
+</div>
+</div>
+<h3>Bibliografía</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-pmid23717440" class="csl-entry">
+Allais-Bonnet, A., C. Grohs, I. Medugorac, S. Krebs, A. Djari, A. Graf, S. Fritz, et al. 2013. <span>“<span class="nocase"><span>N</span>ovel insights into the bovine polled phenotype and horn ontogenesis in <span>B</span>ovidae</span>.”</span> <em>PLoS ONE</em> 8 (5): e63512.
+</div>
+<div id="ref-pmid5673165" class="csl-entry">
+Cannings, C., and A. W. Edwards. 1968. <span>“<span class="nocase"><span>N</span>atural selection and the de <span>F</span>inetti diagram</span>.”</span> <em>Ann. Hum. Genet.</em> 31 (4): 421–28.
+</div>
+<div id="ref-castle1903" class="csl-entry">
+Castle, W. E. 1903. <span>“<span class="nocase"><span>T</span>he laws of <span>G</span>alton and <span>M</span>endel and some laws governing race improvement</span>.”</span> <em>Proceedings of the American Academy of Arts and Sciences</em> 35 (8): 233–42.
+</div>
+<div id="ref-deFinetti1926" class="csl-entry">
+Finetti, B. de. 1926. <span>“<span class="nocase"><span>C</span>onsiderazioni matematiche sull’ereditarietà mendeliana</span>.”</span> <em>Metron</em> 6 (1): 3–41.
+</div>
+<div id="ref-pmid17779291" class="csl-entry">
+Hardy, G. H. 1908. <span>“<span><span>M</span><span>E</span><span>N</span><span>D</span><span>E</span><span>L</span><span>I</span><span>A</span><span>N</span> <span>P</span><span>R</span><span>O</span><span>P</span><span>O</span><span>R</span><span>T</span><span>I</span><span>O</span><span>N</span><span>S</span> <span>I</span><span>N</span> <span>A</span> <span>M</span><span>I</span><span>X</span><span>E</span><span>D</span> <span>P</span><span>O</span><span>P</span><span>U</span><span>L</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span></span>.”</span> <em>Science</em> 28 (706): 49–50.
+</div>
+<div id="ref-HartlClark2007" class="csl-entry">
+Hartl, Daniel L, and Andrew G Clark. 2007. <em>Principles of Population Genetics</em>. 4th. ed. Sinauer.
+</div>
+<div id="ref-pmid22737241" class="csl-entry">
+Medugorac, I., D. Seichter, A. Graf, I. Russ, H. Blum, K. H. Göpel, S. Rothammer, M. Förster, and S. Krebs. 2012. <span>“<span class="nocase"><span>B</span>ovine polledness–an autosomal dominant trait with allelic heterogeneity</span>.”</span> <em>PLoS ONE</em> 7 (6): e39477.
+</div>
+<div id="ref-pmid26354973" class="csl-entry">
+Rosenberg, N. A., and J. T. Kang. 2015. <span>“<span class="nocase"><span>G</span>enetic <span>D</span>iversity and <span>S</span>ocietally <span>I</span>mportant <span>D</span>isparities</span>.”</span> <em>Genetics</em> 201 (1): 1–12.
+</div>
+<div id="ref-deVries1900" class="csl-entry">
+Vries, H. de. 1900. <span>“<span class="nocase"><span>S</span>ur la loi de disjonction des Hybrides</span>.”</span> <em>Comptes Rendus de l‘Acad<span>é</span>mie Des Sciences</em> 130 (-): 845–47.
+</div>
+<div id="ref-weinberg1908" class="csl-entry">
+Weinberg, W. 1908. <span>“<span class="nocase"><span>Ü</span>ber den Nachweis der Vererbung beim Menschen</span>.”</span> <em>Jahreshefte Des Vereins f<span>ü</span>r Vaterl<span>ä</span>ndische Naturkunde in W<span>ü</span>rttemberg.</em> 64: 369–82.
+</div>
+<div id="ref-Wright1932" class="csl-entry">
+———. 1932. <span>“<span class="nocase"><span>T</span>he roles of mutation, inbreeding, cross- breeding and selection in evolution</span>.”</span> <em>Proceedings of the Sixth Annual Congress of Genetics</em> 1 (-): 356–66.
+</div>
+<div id="ref-pmid6598211" class="csl-entry">
+Yasuda, N. 1984. <span>“<span class="nocase"><span>A</span> note on gene frequency estimation in the <span>A</span><span>B</span><span>O</span> and <span>A</span><span>B</span><span>O</span>-like system</span>.”</span> <em>Jinrui Idengaku Zasshi</em> 29 (3): 371–80.
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="8">
+<li id="fn8"><p>Aunque la misma ya había sido claramente establecida por
+<span class="citation"><a href="#ref-deVries1900" role="doc-biblioref">Vries</a> (<a href="#ref-deVries1900" role="doc-biblioref">1900</a>)</span> durante el re-descubrimiento de las leyes de Mendel<a href="variación-y-equilibrio-de-hardy-weinberg.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p>Reginald Crundall Punnett, genetista británico que fue quien los
+desarrolló. Además, Punnett se relaciona directamente con el
+equilibrio de Hardy-Weinberg, ya que al no poder contrarrestar los
+argumentos de George Udny Yule acerca del crecimiento sostenido de
+los alelos dominantes, llevó el problema al matemático Godfrey
+Harold Hardy, con quien jugaba al cricket; el resto es historia
+conocida.<a href="variación-y-equilibrio-de-hardy-weinberg.html#fnref9" class="footnote-back">↩︎</a></p></li>
+<li id="fn10"><p>En el sistema <strong>XY</strong>, presente en los mamíferos, el gen Y es el
+que determina el sexo (masculino), siendo los machos heterogaméticos
+(XY) y las hembras homogaméticas (XX). Es otras especies, como las
+aves, existen otros sistemas como el <strong>ZW</strong>, en el que son las
+hembras las que son heterogaméticas (ZW), mientras que los machos
+son homogaméticos (ZZ)<a href="variación-y-equilibrio-de-hardy-weinberg.html#fnref10" class="footnote-back">↩︎</a></p></li>
+<li id="fn11"><p>Ya veremos en otras partes que el concepto de “verdadero valor” de
+un parámetro está ligado a una corriente estadística llamada
+“frecuentista” y que se contrapone en cierta manera a una visión más
+subjetiva de la probabilidad, representada en la escuela
+“bayesiana.”<a href="variación-y-equilibrio-de-hardy-weinberg.html#fnref11" class="footnote-back">↩︎</a></p></li>
+<li id="fn12"><p>Hacemos de cuenta que se trata de un solo tipo de alelo
+defectuoso, si bien a nivel molecular los alelos defectuosos pueden
+ser varios diferentes, con efectos deletéreos, a nivel fenotípico se
+comportan como si se tratase de un mismo alelo (ver <a href="variación-y-equilibrio-de-hardy-weinberg.html#ejercicio-2.6">Ejercicio 2.6</a>).<a href="variación-y-equilibrio-de-hardy-weinberg.html#fnref12" class="footnote-back">↩︎</a></p></li>
+<li id="fn13"><p>Descubierto por el médico e inmunólogo austríaco Karl Landsteiner
+en 1901, lo que le valió el premio Nobel de Medicina y Fisiología en
+1931.<a href="variación-y-equilibrio-de-hardy-weinberg.html#fnref13" class="footnote-back">↩︎</a></p></li>
+<li id="fn14"><p>Sewall Green Wright (21 de diciembre, 1889 - 3 marzo, 1988), fue
+un genetista que realizó notables aportes sobre los efectos de la
+selección y la deriva, así como el análisis de pequeñas poblaciones
+y el efecto de la consanguinidad . Junto a Ronald A. Fisher y JBS
+Haldane establecieron la fundación matemática de la genética de
+poblaciones y de la teoría evolutiva.<a href="variación-y-equilibrio-de-hardy-weinberg.html#fnref14" class="footnote-back">↩︎</a></p></li>
+<li id="fn15"><p>Vincenzo Viviani (5 de abril,1622 - 22 de setiembre, 1703),
+matemático y científico italiano, pupilo de Torricelli y discípulo
+de Galileo.<a href="variación-y-equilibrio-de-hardy-weinberg.html#fnref15" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="deriva.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-HardyWeinberg_FINAL.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ApuntesGeneticaII.pdf", "ApuntesGeneticaII.epub"],
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
