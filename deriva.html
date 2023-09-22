@@ -26,7 +26,7 @@
 <meta name="author" content="(Jorge Urioste, María André, Andrea Larracharte, Washington Bell, Ana Laura Sánchez, Micaela Botta, Paula Batista, Rodrigo Vivián, Paola Gaiero))" />
 
 
-<meta name="date" content="2023-09-18" />
+<meta name="date" content="2023-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -522,7 +522,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="16" data-path="apendiceuno.html"><a href="apendiceuno.html"><i class="fa fa-check"></i><b>16</b> APENDICE A: Conceptos Matemáticos Básicos</a></li>
 <li class="chapter" data-level="17" data-path="apendicedos.html"><a href="apendicedos.html"><i class="fa fa-check"></i><b>17</b> APENDICE B: Cálculo Diferencial e Integral, ecuaciones diferenciales</a></li>
-<li class="chapter" data-level="18" data-path="bibliografía-bibliografia.html"><a href="bibliografía-bibliografia.html"><i class="fa fa-check"></i><b>18</b> Bibliografía {bibliografia}</a></li>
+<li class="chapter" data-level="18" data-path="bibliografia.html"><a href="bibliografia.html"><i class="fa fa-check"></i><b>18</b> Bibliografía</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -640,691 +640,289 @@ div.csl-indent {
 <p>Vayamos para atrás en el tiempo (afortundamente podemos hacerlo porque se trata de un experimento conceptual). Supongamos en cambio que luego de haber sacado la primera bolita azul, la segunda hubiese sido roja y, por supuesto, no repusimos ninguna de las dos. En este escenario la probabilidad de sacar una bolita azul en la tercera extracción hubiese sido <span class="math inline">\(p_{azul}=\frac{19}{38}=\frac{1}{2}=0,5\)</span>, y la de sacar una roja hubiese sido también <span class="math inline">\(p_{roja}=\frac{19}{38}=\frac{1}{2}=0,5\)</span>. En otras palabras, como volvimos a igualar las proporciones respecto al estado inicial de la jarra (cuando había 40 bolitas), la probabilidad de extraer alguno de los dos colores hubiese sido la misma.</p>
 <p>Hasta ahora habíamos parado nuestro experimento luego de la extracción de dos bolitas. Veamos un experimento real, pero sigámoslo hasta que no queden más bolitas en la jarra. Las extracciones han seguido el orden que aparece en la primer columna (“bolita”) de la Tabla <a href="deriva.html#tab:tabla3p1">3.1</a>. Es fundamental entender que este es el resultado de <strong>un</strong> experimento en particular. Si repetimos el experimento el resultado (orden de salida de las bolitas) posiblemente sea muy distinto. Tenemos solo 39 filas y no 40, porque la última extracción ya no es aleatoria y porque además no tiene sentido calcular las proporciones luego de esa última extracción (ya no quedan más bolitas).</p>
 <table>
-<caption>
-<span id="tab:tabla3p1">Tabla 3.1: </span>La realización de un experimento en particular. Partimos de 20 bolitas azules y 20 bolitas rojas. En la columna “bolita” aparece qué bolita sacamos (sin reposición) y en las otras columnas cuántas nos quedan luego de esa extracción de cada color, así como su proporción
-</caption>
+<caption><span id="tab:tabla3p1">Tabla 3.1: </span>La realización de un experimento en particular. Partimos de 20 bolitas azules y 20 bolitas rojas. En la columna “bolita” aparece qué bolita sacamos (sin reposición) y en las otras columnas cuántas nos quedan luego de esa extracción de cada color, así como su proporción</caption>
 <thead>
-<tr>
-<th style="text-align:left;">
-bolita
-</th>
-<th style="text-align:left;">
-rojas
-</th>
-<th style="text-align:left;">
-azules
-</th>
-<th style="text-align:left;">
-p.roja
-</th>
-<th style="text-align:left;">
-p.azul
-</th>
+<tr class="header">
+<th align="left">bolita</th>
+<th align="left">rojas</th>
+<th align="left">azules</th>
+<th align="left">p.roja</th>
+<th align="left">p.azul</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-20
-</td>
-<td style="text-align:left;">
-19
-</td>
-<td style="text-align:left;">
-0.5128
-</td>
-<td style="text-align:left;">
-0.4872
-</td>
+<tr class="odd">
+<td align="left">azul</td>
+<td align="left">20</td>
+<td align="left">19</td>
+<td align="left">0.5128</td>
+<td align="left">0.4872</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-19
-</td>
-<td style="text-align:left;">
-19
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
+<tr class="even">
+<td align="left">roja</td>
+<td align="left">19</td>
+<td align="left">19</td>
+<td align="left">0.5000</td>
+<td align="left">0.5000</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-18
-</td>
-<td style="text-align:left;">
-19
-</td>
-<td style="text-align:left;">
-0.4865
-</td>
-<td style="text-align:left;">
-0.5135
-</td>
+<tr class="odd">
+<td align="left">roja</td>
+<td align="left">18</td>
+<td align="left">19</td>
+<td align="left">0.4865</td>
+<td align="left">0.5135</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-18
-</td>
-<td style="text-align:left;">
-18
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
+<tr class="even">
+<td align="left">azul</td>
+<td align="left">18</td>
+<td align="left">18</td>
+<td align="left">0.5000</td>
+<td align="left">0.5000</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-18
-</td>
-<td style="text-align:left;">
-17
-</td>
-<td style="text-align:left;">
-0.5143
-</td>
-<td style="text-align:left;">
-0.4857
-</td>
+<tr class="odd">
+<td align="left">azul</td>
+<td align="left">18</td>
+<td align="left">17</td>
+<td align="left">0.5143</td>
+<td align="left">0.4857</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-18
-</td>
-<td style="text-align:left;">
-16
-</td>
-<td style="text-align:left;">
-0.5294
-</td>
-<td style="text-align:left;">
-0.4706
-</td>
+<tr class="even">
+<td align="left">azul</td>
+<td align="left">18</td>
+<td align="left">16</td>
+<td align="left">0.5294</td>
+<td align="left">0.4706</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-17
-</td>
-<td style="text-align:left;">
-16
-</td>
-<td style="text-align:left;">
-0.5152
-</td>
-<td style="text-align:left;">
-0.4848
-</td>
+<tr class="odd">
+<td align="left">roja</td>
+<td align="left">17</td>
+<td align="left">16</td>
+<td align="left">0.5152</td>
+<td align="left">0.4848</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-16
-</td>
-<td style="text-align:left;">
-16
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
+<tr class="even">
+<td align="left">roja</td>
+<td align="left">16</td>
+<td align="left">16</td>
+<td align="left">0.5000</td>
+<td align="left">0.5000</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-16
-</td>
-<td style="text-align:left;">
-15
-</td>
-<td style="text-align:left;">
-0.5161
-</td>
-<td style="text-align:left;">
-0.4839
-</td>
+<tr class="odd">
+<td align="left">azul</td>
+<td align="left">16</td>
+<td align="left">15</td>
+<td align="left">0.5161</td>
+<td align="left">0.4839</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-15
-</td>
-<td style="text-align:left;">
-15
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
+<tr class="even">
+<td align="left">roja</td>
+<td align="left">15</td>
+<td align="left">15</td>
+<td align="left">0.5000</td>
+<td align="left">0.5000</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-14
-</td>
-<td style="text-align:left;">
-15
-</td>
-<td style="text-align:left;">
-0.4828
-</td>
-<td style="text-align:left;">
-0.5172
-</td>
+<tr class="odd">
+<td align="left">roja</td>
+<td align="left">14</td>
+<td align="left">15</td>
+<td align="left">0.4828</td>
+<td align="left">0.5172</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-14
-</td>
-<td style="text-align:left;">
-14
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
+<tr class="even">
+<td align="left">azul</td>
+<td align="left">14</td>
+<td align="left">14</td>
+<td align="left">0.5000</td>
+<td align="left">0.5000</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-13
-</td>
-<td style="text-align:left;">
-14
-</td>
-<td style="text-align:left;">
-0.4815
-</td>
-<td style="text-align:left;">
-0.5185
-</td>
+<tr class="odd">
+<td align="left">roja</td>
+<td align="left">13</td>
+<td align="left">14</td>
+<td align="left">0.4815</td>
+<td align="left">0.5185</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-13
-</td>
-<td style="text-align:left;">
-13
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
+<tr class="even">
+<td align="left">azul</td>
+<td align="left">13</td>
+<td align="left">13</td>
+<td align="left">0.5000</td>
+<td align="left">0.5000</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-12
-</td>
-<td style="text-align:left;">
-13
-</td>
-<td style="text-align:left;">
-0.4800
-</td>
-<td style="text-align:left;">
-0.5200
-</td>
+<tr class="odd">
+<td align="left">roja</td>
+<td align="left">12</td>
+<td align="left">13</td>
+<td align="left">0.4800</td>
+<td align="left">0.5200</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-11
-</td>
-<td style="text-align:left;">
-13
-</td>
-<td style="text-align:left;">
-0.4583
-</td>
-<td style="text-align:left;">
-0.5417
-</td>
+<tr class="even">
+<td align="left">roja</td>
+<td align="left">11</td>
+<td align="left">13</td>
+<td align="left">0.4583</td>
+<td align="left">0.5417</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-11
-</td>
-<td style="text-align:left;">
-12
-</td>
-<td style="text-align:left;">
-0.4783
-</td>
-<td style="text-align:left;">
-0.5217
-</td>
+<tr class="odd">
+<td align="left">azul</td>
+<td align="left">11</td>
+<td align="left">12</td>
+<td align="left">0.4783</td>
+<td align="left">0.5217</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-11
-</td>
-<td style="text-align:left;">
-11
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
+<tr class="even">
+<td align="left">azul</td>
+<td align="left">11</td>
+<td align="left">11</td>
+<td align="left">0.5000</td>
+<td align="left">0.5000</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-10
-</td>
-<td style="text-align:left;">
-11
-</td>
-<td style="text-align:left;">
-0.4762
-</td>
-<td style="text-align:left;">
-0.5238
-</td>
+<tr class="odd">
+<td align="left">roja</td>
+<td align="left">10</td>
+<td align="left">11</td>
+<td align="left">0.4762</td>
+<td align="left">0.5238</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-9
-</td>
-<td style="text-align:left;">
-11
-</td>
-<td style="text-align:left;">
-0.4500
-</td>
-<td style="text-align:left;">
-0.5500
-</td>
+<tr class="even">
+<td align="left">roja</td>
+<td align="left">9</td>
+<td align="left">11</td>
+<td align="left">0.4500</td>
+<td align="left">0.5500</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-8
-</td>
-<td style="text-align:left;">
-11
-</td>
-<td style="text-align:left;">
-0.4211
-</td>
-<td style="text-align:left;">
-0.5789
-</td>
+<tr class="odd">
+<td align="left">roja</td>
+<td align="left">8</td>
+<td align="left">11</td>
+<td align="left">0.4211</td>
+<td align="left">0.5789</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-7
-</td>
-<td style="text-align:left;">
-11
-</td>
-<td style="text-align:left;">
-0.3889
-</td>
-<td style="text-align:left;">
-0.6111
-</td>
+<tr class="even">
+<td align="left">roja</td>
+<td align="left">7</td>
+<td align="left">11</td>
+<td align="left">0.3889</td>
+<td align="left">0.6111</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-7
-</td>
-<td style="text-align:left;">
-10
-</td>
-<td style="text-align:left;">
-0.4118
-</td>
-<td style="text-align:left;">
-0.5882
-</td>
+<tr class="odd">
+<td align="left">azul</td>
+<td align="left">7</td>
+<td align="left">10</td>
+<td align="left">0.4118</td>
+<td align="left">0.5882</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-6
-</td>
-<td style="text-align:left;">
-10
-</td>
-<td style="text-align:left;">
-0.3750
-</td>
-<td style="text-align:left;">
-0.6250
-</td>
+<tr class="even">
+<td align="left">roja</td>
+<td align="left">6</td>
+<td align="left">10</td>
+<td align="left">0.3750</td>
+<td align="left">0.6250</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-5
-</td>
-<td style="text-align:left;">
-10
-</td>
-<td style="text-align:left;">
-0.3333
-</td>
-<td style="text-align:left;">
-0.6667
-</td>
+<tr class="odd">
+<td align="left">roja</td>
+<td align="left">5</td>
+<td align="left">10</td>
+<td align="left">0.3333</td>
+<td align="left">0.6667</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-5
-</td>
-<td style="text-align:left;">
-9
-</td>
-<td style="text-align:left;">
-0.3571
-</td>
-<td style="text-align:left;">
-0.6429
-</td>
+<tr class="even">
+<td align="left">azul</td>
+<td align="left">5</td>
+<td align="left">9</td>
+<td align="left">0.3571</td>
+<td align="left">0.6429</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-5
-</td>
-<td style="text-align:left;">
-8
-</td>
-<td style="text-align:left;">
-0.3846
-</td>
-<td style="text-align:left;">
-0.6154
-</td>
+<tr class="odd">
+<td align="left">azul</td>
+<td align="left">5</td>
+<td align="left">8</td>
+<td align="left">0.3846</td>
+<td align="left">0.6154</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-5
-</td>
-<td style="text-align:left;">
-7
-</td>
-<td style="text-align:left;">
-0.4167
-</td>
-<td style="text-align:left;">
-0.5833
-</td>
+<tr class="even">
+<td align="left">azul</td>
+<td align="left">5</td>
+<td align="left">7</td>
+<td align="left">0.4167</td>
+<td align="left">0.5833</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-5
-</td>
-<td style="text-align:left;">
-6
-</td>
-<td style="text-align:left;">
-0.4545
-</td>
-<td style="text-align:left;">
-0.5455
-</td>
+<tr class="odd">
+<td align="left">azul</td>
+<td align="left">5</td>
+<td align="left">6</td>
+<td align="left">0.4545</td>
+<td align="left">0.5455</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-5
-</td>
-<td style="text-align:left;">
-5
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
+<tr class="even">
+<td align="left">azul</td>
+<td align="left">5</td>
+<td align="left">5</td>
+<td align="left">0.5000</td>
+<td align="left">0.5000</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-4
-</td>
-<td style="text-align:left;">
-5
-</td>
-<td style="text-align:left;">
-0.4444
-</td>
-<td style="text-align:left;">
-0.5556
-</td>
+<tr class="odd">
+<td align="left">roja</td>
+<td align="left">4</td>
+<td align="left">5</td>
+<td align="left">0.4444</td>
+<td align="left">0.5556</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-3
-</td>
-<td style="text-align:left;">
-5
-</td>
-<td style="text-align:left;">
-0.3750
-</td>
-<td style="text-align:left;">
-0.6250
-</td>
+<tr class="even">
+<td align="left">roja</td>
+<td align="left">3</td>
+<td align="left">5</td>
+<td align="left">0.3750</td>
+<td align="left">0.6250</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-3
-</td>
-<td style="text-align:left;">
-4
-</td>
-<td style="text-align:left;">
-0.4286
-</td>
-<td style="text-align:left;">
-0.5714
-</td>
+<tr class="odd">
+<td align="left">azul</td>
+<td align="left">3</td>
+<td align="left">4</td>
+<td align="left">0.4286</td>
+<td align="left">0.5714</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-2
-</td>
-<td style="text-align:left;">
-4
-</td>
-<td style="text-align:left;">
-0.3333
-</td>
-<td style="text-align:left;">
-0.6667
-</td>
+<tr class="even">
+<td align="left">roja</td>
+<td align="left">2</td>
+<td align="left">4</td>
+<td align="left">0.3333</td>
+<td align="left">0.6667</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-2
-</td>
-<td style="text-align:left;">
-3
-</td>
-<td style="text-align:left;">
-0.4000
-</td>
-<td style="text-align:left;">
-0.6000
-</td>
+<tr class="odd">
+<td align="left">azul</td>
+<td align="left">2</td>
+<td align="left">3</td>
+<td align="left">0.4000</td>
+<td align="left">0.6000</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-2
-</td>
-<td style="text-align:left;">
-2
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
-<td style="text-align:left;">
-0.5000
-</td>
+<tr class="even">
+<td align="left">azul</td>
+<td align="left">2</td>
+<td align="left">2</td>
+<td align="left">0.5000</td>
+<td align="left">0.5000</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-2
-</td>
-<td style="text-align:left;">
-1
-</td>
-<td style="text-align:left;">
-0.6667
-</td>
-<td style="text-align:left;">
-0.3333
-</td>
+<tr class="odd">
+<td align="left">azul</td>
+<td align="left">2</td>
+<td align="left">1</td>
+<td align="left">0.6667</td>
+<td align="left">0.3333</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-azul
-</td>
-<td style="text-align:left;">
-2
-</td>
-<td style="text-align:left;">
-0
-</td>
-<td style="text-align:left;">
-1.0000
-</td>
-<td style="text-align:left;">
-0.0000
-</td>
+<tr class="even">
+<td align="left">azul</td>
+<td align="left">2</td>
+<td align="left">0</td>
+<td align="left">1.0000</td>
+<td align="left">0.0000</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-roja
-</td>
-<td style="text-align:left;">
-1
-</td>
-<td style="text-align:left;">
-0
-</td>
-<td style="text-align:left;">
-1.0000
-</td>
-<td style="text-align:left;">
-0.0000
-</td>
+<tr class="odd">
+<td align="left">roja</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">1.0000</td>
+<td align="left">0.0000</td>
 </tr>
 </tbody>
 </table>
@@ -1513,388 +1111,193 @@ aa=q^2=\left(\frac{1}{2}\right)^2=\frac{1}{4}
 \end{equation}\]</span></p>
 <p>Luego, con el paso del tiempo, llegamos a un determinado momento <span class="math inline">\(t_1\)</span> en que las frecuencias alélicas ya han divergido algo. En la Tabla <a href="deriva.html#tab:subdivtx1">3.2</a> podemos ver lo que ocurre a nivel de los genotipos en cada una de las 4 poblaciones, así como la media de las 4 poblaciones (que como son todas iguales en tamaño es directamente igual al promedio de los valores). En la última columna tenemos también la frecuencia de los genotipos homocigotos, es decir <strong>AA</strong> y <strong>aa</strong>. Claramente, la frecuencia alélica promedio no ha cambiado, era de <span class="math inline">\(\frac{1}{2}\)</span> en <span class="math inline">\(t_0=0\)</span> y sigue siendo <span class="math inline">\(\frac{1}{2}\)</span> en <span class="math inline">\(t_1\)</span>. Sin embargo, dentro de las poblaciones el cambio de frecuencia, sumado al equilibrio Hardy-Weinberg para cada una de ellas se refleja en diferencias importantes entre poblaciones en la proporción de homocigotos. Más aún, el promedio de los homocigotos (el promedio de la suma <strong>AA</strong> y <strong>aa</strong> en cada población) se vio incrementado, desde <span class="math inline">\(fr(AA)+fr(aa)=\frac{1}{4}+\frac{1}{4}=\frac{1}{2}=0,5\)</span> a <span class="math inline">\(0,5725\)</span>. Este hecho no es menor: sin cambiar el promedio de las frecuencias alélicas y manteniendo el equilibrio de Hardy-Weinberg dentro de las poblaciones, si las volviésemos a agrupar a el solo efecto de contar los genotipos, el <strong>ensemble</strong> ya no se encuentra en el equilibrio de Hardy-Weinberg (porque el equilibrio para <span class="math inline">\(p=0,5\)</span> es de <span class="math inline">\(G=\frac{1}{2}=0,5\)</span>) <a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a>.</p>
 <table>
-<caption>
-<span id="tab:subdivtx1">Tabla 3.2: </span>Frecuencias de los genotipos en las 4 poblaciones, manteniendo el equilibrio de Hardy-Weinberg en cada una de ellas, en el primer punto en el tiempo luego del inicio (<span class="math inline">\(t_1\)</span>).
-</caption>
+<caption><span id="tab:subdivtx1">Tabla 3.2: </span>Frecuencias de los genotipos en las 4 poblaciones, manteniendo el equilibrio de Hardy-Weinberg en cada una de ellas, en el primer punto en el tiempo luego del inicio (<span class="math inline">\(t_1\)</span>).</caption>
+<colgroup>
+<col width="17%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="17%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:left;">
-p
-</th>
-<th style="text-align:left;">
-AA
-</th>
-<th style="text-align:left;">
-Aa
-</th>
-<th style="text-align:left;">
-aa
-</th>
-<th style="text-align:left;">
-Homocigotos
-</th>
+<tr class="header">
+<th align="left"></th>
+<th align="left">p</th>
+<th align="left">AA</th>
+<th align="left">Aa</th>
+<th align="left">aa</th>
+<th align="left">Homocigotos</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-Población 1
-</td>
-<td style="text-align:left;">
-0.7500
-</td>
-<td style="text-align:left;">
-0.5625
-</td>
-<td style="text-align:left;">
-0.3750
-</td>
-<td style="text-align:left;">
-0.0625
-</td>
-<td style="text-align:left;">
-0.6250
-</td>
+<tr class="odd">
+<td align="left">Población 1</td>
+<td align="left">0.7500</td>
+<td align="left">0.5625</td>
+<td align="left">0.3750</td>
+<td align="left">0.0625</td>
+<td align="left">0.6250</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Población 2
-</td>
-<td style="text-align:left;">
-0.6000
-</td>
-<td style="text-align:left;">
-0.3600
-</td>
-<td style="text-align:left;">
-0.4800
-</td>
-<td style="text-align:left;">
-0.1600
-</td>
-<td style="text-align:left;">
-0.5200
-</td>
+<tr class="even">
+<td align="left">Población 2</td>
+<td align="left">0.6000</td>
+<td align="left">0.3600</td>
+<td align="left">0.4800</td>
+<td align="left">0.1600</td>
+<td align="left">0.5200</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Población 3
-</td>
-<td style="text-align:left;">
-0.4000
-</td>
-<td style="text-align:left;">
-0.1600
-</td>
-<td style="text-align:left;">
-0.4800
-</td>
-<td style="text-align:left;">
-0.3600
-</td>
-<td style="text-align:left;">
-0.5200
-</td>
+<tr class="odd">
+<td align="left">Población 3</td>
+<td align="left">0.4000</td>
+<td align="left">0.1600</td>
+<td align="left">0.4800</td>
+<td align="left">0.3600</td>
+<td align="left">0.5200</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Población 4
-</td>
-<td style="text-align:left;">
-0.2500
-</td>
-<td style="text-align:left;">
-0.0625
-</td>
-<td style="text-align:left;">
-0.3750
-</td>
-<td style="text-align:left;">
-0.5625
-</td>
-<td style="text-align:left;">
-0.6250
-</td>
+<tr class="even">
+<td align="left">Población 4</td>
+<td align="left">0.2500</td>
+<td align="left">0.0625</td>
+<td align="left">0.3750</td>
+<td align="left">0.5625</td>
+<td align="left">0.6250</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-media
-</td>
-<td style="text-align:left;">
-<strong>0.5000</strong>
-</td>
-<td style="text-align:left;">
-<strong>0.2862</strong>
-</td>
-<td style="text-align:left;">
-<strong>0.4275</strong>
-</td>
-<td style="text-align:left;">
-<strong>0.2862</strong>
-</td>
-<td style="text-align:left;">
-<strong>0.5725</strong>
-</td>
+<tr class="odd">
+<td align="left">media</td>
+<td align="left"><strong>0.5000</strong></td>
+<td align="left"><strong>0.2862</strong></td>
+<td align="left"><strong>0.4275</strong></td>
+<td align="left"><strong>0.2862</strong></td>
+<td align="left"><strong>0.5725</strong></td>
 </tr>
 </tbody>
 </table>
 <p>Veamos qué ocurre entonces a medida de que nos alejamos del punto inicial en el tiempo. Cuando llegamos al punto <span class="math inline">\(t_2\)</span>, las frecuencias en las poblaciones divergen un poco más, aunque ninguna población ha llegado aún a fijar alguno de los dos alelos. La distribución de los genotipos en las mismas, de acuerdo a las nuevas frecuencias alélicas, se puede apreciar en la Tabla <a href="deriva.html#tab:subdivtx2">3.3</a>. Claramente volvemos a ver un incremento en promedio de homocigotos en la población, que ahora alcanzó el valor <span class="math inline">\(0,6450\)</span>.</p>
 <table>
-<caption>
-<span id="tab:subdivtx2">Tabla 3.3: </span>Frecuencias de los genotipos en las 4 poblaciones, manteniendo el equilibrio de Hardy-Weinberg en cada una de ellas, en el segundo punto en el tiempo luego del inicio (<span class="math inline">\(t_2\)</span>).
-</caption>
+<caption><span id="tab:subdivtx2">Tabla 3.3: </span>Frecuencias de los genotipos en las 4 poblaciones, manteniendo el equilibrio de Hardy-Weinberg en cada una de ellas, en el segundo punto en el tiempo luego del inicio (<span class="math inline">\(t_2\)</span>).</caption>
+<colgroup>
+<col width="17%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="17%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:left;">
-p
-</th>
-<th style="text-align:left;">
-AA
-</th>
-<th style="text-align:left;">
-Aa
-</th>
-<th style="text-align:left;">
-aa
-</th>
-<th style="text-align:left;">
-Homocigotos
-</th>
+<tr class="header">
+<th align="left"></th>
+<th align="left">p</th>
+<th align="left">AA</th>
+<th align="left">Aa</th>
+<th align="left">aa</th>
+<th align="left">Homocigotos</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-Población 1
-</td>
-<td style="text-align:left;">
-0.8500
-</td>
-<td style="text-align:left;">
-0.7225
-</td>
-<td style="text-align:left;">
-0.2550
-</td>
-<td style="text-align:left;">
-0.0225
-</td>
-<td style="text-align:left;">
-0.7450
-</td>
+<tr class="odd">
+<td align="left">Población 1</td>
+<td align="left">0.8500</td>
+<td align="left">0.7225</td>
+<td align="left">0.2550</td>
+<td align="left">0.0225</td>
+<td align="left">0.7450</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Población 2
-</td>
-<td style="text-align:left;">
-0.6500
-</td>
-<td style="text-align:left;">
-0.4225
-</td>
-<td style="text-align:left;">
-0.4550
-</td>
-<td style="text-align:left;">
-0.1225
-</td>
-<td style="text-align:left;">
-0.5450
-</td>
+<tr class="even">
+<td align="left">Población 2</td>
+<td align="left">0.6500</td>
+<td align="left">0.4225</td>
+<td align="left">0.4550</td>
+<td align="left">0.1225</td>
+<td align="left">0.5450</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Población 3
-</td>
-<td style="text-align:left;">
-0.3500
-</td>
-<td style="text-align:left;">
-0.1225
-</td>
-<td style="text-align:left;">
-0.4550
-</td>
-<td style="text-align:left;">
-0.4225
-</td>
-<td style="text-align:left;">
-0.5450
-</td>
+<tr class="odd">
+<td align="left">Población 3</td>
+<td align="left">0.3500</td>
+<td align="left">0.1225</td>
+<td align="left">0.4550</td>
+<td align="left">0.4225</td>
+<td align="left">0.5450</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Población 4
-</td>
-<td style="text-align:left;">
-0.1500
-</td>
-<td style="text-align:left;">
-0.0225
-</td>
-<td style="text-align:left;">
-0.2550
-</td>
-<td style="text-align:left;">
-0.7225
-</td>
-<td style="text-align:left;">
-0.7450
-</td>
+<tr class="even">
+<td align="left">Población 4</td>
+<td align="left">0.1500</td>
+<td align="left">0.0225</td>
+<td align="left">0.2550</td>
+<td align="left">0.7225</td>
+<td align="left">0.7450</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-media
-</td>
-<td style="text-align:left;">
-<strong>0.5000</strong>
-</td>
-<td style="text-align:left;">
-<strong>0.3225</strong>
-</td>
-<td style="text-align:left;">
-<strong>0.3550</strong>
-</td>
-<td style="text-align:left;">
-<strong>0.3225</strong>
-</td>
-<td style="text-align:left;">
-<strong>0.6450</strong>
-</td>
+<tr class="odd">
+<td align="left">media</td>
+<td align="left"><strong>0.5000</strong></td>
+<td align="left"><strong>0.3225</strong></td>
+<td align="left"><strong>0.3550</strong></td>
+<td align="left"><strong>0.3225</strong></td>
+<td align="left"><strong>0.6450</strong></td>
 </tr>
 </tbody>
 </table>
 <p>Para ser breves y confirmar la tendencia observada (además de comenzar a imaginar hacia dónde nos lleva ésta), veamos qué ocurre en el instante <span class="math inline">\(t_3\)</span>. Llegado este momento, en la <em>Población 1</em> se ha fijado el alelo <strong>A</strong> (<span class="math inline">\(p=1\)</span>), mientras que en la <em>Población 4</em> se ha fijado el alelo <strong>a</strong> (o lo que es equivalente, se ha perdido el <strong>A</strong>, <span class="math inline">\(p=0\)</span>). La distribución de genotipos se observa en la Tabla <a href="deriva.html#tab:subdivtx3">3.4</a>.</p>
 <table>
-<caption>
-<span id="tab:subdivtx3">Tabla 3.4: </span>Frecuencias de los genotipos en las 4 poblaciones, manteniendo el equilibrio de Hardy-Weinberg en cada una de ellas, en el tercer punto en el tiempo luego del inicio (<span class="math inline">\(t_3\)</span>).
-</caption>
+<caption><span id="tab:subdivtx3">Tabla 3.4: </span>Frecuencias de los genotipos en las 4 poblaciones, manteniendo el equilibrio de Hardy-Weinberg en cada una de ellas, en el tercer punto en el tiempo luego del inicio (<span class="math inline">\(t_3\)</span>).</caption>
+<colgroup>
+<col width="17%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="17%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:left;">
-p
-</th>
-<th style="text-align:left;">
-AA
-</th>
-<th style="text-align:left;">
-Aa
-</th>
-<th style="text-align:left;">
-aa
-</th>
-<th style="text-align:left;">
-Homocigotos
-</th>
+<tr class="header">
+<th align="left"></th>
+<th align="left">p</th>
+<th align="left">AA</th>
+<th align="left">Aa</th>
+<th align="left">aa</th>
+<th align="left">Homocigotos</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-Población 1
-</td>
-<td style="text-align:left;">
-1.0000
-</td>
-<td style="text-align:left;">
-1.0000
-</td>
-<td style="text-align:left;">
-0.0000
-</td>
-<td style="text-align:left;">
-0.0000
-</td>
-<td style="text-align:left;">
-1.0000
-</td>
+<tr class="odd">
+<td align="left">Población 1</td>
+<td align="left">1.0000</td>
+<td align="left">1.0000</td>
+<td align="left">0.0000</td>
+<td align="left">0.0000</td>
+<td align="left">1.0000</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Población 2
-</td>
-<td style="text-align:left;">
-0.7000
-</td>
-<td style="text-align:left;">
-0.4900
-</td>
-<td style="text-align:left;">
-0.4200
-</td>
-<td style="text-align:left;">
-0.0900
-</td>
-<td style="text-align:left;">
-0.5800
-</td>
+<tr class="even">
+<td align="left">Población 2</td>
+<td align="left">0.7000</td>
+<td align="left">0.4900</td>
+<td align="left">0.4200</td>
+<td align="left">0.0900</td>
+<td align="left">0.5800</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Población 3
-</td>
-<td style="text-align:left;">
-0.3000
-</td>
-<td style="text-align:left;">
-0.0900
-</td>
-<td style="text-align:left;">
-0.4200
-</td>
-<td style="text-align:left;">
-0.4900
-</td>
-<td style="text-align:left;">
-0.5800
-</td>
+<tr class="odd">
+<td align="left">Población 3</td>
+<td align="left">0.3000</td>
+<td align="left">0.0900</td>
+<td align="left">0.4200</td>
+<td align="left">0.4900</td>
+<td align="left">0.5800</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Población 4
-</td>
-<td style="text-align:left;">
-0.0000
-</td>
-<td style="text-align:left;">
-0.0000
-</td>
-<td style="text-align:left;">
-0.0000
-</td>
-<td style="text-align:left;">
-1.0000
-</td>
-<td style="text-align:left;">
-1.0000
-</td>
+<tr class="even">
+<td align="left">Población 4</td>
+<td align="left">0.0000</td>
+<td align="left">0.0000</td>
+<td align="left">0.0000</td>
+<td align="left">1.0000</td>
+<td align="left">1.0000</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-media
-</td>
-<td style="text-align:left;">
-<strong>0.5000</strong>
-</td>
-<td style="text-align:left;">
-<strong>0.3950</strong>
-</td>
-<td style="text-align:left;">
-<strong>0.2100</strong>
-</td>
-<td style="text-align:left;">
-<strong>0.3950</strong>
-</td>
-<td style="text-align:left;">
-<strong>0.7900</strong>
-</td>
+<tr class="odd">
+<td align="left">media</td>
+<td align="left"><strong>0.5000</strong></td>
+<td align="left"><strong>0.3950</strong></td>
+<td align="left"><strong>0.2100</strong></td>
+<td align="left"><strong>0.3950</strong></td>
+<td align="left"><strong>0.7900</strong></td>
 </tr>
 </tbody>
 </table>
@@ -2057,130 +1460,65 @@ T_{2,4}={4 \choose 4}\left(\frac{2}{4}\right)^{4}\left(\frac{4-2}{4}\right)^{4-4
 \end{equation}\]</span></p>
 <p>En la tabla <a href="deriva.html#tab:matrizMarkov">3.5</a> puedes ver el resultado de calcular las probabilidades de transición para todos los pares de estados posibles (pares entrada-salida, o generación actual-próxima generación, <span class="math inline">\(0 \leq i \leq 2N\)</span>, <span class="math inline">\(0 \leq j \leq 2N\)</span>). Llamaremos a esta matriz <span class="math inline">\(T\)</span>, por ser la matriz de probabilidad de <strong>transiciones</strong> de estado. En las filas tenemos los posibles estados en la generación actual, definidos como el número de alelos <strong>A</strong> en la generación actual, mientras que en las columnas tenemos el número de alelos <strong>A</strong> en la generación próxima. Se trata de probabilidades, ya que lo visto hasta ahora es que el apareamiento de acuerdo al modelo de Wright-Fisher generará poblaciones descendientes en forma aleatoria, con una probabilidad dada por esta matriz de transición. Es de notar que los estados actuales de <strong>0</strong> y <strong>4</strong> alelos <strong>A</strong> se corresponden a lo que definimos como <strong>barreras absorbentes</strong> de nuestro sistema, pues una vez alcanzado alguno de estos dos estados será imposible abandonarlos (estamos asumiendo la ausencia de mutación). Dicho de otra forma, una vez que se pierde el alelo <strong>A</strong> en una población (<span class="math inline">\(0\)</span> copias del mismo), o que el mismo queda fijado en la población (<span class="math inline">\(2N\)</span> copias, en nuestro ejemplo <span class="math inline">\(2N=4\)</span> copias), en las próximas generaciones esto no va a cambiar.</p>
 <table>
-<caption>
-<span id="tab:matrizMarkov">Tabla 3.5: </span>Matriz de transición para un locus con dos alelos y dos individuos diploides.
-</caption>
+<caption><span id="tab:matrizMarkov">Tabla 3.5: </span>Matriz de transición para un locus con dos alelos y dos individuos diploides.</caption>
+<colgroup>
+<col width="17%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-a 0 alelos A
-</th>
-<th style="text-align:right;">
-a 1 alelos A
-</th>
-<th style="text-align:right;">
-a 2 alelos A
-</th>
-<th style="text-align:right;">
-a 3 alelos A
-</th>
-<th style="text-align:right;">
-a 4 alelos A
-</th>
+<tr class="header">
+<th align="left"></th>
+<th align="right">a 0 alelos A</th>
+<th align="right">a 1 alelos A</th>
+<th align="right">a 2 alelos A</th>
+<th align="right">a 3 alelos A</th>
+<th align="right">a 4 alelos A</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-de 0 alelos A
-</td>
-<td style="text-align:right;">
-1.0000
-</td>
-<td style="text-align:right;">
-0.0000
-</td>
-<td style="text-align:right;">
-0.0000
-</td>
-<td style="text-align:right;">
-0.0000
-</td>
-<td style="text-align:right;">
-0.0000
-</td>
+<tr class="odd">
+<td align="left">de 0 alelos A</td>
+<td align="right">1.0000</td>
+<td align="right">0.0000</td>
+<td align="right">0.0000</td>
+<td align="right">0.0000</td>
+<td align="right">0.0000</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-de 1 alelos A
-</td>
-<td style="text-align:right;">
-0.3164
-</td>
-<td style="text-align:right;">
-0.4219
-</td>
-<td style="text-align:right;">
-0.2109
-</td>
-<td style="text-align:right;">
-0.0469
-</td>
-<td style="text-align:right;">
-0.0039
-</td>
+<tr class="even">
+<td align="left">de 1 alelos A</td>
+<td align="right">0.3164</td>
+<td align="right">0.4219</td>
+<td align="right">0.2109</td>
+<td align="right">0.0469</td>
+<td align="right">0.0039</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-de 2 alelos A
-</td>
-<td style="text-align:right;">
-0.0625
-</td>
-<td style="text-align:right;">
-0.2500
-</td>
-<td style="text-align:right;">
-0.3750
-</td>
-<td style="text-align:right;">
-0.2500
-</td>
-<td style="text-align:right;">
-0.0625
-</td>
+<tr class="odd">
+<td align="left">de 2 alelos A</td>
+<td align="right">0.0625</td>
+<td align="right">0.2500</td>
+<td align="right">0.3750</td>
+<td align="right">0.2500</td>
+<td align="right">0.0625</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-de 3 alelos A
-</td>
-<td style="text-align:right;">
-0.0039
-</td>
-<td style="text-align:right;">
-0.0469
-</td>
-<td style="text-align:right;">
-0.2109
-</td>
-<td style="text-align:right;">
-0.4219
-</td>
-<td style="text-align:right;">
-0.3164
-</td>
+<tr class="even">
+<td align="left">de 3 alelos A</td>
+<td align="right">0.0039</td>
+<td align="right">0.0469</td>
+<td align="right">0.2109</td>
+<td align="right">0.4219</td>
+<td align="right">0.3164</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-de 4 alelos A
-</td>
-<td style="text-align:right;">
-0.0000
-</td>
-<td style="text-align:right;">
-0.0000
-</td>
-<td style="text-align:right;">
-0.0000
-</td>
-<td style="text-align:right;">
-0.0000
-</td>
-<td style="text-align:right;">
-1.0000
-</td>
+<tr class="odd">
+<td align="left">de 4 alelos A</td>
+<td align="right">0.0000</td>
+<td align="right">0.0000</td>
+<td align="right">0.0000</td>
+<td align="right">0.0000</td>
+<td align="right">1.0000</td>
 </tr>
 </tbody>
 </table>
@@ -2302,130 +1640,65 @@ Figura 3.12: Evolución de la probabilidad de encontrar a las poblaciones en un 
 <p>Antes de abordar esta cuestión, es interesante notar que <span class="math inline">\(\mathbf{I}_2=\mathbf{I}_1 * \mathbf{T} = (\mathbf{I}_0 * \mathbf{T}) * \mathbf{T} = \mathbf{I}_0 * (\mathbf{T} * \mathbf{T})=\mathbf{I}*0 * \mathbf{T}^2\)</span><a href="#fn44" class="footnote-ref" id="fnref44"><sup>44</sup></a>. Claramente, lo anterior se puede generalizar a <span class="math inline">\(\mathbf{I}*{t=k}=\mathbf{I}_0 * \mathbf{T}^{(k)}\)</span>. En palabras, para calcular la distribución de probabilidades de los estados (número de alelos <strong>A</strong> en nuestro <strong>ensemble</strong> de poblaciones) en cualquier generación <span class="math inline">\(k\)</span> (donde consideramos <span class="math inline">\(t=k\)</span>, <span class="math inline">\(k&gt;0\)</span>) basta con multplicar la distribución en la generación inicial (o sea en <span class="math inline">\(t=0\)</span>, que llamamos <span class="math inline">\(\mathbf{I}_0\)</span>) por la matriz de transición de probabilidades elevada a la potencia <span class="math inline">\(k\)</span>.</p>
 <p>Volvamos entonces a la pregunta anterior: ¿hacia dónde va el movimiento de las frecuencias en las distintas poblaciones a largo plazo? Para abordar esta cuestión, tendremos en cuenta el razonamiento de que <span class="math inline">\(\mathbf{I}_{t=k}=\mathbf{I}_0 * \mathbf{T}^{(k)}\)</span>. Resulta interesante ver cómo se comporta <span class="math inline">\(\mathbf{T}^{(k)}\)</span> cuando <span class="math inline">\(k \to \infty\)</span>, es decir cuando el número de generaciones tiende a infinito. Una aproximación numérica sencilla consiste en elevar <span class="math inline">\(\mathbf{T}\)</span> a un número suficientemente grande (<em>e.g</em> 50 generaciones) y ver la forma que adquiere la matriz, como aparece en la Tabla <a href="deriva.html#tab:matrizMarkov50">3.9</a>.</p>
 <table>
-<caption>
-<span id="tab:matrizMarkov50">Tabla 3.9: </span>Matriz de transición para un locus con dos alelos y dos individuos diploides luego de 50 generaciones.
-</caption>
+<caption><span id="tab:matrizMarkov50">Tabla 3.9: </span>Matriz de transición para un locus con dos alelos y dos individuos diploides luego de 50 generaciones.</caption>
+<colgroup>
+<col width="17%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-a 0 alelos A
-</th>
-<th style="text-align:right;">
-a 1 alelos A
-</th>
-<th style="text-align:right;">
-a 2 alelos A
-</th>
-<th style="text-align:right;">
-a 3 alelos A
-</th>
-<th style="text-align:right;">
-a 4 alelos A
-</th>
+<tr class="header">
+<th align="left"></th>
+<th align="right">a 0 alelos A</th>
+<th align="right">a 1 alelos A</th>
+<th align="right">a 2 alelos A</th>
+<th align="right">a 3 alelos A</th>
+<th align="right">a 4 alelos A</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-de 0 alelos A
-</td>
-<td style="text-align:right;">
-1.00
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0.00
-</td>
+<tr class="odd">
+<td align="left">de 0 alelos A</td>
+<td align="right">1.00</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.00</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-de 1 alelos A
-</td>
-<td style="text-align:right;">
-0.75
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0.25
-</td>
+<tr class="even">
+<td align="left">de 1 alelos A</td>
+<td align="right">0.75</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.25</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-de 2 alelos A
-</td>
-<td style="text-align:right;">
-0.50
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0.50
-</td>
+<tr class="odd">
+<td align="left">de 2 alelos A</td>
+<td align="right">0.50</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.50</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-de 3 alelos A
-</td>
-<td style="text-align:right;">
-0.25
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0.75
-</td>
+<tr class="even">
+<td align="left">de 3 alelos A</td>
+<td align="right">0.25</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.75</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-de 4 alelos A
-</td>
-<td style="text-align:right;">
-0.00
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-1.00
-</td>
+<tr class="odd">
+<td align="left">de 4 alelos A</td>
+<td align="right">0.00</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
 </tr>
 </tbody>
 </table>
@@ -3573,7 +2846,7 @@ p = 1-p \Rightarrow 2p =1 \therefore p = \frac{1}{2}
 </div>
 </div>
 </div>
-<h3> Bibliografía {bibliografia}<a href="bibliografía-bibliografia.html#bibliografía-bibliografia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3> Bibliografía<a href="bibliografia.html#bibliografia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-CharlesworthLandeSlatkin1982" class="csl-entry">
 Charlesworth, Brian, Russel Lande, and Montgomery Slatkin. 1982. <span>“A Neo-Darwinian Commentary on Macro Evolution.”</span> <em>Evolution</em> 36 (3): 474–98.

@@ -26,7 +26,7 @@
 <meta name="author" content="(Jorge Urioste, María André, Andrea Larracharte, Washington Bell, Ana Laura Sánchez, Micaela Botta, Paula Batista, Rodrigo Vivián, Paola Gaiero))" />
 
 
-<meta name="date" content="2023-09-18" />
+<meta name="date" content="2023-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -522,7 +522,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="16" data-path="apendiceuno.html"><a href="apendiceuno.html"><i class="fa fa-check"></i><b>16</b> APENDICE A: Conceptos Matemáticos Básicos</a></li>
 <li class="chapter" data-level="17" data-path="apendicedos.html"><a href="apendicedos.html"><i class="fa fa-check"></i><b>17</b> APENDICE B: Cálculo Diferencial e Integral, ecuaciones diferenciales</a></li>
-<li class="chapter" data-level="18" data-path="bibliografía-bibliografia.html"><a href="bibliografía-bibliografia.html"><i class="fa fa-check"></i><b>18</b> Bibliografía {bibliografia}</a></li>
+<li class="chapter" data-level="18" data-path="bibliografia.html"><a href="bibliografia.html"><i class="fa fa-check"></i><b>18</b> Bibliografía</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -1172,14 +1172,11 @@ p_1=1-\frac{(N-1)}{N^2}-\frac{(N-1)}{N^2}=\frac{N^2-2(N-1)}{N^2}=\frac{(N-1)^2+1
 \end{equation}\]</span></p>
 <p>En resumen, para el modelo de Moran tenemos entonces</p>
 <div class="equationbox">
-$$
 <span class="math display">\[\begin{cases}
 p_0 = \frac{(N-1)}{N^2} \\
 p_1= \frac{(N-1)^2+1}{N^2} \\
 p_2 = \frac{(N-1)}{N^2}
-
 \end{cases}\]</span>
-<p>$$</p>
 </div>
 <p>por lo que cuando <span class="math inline">\(N \to \infty\)</span>, <span class="math inline">\(p_1 \to 1\)</span> y <span class="math inline">\(p_0=p_2 \to 0\)</span>, es decir la mayor parte de los individuos solo dejarán un descendiente en este modelo.</p>
 <p>Veamos que ocurre a nivel de la población. Supongamos que tenemos <span class="math inline">\(i\)</span> individuos haploides que portan el alelo <span class="math inline">\(A_1\)</span>, y que por lo tanto <span class="math inline">\(N-i\)</span> llevan el alelo <span class="math inline">\(A_2\)</span>. Para pasar de pasar de <span class="math inline">\(i\)</span> individuos en el instante de tiempo <span class="math inline">\(t\)</span> a <span class="math inline">\(i-1\)</span> en el siguiente instante lo que debería ocurrir es que un individuo con alelo <span class="math inline">\(A_2\)</span> sea elegido para reproducirse y que uno con alelo <span class="math inline">\(A_1\)</span> sea elegido para morir. Es decir, en términos de probabilidades, tenemos</p>
@@ -1200,14 +1197,11 @@ p_{i,i}=\frac{i^2}{N^2}+\frac{(N-i)^2}{N^2}=\frac{i^2+(N-i)^2}{N^2}
 <p>La explicación de la ecuación <a href="microbial.html#eq:moran3">(7.47)</a> es muy sencilla; para mantener el mismo número de copias hay dos posibilidades: <em>a)</em> copiar un alelo <span class="math inline">\(A_1\)</span> y que muera un alelo <span class="math inline">\(A_1\)</span>, o <em>b)</em> copiar un alelo <span class="math inline">\(A_2\)</span> y que muera un alelo <span class="math inline">\(A_2\)</span>. El primer escenario ocurre con probabilidad <span class="math inline">\((\frac{i}{N}) \cdot (\frac{i}{N})=\frac{i^2}{N^2}\)</span>, mientras que el segundo ocurre con probabilidad <span class="math inline">\((\frac{(N-i)}{N}) \cdot (\frac{(N-i)}{N})=\frac{(N-i)^2}{N^2}\)</span>. Como ambos son eventos mutuamente excluyentes debemos sumar sus probabilidades, lo que nos da el resultado de la ecuación <a href="microbial.html#eq:moran3">(7.47)</a>.</p>
 <p>En resumen, tenemos entonces que las probabilidades de transición en el modelo de Moran están dadas por</p>
 <div class="equationbox">
-$$
 <span class="math display">\[\begin{cases}
 p_{i,i-1}= \frac{(N-i) \cdot i}{N^2} \\
 p_{i,i}=\frac{i^2+(N-i)^2}{N^2} \\
 p_{i,i+1} =\frac{i \cdot (N-i)}{N^2}
-
 \end{cases}\]</span>
-<p>$$</p>
 </div>
 <p>A diferencia del modelo de Wright-Fisher en donde excepto desde los estados absorbentes siempre existía una probabilidad de pasar a cualquiera de los estados (ver la sección <a href="deriva.html#cadenas-de-markov">Cadenas de Markov</a>), en este caso nuestra <strong>matriz de transición será <em>tridiagonal</em></strong>, una matriz cuyos elementos son solo distintos de cero en la diagonal principal y las diagonales adyacentes por encima y por debajo de esta. Ambos modelos, en su forma básica, dependen de una serie de supuestos que simplifican el tratamiento, esencialmente que se trata de un <em>locus</em> selectivamente neutro, con todos los alelos de idéntico <strong><em>fitness</em></strong> y que no existe estructura demográfica (<em>i.e.,</em> el apareamiento es al azar).</p>
 <p>Si recuerdas de la sección <a href="deriva.html#el-modelo-coalescente">El modelo coalescente</a>, a partir de la distribución del número de alelos en una muestra podíamos deducir varias cosas utilizando este modelo. En particular, la probabilidad de que ninguno de los <span class="math inline">\(k\)</span> alelos converja en las pasadas <span class="math inline">\(t\)</span> generaciones es igual a</p>
@@ -1236,26 +1230,24 @@ P(T_k \gt v) \approx e^{-\frac{k(k-1)}{2} v}
 <li>El algoritmo del modelo de Moran es muy sencillo: a cada instante en el tiempo un individuo es elegido para reproducirse y va a dejar una copia, mientras que un individuo es elegido para morir (puede ser el mismo individuo que acaba de dejar una copia, pero no la copia). Por lo tanto, la posible descendencia de un individuo (considerándose a si mismo como descendencia) en cada instante es 0, 1 o 2 descendientes.</li>
 <li>La probabilidad de dejar 0, 1 o 2 descendientes (<span class="math inline">\(p_0,\ p_1,\ p_2\)</span>) bajo el modelo de Moran es</li>
 </ul>
-$$
-<span class="math display">\[\begin{cases}
+<p><span class="math display">\[\begin{equation}
+\begin{cases}
 p_0 = \frac{(N-1)}{N^2} \\
 p_1= \frac{(N-1)^2+1}{N^2} \\
 p_2 = \frac{(N-1)}{N^2}
-
-\end{cases}\]</span>
-<p>$$</p>
+\end{cases}
+\end{equation}\]</span></p>
 <p>por lo que cuando <span class="math inline">\(N \to \infty\)</span>, <span class="math inline">\(p_1 \to 1\)</span> y <span class="math inline">\(p_0=p_2 \to 0\)</span>; es decir la mayor parte de los individuos solo dejarán un descendiente según este modelo.</p>
 <ul>
 <li>En general, las probabilidades de transición en el modelo de Moran están dadas por</li>
 </ul>
-$$
-<span class="math display">\[\begin{cases}
+<p><span class="math display">\[\begin{equation}
+\begin{cases}
 p_{i,i-1}= \frac{(N-i) \cdot i}{N^2} \\
 p_{i,i}=\frac{i^2+(N-i)^2}{N^2} \\
 p_{i,i+1} =\frac{i \cdot (N-i)}{N^2}
-
-\end{cases}\]</span>
-<p>$$</p>
+\end{cases}
+\end{equation}\]</span></p>
 <ul>
 <li>Vimos que es posible escalar el modelo coalescente para que no dependa del tamaño poblacional. Si aplicamos la transformación <span class="math inline">\(T_k=T_k^N/N\)</span>, entonces la siguiente aproximación es valida</li>
 </ul>
@@ -1811,7 +1803,7 @@ R_0 \lt 1 \\
 
 
 
-<h3> Bibliografía {bibliografia}<a href="bibliografía-bibliografia.html#bibliografía-bibliografia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3> Bibliografía<a href="bibliografia.html#bibliografia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Achtman1975" class="csl-entry">
 Achtman, M. 1975. <span>“<span class="nocase"><span>M</span>ating aggregates in <span>E</span>scherichia coli conjugation</span>.”</span> <em>J Bacteriol</em> 123 (2): 505–15.
