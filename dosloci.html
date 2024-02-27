@@ -113,6 +113,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#qué-es-y-qué-no-es-este-libro"><i class="fa fa-check"></i>¿Qué ES y qué NO ES este libro?</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#bibliografía-recomendada-para-este-curso"><i class="fa fa-check"></i>Bibliografía recomendada para este curso</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#responsabilidades-y-agradecimientos"><i class="fa fa-check"></i>Responsabilidades y Agradecimientos</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#íconos-utilizados-en-este-libro"><i class="fa fa-check"></i>Íconos utilizados en este libro</a></li>
 </ul></li>
 <li class="part"><span><b>Parte I: Genómica</b></span></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i>Introducción a la Genómica</a>
@@ -616,6 +617,7 @@ div.csl-indent {
 </p>
 <p><span class="math inline">\(\square\)</span> Discutir diferentes escenarios biológicos, además de la proximidad física, que pueden dar como resultado el desequilibrio de ligamiento entre dos o más <em>loci</em>.</p>
 </div>
+<div style="page-break-after: always;"></div>
 <div id="desequilibrio-de-ligamiento-y-recombinación" class="section level2 hasAnchor">
 <h2>Desequilibrio de ligamiento y recombinación<a href="dosloci.html#desequilibrio-de-ligamiento-y-recombinación" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En los organismos diploides y con ploidías mayores, durante la meiosis se produce un fenómeno fundamental para la evolución: la <strong>recombinación</strong>. Este proceso se encuentra esquematizado en la Figura <a href="dosloci.html#fig:recombinacion">53</a>. En los organismos diploides todas las células nucleadas, con excepción de los gametos, cuentan con una dotación aproximadamente duplicada, la mitad proveniente de la <strong>hembra</strong> y la otra mitad del <strong>macho</strong>. Como recordarás del curso de <strong>Genética I</strong>, durante la <strong>meiosis I</strong> ocurre ocasionalmente (frecuentemente) la unión física de los cromosomas homólogos en algunos puntos (<em>e.g.</em>, en mamíferos usualmente en el orden del número de brazos cromosómicos) llamados <strong>quiasmas</strong> y mediante un proceso complejo se produce un intercambio entre cromátidas no-hermanas. Esto lleva a combinar de una manera diferente los alelos respecto a su arreglo original <strong>hembra-macho</strong>, existiendo ahora fragmentos de uno y de otro en los gametos recombinados.</p>
@@ -656,7 +658,7 @@ x&#39;_4=(1-r)x_4+rq_1q_2
 <p>Veamos ahora qué ocurre con el cambio de frecuencia del gameto <span class="math inline">\(A_1B_1\)</span>. La nueva frecuencia es <span class="math inline">\(x&#39;_1\)</span> y la anterior <span class="math inline">\(x_1\)</span>, por lo que sustituyendo el resultado de <a href="dosloci.html#eq:deslig1">(120)</a>, la diferencia será</p>
 <p><span class="math display" id="eq:deslig3">\[
 \begin{split}
-\Delta_r x_1=x&#39;_1-x_1=(1-r)x_1+rp_1p_2-x_1= \cancel{x_1} -rx_1 + rp_1p_2 - \cancel{x_1} \Leftrightarrow \\
+\Delta_r x_1=x&#39;_1-x_1=(1-r)x_1+rp_1p_2-x_1= x_1 -rx_1 + rp_1p_2 - x_1 \Leftrightarrow \\
 \Delta_r x_1=-r(x_1-p_1p_2)
 \end{split}
 \tag{122}
@@ -730,7 +732,7 @@ D=x_1x_4-x_2x_3
 <p>Veamos si este resultado nos sirve para verificar alguna de las ecuaciones que aparecen en <a href="dosloci.html#eq:deslig7">(127)</a>, la primera de ellas, por ejemplo. Si sustituimos en la misma <span class="math inline">\(D=x_1x_4-x_2x_3\)</span> y utilizamos algunas de las identidades planteadas anteriormente, tenemos</p>
 <p><span class="math display">\[x_2=p_1q_2-D=p_1q_2-x_1x_4+x_2x_3=(x_1+x_2)(x_2+x_4)-x_1x_4+x_2x_3\]</span>
 <span class="math display" id="eq:deslig14">\[\begin{equation}
-x_2=x_1x_2+x_2^2+ \cancel{x_1x_4} +x_2x_4 - \cancel{x_1x_4} +x_2x_3=x_2(x_1+x_2+x_3+x_4)
+x_2=x_1x_2+x_2^2+ x_1x_4 +x_2x_4 - x_1x_4 +x_2x_3=x_2(x_1+x_2+x_3+x_4)
 \tag{134}
 \end{equation}\]</span></p>
 <p>Y recordando que <span class="math inline">\(x_1+x_2+x_3+x_4=1\)</span>, entonces</p>
@@ -886,14 +888,14 @@ x&#39;_1=p&#39;_1p&#39;_2+D&#39;=(1-r)(p_1p_2+D)+rp_1p_2
 <p><span class="math display" id="eq:deslig17">\[
 \begin{split}
 D&#39;=(1-r)(p_1p_2+D)+rp_1p_2-p&#39;_1p&#39;_2 \Leftrightarrow \\
-D&#39;=p_1p_2 - \cancel{rp_1p_2} +D-rD + \cancel{rp_1p_2} -p&#39;_1p&#39;_2
+D&#39;=p_1p_2 - rp_1p_2 +D-rD + rp_1p_2 -p&#39;_1p&#39;_2
 \end{split}
 \tag{141}
 \]</span></p>
 <p>Si asumimos que la frecuencia de los alelos no depende de sus combinaciones y que el equilibrio de Hardy-Weinberg no se ve afectado por la inclusión de otros <em>loci</em>, entonces podemos asumir <span class="math inline">\(p&#39;_1=p_1\)</span> y <span class="math inline">\(p&#39;_2=p_2\)</span>, por lo que podemos simplificar la expresión anterior</p>
 <p><span class="math display" id="eq:deslig18">\[
 \begin{split}
-D&#39;=p_1p_2 + D-rD - \cancel{p_1p_2}\ \therefore D&#39;=D-rD\\
+D&#39;=p_1p_2 + D-rD - p_1p_2\ \therefore D&#39;=D-rD\\
 D&#39;=D(1-r)
 \end{split}
 \tag{142}
@@ -929,7 +931,7 @@ Figura 56: Evolución del desequilibrio de ligamiento respecto de <span class="m
 </div>
 <p>Veamos si podemos determinar analíticamente el número de generaciones necesarias para llegar a una proporción determinada de <span class="math inline">\(D_0\)</span> (<em>e.g.</em>, <span class="math inline">\(f\)</span>). Tendremos <span class="math inline">\(D_t=D_0 f\)</span>, con <span class="math inline">\(0&lt;f&lt;1\)</span>. Si operamos con la ecuación <a href="dosloci.html#eq:deslig20">(144)</a>, sustituyendo <span class="math inline">\(D_t\)</span>, tenemos</p>
 <p><span class="math display" id="eq:deslig21">\[\begin{equation}
-D_t = \cancel{D_0} f = (1-r)^t \cancel{D_0}\ \therefore\ f=(1-r)^t
+D_t = D_0 f = (1-r)^t D_0\ \therefore\ f=(1-r)^t
 \tag{145}
 \end{equation}\]</span></p>
 <p>Aplicando logaritmo a ambos lados la ecuación <a href="dosloci.html#eq:deslig21">(145)</a> se transforma en</p>
@@ -1223,7 +1225,7 @@ Figura 57: Superficie de la función bivariada que nos devuelve el número de ge
 <p>Por último, notemos que la aproximación exponencial nos permite estimar el número <span class="math inline">\(t\)</span> de generaciones necesarias para alcanzar una fracción <span class="math inline">\(f\)</span> del desequilibrio de ligamiento inicial <span class="math inline">\(D_0\)</span>:</p>
 <p><span class="math display">\[
 \begin{split}
-D_t = \cancel{D_0} f \approx e^{-rt} \cancel{D_0} \Leftrightarrow \\
+D_t = D_0 f \approx e^{-rt} D_0 \Leftrightarrow \\
 ln(f) = -rt \Leftrightarrow \\
 \end{split}
 \]</span></p>
@@ -1486,7 +1488,7 @@ x&#39;_1=\frac{x_1\bar{w}_1-rDw_{14}}{\bar{w}}
 \end{equation}\]</span></p>
 <p>De acuerdo a las ecuaciones <a href="dosloci.html#eq:deslig6">(126)</a> y <a href="dosloci.html#eq:deslig7">(127)</a>, <span class="math inline">\(x_1=p_1p_2+D\)</span> y <span class="math inline">\(x_3=q_1p_2-D\)</span>, mientras que las ecuaciones <a href="dosloci.html#eq:recsel9">(157)</a> y <a href="dosloci.html#eq:recsel11">(159)</a> indican que <span class="math inline">\(\bar{w}_1=1-q_1hs\)</span> y <span class="math inline">\(\bar{w}_3=1-p_1hs-q_1s\)</span>, por lo que sustituyendo en <a href="dosloci.html#eq:recsel16">(164)</a> tenemos</p>
 <p><span class="math display">\[\Delta p_2=\frac{(p_1p_2+D)[1-q_1hs]+(q_1p_2-D)[1-p_1hs-q_1s]-p_2\bar{w}}{\bar{w}} =\]</span>
-<span class="math display">\[\frac{p_1p_2-p_1p_2q_1hs+\cancel{D}-Dq_1hs+q_1p_2-p_1p_2q_1hs-p_2q_1^2s-\cancel{D}+Dp_1hs+Dq_1s-p_2\bar{w}}{\bar{w}} \Leftrightarrow \]</span>
+<span class="math display">\[\frac{p_1p_2-p_1p_2q_1hs+D-Dq_1hs+q_1p_2-p_1p_2q_1hs-p_2q_1^2s-D+Dp_1hs+Dq_1s-p_2\bar{w}}{\bar{w}} \Leftrightarrow \]</span>
 <span class="math display">\[\Delta p_2=\frac{p_1p_2-2p_1p_2q_1hs-Dq_1hs+q_1p_2-p_2q_1^2s+Dp_1hs+Dq_1s-p_2\bar{w}}{\bar{w}} \Leftrightarrow\]</span>
 <span class="math display">\[\Delta p_2=\frac{p_2(p_1+q_1)-2p_1p_2q_1hs-Dq_1hs-p_2q_1^2s+Dp_1hs+Dq_1s-p_2\bar{w}}{\bar{w}} \Leftrightarrow\]</span>
 <span class="math display" id="eq:recsel17">\[\begin{equation}
@@ -1496,7 +1498,7 @@ x&#39;_1=\frac{x_1\bar{w}_1-rDw_{14}}{\bar{w}}
 <p>Pero de acuerdo a la ecuación <a href="dosloci.html#eq:recsel12">(160)</a> tenemos que <span class="math inline">\(\bar{w}=1-2p_1q_1hs-q_1^2s\)</span>, por lo que sustituyendo en la ecuación <a href="dosloci.html#eq:recsel17">(165)</a> tenemos ahora</p>
 <p><span class="math display" id="eq:recsel18">\[
 \begin{split}
-\Delta p_2=\frac{\cancel{p_2\bar{w}}-Dq_1hs+Dp_1hs+Dq_1s-\cancel{p_2\bar{w}}}{\bar{w}} \Leftrightarrow \\
+\Delta p_2=\frac{p_2\bar{w}-Dq_1hs+Dp_1hs+Dq_1s-p_2\bar{w}}{\bar{w}} \Leftrightarrow \\
 \Delta p_2=\frac{-Dq_1hs+Dp_1hs+Dq_1s}{\bar{w}} \Leftrightarrow \\
 \Delta p_2=\frac{Ds[p_1h-q_1h+q_1]}{\bar{w}} \Leftrightarrow
 \end{split}
@@ -1654,7 +1656,9 @@ Esta disminución de la heterocigosidad se extiende de forma no lineal al rededo
 </div>
 <div id="ejercicios-5" class="section level3 unnumbered hasAnchor">
 <h3>Ejercicios<a href="dosloci.html#ejercicios-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="figuras/cabezamosca.png" style="width:6.0%" /> <span class="math inline">\(\raisebox{2.5ex}{\textbf{Ejercicio 5.1}}\)</span></p>
+<h4 id="logo" style="display: inline-block;">
+<img src='figuras/cabezamosca.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 5.1
+</h4>
 <p>Dos <em>loci</em> bi-alélicos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> se encuentran a una distancia estimada de <span class="math inline">\(2,3\)</span> centi-Morgans.
 En un momento dado las frecuencias alélicas para ambos alelos son las siguientes:</p>
 <p><span class="math display">\[
@@ -1721,7 +1725,9 @@ f(A_2B_2) = 0,19 + 0,00207 = 0,19207 \\
 \]</span></p>
 <p><br />
 </p>
-<p><img src="figuras/cabezamosca.png" style="width:6.0%" /> <span class="math inline">\(\raisebox{2.5ex}{\textbf{Ejercicio 5.2}}\)</span></p>
+<h4 id="logo" style="display: inline-block;">
+<img src='figuras/cabezamosca.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 5.2
+</h4>
 <p>Dos <em>loci</em> se encuentran segregando en una población de <em>D. melanogaster</em> bajo un desequilibrio de ligamiento de <span class="math inline">\(D = 0,36\)</span>.
 Se logra determinar que luego de 20 generaciones este valor a <span class="math inline">\(D=0,20\)</span>.</p>
 <p><strong>a.</strong> Estime la tasa de recombinación entre los dos <em>loci</em>.</p>
@@ -1759,7 +1765,11 @@ t = \frac{ln(0,5)}{ln(1-(1-\sqrt[20]{\frac{0,20}{0,36}}))} = \frac{ln(0,5)}{ln(\
 t \approx 23,6
 \]</span></p>
 <p>Por lo tanto, se estima se requieren aproximadamente 24 generaciones para que el valor de desequilibrio de ligamiento <span class="math inline">\(D\)</span> decaiga a la mitad de su valor inicial.</p>
-<p><img src="figuras/cabezamosca.png" style="width:6.0%" /> <span class="math inline">\(\raisebox{2.5ex}{\textbf{Ejercicio 5.3}}\)</span></p>
+<p><br />
+</p>
+<h4 id="logo" style="display: inline-block;">
+<img src='figuras/cabezamosca.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 5.3
+</h4>
 <p>Una población de 50 individuos diploides se encuentra segregando dos <em>loci,</em> <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, los cuales presentan una baja tasa de recombinación.
 Inicialmente sólo segregan tres alelos en la población, que llamaremos <span class="math inline">\(A_1\)</span>, <span class="math inline">\(B_1\)</span> y <span class="math inline">\(B_2\)</span>.
 En un momento dado surge un nuevo alelo por una mutación espontánea <span class="math inline">\(A_1 \rightarrow A_2\)</span>.
@@ -1830,7 +1840,9 @@ La nueva población se fundó con individuos que únicamente portaban los haplot
 Si bien la recombinación generó otras combinaciones alélicas (disminuyendo la correlación de <span class="math inline">\(r^2 = 1\)</span> observable en la generación fundadora), al momento de sampleo de haplotipos la correlación sigue siendo apreciable (<span class="math inline">\(60\%\)</span> del máximo teórico).</p>
 <p><br />
 </p>
-<p><img src="figuras/cabezamosca.png" style="width:6.0%" /> <span class="math inline">\(\raisebox{2.5ex}{\textbf{Ejercicio 5.4}}\)</span></p>
+<h4 id="logo" style="display: inline-block;">
+<img src='figuras/cabezamosca.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 5.4
+</h4>
 <p>Poco después de que se redescubrieran las leyes de Mendel, William Bateson, Edith Saunders y Reginald Punnett se dispusieron a estudiar la herencia de caracteres en <em>Lathyrus odoratus.</em> En particular, se centraron en el estudio de dos caracteres: color de flor (alelo <span class="math inline">\(V\)</span> dominante, color violeta; alelo <span class="math inline">\(v\)</span> recesivo, color rojo) y forma del grano de polen (alelo <span class="math inline">\(A\)</span> dominante, forma alargada; alelo <span class="math inline">\(a\)</span> recesivo, redondo).</p>
 <p>Los investigadores realizaron cruces entre líneas homocigotas <span class="math inline">\(VV/AA\)</span> (flor violeta, grano de polen alargado) y <span class="math display">\[vv/aa\]</span> (flor roja, <strong>grano de polen</strong> redondo).</p>
 <p>La distribución de la generación resultante fue la siguiente</p>
@@ -1854,7 +1866,9 @@ Esto parece indicar la existencia de desequilibrio de ligamiento (<em>i.e.</em> 
 Por lo tanto se rechaza la hipótesis nula de independencia para la segregación de los <em>loci</em> considerados.</p>
 <p><br />
 </p>
-<p><img src="figuras/agro.png" style="width:6.0%" /> <span class="math inline">\(\raisebox{2.5ex}{\textbf{Ejercicio 5.4}}\)</span></p>
+<h4 id="logo" style="display: inline-block;">
+<img src='figuras/agro.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 5.5
+</h4>
 <p><span class="citation">(Inspirado en <a href="#ref-Ma2019">Ma et al. 2019</a>)</span></p>
 <p>La raza de ganado bovino Holstein-Frisia ha sido sometida a un intenso proceso de selección en América del Norte, a efectos de aumentar las tasas de producción o modificar el contenido nutricional de la leche producida.
 El locus <span class="math inline">\(\text{DGAT1}\)</span> codifica para la enzima diacilglicerol O-aciltransferasa 1, y se ha visto asociado a la relación grasa-proteína de la leche vacuna, así como a el volúmen de producción.
