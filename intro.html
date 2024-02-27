@@ -1706,13 +1706,166 @@ logFC_i=log\left[\frac{mRNA_{i,1}}{mRNA_{i,2}}\right]
 </div>
 <div id="ejercicios-1" class="section level3 unnumbered hasAnchor">
 <h3>Ejercicios<a href="intro.html#ejercicios-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Ejercicio 1.1</strong></p>
-<p>Dada la siguiente secuencia “AUGGGAUUUCCGCCCAUUUACGUG”, a) determinar de que ácido nucléico se trata (ADN o ARN), b) si tiene sentido, traducirla a una secuencia de aminoácidos tomandola como hebra <strong>codificante</strong> y en marco de referencia y c) escribir en sentido 5’–&gt;3’ la hebra complementaria pero en ADN (hebra molde) d) calcular el contenido G+C</p>
+<h4 id="logo" style="display: inline-block;">
+<img src='figuras/cienciabasica.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 1.1
+</h4>
+<p>Dada la siguiente secuencia “AUGGGAUUUCCGCCCAUUUACGUG”</p>
+<p><strong>a.</strong> Determinar de que ácido nucléico se trata (ADN o ARN).
+<strong>b.</strong> Si tiene sentido traducirla a una secuencia de aminoácidos tomandola como hebra <strong>codificante</strong> y en marco de referencia.
+<strong>c.</strong> Escribir en sentido 5’–&gt;3’ la hebra complementaria pero en ADN (hebra molde) d) calcular el contenido G+C.</p>
 <p><strong><em>Solución</em></strong></p>
-<p><strong>a)</strong> Se trata de ARN ya que entre sus bases aparece <strong>U</strong>racilo en lugar de <strong>T</strong>imina<br />
-<strong>b)</strong> En principio parece tener sentido, por lo que asumiendo que está en marco de referencia correcto y y que se trata de la hebra codificante, separamos en codones “AUG GGA UUU CCG CCC AUU UAC GUG”, que utilizando el código genético se traduce como MGFPPIYV<br />
-<strong>c)</strong> “CAC GTA AAT GGG CGG AAA TCC CAT”<br />
-<strong>d)</strong> 6G + 6C= 12 G o C en un total de [8 codones x 3 bases c/u = 24 bases], por lo tanto 12/24=0.5 o 50%</p>
+<p><strong>a.</strong> Se trata de ARN ya que entre sus bases aparece <strong>U</strong>racilo en lugar de <strong>T</strong>imina.</p>
+<p><strong>b.</strong> En principio parece tener sentido, por lo que asumiendo que está en marco de referencia correcto y y que se trata de la hebra codificante, separamos en codones “AUG GGA UUU CCG CCC AUU UAC GUG”, que utilizando el código genético se traduce como MGFPPIYV.</p>
+<p><strong>c.</strong> “CAC GTA AAT GGG CGG AAA TCC CAT”.</p>
+<p><strong>d.</strong> 6G + 6C= 12 G o C en un total de [8 codones x 3 bases c/u = 24 bases], por lo tanto 12/24=0.5 o 50%.</p>
+<p><br />
+</p>
+<h4 id="logo" style="display: inline-block;">
+<img src='figuras/cienciabasica.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 1.2
+</h4>
+<p>Un investigador obtuvo la siguiente secuencia (según él) de un nuevo gen que sería responsable de la generación de radiactividad por parte de una especie bacteriana que lo posee (presentamos la secuencia ordenada en tripletes y en marco de lectura correcto, para mayor facilidad de visualización):</p>
+<pre><code>GTC TCT CGT GAT GCG GTT GTC ATA AGA GCT GGC TCT GAG CTG
+AAT TGA AGC ATA TCC TTC GCA GTC TTA AAA GGG TTG GGA TTA
+TCA ACC TCC CAC GCA ATA CCG GCG TTC AAC AGT TTA CCA TCA
+TCT ACT GAC GCG TGA TGT TGC GGA GCG ACG GGA AGT GAT
+AAA AGT TAC TTT ACA</code></pre>
+<p>La especie bacteriana de la que supuestamente fue aislado el gen, posee un
+contenido GC del 80 %.</p>
+<p>Por otra parte, un estudiante de su grupo afirma que no solamente no se trata
+de la secuencia de un nuevo gen, sino que no se trata de la secuencia de ningún
+gen. Más aún, plantea que esta secuencia fue generada en forma aleatoria por
+una máquina y que posiblemente el investigador ha sido engañado por alguien.
+El conteo de bases dio lo siguiente:</p>
+<p><span class="math display">\[
+\begin{cases}
+A: 46 \\
+C: 40 \\
+G: 45 \\
+T: 49
+\end{cases}
+\]</span></p>
+<p>mientras que el conteo de aminoácidos fue el siguiente:</p>
+<p><span class="math display">\[
+\begin{cases}
+STOP: 2 \\
+A: 7 \\
+C: 2 \\
+D: 3 \\
+E: 1 \\
+F: 3 \\
+G: 5 \\
+H: 1 \\
+I: 3 \\
+K: 2 \\
+L: 5 \\
+N: 2 \\
+P: 2 \\
+R: 2 \\
+S: 11 \\
+T: 4 \\
+V: 4 \\
+Y: 1
+\end{cases}
+\]</span></p>
+<p><strong>a.</strong> ¿Quién de los dos parece tener razón? Argumenta las razones que te llevan
+a esa conclusión.</p>
+<p><strong>b.</strong> ¿Cuántas cisteínas hay codificadas en la secuencia y dónde se encuentran?</p>
+<p><strong>c.</strong> ¿Cuántas serinas y cuántas argininas serían de esperar en una secuencia
+de este largo si se tratase de una secuencia creada al azar y cuántas
+fueron observadas? ¿Y la suma de las dos (es decir, para los codones de
+los sextetos)?</p>
+<p><strong>d.</strong> Determinar mediante un test estadístico si el número de Serinas y de
+Argininas observadas cae dentro de lo esperado, o si debemos rechazar
+dicha hipótesis nula.</p>
+<p><strong><em>Solución</em></strong></p>
+<p><strong>a.</strong> Algunos hechos hacen sospechar que no se trata de una secuencia presente en un organismo vivo tal y como los conocemos:</p>
+<ul>
+<li>El codón de iniciación no es ATG ni tampoco ninguna de las formas alternativas más usuales (esta argumento no es excluyente, pero es raro de observar).</li>
+<li>En la posición 46, es decir el inicio del codón 16, corresponde con el codón
+TGA que es un codón terminación, lo que nos dejaría con una proteína de 15
+aminoácidos de largo. Lo mismo ocurre en la posición 139, es decir el inicio del
+codón 47, por lo que tampoco parece mucho mejor la situación del fragmento
+interno entre ambos codones STOP.</li>
+<li>La secuencia no termina en ninguno de los codones STOP conocidos.</li>
+<li>La distribución de la frecuencia de bases no se aparta mucho de lo esperado para una secuencia obtenida al azar (<span class="math inline">\(\frac{180}{4} = 45\)</span>). En cambio, si el contenido del genoma bacteriano fuese de <span class="math inline">\(80\%\)</span>, entonces esperaríamos <span class="math inline">\(180∗0,80 2 = 72\)</span> bases para G y lo mismo para C, mientras que esperaríamos <span class="math inline">\(180∗0,20 2 = 18\)</span> bases para A y lo mismo para T.</li>
+</ul>
+<p><strong>b.</strong> Dos cisteínas, y se encuentran codificadas por los codones 48 y 49.</p>
+<p><strong>c.</strong> La serina está codificada por 6 codones y Arginina por otros 6 codones, de los 64 que hay en el código genético, o lo que es lo mismo, de <span class="math inline">\(4^3 = 64\)</span> posibles combinaciones de cada bases (A, C, G, T) en 3 posiciones. Como hay un total de 60 codones en la secuencia, esperamos: <span class="math inline">\(\text{Ser} = 60 ∗ \frac{6}{64} = 5,625\)</span>, <span class="math inline">\(\text{Arg} = 60 ∗ \frac{6}{64} = 5,625\)</span>. Se observaron 11 y 2 respectivamente, lo que en ambos casos parece algo alejado del esperado. Sin embargo, la suma de ambos sextetos da 13, mientras que el
+esperado es <span class="math inline">\(\text{Ser}+\text{Arg} = 60 ∗ \frac{12}{64} = 11,25\)</span>, lo que parece mucho más cercano.</p>
+<p><strong>d.</strong> Un test de chi-cuadrado de “goodness-of-fit” (bondad de ajuste) podría ser adecuados en este caso.</p>
+<h4 id="logo" style="display: inline-block;">
+<img src='figuras/cienciabasica.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 1.3
+</h4>
+<p><br />
+</p>
+<p>Observando la tabla con el código genético universal agrupar los aminoácidos
+por el número de codones que los codifican y resumir el número de aminoácidos
+con cada multiplicidad. ¿Qué característica comparten la mayor parte de los
+duetos (los aminoácidos codificados por dos codones)?</p>
+<p><strong><em>Solución</em></strong></p>
+<ul>
+<li>1 codon: <strong>Met</strong>, <strong>Trp</strong></li>
+<li>2 codones: <strong>Phe</strong>, <strong>Tyr</strong>, <strong>His</strong>, <strong>Gln</strong>, <strong>Asn</strong>, <strong>Lys</strong>, <strong>Asp</strong>, <strong>Glu</strong>, <strong>Cys</strong></li>
+<li>3 codones: <strong>Ile</strong></li>
+<li>4 codones: <strong>Val</strong>, <strong>Pro</strong>, <strong>Thr</strong>, <strong>Ala</strong>, <strong>Gly</strong></li>
+<li>6 codones: <strong>Leu</strong>, <strong>Arg</strong>, <strong>Ser</strong></li>
+</ul>
+<p>La característica que comparten 7 de 9 duetos es que se encuentran en la tercer
+columna de la tabla del código, es decir, tienen una A en segunda posición del
+codon.</p>
+<p><br />
+</p>
+<h4 id="logo" style="display: inline-block;">
+<img src='figuras/cienciabasica.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 1.4
+</h4>
+<p>En un planeta de otra galaxia existe vida con algunas similitudes a la que existe
+en nuestro planeta. En particular, también las proteínas parecen ser la base
+estructural y funcional de la vida, mientras que los ácidos nucléicos son los
+responsables del mantenimiento y duplicación de la información. Sin embargo,
+a diferencia de nuestro planeta, los aminoácidos proteinogénicos codificados son
+24, mientras que las bases nucleótidicas análogas a las de nuestro ADN son 5.
+Suponiendo que los mecanismos moleculares en dicho planeta han sido seleccionados para ser altamente eficientes</p>
+<p><strong>a.</strong> ¿De qué largo mínimo deberían ser los codones?</p>
+<p><strong>b.</strong> Si el código genético en ese planeta tuviese algún nivel de redundancia (más de un codón para el mismo aminoácido), ¿de qué largo mínimo serían los codones? En ese caso, ¿cuál sería el número promedio de codones por
+aminoácido?</p>
+<p><strong>c.</strong> ¿Cómo se compara esa redundancia promedio con la existente en nuestro
+planeta?</p>
+<p><strong>d.</strong> ¿Qué ventaja potencial tiene la redundancia en el código?</p>
+<p><strong><em>Solución</em></strong></p>
+<p><strong>a.</strong> Si existen 5 bases nucleotídicas y 24 aminoácidos, entonces con codones de
+largo 2 tenemos <span class="math inline">\(5 \times 5 = 25\)</span> combinaciones posibles. Si consideramos
+la existencia de un codón <strong>STOP</strong>, entonces el mínimos es <span class="math inline">\(24 + 1 = 25\)</span>
+codones, por lo que alcanza con largo de codón 2.</p>
+<p><strong>b.</strong> Si queremos algo de redundancia vamos a precisar un código genético
+con largo mayor a 2. El siguiente largo es 3, por lo que ahora tenemos
+<span class="math inline">\(5 \times 5 \times 5 = 5^3 = 125\)</span>$ codones.
+Como hay <span class="math inline">\(24\)</span> AAs <span class="math inline">\(+1\)</span> <strong>STOP</strong> <span class="math inline">\(= 25\)</span> “necesidades”, entonces la redundancia
+promedio será igual a <span class="math inline">\(\frac{125}{25} = 5\)</span>.</p>
+<p><strong>c.</strong> En nuestro planeta tenemos 20 aminoácidos proteinogénicos codificados
+directamente, por lo que equivale a <span class="math inline">\(20\)</span> AAs <span class="math inline">\(+1\)</span> STOP = 21 “necesidades”.
+Sin embargo, al existir solo 4 bases nucleotídicas en nuestro código y el
+largo de nuestros codones ser de 3, entonces tenemos un total de <span class="math inline">\(4 \times 4 \times 4 =
+4^3 = 64\)</span> posibilidades. Por lo tanto, en nuestro planeta, la redundancia
+promedio es de <span class="math inline">\(\frac{64}{21} \approx 3,05\)</span>.</p>
+<p><strong>d.</strong> La redundancia en el código tiene como ventaja que es capaz de absorber
+determinadas mutaciones (cambio de bases) sin cambiar el aminoácido
+codificado, lo que lo hace un sistema con cierta robustez o tolerancia a los
+fallos en la duplicación de la información (mutaciones).</p>
+<p><br />
+</p>
+<h4 id="logo" style="display: inline-block;">
+<img src='figuras/cienciabasica.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 1.5
+</h4>
+<p>Asumiendo que existen 20 aminoácidos (los estándar),</p>
+<p><strong>a.</strong> ¿Cuántas proteínas diferentes de largo 5 aminoácidos sería posible tener?</p>
+<p><strong>b.</strong> Cuántas serían posibles de largo <span class="math inline">\(n\)</span>?</p>
+<p><strong>c.</strong> Considerando que una proteína de largo promedio en procariotas es del
+orden de los 300 aminoácidos, ¿cuántas proteínas diferentes, con ese largo
+se podrían codificar?</p>
+<p><strong><em>Solución</em></strong></p>
+<p><strong>a.</strong> Se podrían codificar <span class="math inline">\(20 \times 20 \times 20 \times 20 \times 20 = 20^5 = 3,200,000\)</span>.</p>
+<p><strong>b.</strong> De largo <span class="math inline">\(n\)</span> se pueden codificar <span class="math inline">\(20^n\)</span>.</p>
+<p><strong>c.</strong> En el caso de <span class="math inline">\(n = 300\)</span>, tenemos <span class="math inline">\(20^300 \approx \infty\)</span> para los fines prácticos</p>
 <hr />
 
 </div>
