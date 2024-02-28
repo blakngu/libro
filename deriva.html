@@ -113,7 +113,6 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#qué-es-y-qué-no-es-este-libro"><i class="fa fa-check"></i>¿Qué ES y qué NO ES este libro?</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#bibliografía-recomendada-para-este-curso"><i class="fa fa-check"></i>Bibliografía recomendada para este curso</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#responsabilidades-y-agradecimientos"><i class="fa fa-check"></i>Responsabilidades y Agradecimientos</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#íconos-utilizados-en-este-libro"><i class="fa fa-check"></i>Íconos utilizados en este libro</a></li>
 </ul></li>
 <li class="part"><span><b>Parte I: Genómica</b></span></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i>Introducción a la Genómica</a>
@@ -550,7 +549,9 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#actividades-13"><i class="fa fa-check"></i>Actividades</a>
 <ul>
 <li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#control-de-lectura-13"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#verdadero-o-falso-11"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#verdadero-o-falso-11"><i class="fa fa-check"></i>¿Verdadero o falso?</a>
+<ul>
 <li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#ejercicios-13"><i class="fa fa-check"></i>Ejercicios</a></li>
 </ul></li>
 </ul></li>
@@ -618,7 +619,6 @@ modelo de Wright-Fisher.
 </p>
 <p><span class="math inline">\(\square\)</span> Presentar el modelo de coalescente, un modelo clave en genética de poblaciones. Este nos permitirá nos permitirá indagar en la historia de una muestra de alelos, yendo hacia atrás en el tiempo (hasta identificar su último ancestro común en una población), estimando los tiempos esperados en el proceso.</p>
 </div>
-<div style="page-break-after: always;"></div>
 <div id="el-rol-de-los-procesos-estocásticos-en-la-genética" class="section level2 hasAnchor">
 <h2>El rol de los procesos estocásticos en la genética<a href="deriva.html#el-rol-de-los-procesos-estocásticos-en-la-genética" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Para estudiar el alcance del azar en nuestro contexto propongamos un experimento conceptual sencillo, que cada persona puede reproducir en su casa. Tomemos una jarra o vaso grande y coloquemos 20 bolitas de vidrio azules y 20 bolitas de vidrio rojas, <strong>idénticas excepto por el color</strong>. Si, como es de esperar, no tienes tantas bolitas de diferentes colores, alcanza con hacer bolitas de papel coloreado o cosas similares, aunque nosotros nos seguiremos refiriendo en nuestro ejemplo a las bolitas. Por lo tanto, el estado inicial de nuestro experimento (la jarra) es:</p>
@@ -2285,9 +2285,10 @@ u(p)=\frac{\int_0^p G(x) dx}{\int_0^1 G(x) dx}=\frac{\int_0^p 1 dx}{\int_0^1 1 d
 </div>
 <p>Por las dudas, los subíndices <span class="math inline">\(0\)</span> y <span class="math inline">\(1\)</span> se refieren en esta sección a pérdida (<span class="math inline">\(p=0\)</span>) y fijación (<span class="math inline">\(p=1\)</span>), respectivamente. La derivación de estas ecuaciones es un poco más compleja y excede el alcance de este capítulo (y seguramente tu paciencia), pero para los que estén interesados en cómo se llega hasta eso (a partir de los resultados de la sección previa) una excelente explicación se encuentra en el <strong>Apendix 1</strong> del libro de <span class="citation">Walsh and Lynch (<a href="#ref-WalshLynch2018">2018</a>)</span>, ecuaciones A1.21-A1.28. Volviendo a lo nuestro, los anteriores son los tiempos a la fijación y a la pérdida del alelo. Para calcular el tiempo medio hasta que ocurra alguno de los dos eventos (<span class="math inline">\(\bar{t}(p)\)</span>), debemos ponderar cada uno de estos dos tiempos por la probabilidad de que ocurra, la fijación con probabilidad <span class="math inline">\(p\)</span> y la pérdida con probabilidad <span class="math inline">\(1-p\)</span>, por lo que el promedio ponderado de ellos estará dado por <span class="math inline">\(\bar{t}=p \bar{t_1}(p)+ (1-p) \bar{t_0}(p)\)</span>. Sustituyendo los valores correspondientes a <span class="math inline">\(\bar{t_1}(p)\)</span> (ecuación <a href="deriva.html#eq:Tfix">(69)</a>) y <span class="math inline">\(\bar{t_0}(p)\)</span> (ecuación <a href="deriva.html#eq:Tloss">(70)</a>), tenemos:</p>
 <p><span class="math display">\[
+\require{cancel}
 \begin{split}
 \bar{t}(p)=p \bar{t_1}(p)+ (1-p) \bar{t_0}(p)=\\
-= p \left[-4N \frac{(1-p) \ln(1-p)}{ p }\right] + (1-p) \left[-4N \frac{(p) \ln(p)}{ (1-p) }\right]
+= \cancel{p} \left[-4N \frac{(1-p) \ln(1-p)}{ \cancel{p} }\right] + \cancel{(1-p)} \left[-4N \frac{(p) \ln(p)}{ \cancel{(1-p)} }\right]
 \end{split}
 \]</span></p>
 <div class="equationbox">
@@ -2532,9 +2533,7 @@ t = \frac{\ln{(1+g\tau)}}{g}
 </div>
 <div id="ejercicios" class="section level3 hasAnchor">
 <h3>Ejercicios<a href="deriva.html#ejercicios" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<h4 id="logo" style="display: inline-block;">
-<img src='figuras/sigma.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 3.1
-</h4>
+<p><img src="figuras/sigma.png" style="width:6.0%" /> <span class="math inline">\(\raisebox{2.5ex}{\textbf{Ejercicio 3.1}}\)</span></p>
 <p>En una población con <span class="math inline">\(N=20\)</span> individuos diploides, el alelo <span class="math inline">\(A_1\)</span> presenta 6 copias en una generación dada.</p>
 <p><strong>a.</strong> ¿Cuál es la probabilidad de que el alelo duplique su cantidad de copias en la siguiente generación?</p>
 <p><strong>b.</strong> El alelo <span class="math inline">\(A_2\)</span> presenta la mitad de copias en la generación.
@@ -2556,9 +2555,7 @@ T_{3,6} = \frac{40!}{6! \cdot (40-6)!} \cdot (\frac{3}{40})^{6} \cdot (\frac{37}
 <p>Como se puede apreciar, el alelo <span class="math inline">\(A_2\)</span> tiene claramente mayores probabilidades de dulpicar su número que el alelo <span class="math inline">\(A_1\)</span>.</p>
 <p><br />
 </p>
-<h4 id="logo" style="display: inline-block;">
-<img src='figuras/cabezamosca.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 3.2
-</h4>
+<p><img src="figuras/cabezamosca.png" style="width:6.0%" /> <span class="math inline">\(\raisebox{2.5ex}{\textbf{Ejercicio 3.2}}\)</span></p>
 <p>Una población de ratones tiene fluctuaciones en su tamaño poblacional.
 La población crece sin mayores problemas hasta alcanzar un tamaño aproximado de <span class="math inline">\(N=2000\)</span>; llegado este punto una pobación de gatos se pone manos a la obra, disminuyendo a la población hasta <span class="math inline">\(N = 50\)</span> aproximadamente.
 Los ratones que logran pasar disimulados son los encargados de reestablecer a la población de ratones, cerrando el ciclo de la población.
@@ -2577,9 +2574,7 @@ F_t = 1 - (1-\frac{1}{2N_e})^t
 <p>por lo que al tiempo pedido tenemos <span class="math inline">\(F_{15}=1-(1-\frac{1}{2 \cdot (\frac{2}{(\frac{1}{2000} + \frac{1}{50})})})^{15} \Rightarrow F_{15} \approx 0,0742\)</span>.</p>
 <p><br />
 </p>
-<h4 id="logo" style="display: inline-block;">
-<img src='figuras/cabezamosca.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 3.3
-</h4>
+<p><img src="figuras/cabezamosca.png" style="width:6.0%" /> <span class="math inline">\(\raisebox{2.5ex}{\textbf{Ejercicio 3.3}}\)</span></p>
 <p>Una población de organismos diploides de tamaño <span class="math inline">\(N\)</span> desconocido se estructuró geográficamente en cinco subpoblaciones de igual tamaño.
 En las mismas se segrega un locus con dos alelos (<span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span> , de frecuencias <span class="math inline">\(p_i\)</span> y <span class="math inline">\(q_i\)</span> respectivamente en la subpoblación <span class="math inline">\(i\)</span>).
 Se estima que el evento de estructuración geográfica ocurrió al rededor de 3000 años atrás.
@@ -2623,9 +2618,7 @@ N_e \approx 257
 <p>Por lo tanto, podemos estimar que el tamaño poblacional efectivo de la población inicial se encontraba en el orden de los 1285 individuos.</p>
 <p><br />
 </p>
-<h4 id="logo" style="display: inline-block;">
-<img src='figuras/cabezamosca.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 3.4
-</h4>
+<p><img src="figuras/cabezamosca.png" style="width:6.0%" /> <span class="math inline">\(\raisebox{2.5ex}{\textbf{Ejercicio 3.4}}\)</span></p>
 <p>Una población compuesta por 250 individuos diploides de la especie <em>Peluca mustensis</em> se encuentra segregando un locus bi-alélico (alelos <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span> ; frecuencias alélicas denotadas por <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span> , respectivamente).</p>
 <p>Un genotipado de la población arroja los siguientes conteos:</p>
 <p><span class="math display">\[
@@ -2655,9 +2648,7 @@ Podemos estimar el coeficiente de fijación a partir de la desviación observada
 Reemplazando con los valores correspondientes, tenemos <span class="math inline">\(F = 1 - \frac{96/250}{2 \cdot 0,6 \cdot 0,4} = 0.2\)</span>, siendo esta nuestra estimación para el coeficiente de fijación.</p>
 <p><br />
 </p>
-<h4 id="logo" style="display: inline-block;">
-<img src='figuras/sigma.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 2.2
-</h4>
+<p><img src="figuras/sigma.png" style="width:6.0%" /> <span class="math inline">\(\raisebox{2.5ex}{\textbf{Ejercicio 3.5}}\)</span></p>
 <p>Como ya se ha planteado en este capítulo, existen varias situaciones donde las asunciones del modelo Wright-Fisher no se cumplen.
 La noción de tamaño poblacional efectivo (<span class="math inline">\(N_e\)</span>) resulta sumamente útil en algunos de estos casos: en lugar de derivar un modelo teórico alternativo, se compara el comportamiento observado en el caso de estudio con el de una población ideal que sí cumple con las asunciones del modelo (y posee este tamaño poblacional).</p>
 <p><strong>a.</strong> Demuestre que el tamaño poblacional efectivo de una población dioica (con dos sexos), con posible desbalance en la proporción de sexos, equivale a <span class="math inline">\(N_e=\frac{4N_mN_h}{N_m + N_h}\)</span>.</p>
@@ -2680,7 +2671,8 @@ Estos son eventos disjuntos, por lo que las probabilidades deben ser sumadas par
 \frac{1}{2N_e} = (\frac{1}{4}) \cdot \frac{1}{2N_m} + (\frac{1}{4}) \cdot \frac{1}{2N_h}
 \]</span></p>
 <p><span class="math display">\[
-\frac{1}{2 N_e} = \frac{N_h + N_m}{4 \cdot 2 \cdot N_m \cdot N_h}
+\require{cancel}
+\frac{1}{\cancel{2} N_e} = \frac{N_h + N_m}{4 \cdot \cancel{2} \cdot N_m \cdot N_h}
 \]</span></p>
 <p><span class="math display">\[
 \frac{1}{N_e} = \frac{N_h + N_m}{4 N_m N_h} \Rightarrow \therefore N_e = \frac{4N_mN_h}{N_m + N_h}
@@ -2694,7 +2686,8 @@ Análogamente, la probabilidad de muestrear dos alelos aportados por una hembra 
 \frac{1}{2N_e} = (\frac{1}{9}) \cdot \frac{1}{N_m} + (\frac{4}{9}) \cdot \frac{1}{2N_h}
 \]</span></p>
 <p><span class="math display">\[
-\frac{1}{2 \cdot N_e} =  \frac{2 N_h + 4N_m}{9 \cdot 2 \cdot N_m \cdot N_h}
+\require{cancel}
+\frac{1}{\cancel{2} \cdot N_e} =  \frac{2 N_h + 4N_m}{9 \cdot \cancel{2} \cdot N_m \cdot N_h}
 \]</span></p>
 <p><span class="math display">\[
 \frac{1}{N_e} =  \frac{2 N_h + 4N_m}{9 \cdot N_m \cdot N_h} \Rightarrow \therefore N_e = \frac{9N_mN_h}{4N_m + 2N_h}
@@ -2711,9 +2704,7 @@ Si asumimos paradidad en el número de sexos (<em>i.e.</em> <span class="math in
 <p>Por lo tanto, un locus mitocondrial segrega acorde a lo esperado por el modelo de Wright-Fisher para un locus diploide en una población de tamaño cuatro veces menor a la población considerada.</p>
 <p><br />
 </p>
-<h4 id="logo" style="display: inline-block;">
-<img src='figuras/cabezamosca.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 3.6
-</h4>
+<p><img src="figuras/cabezamosca.png" style="width:6.0%" /> <span class="math inline">\(\raisebox{2.5ex}{\textbf{Ejercicio 3.6}}\)</span></p>
 <p>[Inspirado en una acotación de “<em>Applied Population Genetics</em>”, de Rodney J. Dyer (disponible en <a href="https://dyerlab.github.io/applied_population_genetics/index.html">https://dyerlab.github.io/applied_population_genetics/index.html</a>).]
 Los organismos del orden de insectos <em>Hymenoptera</em> (<em>e.g.</em> abejas, avispas u hormigas, entre otros) presentan un sistema de ploidía mixto: las hembras son diploides, mientras que los machos son haploides.</p>
 <p>Considere una població de abejas, compuesta por 10000 machos y una hembra.
@@ -2736,9 +2727,7 @@ H_t \approx 0,476 \cdot e^{\frac{-20}{2 \cdot 2,25}} \approx 0,00872
 <p>Esto equivale a una reducción de la heterocigosidad a menos del <span class="math inline">\(2\%\)</span> del valor inicial. Mantener en mente que estos cálculos solo tienen en cuenta el efecto esperado de la deriva genética sobre la frecuencia esperada de heterocigotas (además de la simplificación sobre el modo de reproducción de la especie). Por lo tanto, el cálculo no necesariamente refleja la variabilidad genética observada en poblaciones reales, donde también es esperable juegue un rol la acción de otras fuerzas evolutivas.</p>
 <p><br />
 </p>
-<h4 id="logo" style="display: inline-block;">
-<img src='figuras/sigma.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 3.7
-</h4>
+<p><img src="figuras/sigma.png" style="width:6.0%" /> <span class="math inline">\(\raisebox{2.5ex}{\textbf{Ejercicio 3.7}}\)</span></p>
 <p>Considerando el coeficiente de fijación <span class="math inline">\(F\)</span>, se tiene que la expectativa para la frecuencia de heterocigotas para un locus bi-alélico (alelos <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span> con frecuencias <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span>, respectivamente) en una población de tamaño finito corresponde a <span class="math inline">\(H=2p q(1-F)\)</span>.
 Demuestre que las frecuencias esperadas para los genotipos homocigotas.</p>
 <p><strong><em>Solución</em></strong></p>
@@ -2783,11 +2772,7 @@ f(A_2A_2) = q -q + qF+q^2-q^2F
 f(A_2A_2) = q^2 (1-F) + qF
 \]</span></p>
 <p>Vemos entonces que todas las frecuencias genotípicas son corregidas por un factor de corrección de <span class="math inline">\((1-F)\)</span> respecto a lo esperado bajo equilibrio de Hardy-Weinberg, pero en el caso de los genotipos homocigotas se suma a su vez un factor de <span class="math inline">\(pF\)</span> o <span class="math inline">\(qF\)</span> (según el genotipo), correspondiente al aumento esperado en la frecuencia de homocigotas.</p>
-<p><br />
-</p>
-<h4 id="logo" style="display: inline-block;">
-<img src='figuras/sigma.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 3.8
-</h4>
+<p><strong>Ejercicio 3.8</strong></p>
 <p>Como se mencionó en este capítulo, el tiempo medio transcurrido hasta la fijación o pérdida de un alelo está dado por la ecuación</p>
 <p><span class="math display">\[
 \bar{t} = -4N[p \cdot ln(p) + (1-p) \cdot ln(1-p)]

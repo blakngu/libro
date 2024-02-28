@@ -113,7 +113,6 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#qué-es-y-qué-no-es-este-libro"><i class="fa fa-check"></i>¿Qué ES y qué NO ES este libro?</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#bibliografía-recomendada-para-este-curso"><i class="fa fa-check"></i>Bibliografía recomendada para este curso</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#responsabilidades-y-agradecimientos"><i class="fa fa-check"></i>Responsabilidades y Agradecimientos</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#íconos-utilizados-en-este-libro"><i class="fa fa-check"></i>Íconos utilizados en este libro</a></li>
 </ul></li>
 <li class="part"><span><b>Parte I: Genómica</b></span></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i>Introducción a la Genómica</a>
@@ -550,7 +549,9 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#actividades-13"><i class="fa fa-check"></i>Actividades</a>
 <ul>
 <li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#control-de-lectura-13"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#verdadero-o-falso-11"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#verdadero-o-falso-11"><i class="fa fa-check"></i>¿Verdadero o falso?</a>
+<ul>
 <li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#ejercicios-13"><i class="fa fa-check"></i>Ejercicios</a></li>
 </ul></li>
 </ul></li>
@@ -612,7 +613,6 @@ div.csl-indent {
 </p>
 <p><span class="math inline">\(\square\)</span> Analizar ejemplos particulares de interacción genotipo-ambiente, para tomar dimensión de la diversidad de situaciones en las que el fenómeno es de relevancia.</p>
 </div>
-<div style="page-break-after: always;"></div>
 <div id="plasticidad-fenotípica-y-normas-de-reacción" class="section level2 hasAnchor">
 <h2>Plasticidad fenotípica y normas de reacción<a href="GxE.html#plasticidad-fenotípica-y-normas-de-reacción" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Hasta ahora, en lo que hace a la genética cuantitativa, hemos venido trabajando esencialmente con una versión algo simplificada del modelo genético básico. Si bien establecimos desde un principio que el modelo, además de los efectos genéticos y ambientales, podía incorporar los efectos de la interacción entre genotipo y ambiente, hasta ahora logramos evitar razonablemente tener que lidiar con este último factor, que sin duda complica sobremanera muchas de las derivaciones. De hecho, en gran parte de las situaciones que modelamos no parece tan descabellado el ignorar esta interacción. Por ejemplo, cuando el ambiente es relativamente constante o uniforme para todos los individuos, el término de interacción no tendrá significación o importancia práctica. Por ejemplo, si los tambos de una determinada región se encuentran sometidos a las mismas condiciones geográficas, climáticas, etc. y además presentan un manejo muy similar de los animales (algo que parece razonable, ya que los mismos precios de insumos y egresos afectan las decisiones de manejo en forma similar), entonces podemos considerar el “ambiente” como relativamente homogéneo; en estas condiciones, no tiene mucho sentido considerar la interacción entre el genotipo y el ambiente ya que el ambiente es casi el mismo para todos los animales.</p>
@@ -972,7 +972,7 @@ z_{2jl}=\mu+G_j-I_j-E+e_{2jl}\\
 <p>Para obtener un estimado <span class="math inline">\(r_x\)</span> de <span class="math inline">\(\rho_x\)</span>, el procedimiento más sencillo consiste en separar la familias en dos y ensayar cada mitad en uno de los ambientes. Eso nos proporcionará estimados de las varianzas entre familias en los dos ambientes (<span class="math inline">\(\sigma^2_G(1)\)</span> y <span class="math inline">\(\sigma^2_G(2)\)</span>), así como un estimado de la covarianza de familia entre ambientes (<span class="math inline">\(\sigma_G(1,2)\)</span>). A partir de esto, alcanza con sustituir los valores observados por los valores esperados en la ecuación <a href="GxE.html#eq:intergecor8">(683)</a>, es decir</p>
 <p><span class="math display">\[
 \begin{split}
-\rho_x=\frac{\sigma_G(1,2)}{\sigma_G^2(1)\ \sigma_G^2(2)}
+\rho_x=\frac{\sigma_G(1,2)}{\sigma_G(1)\ \sigma_G(2)}
 \end{split}
 \]</span></p>
 <p>El procedimientos más sencillo para obtener estimados de <span class="math inline">\(\sigma^2_G(1)\)</span> y <span class="math inline">\(\sigma^2_G(2)\)</span> es a través de un análisis de varianza, como el que hemos visto en capítulos precedentes, mientras que para la estimación de la covarianza en procedimiento más sencillo parece ser el cálculo de la covarianza observada entre medias familiares en los dos ambientes. Una advertencia importante aquí es la de evitar el uso de estructuras familiares en las que se compartan otros factores, por ejemplo los efectos maternales ya que estos contaminarán las estimaciones.</p>
@@ -1223,9 +1223,9 @@ Hasta este momento hemos considerado los componentes de la varianza como genéti
 </ol>
 <p><strong><em>Soluciones</em></strong></p>
 <ol style="list-style-type: decimal">
-<li><p><strong>Falso</strong>. Puede existir un cambio de escala sin re-ranking.</p></li>
-<li><p><strong>Verdadero</strong>. Podemos pensar en las enfermedades como un caso claro donde la interacción genotipo-ambiente puede llevar a efectos cualitativos: la presencia de ciertos metabolitos puede inducir cambios en estados celulares que lleven a una patología, y la respuesta dada por un genotipo puede variar para un rango dado del factor ambiental, manifestándose la patología solo luego de cierto umbral. El mismo razonamiento lleva a pensar también en casos como el desarrollo de determinadas morfologías, donde el pasaje de un determinado punto de corte puede inducir una respuesta celular que a través de una cascada lleve al desarrollo de un caracter.</p></li>
-<li><p><strong>Falso</strong>. Si el coeficiente es igual a uno se trata de la misma característica (pese a haberla considerado como dos características diferentes para el análisis).</p></li>
+<li><p><strong>Falso</strong>. [puede haber cambio de escala sin re ranking]</p></li>
+<li><p><strong>Verdadero</strong>. [ejemplo enfermedades]</p></li>
+<li><p><strong>Falso</strong>.[ Es igual a uno, se trata de la misma característica (pese a haberla considerado como dos características diferentes para el análisis).]</p></li>
 <li><p><strong>Verdadero</strong>. En efecto, si <span class="math inline">\(\rho_x = 1\)</span> lo que estamos considerando como dos características son en efecto una. Por lo tanto, no puede existir interacción genotipo-ambiente en este caso</p></li>
 <li><p><strong>Veradero</strong>. Tomemos como ejemplo la respuesta a la disponibilidad hídrica en especies de plantas para ilustrar este concepto. Es posible notar que más allá que cada genotipo tenga un óptimo de producción, generalmente los extremos (anegamientos o sequías prolongadas) generarán que ambos genotipos tengan el mismo comportamiento. Si bien desde el punto de vista cuantitativo los óptimos pueden variar levemente, desde una visión más biológica es razonable pensar que las respuestas serán razonablemente parecidas en los rangos ambientales medios entre los extremos planteados.</p></li>
 </ol>
@@ -1264,89 +1264,25 @@ t=9,4^{\circ}\text{C};\ t=19,6^{\circ}\text{C}
 <h4 id="logo" style="display: inline-block;">
 <img src='figuras/cienciebasica.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 15.3
 </h4>
-<p>Un grupo de investigación se dispone a estudiar la interacción genotipo-ambiente de una especie que crece en un rango de temperaturas amplio. En las poblaciones estudiadas encuentran tres genotipos para un <em>locus</em> dado, el cual se ve correlacionado con la capacidad metabólica a diferentes temperaturas. El alelo <span class="math inline">\(A\)</span> es dominante, por lo que el grupo decide contrastar el comportamiento de organismos de genotipo <span class="math inline">\(A_/A/\)</span> respecto al de organismos homocigotas recesivos <span class="math inline">\(aa/aa\)</span>.</p>
-<p>Luego de un arduo trabajo, determinan que la capacidad metabólica (medida por satélite como producción de <span class="math inline">\(CO_2\)</span> por área del organismo, <span class="math inline">\(g \cdot cm^{-2} CO_2/m^3\)</span>) sigue las siguientes ecuaciones de dependencia con la temperatura (T, en grados Celsius)</p>
-<p><span class="math display">\[
-\begin{cases}
-\text{Capacidad metabólica (A_/A_) (T)} = [−T^2 +61,2T−812,55] g \cdot cm^{-2} CO_2/m^3 \\
-text{Capacidad metabólica (aa/aa)} = [1.5T + 2] g \cdot cm^{-2} CO_2/m^3
-\end{cases}
-\]</span></p>
-<p>¿Reaccionan igual ambos genotipos frente al ambiente?</p>
-<p><strong><em>Solución</em></strong></p>
-<p>Claramente ambos genotipos no reaccionan de forma similar al ambiente: una de las normas de reacción sigue una ecuación de segundo grado (parábola), mientras que la otra una ecuación lineal. Esto constituiría un caso bastante peculiar de interacción genotipo-ambiente.</p>
-<p>Si graficamos ambas normas de reacción obtenemos el siguiente gráfico</p>
-<p><img src="figuras/ejercicio_15_3.png" /></p>
-<p>Observamos que existe un rango inicial en el cual el Genotipo 2 posee mayor capacidad metabólica que el Genotipo 1. La situación se revierte, pero a medida que aumenta la temperatura la capacidad metabólica de este último genotipo alcanza un pico, volviendo hacia el final a ser superada por la capacidad del Genotipo 1.</p>
+<p><strong>Ejercicio disponible en breve.</strong></p>
+<p>idea: dos normas de reaccion siguen curvas distintas… poner como es el comportamiento (ver el paper ese de Knies en el que se discute un poquito la parte evolutiva de esto)</p>
 <p><br />
 </p>
 <h4 id="logo" style="display: inline-block;">
 <img src='figuras/cienciebasica.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 15.4
 </h4>
-<p>En un laboratorio se estudia la norma de reacción frente a la temperatura de dos fenotipos (largo de ala y largo de antenas) en individuos de <em>D. melanogaster</em>. El grupo de investigación sabe de la literatura que dos genotipos son la base de cada genotipo observado en cada caso, por lo que se disponen a analizar dos grupos de individuos de líneas puras para rangos de temperaturas controladas en cada caso.</p>
-<p>Un análisis estadístico arroja los siguientes datos:</p>
-<p><strong>Largo de ala</strong></p>
-<p><span class="math display">\[
-\begin{cases}
-\sigma^2_T = 0,39 \\
-\sigma^2_{largo} = 0,67 \\
-\sigma_{T,largo} = 0,09
-\end{cases}
-\]</span></p>
-<p><strong>Largo de antenas</strong></p>
-<p><span class="math display">\[
-\begin{cases}
-\sigma^2_T = 0,34 \\
-\sigma^2_{largo} = 0,45 \\
-\sigma_{T,largo} = 0,149
-\end{cases}
-\]</span></p>
-<p>¿Existe interacción genotipo-ambiente en alguno de estos casos?</p>
-<p><strong><em>Solución</em></strong></p>
-<p>Recordemos que podemos estimar la correlación de las medidas de temperatura y cada fenotipo para los grupos genotípicos según</p>
-<p><span class="math display">\[
-\begin{split}
-\rho_x=\frac{\sigma_G(1,2)}{\sigma_G^2(1)\ \sigma_G^2(2)}
-\end{split}
-\]</span></p>
-<p>Tenemos así que para el caso del largo de alas</p>
-<p><span class="math display">\[
-\begin{split}
-\rho_x=\frac{0,09}{0,39 \cdot 0,67} \approx 0,34
-\end{split}
-\]</span></p>
-<p>esta correlación se encuentra claramente alejada de un valor absoluto de 1, lo cual sugiere la existencia de interacción genotipo-ambiente en este caso.</p>
-<p>De forma análoga, tenemos para el caso del largo de antena</p>
-<p><span class="math display">\[
-\begin{split}
-\rho_x=\frac{0,149}{0,34 \cdot 0,45} \approx 0,97
-\end{split}
-\]</span></p>
-<p>En el caso de largo de antena observamos que la estimación de correlación obtenida es altísima, a efectos prácticos considerable en 1. Esto no permite sugerir la existencia de una interacción genotipo-ambiente en el caso de este caracter.</p>
+<p><strong>Ejercicio disponible en breve.</strong></p>
+<p>idea: se calcula la varianza para estimar lo de la correlacion usando la ecuacioncita de arriba (que de hecho hay que arreglar)</p>
 <p><br />
 </p>
 <h4 id="logo" style="display: inline-block;">
-<img src='figuras/cabezamosca.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 15.5
+<img src='figuras/cienciebasica.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 15.5
 </h4>
-<p><span class="citation">(Inspirado en <a href="#ref-FeldmanLewontin1975">Feldman and Lewontin 1975</a>)</span></p>
-<p>Supongamos que varios <em>loci</em> influencian a un caracter fenotípico que controla la producción de leche de un mamífero en poblaciones naturales, teniendo una altísima heredabilidad. La norma de reacción de los dos genotipos existentes frente a la temperatura (en grados Celsius) es la siguiente</p>
-<p><span class="math display">\[
-\begin{cases}
-\text{Genotipo 1}: y = [0,5T + 12] L/día \\
-\text{Genotipo 2}: y = [-0,5T + 36,2] L/día \\
-\end{cases}
-\]</span></p>
-<p>Para sorpresa de un grupo de investigadores, un estudio del caracter fenotípico a lo largo de un área estudiada muestra un promedio estable, a pesar de que se observa variación en el caracter fenotípico. ¿Cómo es esto posible, y cual es el valor medido por los investigadores?</p>
-<p>Pista: Es conveniente graficar ambas normas de reacción para observar su comportamiento.</p>
-<p><strong><em>Solución</em></strong></p>
-<p>A continuación se observa el resultado de graficar ambas normas de reacción</p>
-<p><img src="figuras/ejercicio_15_5.png" /></p>
-<p>Como se puede observar, ambas normas de reacción parecen simétricas respecto a un punto de intersección. ¿Qué implica esto? A medida que cambia un rango de temperaturas, uno de los genotipos aumentará el valor del caracter fenotípico exactamente lo mismo que lo disminuye el otro. Si en una población se observa el reemplazo de un genotipo por el otro, pero esto se ve acompañado por una disminución del caracter fenotipico (producción de leche), entonces el promedio en la población se mantendrá estable aún cuando varíe el genotipo.</p>
-<p>El valor en el que se debería encontrar este promedio que se mantiene estable se obtiene de igualar ambas ecuaciones. Tenemos</p>
-<p><span class="math display">\[0,5T + 12 = - 0,5T + 36,2\]</span>
-<span class="math display">\[1T = 36,2 - 12\]</span>
-<span class="math display">\[T = 24,2\]</span></p>
-<p>por lo que estimamos que los investigadores miden aproximadamente <span class="math inline">\(24,2\)</span> litros de leche por día en cada animal lactante.</p>
+<p><strong>Ejercicio disponible en breve.</strong></p>
+<p>(sacar del librito del amigo Lynch…)</p>
+<p><br />
+</p>
+<hr />
 
 </div>
 </div>
@@ -1358,9 +1294,6 @@ Espasandin, A. C., J. I. Urioste, H. Naya, and M. M. Alencar. 2013. <span>“Gen
 </div>
 <div id="ref-Falconer1952" class="csl-entry">
 Falconer, Douglas S. 1952. <span>“The Problem of Environment and Selection.”</span> <em>The American Naturalist</em> 86 (830): 293–98.
-</div>
-<div id="ref-FeldmanLewontin1975" class="csl-entry">
-Feldman, M. W., and R. C. Lewontin. 1975. <span>“The Heritability Hang-up: The Role of Variance Analysis in Human Genetics Is Discussed.”</span> <em>Science</em> 190 (4220): 1163–68. <a href="https://doi.org/10.1126/science.1198102">https://doi.org/10.1126/science.1198102</a>.
 </div>
 <div id="ref-GonzalezGianoli2004" class="csl-entry">
 González, Alejandra V., and Ernesto Gianoli. 2004. <span>“Morphological Plasticity in Response to Shading in Three Convolvulus Species of Different Ecological Breadth.”</span> <em>Acta Oecologica</em> 26 (June): 185–90.
