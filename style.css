@@ -41,14 +41,20 @@ pre code {
     text-align: top;
     background: #7D0101;
     color: white;
-    height: 25px;
+    height: 30px;
 }
 .boxobjetivos-header p{
     text-align: center;
-    padding: 0 0 0 10px;
+    line-height: 5px;
+    height: 30px;
+    font-size: 17px;
+    font-weight: bold;
 }
 .boxobjetivos p{
-    padding: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .graybox{
@@ -59,11 +65,14 @@ pre code {
     text-align: top;
     background: #7D0101;
     color: white;
-    height: 25px;
+    height: 30px;
 }
 .graybox-header p{
     text-align: center;
-    padding: 0 0 0 10px;
+    line-height: 5px;
+    height: 30px;
+    font-size: 17px;
+    font-weight: bold;
 }
 .graybox p{
     padding: 10px;
@@ -97,6 +106,3 @@ pre code {
   text-align: center;
 }
 
-.bullseye {
-  background-image: url("figuras/bullseye-solid.svg");
-}

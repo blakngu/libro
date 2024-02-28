@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Apéndice II: CÁLCULO DIFERENCIAL E INTEGRAL | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
+  <meta name="description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Apéndice II: CÁLCULO DIFERENCIAL E INTEGRAL | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Apéndice II: CÁLCULO DIFERENCIAL E INTEGRAL | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  
+  <meta name="twitter:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
+  
+
+<meta name="author" content="Hugo Naya" />
+<meta name="author" content="Federica Marín" />
+<meta name="author" content="Mauricio Langleib" />
+<meta name="author" content="(Jorge Urioste, María André, Andrea Larracharte, Washington Bell," />
+<meta name="author" content="Ana Laura Sánchez, Micaela Botta, Paula Batista, Rodrigo Vivián, Paola Gaiero)" />
+
+
+<meta name="date" content="2024-02-28" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="apéndice-i-conceptos-matemáticos-básicos.html"/>
+<link rel="next" href="apéndice-iii-algebra-lineal-y-geometría-analítica.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Genética II</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nuestra-filosofía-del-no-tanto"><i class="fa fa-check"></i>Nuestra filosofía del NO (tanto)</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#qué-es-y-qué-no-es-este-libro"><i class="fa fa-check"></i>¿Qué ES y qué NO ES este libro?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#bibliografía-recomendada-para-este-curso"><i class="fa fa-check"></i>Bibliografía recomendada para este curso</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#responsabilidades-y-agradecimientos"><i class="fa fa-check"></i>Responsabilidades y Agradecimientos</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#íconos-utilizados-en-este-libro"><i class="fa fa-check"></i>Íconos utilizados en este libro</a></li>
+</ul></li>
+<li class="part"><span><b>Parte I: Genómica</b></span></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i>Introducción a la Genómica</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#variabilidad-genética"><i class="fa fa-check"></i>Variabilidad genética</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.1"><i class="fa fa-check"></i>Ejemplo 1.1</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#detectando-la-variabilidad-diferentes-técnicas"><i class="fa fa-check"></i>Detectando la variabilidad: diferentes técnicas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#metagenomica-y-metatranscriptomica"><i class="fa fa-check"></i>Metagenómica y metatranscriptómica</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.2"><i class="fa fa-check"></i>Ejemplo 1.2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#genómica-composicional"><i class="fa fa-check"></i>Genómica composicional</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-y-textgc_textskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones y <span class="math inline">\(\text{GC}_{\text{skew}}\)</span></a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#uso-de-codones"><i class="fa fa-check"></i>Uso de codones</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.3"><i class="fa fa-check"></i>Ejemplo 1.3</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#exploracion-multivariada"><i class="fa fa-check"></i>Exploración multivariada: Análisis de Correspondencia</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i>Composición de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-en-propiedades-de-los-aas"><i class="fa fa-check"></i>Diferencias en propiedades de los AAs</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-de-composición-entre-clases-de-proteínas"><i class="fa fa-check"></i>Diferencias de composición entre clases de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.4"><i class="fa fa-check"></i>Ejemplo 1.4</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#genómica-comparativa"><i class="fa fa-check"></i>Genómica comparativa</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#comparación-de-secuencias-génicas"><i class="fa fa-check"></i>Comparación de secuencias génicas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección positiva</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#vías"><i class="fa fa-check"></i>Vías</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#genómica-funcional"><i class="fa fa-check"></i>Genómica funcional</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#estudios-epigenéticos-y-epigenómicos"><i class="fa fa-check"></i>Estudios epigenéticos y epigenómicos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#conclusión"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#actividades"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#control-de-lectura"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#verdadero-o-falso"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Parte II: Genética de Poblaciones</b></span></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html"><i class="fa fa-check"></i>Variación y equilibrio de Hardy-Weinberg</a>
+<ul>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#el-equilibrio-de-hardy-weinberg"><i class="fa fa-check"></i>El equilibrio de Hardy-Weinberg</a>
+<ul>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#supuestos-que-asumimos-se-cumplen-para-h-w"><i class="fa fa-check"></i>Supuestos que asumimos se cumplen para H-W</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#hardy-weinberg-en-especies-dioicas-dos-sexos"><i class="fa fa-check"></i>Hardy-Weinberg en especies dioicas (dos sexos)</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#heterocigotas-freq-alelica"><i class="fa fa-check"></i>H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo"><i class="fa fa-check"></i>El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#tres-o-más-alelos"><i class="fa fa-check"></i>Tres o más alelos</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#la-estimación-de-frecuencias-y-el-equilibrio-o-no"><i class="fa fa-check"></i>La estimación de frecuencias y el equilibrio (o no)</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#el-sistema-abo"><i class="fa fa-check"></i>El sistema ABO</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#dónde-se-esconden-los-alelos-recesivos"><i class="fa fa-check"></i>¿Dónde se “esconden” los alelos recesivos?</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#hardy-weinberg-en-especies-poliploides"><i class="fa fa-check"></i>Hardy-Weinberg en especies poliploides</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#geometría-y-genética-los-diagramas-de-de-finetti"><i class="fa fa-check"></i>Geometría y Genética: los diagramas de <em>de Finetti</em></a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#estimacion-abo"><i class="fa fa-check"></i>La estimación de frecuencias en el locus ABO</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#conclusión-1"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#actividades-1"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#control-de-lectura-1"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#verdadero-o-falso-1"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#ejercicios-2"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html"><i class="fa fa-check"></i>Deriva genética</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#el-rol-de-los-procesos-estocásticos-en-la-genética"><i class="fa fa-check"></i>El rol de los procesos estocásticos en la genética</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i>El modelo de Wright-Fisher</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.1"><i class="fa fa-check"></i>Ejemplo 3.1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#el-rol-de-la-subdivisión-poblacional-en-la-evolución-de-las-frecuencias-alélicas"><i class="fa fa-check"></i>El rol de la subdivisión poblacional en la evolución de las frecuencias alélicas</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#homocigosidad-y-heterocigosidad"><i class="fa fa-check"></i>Homocigosidad y heterocigosidad</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.2"><i class="fa fa-check"></i>Ejemplo 3.2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#cadenas-de-markov"><i class="fa fa-check"></i>Cadenas de Markov</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i>Tamaño efectivo poblacional</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.3"><i class="fa fa-check"></i>Ejemplo 3.3</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.4"><i class="fa fa-check"></i>Ejemplo 3.4</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#aproximación-de-difusión"><i class="fa fa-check"></i>Aproximación de difusión</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#caminatas-al-azar-y-procesos-de-difusión"><i class="fa fa-check"></i>Caminatas al azar y procesos de difusión</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-forward-equation"><i class="fa fa-check"></i>Kolmogorov Forward Equation</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-backward-equation"><i class="fa fa-check"></i>Kolmogorov Backward Equation</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#solución-de-las-ecuaciones"><i class="fa fa-check"></i>Solución de las ecuaciones</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i>Probabilidad de fijación y tiempos de fijación</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.5"><i class="fa fa-check"></i>Ejemplo 3.5</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#el-modelo-coalescente"><i class="fa fa-check"></i>El modelo coalescente</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#conclusión-2"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#actividades-2"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#control-de-lectura-2"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#verdadero-o-falso-2"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejercicios"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html"><i class="fa fa-check"></i>Selección natural</a>
+<ul>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#el-concepto-de-fitness"><i class="fa fa-check"></i>El concepto de “<em>fitness</em>”</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#selección-natural-en-el-modelo-de-un-locus-con-dos-alelos"><i class="fa fa-check"></i>Selección natural en el modelo de un locus con dos alelos</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#diferentes-formas-de-selección"><i class="fa fa-check"></i>Diferentes formas de selección</a>
+<ul>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#selección-direccional"><i class="fa fa-check"></i>Selección direccional</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#selección-estabilizadora"><i class="fa fa-check"></i>Selección estabilizadora</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#selección-disruptiva"><i class="fa fa-check"></i>Selección disruptiva</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#el-teorema-fundamental-de-la-selección-natural"><i class="fa fa-check"></i>El teorema fundamental de la selección natural</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-mutación"><i class="fa fa-check"></i>Equilibrio selección-mutación</a>
+<ul>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#el-principio-de-haldane-muller"><i class="fa fa-check"></i>El principio de Haldane-Muller</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#la-fuerza-de-la-selección-natural"><i class="fa fa-check"></i>La fuerza de la selección natural</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-deriva"><i class="fa fa-check"></i>Equilibrio selección-deriva</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#otros-tipos-de-selección-y-complejidades"><i class="fa fa-check"></i>Otros tipos de selección y complejidades</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#conclusión-3"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#actividades-3"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#control-de-lectura-3"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#verdadero-o-falso-3"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#ejercicios-4"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html"><i class="fa fa-check"></i>Dinámica de 2 <em>loci</em></a>
+<ul>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-de-ligamiento-y-recombinación"><i class="fa fa-check"></i>Desequilibrio de ligamiento y recombinación</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#la-evolución-en-el-tiempo-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i>La evolución en el tiempo del desequilibrio de ligamiento</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#otras-medidas-de-asociación"><i class="fa fa-check"></i>Otras medidas de asociación</a>
+<ul>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejemplo-5.3"><i class="fa fa-check"></i>Ejemplo 5.3</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#selección-en-modelos-de-dos-loci"><i class="fa fa-check"></i>Selección en modelos de dos <em>loci</em></a>
+<ul>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento"><i class="fa fa-check"></i>Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i>Arrastre genético (“<em>genetic hitchhiking</em>” o “<em>genetic draft</em>”)</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#causas-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i>Causas del desequilibrio de ligamiento</a>
+<ul>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-al-mestizaje"><i class="fa fa-check"></i>Desequilibrio debido al mestizaje</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-inducido-por-el-sistema-de-apareamiento"><i class="fa fa-check"></i>Desequilibrio inducido por el sistema de apareamiento</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#el-cromosoma-y"><i class="fa fa-check"></i>El cromosoma Y</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-a-recombinación-reducida"><i class="fa fa-check"></i>Desequilibrio debido a recombinación reducida</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#conclusión-4"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#actividades-4"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#control-de-lectura-4"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#verdadero-o-falso-4"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejercicios-5"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html"><i class="fa fa-check"></i>Apareamientos no-aleatorios</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-concepto-de-identidad-por-ascendencia-ibd"><i class="fa fa-check"></i>El concepto de “identidad por ascendencia” (IBD)</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#generalización-de-hardy-weinberg-para-apareamientos-no-aleatorios"><i class="fa fa-check"></i>Generalización de Hardy-Weinberg para apareamientos no-aleatorios</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><span class="math inline">\(F\)</span> como correlación entre gametos unidos</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#endocría-y-depresión-endogámica"><i class="fa fa-check"></i>Endocría y depresión endogámica</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#un-caso-extremo-la-autogamia"><i class="fa fa-check"></i>Un caso extremo: la autogamia</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-los-estadísticos-f"><i class="fa fa-check"></i>El coeficiente de endocría y los estadísticos <em>F</em></a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.1"><i class="fa fa-check"></i>Ejemplo 6.1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i>El efecto Wahlund</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.2"><i class="fa fa-check"></i>Ejemplo 6.2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i>Subdivisión, migración y el modelo de islas</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.3"><i class="fa fa-check"></i>Ejemplo 6.3</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#mecanismos-de-especiación"><i class="fa fa-check"></i>Mecanismos de especiación</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#conclusión-5"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#actividades-5"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#control-de-lectura-5"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#verdadero-o-falso-5"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejercicios-6"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html"><i class="fa fa-check"></i>Genética de poblaciones microbianas</a>
+<ul>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#genómica-y-mecanismos-de-herencia-en-procariotas"><i class="fa fa-check"></i>Genómica y mecanismos de herencia en procariotas</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#dinámica-de-las-poblaciones-bacterianas"><i class="fa fa-check"></i>Dinámica de las poblaciones bacterianas</a>
+<ul>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-exponencial"><i class="fa fa-check"></i>El modelo exponencial</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.1"><i class="fa fa-check"></i>Ejemplo 7.1</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-logístico"><i class="fa fa-check"></i>El modelo logístico</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.2"><i class="fa fa-check"></i>Ejemplo 7.2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#modelos-haploides-de-selección-natural"><i class="fa fa-check"></i>Modelos haploides de selección natural</a>
+<ul>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-discreto"><i class="fa fa-check"></i>Selección haploide: modelo discreto</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.3"><i class="fa fa-check"></i>Ejemplo 7.3</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-continuo"><i class="fa fa-check"></i>Selección haploide: modelo continuo</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.4"><i class="fa fa-check"></i>Ejemplo 7.4</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-vs-el-de-wright-fisher"><i class="fa fa-check"></i>Los modelos de Moran y de fisión <em>vs</em> el de Wright-Fisher</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-rol-de-la-transferencia-horizontal"><i class="fa fa-check"></i>El rol de la transferencia horizontal</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#seleccionismo-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i>Seleccionismo <em>vs</em> neutralismo: los procariotas en el debate</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#genómica-poblacional"><i class="fa fa-check"></i>Genómica poblacional</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#genes-de-resistencia"><i class="fa fa-check"></i>Genes de resistencia</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#introducción-a-la-epidemiología-modelos-compartimentales"><i class="fa fa-check"></i>Introducción a la epidemiología: modelos compartimentales</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#conclusión-6"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#actividades-6"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#control-de-lectura-6"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#verdadero-o-falso-6"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejercicios-7"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Parte III: Genética Cuantitativa</b></span></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html"><i class="fa fa-check"></i>El modelo genético básico</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#variación-continua-y-discreta"><i class="fa fa-check"></i>Variación continua y discreta</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#el-modelo-genético-básico"><i class="fa fa-check"></i>El modelo genético básico</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#modelo-genético-básico-un-locus-con-dos-alelos"><i class="fa fa-check"></i>Modelo genético básico: un <em>locus</em> con dos alelos</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#media-de-la-población"><i class="fa fa-check"></i>Media de la población</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#efecto-medio"><i class="fa fa-check"></i>Efecto medio</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#valor-reproductivo-o-valor-de-cría"><i class="fa fa-check"></i>Valor reproductivo (o valor de cría)</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#derivación-de-los-efectos-medios-por-mínimos-cuadrados"><i class="fa fa-check"></i>Derivación de los efectos medios por mínimos cuadrados</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#desvío-de-dominancia"><i class="fa fa-check"></i>Desvío de dominancia</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#interacción-genotipo-x-ambiente"><i class="fa fa-check"></i>Interacción Genotipo x Ambiente</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-en-el-modelo-genético-básico"><i class="fa fa-check"></i>La varianza en el modelo genético básico</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos"><i class="fa fa-check"></i>Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-ambiental"><i class="fa fa-check"></i>La varianza ambiental</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-de-la-interacción"><i class="fa fa-check"></i>La varianza de la interacción</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#conclusión-7"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#actividades-7"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#control-de-lectura-7"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#verdadero-o-falso-7"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejercicios-8"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html"><i class="fa fa-check"></i>Parentesco y semejanza entre parientes</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#parentesco-1"><i class="fa fa-check"></i>Parentesco</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#parentesco-aditivo"><i class="fa fa-check"></i>Parentesco aditivo</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#consanguinidad"><i class="fa fa-check"></i>Consanguinidad</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#diagramas-de-flechas"><i class="fa fa-check"></i>Diagramas de flechas</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#el-método-tabular"><i class="fa fa-check"></i>El método tabular</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#parentesco-de-dominancia"><i class="fa fa-check"></i>Parentesco de dominancia</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#semejanza-entre-parientes"><i class="fa fa-check"></i>Semejanza entre parientes</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estimación-de-las-varianzas-aditiva-y-de-dominancia"><i class="fa fa-check"></i>Estimación de las varianzas aditiva y de dominancia</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#propiedades-deseables-de-los-estimadores"><i class="fa fa-check"></i>Propiedades deseables de los estimadores</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estimación-de-la-varianza-aditiva-a-partir-del-análisis-de-varianza-anova"><i class="fa fa-check"></i>Estimación de la varianza aditiva a partir del análisis de varianza (ANOVA)</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estimaciones-basadas-en-modelos-mixtos-lineales"><i class="fa fa-check"></i>Estimaciones basadas en modelos mixtos lineales</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#parentesco-genómico"><i class="fa fa-check"></i>Parentesco genómico</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#contenido-génico"><i class="fa fa-check"></i>Contenido génico</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#la-matriz-de-similaridad-genómica"><i class="fa fa-check"></i>La matriz de similaridad genómica</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estudios-de-ascendencia-ancestría"><i class="fa fa-check"></i>Estudios de ascendencia (“ancestría”)</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#conclusión-8"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#actividades-8"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#control-de-lectura-8"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#veradero-o-falso"><i class="fa fa-check"></i>¿Veradero o falso?</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#ejercicios-3"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html"><i class="fa fa-check"></i>Parámetros genéticos: heredabilidad y repetibilidad</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad"><i class="fa fa-check"></i>Heredabilidad</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-heredabilidad-como-relación-de-varianzas"><i class="fa fa-check"></i>La heredabilidad como relación de varianzas</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-heredabilidad-como-regresión"><i class="fa fa-check"></i>La heredabilidad como regresión</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-de-cría-en-el-fenotipo-individual"><i class="fa fa-check"></i>Regresión del valor de cría en el fenotipo individual</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-fenotípico-de-los-hijos-sobre-el-fenotipo-de-un-progenitor"><i class="fa fa-check"></i>Regresión del valor fenotípico de los hijos sobre el fenotipo de un progenitor</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-fenotípico-de-los-hijos-sobre-el-fenotipo-de-ambos-progenitores"><i class="fa fa-check"></i>Regresión del valor fenotípico de los hijos sobre el fenotipo de ambos progenitores</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#precisión-en-las-estimaciones-de-heredabilidad-varianza-del-estimador"><i class="fa fa-check"></i>Precisión en las estimaciones de heredabilidad: varianza del estimador</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-sentido-amplio-y-sentido-estricto"><i class="fa fa-check"></i>Heredabilidad en sentido amplio y sentido estricto</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad-lograda"><i class="fa fa-check"></i>Heredabilidad lograda</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-poblaciones-agronómicas-y-de-laboratorio-vs-poblaciones-naturales"><i class="fa fa-check"></i>Heredabilidad en poblaciones agronómicas y de laboratorio vs poblaciones naturales</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-animales-domésticos"><i class="fa fa-check"></i>Estimaciones de heredabilidad en animales domésticos</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-plantas"><i class="fa fa-check"></i>Estimaciones de heredabilidad en plantas</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-condiciones-naturales"><i class="fa fa-check"></i>Estimaciones de heredabilidad en condiciones naturales</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad-y-filogenética"><i class="fa fa-check"></i>Heredabilidad y filogenética</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-la-era-genómica"><i class="fa fa-check"></i>Heredabilidad en la era genómica</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#métodos-más-avanzados-de-estimación"><i class="fa fa-check"></i>Métodos más avanzados de estimación</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#repetibilidad"><i class="fa fa-check"></i>Repetibilidad</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-cociente-de-varianzas"><i class="fa fa-check"></i>La repetibilidad como cociente de varianzas</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-coeficiente-de-correlación-intraclase"><i class="fa fa-check"></i>La repetibilidad como coeficiente de correlación intraclase</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-relación-entre-la-heredabilidad-y-la-repetibilidad"><i class="fa fa-check"></i>La relación entre la heredabilidad y la repetibilidad</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-reducción-en-la-varianza-fenotípica-con-varias-medidas"><i class="fa fa-check"></i>La reducción en la varianza fenotípica con varias medidas</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-herramienta-en-la-predicción"><i class="fa fa-check"></i>La repetibilidad como herramienta en la predicción</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#evolucionabilidad"><i class="fa fa-check"></i>Evolucionabilidad</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#conclusión-9"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#actividades-9"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#control-de-lectura-9"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#veradero-o-falso-1"><i class="fa fa-check"></i>¿Veradero o falso?</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#ejercicios-9"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html"><i class="fa fa-check"></i>Selección Artificial I</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección"><i class="fa fa-check"></i>Factores de corrección</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-aditivos"><i class="fa fa-check"></i>Factores de corrección aditivos</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-multiplicativos"><i class="fa fa-check"></i>Factores de corrección multiplicativos</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-lineales"><i class="fa fa-check"></i>Factores de corrección lineales</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#la-respuesta-a-la-selección-y-su-predicción"><i class="fa fa-check"></i>La respuesta a la selección y su predicción</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#diferencial-de-selección-e-intensidad-de-selección"><i class="fa fa-check"></i>Diferencial de selección e intensidad de selección</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#intensidad-de-selección-y-proporción-seleccionada"><i class="fa fa-check"></i>Intensidad de selección y proporción seleccionada</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp"><i class="fa fa-check"></i>¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#la-relación-entre-diferentes-formas-de-calcular-la-intensidad-de-selección"><i class="fa fa-check"></i>La relación entre diferentes formas de calcular la intensidad de selección</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#intervalo-generacional"><i class="fa fa-check"></i>Intervalo generacional</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#medidas-de-la-respuesta"><i class="fa fa-check"></i>Medidas de la respuesta</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#progreso-genético-generacional-y-anual"><i class="fa fa-check"></i>Progreso genético generacional y anual</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#cambio-en-las-frecuencias-alélicas-bajo-selección-artificial"><i class="fa fa-check"></i>Cambio en las frecuencias alélicas bajo selección artificial</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#el-diferencial-de-selección-direccional-y-la-identidad-de-robertson-price"><i class="fa fa-check"></i>El diferencial de selección direccional y la identidad de Robertson-Price</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#conclusión-10"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#actividades-10"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#control-de-lectura-10"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#verdadero-o-falso-8"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#ejercicios-11"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html"><i class="fa fa-check"></i>Correlaciones y respuesta correlacionada</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#causas-genéticas-y-ambientales-de-las-correlaciones"><i class="fa fa-check"></i>Causas genéticas y ambientales de las correlaciones</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#causas-de-las-correlaciones-genéticas"><i class="fa fa-check"></i>Causas de las correlaciones genéticas</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#causas-de-las-correlaciones-ambientales"><i class="fa fa-check"></i>Causas de las correlaciones ambientales</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#introducción-al-path-analysis"><i class="fa fa-check"></i>Introducción al “<em>path analysis</em>”</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#la-relación-entre-las-correlaciones-fenotípica-genética-y-ambiental"><i class="fa fa-check"></i>La relación entre las correlaciones fenotípica, genética y ambiental</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#métodos-para-determinar-la-correlación-genética"><i class="fa fa-check"></i>Métodos para determinar la correlación genética</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#la-correlación-fenotípica-y-su-relación-con-la-correlación-genética-aditiva-y-ambiental"><i class="fa fa-check"></i>La correlación fenotípica y su relación con la correlación genética aditiva y ambiental</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#respuesta-correlacionada"><i class="fa fa-check"></i>Respuesta correlacionada</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#eficiencia-en-relación-a-la-selección-directa"><i class="fa fa-check"></i>Eficiencia en relación a la selección directa</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#el-signo-de-la-correlación-y-el-beneficio-demérito-de-la-misma"><i class="fa fa-check"></i>El signo de la correlación y el beneficio-demérito de la misma</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#matrices-de-varianza-covarianza"><i class="fa fa-check"></i>Matrices de varianza-covarianza</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#la-forma-generalizada-de-la-ecuación-del-criador"><i class="fa fa-check"></i>La forma generalizada de la ecuación del criador</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#conclusión-11"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#actividades-11"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#control-de-lectura-11"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#verdadero-o-falso-9"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#ejercicios-10"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html"><i class="fa fa-check"></i>Selección Artificial II</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#criterios-y-objetivos-de-selección"><i class="fa fa-check"></i>Criterios y objetivos de selección</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#selección-basada-en-un-solo-tipo-de-fuente-de-información"><i class="fa fa-check"></i>Selección basada en un solo tipo de fuente de información</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#diferentes-tipos-de-selección-basados-en-estructuras-de-parentesco-definidas"><i class="fa fa-check"></i>Diferentes tipos de selección basados en estructuras de parentesco definidas</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-las-heredabilidades-en-los-distintos-tipos-de-selección"><i class="fa fa-check"></i>Cálculo de las heredabilidades en los distintos tipos de selección</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#combinando-la-información-proporcionada-por-diferentes-tipos-de-parientes"><i class="fa fa-check"></i>Combinando la información proporcionada por diferentes tipos de parientes</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-los-elementos-de-la-matriz-de-varianzas-covarianzas-fenotípica"><i class="fa fa-check"></i>Cálculo de los elementos de la matriz de varianzas-covarianzas fenotípica</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-los-elementos-del-vector-de-varianzas-covarianzas-genéticas"><i class="fa fa-check"></i>Cálculo de los elementos del vector de varianzas-covarianzas genéticas</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#información-propia-y-de-un-progenitor"><i class="fa fa-check"></i>Información propia y de un progenitor</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#información-propia-y-de-varios-hermanos-enteros"><i class="fa fa-check"></i>Información propia y de varios hermanos enteros</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#pruebas-de-progenie"><i class="fa fa-check"></i>Pruebas de progenie</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#límites-de-la-eficiencia-en-pruebas-de-progenie"><i class="fa fa-check"></i>Límites de la eficiencia en pruebas de progenie</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#precisión-del-valor-de-cría-a-partir-del-índice"><i class="fa fa-check"></i>Precisión del valor de cría a partir del índice</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#métodos-de-selección-para-varias-características"><i class="fa fa-check"></i>Métodos de selección para varias características</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#selección-en-tandem"><i class="fa fa-check"></i>Selección en tandem</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#niveles-independientes-de-rechazo"><i class="fa fa-check"></i>Niveles Independientes de Rechazo</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#índices-de-selección"><i class="fa fa-check"></i>Índices de selección</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#índices-de-selección-para-múltiples-características"><i class="fa fa-check"></i>Índices de selección para múltiples características</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#el-índice-de-smith-hazel"><i class="fa fa-check"></i>El índice de Smith-Hazel</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#métodos-y-técnicas-avanzadas-de-selección"><i class="fa fa-check"></i>Métodos y técnicas avanzadas de selección</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#blup-las-ecuaciones-del-modelo-mixto-lineal"><i class="fa fa-check"></i>BLUP: las ecuaciones del modelo mixto lineal</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#conclusión-12"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#actividades-12"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#control-de-lectura-12"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#verdadero-o-falso-10"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#ejercicios-12"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html"><i class="fa fa-check"></i>Endocría, exocría, consanguinidad y depresión endogámica</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#el-aumento-de-la-consanguinidad-a-partir-del-número-de-individuos"><i class="fa fa-check"></i>El aumento de la consanguinidad a partir del número de individuos</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#qué-proporción-de-machos-es-necesaria-para-mantener-un-tamaño-efectivo-poblacional-mínimo"><i class="fa fa-check"></i>¿Qué proporción de machos es necesaria para mantener un tamaño efectivo poblacional mínimo?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#el-coeficiente-de-consanguinidad-en-razas-lecheras"><i class="fa fa-check"></i>El coeficiente de consanguinidad en razas lecheras</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#depresión-endogámica"><i class="fa fa-check"></i>Depresión endogámica</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#los-riesgos-del-uso-masivo-de-reproductores-y-la-endogamia-elevada"><i class="fa fa-check"></i>Los riesgos del uso masivo de reproductores y la endogamia elevada</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#redistribución-en-la-varianza-genética"><i class="fa fa-check"></i>Redistribución en la varianza genética</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#exocría-y-heterosis"><i class="fa fa-check"></i>Exocría y heterosis</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#el-modelo-del-templo-griego"><i class="fa fa-check"></i>El modelo del templo griego</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#un-modelo-sencillo-de-heterosis-bajo-exocría"><i class="fa fa-check"></i>Un modelo sencillo de heterosis bajo exocría</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#complementariedad"><i class="fa fa-check"></i>Complementariedad</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#tipos-de-cruzamientos"><i class="fa fa-check"></i>Tipos de cruzamientos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#modelo-genético-de-cruzamientos"><i class="fa fa-check"></i>Modelo genético de cruzamientos</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#conclusión-13"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#actividades-13"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#control-de-lectura-13"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#verdadero-o-falso-11"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#ejercicios-13"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html"><i class="fa fa-check"></i>Normas de reacción e interacción genotipo x ambiente</a>
+<ul>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#plasticidad-fenotípica-y-normas-de-reacción"><i class="fa fa-check"></i>Plasticidad fenotípica y normas de reacción</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#interacción-gxe-en-dos-ambientes"><i class="fa fa-check"></i>Interacción GxE en dos ambientes</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#correlación-genética-a-través-de-dos-ambientes"><i class="fa fa-check"></i>Correlación genética a través de dos ambientes</a>
+<ul>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#procedimientos-de-estimación"><i class="fa fa-check"></i>Procedimientos de estimación</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#genética-cuantitativa-de-la-interacción-gxe"><i class="fa fa-check"></i>Genética cuantitativa de la interacción GxE</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#otros-ejemplos-de-interacción-genotipo-ambiente"><i class="fa fa-check"></i>Otros ejemplos de interacción genotipo-ambiente</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#conclusión-14"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#actividades-14"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#control-de-lectura-14"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#veradero-o-falso-2"><i class="fa fa-check"></i>¿Veradero o falso?</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#ejercicios-14"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html"><i class="fa fa-check"></i>Apéndice I: CONCEPTOS MATEMÁTICOS BÁSICOS</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#fracciones"><i class="fa fa-check"></i>FRACCIONES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#fracciones-equivalentes-y-fracciones-irreducibles"><i class="fa fa-check"></i>Fracciones equivalentes y fracciones irreducibles</a></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#operaciones-con-fracciones"><i class="fa fa-check"></i>Operaciones con fracciones</a></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#común-denominador"><i class="fa fa-check"></i>Común denominador</a></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#operaciones-combinadas-con-fracciones"><i class="fa fa-check"></i>Operaciones combinadas con fracciones</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#proporcionalidad"><i class="fa fa-check"></i>PROPORCIONALIDAD</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#regla-de-tres"><i class="fa fa-check"></i>Regla de tres</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#cifras-significativas-y-redondeo"><i class="fa fa-check"></i>CIFRAS SIGNIFICATIVAS Y REDONDEO</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#operaciones-con-cifras-significativas"><i class="fa fa-check"></i>Operaciones con cifras significativas</a></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#producto-y-división"><i class="fa fa-check"></i>Producto y División</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#notación-científica"><i class="fa fa-check"></i>NOTACIÓN CIENTÍFICA</a></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#ecuaciones"><i class="fa fa-check"></i>ECUACIONES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#ecuaciones-polinómicas"><i class="fa fa-check"></i>Ecuaciones polinómicas</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#funciones"><i class="fa fa-check"></i>FUNCIONES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#ceros-de-una-función"><i class="fa fa-check"></i>Ceros de una función</a></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#tipos-de-funciones"><i class="fa fa-check"></i>Tipos de funciones:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#sumatoria-y-productoria"><i class="fa fa-check"></i>SUMATORIA Y PRODUCTORIA</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html"><i class="fa fa-check"></i>Apéndice II: CÁLCULO DIFERENCIAL E INTEGRAL</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#límites"><i class="fa fa-check"></i>LÍMITES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#límite-finito"><i class="fa fa-check"></i>Límite finito</a></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#límite-infinito"><i class="fa fa-check"></i>Límite infinito</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#derivadas"><i class="fa fa-check"></i>DERIVADAS</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#derivada-puntual"><i class="fa fa-check"></i>Derivada puntual</a></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#derivada-de-una-función"><i class="fa fa-check"></i>Derivada de una función</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#integrales"><i class="fa fa-check"></i>INTEGRALES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#integral-indefinida-o-primitiva"><i class="fa fa-check"></i>Integral indefinida o Primitiva</a></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#integral-definida"><i class="fa fa-check"></i>Integral definida</a></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#relación-entre-primitiva-e-integral-definida"><i class="fa fa-check"></i>Relación entre Primitiva e Integral definida</a></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#métodos-de-integración"><i class="fa fa-check"></i>Métodos de integración</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#ecuaciones-diferenciales"><i class="fa fa-check"></i>ECUACIONES DIFERENCIALES</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><i class="fa fa-check"></i>Apéndice III: ALGEBRA LINEAL Y GEOMETRÍA ANALÍTICA</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#matrices"><i class="fa fa-check"></i>MATRICES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#relación-con-los-sistemas-de-ecuaciones"><i class="fa fa-check"></i>Relación con los sistemas de ecuaciones</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#álgebra-de-matrices"><i class="fa fa-check"></i>Álgebra de matrices</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#determinante-de-una-matriz"><i class="fa fa-check"></i>Determinante de una matriz</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#norma-producto-escalar-y-producto-vectorial"><i class="fa fa-check"></i>NORMA, PRODUCTO ESCALAR Y PRODUCTO VECTORIAL</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#vectores"><i class="fa fa-check"></i>Vectores</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#agregar-imagen-vectores"><i class="fa fa-check"></i>AGREGAR IMAGEN VECTORES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#distancia-y-norma"><i class="fa fa-check"></i>Distancia y norma</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#producto-escalar"><i class="fa fa-check"></i>Producto escalar</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#producto-vectorial"><i class="fa fa-check"></i>Producto vectorial</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#transformaciones-lineales"><i class="fa fa-check"></i>TRANSFORMACIONES LINEALES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#núcleo-e-imagen-de-una-transformación-lineal"><i class="fa fa-check"></i>Núcleo e Imagen de una Transformación Lineal</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#geometría-de-matrices"><i class="fa fa-check"></i>Geometría de matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#valores-y-vectores-propios"><i class="fa fa-check"></i>VALORES Y VECTORES PROPIOS</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#de-una-transformación-lineal"><i class="fa fa-check"></i>De una transformación lineal:</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#de-una-matriz"><i class="fa fa-check"></i>De una matriz:</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#diagonalización-de-una-matriz"><i class="fa fa-check"></i>Diagonalización de una matriz</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#derivada-de-la-forma-cuadrática"><i class="fa fa-check"></i>DERIVADA DE LA FORMA CUADRÁTICA</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html"><i class="fa fa-check"></i>Apéndice IV: PROBABILIDAD Y ESTADÍSTICA</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#probabilidad-y-conteo"><i class="fa fa-check"></i>PROBABILIDAD Y CONTEO</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#probabilidad-condicional"><i class="fa fa-check"></i>Probabilidad condicional</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#variables-aleatorias"><i class="fa fa-check"></i>VARIABLES ALEATORIAS</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#variables-aleatorias-discretas"><i class="fa fa-check"></i>Variables Aleatorias Discretas</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#variables-aleatorias-continuas"><i class="fa fa-check"></i>Variables Aleatorias Continuas</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#variables-independientes"><i class="fa fa-check"></i>Variables independientes</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#valor-esperado"><i class="fa fa-check"></i>Valor esperado</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#varianza-y-desviación-estándar"><i class="fa fa-check"></i>Varianza y Desviación Estándar</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#covarianza-y-coeficiente-de-correlación"><i class="fa fa-check"></i>Covarianza y Coeficiente de Correlación</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#ley-de-los-grandes-números"><i class="fa fa-check"></i>Ley de los grandes números</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#distribuciones-conocidas"><i class="fa fa-check"></i>Distribuciones conocidas</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#distribución-normal"><i class="fa fa-check"></i>Distribución Normal</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#distribución-binomial"><i class="fa fa-check"></i>Distribución Binomial</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#distribución-de-poisson"><i class="fa fa-check"></i>Distribución de Poisson</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#estimadores"><i class="fa fa-check"></i>ESTIMADORES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#estimadores-frecuentistas"><i class="fa fa-check"></i>Estimadores frecuentistas</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#otras-propiedades"><i class="fa fa-check"></i>Otras propiedades:</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#métodos-de-estimación"><i class="fa fa-check"></i>Métodos de estimación</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#estimadores-bayesianos"><i class="fa fa-check"></i>Estimadores Bayesianos</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#ejemplo-conceptual-de-estimadores"><i class="fa fa-check"></i>Ejemplo conceptual de estimadores:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bibliografia.html"><a href="bibliografia.html"><i class="fa fa-check"></i>Bibliografía</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="apéndice-ii-cálculo-diferencial-e-integral" class="section level1 hasAnchor">
+<h1>Apéndice II: CÁLCULO DIFERENCIAL E INTEGRAL<a href="apéndice-ii-cálculo-diferencial-e-integral.html#apéndice-ii-cálculo-diferencial-e-integral" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="límites" class="section level2 hasAnchor">
+<h2>LÍMITES<a href="apéndice-ii-cálculo-diferencial-e-integral.html#límites" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="límite-finito" class="section level3 hasAnchor">
+<h3>Límite finito<a href="apéndice-ii-cálculo-diferencial-e-integral.html#límite-finito" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se considera <span class="math inline">\(f: X \subset \mathbb{R} \rightarrow \mathbb{R}\)</span> con <span class="math inline">\(X\)</span> una unión de intervalos. El límite de la función <span class="math inline">\(f\)</span> en un punto <span class="math inline">\(a\)</span> refiere a qué pasa con los valores de <span class="math inline">\(f(x)\)</span> para valores de <span class="math inline">\(x\)</span> muy cercanos a <span class="math inline">\(a\)</span>. Se escribe de la siguiente forma:
+<span class="math display">\[\lim\limits_{x \rightarrow a} f(x) = L\]</span></p>
+<p>Cuando se estudia el límite en <span class="math inline">\(a\)</span>, se busca saber como se comporta la función en puntos cercanos a él, pero no importa específicamente la imagen de la función en <span class="math inline">\(a\)</span>. Esto implica que <span class="math inline">\(a\)</span> no necesariamente tiene que ser parte del dominio de la función. El límite de una función en un punto <span class="math inline">\(a\)</span> nos indica el comportamiento de <span class="math inline">\(f\)</span> cerca de <span class="math inline">\(a\)</span> sin importar el punto <span class="math inline">\(a\)</span>.</p>
+<p>Sea <span class="math inline">\(L\)</span> el límite de <span class="math inline">\(f\)</span> en <span class="math inline">\(a\)</span>, pueden darse tres situaciones respecto a la imagen <span class="math inline">\(f(a)\)</span>:
+1. Si <span class="math inline">\(f\)</span> continua en <span class="math inline">\(a\)</span>, entonces <span class="math inline">\(L = f(a)\)</span>.
+2. Si <span class="math inline">\(f\)</span> no es continua en <span class="math inline">\(a\)</span>, entonces <span class="math inline">\(L\)</span> es el límite pero <span class="math inline">\(L \neq f(a)\)</span>.
+3. Si <span class="math inline">\(f\)</span> no está definida en <span class="math inline">\(a\)</span>, existe el límite <span class="math inline">\(L\)</span> pero no está definido <span class="math inline">\(f(a)\)</span>.</p>
+<div id="proposiciones-importantes" class="section level4 hasAnchor">
+<h4>Proposiciones importantes:<a href="apéndice-ii-cálculo-diferencial-e-integral.html#proposiciones-importantes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Proposición 1</strong>
+Si el límite <span class="math inline">\(\lim\limits_{x \rightarrow a} f(x)\)</span> existe, es único.</p>
+<p><strong>Proposición 2</strong>
+Sean <span class="math inline">\(\lim\limits_{x \rightarrow a} f(x) = b\)</span> y <span class="math inline">\(\lim\limits_{x \rightarrow a} g(x) = c\)</span>. Entonces:
+1. <span class="math inline">\(\lim\limits_{x \rightarrow a} (f+g)(x) = b + c\)</span>
+2. <span class="math inline">\(\lim\limits_{x \rightarrow a} (f-g)(x) = b - c\)</span>
+3. <span class="math inline">\(\lim\limits_{x \rightarrow a} (f \cdot g)(x) = b \cdot c\)</span></p>
+</div>
+</div>
+<div id="límite-infinito" class="section level3 hasAnchor">
+<h3>Límite infinito<a href="apéndice-ii-cálculo-diferencial-e-integral.html#límite-infinito" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Intuitivamente, se habla de un límite infinito cuando a medida que la función se acerca al punto <span class="math inline">\(a\)</span>, la imagen <span class="math inline">\(f(a)\)</span> es un valor muy grande. Cuánto más se acerca <span class="math inline">\(x\)</span> a <span class="math inline">\(a\)</span>, <span class="math inline">\(f(x)\)</span> es un número cada vez mayor, pero si <span class="math inline">\(x = a\)</span> la operación es indeterminada (por ejemplo, queda una división entre cero).</p>
+<p>También puede ser importante estudiar el límite de la función cuando <span class="math inline">\(x \rightarrow \pm\infty\)</span> (valores de <span class="math inline">\(x\)</span> con módulo muy grande, tanto postivos como negativos).</p>
+<p>Para ver los distintos casos, se trabajará con un ejemplo.</p>
+<div id="ejemplo-9" class="section level4 hasAnchor">
+<h4>Ejemplo:<a href="apéndice-ii-cálculo-diferencial-e-integral.html#ejemplo-9" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Se define
+<span class="math display">\[f(x) / f(x) = \frac{1}{1-x} \forall x \in \mathbb{\{R\} - 1}.\]</span> ¿Qué pasa con el límite en 1? ¿Y en <span class="math inline">\(\pm \infty\)</span>?</p>
+<p><em>Solución:</em>
+A) Para saber el límite de <span class="math inline">\(x \rightarrow 1\)</span> se divide en dos casos:
+1. Por un lado se estudia el límite cuando nos acercamos a 1 por la derecha (con valores mayores a uno, pero cada vez más cercanos).</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(x\)</span></th>
+<th align="center"><span class="math inline">\(f(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1,01</td>
+<td align="center">-100</td>
+</tr>
+<tr class="even">
+<td align="center">1,001</td>
+<td align="center">-1000</td>
+</tr>
+<tr class="odd">
+<td align="center">1,0001</td>
+<td align="center">-10000</td>
+</tr>
+<tr class="even">
+<td align="center">1,00001</td>
+<td align="center">-100000</td>
+</tr>
+</tbody>
+</table>
+<p>Se puede ver que cuánto más cerca está <span class="math inline">\(x\)</span> de 1, mayor es el módulo de <span class="math inline">\(f(x)\)</span>. Se puede ver también que <span class="math inline">\(f(x)\)</span> es negativa, por lo que se dice que el límite de <span class="math inline">\(f(x)\)</span> cuando <span class="math inline">\(x\)</span> tiende a 1 por derecha es <span class="math inline">\(-\infty\)</span> y se escribe:</p>
+<p><span class="math display">\[\lim\limits_{x \rightarrow 1^{+}} f(x) = -\infty\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Al estudiar el límite por izquierda, acercándonos a 1 un valores menores a él, se puede ver que:</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(x\)</span></th>
+<th align="center"><span class="math inline">\(f(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0,9</td>
+<td align="center">10</td>
+</tr>
+<tr class="even">
+<td align="center">0,99</td>
+<td align="center">100</td>
+</tr>
+<tr class="odd">
+<td align="center">0,999</td>
+<td align="center">1000</td>
+</tr>
+<tr class="even">
+<td align="center">0,9999</td>
+<td align="center">10000</td>
+</tr>
+</tbody>
+</table>
+<p>Cuánto más cerca de uno, mayor es el valor de <span class="math inline">\(f(x)\)</span> pero con valores positivos por lo que, en este caso:</p>
+<p><span class="math display">\[\lim\limits_{x \rightarrow 1^{-}} f(x) = +\infty\]</span></p>
+<ol start="2" style="list-style-type: upper-alpha">
+<li>Se estudiarán ahora los límites para <span class="math inline">\(\pm \infty\)</span> separando nuevamente en los dos casos.</li>
+</ol>
+<ol style="list-style-type: decimal">
+<li>Para el caso <span class="math inline">\(+\infty\)</span>, tomaremos valores de <span class="math inline">\(x\)</span> muy grandes:</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(x\)</span></th>
+<th><span class="math inline">\(f(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(1x10^5\)</span></td>
+<td><span class="math inline">\(-1x10^{-5}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1x10^10\)</span></td>
+<td><span class="math inline">\(-1x10^{-10}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(1x10^15\)</span></td>
+<td><span class="math inline">\(-1x10^{-15}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1x10^20\)</span></td>
+<td><span class="math inline">\(-1x10^{-20}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>En este caso, se puede ver que cuánto más grande el valor de <span class="math inline">\(x\)</span>, más pequeño es el valor de <span class="math inline">\(f(x)\)</span> pero manteniéndose positivo. Decimos entonces que el límite es <span class="math inline">\(0^{+}\)</span>.
+<span class="math display">\[\lim\limits_{x \rightarrow +\infty} f(x) = 0^{+}\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Realizando la misma tabla que en el caso anterior pero para valores negativos, se obtiene que <span class="math inline">\(f(x)\)</span> se acerca más a cero cuanto mayor el valor de <span class="math inline">\(x\)</span>, pero en este caso los valores obtenidos son negativos. Se dice que el límite es <span class="math inline">\(0^{-}\)</span>.
+<span class="math display">\[\lim\limits_{x \rightarrow -\infty} f(x) = 0^{-}\]</span></li>
+</ol>
+<p>Se muestra a continuación la gráfica de la función estudiada. En azul, se muestran las asíntotas <span class="math inline">\(x=1\)</span> y <span class="math inline">\(y=0\)</span> que son aquellas rectas que la función nunca corta.</p>
+<embed src="figuras/limites_fx.pdf" width="80%" style="display: block; margin: auto;" type="application/pdf" />
+<p>Se puede ver que cuánto más grandes en módulo son los valores de <span class="math inline">\(x\)</span> más se acerca la función a cero. Si bien el eje <span class="math inline">\(x\)</span> en esta imagen no llega a valores tan altos, invitamos al lector a verificar esto con su calculadora.
+Se puede observar lo mismo para <span class="math inline">\(x=1\)</span>, donde se puede observar que la función no llega a cortar la asíntota y toma valores cada vez más grandes.</p>
+</div>
+<div id="proposiciones-importantes-1" class="section level4 hasAnchor">
+<h4>Proposiciones importantes:<a href="apéndice-ii-cálculo-diferencial-e-integral.html#proposiciones-importantes-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Proposición 3a:</strong>
+Sean <span class="math inline">\(\lim\limits_{x \rightarrow a} f(x) = +\infty\)</span> y <span class="math inline">\(\lim\limits_{x \rightarrow a} g(x) = c\)</span>. Entonces:</p>
+<p><em>Suma:</em>
+<span class="math display">\[\lim\limits_{x \rightarrow a} (f \cdot g)(x) = +\infty\]</span></p>
+<p><em>Producto:</em>
+- Si <span class="math inline">\(c &gt; 0\)</span>, <span class="math inline">\(\lim\limits_{x \rightarrow a} (f \cdot g)(x) = +\infty\)</span>
+- Si <span class="math inline">\(c &lt; 0\)</span>, <span class="math inline">\(\lim\limits_{x \rightarrow a} (f \cdot g)(x) = -\infty\)</span></p>
+<p><strong>Proposición 3b:</strong>
+Sean <span class="math inline">\(\lim\limits_{x \rightarrow a} f(x) = \infty\)</span> y <span class="math inline">\(\lim\limits_{x \rightarrow a} g(x) = \infty\)</span>. Entonces:</p>
+<p><em>Suma:</em>
+<span class="math display">\[\lim\limits_{x \rightarrow a} (f \cdot g)(x) = \infty\]</span></p>
+<p><em>Producto:</em>
+<span class="math display">\[\lim\limits_{x \rightarrow a} (f \cdot g)(x) = \infty\]</span></p>
+<p><strong>Proposición 4a:</strong>
+Si <span class="math inline">\(\lim\limits_{x \rightarrow a} f(x) = \infty \Rightarrow \lim\limits_{x \rightarrow a} \frac{1}{f(x)} = 0\)</span>.</p>
+<p><strong>Proposición 4b:</strong>
+Si <span class="math inline">\(\lim\limits_{x \rightarrow a} f(x) = 0 \Rightarrow \lim\limits_{x \rightarrow a} \frac{1}{f(x)} = \infty\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="derivadas" class="section level2 hasAnchor">
+<h2>DERIVADAS<a href="apéndice-ii-cálculo-diferencial-e-integral.html#derivadas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="derivada-puntual" class="section level3 hasAnchor">
+<h3>Derivada puntual<a href="apéndice-ii-cálculo-diferencial-e-integral.html#derivada-puntual" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La derivada puntual describe con qué rapidez se produce la variación de una función para un determinado punto <span class="math inline">\(a\)</span>. La definición formal de la derivada dice que:
+<span class="math inline">\(f\)</span> es derivable en <span class="math inline">\(a\)</span> si existe el límite <span class="math inline">\(\lim\limits_{x \rightarrow a} \frac{f(x) - f(a)}{x - a}\)</span>. Si existe el límite, <span class="math inline">\(f&#39;(a)\)</span> es el resultado y se dice que <span class="math inline">\(f&#39;(a)\)</span> es la derivada de <span class="math inline">\(f\)</span> en el punto a.</p>
+<p>Gráficamente, se puede ver como la pendiente de la gráfica en el punto.</p>
+</div>
+<div id="derivada-de-una-función" class="section level3 hasAnchor">
+<h3>Derivada de una función<a href="apéndice-ii-cálculo-diferencial-e-integral.html#derivada-de-una-función" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A partir de la definición anterior, se puede definir la derivada de una función. Tomando un punto <span class="math inline">\(x\)</span> en el intervalo <span class="math inline">\((a,b)\)</span> y <span class="math inline">\(f\)</span> una función definida, por lo menos, en ese intervalo abierto <span class="math inline">\((a,b)\)</span>, se define la derivada <span class="math inline">\(f&#39;\)</span> como el límite del cociente de diferencias:
+<span class="math display">\[\lim\limits_{h \rightarrow 0} \frac{f(x+h) - f(x)}{h}\]</span></p>
+<p>Este cociente representa la variación media de <span class="math inline">\(f\)</span> en el intervalo que une a <span class="math inline">\(x\)</span> y <span class="math inline">\(x+h\)</span>. Este límite define una nueva función llamada <em>primera derivada de <span class="math inline">\(f\)</span></em> y, como fue mencionado previamente, se simboliza como <span class="math inline">\(f&#39;\)</span>. Si se deriva <span class="math inline">\(f&#39;\)</span>, obtenemos la segunda derivada de <span class="math inline">\(f\)</span>, <span class="math inline">\(f&#39;&#39;\)</span>.</p>
+<p><em>Ejemplo:</em>{-}
+Se tiene una explotación ganadera que cría vacas para la producción de carne. Para obtener un modelo simple, se considera que la tasa de crecimiento de las vacas depende únicamente de la cantidad de alimento suministrado por día (que será una función de <span class="math inline">\(x\)</span>).</p>
+<p>Se tiene entonces que el crecimiento <span class="math inline">\(C\)</span> depende de <span class="math inline">\(x\)</span>:
+<span class="math display">\[C(x) = e^{3x} + x^2.\]</span></p>
+<p>Esta ecuación nos dice que el crecimiento queda ligado a la cantidad de alimento mediante una función exponencial más una función polinómica. La tasa de crecimiento se calculará a partir de las derivadas total de la función, obteniendo que <span class="math inline">\(C&#39;(x) = 3e^{3x} + 2x.\)</span></p>
+<div id="máximos-y-mínimos-locales-y-absolutos" class="section level4 hasAnchor">
+<h4>Máximos y mínimos locales y absolutos<a href="apéndice-ii-cálculo-diferencial-e-integral.html#máximos-y-mínimos-locales-y-absolutos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Tomando la noción de la derivada como la pendiente de la curva en un punto, se puede ver que en aquellos puntos donde la derivada es cero la tangente es horizontal. Esto implica tres posibilidades para ese punto:
+1. La función <span class="math inline">\(f\)</span> tiene un <em>máximo local</em> en ese punto.
+2. La función <span class="math inline">\(f\)</span> tiene un <em>mínimo local</em> en ese punto.
+3. La función <span class="math inline">\(f\)</span> tiene un punto silla, que no es ni máximo ni mínimo de la función.</p>
+<p>Un punto <span class="math inline">\(a\)</span> es un máximo local si para un entorno alrededor, la función toma valores menores a <span class="math inline">\(f(a)\)</span>. Si además <span class="math inline">\(f(a)\)</span> es el máximo de los máximos, decimos que es un <em>máximo absoluto</em>.</p>
+<p>Lo inverso ocurre si en <span class="math inline">\(a\)</span> hay un mínimo. Existe un entorno alrededor de él para el cual la función toma valores mayores a <span class="math inline">\(f(a)\)</span>. Si además es el mínimo de los mínimos, la función presenta un <em>mínimo absoluto</em>.</p>
+<p>En la siguiente imagen se muestra un ejemplo de una función que tiene un máximo relativo, un mínimo relativo y un punto silla. El mínimo relativo se encuentra en <span class="math inline">\((1,-2)\)</span>, el máximo relativo en $(-1,2)% y el punto silla en <span class="math inline">\((0,0)\)</span>. Se puede observar como en los tres casos la tangente al punto es horizontal (derivada nula). Sin embargo, la función toma valores mayores y menores a los del entorno, por lo que no son extremos absolutos.</p>
+<embed src="figuras/ptoscriticos.pdf" width="80%" style="display: block; margin: auto;" type="application/pdf" />
+<p>Para hallar si un punto es mínimo o máximo se puede trabajar con dos métodos:</p>
+<p><strong>Método de la derivada primera</strong></p>
+<ul>
+<li><p>Para que un punto sea máximo, los puntos adyacentes a él deben ser menores, a la vez que la pendiente a la izquierda de este será positiva y a la derecha negativa.</p></li>
+<li><p>Para que un punto sea mínimo, los puntos adyacentes a él deben ser mayores, a la vez que la pendiente a la izquierda de este será negativa y a la derecha positiva.</p></li>
+</ul>
+<p>Establecido esto, el criterio de la primera derivada dice que una vez que se encuentra un punto donde <span class="math inline">\(f&#39;(a)=0\)</span> se miran las derivadas a la derecha y a su izquierda, concluyendo que:
+- Si a la izqierda la derivada es positiva y a la derecha negativa, el punto es un máximo.
+- Si por su parte, a la izquierda del punto la derivada es negativa y a la derecha positiva, el punto es un mínimo.</p>
+<p>En el caso que a ambos lados del punto la derivada sea positiva o negativa, no hay ni máximo ni mínimo.</p>
+<p><em>Ejemplo:</em>
+Sea la función <span class="math inline">\(f(x) = 4x^2-8x\)</span>, su derivada es <span class="math inline">\(f&#39;(x) = 8x - 8\)</span>. Para hallar los candidatos a máximos y mínimos, igualamos a cero y obtenemos que <span class="math inline">\(f&#39;(x) = 0 \Leftrightarrow x = 1\)</span>. Sustituyendo en <span class="math inline">\(f(x)\)</span> obtenemos la otra coordenada del punto, por lo que pasaremos a estudiar si <span class="math inline">\((1,-4)\)</span> es un máximo o un mínimo.</p>
+<p>Para ver la derivada a los costados de <span class="math inline">\(x=1\)</span> tomamos un punto a la izquierda (por ejemplo, cero) y otro a la derecha (por ejemplo, dos) y evaluamos el signo de la derivada.
+- <span class="math display">\[f&#39;(0) = -8\]</span>
+- <span class="math display">\[f&#39;(2) = 8\]</span></p>
+<p>Se observa que a la izquierda la derivada es negativa y a la derecha positiva, por lo que el punto <span class="math inline">\((1,-4)\)</span> es un mínimo.</p>
+<p><strong>Método de la derivada segunda</strong>
+Para utilizar el método de la derivada segunda, se calcula la derivada de <span class="math inline">\(f&#39;(x)\)</span> y se evalúa en <span class="math inline">\(x\)</span>. Si <span class="math inline">\(f&#39;&#39;(x)\)</span> es negativa, en <span class="math inline">\(x\)</span> hay un máximo. Por el contrario, si <span class="math inline">\(f&#39;&#39;(x)\)</span> es positiva, en <span class="math inline">\(x\)</span> hay un mínimo.</p>
+<p><em>Ejemplo:</em>
+Tomando nuevamente la función <span class="math inline">\(f(x) = 4x^2-8x\)</span>, calculamos su derivada primera y derivada segunda:
+<span class="math display">\[f&#39;(x) = 8x - 8 \Rightarrow f&#39;&#39;(x) = 8.\]</span> La derivada segunda es la función constante positiva, por lo que en <span class="math inline">\((1,-4)\)</span> la función <span class="math inline">\(f(x)\)</span> presenta un mínimo.</p>
+</div>
+<div id="proposiciones-importantes-2" class="section level4 hasAnchor">
+<h4>Proposiciones importantes<a href="apéndice-ii-cálculo-diferencial-e-integral.html#proposiciones-importantes-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Proposición 1: Álgebra de las derivadas</strong>
+Sean <span class="math inline">\(f, g: \mathbb{X} \rightarrow \mathbb{R}\)</span> derivables en <span class="math inline">\(a\)</span>. Las funciones <span class="math inline">\(f+g, \: f-g, \: f \cdot g, \: \frac{f}{g}\)</span> con <span class="math inline">\(g(a) \neq 0\)</span> son derivables en <span class="math inline">\(a\)</span> y:
+1. <span class="math inline">\((f+g)&#39;(a) = f&#39;(a) + g&#39;(a)\)</span>
+2. <span class="math inline">\((f-g)&#39;(a) = f&#39;(a) - g&#39;(a)\)</span>
+3. <span class="math inline">\((f \cdot g)&#39;(a) = f&#39;(a)g(a) + g&#39;(a)f(a)\)</span>
+4. <span class="math inline">\((\frac{f}{g})&#39;(a) = \frac{f&#39;(a)g(a) + g&#39;(a)f(a)}{g^2(a)}\)</span></p>
+<p><em>Ejemplos:</em>
+1. Se tiene <span class="math inline">\(f(x) = x\)</span> y <span class="math inline">\(g(x) = x^2\)</span>, por lo que <span class="math inline">\((f + g)(x) = x + x^2\)</span>. Entonces, la derivada <span class="math inline">\((f + g)&#39;(x) = 1 + 2x\)</span> donde <span class="math inline">\(f&#39;(x)=1\)</span> y <span class="math inline">\(g&#39;(x) = 2x\)</span>.
+2. Se tiene <span class="math inline">\(f(x) = e^{x}\)</span> y <span class="math inline">\(g(x) = 4x\)</span>, por lo que <span class="math inline">\((f - g)(x) = e^{x} - 4x\)</span>. Entonces, la derivada <span class="math inline">\((f - g)&#39;(x) = e^{x} - 4\)</span> donde <span class="math inline">\(f&#39;(x)=e^{x}\)</span> y <span class="math inline">\(g&#39;(x) = 4\)</span>.
+3. Se tiene <span class="math inline">\(f(x) = e^x\)</span> y <span class="math inline">\(g(x) = x^2\)</span>, por lo que <span class="math inline">\((f \cdot g)(x) = x^2e^{x}\)</span>. Entonces, como <span class="math inline">\(f&#39;(x) = e^{x}\)</span> y <span class="math inline">\(g&#39;(x) = 2x\)</span>, la derivada <span class="math inline">\((f \cdot g)&#39;(x) = x^2e^{x} + 2x e^{x}\)</span>.
+4. Se tiene <span class="math inline">\(f(x) = log(x)\)</span> y <span class="math inline">\(g(x) = x^2\)</span>, por lo que <span class="math inline">\((\frac{f}{g})(x) = \frac{e^{x}}{x^2}\)</span>. Entonces, como <span class="math inline">\(f&#39;(x) = \frac{1}{x}\)</span> y <span class="math inline">\(g&#39;(x) = 2x\)</span>, la derivada <span class="math inline">\((\frac{f}{g})&#39;(x) = \frac{\frac{x^2}{x} - 2x log(x)}{x^4}\)</span> que simplificando queda: <span class="math inline">\((\frac{f}{g})&#39;(x) = \frac{1 - 2log(x)}{x^3}\)</span>.</p>
+<p>En todos los casos, para obtener la derivada de cada una de las funciones en el punto <span class="math inline">\(a\)</span> se evalua en <span class="math inline">\(x = a\)</span>.</p>
+<p><strong>Proposición 2: Regla de la cadena</strong>
+Sean <span class="math inline">\(f: \mathbb{X} \rightarrow \mathbb{R}\)</span> y <span class="math inline">\(g: \mathbb{Y} \rightarrow \mathbb{R}\)</span>. Además, <span class="math inline">\(a \in X\)</span> y <span class="math inline">\(b\ in Y\)</span>, <span class="math inline">\(f(a) = b\)</span>. Si <span class="math inline">\(f\)</span> es derivable en <span class="math inline">\(a\)</span> y <span class="math inline">\(g\)</span> derivable en <span class="math inline">\(b\)</span>, entonces <span class="math inline">\((g \circ f)&#39;(a) = g&#39;(f(a)).f&#39;(a)\)</span>.</p>
+<p><em>Ejemplo:</em>
+Sean <span class="math inline">\(f(x) = 4x^2 - 6x - 5\)</span> y <span class="math inline">\(g(x) = x^8\)</span>. La función compuesta <span class="math inline">\(h(x) = (g \circ f)(x) = (4x^2 - 6x -5)^8\)</span>. Aplicando la regla de la cadena, <span class="math inline">\(h&#39;(x)\)</span> será <span class="math inline">\(g&#39;(x)\)</span> evaluada en la función <span class="math inline">\(f\)</span> y luego multiplicada por <span class="math inline">\(f&#39;(x)\)</span>. Se obtiene entonces:
+- <span class="math inline">\(g&#39;(x) = 8x^7 \Rightarrow g&#39;(f(x)) = 8(4x^2 - 6x - 5)^7\)</span>
+- <span class="math inline">\(f&#39;(x) = 8x - 6\)</span></p>
+<p><span class="math display">\[\Rightarrow h&#39;(x) = g&#39;(f(x))f&#39;(x) = 8(4x^2 - 6x - 5)^7(8x - 6).\]</span></p>
+<p>Para obtener la derivada en el punto <span class="math inline">\(a\)</span> se evalua en <span class="math inline">\(x = a\)</span>.</p>
+</div>
+<div id="tabla-de-derivadas" class="section level4 hasAnchor">
+<h4>Tabla de derivadas<a href="apéndice-ii-cálculo-diferencial-e-integral.html#tabla-de-derivadas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A continuación, se presenta una tabla con las derivadas típicas, para facilitar los cálculos. Es importante destacar que tanto <span class="math inline">\(u\)</span> como <span class="math inline">\(v\)</span> son funciones de <span class="math inline">\(x\)</span>, pero se denotan como <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span> por simplicidad en la notación.</p>
+<table>
+<colgroup>
+<col width="19%" />
+<col width="13%" />
+<col width="13%" />
+<col width="52%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Simples</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center">Compuestas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><em>Función</em></td>
+<td align="center"><em>Derivada</em></td>
+<td align="center"><em>Función</em></td>
+<td align="center"><em>Derivada</em></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(k\)</span></td>
+<td align="center"><span class="math inline">\(0\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(x^n\)</span></td>
+<td align="center"><span class="math inline">\(nx^{n-1}\)</span></td>
+<td align="center"><span class="math inline">\(u^n\)</span></td>
+<td align="center"><span class="math inline">\(nuu&#39;\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\frac{1}{x}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{-1}{x^2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{u}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{-u&#39;}{u^2}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\sqrt[n]{x}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{{n-1}\sqrt[n]{x^{n-1}}}\)</span></td>
+<td align="center"><span class="math inline">\(\sqrt[n]{u}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{u&#39;}{{n-1}\sqrt[n]{u^{n-1}}}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(e^x\)</span></td>
+<td align="center"><span class="math inline">\(e^x\)</span></td>
+<td align="center"><span class="math inline">\(e^u\)</span></td>
+<td align="center"><span class="math inline">\(u&#39;e^u\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(a^x\)</span></td>
+<td align="center"><span class="math inline">\(a^x lna\)</span></td>
+<td align="center"><span class="math inline">\(a^u\)</span></td>
+<td align="center"><span class="math inline">\(u&#39;a^u lna\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(ln x\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{x}\)</span></td>
+<td align="center"><span class="math inline">\(ln u\)</span></td>
+<td align="center"><span class="math inline">\(\frac{u&#39;}{u}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(log_a x\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{x ln a}\)</span></td>
+<td align="center">$log_ a u $</td>
+<td align="center"><span class="math inline">\(\frac{u&#39;}{u ln a}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(sen(x)\)</span></td>
+<td align="center"><span class="math inline">\(cos(x)\)</span></td>
+<td align="center"><span class="math inline">\(sen(u)\)</span></td>
+<td align="center"><span class="math inline">\(u&#39;cos(u)\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(cos(x)\)</span></td>
+<td align="center"><span class="math inline">\(-sen(x\)</span><span class="math inline">\()\)</span></td>
+<td align="center"><span class="math inline">\(cos(u)\)</span></td>
+<td align="center"><span class="math inline">\(-u&#39;sen(u)\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(tan(x)\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{cos^2(x)}\)</span></td>
+<td align="center"><span class="math inline">\(tan(u)\)</span></td>
+<td align="center"><span class="math inline">\(\frac{u&#39;}{cos^2(u)}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">\(u + v\)</span></td>
+<td align="center"><span class="math inline">\(u&#39; + v&#39;\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">\(u - v\)</span></td>
+<td align="center"><span class="math inline">\(u&#39; - v&#39;\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">\(u \cdot v\)</span></td>
+<td align="center"><span class="math inline">\(u&#39;v + uv&#39;\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">\(\frac{u}{v}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{u&#39;v - uv&#39;}{v^2}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="derivadas-parciales" class="section level4 hasAnchor">
+<h4>Derivadas parciales<a href="apéndice-ii-cálculo-diferencial-e-integral.html#derivadas-parciales" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Para trabajar con derivadas de funciones definidas en intervalos de <span class="math inline">\(\mathbb{R}^n\)</span> con <span class="math inline">\(n &gt; 1\)</span> es necesario definir la <em>derivada parcial</em>. La definición formal para funciones de <span class="math inline">\(\mathbb{R}^2\)</span> dice que:
+Sea <span class="math inline">\(f: \mathbb{R}^2 \rightarrow \mathbb{R}\)</span> y <span class="math inline">\((x_0, y_0)\)</span> un punto de <span class="math inline">\(\mathbb{R}^2\)</span>. Se define la derivada parcial de <span class="math inline">\(f\)</span> respecto a la variable <span class="math inline">\(x\)</span> como el siguiente límite (si existe):
+<span class="math display">\[\frac{\partial f}{\partial x}(x_0, y_0) = \lim\limits_{h \rightarrow 0} \frac{f(x_0+h, y_0)-f(x_0, y_0)}{h}.\]</span></p>
+<p>La definición es análoga para la derivada parcial de <span class="math inline">\(f\)</span> respecto a la variable <span class="math inline">\(y\)</span>. Se puede definir el límite para todas las variables que tenga la función en caso de ser una función en <span class="math inline">\(\mathbb{R}^n\)</span>.</p>
+<p>A nivel práctico, para calcular la derivada parcial respecto a una variable, se consideran las otras como constantes, que se sabe de secciones previas que su derivada es cero. Se muestran a continuación un ejemplo en <span class="math inline">\(\mathbb{R}^3\)</span>:</p>
+<p><em>Ejemplos:</em>{-}
+Sea la función <span class="math inline">\(f(x,y,z) = x + xy + z\)</span>. Se calculan las derivadas parciales respecto a las tres variables:
+- <span class="math display">\[\frac{\partial f}{\partial x}(x,y,z) = 1 + y\]</span> donde la derivada de <span class="math inline">\(z\)</span> es cero porque la consideramos constante y la derivada de <span class="math inline">\(xy\)</span> es <span class="math inline">\(y\)</span> por el mismo motivo.
+- <span class="math display">\[\frac{\partial f}{\partial y}(x,y,z) = x.\]</span>
+- <span class="math display">\[\frac{\partial f}{\partial z}(x,y,z) = 1.\]</span></p>
+<p><em>Ejemplo de uso:</em>{-}
+Se decide ahora complejizar el modelo del que depende el crecimiento de las vacas para acercarse más a la realidad. Se considerará, además la cantidad de alimento suministrado por día (que será una función de <span class="math inline">\(x\)</span>), las condiciones ambientales, como temperatura y humedad (que serán una función de <span class="math inline">\(y\)</span>).</p>
+<p>Se tiene entonces que el crecimiento <span class="math inline">\(C\)</span> depende de <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> de la siguiente forma:
+<span class="math display">\[C(x,y) = e^{3x} + y^3\]</span>.</p>
+<p>Esta ecuación nos dice que el crecimiento queda ligado a la cantidad de alimento mediante una función exponencial y a las condiciones ambientales por una función polinómica.</p>
+<p>La tasa de crecimiento dependiendo de cada una de estas variables se calculará a partir de las derivadas parciales. Se podrá obtener la tasa de crecimiento asociado a la variación de la cantidad de alimento calculando <span class="math inline">\(\frac{\partial C}{\partial x} = 3x^2e^{3x}\)</span> y la tasa asociada a las condiciones climáticas calculando <span class="math inline">\(\frac{\partial C}{\partial y} = 3y^2\)</span>. Para calcular cada una de las derivadas, se considera constante la variable que no es de interés.</p>
+</div>
+</div>
+</div>
+<div id="integrales" class="section level2 hasAnchor">
+<h2>INTEGRALES<a href="apéndice-ii-cálculo-diferencial-e-integral.html#integrales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El cálculo integral se utiliza fundamentalmente con dos fines: el primero consiste en la obtención de la función original a partir de su derivada (integral indefinida o primitiva) o bien obtener el área comprendida bajo una curva (integral definida).</p>
+<div id="integral-indefinida-o-primitiva" class="section level3 hasAnchor">
+<h3>Integral indefinida o Primitiva<a href="apéndice-ii-cálculo-diferencial-e-integral.html#integral-indefinida-o-primitiva" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sea <span class="math inline">\(f: [a,b] \rightarrow \mathbb{R}\)</span>, se dice que <span class="math inline">\(F\)</span> es una primitiva de <span class="math inline">\(f\)</span> si <span class="math inline">\(F&#39;(x) = f(x), \: a \leq x \leq b\)</span>. Si <span class="math inline">\(F_1\)</span> y <span class="math inline">\(F_2\)</span> son dos primitivas de <span class="math inline">\(f\)</span>, <span class="math inline">\(F_1 = F_2 + \mathbb{C}\)</span>. Esto implica que una función tiene infinitas primitivas que difieren únicamente por una constante.</p>
+<p>Se define entonces la integral indefinida cómo:
+<span class="math display">\[\int f(x) \: dx = F(x) + k.\]</span></p>
+<p>De las definiciones anteriores se puede considerar a la integral como la operación inversa de la derivada o <em>antiderivada</em>. A continuación se presenta una tabla con las primitivas más comunes, donde se puede hacer la comparación con la tabla de derivadas previa para confirmar la idea de “antiderivada”.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(f(x)\)</span></th>
+<th align="center"><span class="math inline">\(F(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(k\)</span></td>
+<td align="center"><span class="math inline">\(kx + \mathbb{C}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(kx^n\)</span></td>
+<td align="center"><span class="math inline">\(\frac{kx^{n+1}}{n+1} + \mathbb{C}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(kx^{-1}\)</span></td>
+<td align="center"><span class="math inline">\(kln|x| + \mathbb{C}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(e^x\)</span></td>
+<td align="center"><span class="math inline">\(e^x + \mathbb{C}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(a^x\)</span></td>
+<td align="center"><span class="math inline">\(\frac{a^x}{ln(a)} + \mathbb{C}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(sen(x)\)</span></td>
+<td align="center"><span class="math inline">\(-cos(x) + \mathbb{C}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(cos(x)\)</span></td>
+<td align="center"><span class="math inline">\(sen(x) + \mathbb{C}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(tan(x)\)</span></td>
+<td align="center"><span class="math inline">\(-ln|cos(x)| + \mathbb{C}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="integral-definida" class="section level3 hasAnchor">
+<h3>Integral definida<a href="apéndice-ii-cálculo-diferencial-e-integral.html#integral-definida" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Cuando se quiere hallar el área algebraica que hay debajo de una curva se trabaja con la integral definida, que se expresa de la siguiente forma: <span class="math inline">\(\int_a^b f(x) \: dx\)</span>, donde <span class="math inline">\([a,b]\)</span> es el intervalo de integración. Se define como área algebraica el número real positivo o negativo obtenido contando con un signo positivo las áreas por arriba del eje x, mientras que son negativas las áreas por debajo de este.</p>
+<p>Para hallar el área debajo de la curva <span class="math inline">\(f\)</span> se usa el método de Riemann que consiste en aproximar la región de la curva por regiones rectangulares más pequeñas. El área total se calcula sumando el área de cada uno de estos rectángulos. Se calcula el área por defecto (la altura del rectángulo está determinada por el mínimo entre <span class="math inline">\(f(a)\)</span> y <span class="math inline">\(f(b)\)</span>) y por exceso (la altura del rectángulo está determinada por el máximo entre <span class="math inline">\(f(a)\)</span> y <span class="math inline">\(f(b)\)</span>). Tomando particiones cada vez más angostas, las áreas por exceso y defecto se asemejan cada vez más al área real de la curva y se dice que una función es integrable si estas áreas coinciden. Finalmente, se puede definir el área de la función como el límite de la suma de las áreas de las aproximaciones con el ancho de los intervalos teniendo a cero.</p>
+</div>
+<div id="relación-entre-primitiva-e-integral-definida" class="section level3 hasAnchor">
+<h3>Relación entre Primitiva e Integral definida<a href="apéndice-ii-cálculo-diferencial-e-integral.html#relación-entre-primitiva-e-integral-definida" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El segundo teorema fundamental del cálculo dice:</p>
+<p>Sea <span class="math inline">\(f\)</span> continua en un intervalo abierto <span class="math inline">\(I\)</span>, <span class="math inline">\(F\)</span> una primitiva cualquiera y <span class="math inline">\(a, \: b\)</span> dos puntos cualesquiera dentro de <span class="math inline">\(I\)</span>. Para todo <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>, <span class="math inline">\(F(b) = F(a) + \int_a^{b} f(x) \: dx\)</span>.</p>
+<p>Despejando la integral de la igualdad anterior, se puede calcular su valor como una simple substracción entre la primitiva evaluada en dos puntos de interés, por lo que el problema de integración pasa a ser cómo hallar la primitiva de la función objetivo.</p>
+<p><em>Ejemplo:</em>{-}
+La tasa de consumo de alimento de una vaca en un día está dada por una función <span class="math inline">\(f(t)\)</span>, donde <span class="math inline">\(t\)</span> representa el tiempo en días. Queremos determinar la cantidad total de alimento consumido por todas las vacas en el rebaño durante un mes, que es equivalente a calcular el área bajo la curva de la función <span class="math inline">\(f(t)\)</span> durante ese período de tiempo y luego multiplicarlo por la cantidad de vacas.</p>
+<p>Para eso primero se calcula la primitiva de <span class="math inline">\(f(t)\)</span>, obteniendo la función <span class="math inline">\(F(t)\)</span> para cualquier periodo de tiempo.
+Si consideramos un mes de treinta días, calculamos luego la integral definida en el intervalo <span class="math inline">\([0,30]\)</span> para así obtener la función deseada. Para eso, utilizamos la expresión que vincula la integral definida con su primitiva, evaluando <span class="math inline">\(F(t)\)</span> en <span class="math inline">\(t=0\)</span> y <span class="math inline">\(t=30\)</span>.</p>
+</div>
+<div id="métodos-de-integración" class="section level3 hasAnchor">
+<h3>Métodos de integración<a href="apéndice-ii-cálculo-diferencial-e-integral.html#métodos-de-integración" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A continuación se realiza una breve descripción de distintos métodos para calcular integrales.</p>
+<div id="integración-por-sustitución" class="section level4 hasAnchor">
+<h4>Integración por sustitución<a href="apéndice-ii-cálculo-diferencial-e-integral.html#integración-por-sustitución" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sea <span class="math inline">\(g\)</span> una función derivable y <span class="math inline">\(F\)</span> una primitiva de <span class="math inline">\(f\)</span>. Si <span class="math inline">\(u = g(x)\)</span>
+<span class="math inline">\(\Rightarrow \int f(g(x))g&#39;(x) \: dx = \int f(u) \: du = F(u) + C = F(g(x)) + C\)</span>.</p>
+<p>Esto implica que si la función a integrar es una función compuesta y está multiplicada por su derivada, se puede hacer un cambio de variable sencillo para simplificar el cálculo de la primitiva. Si se tiene una integral definida en el intervalo <span class="math inline">\((a,b)\)</span> los extremos de integración pasan a ser <span class="math inline">\((g(a), g(b))\)</span>.</p>
+<p><em>Ejemplo:</em></p>
+<p>Se quiere calcular la integral:
+<span class="math display">\[\int_{0}^{\sqrt{\pi}} 2xcos(x^2) \: dx.\]</span></p>
+<p>Se observa que tomando <span class="math inline">\(g(x) = x^2\)</span>, que tiene como derivada <span class="math inline">\(3x^2\)</span> podemos expresar la integral para aplicar el método de sustitución. Realizando el cambio de variable <span class="math inline">\(u = g(x)\)</span>, <span class="math inline">\(g&#39;(x) dx = du\)</span> y cambiando los límites de integración a <span class="math inline">\((0, \pi)\)</span> (que resultan de calcular <span class="math inline">\(g(2)\)</span> y <span class="math inline">\(g(4)\)</span>), se obtiene:
+<span class="math display">\[\int_0^{\pi} cos(u) \: du= sen(\pi) - sen(0) = 0.\]</span></p>
+</div>
+<div id="integración-por-partes" class="section level4 hasAnchor">
+<h4>Integración por partes<a href="apéndice-ii-cálculo-diferencial-e-integral.html#integración-por-partes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>De la expresión de la derivada del producto, se puede deducir otra forma de calcular una integral que se denomina <em>Integración por partes</em>. Si se quiere calcular la integral de una función <span class="math inline">\(k(x)\)</span>, se buscaran dos funciones <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> tales que <span class="math inline">\(k\)</span> se pueda expresar como el producto de <span class="math inline">\(f\)</span> y <span class="math inline">\(g&#39;\)</span>. La integral entonces de <span class="math inline">\(f \cdot g&#39;\)</span> se puede calcular a partir de la siguiente expresión:
+<span class="math display">\[\int f(x) \cdot g&#39;(x) \: dx = f(x)g(x) - \int f&#39;(x) g(x) \: dx + \mathbb{C}.\]</span></p>
+<p>En el caso de una integral definida, la expresión a calcular es:
+<span class="math display">\[\int_a^b f(x) \cdot g&#39;(x) \: dx = \left. f(x)g(x) \right|_a^b- \int_a^b f&#39;(x) g(x) \: dx + \mathbb{C}\]</span></p>
+<p><em>Ejemplo:</em>
+Calcular la primitiva de <span class="math inline">\(\int xsen(x) \: dx\)</span>.</p>
+<p>En primera instancia debe elegirse cual será la función <span class="math inline">\(f\)</span> y cual será <span class="math inline">\(g&#39;\)</span>. Es importante aclarar que la elección de estas funciones es a conveniencia del lector, considerando cual de las opciones tiene primitiva más simple de hallar. En este caso, es simple calcular la primitiva de cualquiera de las dos funciones, por lo que la elección es indistinta. Se elige <span class="math inline">\(f(x) = x\)</span> y <span class="math inline">\(g&#39;(x) = sen(x)\)</span>.</p>
+<p>Se procede a calcular <span class="math inline">\(f&#39;(x) = 1\)</span> y <span class="math inline">\(g(x) = -cos(x)\)</span> (se deduce de la tabla), para luego aplicar la función de integración por partes:
+<span class="math display">\[\int xsen(x) \: dx = -xcos(x) - \int -cos(x) + \mathbb{C} = -xcos(x) + sen(x) + \mathbb{C}\]</span></p>
+<p>donde en el último paso se calculó la integral del <span class="math inline">\(cos(x)\)</span> a partir de la tabla de primitivas típicas.</p>
+</div>
+</div>
+</div>
+<div id="ecuaciones-diferenciales" class="section level2 hasAnchor">
+<h2>ECUACIONES DIFERENCIALES<a href="apéndice-ii-cálculo-diferencial-e-integral.html#ecuaciones-diferenciales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Una <em>ecuación diferencial</em> es una igualdad en la que la incógnita es una función desconocida <span class="math inline">\(y\)</span> (derivable hasta orden <span class="math inline">\(k\)</span>) y en la que aparece alguna de las derivadas de la función desconocida. El orden de la ecuación queda determinado por el orden de la máxima derivada que aparece. Por ejemplo, es de orden uno si la única derivada que aparece es la derivada primera, de orden dos si aparece la derivada segunda (independientemente de si está la derivada primera o no). Son ecuaciones utilizadas para modelar muchos problemas físicos del mundo real, por ejemplo, las oscilaciones de un péndulo.</p>
+<p>Una <em>ecuación diferencial ordinaria</em> tiene como función incógnita una función que depende únicamente de una variable, por lo que <span class="math inline">\(y = f(x)\)</span>. Por otra parte, las <em>ecuaciones diferenciales en derivadas parciales</em> tienen como función incógnita una función que depende de más de una variable, por ejemplo, <span class="math inline">\(y = f(x,y)\)</span>.</p>
+<p><em>Ejemplos:</em>
+A continuación, se muestran algunos ejemplos de ecuaciones diferenciales que modelan problemas físicos. En cada caso se detalla si la ecuación es ordinaria o parcial y el orden.</p>
+<table>
+<colgroup>
+<col width="42%" />
+<col width="28%" />
+<col width="18%" />
+<col width="10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Problema</th>
+<th align="center">Ecuación</th>
+<th align="center">Tipo</th>
+<th align="center">Orden</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Movimiento circular uniforme</td>
+<td align="center"><span class="math inline">\(\frac{d \theta (t)}{dt}\)</span> <span class="math inline">\(= \omega\)</span></td>
+<td align="center">Ordinaria</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">Movimiento armónico simple</td>
+<td align="center"><span class="math inline">\(y&#39;&#39;+k^2y=0\)</span></td>
+<td align="center">Ordinaria</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">Ecuación del calor en una barra infinita</td>
+<td align="center"><span class="math inline">\(\frac{\partial u}{\partial t} = \frac{1}{2}\frac{\partial^2 u}{\partial x^2}\)</span></td>
+<td align="center">Parcial</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">Ecuación de la cuerda</td>
+<td align="center"><span class="math inline">\(\frac{\partial^2 u}{\partial^2 t} = \frac{1}{2}\frac{\partial^2 u}{\partial x^2}\)</span></td>
+<td align="center">Parcial</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ejemplo de ecuación diferencial de primer orden con solución:</em> {-}</p>
+<p>Se tiene una población de vacas y se quiere modelar en crecimiento de la misma. Para eso, se utiliza el modelo Malthus desarrollado en 1798 que relaciona el crecimiento de la población con su mortalidad y natalidad, de acuerdo a la siguiente ecuación: <span class="math inline">\(\frac{dP(t)}{dt} = mP(t) - nP(t)\)</span>. <span class="math inline">\(P(t)\)</span> es el número de invidividuos mientras que <span class="math inline">\(m\)</span> y <span class="math inline">\(n\)</span> la natalidad y mortalidad respectivamente. Reescribiendo y denominando <span class="math inline">\(m-n = r\)</span>, se obtiene <span class="math inline">\(\frac{dP(t)}{dt} = rP(t)\)</span>.</p>
+<p>Para hallar la solución a la ecuación, se llevan a un lado todas los términos dependientes del tiempo, obteniendo así que <span class="math inline">\(\frac{dP(t)}{dt}\frac{1}{P(t)} = r\)</span>. Integrando a ambos lados de la ecuación, se llega a que <span class="math inline">\(ln(P(t)) + c = {rt}\)</span> y aplicando la ecuación inversa al logaritmo a ambos lados de la ecuación se obtiene:
+<span class="math display">\[P(t) = ce^{rt}\]</span>.</p>
+<p><em>Ejemplo de ecuación diferencial de segundo orden con solución:</em> {-}</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="apéndice-i-conceptos-matemáticos-básicos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/17-apendice02.rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ApuntesGeneticaII.pdf", "ApuntesGeneticaII.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

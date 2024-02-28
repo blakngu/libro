@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Apéndice IV: PROBABILIDAD Y ESTADÍSTICA | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
+  <meta name="description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Apéndice IV: PROBABILIDAD Y ESTADÍSTICA | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Apéndice IV: PROBABILIDAD Y ESTADÍSTICA | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  
+  <meta name="twitter:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
+  
+
+<meta name="author" content="Hugo Naya" />
+<meta name="author" content="Federica Marín" />
+<meta name="author" content="Mauricio Langleib" />
+<meta name="author" content="(Jorge Urioste, María André, Andrea Larracharte, Washington Bell," />
+<meta name="author" content="Ana Laura Sánchez, Micaela Botta, Paula Batista, Rodrigo Vivián, Paola Gaiero)" />
+
+
+<meta name="date" content="2024-02-28" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="apéndice-iii-algebra-lineal-y-geometría-analítica.html"/>
+<link rel="next" href="bibliografia.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Genética II</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nuestra-filosofía-del-no-tanto"><i class="fa fa-check"></i>Nuestra filosofía del NO (tanto)</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#qué-es-y-qué-no-es-este-libro"><i class="fa fa-check"></i>¿Qué ES y qué NO ES este libro?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#bibliografía-recomendada-para-este-curso"><i class="fa fa-check"></i>Bibliografía recomendada para este curso</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#responsabilidades-y-agradecimientos"><i class="fa fa-check"></i>Responsabilidades y Agradecimientos</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#íconos-utilizados-en-este-libro"><i class="fa fa-check"></i>Íconos utilizados en este libro</a></li>
+</ul></li>
+<li class="part"><span><b>Parte I: Genómica</b></span></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i>Introducción a la Genómica</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#variabilidad-genética"><i class="fa fa-check"></i>Variabilidad genética</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.1"><i class="fa fa-check"></i>Ejemplo 1.1</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#detectando-la-variabilidad-diferentes-técnicas"><i class="fa fa-check"></i>Detectando la variabilidad: diferentes técnicas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#metagenomica-y-metatranscriptomica"><i class="fa fa-check"></i>Metagenómica y metatranscriptómica</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.2"><i class="fa fa-check"></i>Ejemplo 1.2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#genómica-composicional"><i class="fa fa-check"></i>Genómica composicional</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-y-textgc_textskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones y <span class="math inline">\(\text{GC}_{\text{skew}}\)</span></a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#uso-de-codones"><i class="fa fa-check"></i>Uso de codones</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.3"><i class="fa fa-check"></i>Ejemplo 1.3</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#exploracion-multivariada"><i class="fa fa-check"></i>Exploración multivariada: Análisis de Correspondencia</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i>Composición de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-en-propiedades-de-los-aas"><i class="fa fa-check"></i>Diferencias en propiedades de los AAs</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-de-composición-entre-clases-de-proteínas"><i class="fa fa-check"></i>Diferencias de composición entre clases de proteínas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.4"><i class="fa fa-check"></i>Ejemplo 1.4</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#genómica-comparativa"><i class="fa fa-check"></i>Genómica comparativa</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#comparación-de-secuencias-génicas"><i class="fa fa-check"></i>Comparación de secuencias génicas</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección positiva</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#vías"><i class="fa fa-check"></i>Vías</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#genómica-funcional"><i class="fa fa-check"></i>Genómica funcional</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#estudios-epigenéticos-y-epigenómicos"><i class="fa fa-check"></i>Estudios epigenéticos y epigenómicos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#conclusión"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#actividades"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#control-de-lectura"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#verdadero-o-falso"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Parte II: Genética de Poblaciones</b></span></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html"><i class="fa fa-check"></i>Variación y equilibrio de Hardy-Weinberg</a>
+<ul>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#el-equilibrio-de-hardy-weinberg"><i class="fa fa-check"></i>El equilibrio de Hardy-Weinberg</a>
+<ul>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#supuestos-que-asumimos-se-cumplen-para-h-w"><i class="fa fa-check"></i>Supuestos que asumimos se cumplen para H-W</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#hardy-weinberg-en-especies-dioicas-dos-sexos"><i class="fa fa-check"></i>Hardy-Weinberg en especies dioicas (dos sexos)</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#heterocigotas-freq-alelica"><i class="fa fa-check"></i>H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo"><i class="fa fa-check"></i>El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#tres-o-más-alelos"><i class="fa fa-check"></i>Tres o más alelos</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#la-estimación-de-frecuencias-y-el-equilibrio-o-no"><i class="fa fa-check"></i>La estimación de frecuencias y el equilibrio (o no)</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#el-sistema-abo"><i class="fa fa-check"></i>El sistema ABO</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#dónde-se-esconden-los-alelos-recesivos"><i class="fa fa-check"></i>¿Dónde se “esconden” los alelos recesivos?</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#hardy-weinberg-en-especies-poliploides"><i class="fa fa-check"></i>Hardy-Weinberg en especies poliploides</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#geometría-y-genética-los-diagramas-de-de-finetti"><i class="fa fa-check"></i>Geometría y Genética: los diagramas de <em>de Finetti</em></a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#estimacion-abo"><i class="fa fa-check"></i>La estimación de frecuencias en el locus ABO</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#conclusión-1"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#actividades-1"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#control-de-lectura-1"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#verdadero-o-falso-1"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#ejercicios-2"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html"><i class="fa fa-check"></i>Deriva genética</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#el-rol-de-los-procesos-estocásticos-en-la-genética"><i class="fa fa-check"></i>El rol de los procesos estocásticos en la genética</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i>El modelo de Wright-Fisher</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.1"><i class="fa fa-check"></i>Ejemplo 3.1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#el-rol-de-la-subdivisión-poblacional-en-la-evolución-de-las-frecuencias-alélicas"><i class="fa fa-check"></i>El rol de la subdivisión poblacional en la evolución de las frecuencias alélicas</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#homocigosidad-y-heterocigosidad"><i class="fa fa-check"></i>Homocigosidad y heterocigosidad</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.2"><i class="fa fa-check"></i>Ejemplo 3.2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#cadenas-de-markov"><i class="fa fa-check"></i>Cadenas de Markov</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i>Tamaño efectivo poblacional</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.3"><i class="fa fa-check"></i>Ejemplo 3.3</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.4"><i class="fa fa-check"></i>Ejemplo 3.4</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#aproximación-de-difusión"><i class="fa fa-check"></i>Aproximación de difusión</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#caminatas-al-azar-y-procesos-de-difusión"><i class="fa fa-check"></i>Caminatas al azar y procesos de difusión</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-forward-equation"><i class="fa fa-check"></i>Kolmogorov Forward Equation</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-backward-equation"><i class="fa fa-check"></i>Kolmogorov Backward Equation</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#solución-de-las-ecuaciones"><i class="fa fa-check"></i>Solución de las ecuaciones</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i>Probabilidad de fijación y tiempos de fijación</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.5"><i class="fa fa-check"></i>Ejemplo 3.5</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#el-modelo-coalescente"><i class="fa fa-check"></i>El modelo coalescente</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#conclusión-2"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#actividades-2"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#control-de-lectura-2"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#verdadero-o-falso-2"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejercicios"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html"><i class="fa fa-check"></i>Selección natural</a>
+<ul>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#el-concepto-de-fitness"><i class="fa fa-check"></i>El concepto de “<em>fitness</em>”</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#selección-natural-en-el-modelo-de-un-locus-con-dos-alelos"><i class="fa fa-check"></i>Selección natural en el modelo de un locus con dos alelos</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#diferentes-formas-de-selección"><i class="fa fa-check"></i>Diferentes formas de selección</a>
+<ul>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#selección-direccional"><i class="fa fa-check"></i>Selección direccional</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#selección-estabilizadora"><i class="fa fa-check"></i>Selección estabilizadora</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#selección-disruptiva"><i class="fa fa-check"></i>Selección disruptiva</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#el-teorema-fundamental-de-la-selección-natural"><i class="fa fa-check"></i>El teorema fundamental de la selección natural</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-mutación"><i class="fa fa-check"></i>Equilibrio selección-mutación</a>
+<ul>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#el-principio-de-haldane-muller"><i class="fa fa-check"></i>El principio de Haldane-Muller</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#la-fuerza-de-la-selección-natural"><i class="fa fa-check"></i>La fuerza de la selección natural</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-deriva"><i class="fa fa-check"></i>Equilibrio selección-deriva</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#otros-tipos-de-selección-y-complejidades"><i class="fa fa-check"></i>Otros tipos de selección y complejidades</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#conclusión-3"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#actividades-3"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#control-de-lectura-3"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#verdadero-o-falso-3"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#ejercicios-4"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html"><i class="fa fa-check"></i>Dinámica de 2 <em>loci</em></a>
+<ul>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-de-ligamiento-y-recombinación"><i class="fa fa-check"></i>Desequilibrio de ligamiento y recombinación</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#la-evolución-en-el-tiempo-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i>La evolución en el tiempo del desequilibrio de ligamiento</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#otras-medidas-de-asociación"><i class="fa fa-check"></i>Otras medidas de asociación</a>
+<ul>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejemplo-5.3"><i class="fa fa-check"></i>Ejemplo 5.3</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#selección-en-modelos-de-dos-loci"><i class="fa fa-check"></i>Selección en modelos de dos <em>loci</em></a>
+<ul>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento"><i class="fa fa-check"></i>Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i>Arrastre genético (“<em>genetic hitchhiking</em>” o “<em>genetic draft</em>”)</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#causas-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i>Causas del desequilibrio de ligamiento</a>
+<ul>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-al-mestizaje"><i class="fa fa-check"></i>Desequilibrio debido al mestizaje</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-inducido-por-el-sistema-de-apareamiento"><i class="fa fa-check"></i>Desequilibrio inducido por el sistema de apareamiento</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#el-cromosoma-y"><i class="fa fa-check"></i>El cromosoma Y</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-a-recombinación-reducida"><i class="fa fa-check"></i>Desequilibrio debido a recombinación reducida</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#conclusión-4"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#actividades-4"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#control-de-lectura-4"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#verdadero-o-falso-4"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejercicios-5"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html"><i class="fa fa-check"></i>Apareamientos no-aleatorios</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-concepto-de-identidad-por-ascendencia-ibd"><i class="fa fa-check"></i>El concepto de “identidad por ascendencia” (IBD)</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#generalización-de-hardy-weinberg-para-apareamientos-no-aleatorios"><i class="fa fa-check"></i>Generalización de Hardy-Weinberg para apareamientos no-aleatorios</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><span class="math inline">\(F\)</span> como correlación entre gametos unidos</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#endocría-y-depresión-endogámica"><i class="fa fa-check"></i>Endocría y depresión endogámica</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#un-caso-extremo-la-autogamia"><i class="fa fa-check"></i>Un caso extremo: la autogamia</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-los-estadísticos-f"><i class="fa fa-check"></i>El coeficiente de endocría y los estadísticos <em>F</em></a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.1"><i class="fa fa-check"></i>Ejemplo 6.1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i>El efecto Wahlund</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.2"><i class="fa fa-check"></i>Ejemplo 6.2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i>Subdivisión, migración y el modelo de islas</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.3"><i class="fa fa-check"></i>Ejemplo 6.3</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#mecanismos-de-especiación"><i class="fa fa-check"></i>Mecanismos de especiación</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#conclusión-5"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#actividades-5"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#control-de-lectura-5"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#verdadero-o-falso-5"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejercicios-6"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html"><i class="fa fa-check"></i>Genética de poblaciones microbianas</a>
+<ul>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#genómica-y-mecanismos-de-herencia-en-procariotas"><i class="fa fa-check"></i>Genómica y mecanismos de herencia en procariotas</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#dinámica-de-las-poblaciones-bacterianas"><i class="fa fa-check"></i>Dinámica de las poblaciones bacterianas</a>
+<ul>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-exponencial"><i class="fa fa-check"></i>El modelo exponencial</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.1"><i class="fa fa-check"></i>Ejemplo 7.1</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-logístico"><i class="fa fa-check"></i>El modelo logístico</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.2"><i class="fa fa-check"></i>Ejemplo 7.2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#modelos-haploides-de-selección-natural"><i class="fa fa-check"></i>Modelos haploides de selección natural</a>
+<ul>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-discreto"><i class="fa fa-check"></i>Selección haploide: modelo discreto</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.3"><i class="fa fa-check"></i>Ejemplo 7.3</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-continuo"><i class="fa fa-check"></i>Selección haploide: modelo continuo</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.4"><i class="fa fa-check"></i>Ejemplo 7.4</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-vs-el-de-wright-fisher"><i class="fa fa-check"></i>Los modelos de Moran y de fisión <em>vs</em> el de Wright-Fisher</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-rol-de-la-transferencia-horizontal"><i class="fa fa-check"></i>El rol de la transferencia horizontal</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#seleccionismo-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i>Seleccionismo <em>vs</em> neutralismo: los procariotas en el debate</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#genómica-poblacional"><i class="fa fa-check"></i>Genómica poblacional</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#genes-de-resistencia"><i class="fa fa-check"></i>Genes de resistencia</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#introducción-a-la-epidemiología-modelos-compartimentales"><i class="fa fa-check"></i>Introducción a la epidemiología: modelos compartimentales</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#conclusión-6"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#actividades-6"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#control-de-lectura-6"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#verdadero-o-falso-6"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejercicios-7"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Parte III: Genética Cuantitativa</b></span></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html"><i class="fa fa-check"></i>El modelo genético básico</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#variación-continua-y-discreta"><i class="fa fa-check"></i>Variación continua y discreta</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#el-modelo-genético-básico"><i class="fa fa-check"></i>El modelo genético básico</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#modelo-genético-básico-un-locus-con-dos-alelos"><i class="fa fa-check"></i>Modelo genético básico: un <em>locus</em> con dos alelos</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#media-de-la-población"><i class="fa fa-check"></i>Media de la población</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#efecto-medio"><i class="fa fa-check"></i>Efecto medio</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#valor-reproductivo-o-valor-de-cría"><i class="fa fa-check"></i>Valor reproductivo (o valor de cría)</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#derivación-de-los-efectos-medios-por-mínimos-cuadrados"><i class="fa fa-check"></i>Derivación de los efectos medios por mínimos cuadrados</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#desvío-de-dominancia"><i class="fa fa-check"></i>Desvío de dominancia</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#interacción-genotipo-x-ambiente"><i class="fa fa-check"></i>Interacción Genotipo x Ambiente</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-en-el-modelo-genético-básico"><i class="fa fa-check"></i>La varianza en el modelo genético básico</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos"><i class="fa fa-check"></i>Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-ambiental"><i class="fa fa-check"></i>La varianza ambiental</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-de-la-interacción"><i class="fa fa-check"></i>La varianza de la interacción</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#conclusión-7"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#actividades-7"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#control-de-lectura-7"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#verdadero-o-falso-7"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejercicios-8"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html"><i class="fa fa-check"></i>Parentesco y semejanza entre parientes</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#parentesco-1"><i class="fa fa-check"></i>Parentesco</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#parentesco-aditivo"><i class="fa fa-check"></i>Parentesco aditivo</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#consanguinidad"><i class="fa fa-check"></i>Consanguinidad</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#diagramas-de-flechas"><i class="fa fa-check"></i>Diagramas de flechas</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#el-método-tabular"><i class="fa fa-check"></i>El método tabular</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#parentesco-de-dominancia"><i class="fa fa-check"></i>Parentesco de dominancia</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#semejanza-entre-parientes"><i class="fa fa-check"></i>Semejanza entre parientes</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estimación-de-las-varianzas-aditiva-y-de-dominancia"><i class="fa fa-check"></i>Estimación de las varianzas aditiva y de dominancia</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#propiedades-deseables-de-los-estimadores"><i class="fa fa-check"></i>Propiedades deseables de los estimadores</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estimación-de-la-varianza-aditiva-a-partir-del-análisis-de-varianza-anova"><i class="fa fa-check"></i>Estimación de la varianza aditiva a partir del análisis de varianza (ANOVA)</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estimaciones-basadas-en-modelos-mixtos-lineales"><i class="fa fa-check"></i>Estimaciones basadas en modelos mixtos lineales</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#parentesco-genómico"><i class="fa fa-check"></i>Parentesco genómico</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#contenido-génico"><i class="fa fa-check"></i>Contenido génico</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#la-matriz-de-similaridad-genómica"><i class="fa fa-check"></i>La matriz de similaridad genómica</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estudios-de-ascendencia-ancestría"><i class="fa fa-check"></i>Estudios de ascendencia (“ancestría”)</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#conclusión-8"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#actividades-8"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#control-de-lectura-8"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#veradero-o-falso"><i class="fa fa-check"></i>¿Veradero o falso?</a></li>
+<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#ejercicios-3"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html"><i class="fa fa-check"></i>Parámetros genéticos: heredabilidad y repetibilidad</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad"><i class="fa fa-check"></i>Heredabilidad</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-heredabilidad-como-relación-de-varianzas"><i class="fa fa-check"></i>La heredabilidad como relación de varianzas</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-heredabilidad-como-regresión"><i class="fa fa-check"></i>La heredabilidad como regresión</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-de-cría-en-el-fenotipo-individual"><i class="fa fa-check"></i>Regresión del valor de cría en el fenotipo individual</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-fenotípico-de-los-hijos-sobre-el-fenotipo-de-un-progenitor"><i class="fa fa-check"></i>Regresión del valor fenotípico de los hijos sobre el fenotipo de un progenitor</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-fenotípico-de-los-hijos-sobre-el-fenotipo-de-ambos-progenitores"><i class="fa fa-check"></i>Regresión del valor fenotípico de los hijos sobre el fenotipo de ambos progenitores</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#precisión-en-las-estimaciones-de-heredabilidad-varianza-del-estimador"><i class="fa fa-check"></i>Precisión en las estimaciones de heredabilidad: varianza del estimador</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-sentido-amplio-y-sentido-estricto"><i class="fa fa-check"></i>Heredabilidad en sentido amplio y sentido estricto</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad-lograda"><i class="fa fa-check"></i>Heredabilidad lograda</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-poblaciones-agronómicas-y-de-laboratorio-vs-poblaciones-naturales"><i class="fa fa-check"></i>Heredabilidad en poblaciones agronómicas y de laboratorio vs poblaciones naturales</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-animales-domésticos"><i class="fa fa-check"></i>Estimaciones de heredabilidad en animales domésticos</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-plantas"><i class="fa fa-check"></i>Estimaciones de heredabilidad en plantas</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-condiciones-naturales"><i class="fa fa-check"></i>Estimaciones de heredabilidad en condiciones naturales</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad-y-filogenética"><i class="fa fa-check"></i>Heredabilidad y filogenética</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-la-era-genómica"><i class="fa fa-check"></i>Heredabilidad en la era genómica</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#métodos-más-avanzados-de-estimación"><i class="fa fa-check"></i>Métodos más avanzados de estimación</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#repetibilidad"><i class="fa fa-check"></i>Repetibilidad</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-cociente-de-varianzas"><i class="fa fa-check"></i>La repetibilidad como cociente de varianzas</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-coeficiente-de-correlación-intraclase"><i class="fa fa-check"></i>La repetibilidad como coeficiente de correlación intraclase</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-relación-entre-la-heredabilidad-y-la-repetibilidad"><i class="fa fa-check"></i>La relación entre la heredabilidad y la repetibilidad</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-reducción-en-la-varianza-fenotípica-con-varias-medidas"><i class="fa fa-check"></i>La reducción en la varianza fenotípica con varias medidas</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-herramienta-en-la-predicción"><i class="fa fa-check"></i>La repetibilidad como herramienta en la predicción</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#evolucionabilidad"><i class="fa fa-check"></i>Evolucionabilidad</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#conclusión-9"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#actividades-9"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#control-de-lectura-9"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#veradero-o-falso-1"><i class="fa fa-check"></i>¿Veradero o falso?</a></li>
+<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#ejercicios-9"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html"><i class="fa fa-check"></i>Selección Artificial I</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección"><i class="fa fa-check"></i>Factores de corrección</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-aditivos"><i class="fa fa-check"></i>Factores de corrección aditivos</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-multiplicativos"><i class="fa fa-check"></i>Factores de corrección multiplicativos</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-lineales"><i class="fa fa-check"></i>Factores de corrección lineales</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#la-respuesta-a-la-selección-y-su-predicción"><i class="fa fa-check"></i>La respuesta a la selección y su predicción</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#diferencial-de-selección-e-intensidad-de-selección"><i class="fa fa-check"></i>Diferencial de selección e intensidad de selección</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#intensidad-de-selección-y-proporción-seleccionada"><i class="fa fa-check"></i>Intensidad de selección y proporción seleccionada</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp"><i class="fa fa-check"></i>¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#la-relación-entre-diferentes-formas-de-calcular-la-intensidad-de-selección"><i class="fa fa-check"></i>La relación entre diferentes formas de calcular la intensidad de selección</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#intervalo-generacional"><i class="fa fa-check"></i>Intervalo generacional</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#medidas-de-la-respuesta"><i class="fa fa-check"></i>Medidas de la respuesta</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#progreso-genético-generacional-y-anual"><i class="fa fa-check"></i>Progreso genético generacional y anual</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#cambio-en-las-frecuencias-alélicas-bajo-selección-artificial"><i class="fa fa-check"></i>Cambio en las frecuencias alélicas bajo selección artificial</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#el-diferencial-de-selección-direccional-y-la-identidad-de-robertson-price"><i class="fa fa-check"></i>El diferencial de selección direccional y la identidad de Robertson-Price</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#conclusión-10"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#actividades-10"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#control-de-lectura-10"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#verdadero-o-falso-8"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#ejercicios-11"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html"><i class="fa fa-check"></i>Correlaciones y respuesta correlacionada</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#causas-genéticas-y-ambientales-de-las-correlaciones"><i class="fa fa-check"></i>Causas genéticas y ambientales de las correlaciones</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#causas-de-las-correlaciones-genéticas"><i class="fa fa-check"></i>Causas de las correlaciones genéticas</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#causas-de-las-correlaciones-ambientales"><i class="fa fa-check"></i>Causas de las correlaciones ambientales</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#introducción-al-path-analysis"><i class="fa fa-check"></i>Introducción al “<em>path analysis</em>”</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#la-relación-entre-las-correlaciones-fenotípica-genética-y-ambiental"><i class="fa fa-check"></i>La relación entre las correlaciones fenotípica, genética y ambiental</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#métodos-para-determinar-la-correlación-genética"><i class="fa fa-check"></i>Métodos para determinar la correlación genética</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#la-correlación-fenotípica-y-su-relación-con-la-correlación-genética-aditiva-y-ambiental"><i class="fa fa-check"></i>La correlación fenotípica y su relación con la correlación genética aditiva y ambiental</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#respuesta-correlacionada"><i class="fa fa-check"></i>Respuesta correlacionada</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#eficiencia-en-relación-a-la-selección-directa"><i class="fa fa-check"></i>Eficiencia en relación a la selección directa</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#el-signo-de-la-correlación-y-el-beneficio-demérito-de-la-misma"><i class="fa fa-check"></i>El signo de la correlación y el beneficio-demérito de la misma</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#matrices-de-varianza-covarianza"><i class="fa fa-check"></i>Matrices de varianza-covarianza</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#la-forma-generalizada-de-la-ecuación-del-criador"><i class="fa fa-check"></i>La forma generalizada de la ecuación del criador</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#conclusión-11"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#actividades-11"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#control-de-lectura-11"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#verdadero-o-falso-9"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#ejercicios-10"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html"><i class="fa fa-check"></i>Selección Artificial II</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#criterios-y-objetivos-de-selección"><i class="fa fa-check"></i>Criterios y objetivos de selección</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#selección-basada-en-un-solo-tipo-de-fuente-de-información"><i class="fa fa-check"></i>Selección basada en un solo tipo de fuente de información</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#diferentes-tipos-de-selección-basados-en-estructuras-de-parentesco-definidas"><i class="fa fa-check"></i>Diferentes tipos de selección basados en estructuras de parentesco definidas</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-las-heredabilidades-en-los-distintos-tipos-de-selección"><i class="fa fa-check"></i>Cálculo de las heredabilidades en los distintos tipos de selección</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#combinando-la-información-proporcionada-por-diferentes-tipos-de-parientes"><i class="fa fa-check"></i>Combinando la información proporcionada por diferentes tipos de parientes</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-los-elementos-de-la-matriz-de-varianzas-covarianzas-fenotípica"><i class="fa fa-check"></i>Cálculo de los elementos de la matriz de varianzas-covarianzas fenotípica</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-los-elementos-del-vector-de-varianzas-covarianzas-genéticas"><i class="fa fa-check"></i>Cálculo de los elementos del vector de varianzas-covarianzas genéticas</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#información-propia-y-de-un-progenitor"><i class="fa fa-check"></i>Información propia y de un progenitor</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#información-propia-y-de-varios-hermanos-enteros"><i class="fa fa-check"></i>Información propia y de varios hermanos enteros</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#pruebas-de-progenie"><i class="fa fa-check"></i>Pruebas de progenie</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#límites-de-la-eficiencia-en-pruebas-de-progenie"><i class="fa fa-check"></i>Límites de la eficiencia en pruebas de progenie</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#precisión-del-valor-de-cría-a-partir-del-índice"><i class="fa fa-check"></i>Precisión del valor de cría a partir del índice</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#métodos-de-selección-para-varias-características"><i class="fa fa-check"></i>Métodos de selección para varias características</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#selección-en-tandem"><i class="fa fa-check"></i>Selección en tandem</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#niveles-independientes-de-rechazo"><i class="fa fa-check"></i>Niveles Independientes de Rechazo</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#índices-de-selección"><i class="fa fa-check"></i>Índices de selección</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#índices-de-selección-para-múltiples-características"><i class="fa fa-check"></i>Índices de selección para múltiples características</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#el-índice-de-smith-hazel"><i class="fa fa-check"></i>El índice de Smith-Hazel</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#métodos-y-técnicas-avanzadas-de-selección"><i class="fa fa-check"></i>Métodos y técnicas avanzadas de selección</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#blup-las-ecuaciones-del-modelo-mixto-lineal"><i class="fa fa-check"></i>BLUP: las ecuaciones del modelo mixto lineal</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#conclusión-12"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#actividades-12"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#control-de-lectura-12"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#verdadero-o-falso-10"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#ejercicios-12"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html"><i class="fa fa-check"></i>Endocría, exocría, consanguinidad y depresión endogámica</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#el-aumento-de-la-consanguinidad-a-partir-del-número-de-individuos"><i class="fa fa-check"></i>El aumento de la consanguinidad a partir del número de individuos</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#qué-proporción-de-machos-es-necesaria-para-mantener-un-tamaño-efectivo-poblacional-mínimo"><i class="fa fa-check"></i>¿Qué proporción de machos es necesaria para mantener un tamaño efectivo poblacional mínimo?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#el-coeficiente-de-consanguinidad-en-razas-lecheras"><i class="fa fa-check"></i>El coeficiente de consanguinidad en razas lecheras</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#depresión-endogámica"><i class="fa fa-check"></i>Depresión endogámica</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#los-riesgos-del-uso-masivo-de-reproductores-y-la-endogamia-elevada"><i class="fa fa-check"></i>Los riesgos del uso masivo de reproductores y la endogamia elevada</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#redistribución-en-la-varianza-genética"><i class="fa fa-check"></i>Redistribución en la varianza genética</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#exocría-y-heterosis"><i class="fa fa-check"></i>Exocría y heterosis</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#el-modelo-del-templo-griego"><i class="fa fa-check"></i>El modelo del templo griego</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#un-modelo-sencillo-de-heterosis-bajo-exocría"><i class="fa fa-check"></i>Un modelo sencillo de heterosis bajo exocría</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#complementariedad"><i class="fa fa-check"></i>Complementariedad</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#tipos-de-cruzamientos"><i class="fa fa-check"></i>Tipos de cruzamientos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#modelo-genético-de-cruzamientos"><i class="fa fa-check"></i>Modelo genético de cruzamientos</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#conclusión-13"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#actividades-13"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#control-de-lectura-13"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#verdadero-o-falso-11"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
+<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#ejercicios-13"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html"><i class="fa fa-check"></i>Normas de reacción e interacción genotipo x ambiente</a>
+<ul>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#plasticidad-fenotípica-y-normas-de-reacción"><i class="fa fa-check"></i>Plasticidad fenotípica y normas de reacción</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#interacción-gxe-en-dos-ambientes"><i class="fa fa-check"></i>Interacción GxE en dos ambientes</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#correlación-genética-a-través-de-dos-ambientes"><i class="fa fa-check"></i>Correlación genética a través de dos ambientes</a>
+<ul>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#procedimientos-de-estimación"><i class="fa fa-check"></i>Procedimientos de estimación</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#genética-cuantitativa-de-la-interacción-gxe"><i class="fa fa-check"></i>Genética cuantitativa de la interacción GxE</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#otros-ejemplos-de-interacción-genotipo-ambiente"><i class="fa fa-check"></i>Otros ejemplos de interacción genotipo-ambiente</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#conclusión-14"><i class="fa fa-check"></i>Conclusión</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#actividades-14"><i class="fa fa-check"></i>Actividades</a>
+<ul>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#control-de-lectura-14"><i class="fa fa-check"></i>Control de lectura</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#veradero-o-falso-2"><i class="fa fa-check"></i>¿Veradero o falso?</a></li>
+<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#ejercicios-14"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html"><i class="fa fa-check"></i>Apéndice I: CONCEPTOS MATEMÁTICOS BÁSICOS</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#fracciones"><i class="fa fa-check"></i>FRACCIONES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#fracciones-equivalentes-y-fracciones-irreducibles"><i class="fa fa-check"></i>Fracciones equivalentes y fracciones irreducibles</a></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#operaciones-con-fracciones"><i class="fa fa-check"></i>Operaciones con fracciones</a></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#común-denominador"><i class="fa fa-check"></i>Común denominador</a></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#operaciones-combinadas-con-fracciones"><i class="fa fa-check"></i>Operaciones combinadas con fracciones</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#proporcionalidad"><i class="fa fa-check"></i>PROPORCIONALIDAD</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#regla-de-tres"><i class="fa fa-check"></i>Regla de tres</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#cifras-significativas-y-redondeo"><i class="fa fa-check"></i>CIFRAS SIGNIFICATIVAS Y REDONDEO</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#operaciones-con-cifras-significativas"><i class="fa fa-check"></i>Operaciones con cifras significativas</a></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#producto-y-división"><i class="fa fa-check"></i>Producto y División</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#notación-científica"><i class="fa fa-check"></i>NOTACIÓN CIENTÍFICA</a></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#ecuaciones"><i class="fa fa-check"></i>ECUACIONES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#ecuaciones-polinómicas"><i class="fa fa-check"></i>Ecuaciones polinómicas</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#funciones"><i class="fa fa-check"></i>FUNCIONES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#ceros-de-una-función"><i class="fa fa-check"></i>Ceros de una función</a></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#tipos-de-funciones"><i class="fa fa-check"></i>Tipos de funciones:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#sumatoria-y-productoria"><i class="fa fa-check"></i>SUMATORIA Y PRODUCTORIA</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html"><i class="fa fa-check"></i>Apéndice II: CÁLCULO DIFERENCIAL E INTEGRAL</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#límites"><i class="fa fa-check"></i>LÍMITES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#límite-finito"><i class="fa fa-check"></i>Límite finito</a></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#límite-infinito"><i class="fa fa-check"></i>Límite infinito</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#derivadas"><i class="fa fa-check"></i>DERIVADAS</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#derivada-puntual"><i class="fa fa-check"></i>Derivada puntual</a></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#derivada-de-una-función"><i class="fa fa-check"></i>Derivada de una función</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#integrales"><i class="fa fa-check"></i>INTEGRALES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#integral-indefinida-o-primitiva"><i class="fa fa-check"></i>Integral indefinida o Primitiva</a></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#integral-definida"><i class="fa fa-check"></i>Integral definida</a></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#relación-entre-primitiva-e-integral-definida"><i class="fa fa-check"></i>Relación entre Primitiva e Integral definida</a></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#métodos-de-integración"><i class="fa fa-check"></i>Métodos de integración</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#ecuaciones-diferenciales"><i class="fa fa-check"></i>ECUACIONES DIFERENCIALES</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><i class="fa fa-check"></i>Apéndice III: ALGEBRA LINEAL Y GEOMETRÍA ANALÍTICA</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#matrices"><i class="fa fa-check"></i>MATRICES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#relación-con-los-sistemas-de-ecuaciones"><i class="fa fa-check"></i>Relación con los sistemas de ecuaciones</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#álgebra-de-matrices"><i class="fa fa-check"></i>Álgebra de matrices</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#determinante-de-una-matriz"><i class="fa fa-check"></i>Determinante de una matriz</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#norma-producto-escalar-y-producto-vectorial"><i class="fa fa-check"></i>NORMA, PRODUCTO ESCALAR Y PRODUCTO VECTORIAL</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#vectores"><i class="fa fa-check"></i>Vectores</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#agregar-imagen-vectores"><i class="fa fa-check"></i>AGREGAR IMAGEN VECTORES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#distancia-y-norma"><i class="fa fa-check"></i>Distancia y norma</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#producto-escalar"><i class="fa fa-check"></i>Producto escalar</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#producto-vectorial"><i class="fa fa-check"></i>Producto vectorial</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#transformaciones-lineales"><i class="fa fa-check"></i>TRANSFORMACIONES LINEALES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#núcleo-e-imagen-de-una-transformación-lineal"><i class="fa fa-check"></i>Núcleo e Imagen de una Transformación Lineal</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#geometría-de-matrices"><i class="fa fa-check"></i>Geometría de matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#valores-y-vectores-propios"><i class="fa fa-check"></i>VALORES Y VECTORES PROPIOS</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#de-una-transformación-lineal"><i class="fa fa-check"></i>De una transformación lineal:</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#de-una-matriz"><i class="fa fa-check"></i>De una matriz:</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#diagonalización-de-una-matriz"><i class="fa fa-check"></i>Diagonalización de una matriz</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#derivada-de-la-forma-cuadrática"><i class="fa fa-check"></i>DERIVADA DE LA FORMA CUADRÁTICA</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html"><i class="fa fa-check"></i>Apéndice IV: PROBABILIDAD Y ESTADÍSTICA</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#probabilidad-y-conteo"><i class="fa fa-check"></i>PROBABILIDAD Y CONTEO</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#probabilidad-condicional"><i class="fa fa-check"></i>Probabilidad condicional</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#variables-aleatorias"><i class="fa fa-check"></i>VARIABLES ALEATORIAS</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#variables-aleatorias-discretas"><i class="fa fa-check"></i>Variables Aleatorias Discretas</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#variables-aleatorias-continuas"><i class="fa fa-check"></i>Variables Aleatorias Continuas</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#variables-independientes"><i class="fa fa-check"></i>Variables independientes</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#valor-esperado"><i class="fa fa-check"></i>Valor esperado</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#varianza-y-desviación-estándar"><i class="fa fa-check"></i>Varianza y Desviación Estándar</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#covarianza-y-coeficiente-de-correlación"><i class="fa fa-check"></i>Covarianza y Coeficiente de Correlación</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#ley-de-los-grandes-números"><i class="fa fa-check"></i>Ley de los grandes números</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#distribuciones-conocidas"><i class="fa fa-check"></i>Distribuciones conocidas</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#distribución-normal"><i class="fa fa-check"></i>Distribución Normal</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#distribución-binomial"><i class="fa fa-check"></i>Distribución Binomial</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#distribución-de-poisson"><i class="fa fa-check"></i>Distribución de Poisson</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#estimadores"><i class="fa fa-check"></i>ESTIMADORES</a>
+<ul>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#estimadores-frecuentistas"><i class="fa fa-check"></i>Estimadores frecuentistas</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#otras-propiedades"><i class="fa fa-check"></i>Otras propiedades:</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#métodos-de-estimación"><i class="fa fa-check"></i>Métodos de estimación</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#estimadores-bayesianos"><i class="fa fa-check"></i>Estimadores Bayesianos</a></li>
+<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#ejemplo-conceptual-de-estimadores"><i class="fa fa-check"></i>Ejemplo conceptual de estimadores:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bibliografia.html"><a href="bibliografia.html"><i class="fa fa-check"></i>Bibliografía</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="apéndice-iv-probabilidad-y-estadística" class="section level1 hasAnchor">
+<h1>Apéndice IV: PROBABILIDAD Y ESTADÍSTICA<a href="apéndice-iv-probabilidad-y-estadística.html#apéndice-iv-probabilidad-y-estadística" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="probabilidad-y-conteo" class="section level2 hasAnchor">
+<h2>PROBABILIDAD Y CONTEO<a href="apéndice-iv-probabilidad-y-estadística.html#probabilidad-y-conteo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Intuitivamente, se define la probabilidad como la chance de que un evento ocurra frente a todo el universo de posibilidades.
+Si se tiene un espacio muestral, definido como el conjunto de todos los resultados posibles que pueden ocurrir con igual probabilidad, y un evento <span class="math inline">\(A\)</span>, se define la probabilidad del evento <span class="math inline">\(A\)</span> como <span class="math inline">\(P(A) = \frac{\textit{casos favorables}}{\textit{casos posibles}}.\)</span></p>
+<p>Las probabilidades cumplen tres reglas:
+1. Son siempre positivas <span class="math inline">\((P(A)\leq 0)\)</span> para cualquier evento.
+2. <span class="math inline">\(P(\Omega) = 1\)</span> donde <span class="math inline">\(\Omega\)</span> es el espacio muestral.
+3. Dados <span class="math inline">\(k\)</span> eventos incompatibles (que no pueden ocurrir en simultáneo), <span class="math inline">\(P(A\cup B\cup...\cup K) = P(A) + P(B) + ... + P(K).\)</span></p>
+<p>Sin embargo, contar los casos favorables no siempre es una tarea sencilla, por lo que se utilizan elementos de la teoría combinatoria para facilitar el conteo.</p>
+<p><strong>Número factorial:</strong> El número <span class="math inline">\(n\)</span> factorial, denotado por <span class="math inline">\(n!\)</span>, se define como el producto de todos los números entre <span class="math inline">\(1\)</span> y <span class="math inline">\(n\)</span>: <span class="math inline">\(\Rightarrow n! = n \times (n-1) \times (n-2) \times ... \times (n-n+1).\)</span></p>
+<p><strong>Arreglos:</strong> Los arreglos definen el número total de formas en que se pueden elegir <span class="math inline">\(k\)</span> elementos ordenados de un total de <span class="math inline">\(n\)</span> elementos. Para elegir el primer elemento se tienen <span class="math inline">\(n\)</span> opciones. Para el segundo elemento ya se descartó una opción, por lo que se pasa a tener <span class="math inline">\(n-1\)</span> posibilidades. Así sucesivamente hasta llegar al elemento <span class="math inline">\(k\)</span>, para el cual se tienen <span class="math inline">\(n-k+1\)</span> opciones. El número total de posibilidades se define entonces cómo:
+<span class="math display">\[(n)_k = (A)_k^n = n \times (n-1) \times (n-2) \times ... \times (n-k+1) = \frac{n!}{(n-k)!}.\]</span></p>
+<p><strong>Combinaciones:</strong> Las combinaciones definen el número total de formas en que se pueden elegir <span class="math inline">\(k\)</span> elementos no ordenados de un total de <span class="math inline">\(n\)</span> elementos. Si se tiene una lista no ordenada de <span class="math inline">\(k\)</span> elementos, se pueden formar <span class="math inline">\(k!\)</span> listas ordenadas. Esto quiere decir que por cada lista no ordenada, hay <span class="math inline">\(k!\)</span> listas ordenadas, lo que implica que las combinaciones no son más que arreglos divididos por <span class="math inline">\(k!\)</span>. Por tanto:
+<span class="math display">\[\begin{pmatrix} n \\ k \end{pmatrix} = C_k^n = \frac{(A)_k^n }{k!} = \frac{n!}{k!(n-k)!}.\]</span></p>
+<div id="probabilidad-condicional" class="section level3 hasAnchor">
+<h3>Probabilidad condicional<a href="apéndice-iv-probabilidad-y-estadística.html#probabilidad-condicional" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La <em>probabilidad condicional</em> define la probabilidad de que ocurra un evento cuando se sabe qué ocurrió previo a él. Formalmente, se tienen dos eventos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> del espacio muestral <span class="math inline">\(\Omega\)</span> y se conoce que <span class="math inline">\(P(B) &gt; 0\)</span>. Se define la probabilidad de <span class="math inline">\(A\)</span> dado <span class="math inline">\(B\)</span> como <span class="math inline">\(P(A|B) = \frac{P(A \cap B)}{P(B)}.\)</span></p>
+<p><em>Ejemplo:</em>
+Se tiran dos datos y se quiere saber la probabilidad de que la suma sea siete (a este evento lo llamaremos <span class="math inline">\(A\)</span>) dado que uno de ellos muestra un uno (evento <span class="math inline">\(B\)</span>). Por la definición de probabilidad condicional, queremos calcular <span class="math inline">\(P(A|B) = \frac{P(A \cap B)}{P(B)}\)</span>.</p>
+<p>Comenzamos calculando la probabilidad de <span class="math inline">\(B\)</span>. De los 36 resultados posibles (<span class="math inline">\(6^2\)</span>), 11 de ellos tienen un uno en al menos uno de los dados <span class="math inline">\(\Rightarrow P(B) = \frac{11}{36}\)</span>.</p>
+<p>Para la probabilidad de la intersección, hay que tener en cuenta que hay 6 combinaciones posibles con las cuales la suma de los dos dados da 7. Sin embargo, solo dos de ellas contienen un uno en alguno de los dos dados, por lo tanto: <span class="math inline">\(\Rightarrow P(A \cap B) = \frac{2}{36}\)</span>.</p>
+<p>Juntando los dos resultados, obtenemos que <span class="math inline">\(P(A|B) = \frac{\frac{2}{36}}{\frac{11}{36}} = \frac{2}{11}\)</span>.</p>
+<div id="fórmula-de-probabilidad-total" class="section level4 hasAnchor">
+<h4>Fórmula de probabilidad total<a href="apéndice-iv-probabilidad-y-estadística.html#fórmula-de-probabilidad-total" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sean <span class="math inline">\(C_1, C_2, ..., C_n\)</span> una partición numerable de <span class="math inline">\(\Omega\)</span> cuyos eventos tienen probabilidades positivas. Sea <span class="math inline">\(A\)</span> un evento cualquiera. Entonces <span class="math inline">\(P(A) = \sum_{i=1}^n P(A|C_i)P(C_i)\)</span>.</p>
+</div>
+<div id="teorema-de-bayes" class="section level4 hasAnchor">
+<h4>Teorema de Bayes<a href="apéndice-iv-probabilidad-y-estadística.html#teorema-de-bayes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sean <span class="math inline">\(C_1, C_2, ..., C_n\)</span> una partición numerable de <span class="math inline">\(\Omega\)</span> cuyos eventos tienen probabilidades positivas. Sea <span class="math inline">\(A\)</span> un evento con probabilidad positiva, entonces: <span class="math inline">\(P(C_k|A) = \frac{P(C_k)P(A|C_k)}{\sum\limits_{i=1}^n P(A|C_i)P(C_i)}\)</span></p>
+</div>
+</div>
+</div>
+<div id="variables-aleatorias" class="section level2 hasAnchor">
+<h2>VARIABLES ALEATORIAS<a href="apéndice-iv-probabilidad-y-estadística.html#variables-aleatorias" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Una variable aleatoria es una función <span class="math inline">\(X: \Omega \rightarrow \mathbb{R}\)</span> que a cada elemento <span class="math inline">\(\omega\)</span> del espacio muestral le asigna un número real <span class="math inline">\(X(\omega)\)</span>. Se definen variables aleatorias discretas o continuas en función de como está conformado el espacio muestral. Una variable aleatoria es discreta si el recorrido, los valores que la variable puede tomar, es numerable. Es decir, se pueden ordenar en una sucesión. En cambio, es continua si sus valores consisten en uno o más intervalos de la recta de los reales.</p>
+<div id="variables-aleatorias-discretas" class="section level3 hasAnchor">
+<h3>Variables Aleatorias Discretas<a href="apéndice-iv-probabilidad-y-estadística.html#variables-aleatorias-discretas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para las variables aleatorias discretas podemos definir dos formas de representación:</p>
+<p><strong>Función de probabilidad puntual:</strong>
+La función de probabilidad puntual de una variable aleatoria discreta <span class="math inline">\(X: \Omega \rightarrow X\)</span> es una función <span class="math inline">\(p: \mathbb{R} \rightarrow [0,1]\)</span>, definida por <span class="math inline">\(p(x) = P(X = x)\)</span>, que indica para cada punto de <span class="math inline">\(x\)</span> de <span class="math inline">\(\mathbb{R}\)</span> la probabilidad de que <span class="math inline">\(X\)</span> tome ese valor. Si <span class="math inline">\(x\)</span> no es un posible valor de <span class="math inline">\(X\)</span>, <span class="math inline">\(p(x) = 1\)</span>. Además, <span class="math inline">\(\sum\limits_{x\in \mathbb{R}_X} p(x) =1\)</span> debido a que en <span class="math inline">\(R_X\)</span> están todos los posibles valores de <span class="math inline">\(X\)</span>.</p>
+<p><em>Ejemplo:</em>
+Función de probabilidad puntual de la suma del resultado de lanzar dos dados.
+<strong>AGREGAR GRÁFICA</strong></p>
+<p><strong>Función de distribución acumulada:</strong>
+La función de distribución acumulada de una variable aleatoria <span class="math inline">\(X\)</span> es una función <span class="math inline">\(F: \mathbb{R} \rightarrow [0,1]\)</span> definida por <span class="math inline">\(F(x) = P(X \leq x)\)</span>. <span class="math inline">\(F\)</span> da la probabilidad acumulada al sumar las probabilidades <span class="math inline">\(p(y)\)</span> con <span class="math inline">\(y \leq x\)</span>.
+<strong>AGREGAR GRÁFICA</strong></p>
+<div id="distribución-de-probabilidad-conjunta" class="section level4 hasAnchor">
+<h4>Distribución de probabilidad conjunta<a href="apéndice-iv-probabilidad-y-estadística.html#distribución-de-probabilidad-conjunta" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>La distribución de probabilidad conjunta muestra como se comportan las variables <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> y las probabilidades de los distintos resultados posibles. Formalmente, es la función <span class="math inline">\(p: \mathbb{R}^2 \rightarrow [0,1]\)</span> definida por <span class="math inline">\(p(x,y) = P(X = x, Y = y)\)</span>.</p>
+<p>Las distribuciones de <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> obtenidas a partir de la distribución conjunta se llaman <em>distribuciones marginales</em>.</p>
+</div>
+</div>
+<div id="variables-aleatorias-continuas" class="section level3 hasAnchor">
+<h3>Variables Aleatorias Continuas<a href="apéndice-iv-probabilidad-y-estadística.html#variables-aleatorias-continuas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se trabajará específicamente con las variables aleatorias absolutamente continuas, pero serán nombradas <em>variables aleatorias continuas</em>. Para definirlas, es necesario previamente definir qué es una <em>densidad de probabilidad</em>.</p>
+<p><strong>Densidad de probabilidad:</strong>
+Una densidad de probabilidad es una función <span class="math inline">\(p: \mathbb{R} \rightarrow \mathbb{R}\)</span> integrable que cumple las siguientes dos condiciones:
+1. Es positiva <span class="math inline">\(p(x) \geq 0\)</span> para todo <span class="math inline">\(x \in \mathbb{R}\)</span>.
+2. <span class="math inline">\(\int_{-\infty}^{+\infty} p(x)dx = 1\)</span>.</p>
+<p>Una variable aleatoria es absolutamente continua si existe una densidad de probabilidad <span class="math inline">\(p\)</span> tal que <span class="math inline">\(P(X\in I) = \int_{I} p(x) dx\)</span> para todo intervalo <span class="math inline">\(I\)</span> de <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>Un ejemplo conocido de variable aleatoria continua es la <em>campana de Gauss</em>, donde la probabilidad de que una variable aleatoria se encuentre entre dos puntos <span class="math inline">\([a,b]\)</span> está dada por la gráfica bajo la curva y se puede calcular usando la tabla de la distribución normal (desarollaremos más adelante).</p>
+<embed src="figuras/Campana_Gauss.pdf" width="80%" style="display: block; margin: auto;" type="application/pdf" />
+<div id="densidad-de-probabilidad-conjunta" class="section level4 hasAnchor">
+<h4>Densidad de probabilidad conjunta<a href="apéndice-iv-probabilidad-y-estadística.html#densidad-de-probabilidad-conjunta" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Al igual que se definió a la distribución de probabilidad conjunta para las variables aleatorias discretas, se puede definir la densidad de probabilidad conjunta para variables continuas. La densidad de probabilidad en dos variables cumple que <span class="math inline">\(p(x,y) \geq 0\)</span> y <span class="math inline">\(\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}p(x,y)dxdy = 1\)</span>.</p>
+</div>
+</div>
+<div id="variables-independientes" class="section level3 hasAnchor">
+<h3>Variables independientes<a href="apéndice-iv-probabilidad-y-estadística.html#variables-independientes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para el caso de variables aleatorias discretas, se dice que son independientes si la distribución conjunta es igual al producto de las marginales: <span class="math inline">\(p(x,y) = p(x)p(y).\)</span></p>
+<p>La definición de variable independiente en el caso continuo es análoga, pero para la densidad conjunta y densidades marginales.</p>
+</div>
+<div id="valor-esperado" class="section level3 hasAnchor">
+<h3>Valor esperado<a href="apéndice-iv-probabilidad-y-estadística.html#valor-esperado" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si repetimos un experimento la suficiente cantidad de veces, el valor que tomará la variable aleatoria es el <em>valor esperado</em>. A continuación se define para formalmente para variables aleatorias discretas y continuas.</p>
+<p>El valor esperado de una variable aleatoria discreta <span class="math inline">\(X\)</span> con recorrido <span class="math inline">\(R_X\)</span> se define como <span class="math inline">\(E(X)=\sum_{x \in R_X} x \cdot P(X = x).\)</span></p>
+<p>Para variables aleatorias continuas con densidad <span class="math inline">\(p(x)\)</span> se define como <span class="math inline">\(E(X) = \int_{-\infty}^{+\infty}xp(x) dx.\)</span></p>
+<div id="propiedades-importantes" class="section level4 hasAnchor">
+<h4>Propiedades importantes:<a href="apéndice-iv-probabilidad-y-estadística.html#propiedades-importantes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Se definen a continuación las principales propiedades del valor esperado, que aplican tanto para variables aleatorias discretas como continuas.</p>
+<p><strong>Propiedad 1:</strong>
+Sea <span class="math inline">\(X\)</span> una variable aleatoria y <span class="math inline">\(a\)</span> una constante cualquiera. Entonces: <span class="math inline">\(E(aX) = aE(x).\)</span></p>
+<p><strong>Propiedad 2:</strong>
+Sean <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> dos variables aleatorias. Entonces: <span class="math inline">\(E(X + Y) = E(X) + E(Y).\)</span></p>
+<p><strong>Propiedad 3:</strong>
+Sean <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> dos variables aleatorias independientes, estas cumplen que <span class="math inline">\(E(XY) = E(X)E(Y).\)</span></p>
+</div>
+</div>
+<div id="varianza-y-desviación-estándar" class="section level3 hasAnchor">
+<h3>Varianza y Desviación Estándar<a href="apéndice-iv-probabilidad-y-estadística.html#varianza-y-desviación-estándar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La <em>varianza</em> es una medida de que tan dispersos estan los valores de <span class="math inline">\(X\)</span> respecto a su valor esperado. Para una variable aleatoria discreta <span class="math inline">\(X\)</span> con función de probabilidad puntual <span class="math inline">\(p(x)\)</span>, la varianza se define como <span class="math inline">\(Var(X) = \sum\limits_{x\in R_X}(x-E(X))^2p(x).\)</span></p>
+<p>En el caso de una variable aleatoria continua <span class="math inline">\(X\)</span> con función de densidad <span class="math inline">\(p(x)\)</span>, la varianza se define como <span class="math inline">\(Var(X) = \int_{-\infty}^{+\infty} (x-E(X))^2p(x) dx.\)</span></p>
+<p>Otra notación común de la varianza es <span class="math inline">\(\sigma^2\)</span>. La varianza tiene unidades de <span class="math inline">\(X^2\)</span> por lo que se defina otra medida de desviación con las mismas unidades de <span class="math inline">\(X\)</span> que resulta en un valor con mejor interpretabilidad. Se le llama <em>desviación estándar</em> y se define como <span class="math inline">\(\sigma = \sqrt{Var(X)}.\)</span></p>
+<div id="propiedades-importantes-1" class="section level4 hasAnchor">
+<h4>Propiedades importantes:<a href="apéndice-iv-probabilidad-y-estadística.html#propiedades-importantes-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Se desarrollan propiedades de la varianza, que aplican tanto para variables aleatorias continuas como discretas.</p>
+<p><strong>Propiedad 1:</strong>
+Sea <span class="math inline">\(X\)</span> una variable aleatoria y <span class="math inline">\(c\)</span> una constante cualquiera. Entonces: <span class="math inline">\(Var(X+c) = Var(X).\)</span></p>
+<p><strong>Propiedad 2:</strong>
+Sea <span class="math inline">\(X\)</span> una variable aleatoria y <span class="math inline">\(c\)</span> una constante cualquiera. Entonces: <span class="math inline">\(Var(cX) = c^2 Var(X).\)</span></p>
+<p><strong>Propiedad 3:</strong>
+La varianza de una variable aleatoria <span class="math inline">\(X\)</span> se puede calcular como: <span class="math inline">\(Var(X) = E(X^2) - E^2(X).\)</span></p>
+<p><strong>Propiedad 4:</strong>
+Sean <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> dos variables aleatorias independientes, la varianza de <span class="math inline">\(X+Y\)</span> queda definida por: <span class="math inline">\(Var(X+Y) = Var(X) + Var(Y).\)</span></p>
+</div>
+</div>
+<div id="covarianza-y-coeficiente-de-correlación" class="section level3 hasAnchor">
+<h3>Covarianza y Coeficiente de Correlación<a href="apéndice-iv-probabilidad-y-estadística.html#covarianza-y-coeficiente-de-correlación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La <em>covarianza</em> mide la variabilidad conjunta de <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>. Mide que tan asociadas estan estas dos variables aleatorias y sus respectivas dispersiones. Está definida como <span class="math inline">\(Cov(X,Y) = E[(X-E(X))(Y-E(Y))]\)</span> que desarrollando queda $<span class="math inline">\(Cov(X,Y) = E[(X-E(X))(Y-E(Y))] = E(XY) - E(X)E(Y).\)</span></p>
+<p>Si a la covarianza se la divide por el producto de las desviaciones estándar de <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> se obtiene el <em>coeficiente de correlacion</em>: <span class="math inline">\(\rho = \frac{Cov(X,Y)}{\sigma_X \sigma_Y}.\)</span></p>
+<div id="propiedades-importantes-2" class="section level4 hasAnchor">
+<h4>Propiedades importantes:<a href="apéndice-iv-probabilidad-y-estadística.html#propiedades-importantes-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Propiedad 1: Desigualdad de Cauchy - Schwarz</strong>
+Sean <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> dos variables aleatorias cualesquiera <span class="math inline">\(\Rightarrow |Cov(X,Y)| \leq \sqrt{Var(X)}\sqrt{Var(Y)} \leq 1.\)</span></p>
+<p><strong>Propiedad 2:</strong>
+Sean <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> dos variables aleatorias cualesquiera <span class="math inline">\(\Rightarrow Cov(X,Y) = Cov(Y,X).\)</span></p>
+<p><strong>Propiedad 3:</strong>
+Sea <span class="math inline">\(X\)</span> una variable aleatoria constante <span class="math inline">\(\Leftrightarrow Cov(X,X) = 0.\)</span></p>
+<p><strong>Propiedad 4:</strong>
+Sean <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> dos variables aleatorias independientes <span class="math inline">\(\Rightarrow Cov(X,Y) = 0\)</span> dado que <span class="math inline">\(E(XY) = E(X)E(Y).\)</span></p>
+<p><strong>Propiedad 5:</strong>
+Sean <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> y <span class="math inline">\(Z\)</span> tres variables aleatorias discretas y <span class="math inline">\(a\)</span> una constante <span class="math inline">\(\Rightarrow Cov(aX+Y, Z) = aCov(X,Z) + Cov(Y,Z).\)</span></p>
+</div>
+</div>
+<div id="ley-de-los-grandes-números" class="section level3 hasAnchor">
+<h3>Ley de los grandes números<a href="apéndice-iv-probabilidad-y-estadística.html#ley-de-los-grandes-números" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La <em>Ley de los Grandes Números</em> establece que el promedio de muchas realizaciones independientes de un mismo experimento está, con alta probabilidad, cerca de la esperanza de la distribución subyacente. El enunciado dice que:
+Sean <span class="math inline">\(X_1, X_2,...,X_n\)</span> variables aleatorias independientes e identicamente distribuidas (i.i.d), con esperanza <span class="math inline">\(\mu = E(X_i)\)</span> y varianza <span class="math inline">\(\sigma^2 = Var(X_i)\)</span>. Entonces, para todo <span class="math inline">\(\epsilon &gt; 0 \Rightarrow P(|\overline{X}_n - \mu|&lt; \epsilon) \rightarrow 1\)</span> cuando <span class="math inline">\(n\rightarrow \infty\)</span>.</p>
+<p><span class="math inline">\(\overline{X}_n\)</span> es el promedio de las variables aleatorias i.i.d que tiene como esperanza <span class="math inline">\(E(\overline{X}_n) = \mu\)</span> y varianza <span class="math inline">\(Var(\overline{X}_n) = \frac{\sigma^2}{n}.\)</span></p>
+</div>
+<div id="distribuciones-conocidas" class="section level3 hasAnchor">
+<h3>Distribuciones conocidas<a href="apéndice-iv-probabilidad-y-estadística.html#distribuciones-conocidas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A continuación se muestra una tabla donde se presentan algunas variables aleatorias típicamente utilizadas, qué experimentos modelan, su distribución, esperanza y varianza.</p>
+<table>
+<colgroup>
+<col width="11%" />
+<col width="20%" />
+<col width="11%" />
+<col width="32%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Variable</th>
+<th align="center">Caso Prototipo</th>
+<th align="center"><span class="math inline">\(p_X(x)\)</span></th>
+<th align="center"><span class="math inline">\(F_X(x)\)</span></th>
+<th align="center">Esperanza</th>
+<th align="center">Varianza</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Uniforme: <span class="math inline">\(X \sim U(n)\)</span></td>
+<td align="center">Todos los resultados equiprobables</td>
+<td align="center"><span class="math inline">\(\frac{1}{n}\)</span></td>
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(\frac{n+1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{n^2-1}{12}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Bernoulli: <span class="math inline">\(X \sim Ber(p)\)</span></td>
+<td align="center">Éxito o fracaso</td>
+<td align="center"><span class="math inline">\((1-p)^{1-k}p^k\)</span></td>
+<td align="center"><span class="math inline">\(\begin{cases} 1-p \textit{ si } k = 0 \\ 1 \textit{ si } k=1 \end{cases}\)</span></td>
+<td align="center"><span class="math inline">\(p\)</span></td>
+<td align="center"><span class="math inline">\(p(1-p)\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">Geométrica: <span class="math inline">\(X \sim Geo(p)\)</span></td>
+<td align="center">Repetir ensayos de Bernoulli hasta uno exitoso</td>
+<td align="center"><span class="math inline">\((1-p)^{k-1}p\)</span></td>
+<td align="center"><span class="math inline">\(\begin{cases} 1-(1-p)^{k+1} \textit{ si } k = 0 \\ 1 \textit{ si } k=1 \end{cases}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{p}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1-p}{p^2}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Binomial: <span class="math inline">\(X \sim Bin(n,p)\)</span></td>
+<td align="center"><span class="math inline">\(k\)</span> ensayos de Bernoulli exitosos en <span class="math inline">\(n\)</span></td>
+<td align="center"><span class="math inline">\(\begin{pmatrix}n \\ p \end{pmatrix} (1-p)^{n-k}p^k\)</span></td>
+<td align="center">-</td>
+<td align="center"><span class="math inline">\(np\)</span></td>
+<td align="center"><span class="math inline">\(n(1-p)p\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">Poisson: <span class="math inline">\(X \sim Pois(\mu)\)</span></td>
+<td align="center"><span class="math inline">\(k\)</span> ocurrencias con probabilidad <span class="math inline">\(\mu\)</span> de un experimento en un periodo de tiempo <span class="math inline">\(t\)</span></td>
+<td align="center"><span class="math inline">\(\frac{e^{-\mu}\mu^k}{k!}\)</span></td>
+<td align="center">-</td>
+<td align="center"><span class="math inline">\(\mu\)</span></td>
+<td align="center"><span class="math inline">\(\mu\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Hipergeométrica: <span class="math inline">\(X \sim H(N, q, n)\)</span></td>
+<td align="center">Urna con <span class="math inline">\(N\)</span> bolillas, <span class="math inline">\(q\)</span> rojas. Probabilidad de sacar <span class="math inline">\(k\)</span> rojas en una muestra de <span class="math inline">\(n\)</span> sin reposición</td>
+<td align="center"><span class="math inline">\(\frac{\begin{pmatrix} q \\ k \end{pmatrix}\begin{pmatrix} N-q\\ n-k \end{pmatrix}}{\begin{pmatrix} N \\ n \end{pmatrix}}\)</span></td>
+<td align="center">-</td>
+<td align="center"><span class="math inline">\(\frac{nq}{N}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{nq(N-q)}{N^2} (1-\frac{n-1}{N-1})\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="distribución-normal" class="section level3 hasAnchor">
+<h3>Distribución Normal<a href="apéndice-iv-probabilidad-y-estadística.html#distribución-normal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La distribución normal es de las distribuciones más conocidas en probabilidad y estadística. Su función de densidad es la conocida como <em>Campana de Gauss</em> y está dada por la función <span class="math inline">\(\varphi = \frac{1}{\sqrt{2\pi}}e^{\frac{-x^2}{2}}\)</span> definida para todo <span class="math inline">\(x\in \mathbb{R}\)</span>. Esta distribución normal tiene esperanza <span class="math inline">\(0\)</span> y varianza <span class="math inline">\(1\)</span> por lo que la función de densidad es una campana de Gauss centrada en <span class="math inline">\(0\)</span>. Se representa por <span class="math inline">\(X \sim N(0,1)\)</span>.</p>
+<embed src="figuras/Normal_con_media.pdf" width="80%" style="display: block; margin: auto;" type="application/pdf" />
+<p>De la gráfica de la distribución normal se observa que es simétrica respecto a la media. Para hallar la función de distribución acumulada debe integrarse, pero <span class="math inline">\(\varphi\)</span> no tiene una primitiva elemental (no es expresable mediante funciones conocidas). Para calcular probabilidades usando esta distribución se utiliza la <em>Tabla de la distribución normal</em> que, para cada valor, indica el area bajo la curva que hay desde <span class="math inline">\(-\infty\)</span> hasta ese punto.</p>
+<embed src="figuras/tabla_normal.pdf" width="80%" style="display: block; margin: auto;" type="application/pdf" />
+<p>Se observa que no indica el valor de probabilidad para valores menores a 0. Sin embargo, dada la simetría mencionada previamente y que la probabilidad del complemento de un conjunto que tiene probabilidad <span class="math inline">\(p\)</span> es <span class="math inline">\(1-p\)</span>, se puede deducir que <span class="math inline">\(\phi(-x) = 1 - \phi(x)\)</span>.</p>
+<p><em>Ejemplo:</em></p>
+<p>Se quiere saber la probabilidad de que <span class="math inline">\(X &lt; 2.38\)</span>. Para eso, en la tabla buscamos la fila correspondiente a <span class="math inline">\(2.3\)</span>, ya que las filas indican unidades y primer decimal. Posicionados en esa fila, buscamos la columna que corresponda a <span class="math inline">\(0.08\)</span>, dado que las columnas indican el segundo decimal. Se llega entonces a que <span class="math inline">\(P(X &lt; 2.38) = \phi(2.38) = 0.9913\)</span>. Si se quisiera calcular la probabilidad de <span class="math inline">\(X &gt; 2.38\)</span> basta con calcular la probabilidad del complemento, por lo que <span class="math inline">\(P(X &gt; 2.38) = 1-\phi(2.38) = 0.0087\)</span>.</p>
+<p>En el caso de querer calcular la probabilidad de que <span class="math inline">\(X &lt; -2.38\)</span> se utiliza la propiedad de simetría. Se observa que la cola gaussiana a la izquierda de <span class="math inline">\(-2.38\)</span> es igual a la cola a la derecha de <span class="math inline">\(2.38\)</span> por lo que <span class="math inline">\(P(X &lt; -2.38) = P(X &gt;2.38) = 0.0087\)</span>.</p>
+<div id="normal-de-media-mu-y-desviación-estándar-sigma" class="section level4 hasAnchor">
+<h4>Normal de media <span class="math inline">\(\mu\)</span> y desviación estándar <span class="math inline">\(\sigma\)</span><a href="apéndice-iv-probabilidad-y-estadística.html#normal-de-media-mu-y-desviación-estándar-sigma" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>La distribución normal puede tener media <span class="math inline">\(\mu \neq 0\)</span> y desviación estándar <span class="math inline">\(\sigma \neq 1\)</span>. Que la media sea distinta de cero implica que la distribución tendrá su máximo en ese valor <span class="math inline">\(\mu\)</span>, lo que genera que esté centrada sobre otro valor del eje x. En el caso de la desviación estándar, cuánto mayor sea, más ancha queda la campana, ocurriendo lo contrario para valores más pequeños. Sin embargo, al ser una densidad de probabilidad debe siempre integrar uno, por lo que a mayor desviación estándar menor es el máximo de la campana. En este caso, la función de densidad está dada por <span class="math inline">\(\varphi = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}\)</span>.</p>
+<p>La desviación estándar indica que en el intervalo <span class="math inline">\([\mu-\sigma, \mu+\sigma]\)</span> se encuentra aproximadamente el 68% de los datos. A <span class="math inline">\(2\sigma\)</span> de distancia de <span class="math inline">\(\mu\)</span> se encuentra 94% de los datos, aproximadamente.</p>
+<p><strong>Estandarización:</strong>
+Si bien existen distribuciones normales <span class="math inline">\(N(\mu, \sigma^2)\)</span>, la tabla de distribución normal conocida con la que se trabaja es la de la normal <span class="math inline">\(N(0,1)\)</span>. Se buscará modelar la distribución que se tiene como una normal <span class="math inline">\(N(0,1)\)</span> mediante el proceso de estandarización.</p>
+<p>Si se tiene una distribución normal de parámetros <span class="math inline">\(\mu\)</span> y <span class="math inline">\(\sigma\)</span> y además <span class="math inline">\(a &lt; b\)</span>:
+<span class="math display">\[P(a&lt;X&lt;b) = P \left(\frac{a-\mu}{\sigma} &lt; \frac{X-\mu}{\sigma} &lt; \frac{b-\mu}{\sigma} \right). \]</span></p>
+<p>Se puede ver que <span class="math inline">\(\frac{X-\mu}{\sigma}\)</span> tiene distribución <span class="math inline">\(N(0,1)\)</span> por lo que
+<span class="math display">\[P(a &lt; X &lt; b) = \phi\left( \frac{b-\mu}{\sigma}\right) - \phi\left( \frac{a-\mu}{\sigma} \right)\]</span>.</p>
+<p><em>Ejemplo:</em>
+Sea <span class="math inline">\(X\sim N(2,2)\)</span>, se quiere calcular la probabilidad de <span class="math inline">\(X\in[1.5, 3]\)</span>. Estandarizando, se obtiene que los valores a buscar en la tabla son:</p>
+<p><span class="math display">\[\begin{cases} \frac{a-\mu}{\sigma} = \frac{1.5 - 2}{2} = -0.25 \\ \frac{b-\mu}{\sigma} = \frac{3 - 2}{2} = 0.5\end{cases}\]</span></p>
+<p>Recordar que al tener un valor negativo, <span class="math inline">\(\phi(-x) = 1-\phi(x)\)</span> por lo que <span class="math inline">\(\phi(-0.25) = 1-\phi(0.25)\)</span>. Sustituyendo en <span class="math inline">\(\phi(0.5) - \phi(-0.25)\)</span>, se obtiene que <span class="math inline">\(P(1.5 &lt; X &lt; 3) = \phi(0.5) - 1 + \phi(0.25) = 0.6915 - 1 + 0.5987 \Rightarrow P(1.5 &lt; X &lt; 3) = 0.2902\)</span>.</p>
+</div>
+<div id="combinación-lineal-de-normales-independientes" class="section level4 hasAnchor">
+<h4>Combinación lineal de normales independientes<a href="apéndice-iv-probabilidad-y-estadística.html#combinación-lineal-de-normales-independientes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Combinaciones lineales de normales independientes generan distribuciones normales. En particular, es de interés mencionar qué pasa en el caso de la suma de normales.</p>
+<p>Si <span class="math inline">\(X_1,...,X_n\)</span> son independientes con <span class="math inline">\(X_i\sim N(\mu_i, \sigma^2_i)\)</span> entonces
+<span class="math display">\[X_1+...+X_n \sim N\left(\sum\limits_{i=1}^n \mu_i, \sum\limits_{i=1}^n \sigma^2_i \right)\]</span></p>
+<p>Si además las normales son i.i.d., se puede saber la distribución del promedio:
+Si <span class="math inline">\(X_1,...,X_n\)</span> son i.i.id con <span class="math inline">\(X_i\sim N(\mu, \sigma^2)\)</span> entonces
+<span class="math display">\[\frac{X_1+...+X_n}{n} \sim N\left(\mu, \frac{\sigma^2_i}{n}\right)\]</span></p>
+</div>
+</div>
+<div id="distribución-binomial" class="section level3 hasAnchor">
+<h3>Distribución Binomial<a href="apéndice-iv-probabilidad-y-estadística.html#distribución-binomial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para definir la distribución Binomial previamente necesitamos definir un ensayo de Bernoulli. Los ensayos de Bernoulli miden la probabilidad de éxito (y por ende la de fracaso) de que ocurra un evento. Por ejemplo, tiramos una moneda y queremos medir la probabilidad de que salga <em>cara</em>. Llamaremos <em>p</em> a la probabilidad de éxito y <em>q</em> a la de no éxito, que por propiedades de probabilidad será <span class="math inline">\(q=1-p\)</span>.</p>
+<p>La distribución binomial mide la probabilidad de obtener <span class="math inline">\(k\)</span> éxitos en <span class="math inline">\(n\)</span> ensayos Bernoulli independientes entre sí. A continuación se muestra un arbol de probabilidades para los primeros cuatro niveles, donde en cada nivel se muestra la probabilidad de que ocurra ese evento y se llega con probabilidad <span class="math inline">\(p\)</span> o <span class="math inline">\(q\)</span> si el evento es éxito o fracaso.</p>
+<p><img src="figuras/Arbol_binomial.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Si quiero la probabilidad de tener dos éxitos en cuatro eventos, se buscan en el árbol aquellos caminos que en todo el recorrido desde el primer evento hasta el último halla dos éxitos.</p>
+<p>Extendiendo el árbol a <span class="math inline">\(n\)</span> pasos, si quiero <em>k</em> éxitos debo recorrer el camino donde tenga $k4 veces el evento exitoso y <span class="math inline">\(n-k\)</span> veces el evento fracaso. Cada uno de estos caminos tendrá probabilidad <span class="math inline">\(p^k\)</span> (correspondiente a los éxitos) multiplicado por <span class="math inline">\(q^{n-k}\)</span> (correspondiente a los fracasos), o lo que es lo mismo <span class="math inline">\((1-p)^{n-k}\)</span>. Extendiéndolo a la cantidad de caminos posibles, la probabilidad de tener <em>k</em> éxitos en <em>n</em> ensayos está dada por:</p>
+<p><span class="math display">\[P(S_n = k) = ( \begin{cases} n \\ k \end{cases}) p^k (1-p)^{n-k}\]</span></p>
+<p>Recordando que la esperanza de una Bernoulli de parámetro <em>p</em> es <em>p</em> y la varianza es <span class="math inline">\(p(1-p)\)</span>, se llega a que la esperanza y varianza de una Binomial <span class="math inline">\((S_n)\)</span> son:
+<span class="math display">\[
+\begin{cases}
+E(S_n) =  np \\
+Var(S_n) = np(1-p)
+\end{cases}
+\]</span></p>
+</div>
+<div id="distribución-de-poisson" class="section level3 hasAnchor">
+<h3>Distribución de Poisson<a href="apéndice-iv-probabilidad-y-estadística.html#distribución-de-poisson" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La distribución de Poisson mide la cantidad de éxitos en un intervalo de tiempo <span class="math inline">\(t\)</span>. Se puede considerar como una extensión del proceso de Bernoulli pero que considera los éxitos en un intervalo contínuo en lugar de realizaciones discretas del experimento.</p>
+<p>Para que se ajuste a un proceso de Possion de parámetro <span class="math inline">\(\mu &gt; 0\)</span> se deben cumplir las siguientes tres condiciones:
+- La cantidad de éxitos en subintervalos disjuntos deben ser independientes.
+- La probabilidad de éxito de un intervalo de lo suficientemente chico de longitud <span class="math inline">\(h\)</span> es <span class="math inline">\(\mu h\)</span>.<br />
+- La probabilidad de dos o más éxitos en un intervalo lo suficientemente chico es esencialmente cero.</p>
+<p>Se considera un experimento que cumple las tres condiciones previas, para buscar la probabilidad <span class="math inline">\(P\)</span> que modele el experimento se considera un intervalo de longitud 1 que se divide en <span class="math inline">\(n\)</span> intervalos de igual longitud. Como se considera <span class="math inline">\(n\)</span> lo suficientemente grande, se sabe que en cada intervalo va a haber un éxito con probabilidad <span class="math inline">\(\frac{\mu}{n}\)</span>. El éxito o no en cada intervalo se modela como una Bernoulli, por lo que conseguir <span class="math inline">\(k\)</span> éxitos en los <span class="math inline">\(n\)</span> intervalos se puede modelar como una Binomial. Tomando la probabilidad de la Binomial y calculando su límite para <span class="math inline">\(n \rightarrow \infty\)</span> se obtiene que:</p>
+<p>Una variable discreta <span class="math inline">\(S\)</span> tiene distribución de Poisson de parámetro <span class="math inline">\(\mu\)</span> si toma valores enteros mayores o iguales a cero con probabilidad <span class="math display">\[P(S = k) = \frac{\mu^k}{k!}e^{-\mu}\]</span> con <span class="math inline">\(k=0,1,2...\)</span>. Se escribe como <span class="math inline">\(S \sim Poiss(\mu)\)</span>.</p>
+<p><em>Ejemplo:</em>{-}
+Se tiene un rebaño de ovejas del que se sabe que en promedio <span class="math inline">\(\mu = 2\)</span> de ellas dan a luz por día. Se quiere calcular la probabilidad de que cinco vacas den a luz, por lo que sustituyendo <span class="math inline">\(k=5\)</span> y <span class="math inline">\(\mu = 2\)</span> en la función de la probabilidad de Poisson se obtiene la probabilidad deseada.</p>
+</div>
+</div>
+<div id="estimadores" class="section level2 hasAnchor">
+<h2>ESTIMADORES<a href="apéndice-iv-probabilidad-y-estadística.html#estimadores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="estimadores-frecuentistas" class="section level3 hasAnchor">
+<h3>Estimadores frecuentistas<a href="apéndice-iv-probabilidad-y-estadística.html#estimadores-frecuentistas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un modelo paramétrico consiste en suponer que se conoce la densidad de probabilidad salvo algunos parámetros. Por ejemplo, se supone que las muestras que se tienen de un experimento se ajustan a una distribución normal, pero no se conoce su media ni su varianza. Un parámetro se denota con la letra <span class="math inline">\(\theta\)</span> y la densidad correspondiente por <span class="math inline">\(p(x;\theta)\)</span>.</p>
+<p>Un <em>estimador</em> es un estadístico que se cree tiene información suficiente sobre un parámetro <span class="math inline">\(\theta\)</span> de la distribución <span class="math inline">\(X\)</span>. ¿Cómo evaluar si un estimador es bueno? Se definiran dos propiedades con las que se pueden establecer dos criterios.</p>
+<p><strong>Sesgo:</strong></p>
+<p>Se define el sesgo de un estimador <span class="math inline">\(T\)</span> como la diferencia entre el parámetro <span class="math inline">\(\theta\)</span> y la esperanza del estimador: <span class="math inline">\(Sesgo(\theta) = E(T) - \theta\)</span>. Se dice que un estimador es insesgado si <span class="math inline">\(E(T) = \theta\)</span>.</p>
+<p>Se dice que un estimador es <em>asintóticamente insesgado</em> si <span class="math inline">\(\lim\limits_{n\rightarrow +\infty} E(T) = \theta\)</span>, siendo <span class="math inline">\(n\)</span> el número de muestras de la distribución.</p>
+<p><em>Ejemplo:</em>
+Se quiere estimar el parámetro <span class="math inline">\(\mu\)</span> de una distribución. Se elige como estimador el promedio <span class="math inline">\(\overline{X}_n\)</span>. ¿Es este estimador insesgado?</p>
+<p>Calculamos su esperanza:
+<span class="math display">\[E(\overline{X}_n) = E(\frac{1}{n}\sum\limits_{n=1}^n X_i) = \frac{1}{n}\sum\limits_{n=1}^n E(X_i) = \frac{n\mu}{n} = \mu.\]</span></p>
+<p>Por lo tanto, es un estimador insesgado.</p>
+<p><strong>Error cuadrático medio:</strong></p>
+<p>El error cuadrático medio de un estimador <span class="math inline">\(T\)</span> de un parámetro <span class="math inline">\(\theta\)</span> está definido como <span class="math inline">\(MSE(T) = E\left((T-\theta)^2\right)\)</span>. Se puede reescribir como <span class="math inline">\(MSE(T) = Var(T) + Sesgo(T)^2\)</span>.</p>
+<p>En general, los estimadores que minimizan el MSE dependen del parámetro desconocido, dado que dependen del sesgo. Por lo tanto, suelen ser no realizables. Un estimador insesgado suele tener mayor varianza, resultando en lo que se conoce como <em>compromiso sesgo-varianza</em>. Se debe decidir si buscar minimizar el sesgo (que resulta en un estimador más exacto) o la varianza (que resulta en un estimador más preciso).</p>
+</div>
+<div id="otras-propiedades" class="section level3 hasAnchor">
+<h3>Otras propiedades:<a href="apéndice-iv-probabilidad-y-estadística.html#otras-propiedades" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>Consistencia:</em>
+Se dice que un estimador es consistente si converge en probabilidad al valor del parámetro que está intentando estimar, conforme crece la muestra.</p>
+<p><em>Invarianza:</em>
+Un estimador se dice invariante si una función del estimador <span class="math inline">\(\hat{\theta}\)</span> es igual al estimador de la función del parámetro <span class="math inline">\(\theta\)</span>. O sea que: <span class="math inline">\(f(\hat{\theta}) = \hat{f(\theta)}\)</span>.</p>
+<p><em>Suficiencia:</em>
+Un estimador de <span class="math inline">\(\theta\)</span> se considera suficiente si utiliza toda la información contenida en la muestra aleatoria con respecto a <span class="math inline">\(\theta\)</span>.</p>
+<p><em>Robustez:</em>
+Un estimador robusto es aquel que sigue siendo efectivo incluso si las suposiciones iniciales del modelo estadístico no se cumplen completamente.</p>
+<p><em>Asintóticamente normal:</em>
+Un estimador se dice que es asintóticamente normal si, a medida que el tamaño de la muestra tiende a infinito, la distribución del estimador se aproxima a una distribución normal.</p>
+</div>
+<div id="métodos-de-estimación" class="section level3 hasAnchor">
+<h3>Métodos de estimación<a href="apéndice-iv-probabilidad-y-estadística.html#métodos-de-estimación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A continuación, se presentan distintas técnicas de estimación. Puede convenir la utilización de unas u otras en función de qué se busca (estimadores insesgados o estimadores de varianza pequeña, por ejemplo).</p>
+<div id="estimadores-insesgados-de-varianza-mínima-mvu" class="section level4 hasAnchor">
+<h4>Estimadores insesgados de varianza mínima (MVU)<a href="apéndice-iv-probabilidad-y-estadística.html#estimadores-insesgados-de-varianza-mínima-mvu" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dado que minimizar el MSE puede llevar a estimadores no realizables, una opción es elegir el estimador de menor varianza del conjunto de estimadores insesgados. No necesariamente va a ser el estimador que minimice el MSE, pero sí es el que tiene menor MSE dado que el sesgo es cero. También se le llama <em>estimador eficiente</em>.</p>
+</div>
+<div id="mejor-estimador-lineal-insesgado-blue" class="section level4 hasAnchor">
+<h4>Mejor estimador lineal insesgado (BLUE)<a href="apéndice-iv-probabilidad-y-estadística.html#mejor-estimador-lineal-insesgado-blue" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Otra estrategia para elegir el mejor estimador dado el problema es restringir el estimador a ser lineal con los datos y buscar el estimador lineal insesgado con menor varianza. Un estimador es lineal con los datos si: <span class="math inline">\(\hat{\theta} = \sum\limits_{n=0}^{N-1}a_nx[n]\)</span>. Se deberá hallar los coeficientes <span class="math inline">\(a_n\)</span> para que el estimador sea insesgado y de mínima varianza.</p>
+</div>
+<div id="estimadores-de-máxima-verosimilitud-mle" class="section level4 hasAnchor">
+<h4>Estimadores de máxima verosimilitud (MLE)<a href="apéndice-iv-probabilidad-y-estadística.html#estimadores-de-máxima-verosimilitud-mle" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>El estimador de máxima verosimilitud es una herramienta muy popular para obtener estimadores prácticos ya que tiene características asintóticas deseables: es asintóticamente eficiente y es consistente (con probabilidad alta se acerca al parámetro buscado dada una cantidad grande de muestras). Suelen utilizarse métodos numéricos para hallarlo.</p>
+<p>Sea una muestra <span class="math inline">\(x_1,...,x_n\)</span> obtenida por un muestreo aleatorio <span class="math inline">\(X_1,...,X_n\)</span> de una variable <span class="math inline">\(X\)</span> con distribución <span class="math inline">\(p(x;\theta)\)</span> que depende de un parámetro <span class="math inline">\(\theta\)</span> a estimar. La probabilidad de observar la muestra que observamos es <span class="math inline">\(p(x_1;\theta)p(x_2;\theta)...p(x_n;\theta)\)</span>. El principio de <em>máxima verosimilitud</em> se basa en hallar un <span class="math inline">\(\hat{\theta}\)</span> estimador de <span class="math inline">\(\theta\)</span> que maximice este producto.</p>
+<p>Definimos la <em>función de verosimilitud</em> como <span class="math inline">\(L_n(\theta) = \prod\limits_{i=1}^n p(X_i;\theta)\)</span> donde <span class="math inline">\(X_1,...,X_n\)</span> son muestras i.i.d con distrbución <span class="math inline">\(p(x;\theta)\)</span>. Es usual trabajar con el logaritmo ya que facilita las operaciones: <span class="math inline">\(l_n(\theta) = \sum\limits_{i=1}^n ln(p(X_i;\theta)).\)</span></p>
+<p>Sea <span class="math inline">\(X_1,...,X_n\)</span> i.i.d <span class="math inline">\(\sim p(x;\theta)\)</span>. El estimador <span class="math inline">\(T_n\)</span> de <span class="math inline">\(\theta\)</span> es el valor que maximiza la función de verosimilitud (o de forma equivalente, su logaritmo): <span class="math inline">\(T_n = argmax_{\theta} L_n(\theta) = argmax_{\theta} l_n(\theta).\)</span></p>
+</div>
+</div>
+<div id="estimadores-bayesianos" class="section level3 hasAnchor">
+<h3>Estimadores Bayesianos<a href="apéndice-iv-probabilidad-y-estadística.html#estimadores-bayesianos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El enfoque Bayesiano toma al parámetro <span class="math inline">\(\theta\)</span> no como un valor desconocido (como es el caso del enfoque trabajado hasta el momento) sino que lo considera una variable aleatoria. Esta visión permite agregar información sobre <span class="math inline">\(\theta\)</span> como una distribución a priori <span class="math inline">\(p(\theta)\)</span>. Si la información brindada por la distribución a priori es razonable, puede llevar a estimaciones más precisas. Sin embargo, la elección de esta distribución deberá ser muy cautelosa ya que información errónea puede tener el efecto opuesto. Por lo tanto, si no se tiene ningún tipo de noción previa, conviene utilizar el enfoque clásico.</p>
+<p>Un ejemplo de información a priori es que el parámetro <span class="math inline">\(\theta\)</span> no pueda ser negativo o que sea cercano a un cierto valor <span class="math inline">\(a\)</span> conocido.</p>
+<div id="estimador-del-error-cuadrático-medio-mínimo-mmse" class="section level4 hasAnchor">
+<h4>Estimador del error cuadrático medio mínimo (MMSE)<a href="apéndice-iv-probabilidad-y-estadística.html#estimador-del-error-cuadrático-medio-mínimo-mmse" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>El <em>error cuadrático medio bayesiano</em> se define como <span class="math inline">\(bmse(\hat{\theta}) = \mathbb{E}_{x,\theta} \left[ (\hat\theta - \theta)^2\right] = \int_{\theta} \int_{x} (\hat{\theta}(x) - \theta)^2p(x,\theta)dx d\theta\)</span>.
+El estimador MMSE es el que minimiza el BMSE. Realizando las operaciones pertinentes, se llega a que <span class="math inline">\(\hat{\theta}_{MMSE} = \mathbb{E}[\theta|x]\)</span> que es la media de la distribución a posteriori <span class="math inline">\(p(\theta|x)\)</span>.</p>
+<p>La distribución a posteriori es la distribución de <span class="math inline">\(\theta\)</span> una vez observados los datos. Este estimador depende de la prior de <span class="math inline">\(\theta\)</span> y de los datos. Si el conocimiento previo que se asume sobre <span class="math inline">\(\theta\)</span> es débil respecto a los datos, el estimador ignora el conocimiento a priori. Lo opuesto ocurre si el conocimiento previo es fuerte respecto a los datos.</p>
+</div>
+<div id="estimador-máximo-a-posteriori-map" class="section level4 hasAnchor">
+<h4>Estimador Máximo a Posteriori (MAP)<a href="apéndice-iv-probabilidad-y-estadística.html#estimador-máximo-a-posteriori-map" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Es el análogo bayesiano al estimador del MLE. En este caso, en lugar de maximizar la verosimilitud se maximiza la distribución a posteriori. Entonces, el estimador queda definido por <span class="math inline">\(\hat{\theta}_{MAP} := argmax_{\theta}p( \theta|x) = argmax_{\theta}\{log(p(x|\theta)) + log(p\theta)\}\)</span> donde el primer término es la función de verosimilitud y el segundo la priori.</p>
+</div>
+</div>
+<div id="ejemplo-conceptual-de-estimadores" class="section level3 hasAnchor">
+<h3>Ejemplo conceptual de estimadores:<a href="apéndice-iv-probabilidad-y-estadística.html#ejemplo-conceptual-de-estimadores" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Supongamos que un ganadero está interesado en estimar la cantidad promedio de leche producida por sus vacas en un determinado período de tiempo. Se presenta a continuación los dos posibles enfoques, el frecuentista y el Bayesiano:</p>
+<p><em>Estimador Frecuentista:</em></p>
+<p>El ganadero podría utilizar un enfoque frecuentista y estimar la cantidad promedio de leche producida por las vacas basándose únicamente en los datos observados de su muestra. Por ejemplo, podría calcular la media muestral de la cantidad de leche producida por cada vaca en un período de tiempo específico y utilizar esta media como estimación del verdadero valor promedio de leche producida por todas las vacas en la población.</p>
+<p><em>Estimador Bayesiano:</em></p>
+<p>Por otro lado, el ganadero también podría adoptar un enfoque bayesiano. En este caso, el ganadero podría tener información previa sobre la producción de leche de las vacas en temporadas anteriores. Esta información previa se utilizaría para establecer una distribución de probabilidad inicial (prior) sobre la cantidad promedio de leche producida por las vacas.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bibliografia.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/19-apendice04.rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ApuntesGeneticaII.pdf", "ApuntesGeneticaII.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
