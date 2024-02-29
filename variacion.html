@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Variación y equilibrio de Hardy-Weinberg | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
+  <title>Capítulo 3 Variación y equilibrio de Hardy-Weinberg | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
   <meta name="description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Variación y equilibrio de Hardy-Weinberg | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  <meta property="og:title" content="Capítulo 3 Variación y equilibrio de Hardy-Weinberg | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Variación y equilibrio de Hardy-Weinberg | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  <meta name="twitter:title" content="Capítulo 3 Variación y equilibrio de Hardy-Weinberg | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
   
   <meta name="twitter:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
   
@@ -27,7 +27,7 @@
 <meta name="author" content="Ana Laura Sánchez, Micaela Botta, Paula Batista, Rodrigo Vivián, Paola Gaiero)" />
 
 
-<meta name="date" content="2024-02-28" />
+<meta name="date" content="2024-02-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -180,574 +180,228 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#íconos-utilizados-en-este-libro"><i class="fa fa-check"></i>Íconos utilizados en este libro</a></li>
 </ul></li>
 <li class="part"><span><b>Parte I: Genómica</b></span></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i>Introducción a la Genómica</a>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introducción a la Genómica</a>
 <ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#variabilidad-genética"><i class="fa fa-check"></i>Variabilidad genética</a>
-<ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.1"><i class="fa fa-check"></i>Ejemplo 1.1</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#detectando-la-variabilidad-diferentes-técnicas"><i class="fa fa-check"></i>Detectando la variabilidad: diferentes técnicas</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#metagenomica-y-metatranscriptomica"><i class="fa fa-check"></i>Metagenómica y metatranscriptómica</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.2"><i class="fa fa-check"></i>Ejemplo 1.2</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#genómica-composicional"><i class="fa fa-check"></i>Genómica composicional</a>
-<ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#contenido-gc-genómico-génico-correlaciones-y-textgc_textskew"><i class="fa fa-check"></i>Contenido GC genómico, génico, correlaciones y <span class="math inline">\(\text{GC}_{\text{skew}}\)</span></a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#uso-de-codones"><i class="fa fa-check"></i>Uso de codones</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.3"><i class="fa fa-check"></i>Ejemplo 1.3</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#exploracion-multivariada"><i class="fa fa-check"></i>Exploración multivariada: Análisis de Correspondencia</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#composición-de-proteínas"><i class="fa fa-check"></i>Composición de proteínas</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-en-propiedades-de-los-aas"><i class="fa fa-check"></i>Diferencias en propiedades de los AAs</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#diferencias-de-composición-entre-clases-de-proteínas"><i class="fa fa-check"></i>Diferencias de composición entre clases de proteínas</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejemplo-1.4"><i class="fa fa-check"></i>Ejemplo 1.4</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#genómica-comparativa"><i class="fa fa-check"></i>Genómica comparativa</a>
-<ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#comparación-de-secuencias-génicas"><i class="fa fa-check"></i>Comparación de secuencias génicas</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#selección-positiva"><i class="fa fa-check"></i>Selección positiva</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#vías"><i class="fa fa-check"></i>Vías</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#genómica-funcional"><i class="fa fa-check"></i>Genómica funcional</a>
-<ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#estudios-epigenéticos-y-epigenómicos"><i class="fa fa-check"></i>Estudios epigenéticos y epigenómicos</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#conclusión"><i class="fa fa-check"></i>Conclusión</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#actividades"><i class="fa fa-check"></i>Actividades</a>
-<ul>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#control-de-lectura"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#verdadero-o-falso"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#variabilidad-genética"><i class="fa fa-check"></i><b>1.1</b> Variabilidad genética</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#genómica-composicional"><i class="fa fa-check"></i><b>1.2</b> Genómica composicional</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#genómica-comparativa"><i class="fa fa-check"></i><b>1.3</b> Genómica comparativa</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#genómica-funcional"><i class="fa fa-check"></i><b>1.4</b> Genómica funcional</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#conclusión"><i class="fa fa-check"></i><b>1.5</b> Conclusión</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#actividades"><i class="fa fa-check"></i><b>1.6</b> Actividades</a></li>
 </ul></li>
 <li class="part"><span><b>Parte II: Genética de Poblaciones</b></span></li>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html"><i class="fa fa-check"></i>Variación y equilibrio de Hardy-Weinberg</a>
+<li class="chapter" data-level="3" data-path="variacion.html"><a href="variacion.html"><i class="fa fa-check"></i><b>3</b> Variación y equilibrio de Hardy-Weinberg</a>
 <ul>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#el-equilibrio-de-hardy-weinberg"><i class="fa fa-check"></i>El equilibrio de Hardy-Weinberg</a>
-<ul>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#supuestos-que-asumimos-se-cumplen-para-h-w"><i class="fa fa-check"></i>Supuestos que asumimos se cumplen para H-W</a></li>
+<li class="chapter" data-level="3.1" data-path="variacion.html"><a href="variacion.html#el-equilibrio-de-hardy-weinberg"><i class="fa fa-check"></i><b>3.1</b> El equilibrio de Hardy-Weinberg</a></li>
+<li class="chapter" data-level="3.2" data-path="variacion.html"><a href="variacion.html#hardy-weinberg-en-especies-dioicas-dos-sexos"><i class="fa fa-check"></i><b>3.2</b> Hardy-Weinberg en especies dioicas (dos sexos)</a></li>
+<li class="chapter" data-level="3.3" data-path="variacion.html"><a href="variacion.html#heterocigotas-freq-alelica"><i class="fa fa-check"></i><b>3.3</b> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
+<li class="chapter" data-level="3.4" data-path="variacion.html"><a href="variacion.html#el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo"><i class="fa fa-check"></i><b>3.4</b> El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo</a></li>
+<li class="chapter" data-level="3.5" data-path="variacion.html"><a href="variacion.html#tres-o-más-alelos"><i class="fa fa-check"></i><b>3.5</b> Tres o más alelos</a></li>
+<li class="chapter" data-level="3.6" data-path="variacion.html"><a href="variacion.html#la-estimación-de-frecuencias-y-el-equilibrio-o-no"><i class="fa fa-check"></i><b>3.6</b> La estimación de frecuencias y el equilibrio (o no)</a></li>
+<li class="chapter" data-level="3.7" data-path="variacion.html"><a href="variacion.html#el-sistema-abo"><i class="fa fa-check"></i><b>3.7</b> El sistema ABO</a></li>
+<li class="chapter" data-level="3.8" data-path="variacion.html"><a href="variacion.html#dónde-se-esconden-los-alelos-recesivos"><i class="fa fa-check"></i><b>3.8</b> ¿Dónde se “esconden” los alelos recesivos?</a></li>
+<li class="chapter" data-level="3.9" data-path="variacion.html"><a href="variacion.html#hardy-weinberg-en-especies-poliploides"><i class="fa fa-check"></i><b>3.9</b> Hardy-Weinberg en especies poliploides</a></li>
+<li class="chapter" data-level="3.10" data-path="variacion.html"><a href="variacion.html#geometría-y-genética-los-diagramas-de-de-finetti"><i class="fa fa-check"></i><b>3.10</b> Geometría y Genética: los diagramas de <em>de Finetti</em></a></li>
+<li class="chapter" data-level="3.11" data-path="variacion.html"><a href="variacion.html#estimacion-abo"><i class="fa fa-check"></i><b>3.11</b> La estimación de frecuencias en el locus ABO</a></li>
+<li class="chapter" data-level="3.12" data-path="variacion.html"><a href="variacion.html#conclusión-1"><i class="fa fa-check"></i><b>3.12</b> Conclusión</a></li>
+<li class="chapter" data-level="3.13" data-path="variacion.html"><a href="variacion.html#actividades-1"><i class="fa fa-check"></i><b>3.13</b> Actividades</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#hardy-weinberg-en-especies-dioicas-dos-sexos"><i class="fa fa-check"></i>Hardy-Weinberg en especies dioicas (dos sexos)</a></li>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#heterocigotas-freq-alelica"><i class="fa fa-check"></i>H-W: la frecuencia de heterocigotas en función de la frecuencia alélica</a></li>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo"><i class="fa fa-check"></i>El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo</a></li>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#tres-o-más-alelos"><i class="fa fa-check"></i>Tres o más alelos</a></li>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#la-estimación-de-frecuencias-y-el-equilibrio-o-no"><i class="fa fa-check"></i>La estimación de frecuencias y el equilibrio (o no)</a></li>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#el-sistema-abo"><i class="fa fa-check"></i>El sistema ABO</a></li>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#dónde-se-esconden-los-alelos-recesivos"><i class="fa fa-check"></i>¿Dónde se “esconden” los alelos recesivos?</a></li>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#hardy-weinberg-en-especies-poliploides"><i class="fa fa-check"></i>Hardy-Weinberg en especies poliploides</a></li>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#geometría-y-genética-los-diagramas-de-de-finetti"><i class="fa fa-check"></i>Geometría y Genética: los diagramas de <em>de Finetti</em></a></li>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#estimacion-abo"><i class="fa fa-check"></i>La estimación de frecuencias en el locus ABO</a></li>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#conclusión-1"><i class="fa fa-check"></i>Conclusión</a></li>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#actividades-1"><i class="fa fa-check"></i>Actividades</a>
+<li class="chapter" data-level="4" data-path="deriva.html"><a href="deriva.html"><i class="fa fa-check"></i><b>4</b> Deriva genética</a>
 <ul>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#control-de-lectura-1"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#verdadero-o-falso-1"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
-<li class="chapter" data-level="" data-path="variacion.html"><a href="variacion.html#ejercicios-2"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="4.1" data-path="deriva.html"><a href="deriva.html#el-rol-de-los-procesos-estocásticos-en-la-genética"><i class="fa fa-check"></i><b>4.1</b> El rol de los procesos estocásticos en la genética</a></li>
+<li class="chapter" data-level="4.2" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i><b>4.2</b> El modelo de Wright-Fisher</a></li>
+<li class="chapter" data-level="4.3" data-path="deriva.html"><a href="deriva.html#el-rol-de-la-subdivisión-poblacional-en-la-evolución-de-las-frecuencias-alélicas"><i class="fa fa-check"></i><b>4.3</b> El rol de la subdivisión poblacional en la evolución de las frecuencias alélicas</a></li>
+<li class="chapter" data-level="4.4" data-path="deriva.html"><a href="deriva.html#cadenas-de-markov"><i class="fa fa-check"></i><b>4.4</b> Cadenas de Markov</a></li>
+<li class="chapter" data-level="4.5" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i><b>4.5</b> Tamaño efectivo poblacional</a></li>
+<li class="chapter" data-level="4.6" data-path="deriva.html"><a href="deriva.html#aproximación-de-difusión"><i class="fa fa-check"></i><b>4.6</b> Aproximación de difusión</a></li>
+<li class="chapter" data-level="4.7" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i><b>4.7</b> Probabilidad de fijación y tiempos de fijación</a></li>
+<li class="chapter" data-level="4.8" data-path="deriva.html"><a href="deriva.html#el-modelo-coalescente"><i class="fa fa-check"></i><b>4.8</b> El modelo coalescente</a></li>
+<li class="chapter" data-level="4.9" data-path="deriva.html"><a href="deriva.html#conclusión-2"><i class="fa fa-check"></i><b>4.9</b> Conclusión</a></li>
+<li class="chapter" data-level="4.10" data-path="deriva.html"><a href="deriva.html#actividades-2"><i class="fa fa-check"></i><b>4.10</b> Actividades</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html"><i class="fa fa-check"></i>Deriva genética</a>
+<li class="chapter" data-level="5" data-path="seleccion.html"><a href="seleccion.html"><i class="fa fa-check"></i><b>5</b> Selección natural</a>
 <ul>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#el-rol-de-los-procesos-estocásticos-en-la-genética"><i class="fa fa-check"></i>El rol de los procesos estocásticos en la genética</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#el-modelo-de-wright-fisher"><i class="fa fa-check"></i>El modelo de Wright-Fisher</a>
-<ul>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.1"><i class="fa fa-check"></i>Ejemplo 3.1</a></li>
+<li class="chapter" data-level="5.1" data-path="seleccion.html"><a href="seleccion.html#el-concepto-de-fitness"><i class="fa fa-check"></i><b>5.1</b> El concepto de “<em>fitness</em>”</a></li>
+<li class="chapter" data-level="5.2" data-path="seleccion.html"><a href="seleccion.html#selección-natural-en-el-modelo-de-un-locus-con-dos-alelos"><i class="fa fa-check"></i><b>5.2</b> Selección natural en el modelo de un locus con dos alelos</a></li>
+<li class="chapter" data-level="5.3" data-path="seleccion.html"><a href="seleccion.html#diferentes-formas-de-selección"><i class="fa fa-check"></i><b>5.3</b> Diferentes formas de selección</a></li>
+<li class="chapter" data-level="5.4" data-path="seleccion.html"><a href="seleccion.html#el-teorema-fundamental-de-la-selección-natural"><i class="fa fa-check"></i><b>5.4</b> El teorema fundamental de la selección natural</a></li>
+<li class="chapter" data-level="5.5" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-mutación"><i class="fa fa-check"></i><b>5.5</b> Equilibrio selección-mutación</a></li>
+<li class="chapter" data-level="5.6" data-path="seleccion.html"><a href="seleccion.html#la-fuerza-de-la-selección-natural"><i class="fa fa-check"></i><b>5.6</b> La fuerza de la selección natural</a></li>
+<li class="chapter" data-level="5.7" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-deriva"><i class="fa fa-check"></i><b>5.7</b> Equilibrio selección-deriva</a></li>
+<li class="chapter" data-level="5.8" data-path="seleccion.html"><a href="seleccion.html#otros-tipos-de-selección-y-complejidades"><i class="fa fa-check"></i><b>5.8</b> Otros tipos de selección y complejidades</a></li>
+<li class="chapter" data-level="5.9" data-path="seleccion.html"><a href="seleccion.html#conclusión-3"><i class="fa fa-check"></i><b>5.9</b> Conclusión</a></li>
+<li class="chapter" data-level="5.10" data-path="seleccion.html"><a href="seleccion.html#actividades-3"><i class="fa fa-check"></i><b>5.10</b> Actividades</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#el-rol-de-la-subdivisión-poblacional-en-la-evolución-de-las-frecuencias-alélicas"><i class="fa fa-check"></i>El rol de la subdivisión poblacional en la evolución de las frecuencias alélicas</a>
+<li class="chapter" data-level="6" data-path="dosloci.html"><a href="dosloci.html"><i class="fa fa-check"></i><b>6</b> Dinámica de 2 <em>loci</em></a>
 <ul>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#homocigosidad-y-heterocigosidad"><i class="fa fa-check"></i>Homocigosidad y heterocigosidad</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.2"><i class="fa fa-check"></i>Ejemplo 3.2</a></li>
+<li class="chapter" data-level="6.1" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-de-ligamiento-y-recombinación"><i class="fa fa-check"></i><b>6.1</b> Desequilibrio de ligamiento y recombinación</a></li>
+<li class="chapter" data-level="6.2" data-path="dosloci.html"><a href="dosloci.html#la-evolución-en-el-tiempo-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i><b>6.2</b> La evolución en el tiempo del desequilibrio de ligamiento</a></li>
+<li class="chapter" data-level="6.3" data-path="dosloci.html"><a href="dosloci.html#otras-medidas-de-asociación"><i class="fa fa-check"></i><b>6.3</b> Otras medidas de asociación</a></li>
+<li class="chapter" data-level="6.4" data-path="dosloci.html"><a href="dosloci.html#selección-en-modelos-de-dos-loci"><i class="fa fa-check"></i><b>6.4</b> Selección en modelos de dos <em>loci</em></a></li>
+<li class="chapter" data-level="6.5" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i><b>6.5</b> Arrastre genético (“<em>genetic hitchhiking</em>” o “<em>genetic draft</em>”)</a></li>
+<li class="chapter" data-level="6.6" data-path="dosloci.html"><a href="dosloci.html#causas-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i><b>6.6</b> Causas del desequilibrio de ligamiento</a></li>
+<li class="chapter" data-level="6.7" data-path="dosloci.html"><a href="dosloci.html#conclusión-4"><i class="fa fa-check"></i><b>6.7</b> Conclusión</a></li>
+<li class="chapter" data-level="6.8" data-path="dosloci.html"><a href="dosloci.html#actividades-4"><i class="fa fa-check"></i><b>6.8</b> Actividades</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#cadenas-de-markov"><i class="fa fa-check"></i>Cadenas de Markov</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#tamaño-efectivo-poblacional"><i class="fa fa-check"></i>Tamaño efectivo poblacional</a>
+<li class="chapter" data-level="7" data-path="aparnoalazar.html"><a href="aparnoalazar.html"><i class="fa fa-check"></i><b>7</b> Apareamientos no-aleatorios</a>
 <ul>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.3"><i class="fa fa-check"></i>Ejemplo 3.3</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.4"><i class="fa fa-check"></i>Ejemplo 3.4</a></li>
+<li class="chapter" data-level="7.1" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-concepto-de-identidad-por-ascendencia-ibd"><i class="fa fa-check"></i><b>7.1</b> El concepto de “identidad por ascendencia” (IBD)</a></li>
+<li class="chapter" data-level="7.2" data-path="aparnoalazar.html"><a href="aparnoalazar.html#generalización-de-hardy-weinberg-para-apareamientos-no-aleatorios"><i class="fa fa-check"></i><b>7.2</b> Generalización de Hardy-Weinberg para apareamientos no-aleatorios</a></li>
+<li class="chapter" data-level="7.3" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><b>7.3</b> <span class="math inline">\(F\)</span> como correlación entre gametos unidos</a></li>
+<li class="chapter" data-level="7.4" data-path="aparnoalazar.html"><a href="aparnoalazar.html#endocría-y-depresión-endogámica"><i class="fa fa-check"></i><b>7.4</b> Endocría y depresión endogámica</a></li>
+<li class="chapter" data-level="7.5" data-path="aparnoalazar.html"><a href="aparnoalazar.html#un-caso-extremo-la-autogamia"><i class="fa fa-check"></i><b>7.5</b> Un caso extremo: la autogamia</a></li>
+<li class="chapter" data-level="7.6" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-los-estadísticos-f"><i class="fa fa-check"></i><b>7.6</b> El coeficiente de endocría y los estadísticos <em>F</em></a></li>
+<li class="chapter" data-level="7.7" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i><b>7.7</b> El efecto Wahlund</a></li>
+<li class="chapter" data-level="7.8" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i><b>7.8</b> Subdivisión, migración y el modelo de islas</a></li>
+<li class="chapter" data-level="7.9" data-path="aparnoalazar.html"><a href="aparnoalazar.html#mecanismos-de-especiación"><i class="fa fa-check"></i><b>7.9</b> Mecanismos de especiación</a></li>
+<li class="chapter" data-level="7.10" data-path="aparnoalazar.html"><a href="aparnoalazar.html#conclusión-5"><i class="fa fa-check"></i><b>7.10</b> Conclusión</a></li>
+<li class="chapter" data-level="7.11" data-path="aparnoalazar.html"><a href="aparnoalazar.html#actividades-5"><i class="fa fa-check"></i><b>7.11</b> Actividades</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#aproximación-de-difusión"><i class="fa fa-check"></i>Aproximación de difusión</a>
+<li class="chapter" data-level="8" data-path="microbial.html"><a href="microbial.html"><i class="fa fa-check"></i><b>8</b> Genética de poblaciones microbianas</a>
 <ul>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#caminatas-al-azar-y-procesos-de-difusión"><i class="fa fa-check"></i>Caminatas al azar y procesos de difusión</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-forward-equation"><i class="fa fa-check"></i>Kolmogorov Forward Equation</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#kolmogorov-backward-equation"><i class="fa fa-check"></i>Kolmogorov Backward Equation</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#solución-de-las-ecuaciones"><i class="fa fa-check"></i>Solución de las ecuaciones</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#probabilidad-de-fijación-y-tiempos-de-fijación"><i class="fa fa-check"></i>Probabilidad de fijación y tiempos de fijación</a>
-<ul>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejemplo-3.5"><i class="fa fa-check"></i>Ejemplo 3.5</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#el-modelo-coalescente"><i class="fa fa-check"></i>El modelo coalescente</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#conclusión-2"><i class="fa fa-check"></i>Conclusión</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#actividades-2"><i class="fa fa-check"></i>Actividades</a>
-<ul>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#control-de-lectura-2"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#verdadero-o-falso-2"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
-<li class="chapter" data-level="" data-path="deriva.html"><a href="deriva.html#ejercicios"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html"><i class="fa fa-check"></i>Selección natural</a>
-<ul>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#el-concepto-de-fitness"><i class="fa fa-check"></i>El concepto de “<em>fitness</em>”</a></li>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#selección-natural-en-el-modelo-de-un-locus-con-dos-alelos"><i class="fa fa-check"></i>Selección natural en el modelo de un locus con dos alelos</a></li>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#diferentes-formas-de-selección"><i class="fa fa-check"></i>Diferentes formas de selección</a>
-<ul>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#selección-direccional"><i class="fa fa-check"></i>Selección direccional</a></li>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#selección-estabilizadora"><i class="fa fa-check"></i>Selección estabilizadora</a></li>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#selección-disruptiva"><i class="fa fa-check"></i>Selección disruptiva</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#el-teorema-fundamental-de-la-selección-natural"><i class="fa fa-check"></i>El teorema fundamental de la selección natural</a></li>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-mutación"><i class="fa fa-check"></i>Equilibrio selección-mutación</a>
-<ul>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#el-principio-de-haldane-muller"><i class="fa fa-check"></i>El principio de Haldane-Muller</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#la-fuerza-de-la-selección-natural"><i class="fa fa-check"></i>La fuerza de la selección natural</a></li>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#equilibrio-selección-deriva"><i class="fa fa-check"></i>Equilibrio selección-deriva</a></li>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#otros-tipos-de-selección-y-complejidades"><i class="fa fa-check"></i>Otros tipos de selección y complejidades</a></li>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#conclusión-3"><i class="fa fa-check"></i>Conclusión</a></li>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#actividades-3"><i class="fa fa-check"></i>Actividades</a>
-<ul>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#control-de-lectura-3"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#verdadero-o-falso-3"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
-<li class="chapter" data-level="" data-path="seleccion.html"><a href="seleccion.html#ejercicios-4"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html"><i class="fa fa-check"></i>Dinámica de 2 <em>loci</em></a>
-<ul>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-de-ligamiento-y-recombinación"><i class="fa fa-check"></i>Desequilibrio de ligamiento y recombinación</a></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#la-evolución-en-el-tiempo-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i>La evolución en el tiempo del desequilibrio de ligamiento</a></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#otras-medidas-de-asociación"><i class="fa fa-check"></i>Otras medidas de asociación</a>
-<ul>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejemplo-5.3"><i class="fa fa-check"></i>Ejemplo 5.3</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#selección-en-modelos-de-dos-loci"><i class="fa fa-check"></i>Selección en modelos de dos <em>loci</em></a>
-<ul>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento"><i class="fa fa-check"></i>Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#arrastre-genético-genetic-hitchhiking-o-genetic-draft"><i class="fa fa-check"></i>Arrastre genético (“<em>genetic hitchhiking</em>” o “<em>genetic draft</em>”)</a></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#causas-del-desequilibrio-de-ligamiento"><i class="fa fa-check"></i>Causas del desequilibrio de ligamiento</a>
-<ul>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-al-mestizaje"><i class="fa fa-check"></i>Desequilibrio debido al mestizaje</a></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-inducido-por-el-sistema-de-apareamiento"><i class="fa fa-check"></i>Desequilibrio inducido por el sistema de apareamiento</a></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#el-cromosoma-y"><i class="fa fa-check"></i>El cromosoma Y</a></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#desequilibrio-debido-a-recombinación-reducida"><i class="fa fa-check"></i>Desequilibrio debido a recombinación reducida</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#conclusión-4"><i class="fa fa-check"></i>Conclusión</a></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#actividades-4"><i class="fa fa-check"></i>Actividades</a>
-<ul>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#control-de-lectura-4"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#verdadero-o-falso-4"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
-<li class="chapter" data-level="" data-path="dosloci.html"><a href="dosloci.html#ejercicios-5"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html"><i class="fa fa-check"></i>Apareamientos no-aleatorios</a>
-<ul>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-concepto-de-identidad-por-ascendencia-ibd"><i class="fa fa-check"></i>El concepto de “identidad por ascendencia” (IBD)</a></li>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#generalización-de-hardy-weinberg-para-apareamientos-no-aleatorios"><i class="fa fa-check"></i>Generalización de Hardy-Weinberg para apareamientos no-aleatorios</a></li>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos"><i class="fa fa-check"></i><span class="math inline">\(F\)</span> como correlación entre gametos unidos</a></li>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#endocría-y-depresión-endogámica"><i class="fa fa-check"></i>Endocría y depresión endogámica</a></li>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#un-caso-extremo-la-autogamia"><i class="fa fa-check"></i>Un caso extremo: la autogamia</a></li>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-coeficiente-de-endocría-y-los-estadísticos-f"><i class="fa fa-check"></i>El coeficiente de endocría y los estadísticos <em>F</em></a>
-<ul>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.1"><i class="fa fa-check"></i>Ejemplo 6.1</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#el-efecto-wahlund"><i class="fa fa-check"></i>El efecto Wahlund</a>
-<ul>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.2"><i class="fa fa-check"></i>Ejemplo 6.2</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#subdivisión-migración-y-el-modelo-de-islas"><i class="fa fa-check"></i>Subdivisión, migración y el modelo de islas</a>
-<ul>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejemplo-6.3"><i class="fa fa-check"></i>Ejemplo 6.3</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#mecanismos-de-especiación"><i class="fa fa-check"></i>Mecanismos de especiación</a></li>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#conclusión-5"><i class="fa fa-check"></i>Conclusión</a></li>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#actividades-5"><i class="fa fa-check"></i>Actividades</a>
-<ul>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#control-de-lectura-5"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#verdadero-o-falso-5"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
-<li class="chapter" data-level="" data-path="aparnoalazar.html"><a href="aparnoalazar.html#ejercicios-6"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html"><i class="fa fa-check"></i>Genética de poblaciones microbianas</a>
-<ul>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#genómica-y-mecanismos-de-herencia-en-procariotas"><i class="fa fa-check"></i>Genómica y mecanismos de herencia en procariotas</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#dinámica-de-las-poblaciones-bacterianas"><i class="fa fa-check"></i>Dinámica de las poblaciones bacterianas</a>
-<ul>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-exponencial"><i class="fa fa-check"></i>El modelo exponencial</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.1"><i class="fa fa-check"></i>Ejemplo 7.1</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-modelo-logístico"><i class="fa fa-check"></i>El modelo logístico</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.2"><i class="fa fa-check"></i>Ejemplo 7.2</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#modelos-haploides-de-selección-natural"><i class="fa fa-check"></i>Modelos haploides de selección natural</a>
-<ul>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-discreto"><i class="fa fa-check"></i>Selección haploide: modelo discreto</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.3"><i class="fa fa-check"></i>Ejemplo 7.3</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#selección-haploide-modelo-continuo"><i class="fa fa-check"></i>Selección haploide: modelo continuo</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejemplo-7.4"><i class="fa fa-check"></i>Ejemplo 7.4</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-vs-el-de-wright-fisher"><i class="fa fa-check"></i>Los modelos de Moran y de fisión <em>vs</em> el de Wright-Fisher</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#el-rol-de-la-transferencia-horizontal"><i class="fa fa-check"></i>El rol de la transferencia horizontal</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#seleccionismo-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i>Seleccionismo <em>vs</em> neutralismo: los procariotas en el debate</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#genómica-poblacional"><i class="fa fa-check"></i>Genómica poblacional</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#genes-de-resistencia"><i class="fa fa-check"></i>Genes de resistencia</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#introducción-a-la-epidemiología-modelos-compartimentales"><i class="fa fa-check"></i>Introducción a la epidemiología: modelos compartimentales</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#conclusión-6"><i class="fa fa-check"></i>Conclusión</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#actividades-6"><i class="fa fa-check"></i>Actividades</a>
-<ul>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#control-de-lectura-6"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#verdadero-o-falso-6"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
-<li class="chapter" data-level="" data-path="microbial.html"><a href="microbial.html#ejercicios-7"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
+<li class="chapter" data-level="8.1" data-path="microbial.html"><a href="microbial.html#genómica-y-mecanismos-de-herencia-en-procariotas"><i class="fa fa-check"></i><b>8.1</b> Genómica y mecanismos de herencia en procariotas</a></li>
+<li class="chapter" data-level="8.2" data-path="microbial.html"><a href="microbial.html#dinámica-de-las-poblaciones-bacterianas"><i class="fa fa-check"></i><b>8.2</b> Dinámica de las poblaciones bacterianas</a></li>
+<li class="chapter" data-level="8.3" data-path="microbial.html"><a href="microbial.html#modelos-haploides-de-selección-natural"><i class="fa fa-check"></i><b>8.3</b> Modelos haploides de selección natural</a></li>
+<li class="chapter" data-level="8.4" data-path="microbial.html"><a href="microbial.html#los-modelos-de-moran-y-de-fisión-vs-el-de-wright-fisher"><i class="fa fa-check"></i><b>8.4</b> Los modelos de Moran y de fisión <em>vs</em> el de Wright-Fisher</a></li>
+<li class="chapter" data-level="8.5" data-path="microbial.html"><a href="microbial.html#el-rol-de-la-transferencia-horizontal"><i class="fa fa-check"></i><b>8.5</b> El rol de la transferencia horizontal</a></li>
+<li class="chapter" data-level="8.6" data-path="microbial.html"><a href="microbial.html#seleccionismo-vs-neutralismo-los-procariotas-en-el-debate"><i class="fa fa-check"></i><b>8.6</b> Seleccionismo <em>vs</em> neutralismo: los procariotas en el debate</a></li>
+<li class="chapter" data-level="8.7" data-path="microbial.html"><a href="microbial.html#genómica-poblacional"><i class="fa fa-check"></i><b>8.7</b> Genómica poblacional</a></li>
+<li class="chapter" data-level="8.8" data-path="microbial.html"><a href="microbial.html#genes-de-resistencia"><i class="fa fa-check"></i><b>8.8</b> Genes de resistencia</a></li>
+<li class="chapter" data-level="8.9" data-path="microbial.html"><a href="microbial.html#introducción-a-la-epidemiología-modelos-compartimentales"><i class="fa fa-check"></i><b>8.9</b> Introducción a la epidemiología: modelos compartimentales</a></li>
+<li class="chapter" data-level="8.10" data-path="microbial.html"><a href="microbial.html#conclusión-6"><i class="fa fa-check"></i><b>8.10</b> Conclusión</a></li>
+<li class="chapter" data-level="8.11" data-path="microbial.html"><a href="microbial.html#actividades-6"><i class="fa fa-check"></i><b>8.11</b> Actividades</a></li>
 </ul></li>
 <li class="part"><span><b>Parte III: Genética Cuantitativa</b></span></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html"><i class="fa fa-check"></i>El modelo genético básico</a>
+<li class="chapter" data-level="10" data-path="modelogenbas.html"><a href="modelogenbas.html"><i class="fa fa-check"></i><b>10</b> El modelo genético básico</a>
 <ul>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#variación-continua-y-discreta"><i class="fa fa-check"></i>Variación continua y discreta</a></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#el-modelo-genético-básico"><i class="fa fa-check"></i>El modelo genético básico</a></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#modelo-genético-básico-un-locus-con-dos-alelos"><i class="fa fa-check"></i>Modelo genético básico: un <em>locus</em> con dos alelos</a>
+<li class="chapter" data-level="10.1" data-path="modelogenbas.html"><a href="modelogenbas.html#variación-continua-y-discreta"><i class="fa fa-check"></i><b>10.1</b> Variación continua y discreta</a></li>
+<li class="chapter" data-level="10.2" data-path="modelogenbas.html"><a href="modelogenbas.html#el-modelo-genético-básico"><i class="fa fa-check"></i><b>10.2</b> El modelo genético básico</a></li>
+<li class="chapter" data-level="10.3" data-path="modelogenbas.html"><a href="modelogenbas.html#modelo-genético-básico-un-locus-con-dos-alelos"><i class="fa fa-check"></i><b>10.3</b> Modelo genético básico: un <em>locus</em> con dos alelos</a></li>
+<li class="chapter" data-level="10.4" data-path="modelogenbas.html"><a href="modelogenbas.html#efecto-medio"><i class="fa fa-check"></i><b>10.4</b> Efecto medio</a></li>
+<li class="chapter" data-level="10.5" data-path="modelogenbas.html"><a href="modelogenbas.html#valor-reproductivo-o-valor-de-cría"><i class="fa fa-check"></i><b>10.5</b> Valor reproductivo (o valor de cría)</a></li>
+<li class="chapter" data-level="10.6" data-path="modelogenbas.html"><a href="modelogenbas.html#desvío-de-dominancia"><i class="fa fa-check"></i><b>10.6</b> Desvío de dominancia</a></li>
+<li class="chapter" data-level="10.7" data-path="modelogenbas.html"><a href="modelogenbas.html#interacción-genotipo-x-ambiente"><i class="fa fa-check"></i><b>10.7</b> Interacción Genotipo x Ambiente</a></li>
+<li class="chapter" data-level="10.8" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-en-el-modelo-genético-básico"><i class="fa fa-check"></i><b>10.8</b> La varianza en el modelo genético básico</a></li>
+<li class="chapter" data-level="10.9" data-path="modelogenbas.html"><a href="modelogenbas.html#conclusión-7"><i class="fa fa-check"></i><b>10.9</b> Conclusión</a></li>
+<li class="chapter" data-level="10.10" data-path="modelogenbas.html"><a href="modelogenbas.html#actividades-7"><i class="fa fa-check"></i><b>10.10</b> Actividades</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="parentesco.html"><a href="parentesco.html"><i class="fa fa-check"></i><b>11</b> Parentesco y semejanza entre parientes</a>
 <ul>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#media-de-la-población"><i class="fa fa-check"></i>Media de la población</a></li>
+<li class="chapter" data-level="11.1" data-path="parentesco.html"><a href="parentesco.html#parentesco-1"><i class="fa fa-check"></i><b>11.1</b> Parentesco</a></li>
+<li class="chapter" data-level="11.2" data-path="parentesco.html"><a href="parentesco.html#parentesco-aditivo"><i class="fa fa-check"></i><b>11.2</b> Parentesco aditivo</a></li>
+<li class="chapter" data-level="11.3" data-path="parentesco.html"><a href="parentesco.html#parentesco-de-dominancia"><i class="fa fa-check"></i><b>11.3</b> Parentesco de dominancia</a></li>
+<li class="chapter" data-level="11.4" data-path="parentesco.html"><a href="parentesco.html#semejanza-entre-parientes"><i class="fa fa-check"></i><b>11.4</b> Semejanza entre parientes</a></li>
+<li class="chapter" data-level="11.5" data-path="parentesco.html"><a href="parentesco.html#estimación-de-las-varianzas-aditiva-y-de-dominancia"><i class="fa fa-check"></i><b>11.5</b> Estimación de las varianzas aditiva y de dominancia</a></li>
+<li class="chapter" data-level="11.6" data-path="parentesco.html"><a href="parentesco.html#parentesco-genómico"><i class="fa fa-check"></i><b>11.6</b> Parentesco genómico</a></li>
+<li class="chapter" data-level="11.7" data-path="parentesco.html"><a href="parentesco.html#estudios-de-ascendencia-ancestría"><i class="fa fa-check"></i><b>11.7</b> Estudios de ascendencia (“ancestría”)</a></li>
+<li class="chapter" data-level="11.8" data-path="parentesco.html"><a href="parentesco.html#conclusión-8"><i class="fa fa-check"></i><b>11.8</b> Conclusión</a></li>
+<li class="chapter" data-level="11.9" data-path="parentesco.html"><a href="parentesco.html#actividades-8"><i class="fa fa-check"></i><b>11.9</b> Actividades</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#efecto-medio"><i class="fa fa-check"></i>Efecto medio</a></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#valor-reproductivo-o-valor-de-cría"><i class="fa fa-check"></i>Valor reproductivo (o valor de cría)</a>
+<li class="chapter" data-level="12" data-path="pargen.html"><a href="pargen.html"><i class="fa fa-check"></i><b>12</b> Parámetros genéticos: heredabilidad y repetibilidad</a>
 <ul>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#derivación-de-los-efectos-medios-por-mínimos-cuadrados"><i class="fa fa-check"></i>Derivación de los efectos medios por mínimos cuadrados</a></li>
+<li class="chapter" data-level="12.1" data-path="pargen.html"><a href="pargen.html#heredabilidad"><i class="fa fa-check"></i><b>12.1</b> Heredabilidad</a></li>
+<li class="chapter" data-level="12.2" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-sentido-amplio-y-sentido-estricto"><i class="fa fa-check"></i><b>12.2</b> Heredabilidad en sentido amplio y sentido estricto</a></li>
+<li class="chapter" data-level="12.3" data-path="pargen.html"><a href="pargen.html#heredabilidad-lograda"><i class="fa fa-check"></i><b>12.3</b> Heredabilidad lograda</a></li>
+<li class="chapter" data-level="12.4" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-poblaciones-agronómicas-y-de-laboratorio-vs-poblaciones-naturales"><i class="fa fa-check"></i><b>12.4</b> Heredabilidad en poblaciones agronómicas y de laboratorio vs poblaciones naturales</a></li>
+<li class="chapter" data-level="12.5" data-path="pargen.html"><a href="pargen.html#heredabilidad-y-filogenética"><i class="fa fa-check"></i><b>12.5</b> Heredabilidad y filogenética</a></li>
+<li class="chapter" data-level="12.6" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-la-era-genómica"><i class="fa fa-check"></i><b>12.6</b> Heredabilidad en la era genómica</a></li>
+<li class="chapter" data-level="12.7" data-path="pargen.html"><a href="pargen.html#métodos-más-avanzados-de-estimación"><i class="fa fa-check"></i><b>12.7</b> Métodos más avanzados de estimación</a></li>
+<li class="chapter" data-level="12.8" data-path="pargen.html"><a href="pargen.html#repetibilidad"><i class="fa fa-check"></i><b>12.8</b> Repetibilidad</a></li>
+<li class="chapter" data-level="12.9" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-herramienta-en-la-predicción"><i class="fa fa-check"></i><b>12.9</b> La repetibilidad como herramienta en la predicción</a></li>
+<li class="chapter" data-level="12.10" data-path="pargen.html"><a href="pargen.html#evolucionabilidad"><i class="fa fa-check"></i><b>12.10</b> Evolucionabilidad</a></li>
+<li class="chapter" data-level="12.11" data-path="pargen.html"><a href="pargen.html#conclusión-9"><i class="fa fa-check"></i><b>12.11</b> Conclusión</a></li>
+<li class="chapter" data-level="12.12" data-path="pargen.html"><a href="pargen.html#actividades-9"><i class="fa fa-check"></i><b>12.12</b> Actividades</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#desvío-de-dominancia"><i class="fa fa-check"></i>Desvío de dominancia</a></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#interacción-genotipo-x-ambiente"><i class="fa fa-check"></i>Interacción Genotipo x Ambiente</a></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-en-el-modelo-genético-básico"><i class="fa fa-check"></i>La varianza en el modelo genético básico</a>
+<li class="chapter" data-level="13" data-path="selartifI.html"><a href="selartifI.html"><i class="fa fa-check"></i><b>13</b> Selección Artificial I</a>
 <ul>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos"><i class="fa fa-check"></i>Componentes genéticos de la varianza: un <em>locus</em> con dos alelos</a></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-ambiental"><i class="fa fa-check"></i>La varianza ambiental</a></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#la-varianza-de-la-interacción"><i class="fa fa-check"></i>La varianza de la interacción</a></li>
+<li class="chapter" data-level="13.1" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección"><i class="fa fa-check"></i><b>13.1</b> Factores de corrección</a></li>
+<li class="chapter" data-level="13.2" data-path="selartifI.html"><a href="selartifI.html#la-respuesta-a-la-selección-y-su-predicción"><i class="fa fa-check"></i><b>13.2</b> La respuesta a la selección y su predicción</a></li>
+<li class="chapter" data-level="13.3" data-path="selartifI.html"><a href="selartifI.html#diferencial-de-selección-e-intensidad-de-selección"><i class="fa fa-check"></i><b>13.3</b> Diferencial de selección e intensidad de selección</a></li>
+<li class="chapter" data-level="13.4" data-path="selartifI.html"><a href="selartifI.html#intensidad-de-selección-y-proporción-seleccionada"><i class="fa fa-check"></i><b>13.4</b> Intensidad de selección y proporción seleccionada</a></li>
+<li class="chapter" data-level="13.5" data-path="selartifI.html"><a href="selartifI.html#intervalo-generacional"><i class="fa fa-check"></i><b>13.5</b> Intervalo generacional</a></li>
+<li class="chapter" data-level="13.6" data-path="selartifI.html"><a href="selartifI.html#medidas-de-la-respuesta"><i class="fa fa-check"></i><b>13.6</b> Medidas de la respuesta</a></li>
+<li class="chapter" data-level="13.7" data-path="selartifI.html"><a href="selartifI.html#progreso-genético-generacional-y-anual"><i class="fa fa-check"></i><b>13.7</b> Progreso genético generacional y anual</a></li>
+<li class="chapter" data-level="13.8" data-path="selartifI.html"><a href="selartifI.html#cambio-en-las-frecuencias-alélicas-bajo-selección-artificial"><i class="fa fa-check"></i><b>13.8</b> Cambio en las frecuencias alélicas bajo selección artificial</a></li>
+<li class="chapter" data-level="13.9" data-path="selartifI.html"><a href="selartifI.html#el-diferencial-de-selección-direccional-y-la-identidad-de-robertson-price"><i class="fa fa-check"></i><b>13.9</b> El diferencial de selección direccional y la identidad de Robertson-Price</a></li>
+<li class="chapter" data-level="13.10" data-path="selartifI.html"><a href="selartifI.html#conclusión-10"><i class="fa fa-check"></i><b>13.10</b> Conclusión</a></li>
+<li class="chapter" data-level="13.11" data-path="selartifI.html"><a href="selartifI.html#actividades-10"><i class="fa fa-check"></i><b>13.11</b> Actividades</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#conclusión-7"><i class="fa fa-check"></i>Conclusión</a></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#actividades-7"><i class="fa fa-check"></i>Actividades</a>
+<li class="chapter" data-level="14" data-path="correlacionada.html"><a href="correlacionada.html"><i class="fa fa-check"></i><b>14</b> Correlaciones y respuesta correlacionada</a>
 <ul>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#control-de-lectura-7"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#verdadero-o-falso-7"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
-<li class="chapter" data-level="" data-path="modelogenbas.html"><a href="modelogenbas.html#ejercicios-8"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="14.1" data-path="correlacionada.html"><a href="correlacionada.html#causas-genéticas-y-ambientales-de-las-correlaciones"><i class="fa fa-check"></i><b>14.1</b> Causas genéticas y ambientales de las correlaciones</a></li>
+<li class="chapter" data-level="14.2" data-path="correlacionada.html"><a href="correlacionada.html#introducción-al-path-analysis"><i class="fa fa-check"></i><b>14.2</b> Introducción al “<em>path analysis</em>”</a></li>
+<li class="chapter" data-level="14.3" data-path="correlacionada.html"><a href="correlacionada.html#métodos-para-determinar-la-correlación-genética"><i class="fa fa-check"></i><b>14.3</b> Métodos para determinar la correlación genética</a></li>
+<li class="chapter" data-level="14.4" data-path="correlacionada.html"><a href="correlacionada.html#la-correlación-fenotípica-y-su-relación-con-la-correlación-genética-aditiva-y-ambiental"><i class="fa fa-check"></i><b>14.4</b> La correlación fenotípica y su relación con la correlación genética aditiva y ambiental</a></li>
+<li class="chapter" data-level="14.5" data-path="correlacionada.html"><a href="correlacionada.html#respuesta-correlacionada"><i class="fa fa-check"></i><b>14.5</b> Respuesta correlacionada</a></li>
+<li class="chapter" data-level="14.6" data-path="correlacionada.html"><a href="correlacionada.html#matrices-de-varianza-covarianza"><i class="fa fa-check"></i><b>14.6</b> Matrices de varianza-covarianza</a></li>
+<li class="chapter" data-level="14.7" data-path="correlacionada.html"><a href="correlacionada.html#la-forma-generalizada-de-la-ecuación-del-criador"><i class="fa fa-check"></i><b>14.7</b> La forma generalizada de la ecuación del criador</a></li>
+<li class="chapter" data-level="14.8" data-path="correlacionada.html"><a href="correlacionada.html#conclusión-11"><i class="fa fa-check"></i><b>14.8</b> Conclusión</a></li>
+<li class="chapter" data-level="14.9" data-path="correlacionada.html"><a href="correlacionada.html#actividades-11"><i class="fa fa-check"></i><b>14.9</b> Actividades</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html"><i class="fa fa-check"></i>Parentesco y semejanza entre parientes</a>
+<li class="chapter" data-level="15" data-path="selartifII.html"><a href="selartifII.html"><i class="fa fa-check"></i><b>15</b> Selección Artificial II</a>
 <ul>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#parentesco-1"><i class="fa fa-check"></i>Parentesco</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#parentesco-aditivo"><i class="fa fa-check"></i>Parentesco aditivo</a>
+<li class="chapter" data-level="15.1" data-path="selartifII.html"><a href="selartifII.html#criterios-y-objetivos-de-selección"><i class="fa fa-check"></i><b>15.1</b> Criterios y objetivos de selección</a></li>
+<li class="chapter" data-level="15.2" data-path="selartifII.html"><a href="selartifII.html#selección-basada-en-un-solo-tipo-de-fuente-de-información"><i class="fa fa-check"></i><b>15.2</b> Selección basada en un solo tipo de fuente de información</a></li>
+<li class="chapter" data-level="15.3" data-path="selartifII.html"><a href="selartifII.html#combinando-la-información-proporcionada-por-diferentes-tipos-de-parientes"><i class="fa fa-check"></i><b>15.3</b> Combinando la información proporcionada por diferentes tipos de parientes</a></li>
+<li class="chapter" data-level="15.4" data-path="selartifII.html"><a href="selartifII.html#métodos-de-selección-para-varias-características"><i class="fa fa-check"></i><b>15.4</b> Métodos de selección para varias características</a></li>
+<li class="chapter" data-level="15.5" data-path="selartifII.html"><a href="selartifII.html#índices-de-selección-para-múltiples-características"><i class="fa fa-check"></i><b>15.5</b> Índices de selección para múltiples características</a></li>
+<li class="chapter" data-level="15.6" data-path="selartifII.html"><a href="selartifII.html#métodos-y-técnicas-avanzadas-de-selección"><i class="fa fa-check"></i><b>15.6</b> Métodos y técnicas avanzadas de selección</a></li>
+<li class="chapter" data-level="15.7" data-path="selartifII.html"><a href="selartifII.html#conclusión-12"><i class="fa fa-check"></i><b>15.7</b> Conclusión</a></li>
+<li class="chapter" data-level="15.8" data-path="selartifII.html"><a href="selartifII.html#actividades-12"><i class="fa fa-check"></i><b>15.8</b> Actividades</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="endoexo.html"><a href="endoexo.html"><i class="fa fa-check"></i><b>16</b> Endocría, exocría, consanguinidad y depresión endogámica</a>
 <ul>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#consanguinidad"><i class="fa fa-check"></i>Consanguinidad</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#diagramas-de-flechas"><i class="fa fa-check"></i>Diagramas de flechas</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#el-método-tabular"><i class="fa fa-check"></i>El método tabular</a></li>
+<li class="chapter" data-level="16.1" data-path="endoexo.html"><a href="endoexo.html#el-aumento-de-la-consanguinidad-a-partir-del-número-de-individuos"><i class="fa fa-check"></i><b>16.1</b> El aumento de la consanguinidad a partir del número de individuos</a></li>
+<li class="chapter" data-level="16.2" data-path="endoexo.html"><a href="endoexo.html#el-coeficiente-de-consanguinidad-en-razas-lecheras"><i class="fa fa-check"></i><b>16.2</b> El coeficiente de consanguinidad en razas lecheras</a></li>
+<li class="chapter" data-level="16.3" data-path="endoexo.html"><a href="endoexo.html#depresión-endogámica"><i class="fa fa-check"></i><b>16.3</b> Depresión endogámica</a></li>
+<li class="chapter" data-level="16.4" data-path="endoexo.html"><a href="endoexo.html#exocría-y-heterosis"><i class="fa fa-check"></i><b>16.4</b> Exocría y heterosis</a></li>
+<li class="chapter" data-level="16.5" data-path="endoexo.html"><a href="endoexo.html#modelo-genético-de-cruzamientos"><i class="fa fa-check"></i><b>16.5</b> Modelo genético de cruzamientos</a></li>
+<li class="chapter" data-level="16.6" data-path="endoexo.html"><a href="endoexo.html#conclusión-13"><i class="fa fa-check"></i><b>16.6</b> Conclusión</a></li>
+<li class="chapter" data-level="16.7" data-path="endoexo.html"><a href="endoexo.html#actividades-13"><i class="fa fa-check"></i><b>16.7</b> Actividades</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#parentesco-de-dominancia"><i class="fa fa-check"></i>Parentesco de dominancia</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#semejanza-entre-parientes"><i class="fa fa-check"></i>Semejanza entre parientes</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estimación-de-las-varianzas-aditiva-y-de-dominancia"><i class="fa fa-check"></i>Estimación de las varianzas aditiva y de dominancia</a>
+<li class="chapter" data-level="17" data-path="GxE.html"><a href="GxE.html"><i class="fa fa-check"></i><b>17</b> Normas de reacción e interacción genotipo x ambiente</a>
 <ul>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#propiedades-deseables-de-los-estimadores"><i class="fa fa-check"></i>Propiedades deseables de los estimadores</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estimación-de-la-varianza-aditiva-a-partir-del-análisis-de-varianza-anova"><i class="fa fa-check"></i>Estimación de la varianza aditiva a partir del análisis de varianza (ANOVA)</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estimaciones-basadas-en-modelos-mixtos-lineales"><i class="fa fa-check"></i>Estimaciones basadas en modelos mixtos lineales</a></li>
+<li class="chapter" data-level="17.1" data-path="GxE.html"><a href="GxE.html#plasticidad-fenotípica-y-normas-de-reacción"><i class="fa fa-check"></i><b>17.1</b> Plasticidad fenotípica y normas de reacción</a></li>
+<li class="chapter" data-level="17.2" data-path="GxE.html"><a href="GxE.html#interacción-gxe-en-dos-ambientes"><i class="fa fa-check"></i><b>17.2</b> Interacción GxE en dos ambientes</a></li>
+<li class="chapter" data-level="17.3" data-path="GxE.html"><a href="GxE.html#correlación-genética-a-través-de-dos-ambientes"><i class="fa fa-check"></i><b>17.3</b> Correlación genética a través de dos ambientes</a></li>
+<li class="chapter" data-level="17.4" data-path="GxE.html"><a href="GxE.html#genética-cuantitativa-de-la-interacción-gxe"><i class="fa fa-check"></i><b>17.4</b> Genética cuantitativa de la interacción GxE</a></li>
+<li class="chapter" data-level="17.5" data-path="GxE.html"><a href="GxE.html#otros-ejemplos-de-interacción-genotipo-ambiente"><i class="fa fa-check"></i><b>17.5</b> Otros ejemplos de interacción genotipo-ambiente</a></li>
+<li class="chapter" data-level="17.6" data-path="GxE.html"><a href="GxE.html#conclusión-14"><i class="fa fa-check"></i><b>17.6</b> Conclusión</a></li>
+<li class="chapter" data-level="17.7" data-path="GxE.html"><a href="GxE.html#actividades-14"><i class="fa fa-check"></i><b>17.7</b> Actividades</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#parentesco-genómico"><i class="fa fa-check"></i>Parentesco genómico</a>
+<li class="chapter" data-level="18" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html"><i class="fa fa-check"></i><b>18</b> Apéndice I: CONCEPTOS MATEMÁTICOS BÁSICOS</a>
 <ul>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#contenido-génico"><i class="fa fa-check"></i>Contenido génico</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#la-matriz-de-similaridad-genómica"><i class="fa fa-check"></i>La matriz de similaridad genómica</a></li>
+<li class="chapter" data-level="18.1" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#fracciones"><i class="fa fa-check"></i><b>18.1</b> FRACCIONES</a></li>
+<li class="chapter" data-level="18.2" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#proporcionalidad"><i class="fa fa-check"></i><b>18.2</b> PROPORCIONALIDAD</a></li>
+<li class="chapter" data-level="18.3" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#cifras-significativas-y-redondeo"><i class="fa fa-check"></i><b>18.3</b> CIFRAS SIGNIFICATIVAS Y REDONDEO</a></li>
+<li class="chapter" data-level="18.4" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#notación-científica"><i class="fa fa-check"></i><b>18.4</b> NOTACIÓN CIENTÍFICA</a></li>
+<li class="chapter" data-level="18.5" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#ecuaciones"><i class="fa fa-check"></i><b>18.5</b> ECUACIONES</a></li>
+<li class="chapter" data-level="18.6" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#funciones"><i class="fa fa-check"></i><b>18.6</b> FUNCIONES</a></li>
+<li class="chapter" data-level="18.7" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#sumatoria-y-productoria"><i class="fa fa-check"></i><b>18.7</b> SUMATORIA Y PRODUCTORIA</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#estudios-de-ascendencia-ancestría"><i class="fa fa-check"></i>Estudios de ascendencia (“ancestría”)</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#conclusión-8"><i class="fa fa-check"></i>Conclusión</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#actividades-8"><i class="fa fa-check"></i>Actividades</a>
+<li class="chapter" data-level="19" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html"><i class="fa fa-check"></i><b>19</b> Apéndice II: CÁLCULO DIFERENCIAL E INTEGRAL</a>
 <ul>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#control-de-lectura-8"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#veradero-o-falso"><i class="fa fa-check"></i>¿Veradero o falso?</a></li>
-<li class="chapter" data-level="" data-path="parentesco.html"><a href="parentesco.html#ejercicios-3"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="19.1" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#límites"><i class="fa fa-check"></i><b>19.1</b> LÍMITES</a></li>
+<li class="chapter" data-level="19.2" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#derivadas"><i class="fa fa-check"></i><b>19.2</b> DERIVADAS</a></li>
+<li class="chapter" data-level="19.3" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#integrales"><i class="fa fa-check"></i><b>19.3</b> INTEGRALES</a></li>
+<li class="chapter" data-level="19.4" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#ecuaciones-diferenciales"><i class="fa fa-check"></i><b>19.4</b> ECUACIONES DIFERENCIALES</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html"><i class="fa fa-check"></i>Parámetros genéticos: heredabilidad y repetibilidad</a>
+<li class="chapter" data-level="20" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><i class="fa fa-check"></i><b>20</b> Apéndice III: ALGEBRA LINEAL Y GEOMETRÍA ANALÍTICA</a>
 <ul>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad"><i class="fa fa-check"></i>Heredabilidad</a>
+<li class="chapter" data-level="20.1" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#matrices"><i class="fa fa-check"></i><b>20.1</b> MATRICES</a></li>
+<li class="chapter" data-level="20.2" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#norma-producto-escalar-y-producto-vectorial"><i class="fa fa-check"></i><b>20.2</b> NORMA, PRODUCTO ESCALAR Y PRODUCTO VECTORIAL</a></li>
+<li class="chapter" data-level="20.3" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#agregar-imagen-vectores"><i class="fa fa-check"></i><b>20.3</b> AGREGAR IMAGEN VECTORES</a></li>
+<li class="chapter" data-level="20.4" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#transformaciones-lineales"><i class="fa fa-check"></i><b>20.4</b> TRANSFORMACIONES LINEALES</a></li>
+<li class="chapter" data-level="20.5" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#valores-y-vectores-propios"><i class="fa fa-check"></i><b>20.5</b> VALORES Y VECTORES PROPIOS</a></li>
+<li class="chapter" data-level="20.6" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#derivada-de-la-forma-cuadrática"><i class="fa fa-check"></i><b>20.6</b> DERIVADA DE LA FORMA CUADRÁTICA</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html"><i class="fa fa-check"></i><b>21</b> Apéndice IV: PROBABILIDAD Y ESTADÍSTICA</a>
 <ul>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-heredabilidad-como-relación-de-varianzas"><i class="fa fa-check"></i>La heredabilidad como relación de varianzas</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-heredabilidad-como-regresión"><i class="fa fa-check"></i>La heredabilidad como regresión</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-de-cría-en-el-fenotipo-individual"><i class="fa fa-check"></i>Regresión del valor de cría en el fenotipo individual</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-fenotípico-de-los-hijos-sobre-el-fenotipo-de-un-progenitor"><i class="fa fa-check"></i>Regresión del valor fenotípico de los hijos sobre el fenotipo de un progenitor</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#regresión-del-valor-fenotípico-de-los-hijos-sobre-el-fenotipo-de-ambos-progenitores"><i class="fa fa-check"></i>Regresión del valor fenotípico de los hijos sobre el fenotipo de ambos progenitores</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#precisión-en-las-estimaciones-de-heredabilidad-varianza-del-estimador"><i class="fa fa-check"></i>Precisión en las estimaciones de heredabilidad: varianza del estimador</a></li>
+<li class="chapter" data-level="21.1" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#probabilidad-y-conteo"><i class="fa fa-check"></i><b>21.1</b> PROBABILIDAD Y CONTEO</a></li>
+<li class="chapter" data-level="21.2" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#variables-aleatorias"><i class="fa fa-check"></i><b>21.2</b> VARIABLES ALEATORIAS</a></li>
+<li class="chapter" data-level="21.3" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#estimadores"><i class="fa fa-check"></i><b>21.3</b> ESTIMADORES</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-sentido-amplio-y-sentido-estricto"><i class="fa fa-check"></i>Heredabilidad en sentido amplio y sentido estricto</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad-lograda"><i class="fa fa-check"></i>Heredabilidad lograda</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-poblaciones-agronómicas-y-de-laboratorio-vs-poblaciones-naturales"><i class="fa fa-check"></i>Heredabilidad en poblaciones agronómicas y de laboratorio vs poblaciones naturales</a>
-<ul>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-animales-domésticos"><i class="fa fa-check"></i>Estimaciones de heredabilidad en animales domésticos</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-plantas"><i class="fa fa-check"></i>Estimaciones de heredabilidad en plantas</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#estimaciones-de-heredabilidad-en-condiciones-naturales"><i class="fa fa-check"></i>Estimaciones de heredabilidad en condiciones naturales</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad-y-filogenética"><i class="fa fa-check"></i>Heredabilidad y filogenética</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#heredabilidad-en-la-era-genómica"><i class="fa fa-check"></i>Heredabilidad en la era genómica</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#métodos-más-avanzados-de-estimación"><i class="fa fa-check"></i>Métodos más avanzados de estimación</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#repetibilidad"><i class="fa fa-check"></i>Repetibilidad</a>
-<ul>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-cociente-de-varianzas"><i class="fa fa-check"></i>La repetibilidad como cociente de varianzas</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-coeficiente-de-correlación-intraclase"><i class="fa fa-check"></i>La repetibilidad como coeficiente de correlación intraclase</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-relación-entre-la-heredabilidad-y-la-repetibilidad"><i class="fa fa-check"></i>La relación entre la heredabilidad y la repetibilidad</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-reducción-en-la-varianza-fenotípica-con-varias-medidas"><i class="fa fa-check"></i>La reducción en la varianza fenotípica con varias medidas</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#la-repetibilidad-como-herramienta-en-la-predicción"><i class="fa fa-check"></i>La repetibilidad como herramienta en la predicción</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#evolucionabilidad"><i class="fa fa-check"></i>Evolucionabilidad</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#conclusión-9"><i class="fa fa-check"></i>Conclusión</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#actividades-9"><i class="fa fa-check"></i>Actividades</a>
-<ul>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#control-de-lectura-9"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#veradero-o-falso-1"><i class="fa fa-check"></i>¿Veradero o falso?</a></li>
-<li class="chapter" data-level="" data-path="pargen.html"><a href="pargen.html#ejercicios-9"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html"><i class="fa fa-check"></i>Selección Artificial I</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección"><i class="fa fa-check"></i>Factores de corrección</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-aditivos"><i class="fa fa-check"></i>Factores de corrección aditivos</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-multiplicativos"><i class="fa fa-check"></i>Factores de corrección multiplicativos</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#factores-de-corrección-lineales"><i class="fa fa-check"></i>Factores de corrección lineales</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#la-respuesta-a-la-selección-y-su-predicción"><i class="fa fa-check"></i>La respuesta a la selección y su predicción</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#diferencial-de-selección-e-intensidad-de-selección"><i class="fa fa-check"></i>Diferencial de selección e intensidad de selección</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#intensidad-de-selección-y-proporción-seleccionada"><i class="fa fa-check"></i>Intensidad de selección y proporción seleccionada</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#de-dónde-sale-la-relación-ifraczp"><i class="fa fa-check"></i>¿De dónde sale la relación <span class="math inline">\(i=\frac{z}{p}\)</span>?</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#la-relación-entre-diferentes-formas-de-calcular-la-intensidad-de-selección"><i class="fa fa-check"></i>La relación entre diferentes formas de calcular la intensidad de selección</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#intervalo-generacional"><i class="fa fa-check"></i>Intervalo generacional</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#medidas-de-la-respuesta"><i class="fa fa-check"></i>Medidas de la respuesta</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#progreso-genético-generacional-y-anual"><i class="fa fa-check"></i>Progreso genético generacional y anual</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#cambio-en-las-frecuencias-alélicas-bajo-selección-artificial"><i class="fa fa-check"></i>Cambio en las frecuencias alélicas bajo selección artificial</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#el-diferencial-de-selección-direccional-y-la-identidad-de-robertson-price"><i class="fa fa-check"></i>El diferencial de selección direccional y la identidad de Robertson-Price</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#conclusión-10"><i class="fa fa-check"></i>Conclusión</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#actividades-10"><i class="fa fa-check"></i>Actividades</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#control-de-lectura-10"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#verdadero-o-falso-8"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
-<li class="chapter" data-level="" data-path="selartifI.html"><a href="selartifI.html#ejercicios-11"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html"><i class="fa fa-check"></i>Correlaciones y respuesta correlacionada</a>
-<ul>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#causas-genéticas-y-ambientales-de-las-correlaciones"><i class="fa fa-check"></i>Causas genéticas y ambientales de las correlaciones</a>
-<ul>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#causas-de-las-correlaciones-genéticas"><i class="fa fa-check"></i>Causas de las correlaciones genéticas</a></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#causas-de-las-correlaciones-ambientales"><i class="fa fa-check"></i>Causas de las correlaciones ambientales</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#introducción-al-path-analysis"><i class="fa fa-check"></i>Introducción al “<em>path analysis</em>”</a>
-<ul>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#la-relación-entre-las-correlaciones-fenotípica-genética-y-ambiental"><i class="fa fa-check"></i>La relación entre las correlaciones fenotípica, genética y ambiental</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#métodos-para-determinar-la-correlación-genética"><i class="fa fa-check"></i>Métodos para determinar la correlación genética</a></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#la-correlación-fenotípica-y-su-relación-con-la-correlación-genética-aditiva-y-ambiental"><i class="fa fa-check"></i>La correlación fenotípica y su relación con la correlación genética aditiva y ambiental</a></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#respuesta-correlacionada"><i class="fa fa-check"></i>Respuesta correlacionada</a>
-<ul>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#eficiencia-en-relación-a-la-selección-directa"><i class="fa fa-check"></i>Eficiencia en relación a la selección directa</a></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#el-signo-de-la-correlación-y-el-beneficio-demérito-de-la-misma"><i class="fa fa-check"></i>El signo de la correlación y el beneficio-demérito de la misma</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#matrices-de-varianza-covarianza"><i class="fa fa-check"></i>Matrices de varianza-covarianza</a></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#la-forma-generalizada-de-la-ecuación-del-criador"><i class="fa fa-check"></i>La forma generalizada de la ecuación del criador</a></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#conclusión-11"><i class="fa fa-check"></i>Conclusión</a></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#actividades-11"><i class="fa fa-check"></i>Actividades</a>
-<ul>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#control-de-lectura-11"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#verdadero-o-falso-9"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
-<li class="chapter" data-level="" data-path="correlacionada.html"><a href="correlacionada.html#ejercicios-10"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html"><i class="fa fa-check"></i>Selección Artificial II</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#criterios-y-objetivos-de-selección"><i class="fa fa-check"></i>Criterios y objetivos de selección</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#selección-basada-en-un-solo-tipo-de-fuente-de-información"><i class="fa fa-check"></i>Selección basada en un solo tipo de fuente de información</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#diferentes-tipos-de-selección-basados-en-estructuras-de-parentesco-definidas"><i class="fa fa-check"></i>Diferentes tipos de selección basados en estructuras de parentesco definidas</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-las-heredabilidades-en-los-distintos-tipos-de-selección"><i class="fa fa-check"></i>Cálculo de las heredabilidades en los distintos tipos de selección</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#combinando-la-información-proporcionada-por-diferentes-tipos-de-parientes"><i class="fa fa-check"></i>Combinando la información proporcionada por diferentes tipos de parientes</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-los-elementos-de-la-matriz-de-varianzas-covarianzas-fenotípica"><i class="fa fa-check"></i>Cálculo de los elementos de la matriz de varianzas-covarianzas fenotípica</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#cálculo-de-los-elementos-del-vector-de-varianzas-covarianzas-genéticas"><i class="fa fa-check"></i>Cálculo de los elementos del vector de varianzas-covarianzas genéticas</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#información-propia-y-de-un-progenitor"><i class="fa fa-check"></i>Información propia y de un progenitor</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#información-propia-y-de-varios-hermanos-enteros"><i class="fa fa-check"></i>Información propia y de varios hermanos enteros</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#pruebas-de-progenie"><i class="fa fa-check"></i>Pruebas de progenie</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#límites-de-la-eficiencia-en-pruebas-de-progenie"><i class="fa fa-check"></i>Límites de la eficiencia en pruebas de progenie</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#precisión-del-valor-de-cría-a-partir-del-índice"><i class="fa fa-check"></i>Precisión del valor de cría a partir del índice</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#métodos-de-selección-para-varias-características"><i class="fa fa-check"></i>Métodos de selección para varias características</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#selección-en-tandem"><i class="fa fa-check"></i>Selección en tandem</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#niveles-independientes-de-rechazo"><i class="fa fa-check"></i>Niveles Independientes de Rechazo</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#índices-de-selección"><i class="fa fa-check"></i>Índices de selección</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#índices-de-selección-para-múltiples-características"><i class="fa fa-check"></i>Índices de selección para múltiples características</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#el-índice-de-smith-hazel"><i class="fa fa-check"></i>El índice de Smith-Hazel</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#métodos-y-técnicas-avanzadas-de-selección"><i class="fa fa-check"></i>Métodos y técnicas avanzadas de selección</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#blup-las-ecuaciones-del-modelo-mixto-lineal"><i class="fa fa-check"></i>BLUP: las ecuaciones del modelo mixto lineal</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#conclusión-12"><i class="fa fa-check"></i>Conclusión</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#actividades-12"><i class="fa fa-check"></i>Actividades</a>
-<ul>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#control-de-lectura-12"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#verdadero-o-falso-10"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
-<li class="chapter" data-level="" data-path="selartifII.html"><a href="selartifII.html#ejercicios-12"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html"><i class="fa fa-check"></i>Endocría, exocría, consanguinidad y depresión endogámica</a>
-<ul>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#el-aumento-de-la-consanguinidad-a-partir-del-número-de-individuos"><i class="fa fa-check"></i>El aumento de la consanguinidad a partir del número de individuos</a>
-<ul>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#qué-proporción-de-machos-es-necesaria-para-mantener-un-tamaño-efectivo-poblacional-mínimo"><i class="fa fa-check"></i>¿Qué proporción de machos es necesaria para mantener un tamaño efectivo poblacional mínimo?</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#el-coeficiente-de-consanguinidad-en-razas-lecheras"><i class="fa fa-check"></i>El coeficiente de consanguinidad en razas lecheras</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#depresión-endogámica"><i class="fa fa-check"></i>Depresión endogámica</a>
-<ul>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#los-riesgos-del-uso-masivo-de-reproductores-y-la-endogamia-elevada"><i class="fa fa-check"></i>Los riesgos del uso masivo de reproductores y la endogamia elevada</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#redistribución-en-la-varianza-genética"><i class="fa fa-check"></i>Redistribución en la varianza genética</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#exocría-y-heterosis"><i class="fa fa-check"></i>Exocría y heterosis</a>
-<ul>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#el-modelo-del-templo-griego"><i class="fa fa-check"></i>El modelo del templo griego</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#un-modelo-sencillo-de-heterosis-bajo-exocría"><i class="fa fa-check"></i>Un modelo sencillo de heterosis bajo exocría</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#complementariedad"><i class="fa fa-check"></i>Complementariedad</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#tipos-de-cruzamientos"><i class="fa fa-check"></i>Tipos de cruzamientos</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#modelo-genético-de-cruzamientos"><i class="fa fa-check"></i>Modelo genético de cruzamientos</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#conclusión-13"><i class="fa fa-check"></i>Conclusión</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#actividades-13"><i class="fa fa-check"></i>Actividades</a>
-<ul>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#control-de-lectura-13"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#verdadero-o-falso-11"><i class="fa fa-check"></i>¿Verdadero o falso?</a></li>
-<li class="chapter" data-level="" data-path="endoexo.html"><a href="endoexo.html#ejercicios-13"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html"><i class="fa fa-check"></i>Normas de reacción e interacción genotipo x ambiente</a>
-<ul>
-<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#plasticidad-fenotípica-y-normas-de-reacción"><i class="fa fa-check"></i>Plasticidad fenotípica y normas de reacción</a></li>
-<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#interacción-gxe-en-dos-ambientes"><i class="fa fa-check"></i>Interacción GxE en dos ambientes</a></li>
-<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#correlación-genética-a-través-de-dos-ambientes"><i class="fa fa-check"></i>Correlación genética a través de dos ambientes</a>
-<ul>
-<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#procedimientos-de-estimación"><i class="fa fa-check"></i>Procedimientos de estimación</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#genética-cuantitativa-de-la-interacción-gxe"><i class="fa fa-check"></i>Genética cuantitativa de la interacción GxE</a></li>
-<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#otros-ejemplos-de-interacción-genotipo-ambiente"><i class="fa fa-check"></i>Otros ejemplos de interacción genotipo-ambiente</a></li>
-<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#conclusión-14"><i class="fa fa-check"></i>Conclusión</a></li>
-<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#actividades-14"><i class="fa fa-check"></i>Actividades</a>
-<ul>
-<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#control-de-lectura-14"><i class="fa fa-check"></i>Control de lectura</a></li>
-<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#veradero-o-falso-2"><i class="fa fa-check"></i>¿Veradero o falso?</a></li>
-<li class="chapter" data-level="" data-path="GxE.html"><a href="GxE.html#ejercicios-14"><i class="fa fa-check"></i>Ejercicios</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html"><i class="fa fa-check"></i>Apéndice I: CONCEPTOS MATEMÁTICOS BÁSICOS</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#fracciones"><i class="fa fa-check"></i>FRACCIONES</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#fracciones-equivalentes-y-fracciones-irreducibles"><i class="fa fa-check"></i>Fracciones equivalentes y fracciones irreducibles</a></li>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#operaciones-con-fracciones"><i class="fa fa-check"></i>Operaciones con fracciones</a></li>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#común-denominador"><i class="fa fa-check"></i>Común denominador</a></li>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#operaciones-combinadas-con-fracciones"><i class="fa fa-check"></i>Operaciones combinadas con fracciones</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#proporcionalidad"><i class="fa fa-check"></i>PROPORCIONALIDAD</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#regla-de-tres"><i class="fa fa-check"></i>Regla de tres</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#cifras-significativas-y-redondeo"><i class="fa fa-check"></i>CIFRAS SIGNIFICATIVAS Y REDONDEO</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#operaciones-con-cifras-significativas"><i class="fa fa-check"></i>Operaciones con cifras significativas</a></li>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#producto-y-división"><i class="fa fa-check"></i>Producto y División</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#notación-científica"><i class="fa fa-check"></i>NOTACIÓN CIENTÍFICA</a></li>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#ecuaciones"><i class="fa fa-check"></i>ECUACIONES</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#ecuaciones-polinómicas"><i class="fa fa-check"></i>Ecuaciones polinómicas</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#funciones"><i class="fa fa-check"></i>FUNCIONES</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#ceros-de-una-función"><i class="fa fa-check"></i>Ceros de una función</a></li>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#tipos-de-funciones"><i class="fa fa-check"></i>Tipos de funciones:</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-i-conceptos-matemáticos-básicos.html"><a href="apéndice-i-conceptos-matemáticos-básicos.html#sumatoria-y-productoria"><i class="fa fa-check"></i>SUMATORIA Y PRODUCTORIA</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html"><i class="fa fa-check"></i>Apéndice II: CÁLCULO DIFERENCIAL E INTEGRAL</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#límites"><i class="fa fa-check"></i>LÍMITES</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#límite-finito"><i class="fa fa-check"></i>Límite finito</a></li>
-<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#límite-infinito"><i class="fa fa-check"></i>Límite infinito</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#derivadas"><i class="fa fa-check"></i>DERIVADAS</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#derivada-puntual"><i class="fa fa-check"></i>Derivada puntual</a></li>
-<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#derivada-de-una-función"><i class="fa fa-check"></i>Derivada de una función</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#integrales"><i class="fa fa-check"></i>INTEGRALES</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#integral-indefinida-o-primitiva"><i class="fa fa-check"></i>Integral indefinida o Primitiva</a></li>
-<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#integral-definida"><i class="fa fa-check"></i>Integral definida</a></li>
-<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#relación-entre-primitiva-e-integral-definida"><i class="fa fa-check"></i>Relación entre Primitiva e Integral definida</a></li>
-<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#métodos-de-integración"><i class="fa fa-check"></i>Métodos de integración</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-ii-cálculo-diferencial-e-integral.html"><a href="apéndice-ii-cálculo-diferencial-e-integral.html#ecuaciones-diferenciales"><i class="fa fa-check"></i>ECUACIONES DIFERENCIALES</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><i class="fa fa-check"></i>Apéndice III: ALGEBRA LINEAL Y GEOMETRÍA ANALÍTICA</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#matrices"><i class="fa fa-check"></i>MATRICES</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#relación-con-los-sistemas-de-ecuaciones"><i class="fa fa-check"></i>Relación con los sistemas de ecuaciones</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#álgebra-de-matrices"><i class="fa fa-check"></i>Álgebra de matrices</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#determinante-de-una-matriz"><i class="fa fa-check"></i>Determinante de una matriz</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#norma-producto-escalar-y-producto-vectorial"><i class="fa fa-check"></i>NORMA, PRODUCTO ESCALAR Y PRODUCTO VECTORIAL</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#vectores"><i class="fa fa-check"></i>Vectores</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#agregar-imagen-vectores"><i class="fa fa-check"></i>AGREGAR IMAGEN VECTORES</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#distancia-y-norma"><i class="fa fa-check"></i>Distancia y norma</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#producto-escalar"><i class="fa fa-check"></i>Producto escalar</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#producto-vectorial"><i class="fa fa-check"></i>Producto vectorial</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#transformaciones-lineales"><i class="fa fa-check"></i>TRANSFORMACIONES LINEALES</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#núcleo-e-imagen-de-una-transformación-lineal"><i class="fa fa-check"></i>Núcleo e Imagen de una Transformación Lineal</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#geometría-de-matrices"><i class="fa fa-check"></i>Geometría de matrices</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#valores-y-vectores-propios"><i class="fa fa-check"></i>VALORES Y VECTORES PROPIOS</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#de-una-transformación-lineal"><i class="fa fa-check"></i>De una transformación lineal:</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#de-una-matriz"><i class="fa fa-check"></i>De una matriz:</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#diagonalización-de-una-matriz"><i class="fa fa-check"></i>Diagonalización de una matriz</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-iii-algebra-lineal-y-geometría-analítica.html"><a href="apéndice-iii-algebra-lineal-y-geometría-analítica.html#derivada-de-la-forma-cuadrática"><i class="fa fa-check"></i>DERIVADA DE LA FORMA CUADRÁTICA</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html"><i class="fa fa-check"></i>Apéndice IV: PROBABILIDAD Y ESTADÍSTICA</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#probabilidad-y-conteo"><i class="fa fa-check"></i>PROBABILIDAD Y CONTEO</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#probabilidad-condicional"><i class="fa fa-check"></i>Probabilidad condicional</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#variables-aleatorias"><i class="fa fa-check"></i>VARIABLES ALEATORIAS</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#variables-aleatorias-discretas"><i class="fa fa-check"></i>Variables Aleatorias Discretas</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#variables-aleatorias-continuas"><i class="fa fa-check"></i>Variables Aleatorias Continuas</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#variables-independientes"><i class="fa fa-check"></i>Variables independientes</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#valor-esperado"><i class="fa fa-check"></i>Valor esperado</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#varianza-y-desviación-estándar"><i class="fa fa-check"></i>Varianza y Desviación Estándar</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#covarianza-y-coeficiente-de-correlación"><i class="fa fa-check"></i>Covarianza y Coeficiente de Correlación</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#ley-de-los-grandes-números"><i class="fa fa-check"></i>Ley de los grandes números</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#distribuciones-conocidas"><i class="fa fa-check"></i>Distribuciones conocidas</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#distribución-normal"><i class="fa fa-check"></i>Distribución Normal</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#distribución-binomial"><i class="fa fa-check"></i>Distribución Binomial</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#distribución-de-poisson"><i class="fa fa-check"></i>Distribución de Poisson</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#estimadores"><i class="fa fa-check"></i>ESTIMADORES</a>
-<ul>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#estimadores-frecuentistas"><i class="fa fa-check"></i>Estimadores frecuentistas</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#otras-propiedades"><i class="fa fa-check"></i>Otras propiedades:</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#métodos-de-estimación"><i class="fa fa-check"></i>Métodos de estimación</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#estimadores-bayesianos"><i class="fa fa-check"></i>Estimadores Bayesianos</a></li>
-<li class="chapter" data-level="" data-path="apéndice-iv-probabilidad-y-estadística.html"><a href="apéndice-iv-probabilidad-y-estadística.html#ejemplo-conceptual-de-estimadores"><i class="fa fa-check"></i>Ejemplo conceptual de estimadores:</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="bibliografia.html"><a href="bibliografia.html"><i class="fa fa-check"></i>Bibliografía</a></li>
+<li class="chapter" data-level="22" data-path="bibliografia.html"><a href="bibliografia.html"><i class="fa fa-check"></i><b>22</b> Bibliografía</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -768,8 +422,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="variacion" class="section level1 hasAnchor">
-<h1>Variación y equilibrio de Hardy-Weinberg<a href="variacion.html#variacion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="variacion" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Capítulo 3</span> Variación y equilibrio de Hardy-Weinberg<a href="variacion.html#variacion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Una de las características evidentes de la vida en nuestro planeta es la
 heterogeneidad de los organismos, aún dentro del nivel taxonómico más
 bajo que se nos ocurra para clasificarlos razonablemente (por ejemplo,
@@ -834,8 +488,8 @@ mejoramiento genético). Más allá de la definición que usemos para el concept
 </p>
 <p><span class="math inline">\(\square\)</span> Discutir aspectos prácticos de la aplicación de este modelo, tales como la repercusión del tamaño muestral al momento de estimar frecuencias alélicas, o la derivación de modelos para la estimación de frecuencias basándose en el conteo de individuos.</p>
 </div>
-<div id="el-equilibrio-de-hardy-weinberg" class="section level2 hasAnchor">
-<h2>El equilibrio de Hardy-Weinberg<a href="variacion.html#el-equilibrio-de-hardy-weinberg" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="el-equilibrio-de-hardy-weinberg" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> El equilibrio de Hardy-Weinberg<a href="variacion.html#el-equilibrio-de-hardy-weinberg" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>La “ley de Hardy-Weinberg”, a veces conocida también como de
 Hardy-Weinberg-Castle por los trabajos de <span class="citation">Castle (<a href="#ref-castle1903">1903</a>)</span>, <span class="citation">Hardy (<a href="#ref-pmid17779291">1908</a>)</span>
 y <span class="citation">Weinberg (<a href="#ref-weinberg1908">1908</a>)</span>,<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a> es posiblemente uno de los resultados mejor
@@ -873,7 +527,7 @@ P(A_1A_1)=P(A_1)\cdot P(A_1)=p\cdot p=p^2 \\
 P(A_1A_2)=2\cdot P(A_1)\cdot P(A_2)=2\cdot p\cdot q=2pq \\
 P(A_2A_2)=P(A_2)\cdot P(A_2)=q\cdot q=q^2\\
 \end{split}
-\tag{11}
+\tag{3.1}
 \end{equation}\]</span></p>
 </div>
 <p>que es la expresión más sencilla de la ley de Hardy-Weinberg. Es de
@@ -906,16 +560,16 @@ inalteradas (<span class="math inline">\(p=p&#39;\)</span> y <span class="math i
 siguientes generaciones, tanto a nivel de la frecuencia de los genotipos
 como de los alelos (las frecuencias de los genotipos solo dependen de
 las frecuencias de los alelos, como vimos en la ecuaciones
-<a href="variacion.html#eq:eqHW">(11)</a> y siguientes), por lo que luego de una generación hemos alcanzado el
+<a href="variacion.html#eq:eqHW">(3.1)</a> y siguientes), por lo que luego de una generación hemos alcanzado el
 equilibrio: esta condición se conoce como <strong>equilibrio de Hardy-Weinberg</strong>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:HWpunnett"></span>
 <img src="ApuntesGeneticaII_files/figure-html/HWpunnett-1.png" alt="Cuadrado de Punnett con frecuencias $p=0,6$ y $q=0,4$. Las áreas de los rectángulos/cuadrados representan las frecuencias de los genotipos. Figura tomada de Wikipedia (CC0), modificada a partir de @pmid26354973" width="80%" />
 <p class="caption">
-Figura 7: Cuadrado de Punnett con frecuencias <span class="math inline">\(p=0,6\)</span> y <span class="math inline">\(q=0,4\)</span>. Las áreas de los rectángulos/cuadrados representan las frecuencias de los genotipos. Figura tomada de Wikipedia (CC0), modificada a partir de <span class="citation">Rosenberg and Kang (<a href="#ref-pmid26354973">2015</a>)</span>
+Figura 3.1: Cuadrado de Punnett con frecuencias <span class="math inline">\(p=0,6\)</span> y <span class="math inline">\(q=0,4\)</span>. Las áreas de los rectángulos/cuadrados representan las frecuencias de los genotipos. Figura tomada de Wikipedia (CC0), modificada a partir de <span class="citation">Rosenberg and Kang (<a href="#ref-pmid26354973">2015</a>)</span>
 </p>
 </div>
 <p>Una forma gráfica de ver estos resultados son los llamados “cuadrados de
-Punnett”<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a>, como el que se aprecia en la Figura <a href="variacion.html#fig:HWpunnett">7</a>.
+Punnett”<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a>, como el que se aprecia en la Figura <a href="variacion.html#fig:HWpunnett">3.1</a>.
 En la misma, en el eje horizontal tenemos la frecuencia con la que
 aparecen los gametos masculinos, mientras que en el vertical aparecen
 las frecuencias de los gametos femeninos; por lo tanto, el producto de
@@ -960,8 +614,8 @@ genotipos se alcanza en una sola generación de apareamientos.</p></li>
 </div>
 </div>
 </div>
-<div id="hardy-weinberg-en-especies-dioicas-dos-sexos" class="section level2 hasAnchor">
-<h2>Hardy-Weinberg en especies dioicas (dos sexos)<a href="variacion.html#hardy-weinberg-en-especies-dioicas-dos-sexos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="hardy-weinberg-en-especies-dioicas-dos-sexos" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Hardy-Weinberg en especies dioicas (dos sexos)<a href="variacion.html#hardy-weinberg-en-especies-dioicas-dos-sexos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Nuestro modelo previo fue extremadamente sencillo, pero su aplicación se ve
 reducida a aquellas especies que son hermafroditas. Veamos entonces qué
 ocurre en especies dioicas (<em>i.e.</em>, con dos sexos separados). Supongamos, para mayor
@@ -977,7 +631,7 @@ P(A_1A_1)=P(A_{1M})\cdot P(A_{1H})=p_{M}\cdot p_{H}\\
 P(A_1A_2)=P(A_{1M})\cdot P(A_{2H})+P(A_{2M})\cdot P(A_{1H})=\\=p_{M}\cdot q_{H}+q_{M}\cdot p_{H}\\
 P(A_2A_2)=P(A_{2M})\cdot P(A_{2H})=q_{M}\cdot q_{H}\\
 \end{split}
-\tag{12}
+\tag{3.2}
 \end{equation}\]</span></p>
 <p>Como de estos apareamientos no esperamos diferencias en el número de
 machos y hembras en cada una de las clases, a partir de ahora tanto
@@ -991,7 +645,7 @@ de <span class="math inline">\(P(A_1A_1)\)</span> y <span class="math inline">\(
 \begin{split}
 p&#39;=P(A_1A_1)+\frac{1}{2} P(A_1A_2)=p_{M}\cdot p_{H}+\frac{1}{2}(p_{M}\cdot q_{H}+q_{M}\cdot p_{H})
 \end{split}
-\tag{13}
+\tag{3.3}
 \end{equation}\]</span></p>
 <p>Multiplicando por 2 ambos lados de la ecuación y separando términos
 obtenemos:</p>
@@ -1000,7 +654,7 @@ obtenemos:</p>
 2p&#39;=2p_{M}\cdot p_{H}+p_{M}\cdot q_{H}+q_{M}\cdot p_{H} \\
 2p&#39;=p_{M}\cdot p_{H}+p_{M}\cdot p_{H}+p_{M}\cdot q_{H}+q_{M}\cdot p_{H}
 \end{split}
-\tag{14}
+\tag{3.4}
 \end{equation}\]</span></p>
 <p>Reordenando y sacando factor común, tenemos:</p>
 <p><span class="math display">\[\begin{equation}
@@ -1013,7 +667,7 @@ obtenemos:</p>
 <div class="equationbox">
 <p><span class="math display" id="eq:eqHWdioicas4">\[\begin{equation}
 p&#39;=\frac{p_{M}+ p_{H}}{2}
-\tag{15}
+\tag{3.5}
 \end{equation}\]</span></p>
 </div>
 <p>Es decir, <strong>luego de la primer generación de apareamiento entre machos y hembras con diferentes frecuencias de los alelos <span class="math inline">\(A_1\)</span> y<span class="math inline">\(A_2\)</span>, la frecuencia de ambos alelos será igual en machos y en hembras y su valor será <span class="math inline">\(p&#39;=\frac{p_{M}+ p_{H}}{2}\)</span> para el alelo <span class="math inline">\(A_1\)</span> y <span class="math inline">\(q&#39;=\frac{q_{M}+ q_{H}}{2}\)</span> para el alelo <span class="math inline">\(A_2\)</span></strong>. A este último resultado se puede llegar razonando por simetría (¿hubiera cambiado llamar al revés a los alelos?) o haciendo las cuentas:</p>
@@ -1023,7 +677,7 @@ p&#39;=\frac{p_{M}+ p_{H}}{2}=\frac{(1-q_{M})+(1-q_{H})}{2}=\\
 =\frac{2-q_{M}-q_{H}}{2}=1-\frac{(q_{M}+q_{H})}{2} \therefore\\
 \frac{(q_{M}+q_{H})}{2}=1-p&#39;=q&#39;
 \end{split}
-\tag{16}
+\tag{3.6}
 \end{equation}\]</span></p>
 <p>El último resultado está justificado, además, porque la suma de los alelos siempre debe
 dar una frecuencia relativa de 1. Más allá de todas las cuentas que nos
@@ -1054,7 +708,7 @@ encontrase en equilibrio de Hardy-Weinberg para este marcador.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:IlluminaBovineSNP50v3"></span>
 <img src="figuras/IlluminaBovineSNP50v3.png" alt="Chip &quot;BovineSNP50 v3&quot; de genotipado Bovino, de la empresa Illumina, con capacidad para analizar simultaneamente en 24 muestras 53218 SNPs altamente informativos (fotografía e información de la página de Illumina)." width="80%" />
 <p class="caption">
-Figura 8: Chip “BovineSNP50 v3” de genotipado Bovino, de la empresa Illumina, con capacidad para analizar simultaneamente en 24 muestras 53218 SNPs altamente informativos (fotografía e información de la página de Illumina).
+Figura 3.2: Chip “BovineSNP50 v3” de genotipado Bovino, de la empresa Illumina, con capacidad para analizar simultaneamente en 24 muestras 53218 SNPs altamente informativos (fotografía e información de la página de Illumina).
 </p>
 </div>
 <p>Dado que tenemos 1000 individuos genotipados (372+476+152=1000), el
@@ -1079,8 +733,8 @@ estos errores pueden reducirse más), tenemos un ajuste casi perfecto a
 las expectativas del equilibrio Hardy-Weinberg.</p>
 </div>
 </div>
-<div id="heterocigotas-freq-alelica" class="section level2 hasAnchor">
-<h2>H-W: la frecuencia de heterocigotas en función de la frecuencia alélica<a href="variacion.html#heterocigotas-freq-alelica" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="heterocigotas-freq-alelica" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> H-W: la frecuencia de heterocigotas en función de la frecuencia alélica<a href="variacion.html#heterocigotas-freq-alelica" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En un locus con dos alelos, ¿a qué frecuencia del alelo <span class="math inline">\(p\)</span> podemos
 observar la mayor frecuencia de heterocigotas, asumiendo que la
 población se encuentra en equilibrio de Hardy-Weinberg?
@@ -1089,7 +743,7 @@ comportamiento del número de heterocigotas bajo estos supuestos es
 graficar la misma como función de <span class="math inline">\(p\)</span>. Tenemos que <span class="math inline">\(2pq=2p(1-p)\)</span>, y podemos graficar esta relación en cualquier
 software que permita graficar funciones, calculadora, o aún en una
 planilla electrónica (por ejemplo generando una serie en el intervalo
-0-1). La Figura <a href="variacion.html#fig:HWheterop">9</a> es el resultado de graficar esta función, donde
+0-1). La Figura <a href="variacion.html#fig:HWheterop">3.3</a> es el resultado de graficar esta función, donde
 se ve que la máxima frecuencia de heterocigotas se encuentra en el
 entorno de <span class="math inline">\(p=0,5\)</span>, o sea en frecuencias intermedias de los dos alelos; la máxima proporción de heterocigotas esperable para una población
 en equilibrio de HW es <span class="math inline">\(0,5\)</span>.</p>
@@ -1099,7 +753,7 @@ en equilibrio de HW es <span class="math inline">\(0,5\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:HWheterop"></span>
 <img src="ApuntesGeneticaII_files/figure-html/HWheterop-1.png" alt="Frecuencia de heterocigotas en función de la frecuencia del alelo $p$ en un modelo de un locus con dos alelos, bajo equilibrio Hardy-Weinberg. En azul la frecuencia de los heterocigotas, rojo y verde los homocigotas." width="80%" />
 <p class="caption">
-Figura 9: Frecuencia de heterocigotas en función de la frecuencia del alelo <span class="math inline">\(p\)</span> en un modelo de un locus con dos alelos, bajo equilibrio Hardy-Weinberg. En azul la frecuencia de los heterocigotas, rojo y verde los homocigotas.
+Figura 3.3: Frecuencia de heterocigotas en función de la frecuencia del alelo <span class="math inline">\(p\)</span> en un modelo de un locus con dos alelos, bajo equilibrio Hardy-Weinberg. En azul la frecuencia de los heterocigotas, rojo y verde los homocigotas.
 </p>
 </div>
 <p>Una forma más precisa, complementaria con la anterior, es el estudio
@@ -1134,8 +788,8 @@ f_{Het_{max}}(p=\frac{1}{2})=2p-2p^2=2 \frac{1}{2}-2\left(\frac{1}{2}\right)^2=\
 \end{split}
 \end{equation}\]</span></p>
 </div>
-<div id="el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo" class="section level2 hasAnchor">
-<h2>El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo<a href="variacion.html#el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> El equilibrio de Hardy-Weinberg en cromosomas ligados al sexo<a href="variacion.html#el-equilibrio-de-hardy-weinberg-en-cromosomas-ligados-al-sexo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En los razonamientos previos hemos asumido que el locus de interés era
 autosómico, es decir que no estaba en uno de los cromosomas sexuales
 ¿Qué ocurriría si este locus se encuentra en el cromosoma X del sistema
@@ -1149,7 +803,7 @@ probabilidad <span class="math inline">\(p_{H}\)</span> y <span class="math inli
 respectivamente (con <span class="math inline">\(q_{H}=1-p_{H}\)</span>). Las hembras descendientes de este cruzamiento tendrán
 dos cromosomas X, uno del padre y otro de la madre, y las frecuencias de
 los genotipos serán equivalentes a los de las ecuaciones
-<a href="variacion.html#eq:eqHWdioicas">(12)</a> y siguientes. En cambio, los machos tienen un
+<a href="variacion.html#eq:eqHWdioicas">(3.2)</a> y siguientes. En cambio, los machos tienen un
 solo cromosoma X, aportado por la madre (el padre aporta el cromosoma Y), y por lo tanto las frecuencias de los alelos <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span> en esta nueva generación de machos serán iguales a las frecuencias del respectivo
 alelo en las hembras de la generación anterior.</p>
 <p>En resumen, en la nueva generación de machos y hembras (la distinguimos
@@ -1174,7 +828,7 @@ q&#39;&#39;_{M}=q&#39;_{H}=\frac{q_{M}+ q_{H}}{2}
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:HWcromosomaX"></span>
 <img src="figuras/HW_cromosomaX.png" alt="Evolución de las frecuencias alélicas en machos (cuadrados rojos) y hembras (círculos azules) en un locus perteneciente al cromosoma X en especies en que el Y determina el sexo. La línea a trazos negros representa la media de la población. Las frecuencias de partida (generación 0) son $p_{M}=0,3$ y $p_{H}=0,8$." width="80%" />
 <p class="caption">
-Figura 10: Evolución de las frecuencias alélicas en machos (cuadrados rojos) y hembras (círculos azules) en un locus perteneciente al cromosoma X en especies en que el Y determina el sexo. La línea a trazos negros representa la media de la población. Las frecuencias de partida (generación 0) son <span class="math inline">\(p_{M}=0,3\)</span> y <span class="math inline">\(p_{H}=0,8\)</span>.
+Figura 3.4: Evolución de las frecuencias alélicas en machos (cuadrados rojos) y hembras (círculos azules) en un locus perteneciente al cromosoma X en especies en que el Y determina el sexo. La línea a trazos negros representa la media de la población. Las frecuencias de partida (generación 0) son <span class="math inline">\(p_{M}=0,3\)</span> y <span class="math inline">\(p_{H}=0,8\)</span>.
 </p>
 </div>
 <p>O sea, hemos establecido una regla de recurrencia para calcular las
@@ -1210,7 +864,7 @@ procesos estocásticos (<em>e.g.</em>, la deriva, que veremos más adelante)
 tendrán un impacto mucho mayor que estas diferencias.<br />
 El comportamiento de estas frecuencias puede observarse gráficamente
 también, como lo muestra por ejemplo la Figura
-<a href="variacion.html#fig:HWcromosomaX">10</a>,
+<a href="variacion.html#fig:HWcromosomaX">3.4</a>,
 partiendo en este caso de <span class="math inline">\(p_{M}=0,3\)</span> y <span class="math inline">\(p_{H}=0,8\)</span>. Se
 aprecia claramente en esta figura que <em>a)</em> la frecuencia en machos es igual a
 la frecuencia en las hembras de la generación anterior, <em>b)</em> la
@@ -1231,8 +885,8 @@ generación.</p>
 </ul>
 </div>
 </div>
-<div id="tres-o-más-alelos" class="section level2 hasAnchor">
-<h2>Tres o más alelos<a href="variacion.html#tres-o-más-alelos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="tres-o-más-alelos" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Tres o más alelos<a href="variacion.html#tres-o-más-alelos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Hasta ahora hemos manejado los diferentes problemas asumiendo que se
 trataba de un locus con únicamente dos alelos, lo que en principio
 permite simplificar algunas cuentas ya que la frecuencia de <span class="math inline">\(q\)</span> queda
@@ -1330,8 +984,8 @@ H=1-G=1-\sum_{i=1}^{k} p_{i}^2
 \end{equation}\]</span></p>
 </div>
 </div>
-<div id="la-estimación-de-frecuencias-y-el-equilibrio-o-no" class="section level2 hasAnchor">
-<h2>La estimación de frecuencias y el equilibrio (o no)<a href="variacion.html#la-estimación-de-frecuencias-y-el-equilibrio-o-no" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="la-estimación-de-frecuencias-y-el-equilibrio-o-no" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> La estimación de frecuencias y el equilibrio (o no)<a href="variacion.html#la-estimación-de-frecuencias-y-el-equilibrio-o-no" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En una población con un gran número de individuos, tendiendo a
 infinito, si la población se encuentra en equilibrio de Hardy-Weinberg
 el número de individuos de los distintos genotipos coincidirá
@@ -1380,7 +1034,7 @@ binomial (en nuestro caso de dos alelos):</p>
 \begin{split}
 f(x)={n\choose x} p^x (1-p)^{n-x}
 \end{split}
-\tag{17}
+\tag{3.7}
 \end{equation}\]</span></p>
 <p>con las combinaciones
 de <span class="math inline">\(n\)</span> elementos tomados de a <span class="math inline">\(x\)</span> elementos iguales a:</p>
@@ -1392,7 +1046,7 @@ de <span class="math inline">\(n\)</span> elementos tomados de a <span class="ma
 <p>Por ejemplo, si la frecuencia “real” en la población entera para el alelo <span class="math inline">\(A_1\)</span> es de
 <span class="math inline">\(p=0,5\)</span>, ¿cuál sería la probabilidad de observar este conteo en 3
 alelos de los 10 que genotipamos? De acuerdo a la ecuación
-<a href="variacion.html#eq:binomi">(17)</a>, la
+<a href="variacion.html#eq:binomi">(3.7)</a>, la
 probabilidad de obtener 3 conteos en una muestra de 10, con una
 probabilidad <span class="math inline">\(p=0,5\)</span> en la población, es de:
 <span class="math display">\[\begin{equation}
@@ -1401,14 +1055,14 @@ f(3)={10\choose 3} (0,5)^3 (1-0,5)^{10-3}=\frac{10!}{7! 3!} (0,5)^3 (0,5)^{7}=\f
 Es decir, aún cuando la frecuencia real en la población es de <span class="math inline">\(p=0,5\)</span>,
 en más de 1 de cada 10 muestras que tomemos, solo por azar, observaremos
 un conteo de 3 alelos. En estos casos, estimaríamos erróneamente <span class="math inline">\(p \approx 0,33\)</span>. Esto puede parecer poco, pero si nos fijamos en
-la Figura <a href="variacion.html#fig:HWmuestrapeque2">11</a>(a), donde graficamos la probabilidad de
+la Figura <a href="variacion.html#fig:HWmuestrapeque2">3.5</a>(a), donde graficamos la probabilidad de
 observar cada uno de los 11 conteos posibles (de 0 a 10 alelos <span class="math inline">\(A_1\)</span>),
 resulta claro que la probabilidad de no acertar en el único número
 correcto (5 alelos), es realmente alta.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:HWmuestrapeque2"></span>
 <img src="figuras/HW_muestrapeque2.png" alt="Probabilidad de observar un conteo de alelos determinado en una muestra de 5 individuos (a) y en una muestra de 50 individuos (b), dado que la frecuencia del mismo en la población es de 0,5." width="80%" />
 <p class="caption">
-Figura 11: Probabilidad de observar un conteo de alelos determinado en una muestra de 5 individuos (a) y en una muestra de 50 individuos (b), dado que la frecuencia del mismo en la población es de 0,5.
+Figura 3.5: Probabilidad de observar un conteo de alelos determinado en una muestra de 5 individuos (a) y en una muestra de 50 individuos (b), dado que la frecuencia del mismo en la población es de 0,5.
 </p>
 </div>
 <p>De hecho, si calculamos la
@@ -1424,7 +1078,7 @@ individuos no nos conducirá a nada muy razonable. ¿Qué ocurriría si
 conseguimos aumentar el tamaño muestral a 50 individuos? Las
 probabilidades esperadas de los distintos conteos en la muestra
 aleatoria se grafican en la Figura
-<a href="variacion.html#fig:HWmuestrapeque2">11</a>(b). Ahora resulta claro que, por un lado,
+<a href="variacion.html#fig:HWmuestrapeque2">3.5</a>(b). Ahora resulta claro que, por un lado,
 la “granularidad” de las barras es mucho más fina (<em>i.e.</em>, la
 “precisión” de nuestros estimados podría ser mucho mayor) y por el otro,
 que las estimaciones muy alejadas del “verdadero valor” son bastante
@@ -1438,11 +1092,11 @@ distribución binomial, tenemos para un valor <span class="math inline">\(k\)</s
 \begin{split}
 Pr(X \leq k)=\sum_{x=0}^{k} {n\choose x} p^x (1-p)^{n-x}
 \end{split}
-\tag{18}
+\tag{3.8}
 \end{equation}\]</span></p>
 <p>Sería algo tedioso calcularlo a mano, pero una
 primer idea del valor se puede tener observando la Figura
-<a href="variacion.html#fig:HWmuestrapeque2">11</a>(b), donde resulta claro que las
+<a href="variacion.html#fig:HWmuestrapeque2">3.5</a>(b), donde resulta claro que las
 probabilidades para conteos de hasta 30 son despreciables. De hecho,
 utilizando la función de distribución en cualquier software que la tenga
 implementada, la probabilidad de observar un conteo de 30 o menos alelos
@@ -1515,7 +1169,7 @@ Esto nos permite estimar <span class="math inline">\(q\)</span> (<em>i.e.</em> l
 \begin{split}
 G_{22}=nq^2 \therefore q=\pm \sqrt{\frac{G_{22}}{n}}=\pm \sqrt{\frac{G_{22}}{G_1.+G_{22}}}
 \end{split}
-\tag{19}
+\tag{3.9}
 \end{equation}\]</span></p>
 <p>De las dos raíces que tiene esta ecuación (una positiva y otra
 negativa), solo una posee sentido biológico: no existen
@@ -1542,7 +1196,7 @@ Turquía (1 afectado en 2600 nacimientos). Calcular para ambas
 poblaciones la frecuencia de “el” <a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a> alelo defectuoso, así como la
 proporción de portadores (que no manifiestan la enfermedad), asumiendo
 que las poblaciones se encuentran en equilibrio de Hardy-Weinberg.<br />
-Utilizando la ecuación <a href="variacion.html#eq:HWrecesivos">(19)</a>, tenemos para los dos casos</p>
+Utilizando la ecuación <a href="variacion.html#eq:HWrecesivos">(3.9)</a>, tenemos para los dos casos</p>
 <p><span class="math display">\[\begin{equation}
 \begin{split}
 q_{Fin}=\sqrt{\frac{1}{200000}}=0,002236068 \sim 0,22\% \\
@@ -1560,18 +1214,18 @@ Het_{Tur}=2p_{Tur}q_{Tur}=2*(1-0,01961161)*0,01961161=0,038454 \sim 3,85\%
 \end{equation}\]</span></p>
 </div>
 </div>
-<div id="el-sistema-abo" class="section level2 hasAnchor">
-<h2>El sistema ABO<a href="variacion.html#el-sistema-abo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="el-sistema-abo" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> El sistema ABO<a href="variacion.html#el-sistema-abo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Hasta el momento nos hemos centrado en el caso de un locus con dos alelos. En general, la relación entre los distintos alelos de un locus suele ser
 más compleja. En principio, esto se debe a que existen más de dos alelos cuyo
 impacto en el fenotipo es distinguible. A su vez, las relaciones entre dichos alelos puede ser variable, implicando muchas veces diferentes modos de herencia (<em>e.g.</em>, dominancia y codominancia en el mismo locus). Un ejemplo de
 esto es el sistema de grupos sanguíneos ABO, el más importante en
 humanos,<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a> cuya herencia (en forma simplificada) puede apreciarse en
-la Figura <a href="variacion.html#fig:ABOsystem">12</a>.</p>
+la Figura <a href="variacion.html#fig:ABOsystem">3.6</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ABOsystem"></span>
 <img src="figuras/ABOsystem.png" alt="Sistema de determinación sanguínea ABO. Los alelos A y B muestran codominancia entre sí, mientras que ambos son dominantes respecto al O. Figura de Dominio Público tomada de Wikipedia (&quot;ABO system codominance.svg&quot;)." width="70%" />
 <p class="caption">
-Figura 12: Sistema de determinación sanguínea ABO. Los alelos A y B muestran codominancia entre sí, mientras que ambos son dominantes respecto al O. Figura de Dominio Público tomada de Wikipedia (“ABO system codominance.svg”).
+Figura 3.6: Sistema de determinación sanguínea ABO. Los alelos A y B muestran codominancia entre sí, mientras que ambos son dominantes respecto al O. Figura de Dominio Público tomada de Wikipedia (“ABO system codominance.svg”).
 </p>
 </div>
 <p>El locus codifica para antígenos de superficie en los eritrocitos (glóbulos rojos de
@@ -1596,8 +1250,8 @@ es tan sencilla como en los sistemas previamente analizados. Por un lado, existe
 dos. Por el otro, lo que realmente complejiza el panorama es la relación de dominancia-codominancia entre alelos.
 De hecho, en casi todos los casos resulta imposible inferir el genotipo de un inviduo observando su fenotipo; en efecto, esto es solo posible para el fenotipo O (homocigotas del alelo <span class="math inline">\(i\)</span>). En la Sección <a href="variacion.html#estimacion-abo">La estimación de frecuencias en el locus ABO</a> se desarrolla un método para inferir las frecuencias alélicas a partir del conteo de los cuatro fenotipos detectables por el test de aglutinación.</p>
 </div>
-<div id="dónde-se-esconden-los-alelos-recesivos" class="section level2 hasAnchor">
-<h2>¿Dónde se “esconden” los alelos recesivos?<a href="variacion.html#dónde-se-esconden-los-alelos-recesivos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="dónde-se-esconden-los-alelos-recesivos" class="section level2 hasAnchor" number="3.8">
+<h2><span class="header-section-number">3.8</span> ¿Dónde se “esconden” los alelos recesivos?<a href="variacion.html#dónde-se-esconden-los-alelos-recesivos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Muchas mutaciones tienen consecuencias deletéreas o muy graves cuando
 están presentes en homocigosis, pero no tienen mayores consecuencias
 para el individuo heterocigota. A modo de ejemplo, se puede pensar en un sistema que requiera de
@@ -1625,7 +1279,7 @@ frecuencias <span class="math inline">\(p\)</span> y <span class="math inline">\
 <p>Es decir que, a medida que <span class="math inline">\(q\)</span> tiende a cero, la relación tenderá a
 infinito. Dicho de otra forma, la enorme mayoría de los alelos recesivos estarán
 presentes en los individuos heterocigotas, los cuales son fenotípicamente indistinguibles de los homocigotas para el alelo dominante. La Figura
-<a href="variacion.html#fig:HWheterohomoq">13</a> muestra gráficamente esta relación. A medida
+<a href="variacion.html#fig:HWheterohomoq">3.7</a> muestra gráficamente esta relación. A medida
 que nos acercamos hacia la frecuencia de cero para el alelo <span class="math inline">\(A_2\)</span> (<span class="math inline">\(q\)</span>),
 la pendiente de la relación se incrementa en valor absoluto (notemos que la derivada
 primera es igual a <span class="math inline">\(-2/q^2\)</span>) y rápidamente la función aparece como
@@ -1639,7 +1293,7 @@ implicancias asociadas.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:HWheterohomoq"></span>
 <img src="figuras/HW_heterohomo_q.png" alt="Relación del número de heterocigotas a homocigotas recesivos en función de la frecuencia del alelo $q$ en un modelo de un locus con dos alelos, bajo equilibrio Hardy-Weinberg." width="70%" />
 <p class="caption">
-Figura 13: Relación del número de heterocigotas a homocigotas recesivos en función de la frecuencia del alelo <span class="math inline">\(q\)</span> en un modelo de un locus con dos alelos, bajo equilibrio Hardy-Weinberg.
+Figura 3.7: Relación del número de heterocigotas a homocigotas recesivos en función de la frecuencia del alelo <span class="math inline">\(q\)</span> en un modelo de un locus con dos alelos, bajo equilibrio Hardy-Weinberg.
 </p>
 </div>
 <div id="ejemplo-2.3" class="section level4 unnumbered hasAnchor">
@@ -1688,11 +1342,11 @@ de distinguir de los homocigotas con el alelo dominante.</li>
 </div>
 </div>
 </div>
-<div id="hardy-weinberg-en-especies-poliploides" class="section level2 hasAnchor">
-<h2>Hardy-Weinberg en especies poliploides<a href="variacion.html#hardy-weinberg-en-especies-poliploides" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="hardy-weinberg-en-especies-poliploides" class="section level2 hasAnchor" number="3.9">
+<h2><span class="header-section-number">3.9</span> Hardy-Weinberg en especies poliploides<a href="variacion.html#hardy-weinberg-en-especies-poliploides" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>El fenómeno de la poliploidía (varias copias del genoma) representa un
 importante factor evolutivo que lleva a la especiación y es bastante
-usual en diferentes especies de todos los dominios de la vida, como se observa en la Figura <a href="variacion.html#fig:PaleopolyploidyTree">14</a>. En particular, la poliploidía es frecuente en muchas de las especies vegetales, y algunas animales, de interés productivo. Ejemplo de esto son las bananas
+usual en diferentes especies de todos los dominios de la vida, como se observa en la Figura <a href="variacion.html#fig:PaleopolyploidyTree">3.8</a>. En particular, la poliploidía es frecuente en muchas de las especies vegetales, y algunas animales, de interés productivo. Ejemplo de esto son las bananas
 y sandías sin semillas (triploides), el maní y las moras (tetraploides),
 o el trigo y el boniato (hexaploides). En algunos casos, como el de la frutilla,
 el número básico de cromosomas (7) es repetido diferente número de
@@ -1701,7 +1355,7 @@ octaploides y hasta decaploides.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:PaleopolyploidyTree"></span>
 <img src="figuras/PaleopolyploidyTree.png" alt="Eventos de paleopoliploidías (poliploidías que datan de millones de años) en la evolución, con evidencia fuerte (puntos rojos) y eventos putativos (puntos amarillos). Figura extraída de Wikipedia, creada por Peter Zhang, (CC BY-SA 3.0)" width="80%" />
 <p class="caption">
-Figura 14: Eventos de paleopoliploidías (poliploidías que datan de millones de años) en la evolución, con evidencia fuerte (puntos rojos) y eventos putativos (puntos amarillos). Figura extraída de Wikipedia, creada por Peter Zhang, (CC BY-SA 3.0)
+Figura 3.8: Eventos de paleopoliploidías (poliploidías que datan de millones de años) en la evolución, con evidencia fuerte (puntos rojos) y eventos putativos (puntos amarillos). Figura extraída de Wikipedia, creada por Peter Zhang, (CC BY-SA 3.0)
 </p>
 </div>
 <p>Las frecuencias alélicas esperadas en equilibrio Hardy-Weinberg se pueden calcular a partir de la generalización fórmula que describe el equilibrio para
@@ -1756,8 +1410,8 @@ ambos).</p>
 </ul>
 </div>
 </div>
-<div id="geometría-y-genética-los-diagramas-de-de-finetti" class="section level2 hasAnchor">
-<h2>Geometría y Genética: los diagramas de <em>de Finetti</em><a href="variacion.html#geometría-y-genética-los-diagramas-de-de-finetti" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="geometría-y-genética-los-diagramas-de-de-finetti" class="section level2 hasAnchor" number="3.10">
+<h2><span class="header-section-number">3.10</span> Geometría y Genética: los diagramas de <em>de Finetti</em><a href="variacion.html#geometría-y-genética-los-diagramas-de-de-finetti" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><img src="figuras/topicoav.png" style="width:13.0%" /></p>
 <p>Aunque nos pueda parecer algo extraño, existe una fuerte conexión entre
 genética y geometría. De hecho, como veremos más adelante, Sewall Wright <a href="#fn31" class="footnote-ref" id="fnref31"><sup>31</sup></a> imaginó la evolución como un paisaje adaptativo, con
@@ -1775,13 +1429,13 @@ dicho teorema.<br />
 El teorema de Viviani <a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a> establece que, para triángulos equiláteros, la
 suma de las distancias desde cualquier punto interno del mismo a los
 tres lados es igual a la altura del triángulo. Para demostrarlo nos
-basaremos en el esquema de la Figura <a href="variacion.html#fig:Viviani">15</a>, donde dentro
+basaremos en el esquema de la Figura <a href="variacion.html#fig:Viviani">3.9</a>, donde dentro
 del triángulo de vértices <strong>A</strong>, <strong>B</strong> y <strong>C</strong>, con altura <span class="math inline">\(h\)</span> y lado
 <span class="math inline">\(a\)</span>, tenemos al punto <strong>P</strong>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:Viviani"></span>
 <img src="figuras/Viviani_theorem.png" alt="Triángulo usado para demostrar el teorema de Viviani. Figura tomada de Wikipedia, CC0 (Archivo:Viviani Theorem.svg)." width="60%" />
 <p class="caption">
-Figura 15: Triángulo usado para demostrar el teorema de Viviani. Figura tomada de Wikipedia, CC0 (Archivo:Viviani Theorem.svg).
+Figura 3.9: Triángulo usado para demostrar el teorema de Viviani. Figura tomada de Wikipedia, CC0 (Archivo:Viviani Theorem.svg).
 </p>
 </div>
 <p>Llamemos <strong>s</strong>, <strong>t</strong> y <strong>u</strong> a las
@@ -1808,7 +1462,7 @@ iguales) como muestra la Figura <a href="#deFinetti" reference-type="ref" refere
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:deFinetti"></span>
 <img src="figuras/deFinetti_diagram.png" alt="Diagrama de de Finetti.Figura tomada de Wikipedia, CC BY-SA 2.5 (Archivo:De Finetti diagram.svg)." width="60%" />
 <p class="caption">
-Figura 16: Diagrama de de Finetti.Figura tomada de Wikipedia, CC BY-SA 2.5 (Archivo:De Finetti diagram.svg).
+Figura 3.10: Diagrama de de Finetti.Figura tomada de Wikipedia, CC BY-SA 2.5 (Archivo:De Finetti diagram.svg).
 </p>
 </div>
 <p>Denotamos <span class="math inline">\(p\)</span> a la frecuencia del alelo <span class="math inline">\(A\)</span> y <span class="math inline">\(q=1-p\)</span> la
@@ -1822,7 +1476,7 @@ estamos en algún vértice, la distancia al lado opuesto es igual a 1, o
 lo que es lo mismo, la frecuencia del correspondiente genotipo es de 1
 (todos los individuos son de ese genotipo). Tenemos entonces que cada distancia a
 un lado del triángulo representa la frecuencia del genotipo en el
-vértice opuesto. A medida de que nos apartamos de los vértices comienzan a aparecer distancias no nulas a los dos otros lados, además de al lado opuesto al vértice. Esto se ve gráficamente en la Figura <a href="variacion.html#fig:deFinetti">16</a>, donde las distancias <strong>x</strong>, <strong>y</strong> y <strong>z</strong>
+vértice opuesto. A medida de que nos apartamos de los vértices comienzan a aparecer distancias no nulas a los dos otros lados, además de al lado opuesto al vértice. Esto se ve gráficamente en la Figura <a href="variacion.html#fig:deFinetti">3.10</a>, donde las distancias <strong>x</strong>, <strong>y</strong> y <strong>z</strong>
 representan las frecuencias de los genotipos <strong>AA</strong>,
 <strong>Aa</strong> y <strong>aa</strong>, respectivamente. Que la suma de las frecuencias de los genotipos sea
 igual a 1 está garantizado por el teorema de Viviani.</p>
@@ -1835,7 +1489,7 @@ de los heterocigotas (<strong>Aa</strong>) y, como ya vimos previamente (Secció
 equilibrio de Hardy-Weinberg la misma describe una parábola en función
 de la frecuencia del alelo <strong>A</strong> (<span class="math inline">\(p\)</span>, o en forma alternativa del otro
 alelo). Por lo tanto, el equilibrio de Hardy-Weinberg se encuentra
-representado en la Figura <a href="variacion.html#fig:deFinetti">16</a> por la curva que va desde el vértice <strong>aa</strong> al
+representado en la Figura <a href="variacion.html#fig:deFinetti">3.10</a> por la curva que va desde el vértice <strong>aa</strong> al
 vértice <strong>AA</strong>. Es decir, solo los puntos que se encuentran en esta
 curva (y por lo tanto las distancias asociadas a los lados) representan
 configuraciones de genotipos que se encuentran en equilibrio de
@@ -1846,7 +1500,7 @@ poblaciones en equilibrio de Hardy-Weinberg usualmente no produce una
 población conjunta en equilibrio H-W (antes de la reproducción). Esto suele resultar en la deficiencia en el número de heterocigotos
 respecto a la frecuencia esperada del promedio de las frecuencias
 alélicas en las dos poblaciones. Para ver esto en la Figura
-<a href="variacion.html#fig:deFinetti">16</a>, supongamos que tenemos dos poblaciones <strong>1</strong> y <strong>2</strong> (del mismo tamaño)
+<a href="variacion.html#fig:deFinetti">3.10</a>, supongamos que tenemos dos poblaciones <strong>1</strong> y <strong>2</strong> (del mismo tamaño)
 que se encuentran en equilibrio H-W, y por lo tanto son puntos sobre la
 curva. La frecuencias del alelo <strong>A</strong> en cada una de esta poblaciones
 será el segmento de recta izquierdo en el eje entre los vértices <strong>AA</strong>
@@ -1865,8 +1519,8 @@ serie de “cónicas” (curvas resultantes de cortar un cono variando el
 ángulo del plano de corte) que también pasan por los vértices <strong>AA</strong> y
 <strong>aa</strong>.</p>
 </div>
-<div id="estimacion-abo" class="section level2 hasAnchor">
-<h2>La estimación de frecuencias en el locus ABO<a href="variacion.html#estimacion-abo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="estimacion-abo" class="section level2 hasAnchor" number="3.11">
+<h2><span class="header-section-number">3.11</span> La estimación de frecuencias en el locus ABO<a href="variacion.html#estimacion-abo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><img src="figuras/topicoav.png" style="width:13.0%" /></p>
 <p>Los métodos elaborados para la estimación de las frecuencias hacen
 uso del concepto de máxima verosimilitud, pero <span class="citation">(<a href="#ref-pmid6598211">Yasuda 1984</a>)</span> propuso un
@@ -1893,13 +1547,13 @@ lo predicho por el equilibrio de Hardy-Weinberg, los homocigotas
 por lo que la fracción de homocigotas <span class="math inline">\(h_A\)</span> será</p>
 <p><span class="math display" id="eq:hA">\[\begin{equation}
 h_A=\frac{p^2}{p^2+2pr}=\frac{p^2}{p(p+2r)}=\frac{p}{p+2r}
-\tag{20}
+\tag{3.10}
 \end{equation}\]</span></p>
 <p>Es decir, si sumamos las contribuciones de AB, todos los A y el resto de
 los A homocigotos, tenemos</p>
 <p><span class="math display" id="eq:pYasuda">\[\begin{equation}
 p=\frac{[AB+A+Ah_A]}{2T}
-\tag{21}
+\tag{3.11}
 \end{equation}\]</span></p>
 <p>Si definimos a partir de los fenotipos observables A y O, <span class="math inline">\(k_A=O/(A+O)\)</span>, entonces podemos expresar
 <span class="math inline">\(k_A\)</span> en términos de lo esperable bajo equilibrio Hardy-Weinberg como</p>
@@ -1908,9 +1562,9 @@ p=\frac{[AB+A+Ah_A]}{2T}
 k_A=\frac{Tr^2}{T(p^2+2pr)+Tr^2}= \frac{r^2}{p^2+2pr+r^2}=\frac{r^2}{(p+r)^2}=[r/(p+r)]^2\\
 \therefore \sqrt{k_A}=\frac{r}{(p+r)}
 \end{split}
-\tag{22}
+\tag{3.12}
 \end{equation}\]</span></p>
-<p>¿Cuál es la relación entre <span class="math inline">\(h_A\)</span> y <span class="math inline">\(k_A\)</span>? Usando las definiciones de <span class="math inline">\(h_A\)</span> (ecuación <a href="variacion.html#eq:hA">(20)</a>) y <span class="math inline">\(k_A\)</span> (ecuación <a href="variacion.html#eq:kA">(22)</a>), tenemos que</p>
+<p>¿Cuál es la relación entre <span class="math inline">\(h_A\)</span> y <span class="math inline">\(k_A\)</span>? Usando las definiciones de <span class="math inline">\(h_A\)</span> (ecuación <a href="variacion.html#eq:hA">(3.10)</a>) y <span class="math inline">\(k_A\)</span> (ecuación <a href="variacion.html#eq:kA">(3.12)</a>), tenemos que</p>
 <p><span class="math display" id="eq:hAkA">\[\begin{equation}
 \begin{split}
 h_A=\frac{p}{p+2r}=\frac{p+r-r}{p+r+r}=\frac{\frac{p+r-r}{p+r}}{\frac{p+r+r}{p+r}}=\frac{\frac{p+r}{p+r}-\frac{r}{p+r}}{\frac{p+r}{p+r}+\frac{r}{p+r}}=\\
@@ -1918,14 +1572,14 @@ h_A=\frac{p}{p+2r}=\frac{p+r-r}{p+r+r}=\frac{\frac{p+r-r}{p+r}}{\frac{p+r+r}{p+r
 h_A=\frac{1-\sqrt{k_A}}{1+\sqrt{k_A}}=\frac{(1-\sqrt{k_A})}{(1+\sqrt{k_A})} \frac{(1-\sqrt{k_A})}{(1-\sqrt{k_A})}=\\
 =\frac{(1-\sqrt{k_A})^2}{1-k_A}
 \end{split}
-\tag{23}
+\tag{3.13}
 \end{equation}\]</span></p>
 <p>¡Excelente! Tenemos la relación entre <span class="math inline">\(h_A\)</span> y <span class="math inline">\(k_A\)</span> (expresada de dos
 formas), pero aún nos falta llegar a una forma de <span class="math inline">\(h_A\)</span> que sea una
 función de cantidades observables, es decir los fenotipos. Si recordamos
 la definición de <span class="math inline">\(k_A\)</span> a partir de los fenotipos observables
 (<span class="math inline">\(k_A=O/(A+O)\)</span>) y sustituimos en la ecuación
-<a href="variacion.html#eq:hAkA">(23)</a>, tenemos</p>
+<a href="variacion.html#eq:hAkA">(3.13)</a>, tenemos</p>
 <p><span class="math display">\[\begin{equation}
 \begin{split}
 h_A=\frac{(1-\sqrt{k_A})^2}{1-k_A}  \Leftrightarrow  h_A (1-k_A)=(1-\sqrt{k_A})^2 \Leftrightarrow h_A (1-\frac{O}{A+O})=1-2\sqrt{k_A}+k_A
@@ -1938,7 +1592,7 @@ h_A (\frac{A+O}{A+O} - \frac{O}{A+O}) =  h_A (\frac{A+O-O}{A+O})=1-2 \cdot \sqrt
 \end{split}
 \end{equation}\]</span></p>
 <p>Finalmente, si volvemos al principio con este resultado y sustituimos en
-<a href="variacion.html#eq:pYasuda">(21)</a>, tenemos el estimador basado en conteo</p>
+<a href="variacion.html#eq:pYasuda">(3.11)</a>, tenemos el estimador basado en conteo</p>
 <p><span class="math display">\[\begin{equation}
 \begin{split}
 \hat{p}=\frac{[AB+A+Ah_A]}{2T}=\frac{[AB+A+(A+2O-2\sqrt{O(A+O)})]}{2T} \therefore \\
@@ -1982,15 +1636,15 @@ E(O)=r^2T=0,5678058^2\cdot 1500=483,6051=484,
 <p>lo que coincide estrechamente con los números observados, por lo que <strong>no podemos descartar que la población se encuentre en equilibrio Hardy-Weinberg</strong> (en general no podemos resolver a favor de una hipótesis alternativa basados en la estadística, a lo sumo podemos afirmar que la misma es completamente improbable dados los supuestos del test que aplicamos).</p>
 </div>
 </div>
-<div id="conclusión-1" class="section level2 hasAnchor">
-<h2>Conclusión<a href="variacion.html#conclusión-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="conclusión-1" class="section level2 hasAnchor" number="3.12">
+<h2><span class="header-section-number">3.12</span> Conclusión<a href="variacion.html#conclusión-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En este capítulo planteamos un modelo matemático básico, el equilibrio de Hardy-Weinberg, para realizar predicciones sobre las frecuencias genotípicas observadas en una población partiendo de las frecuencias alélicas existentes en la misma. A su vez observamos cómo el modelo es fácilmente ajustable a distintas situaciones de interés biológico. Las asunciones del modelo pueden resultar muy poco realistas (¿qué población natural tiene tamaño infinito?, ¿dónde se vió que los individuos se apareen al azar?). Si bien esto puede parecer una debilidad del modelo, en capítulos posteriores veremos cómo el equilibrio de Hardy-Weinberg puede utilizarse como una hipótesis nula para contrastar si es viable plantear que una población natural se comporta o no bajo alguna de las premisas del modelo. Gracias a su simpleza, el modelo resulta una excelente puerta de entrada al uso de la matemática para el estudio de la genética de poblaciones, aproximación de la que nos seguiremos nutriendo en lo que resta de este libro.</p>
 <div style="page-break-after: always;"></div>
 </div>
-<div id="actividades-1" class="section level2 hasAnchor">
-<h2>Actividades<a href="variacion.html#actividades-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="control-de-lectura-1" class="section level3 hasAnchor">
-<h3>Control de lectura<a href="variacion.html#control-de-lectura-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="actividades-1" class="section level2 hasAnchor" number="3.13">
+<h2><span class="header-section-number">3.13</span> Actividades<a href="variacion.html#actividades-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="control-de-lectura-1" class="section level3 hasAnchor" number="3.13.1">
+<h3><span class="header-section-number">3.13.1</span> Control de lectura<a href="variacion.html#control-de-lectura-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Varias de las asunciones necesarias para que se cumpla el modelo de equilibrio de Hardy-Weinberg no parecen ser realistas. ¿Cuál es la utilidad del modelo, si esto es así? Plantee al menos un ejemplo donde se viole alguna de las asunciones del modelo, y discuta la utilidad del modelo en dicho caso.</li>
 <li>Describa qué sucede con las frecuencias alélicas esperadas en una población cuando existen diferentes proporciones de individuos machos y hembras.</li>
@@ -2001,8 +1655,8 @@ a. ¿En qué medida afectan los tamaños muestrales en este contexto?
 b. Nombre al menos un método que permita la determinación de los alelos presentes en un individuo muestreado.</li>
 </ol>
 </div>
-<div id="verdadero-o-falso-1" class="section level3 hasAnchor">
-<h3>¿Verdadero o falso?<a href="variacion.html#verdadero-o-falso-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="verdadero-o-falso-1" class="section level3 hasAnchor" number="3.13.2">
+<h3><span class="header-section-number">3.13.2</span> ¿Verdadero o falso?<a href="variacion.html#verdadero-o-falso-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Si se cambian las frecuencias alélicas <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span> de una población que se encuentra en equilibrio Hardy-Weinberg, las mismas se ajustarán en la próxima generación y volverán a su valor inicial (lo cual implica que las frecuencias genotípicas permanecerán invariables). A esta propiedad es que alude la palabra “equilibrio”.</li>
 <li>El modelo de equilibrio de Hardy-Weinberg predice que un alelo que sea letal en homocigosis no será eliminado de una población si el fenotipo heterocigota es indistinguible del resto de los fenotipos homocigotas.</li>
@@ -2236,7 +1890,7 @@ f(\text{Albino}) = f(F_bF_b;\ E_\text{.}E_\text{.})  + f(F_\text{.}F_\text{.}; E
 </div>
 </div>
 </div>
-<h3>Bibliografía<a href="bibliografia.html#bibliografia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3> Bibliografía<a href="bibliografia.html#bibliografia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-pmid23717440" class="csl-entry">
 Allais-Bonnet, A., C. Grohs, I. Medugorac, S. Krebs, A. Djari, A. Graf, S. Fritz, et al. 2013. <span>“<span class="nocase"><span>N</span>ovel insights into the bovine polled phenotype and horn ontogenesis in <span>B</span>ovidae</span>.”</span> <em>PLoS ONE</em> 8 (5): e63512.
