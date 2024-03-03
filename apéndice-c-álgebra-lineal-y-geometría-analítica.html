@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
+  <title>Apéndice C: Álgebra lineal y geometría analítica | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa</title>
   <meta name="description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  <meta property="og:title" content="Apéndice C: Álgebra lineal y geometría analítica | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
+  <meta name="twitter:title" content="Apéndice C: Álgebra lineal y geometría analítica | Introducción a la Genética de Poblaciones y a la Genética Cuantitativa" />
   
   <meta name="twitter:description" content="Apuntes del curso Genética II. Contenido teórico mínimo para el seguimiento del curso" />
   
@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="apéndice-b-cálculo-diferencial-e-integral.html"/>
+<link rel="next" href="apéndice-d-probabilidad-y-estadística.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -421,19 +421,237 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="apéndice-c-álgebra-lineal-y-geometría-analítica" class="section level1 unnumbered hasAnchor">
+<h1>Apéndice C: Álgebra lineal y geometría analítica<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#apéndice-c-álgebra-lineal-y-geometría-analítica" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="matrices" class="section level2 hasAnchor" number="15.19">
+<h2><span class="header-section-number">15.19</span> MATRICES<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#matrices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Se define una matriz <span class="math inline">\(A\)</span> de <span class="math inline">\(m\)</span> filas y <span class="math inline">\(n\)</span> columnas (<span class="math inline">\(m \times n\)</span>) como una función <span class="math inline">\(A: {1,...,m} \times {1,...,n} \rightarrow \mathbb{R}\)</span> con entradas <span class="math inline">\(a_{ij}\)</span> donde la <span class="math inline">\(i\)</span> indica a qué fila pertenece y la <span class="math inline">\(j\)</span> la columna. Se reprensenta de la siguiente forma:</p>
+<p><span class="math display">\[A = \begin{pmatrix} a_{11} &amp; a_{12} &amp; ... &amp; a_{1n} \\ a_{21} &amp; a_{22} &amp; ... &amp; a_{2n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{m1} &amp; a_{m2} &amp; ... &amp; a_{mn} \end{pmatrix}\]</span></p>
+<p><em>Ejemplo:</em></p>
+<p><span class="math display">\[A = \begin{pmatrix} 1 &amp; 1 &amp; 2 &amp; 1\\ 4 &amp; 3 &amp; -1 &amp; 1 \\ -1 &amp; 1 &amp; 3 &amp; 3 \end{pmatrix}\]</span>
+Matriz de <span class="math inline">\(3 \times 4\)</span>, tres filas y cuatro columnas.</p>
+<div id="relación-con-los-sistemas-de-ecuaciones" class="section level3 hasAnchor" number="15.19.1">
+<h3><span class="header-section-number">15.19.1</span> Relación con los sistemas de ecuaciones<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#relación-con-los-sistemas-de-ecuaciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sea el sistema de ecuaciones
+<span class="math display">\[\begin{cases} a_{11}x_1 + a_{12}x_2 + ... + a_{1n}x_n = b_1 \\ a_{21}x_1 + a_{22}x_2 + ... + a_{2n}x_n = b_2 \\
+\vdots\\
+a_{m1}x_1 + a_{m2}x_2 + ... + a_{mn}x_n = b_m \end{cases}\]</span></p>
+<p>se le llama <em>matriz del sistema de ecuaciones</em> a la matriz <span class="math inline">\(A\)</span> de dimensión <span class="math inline">\((m,n)\)</span> que contiene los coeficientes del mismo:</p>
+<p><span class="math display">\[\begin{pmatrix} a_{11} &amp; a_{12} &amp; ... &amp; a_{1n}\\ a_{21} &amp; a_{22} &amp; ... &amp; a_{2n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{m1} &amp; a_{m2} &amp; ... &amp; a_{mn} \end{pmatrix}\]</span></p>
+<p>y <em>matriz ampliada del sistema</em> a la matriz de dimensión <span class="math inline">\((m,n+1)\)</span> que contiene los coeficientes y el término independiente:
+<span class="math display">\[\begin{pmatrix} a_{11} &amp; a_{12} &amp; ... &amp; a_{1n}\\ a_{21} &amp; a_{22} &amp; ... &amp; a_{2n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{m1} &amp; a_{m2} &amp; ... &amp; a_{mn} \end{pmatrix} | \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}\]</span></p>
+<p><em>Ejemplo:</em>
+El sistema de ecuaciones
+<span class="math display">\[\begin{cases} x + y + 2z = 9 \\ 3x + 6y - 5z = 0 \\
+2x + 4y - 3z = 1 \end{cases}\]</span></p>
+<p>La matriz del sistema de ecuaciones en este caso es:
+<span class="math display">\[A = \begin{pmatrix} 1 &amp; 1 &amp; 2 \\ 3 &amp; 6 &amp; -5 \\ 2 &amp; 4 &amp; -3 \end{pmatrix}\]</span></p>
+<p>y la matriz ampliada es:
+<span class="math display">\[A = \begin{pmatrix} 1 &amp; 1 &amp; 2 \\ 3 &amp; 6 &amp; -5 \\ 2 &amp; 4 &amp; -3 \end{pmatrix} | \begin{pmatrix} 9 \\ 0 \\  1 \end{pmatrix}\]</span></p>
+<p>A partir de la matriz ampliada se puede aplicar un método sencillo para resolver el sistema de ecuaciones. Aplicando transformaciones elementales (interamcio, suma y resta entre filas de la matriz), se puede llevar la matriz a su formato <em>escalerizado</em> y así despejar las incógnitas del sistema. Una matriz se encuentra escalerizada si cumple con las siguientes condiciones:
+1. Todas las filas, salvo (quizás) la primera, comienzan con una sucesión de ceros.
+2. Cada fila tiene al principio por lo menos un cero más que la fila inmediata superior.</p>
+<p>Se deja para el lector revisar a fondo la bibliografía sobre el método de escalerización, cómo realizarlo y cómo usarlo para resolver el sistema de ecuaciones.</p>
+<p><em>Ejemplo:</em>
+Se muestra a continuación un ejemplo de matriz escalerizada:
+<span class="math display">\[E = \begin{pmatrix} 3 &amp; 6 &amp; -5 &amp; 1 &amp; 1 &amp; 2 \\ 0 &amp; -2 &amp; -1 &amp; -3 &amp; 3 &amp; 2 \\ 0 &amp; 0 &amp; 1 &amp; 2 &amp; 4 &amp; -3 \\ 0 &amp; 0 &amp; 0 &amp; -2 &amp; -4 &amp; 3 \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 5 \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; -2 \end{pmatrix} | \begin{pmatrix} -1 \\ 1 \\ 3 \\ 1 \\-2 \\ 1 \end{pmatrix}\]</span></p>
+</div>
+<div id="álgebra-de-matrices" class="section level3 hasAnchor" number="15.19.2">
+<h3><span class="header-section-number">15.19.2</span> Álgebra de matrices<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#álgebra-de-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A continuación se definiran algunas operaciones con matrices.</p>
+<div id="suma-de-matrices" class="section level4 hasAnchor" number="15.19.2.1">
+<h4><span class="header-section-number">15.19.2.1</span> Suma de matrices:<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#suma-de-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sean A y B dos matrices de <span class="math inline">\(m \times n\)</span> con coeficientes <span class="math inline">\((a_{ij})\)</span> y <span class="math inline">\((b_{ij})\)</span>, <span class="math inline">\(i = 0,...,m\)</span>, <span class="math inline">\(j = 0,...,n\)</span>. Se define la suma de matrices <span class="math inline">\((+)\)</span> de manera que <span class="math inline">\(A+B = C\)</span> con <span class="math inline">\(C\)</span> de coeficientes <span class="math inline">\((c_{ij})\)</span> y <span class="math inline">\(c_{ij} = a_{ij} + b_{ij}\)</span>. Es importante notar que para sumar dos matrices, deben ser de la misma dimensión.</p>
+<p><em>Ejemplo:</em>
+La suma de las matrices <span class="math inline">\(A = \begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; \frac{1}{2} \end{pmatrix}\)</span> y <span class="math inline">\(B = \begin{pmatrix} 0 &amp; 2 &amp; 1 \\ 0 &amp; 5 &amp; 5 \\ 0 &amp; 4 &amp; \frac{1}{2} \end{pmatrix}\)</span> da como resultado la matriz
+<span class="math display">\[C = \begin{pmatrix} 1 &amp; 4 &amp; 4 \\ 1 &amp; 5 &amp; 5 \\ 0 &amp; 4 &amp; 1 \end{pmatrix}\]</span></p>
+<p>Cada coeficiente de la matriz resultante es la suma de los coeficientes en la misma posición de las matrices sumando.</p>
+</div>
+<div id="resta-de-matrices" class="section level4 hasAnchor" number="15.19.2.2">
+<h4><span class="header-section-number">15.19.2.2</span> Resta de matrices:<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#resta-de-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sean A y B dos matrices de <span class="math inline">\(m \times n\)</span> con coeficientes <span class="math inline">\((a_{ij})\)</span> y <span class="math inline">\((b_{ij})\)</span>, <span class="math inline">\(i = 0,...,m\)</span>, <span class="math inline">\(j = 0,...,n\)</span>. Se define la resta de matrices <span class="math inline">\((-)\)</span> de manera que <span class="math inline">\(A-B = C\)</span> con <span class="math inline">\(C\)</span> de coeficientes <span class="math inline">\((c_{ij})\)</span> y <span class="math inline">\(c_{ij} = a_{ij} - b_{ij}\)</span> Es importante notar que para restar dos matrices deben ser de la misma dimensión.</p>
+<p><em>Ejemplo:</em>
+La resta de <span class="math inline">\(A = \begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; \frac{1}{2} \end{pmatrix}\)</span> y <span class="math inline">\(B = \begin{pmatrix} 0 &amp; 2 &amp; 1 \\ 0 &amp; 5 &amp; 5 \\ 0 &amp; 4 &amp; \frac{1}{2} \end{pmatrix}\)</span> da como resultado la matriz
+<span class="math display">\[C = \begin{pmatrix} 1 &amp; 0 &amp; 2 \\ 1 &amp; -5 &amp; -5 \\ 0 &amp; -4 &amp; 0 \end{pmatrix}\]</span></p>
+<p>Cada coeficiente de la matriz resultante es la resta de los coeficientes en la misma posición de las matrices sumando.</p>
+</div>
+<div id="producto-de-matriz-y-escalar" class="section level4 hasAnchor" number="15.19.2.3">
+<h4><span class="header-section-number">15.19.2.3</span> Producto de matriz y escalar:<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#producto-de-matriz-y-escalar" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sea <span class="math inline">\(\lambda \in \mathbb{R}\)</span> y <span class="math inline">\(A\)</span> una matriz de dimensión <span class="math inline">\(m \times n\)</span> y coeficientes <span class="math inline">\((a_{ij})\)</span>. Se define el producto de <span class="math inline">\(\lambda\)</span> y <span class="math inline">\(A\)</span> tal que <span class="math inline">\(\lambda A = B\)</span>, donde cada coeficiente <span class="math inline">\(b_{ij} = \lambda a_{ij}\)</span>.</p>
+<p><em>Ejemplo:</em>
+Sean <span class="math inline">\(A = \begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; \frac{1}{2} \end{pmatrix}\)</span> y <span class="math inline">\(\lambda = 3\)</span>, la matriz <span class="math inline">\(B\)</span> que resulta del producto <span class="math inline">\(\lambda A\)</span> es:
+<span class="math display">\[B = \begin{pmatrix} 3 &amp; 6 &amp; 9 \\ 3 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; \frac{3}{2} \end{pmatrix}\]</span></p>
+</div>
+<div id="producto-de-matrices" class="section level4 hasAnchor" number="15.19.2.4">
+<h4><span class="header-section-number">15.19.2.4</span> Producto de matrices:<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#producto-de-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sea <span class="math inline">\(A\)</span> una matriz de <span class="math inline">\(m \times p\)</span> y <span class="math inline">\(B\)</span> de dimensión <span class="math inline">\(p \times n\)</span>, se define el producto entre ellas como <span class="math inline">\(A \cdot B = C\)</span> de dimensión <span class="math inline">\(m \times n\)</span>, con los coeficientes <span class="math inline">\(c_{ij} = \sum_{h=1}^p a_{ih}b_{hj}\)</span>. A diferencia de la suma y la resta, las matrices a multiplicar no necesariamente deben tener iguales dimensiones. Lo que deben cumplir es que sean <em>matrices conformables</em>, la cantidad de columnas de la primera debe ser igual a la cantidad de filas de la segunda.</p>
+<p>El producto entre matrices no es conmutativo. Para matrices conformables de distintas dimensiones, si se da vuelta el orden de las matrices a multiplicar, la operación queda mal definida. En caso de poder realizarse el producto con factores conmutados, el resultado es distinto.</p>
+<p><em>Ejemplo:</em>
+Se muestra el producto entre matrices con un ejemplo, que ayudará a entender mejor las operaciones a realizar.</p>
+<p><span class="math inline">\(A = \begin{pmatrix} 1 &amp; 2 &amp; 1 \\ 3 &amp; -1 &amp; 2 \\ 1 &amp; -1 &amp; 1 \\ -2 &amp; -3 &amp; -1 \end{pmatrix}\)</span> y <span class="math inline">\(B = \begin{pmatrix} 1 &amp; 1 \\ 2 &amp; 1 \\ -1 &amp; 1 \end{pmatrix}\)</span></p>
+<p>Para hallar el coeficiente de la fila y columna uno, se toma la primera fila de <span class="math inline">\(A\)</span> y la primera columna de <span class="math inline">\(B\)</span>. Se multiplican posición a posición y se suman los resultados. La primera fila de <span class="math inline">\(A\)</span> es <span class="math inline">\(\begin{pmatrix} 1 &amp; 2 &amp; 1 \end{pmatrix}\)</span> mientras que la columna de <span class="math inline">\(B\)</span> es <span class="math inline">\(\begin{pmatrix} 1 &amp; 2 &amp; -1 \end{pmatrix}\)</span>. El producto entre ellos posición a posición es <span class="math inline">\(\begin{pmatrix} 1 &amp; 4 &amp; -1 \end{pmatrix}\)</span>. La suma de estos tres valores es <span class="math inline">\(4\)</span>, por lo que <span class="math inline">\(c_{11} = 4\)</span>. Para <span class="math inline">\(c_{21}\)</span> se toma la segunda fila de <span class="math inline">\(A\)</span> y la primera columna de <span class="math inline">\(B\)</span> y se procede de la misma forma.</p>
+<p>Repitiendo el procedimiento para todos los <span class="math inline">\(c_{ij}\)</span>, se obtiene una matrix de dimensión <span class="math inline">\(4 \times 2\)</span>,
+<span class="math display">\[C = \begin{pmatrix} 4 &amp; 6 \\ -1 &amp; 4 \\ -2 &amp; 1 \\ -7 &amp; -6\end{pmatrix}\]</span></p>
+</div>
+<div id="trasposición" class="section level4 hasAnchor" number="15.19.2.5">
+<h4><span class="header-section-number">15.19.2.5</span> Trasposición:<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#trasposición" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sea la matriz <span class="math inline">\(A\)</span> de dimensiones <span class="math inline">\(m \times n\)</span> con coeficientes <span class="math inline">\((a_{ij})\)</span>, se define la matriz traspuesta <span class="math inline">\(A^t\)</span> como <span class="math inline">\(A^t = ((a_{ij}^t)) = ((a_{ji}))\)</span>.</p>
+<p><em>Ejemplo:</em>
+Sea <span class="math display">\[A = \begin{pmatrix} 1 &amp; 2 &amp; 1 \\ 3 &amp; -1 &amp; 2 \\ 1 &amp; -1 &amp; 1 \\ -2 &amp; -3 &amp; -1 \end{pmatrix}\]</span> su matriz traspuesta queda:
+<span class="math display">\[A^t = \begin{pmatrix} 1 &amp; 3 &amp; 1 &amp; -2 \\ 2 &amp; -1 &amp; -1 &amp; -3 \\ 1 &amp; 2 &amp; 1 &amp; -1\end{pmatrix}\]</span></p>
+<p><strong>Propiedades de la matriz traspuesta:</strong>
+1. <span class="math inline">\((A+B)^t = A^t + B^t\)</span>
+2. <span class="math inline">\((\lambda^t A)^t = \lambda A^t\)</span>
+3. <span class="math inline">\((A\cdot B)^t = B^t \cdot A^t\)</span>
+4. <span class="math inline">\((A^t)^t = A\)</span></p>
+</div>
+<div id="inversión" class="section level4 hasAnchor" number="15.19.2.6">
+<h4><span class="header-section-number">15.19.2.6</span> Inversión:<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#inversión" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Para definir la inversión de matrices es importante previamente definir la <em>Matriz Identidad</em>. Se le llama <em>identidad</em> de tamaño <span class="math inline">\(n\)</span> a la matriz de dimensiones <span class="math inline">\(n \times n\)</span> tal que:
+<span class="math display">\[\mathbb{I}_n = \begin{pmatrix} 1 &amp; 0 &amp; ... &amp; 0 \\ 0 &amp; 1 &amp; ... &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 0 &amp; 0 &amp; ... &amp; 1 \end{pmatrix}\]</span></p>
+<p>Tiene unos únicamente en la diagonal, mientras que el resto de los coeficientes son cero. Esta matriz cumple la propiedad de neutro del producto matricial, por lo que <span class="math inline">\(A\cdot \mathbb{I}_n = \mathbb{I}_n \cdot A = A\)</span>.</p>
+<p>Se define, ahora sí, una <em>matriz invertible</em>. Se dice que una matriz <span class="math inline">\(A\)</span> de <span class="math inline">\(n \times n\)</span> es invertible si y solo si existe una matriz <span class="math inline">\(B\)</span> de <span class="math inline">\(n \times n\)</span> tal que <span class="math inline">\(A\cdot B = \mathbb{I}_n = B \cdot A\)</span>.</p>
+<p>Las matrices invertibles son sí o sí matrices cuadradas. La matriz <span class="math inline">\(B\)</span> que multiplicada por <span class="math inline">\(A\)</span> devuelve la identidad es una matriz única y se le denomina <em>matriz inversa de <span class="math inline">\(A\)</span></em>, cumpliendo que <span class="math inline">\(B = A^{-1}\)</span>.</p>
+<p><strong>Propiedad de la matriz inversa:</strong>
+Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> dos matrices cuadradas de dimensión <span class="math inline">\(n\)</span>:
+<span class="math display">\[(A\cdot B)^{-1} = B^{-1} \cdot A^{-1}\]</span></p>
+</div>
+</div>
+<div id="determinante-de-una-matriz" class="section level3 hasAnchor" number="15.19.3">
+<h3><span class="header-section-number">15.19.3</span> Determinante de una matriz<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#determinante-de-una-matriz" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El <em>determinante</em> de una matriz cuadrada es un número, real o complejo, que se calcula a partir de cada matriz. Se trabajará con la definición inductiva del determinante, donde para una matriz de tamaño <span class="math inline">\(n \times n\)</span> se define a partir del determinante de una matriz de <span class="math inline">\((n-1) \times (n-1)\)</span>.</p>
+<p>El determinante de <span class="math inline">\(A\)</span>, <span class="math inline">\(|A|\)</span>, de una matriz de <span class="math inline">\(1 \times 1\)</span> es el propio número. Para una matriz de <span class="math inline">\(2 \times 2\)</span>, <span class="math inline">\(A = \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}\)</span> el determinante es el número <span class="math inline">\(|A| = ad - bc\)</span>. Para una matriz de <span class="math inline">\(n \times n\)</span>, el determinante se define como: <span class="math display">\[\Rightarrow |A| = (-1)^{1+1} a_{11}|A_{11}|+ ... + (-1)^{i+1}a_{i1}|A_{i1}|+...+(-1)^{n+1}a_{n1}|A_{n1}|\]</span></p>
+<p><em>Ejemplos:</em></p>
+<ol style="list-style-type: decimal">
+<li>Calcular el determinante de la siguiente matriz: <span class="math inline">\(A = \begin{pmatrix} 1 &amp; 1 &amp; 2 \\ 0 &amp; 1 &amp; 1 \\ -1 &amp; 4 &amp; -1 \end{pmatrix}\)</span>.</li>
+</ol>
+<p><span class="math display">\[\Rightarrow |A| = (-1)^2 (1) \left| \begin{pmatrix} 1 &amp; 1 \\ 4 &amp; -1 \end{pmatrix} \right| + (-1)^3(0) \left| \begin{pmatrix} 1 &amp; 2 \\ 4 &amp; -1 \end{pmatrix} \right| + (-1)^4 (-1) \left| \begin{pmatrix} 1 &amp; 2 \\ 1 &amp; 1 \end{pmatrix} \right|\]</span>
+<span class="math display">\[= -5 + 0 + (-1)(-1) = -4\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Calcular el determinante de <span class="math inline">\(B = \begin{pmatrix} 1 &amp; 1 &amp; 2 &amp; 1 \\ 1 &amp; 0 &amp; 2 &amp; 1 \\ 0 &amp; 0 &amp; 4 &amp; 3 \\ 3 &amp; 3 &amp; 3 &amp; 0\end{pmatrix}\)</span></li>
+</ol>
+<p><span class="math display">\[\Rightarrow |B| = (-1)^2(1) \left| \begin{pmatrix} 0 &amp; 2 &amp; 1 \\ 0 &amp; 4 &amp; 3 \\ 3 &amp; 3 &amp; 0 \end{pmatrix} \right| + (-1)^3(1) \left|  \begin{pmatrix} 1 &amp; 2 &amp; 1 \\ 0 &amp; 4 &amp; 3 \\ 3 &amp; 3 &amp; 0 \end{pmatrix} \right| + (-1)^4 (0) \left| \begin{pmatrix} 1 &amp; 2 &amp; 1 \\ 0 &amp; 2 &amp; 1 \\ 3 &amp; 3 &amp; 0 \end{pmatrix} \right| + (-1)^5(3)\left|  \begin{pmatrix} 1 &amp; 2 &amp; 1 \\ 0 &amp; 2 &amp; 1 \\ 0 &amp; 4 &amp; 3 \end{pmatrix} \right| = 6 + 3 - 6 = 3\]</span></p>
+<p>Los determinantes de las matrices <span class="math inline">\(3 \times 3\)</span> se calcularon como en el ejemplo <span class="math inline">\((1)\)</span>.</p>
+<p>Si bien se definió el determinante utilizando los elementos de la primera columna y sus matrices adjuntas, por propiedades del determinante puede utilizarse cualquier fila o columna que el lector crea conveniente.</p>
+<p>El determinante tiene gran importancia en la inversión de matrices. En primera instancia, una matriz cuadrada que tenga determinante cero no es invertible. Además, si se tiene una matriz de <span class="math inline">\(2 \times 2\)</span> <span class="math inline">\(A = \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}\)</span>, la matriz inversa se puede calcular como:
+<span class="math display">\[A^{-1} = \frac{1}{|A|} \begin{pmatrix} d &amp; -b \\ -c &amp; a\end{pmatrix}\]</span></p>
+</div>
+</div>
+<div id="norma-producto-escalar-y-producto-vectorial" class="section level2 hasAnchor" number="15.20">
+<h2><span class="header-section-number">15.20</span> NORMA, PRODUCTO ESCALAR Y PRODUCTO VECTORIAL<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#norma-producto-escalar-y-producto-vectorial" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="vectores" class="section level3 hasAnchor" number="15.20.1">
+<h3><span class="header-section-number">15.20.1</span> Vectores<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#vectores" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un vector <span class="math inline">\(\vec{x}\)</span> es un elemento geométrico que consiste de una flecha que parte desde el origen y va hasta un punto de dimensión <span class="math inline">\(n\)</span> determinado por las coordenadas <span class="math inline">\(x_i\)</span>. Los vectores son elementos con módulo (determinado por el largo), dirección y sentido (hacia donde va la flecha), siendo estos dos representables por el ángulo del vector.</p>
+<p>El ángulo también se puede utilizar para medir cuánto difieren dos vectores entre sí. Si el ángulo entre ellos es cero, son colineales y apuntan en el mismo sentido. Si es de <span class="math inline">\(180°\)</span>, son colineales pero tienen sentidos opuestos. Si es de <span class="math inline">\(90°\)</span> o <span class="math inline">\(270°\)</span> se dice que son ortogonales.</p>
+</div>
+</div>
+<div id="agregar-imagen-vectores" class="section level2 hasAnchor" number="15.21">
+<h2><span class="header-section-number">15.21</span> AGREGAR IMAGEN VECTORES<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#agregar-imagen-vectores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="distancia-y-norma" class="section level3 hasAnchor" number="15.21.1">
+<h3><span class="header-section-number">15.21.1</span> Distancia y norma<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#distancia-y-norma" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se define la <em>distancia entre dos puntos</em> como la longitud del segmento entre ellos, una función <span class="math inline">\(d: E \times E \rightarrow \mathbb{R}^+\)</span>, que satisface:
+1. <span class="math inline">\(d(A,B) = d(B,A) \: \forall A \in E\)</span>
+2. <span class="math inline">\(d(A,B) = 0 \Leftrightarrow A = B\)</span>
+3. <span class="math inline">\(d(A,C) \leq d(A,B) + d(B,C) \: \forall A,B,C \in E\)</span></p>
+<p>A partir de la distancia, se define la <em>norma de un vector</em> <span class="math inline">\(v = \vec{AB}\)</span> como la distancia <span class="math inline">\(d(A,B)\)</span> y se denota como <span class="math inline">\(||v||\)</span>. La norma cumple que:
+1. <span class="math inline">\(||v|| \geq 0; ||v|| = 0 \Leftrightarrow v = \vec{0}\)</span>
+2. <span class="math inline">\(||av|| = |a| ||v|| \: \forall a \in \mathbb{R}, \: \forall v \in V\)</span>
+3. <span class="math inline">\(||u+v|| \leq ||u|| + ||v|| \: \forall u,v \in V\)</span></p>
+<p>En particular, siendo <span class="math inline">\(A = (x_a, y_a)\)</span> y <span class="math inline">\(B = (x_b, y_b)\)</span>, se define la norma dos como <span class="math inline">\(||v||_2 = \sqrt{(x_a - x_b)^2 + (y_a - y_b)^2}\)</span>.</p>
+</div>
+<div id="producto-escalar" class="section level3 hasAnchor" number="15.21.2">
+<h3><span class="header-section-number">15.21.2</span> Producto escalar<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#producto-escalar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dados los vectores <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span> de <span class="math inline">\(V\)</span>, se llama <em>producto escalar</em> o <em>producto interno</em> de <span class="math inline">\(u\)</span> por <span class="math inline">\(v\)</span> al número escalar <span class="math inline">\(||u||\,||v|| cos \theta\)</span>, donde <span class="math inline">\(\theta\)</span> es el ángulo BAC de tres puntos tales que <span class="math inline">\(\vec{AB} = u\)</span> y <span class="math inline">\(\vec{AC} = v\)</span>.</p>
+<p><strong>Propiedades:</strong>
+1. <span class="math inline">\(u \cdot v = v \cdot u\)</span>
+2. <span class="math inline">\((a \cdot u) \cdot v = a \cdot (u \cdot v) = u \cdot (a \cdot v)\)</span>
+3. <span class="math inline">\((u_1 + u_2) \cdot v = u_1\cdot v + u_2 \cdot v\)</span>
+4. <span class="math inline">\(v \dot v \geq 0 y v \cdot v = 0 \Leftrightarrow v = 0\)</span></p>
+<div id="ortogonalidad-y-producto-escalar" class="section level4 hasAnchor" number="15.21.2.1">
+<h4><span class="header-section-number">15.21.2.1</span> Ortogonalidad y producto escalar:<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#ortogonalidad-y-producto-escalar" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dos vectores <span class="math inline">\(u, v\)</span> son ortogonales si <span class="math inline">\(u \cdot v = 0\)</span>.</p>
+</div>
+</div>
+<div id="producto-vectorial" class="section level3 hasAnchor" number="15.21.3">
+<h3><span class="header-section-number">15.21.3</span> Producto vectorial<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#producto-vectorial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se define el <em>producto vectorial</em> como una función <span class="math inline">\(V \times V \rightarrow V\)</span> que a cada par de vectores <span class="math inline">\(v, u\)</span> le asocia un vector, que se denota <span class="math inline">\(v \wedge u\)</span>, que cumple:
+1. <span class="math inline">\(||v \wedge u||=||v|| \cdot ||u|| sen \theta\)</span> donde <span class="math inline">\(\theta\)</span> es el ángulo entre <span class="math inline">\(v\)</span> y <span class="math inline">\(u\)</span>.
+2. <span class="math inline">\((v\wedge u)\cdot v = 0\)</span> y <span class="math inline">\((v\wedge u) \cdot u = 0\)</span></p>
+<p>Además, <span class="math inline">\(v \wedge u = 0\)</span> si y solo si <span class="math inline">\(v\)</span> y <span class="math inline">\(u\)</span> son colineales (en particular, si alguno de ellos es el vector <span class="math inline">\(\vec{0}\)</span>).</p>
+</div>
+</div>
+<div id="transformaciones-lineales" class="section level2 hasAnchor" number="15.22">
+<h2><span class="header-section-number">15.22</span> TRANSFORMACIONES LINEALES<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#transformaciones-lineales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> dos espacios vectoriales sobre el mismo cuerpo <span class="math inline">\(K\)</span>. Se define como una <em>transformación lineal</em> a una función <span class="math inline">\(T: V\rightarrow W\)</span> que cumple:
+1. <span class="math inline">\(T(u+v) = T(u) + T(v)\)</span> <span class="math inline">\(\forall u, v \in V\)</span>.
+2. <span class="math inline">\(T(a\cdot v) = aT(v)\)</span> <span class="math inline">\(\forall a \in K\)</span>, <span class="math inline">\(\forall v \in V\)</span>.</p>
+<p><em>Ejemplo:</em>
+Sea <span class="math inline">\(C^1 = \{f: \mathbb{R} \rightarrow \mathbb{R} / f\)</span> es derivable<span class="math inline">\(\}\)</span> y <span class="math inline">\(F = \{f: \mathbb{R}\rightarrow \mathbb{R}\}\)</span></p>
+<p>La transformación <span class="math inline">\(T: C^1 \rightarrow F\)</span> tal que <span class="math inline">\(T(f) = f&#39;\)</span> es una transformación lineal ya que cumple:
+1. <span class="math inline">\(T(f_1 + f_2) = (f_1+f_2)&#39; = f_1&#39; + f_2&#39; = T(f_1) + T(f_1)\)</span>
+2. <span class="math inline">\(T(\alpha f) = (\alpha f)&#39; = \alpha f&#39; = \alpha T(f)\)</span></p>
+<div id="núcleo-e-imagen-de-una-transformación-lineal" class="section level3 hasAnchor" number="15.22.1">
+<h3><span class="header-section-number">15.22.1</span> Núcleo e Imagen de una Transformación Lineal<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#núcleo-e-imagen-de-una-transformación-lineal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sean <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> espacios vectoriales sobre un mismo cuerpo <span class="math inline">\(K\)</span> y <span class="math inline">\(T: V\rightarrow W\)</span> una transformación lineal. Se define el <em>núcleo de la transformación lineal</em> <span class="math inline">\(T\)</span> al conjunto de <span class="math inline">\(V\)</span> cuya imagen por <span class="math inline">\(T\)</span> es el vector nulo <span class="math inline">\(\Rightarrow N(T) = \{ v \in V: \: T(v) = \vec{0}\}\)</span> La imagen de <span class="math inline">\(T\)</span> es el conjunto <span class="math inline">\(Im(T) = \{w \in W: \: \exists v \in V\)</span> con <span class="math inline">\(w = T(v)\}\)</span></p>
+</div>
+<div id="geometría-de-matrices" class="section level3 hasAnchor" number="15.22.2">
+<h3><span class="header-section-number">15.22.2</span> Geometría de matrices<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#geometría-de-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se definen un vector <span class="math inline">\(\vec{x}\)</span> y otro vector <span class="math inline">\(\vec{y}\)</span> tal que <span class="math inline">\(y = Ax\)</span>. El vector <span class="math inline">\(\vec{y}\)</span> tendrá coordenadas distintas a las del vector <span class="math inline">\(\vec{x}\)</span> a menos que <span class="math inline">\(A\)</span> sea una matriz cuadrada. Por lo tanto, se dice que <span class="math inline">\(A\)</span> describe una transformación (en particular rotación y escalado) del sistema de coordenadas de <span class="math inline">\(x\)</span> a un nuevo sistema de coordenadas <span class="math inline">\(y\)</span>.</p>
+<p>Para definir las componentes de rotación y escalado de una matriz, conviene comenzar definiendo una matriz ortonormal. Una matriz <span class="math inline">\(U\)</span> es ortonormal si: <span class="math display">\[\mathbf{u}_i^T \mathbf{u}_j = \begin{cases} 1 \; if \;i = j \\  0 \; if \;i \neq j\end{cases}\]</span></p>
+<p>También se denominan <em>unitarias</em> y cumplen que <span class="math inline">\(\mathbf{U}^T\mathbf{U}=\mathbf{I}\)</span>.</p>
+<p>Si se multiplica un vector por estas matrices, no hay escalado si no únicamente rotación dado que las matrices ortonormales preservan los productos internos. Las matrices de rotación son de la forma <span class="math display">\[\begin{pmatrix} cos\phi &amp; -sen\phi \\ sen\phi &amp; cos\phi \end{pmatrix}\]</span></p>
+<p>donde <span class="math inline">\(\phi\)</span> determina el ángulo de rotación.</p>
+<p>La transformación de escalado quedará descripta por los valores y vectores propios a tratar en la siguiente sección.</p>
+</div>
+</div>
+<div id="valores-y-vectores-propios" class="section level2 hasAnchor" number="15.23">
+<h2><span class="header-section-number">15.23</span> VALORES Y VECTORES PROPIOS<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#valores-y-vectores-propios" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="de-una-transformación-lineal" class="section level3 hasAnchor" number="15.23.1">
+<h3><span class="header-section-number">15.23.1</span> De una transformación lineal:<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#de-una-transformación-lineal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sea <span class="math inline">\(V\)</span> un espacio vectorial sobre el conjunto de escalares <span class="math inline">\(\mathbb{K}\)</span> y <span class="math inline">\(T: V \rightarrow V\)</span> una transformación lineal. Se llama <em>vector propio</em> de <span class="math inline">\(T\)</span>, asociado al <em>valor propio</em> <span class="math inline">\(\lambda \in \mathbb{K}\)</span> a todo vector <span class="math inline">\(\vec{v} \neq 0\)</span> tal que <span class="math inline">\(T(v) = \lambda v\)</span>.</p>
+<p>Los valores propios describen como será el escalado de los vectores en su nuevo espacio vectorial que queda determinado por los vectores propios.</p>
+</div>
+<div id="de-una-matriz" class="section level3 hasAnchor" number="15.23.2">
+<h3><span class="header-section-number">15.23.2</span> De una matriz:<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#de-una-matriz" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sea <span class="math inline">\(A\)</span> una matriz cuadrada con entradas en <span class="math inline">\(\mathbb{K}\)</span>. Se llama <em>vector propio</em> de <span class="math inline">\(A\)</span> asociado al <em>valor propio</em> <span class="math inline">\(\lambda \in \mathbb{K}\)</span> a todo vector no nulo de <span class="math inline">\(\mathbb{K}^n\)</span> tal que:
+<span class="math display">\[A \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = \lambda \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}\]</span></p>
+<p><strong>Proposición:</strong>
+Sean <span class="math inline">\(V\)</span> un espacio vectorial sobre el cuerpo <span class="math inline">\(\mathbb{K}\)</span>, <span class="math inline">\(T : V \rightarrow V\)</span> una transformación lineal y <span class="math inline">\(A\)</span> una matriz asociada a la transformación lineal <span class="math inline">\(T\)</span>. Entonces <span class="math inline">\(\lambda\)</span> es valor propio de <span class="math inline">\(T\)</span> si y solo si <span class="math inline">\(\lambda \in \mathbb{K}\)</span> y <span class="math inline">\(\text{det} (A - \lambda I) = 0\)</span>.</p>
+<p>Se le llama <em>polinomio característico</em> de una matriz cuadrada al polinomio representado por <span class="math inline">\(x_A{\lambda}\)</span> que resulta de calcular <span class="math inline">\(\text{det} (A-\lambda I)\)</span>. La <em>ecuación característica</em> es <span class="math inline">\(x_A{\lambda} = 0\)</span> y a todas las soluciones de ella se les llama <em>raíces características</em>. Estas soluciones, como se vio previamente, son los valores propios.</p>
+<p><em>Ejemplo:</em>
+Hallar los valores propios de la matriz <span class="math inline">\(A\)</span> asociada a la transformación lineal <span class="math inline">\(T\)</span>:
+<span class="math display">\[A = \begin{pmatrix} 2 &amp; -1 &amp; 0 \\ 3 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\]</span></p>
+<p>Se calcula el determinante de <span class="math inline">\(A - \lambda I\)</span>:
+<span class="math display">\[\text{det}(A-\lambda I) = \left| \begin{pmatrix} 2-\lambda &amp; -1 &amp; 0 \\ 3 &amp; 2-\lambda &amp; 0 \\ 0 &amp; 0 &amp; 1-\lambda \end{pmatrix} \right| = (1-\lambda)(\lambda^2-4\lambda + 7) = 0\]</span></p>
+<p>Hallando las raíces de la ecuación previa se obtiene:</p>
+<p><span class="math display">\[\Rightarrow \begin{pmatrix} \lambda_1 = 1 \\ \lambda_ 2 = 2 + i\sqrt{3}\\ \lambda_3 = 2 - i\sqrt{3} \end{pmatrix}\]</span></p>
+<p>Para hallar los vectores propios, se sustituye cada uno de los valores propios en la matriz <span class="math inline">\(A - \lambda I\)</span> para resolver el sistema <span class="math display">\[(A - \lambda I) \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ \vdots \\ 0 \end{pmatrix}\]</span>.
+Será vector propio el vector <span class="math inline">\(v = \begin{pmatrix}x_1, x_2,...,x_n\end{pmatrix}\)</span> con <span class="math inline">\(x_1, x_2,...,x_n\)</span> soluciones del sistema.</p>
+</div>
+<div id="diagonalización-de-una-matriz" class="section level3 hasAnchor" number="15.23.3">
+<h3><span class="header-section-number">15.23.3</span> Diagonalización de una matriz<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#diagonalización-de-una-matriz" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se le denomina <em>matriz diagonal</em> a aquellas matrices que todos sus términos por fuera de la diagonal principal son nulos. Se busca llevar una matriz a su forma diagonal, para lo que se calcularán sus valores propios. Si <span class="math inline">\(A\)</span> tiene <span class="math inline">\(n\)</span> valores propios reales, se puede definir una matriz <span class="math inline">\(D\)</span> diagnoal, tal que <span class="math inline">\(A = P^{-1}DP\)</span> donde <span class="math inline">\(P\)</span> es una matriz invertible compuesta por los vectores propios en columnas. Además, en ese caso, <span class="math inline">\(D = \begin{pmatrix} \lambda_1 &amp; 0 &amp; ... &amp; 0 \\ 0 &amp; \lambda_2 &amp; ... &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 0 &amp; 0 &amp; ... &amp; \lambda_n \end{pmatrix}\)</span>.</p>
+<p>La matriz <span class="math inline">\(D\)</span> es única a menos del orden de <span class="math inline">\(\lambda_1, \lambda_2, ... , \lambda_n\)</span>. A la matriz <span class="math inline">\(P\)</span> la llamamos <em>base</em> de la transformación a diferencia de <span class="math inline">\(D\)</span> no es única.</p>
+</div>
+</div>
+<div id="derivada-de-la-forma-cuadrática" class="section level2 hasAnchor" number="15.24">
+<h2><span class="header-section-number">15.24</span> DERIVADA DE LA FORMA CUADRÁTICA<a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html#derivada-de-la-forma-cuadrática" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Queremos estudiar la derivada de la forma cuadrática: <span class="math inline">\(f(x) = \mathbf{x}^T \mathbf{A} \mathbf{x}\)</span> donde <span class="math inline">\(\mathbf{x}\)</span> es un vector en <span class="math inline">\(\mathbf{R^m}\)</span> y <span class="math inline">\(A\)</span> una matriz de dimensión <span class="math inline">\(m \times m\)</span>. Reescribiendo de forma tal que se nombra a la transformada <span class="math inline">\(\mathbf{A}\mathbf{x}\)</span> como una función <span class="math inline">\(y(x)\)</span> se llega a que <span class="math inline">\(f(x,y(x)) = \mathbf{x}^T y(x)\)</span>.</p>
+<p>Se puede derivar <span class="math inline">\(f(x)\)</span> usando la fórmula de derivada total, obteniendo que <span class="math inline">\(f&#39;(x,y(x)) = \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y}y&#39;(x)\)</span>.</p>
+<p>Para llegar a la expresión final, se realizará el análisis de cada sumando de manera independiente.</p>
+<p>En primera instancia, se calcula la derivada <span class="math inline">\(\frac{\partial f}{\partial x} = \frac{\partial x^T y(x)}{\partial x}\)</span>. Tomando <span class="math inline">\(y(x)\)</span> fijo, la derivada de la expresión es la derivada de un producto interno, por lo que resulta en <span class="math inline">\(\frac{\partial x^Ty(x)}{\partial x} = y(x)^T = \mathbf{x}^T \mathbf{A}^T\)</span>.</p>
+<p>El segundo sumando tiene por un lado la derivada de la función <span class="math inline">\(f\)</span> según <span class="math inline">\(y\)</span>, que siguiendo el procedimiento del previamente explicado es <span class="math inline">\(\mathbf{x}^T\)</span>. Por otro lado, <span class="math inline">\(y&#39;(x)\)</span> es la derivada del producto de una matriz y un vector, que resulta en la matriz. Por lo tanto, el segundo sumando nos queda <span class="math inline">\(\frac{\partial f}{\partial y}.y&#39;(x) = \mathbf{x}^T \mathbf{A}\)</span>.</p>
+<p>Sustituyendo y operando, se obtiene <span class="math inline">\(f&#39;(x,y(x)) = 2\mathbf{x}^T \mathbf{A}^T\)</span>.</p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="apéndice-b-cálculo-diferencial-e-integral.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="apéndice-d-probabilidad-y-estadística.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -464,7 +682,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/%s",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/18-apendice03.rmd",
 "text": "Edit"
 },
 "history": {

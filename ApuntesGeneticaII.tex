@@ -148,6 +148,7 @@
 \captionsetup[figure]{font=small}
 \usepackage{soul}
 \usepackage{wasysym}
+\usepackage{icomma}
   
 %\usepackage{fancyhdr}
 %
@@ -194,7 +195,7 @@
 \definecolor{myred}{RGB}{255,0,0} % Define the color
 \definecolor{MyRed}{RGB}{140,0,0}
 
-\titleformat{\chapter}[display]{\Huge\bfseries}{\thechapter\hsp\textcolor{red!75!black}{|}\hsp #1}{0pt}{\Huge\bfseries}
+\titleformat{\chapter}[display]{\Large\bfseries}{\thechapter\hsp\textcolor{red!75!black}{|}\hsp #1 }{0pt}{\Large\bfseries}
 
 %\titleformat{\section}[frame] 
 %  {\setlength\fboxrule{3pt}\bfseries\itshape\fontsize{12.8}{14}\selectfont\color{red}}
@@ -231,11 +232,11 @@
 \makeatother  
   
 \titleformat{\section}[block]%
-{\LARGE\bfseries}%
-{}{0pt}{\vhrulefill\space\color{red!75!black} #1 \space\vhrulefill\null}  
+{\scshape\large}%
+{}{0pt}{\color{red!75!black}{\vhrulefill}\space \color{black}{#1} \space\color{red!75!black}{\vhrulefill}\null}  
   
-\titlespacing{\chapter}{0pt}{-35pt}{35pt}
-\titlespacing{\section}{0pt}{0pt}{-15pt}
+\titlespacing{\chapter}{0pt}{-35pt}{0pt}
+%\titlespacing{\section}{0pt}{0pt}{-15pt}
 
 \titleformat{name=\chapter,numberless}[display]
 {}
@@ -411,13 +412,13 @@
 \urlstyle{same}
 \hypersetup{
   pdftitle={Introducción a la Genética de Poblaciones y a la Genética Cuantitativa},
-  pdfauthor={Hugo Naya; Federica Marín; Mauricio Langleib; (Jorge Urioste, María André, Andrea Larracharte, Washington Bell,; Ana Laura Sánchez, Micaela Botta, Paula Batista, Rodrigo Vivián, Paola Gaiero)},
+  pdfauthor={Hugo Naya; Federica Marín; Mauricio Langleib; (Graciana Castro)},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
 \title{Introducción a la Genética de Poblaciones y a la Genética Cuantitativa}
-\author{Hugo Naya\footnote{Genética Cuantitativa Evolutiva/GD Mejoramiento Genético Animal, Facultad de Agronomía, \href{mailto:hnaya@fagro.edu.uy}{\nolinkurl{hnaya@fagro.edu.uy}} \& Unidad de Bioinformática, Institut Pasteur de Montevideo, \href{mailto:naya@pasteur.edu.uy}{\nolinkurl{naya@pasteur.edu.uy}}} \and Federica Marín\footnote{(EDICIÓN GENERAL, ejercicios, ejemplos, etc.), GD Mejoramiento Genético Animal, Departamento de Producción Animal y Pasturas, Facultad de Agronomía} \and Mauricio Langleib\footnote{(EDICIÓN GENERAL, ejercicios, ejemplos, etc.), GD Mejoramiento Genético Animal, Departamento de Producción Animal y Pasturas, Facultad de Agronomía \& Unidad de Bioinformática, Institut Pasteur de Montevideo} \and (Jorge Urioste, María André, Andrea Larracharte, Washington Bell, \and Ana Laura Sánchez, Micaela Botta, Paula Batista, Rodrigo Vivián\footnote{(Ejercicios de la guía práctica, ejemplos, presentaciones, plataforma), GD Mejoramiento Genético Animal, Departamento de Producción Animal y Pasturas, Facultad de Agronomía}, Paola Gaiero)\footnote{(Ejercicios de la guía práctica, ejemplos, etc.), Departamento de Biología Vegetal, Facultad de Agronomía}}
-\date{2024-02-28}
+\author{Hugo Naya\footnote{Genética Cuantitativa Evolutiva/GD Mejoramiento Genético Animal, Facultad de Agronomía, \href{mailto:hnaya@fagro.edu.uy}{\nolinkurl{hnaya@fagro.edu.uy}} \& Unidad de Bioinformática, Institut Pasteur de Montevideo, \href{mailto:naya@pasteur.edu.uy}{\nolinkurl{naya@pasteur.edu.uy}}} \and Federica Marín\footnote{GD Mejoramiento Genético Animal, Departamento de Producción Animal y Pasturas, Facultad de Agronomía} \and Mauricio Langleib\footnote{GD Mejoramiento Genético Animal, Departamento de Producción Animal y Pasturas, Facultad de Agronomía \& Unidad de Bioinformática, Institut Pasteur de Montevideo} \and (Graciana Castro)\footnote{(Apéndices), Instituto de Ingeniería Eléctrica, Facultad de Ingeniería}}
+\date{2024-03-02}
 
 \begin{document}
 \maketitle
@@ -548,15 +549,20 @@ Los siguientes son una seria de libros que recomendamos tener a mano para seguir
 \section*{Responsabilidades y Agradecimientos}\label{responsabilidades-y-agradecimientos}
 \addcontentsline{toc}{section}{Responsabilidades y Agradecimientos}
 
-El presente material es parte de un trabajo colectivo que hemos desarrollado para que los estudiantes del curso \textbf{Genética II} cuenten con lo necesario para introducirse en un enfoque ciertamente demandante de la genética. Estos materiales incluyen, además del presente libro, una \textbf{Guía Práctica} con abundantes ejercicios, una \textbf{Guía de Referencia Rápida} con los elementos imprescindibles para resolver los ejercicios, diferentes presentaciones que iremos poniendo a disposición con el avance del curso y la plataforma (\textbf{AGROS}) desde donde desarrollaremos el curso. Por lo tanto, es difícil delimitar las contribuciones y responsabilidades individuales concretas en todos los materiales, por lo que preferimos incluirnos todos entre los autores de esta obra, con poco detalle de tareas específicas.
+El presente material es parte de un trabajo colectivo que hemos desarrollado para que los estudiantes del curso \textbf{Genética II} cuenten con lo necesario para introducirse en un enfoque ciertamente demandante de la genética. Estos materiales incluyen, además del presente libro, una \textbf{Guía Práctica} con abundantes ejercicios, una \textbf{Guía de Referencia Rápida} con los elementos imprescindibles para resolver los ejercicios, diferentes presentaciones que iremos poniendo a disposición con el avance del curso y la plataforma (\textbf{AGROS}) desde donde desarrollaremos el curso. Por lo tanto, es difícil delimitar las contribuciones y responsabilidades individuales concretas en todos los materiales.
 
-Sin embargo, hay responsabilidades y trabajos que corresponde sean reconocidos explícitamente. En primer lugar, la responsabilidad total sobre cualquier error u omisión en la obra es completamente del primer autor y coordinador del trabajo (HN), tanto por haberla cometido directamente o por no haber identificado la misma en los aportes de otros. El magnífico trabajo de \textbf{edición} fue responsabilidad de Federica Marín, que durante el transcurso de la escritura se encontró con innumerables errores de ``tipeo'' (cuando no ortográficos), algunas frases de difícil lectura y otras sin sentido aparente, todo superado en forma eficiente y con gran independencia. Además, Federica es responsable de una parte importante de los ``\textbf{PARA RECORDAR}'' que encontrarás al final de cada sección relevante del libro y que además constituyen la base de la \textbf{Guía de Referencia Rápida}.
+En lo que respecta al \(\underline{libro}\), la presente versión se basa en el material creado para la primera edición del curso por \textbf{HN}, tanto en lo que hace a la estructura, como en lo que hace a los contenidos principales. En dicha versión, el magnífico trabajo de \textbf{edición} fue responsabilidad de \textbf{FM}, que durante el transcurso de la escritura se encontró con innumerables errores de ``tipeo'' (cuando no ortográficos), algunas frases de difícil lectura y otras sin sentido aparente, todo superado en forma eficiente y con gran independencia. Además, Federica fue responsable de una parte importante de los ``\textbf{PARA RECORDAR}'' que encontrarás al final de cada sección relevante del libro y que además constituyen la base de la \textbf{Guía de Referencia Rápida}. Sin embargo, la presente edición tiene mejoras notables y una cierta ``completitud'' que le faltaba a la primera versión. Gracias al apoyo recibido a través de los proyectos concursables para la generación de \textbf{Manuales Didácticos} de la Comisión Sectorial de Enseñanza de la Universidad de la República, fue posible aspirar a completar los materiales, lo que nos lleva a la presente edición. En especial, dichos fondos permitieron financiar la incorporación al equipo de \textbf{ML}, que editó toda la presente edición, generó diversos ejercicios con soluciones, organizó desde el punto de vista pedagógico los materiales (objetivos del capítulo, ¿verdadero o falso?, controles de lectura), agregó y mejoró distintos contenidos y por fin, aseguró la calidad visual de los materiales generados, una tarea harto difícil con las limitaciones impuestas por \textbf{bookdown} (un precio a pagar por tener el material disponible en formato PDF y web). Finalmente, los contenidos que aparecen en los apéndices fueron creados en su casi totalidad por \textbf{Graciana Castro}, bajo un esquema inicial propuesto por \textbf{HN}. Graciana también fue financiada por el proyecto CSE y si bien no figura entre los autores principales, ya que los apéndices constituyen un material que puede leerse con completa independencia y que en general asumimos que se corresponde a conocimientos previos a la lectura del libro, el excelente tratamiento de los mismos en el breve espacio disponible igual constituyen casi cuatro pequeños capítulos.
 
-Otro aporte inestimable fue el del Profesor Jorge I. Urioste, Profesor Titular y responsable del Grupo Disciplinario de Mejoramiento Genético Animal durante muchísimos años y hasta hace poco. En buena parte este libro es resultado de diversas conversaciones que tuvimos a lo largo de los años donde siempre surgió la necesidad de generar materiales adaptados a los cursos de nuestra responsabilidad. En particular, el curso de ``Zootecnia'' siempre fue un ejemplo en este sentido ya que contaba con el libro de Cardellino and Rovira (\citeproc{ref-CardellinoRovira1987}{1987}) como referencia directa, casi capítulo a capítulo, lo que le permitía a los estudiantes poder seguirlo, aún sin poder asistir a los teóricos. Precisamente, la necesidad de actualizar el libro de Cardellino and Rovira (\citeproc{ref-CardellinoRovira1987}{1987}) para acomodar los enormes avances en genómica que ocurrieron desde su publicación original fue uno de los impulsores hacia aventurarnos en la tarea. Más allá del enorme aporte de Jorge en este sentido más general, concretamente para este libro su aporte más importante consistió en la lectura dedicada de cada capítulo, las abundantes correcciones señaladas y nuevamente, los aportes conceptuales sobre la docencia y la comunicación con los estudiantes.
+En términos generales, un aporte inestimable fue el del Profesor Jorge I. Urioste, Profesor Titular y responsable del Grupo Disciplinario de Mejoramiento Genético Animal durante muchísimos años y hasta hace poco. En buena parte este libro es resultado de diversas conversaciones que tuvimos a lo largo de los años donde siempre surgió la necesidad de generar materiales adaptados a los cursos de nuestra responsabilidad. En particular, el curso de ``Zootecnia'' siempre fue un ejemplo en este sentido ya que contaba con el libro de Cardellino and Rovira (\citeproc{ref-CardellinoRovira1987}{1987}) como referencia directa, casi capítulo a capítulo, lo que le permitía a los estudiantes poder seguirlo, aún sin poder asistir a los teóricos. Precisamente, la necesidad de actualizar el libro de Cardellino and Rovira (\citeproc{ref-CardellinoRovira1987}{1987}) para acomodar los enormes avances en genómica que ocurrieron desde su publicación original fue uno de los impulsores hacia aventurarnos en la tarea. Más allá del enorme aporte de Jorge en este sentido más general, concretamente para este libro su aporte más importante consistió en la lectura dedicada de cada capítulo, las abundantes correcciones señaladas y nuevamente, los aportes conceptuales sobre la docencia y la comunicación con los estudiantes.
 
-María André y Andrea Larracharte fueron las responsables de completar con ejemplos y ejercicios los diversos espacios disponibles a su arribo, que fueron numerosos, especialmente en la tercera parte del libro (la que tiene que ver con Genética Cuantitativa), así como aportar nuevos ejercicios a la \textbf{Guía Práctica}. Micaela Botta, Paula Batista y Washington Bell son los responsables del armado de la mayor parte de las \textbf{presentaciones} que acompañan al curso. Washington, es además co-responsable junto con Ana Laura Sánchez de la plataforma \textbf{AGROS}, donde Ana Laura se hizo cargo de crear la nueva base de datos con ejercicios y evaluaciones. Nicolás Vivián se responsabilizó del armado de la \textbf{Guía de Referencia Rápida}, utilizando el material del libro. Por último, tanto el resto del Grupo Disciplinario MGA (Ana Carolina Espasandín, Rodrigo López-Correa, Camila Etchevarría), como la gente del Departamento de Biología Vegetal (Clara Pritsch, Paola Gaiero y Marianella Quezada), siempre contribuyeron con comentarios y aportes, buscando una fuerte integración de los conceptos genéticos a lo largo de la carrera de Ingeniero Agrónomo. Otros varios amigos y colegas colaboraron con la lectura de algunos capítulos (Daniel Naya) o simplemente cubriéndonos en tareas de nuestra responsabilidad (Martín Graña, Lucía Spangenberg). En todo caso, \textbf{cualquier error u omisión en cualquiera de los trabajos es completa responsabilidad del primer autor} (HN).
+María André y Andrea Larracharte fueron las responsables de completar con ejemplos y ejercicios algunos de los diversos espacios disponibles a su arribo, que fueron numerosos, especialmente en la tercera parte del libro (la que tiene que ver con Genética Cuantitativa), así como aportar nuevos ejercicios a la \textbf{Guía Práctica}. Micaela Botta, Paula Batista y Washington Bell son los responsables del armado de la mayor parte de las \textbf{presentaciones} que acompañan al curso. Washington, es además co-responsable junto con Ana Laura Sánchez de la plataforma \textbf{AGROS}, donde Ana Laura se hizo cargo de crear la nueva base de datos con ejercicios y evaluaciones. Además, con fondos del proyecto CSE, Ana Laura se encargó de agregar ejercicios a la \textbf{Guía Práctica}. Nicolás Vivián se responsabilizó del armado de la \textbf{Guía de Referencia Rápida}, utilizando el material del libro. Por último, tanto el resto del Grupo Disciplinario MGA (Ana Carolina Espasandín, Rodrigo López-Correa, Camila Etchevarría), como la gente del Departamento de Biología Vegetal (Clara Pritsch, Paola Gaiero y Marianella Quezada), siempre contribuyeron con comentarios y aportes, buscando una fuerte integración de los conceptos genéticos a lo largo de la carrera de Ingeniero Agrónomo. Otros varios amigos y colegas colaboraron con la lectura de algunos capítulos (Daniel Naya) o simplemente cubriéndonos en tareas de nuestra responsabilidad (Martín Graña, Lucía Spangenberg). En todo caso, \textbf{cualquier error u omisión en cualquiera de los trabajos es completa responsabilidad del primer autor} (\textbf{HN}).
 
-Finalmente, el pequeño espacio para un par de agradecimientos personales. Durante el año que llevó la escritura de los materiales, contamos (HN) con el apoyo institucional, tanto de la \textbf{Facultad de Agronomía-Udelar}, como del \textbf{\emph{Institut Pasteur de Montevideo}}, lo que nos permitió dedicar gran parte de nuestro tiempo a la tarea (a veces en desmedro de otras actividades como la investigación). Sin embargo, el agradecimiento mayor es para Lucía, Guille, Agus, Marti, Alfo, Xime y Santi, así como para la familia toda, ya que aún en plena pandemia (con todas las dificultades adicionales que eso representa) sacrificaron una parte importante de los tiempos familiares para que pudiésemos concretar la tarea en tiempo y forma. Vaya para ellos entonces la dedicatoria de nuestro humilde trabajo.
+Finalmente, el pequeño espacio para un par de agradecimientos personales. Durante el año que llevó la escritura de los materiales originales, contamos (\textbf{HN}) con el apoyo institucional, tanto de la \textbf{Facultad de Agronomía-Udelar}, como del \textbf{\emph{Institut Pasteur de Montevideo}}, lo que nos permitió dedicar gran parte de nuestro tiempo a la tarea (a veces en desmedro de otras actividades como la investigación). Sin embargo, el agradecimiento mayor es para Lucía, Guille, Agus, Marti, Alfo, Xime y Santi, así como para la familia toda, ya que aún en plena pandemia (con todas las dificultades adicionales que eso representó) sacrificaron una parte importante de los tiempos familiares para que pudiésemos concretar la tarea en tiempo y forma.
+\textbf{ML} quisiera agradecer a la familia, amigxs y a la barra de UBi y Genómica Evolutiva por el apoyo de siempre. Además, vaya un agradecimiento especial a Zelig Langleib por inculcar el amor a los libros y la ciencia.
+
+Vaya para ellos entonces la dedicatoria de nuestro humilde trabajo.
+
+\newpage
 
 \section*{Íconos utilizados en este libro}\label{uxedconos-utilizados-en-este-libro}
 \addcontentsline{toc}{section}{Íconos utilizados en este libro}
@@ -592,9 +598,7 @@ Los organismos en nuestro planeta derivan todos de un organismo ancestral, desco
 
 La diversidad existente a nivel de organismos macroscópicos es evidente. El ser humano interacciona con la flora y la fauna desde sus inicios como especie. Entender, preservar e influir sobre esta diversidad biológica es lo que ha permitido en última instancia el desarrollo de las civilizaciones. Resulta intuitivo que enriquecer nuestra comprensión de esta diversidad con aportes desde la genómica pueda resultar valioso. Por otra parte, aunque invisibles los microorganismos juegan un papel relevante en casi todos los ecosistemas a diferentes escalas: desde bosques, praderas, ríos y mares a los ecosistemas internos (\emph{e.g.}, aparato digestivo) y externos (piel) de los organismos. A pesar de su importancia, la diversidad microbiana apenas ha sido explorada, fundamentalmente debido a las dificultades asociadas al cultivo de los microorganismos, muchos de ellos directamente no-cultivables. En este sentido, también la genómica ha jugado un rol destacado en los avances que se han producido en este campo en los últimos años. La \emph{metagenómica}, la \emph{metagenómica funcional} y la \emph{metatranscriptómica} han contribuido a entender la composición de los ecosistemas microbianos, las funciones de los genes involucrados y la regulación de su expresión, respectivamente. Mencionaremos cada una de estas aproximaciones en secciones posteriores de este capítulo.
 
-Aunque a primera vista la informática y la biología puedan parecer áreas de estudio muy alejadas (¿qué se aleja más de la vida que una fría máquina?), veremos que la obtención y procesamiento masivo de datos biológicos han permitido enriquecer de forma importante la perspectiva que tenemos sobre los organismos vivos y la transmisión de información de generación en generación, tanto a nivel individual como poblacional. A lo largo del libro iremos profundizando en esta perspectiva, empleando recursos informáticos para modelar procesos de la genética poblacional y cuantitativa, haciendo un uso enriquecedor de las tecnologías disponibles en la actualidad.
-
-\newpage
+Aunque a primera vista la informática y la biología puedan parecer áreas de estudio muy alejadas (¿qué se aleja más de la vida que una fría máquina?), veremos que la obtención y procesamiento masivo de datos biológicos han permitido enriquecer de forma importante la perspectiva que tenemos sobre los organismos vivos y la transmisión de información de generación en generación, tanto a nivel individual como poblacional. A lo largo del libro iremos profundizando en esta perspectiva, empleando recursos informáticos para modelar procesos de la genética poblacional y cuantitativa, haciendo un uso enriquecedor de las tecnologías disponibles en la actualidad.\\
 
 \begin{boxobjetivos}
 \(\square\) Abordar el fenómeno de la variabilidad genética, discutiendo el uso de métricas que nos permiten cuantificar la misma e introduciendo tecnologías que nos permiten la identificación de variantes genéticas en poblaciones.
@@ -609,8 +613,6 @@ Aunque a primera vista la informática y la biología puedan parecer áreas de e
 \(\square\) Repasar conceptos básicos de genética y biología molecular, ilustrando en cada caso cómo uso de herramientas estadísticas y computacionales enriquece nuestra perspectiva de los fenómenos biológicos.
 
 \end{boxobjetivos}
-
-\newpage
 
 \section{Variabilidad genética}\label{variabilidad-genuxe9tica}
 
@@ -2345,9 +2347,7 @@ tecnologías de genotipado y de secuenciado masivo (NGS, \emph{Next Generation
 Sequencing}, por ejemplo) esto ha cambiado definitivamente y hoy en día
 esto no solo es posible, sino que constituye una alternativa real en mejoramiento genético
 (por ejemplo genotipado de reproductores en varios programas de
-mejoramiento genético). Más allá de la definición que usemos para el concepto de alelo y en qué nivel de variación estemos pensando, es posible analizar la relación esperada entre la frecuencia de los distintos alelos y los genotipos que se forman por su combinación al azar. En este capítulo introduciremos un modelo matemático básico para esto (conocido como equilibrio de Hardy-Weinberg), el cual nos será de utilidad en varios capítulos posteriores. El uso de modelado matemático (y el contraste entre las predicciones de estos modelos y los datos observados en las poblaciones naturales) constituye una de las bases de la genética de poblaciones como disciplina.
-
-\newpage
+mejoramiento genético). Más allá de la definición que usemos para el concepto de alelo y en qué nivel de variación estemos pensando, es posible analizar la relación esperada entre la frecuencia de los distintos alelos y los genotipos que se forman por su combinación al azar. En este capítulo introduciremos un modelo matemático básico para esto (conocido como equilibrio de Hardy-Weinberg), el cual nos será de utilidad en varios capítulos posteriores. El uso de modelado matemático (y el contraste entre las predicciones de estos modelos y los datos observados en las poblaciones naturales) constituye una de las bases de la genética de poblaciones como disciplina.\\
 
 \begin{boxobjetivos}
 \(\square\) Introducir el modelo de Hardy-Weinberg. Este es un modelo matemático sencillo que, basado en una serie de premisas claras, nos permite estimar las frecuencias genotípicas esperadas en una población a partir de sus frecuencias alélicas.
@@ -4122,9 +4122,7 @@ Se puede verificar que esta frecuencia es equivalente a sumar las frecuencias de
 
 En el capítulo anterior (\hyperref[variacion]{Variación y equilibrio de Hardy-Weinberg}) comenzamos a entender los procesos que hay por detrás del mantenimiento de la variabilidad genética en las poblaciones de distintas especies. En particular, a partir de las reglas mecanísticas de la herencia mendeliana\footnote{Gregor Mendel (20 de julio 1822 - 6 de enero de 1884) fue un meteorólogo, biólogo y matemático, nacido en Heizendorf bei Odrau, Imperio Austro-Húngaro (hoy República Checa). Considerado el padre de la ``genética moderna'', realizó diversos experimentos con plantas que lo llevaron a postular algunas ``leyes'', decenas de años antes de conocerse las bases moleculares de la herencia.} vimos que una vez alcanzado el equilibrio, si no aparecen otras fuerzas, las frecuencias alélicas y genotípicas se mantienen constantes generación tras generación. Para esto hemos asumido varias cosas (\hyperref[supuestos-que-asumimos-se-cumplen-para-h-w]{Supuestos que asumimos se cumplen para H-W}), algunas más razonables que otras. En particular, una de las cosas que asumimos es que el tamaño de nuestra población es prácticamente infinito (con esto queremos decir un número realmente muy alto de individuos), una situación que no siempre se cumple en la práctica. Más aún, esto nos lleva al concepto de población en nuestro contexto: el conjunto de individuos que potencialmente podrían aparearse en igualdad de condiciones con cualquier otro de la misma población para dejar descendencia fértil. Se trata de un concepto fácil de comprender, pero en la práctica suele ser bastante más complejo delimitar sus alcances. Pensemos, por ejemplo, en las poblaciones de Corriedale (ovinos), Angus (bovino de carne) o de Holando (bovino de leche) del Uruguay. ¿Se cumplen los supuestos del equilibrio de Hardy-Weinberg?. ¿Cuál sería mi población si el rebaño o rodeo es cerrado (\emph{i.e.}, produce sus propios reemplazos)?.
 
-Habiendo definido en forma operativa lo que consideramos una población, rápidamente podemos llegar a ver que en muchas poblaciones asumir un tamaño casi infinito para las mismas es algo absurdo. Veremos que en las poblaciones donde se deja de lado esta asunción empieza a jugar una de las fuerzas siempre presentes en biología: el azar.
-
-\hfill\break
+Habiendo definido en forma operativa lo que consideramos una población, rápidamente podemos llegar a ver que en muchas poblaciones asumir un tamaño casi infinito para las mismas es algo absurdo. Veremos que en las poblaciones donde se deja de lado esta asunción empieza a jugar una de las fuerzas siempre presentes en biología: el azar.\\
 
 \begin{boxobjetivos}
 \(\square\) Comprender como el azar puede ser una fuerza evolutiva de relevancia en poblaciones de tamaño finito.
@@ -4146,8 +4144,6 @@ modelo de Wright-Fisher.
 \(\square\) Presentar el modelo de coalescente, un modelo clave en genética de poblaciones. Este nos permitirá nos permitirá indagar en la historia de una muestra de alelos, yendo hacia atrás en el tiempo (hasta identificar su último ancestro común en una población), estimando los tiempos esperados en el proceso.
 
 \end{boxobjetivos}
-
-\newpage
 
 \section{El rol de los procesos estocásticos en la genética}\label{el-rol-de-los-procesos-estocuxe1sticos-en-la-genuxe9tica}
 
@@ -6372,9 +6368,7 @@ con lo que queda demostrado que el máximo valor para \(\bar{t}\) ocurre cuando 
 
 En los capítulos anteriores vimos cómo la frecuencias alélicas de las poblaciones evolucionan, simplemente por las ``leyes de la herencia'', es decir el modelado matemático de los mecanismos moleculares y de los efectos \textbf{estocásticos} asociados al muestreo de los gametos en poblaciones de tamaño finito. En otras palabras, hasta ahora no hemos incorporado en nuestros modelos el efecto que la ventaja de algún alelo o genotipo pudiese tener sobre los otros. Como veremos en este capítulo, esto último constituye la base de la selección, el tema de nuestro capítulo actual. En particular, en este capítulo sentaremos las bases de la selección natural, aquella que opera en las poblaciones naturales y dejaremos para otros capítulos en la \hyperref[part-parte-iii-genuxe9tica-cuantitativa]{(PART*) Parte III: Genética Cuantitativa} el tema de la selección artificial, que si bien se funda en las mismas bases, su análisis tendrá otros componentes en cuenta que aún no hemos visto.
 
-Bajo cualquier tipo de selección los genotipos ya no tendrán la misma oportunidad de pasar sus gametos a la siguiente generación y como las frecuencias de los alelos están vinculadas a las de los genotipos, por lo tanto ya no podremos seguir asumiendo que estas frecuencias simplemente siguen en promedio a las de la generación anterior. Central a este capítulo, por tanto, es el concepto de \textbf{\emph{fitness}}, con el cual nos introduciremos a la temática.
-
-\hfill\break
+Bajo cualquier tipo de selección los genotipos ya no tendrán la misma oportunidad de pasar sus gametos a la siguiente generación y como las frecuencias de los alelos están vinculadas a las de los genotipos, por lo tanto ya no podremos seguir asumiendo que estas frecuencias simplemente siguen en promedio a las de la generación anterior. Central a este capítulo, por tanto, es el concepto de \textbf{\emph{fitness}}, con el cual nos introduciremos a la temática.\\
 
 \begin{boxobjetivos}
 \(\square\) Presentar y analizar el concepto de selección natural, proceso que genera cambios sistemáticos en las frecuencias alélicas de las poblaciones naturales.
@@ -6392,8 +6386,6 @@ Bajo cualquier tipo de selección los genotipos ya no tendrán la misma oportuni
 \(\square\) Discutir en qué influye (y en qué no) la magnitud de la intensidad de la selección natural en la evolución de las poblaciones.
 
 \end{boxobjetivos}
-
-\newpage
 
 \section{\texorpdfstring{El concepto de ``\emph{fitness}''}{El concepto de ``fitness''}}\label{el-concepto-de-fitness}
 
@@ -8038,9 +8030,7 @@ En la situación planteada en \textbf{b.} tenemos \(w_{11} =0,55 = 1 -s \Rightar
 
 En los capítulos anteriores hemos sentado las bases matemáticas del análisis de la evolución de las frecuencias alélicas en la poblaciones, considerando tanto los fenómenos sistemáticos como los estocásticos. Sin embargo, hasta el momento nuestro modelo fue simplificado en extremo y el tratamiento quedó reducido casi siempre a un \emph{locus} con un par de alelos. En principio, podríamos pensar que para el tratamiento de más \emph{loci} alcanzaría con considerar para cada uno de ellos un modelo como el de un \emph{locus} con dos alelos, como los que hemos trabajado. Eso significaría que nuestros \emph{loci} son todos independientes unos de otros. Desafortunadamente para el modelado matemático, aunque afortunadamente para nosotros, la meiosis produce un \emph{barajado} de los alelos en diferentes \emph{loci}, el cual que puede ocurrir en varios puntos del genoma. Obviamente, la probabilidad de que esos eventos discretos que producen el intercambio de cromátidas ocurran entre dos \emph{loci} en particular es una función de la \textbf{distancia de mapeo} entre ellos (cuanto mayor es dicha distancia, mayor la probabilidad de que ese evento ocurra entre los dos \emph{loci}).
 
-Es momento entonces de comenzar a extender nuestros modelos a la interacción con otro \emph{locus} cercano y analizar el tipo de dinámicas que pueden surgir de esta interacción. En general, aún los modelos más simplificados de interacción entre dos \emph{loci} agregan una complejidad importante al análisis, por lo que nos limitaremos a tratar analíticamente los casos más sencillos, mientras que recurriremos a aproximaciones basadas en el modelado computacional en aquellos casos que se complique más allá de nuestras posibilidades. Una nota de advertencia antes de empezar: gran parte del material de este capítulo se encuentra basado en el libro de John H. Gillespie (\citeproc{ref-Gillespie2004}{John H. Gillespie 2004}), que es uno de los pocos textos que lo trata como un tema mereciendo un capítulo, la mayoría de ellos apenas considerándolo en alguna sección. Si bien la decisión de qué temas tratar y su profundidad es algo arbitraria, las posibles consecuencias evolutivas de los fenómenos asociados no son despreciables y por lo tanto entendimos que merece este tratamiento preferencial.
-
-\hfill\break
+Es momento entonces de comenzar a extender nuestros modelos a la interacción con otro \emph{locus} cercano y analizar el tipo de dinámicas que pueden surgir de esta interacción. En general, aún los modelos más simplificados de interacción entre dos \emph{loci} agregan una complejidad importante al análisis, por lo que nos limitaremos a tratar analíticamente los casos más sencillos, mientras que recurriremos a aproximaciones basadas en el modelado computacional en aquellos casos que se complique más allá de nuestras posibilidades. Una nota de advertencia antes de empezar: gran parte del material de este capítulo se encuentra basado en el libro de John H. Gillespie (\citeproc{ref-Gillespie2004}{John H. Gillespie 2004}), que es uno de los pocos textos que lo trata como un tema mereciendo un capítulo, la mayoría de ellos apenas considerándolo en alguna sección. Si bien la decisión de qué temas tratar y su profundidad es algo arbitraria, las posibles consecuencias evolutivas de los fenómenos asociados no son despreciables y por lo tanto entendimos que merece este tratamiento preferencial.\\
 
 \begin{boxobjetivos}
 \(\square\) Introducir el concepto de desequilibrio de ligamiento entre \emph{loci} y discutir su relevancia biológica.
@@ -8058,8 +8048,6 @@ Es momento entonces de comenzar a extender nuestros modelos a la interacción co
 \(\square\) Discutir diferentes escenarios biológicos, además de la proximidad física, que pueden dar como resultado el desequilibrio de ligamiento entre dos o más \emph{loci}.
 
 \end{boxobjetivos}
-
-\newpage
 
 \section{Desequilibrio de ligamiento y recombinación}\label{desequilibrio-de-ligamiento-y-recombinaciuxf3n}
 
@@ -9690,8 +9678,7 @@ En los capítulos previos fuimos construyendo un panorama del cambio en las frec
 
 A nivel de la producción pecuaria, en muchos establecimientos la práctica común eran los rodeos cerrados, donde los reproductores machos se producían también en el establecimiento y por lo tanto eran hijos de alguna hembra del rodeo y hermano de varias de ellas. En el apareamiento ``a campo'', sin control de la reproducción para evitar que esos machos se apareen con sus madres, hermanas e hijas, el apareamiento entre parientes es inevitable. En plantas cuyos gametos tienen relativamente poca capacidad de dispersión a grandes distancias es poco razonable pensar que los individuos tengan la misma probabilidad de aparearse con los que lo rodean que con aquellos que se encuentran en extremos opuestos de la población.
 
-Todos estos ejemplos y las situaciones que representan nos llevan a intentar entender qué ocurre cuando no podemos asumir las condiciones de \textbf{panmixia} y sus repercusiones a nivel de las frecuencias genotípicas. Para ello deberemos volver sobre un concepto central, el concepto de \textbf{identidad por ascendencia} para un par de alelos, ya que a partir de él vamos a desarrollar un marco para cuantificar el impacto del apareamiento no-aleatorio.
-\newline
+Todos estos ejemplos y las situaciones que representan nos llevan a intentar entender qué ocurre cuando no podemos asumir las condiciones de \textbf{panmixia} y sus repercusiones a nivel de las frecuencias genotípicas. Para ello deberemos volver sobre un concepto central, el concepto de \textbf{identidad por ascendencia} para un par de alelos, ya que a partir de él vamos a desarrollar un marco para cuantificar el impacto del apareamiento no-aleatorio.\\
 
 \begin{boxobjetivos}
 \(\square\) Introducir el concepto de identidad por ascendencia.
@@ -9712,8 +9699,6 @@ Todos estos ejemplos y las situaciones que representan nos llevan a intentar ent
 \(\square\) Discutir brevemente el rol de la estructuración poblacional, y el consecuente apareamiento no-aleatorio, en el surgimiento de nuevas especies. Se distinguirán distintos escenarios que reflejan este fenómeno en las poblaciones naturales.
 
 \end{boxobjetivos}
-
-\newpage
 
 \section{El concepto de ``identidad por ascendencia'' (IBD)}\label{el-concepto-de-identidad-por-ascendencia-ibd}
 
@@ -11404,8 +11389,7 @@ Resulta claro que el número estimado de migrantes por generación es lo suficie
 
 En general, todos tenemos una visión muy antropocéntrica de la vida y por lo tanto nos cuesta muchas veces tomar real magnitud de la variabilidad existente entre lo que vemos, mucho más en lo que no vemos. El conocimiento de la existencia de vida microscópica tiene varios siglos, pero no fue hasta la aparición del microscopio que comenzamos a apreciar su importancia y empezar a sospechar de su diversidad. Más aún, no fue hasta los trabajos de Louis Pasteur\footnote{Louis Pasteur (27 de diciembre 1822 - 28 de septiembre 1895) fue un físico-químico francés que contribuyó al establecimiento de la microbiología como rama de la ciencia. Además de notables contribuciones a la físico-química, por ejemplo en la formación de cristales, realizá trabajos claves para refutar la teoría de la \textbf{generación espontánea}. Es además el fundador del \emph{Institut Pasteur}, que surgió como instituto anti-rábico y que ha realizado notables contribuciones a la biología y medicina, incluyendo desde 1908 10 premios Nobel en esa categoría.} que se apreció la relevancia de los mismos, tanto en la enfermedad como en los procesos biotecnológicos usuales en nuestra alimentación. A partir de ese momento fue claro que la diversidad de organismos microscópicos era enorme y que su importancia para la vida del planeta también lo era. No es, sin embargo, hasta los trabajos de Carl Woese\footnote{Carl Richard Woese (15 de july 1928 -- 30 de diciembre 2012) fue un microbiólogo y biofísico conocido por sus trabajos en la filogenética de la vida y por haber definido en dominio archaea a partir del análisis del ARNr 16S. Originalmente formado en matemáticas y física, su interés en descifrar en código genético lo fue llevando a trabajar en diferentes preguntas centrales de la biología, algunas relacionadas con el origen de la vida en nuestro planeta.}, entrando en el último cuarto del siglo XX, que se aprecia que dentro de esos organismos la diversidad surgía a nivel basal en el árbol de la vida y que dos de los tres dominios de la vida (archaea y bacteria) eran de organismos microscópicos a los que juntos denominamos procariotas (porque no poseen un núcleo altamente organizado, como los eucariotas).
 
-Estos organismos, los procariotas, poseen una diversidad de estilos de vida enorme y los podemos encontrar en los ambientes que nos imaginemos, desde las fuentes termales oceánicas con temperaturas cercanas a los \(100^{\circ}\)C, hasta en la Antártida, desde nuestra piel hasta nuestros intestinos, en el rumen, en la rizósfera, en las aguas ácidas del drenaje de las minas, en el océano y en casi todos los ambientes conocidos en los que exista vida. Pequeños y con gran capacidad de multiplicación, comparten algunas características importantes entre ellos pero se diferencian en otras importantes, por ejemplo entre archaeas y bacterias a nivel de la maquinaria y procesos moleculares. Sin embargo, para el cometido del presente capítulo, alcanza con agruparlos en el término procariotas y ya los distinguiremos cuando sea necesario.
-\newline
+Estos organismos, los procariotas, poseen una diversidad de estilos de vida enorme y los podemos encontrar en los ambientes que nos imaginemos, desde las fuentes termales oceánicas con temperaturas cercanas a los \(100^{\circ}\)C, hasta en la Antártida, desde nuestra piel hasta nuestros intestinos, en el rumen, en la rizósfera, en las aguas ácidas del drenaje de las minas, en el océano y en casi todos los ambientes conocidos en los que exista vida. Pequeños y con gran capacidad de multiplicación, comparten algunas características importantes entre ellos pero se diferencian en otras importantes, por ejemplo entre archaeas y bacterias a nivel de la maquinaria y procesos moleculares. Sin embargo, para el cometido del presente capítulo, alcanza con agruparlos en el término procariotas y ya los distinguiremos cuando sea necesario.\\
 
 \begin{boxobjetivos}
 \(\square\) Describir las particularidades genéticas de los procariotas, comparandolos con los eucariotas diploides que hemos utilizado como modelo en el desarrollo de modelos matemáticos y conceptuales en capítulos anteriores. Examineramos modelos aleatorios alternativos al modelo de Wright-Fisher presentado en capítulos anteriores, interconectando los modelos obtenidos.
@@ -11422,8 +11406,6 @@ Estos organismos, los procariotas, poseen una diversidad de estilos de vida enor
 \(\square\) Abordar el tema de la resistencia a los antimicrobianos en el contexto de la genética de poblaciones de microorganismos.
 
 \end{boxobjetivos}
-
-\newpage
 
 \section{Genómica y mecanismos de herencia en procariotas}\label{genuxf3mica-y-mecanismos-de-herencia-en-procariotas}
 
@@ -13206,8 +13188,6 @@ A partir de nuestro modelo genético básico, que asume que el fenotipo de cualq
 
 \end{boxobjetivos}
 
-\newpage
-
 \section{Variación continua y discreta}\label{variaciuxf3n-continua-y-discreta}
 
 Hasta el momento hemos basado todo el desarrollo del curso casi exclusivamente en razonamientos obtenidos a partir de un \emph{locus} o de un par de \emph{loci} con dos alelos. En organismos haploides, suponiendo que el efecto de cada alelo sea constante en un determinado momento en el tiempo (\emph{i.e.}, que no dependa de otros factores), apenas se pueden tener dos genotipos distintos, y poco cambia la situación el que los organismos sean diploides (donde aparecen tres genotipos posibles). Cuando el tipo de característica que analizamos es categórica, por ejemplo el color verde o amarillo de los guisantes de Mendel (\emph{Pisum sativum}), todo los resultados entran en alguna de las categorías permitidas o definidas, y entonces mientras el número de categorías sea menor o igual al número de genotipos tenemos alguna esperanza de vincular el genotipo con el fenotipo. Es decir, si las categorías son ``verde'' y ``amarillo'', es porque asumimos que las pequeñas variaciones de color son irrelevantes para nosotros o sencillamente no existen (cosa que parece totalmente improbable) y solo tenemos que asociar algún (o algunos) genotipos con un color y el resto con el otro. Claramente, en un \emph{locus} diploide con dos alelos podemos encontrar como máximo tres genotipos, por lo que podría codificarse un nuevo color de guisantes tan extraño como el ``tan'' (sí, es un color), o un color intermedio entre el verde y el amarillo; las diferencias entre estas alternativas están en la base bioquímica del color, pero no existe en nuestro modelo una imposibilidad matemática para codificar estos genotipos. Sin embargo, cuando la paleta de colores de nuestros guisantes hipotéticos es un poco más amplia (\emph{e.g.}, 14 colores), comienza a existir una imposibilidad para describirla directamente con un \textbf{mapeo unívoco} de genotipos a colores. Dicho de otra forma, cada genotipo debería estar asociado a más de un color, lo que implica involucrar otros tipos de factores, ya sean ambientales o genéticos; resulta claro que en último caso, estos factores genéticos se encontrarían fuera del \emph{locus} estudiado. Pese a ello, seguimos frente a un tipo de variación \textbf{categórica}, ya que nuestra paleta de colores tiene un número finito de colores, y no tendría sentido en este contexto hablar de matemático la distancia entre esos colores.
@@ -13240,11 +13220,6 @@ El fenómeno que describimos anteriormente es mucho más relevante de lo que ima
 Muchas de las características en genética cuantitativa pueden describirse por alguno de los dos tipos de variables que vimos más arriba, \textbf{discretas} y \textbf{continuas}. Algunas otras características, sin embargo, tienen una distribución donde es posible tomar uno solo de unos pocos valores posibles y que los mismos tienen un ordenamiento natural, o que se trata de características del tipo presencia-ausencia. Por ejemplo, en el caso de enfermedades o patologías con cierta base genética, ciertas veces la causa es multifactorial y su base genética es poligénica, es decir, influenciada por muchos genes. En esos casos, también es posible pensar que existe una característica subyacente no observable, que es continua y que al sobrepasar un determinado valor de umbral, entonces la enfermedad se manifiesta. Esta forma de pensar las características y modelarlas, los modelos \textbf{umbral} (\citeproc{ref-Wright1934}{Sewall Wright 1934a}), puede tener una base molecular y funcional real o puede ser sencillamente un truco adecuado para modelarla, pero el hecho es que suele ser una buena alternativa en mejoramiento genético para varias características (\citeproc{ref-Gianola1982}{Daniel Gianola 1982}).
 
 \begin{graybox}
-
-\begin{graybox-header}
-\textbf{PARA RECORDAR}
-
-\end{graybox-header}
 
 \begin{itemize}
 \item
@@ -13391,11 +13366,6 @@ P=G+E+I_{G\times E}=A+D+I+E+I_{G\times E}
 que será una de las maneras más explícitas de expresar el fenotipo de un individuo que usaremos en el curso.
 
 \begin{graybox}
-
-\begin{graybox-header}
-\textbf{PARA RECORDAR}
-
-\end{graybox-header}
 
 \begin{itemize}
 \item
@@ -13722,11 +13692,6 @@ como el valor de la media para la segunda característica, expresada en la escal
 
 \begin{graybox}
 
-\begin{graybox-header}
-\textbf{PARA RECORDAR}
-
-\end{graybox-header}
-
 \begin{itemize}
 \item
   Los \textbf{genes de efecto mayor} son aquellos en que algunas o todas las variantes (alelos) marcan una diferencia importante en el fenotipo, son relativamente escasos en la genética cuantitativa.
@@ -13936,11 +13901,6 @@ Obviamente, como verificación trivial, \(\alpha=\alpha_1-\alpha_2=[0,7521-(-0,1
 
 \begin{graybox}
 
-\begin{graybox-header}
-\textbf{PARA RECORDAR}
-
-\end{graybox-header}
-
 -En una población que posee dos alelos \(A_1\) y \(A_2\), el \textbf{efecto medio} del alelo \(A_1\), que llamaremos \(\alpha_1\), es \(\alpha_1=q\alpha\). Como contraparte, el \textbf{efecto medio} del alelo \(A_2\), que llamaremos \(\alpha_2\), es \(\alpha_2=-p[a+d(q-p)]=-p\alpha\).
 
 \begin{itemize}
@@ -14149,11 +14109,6 @@ que es el mismo resultado obtenido previamente, o \(\alpha_2=-p\alpha\), mostran
 
 \begin{graybox}
 
-\begin{graybox-header}
-\textbf{PARA RECORDAR}
-
-\end{graybox-header}
-
 \begin{itemize}
 \item
   El \textbf{valor de cría} es un estimador del mérito genético de un animal. El mismo se expresa como desvío de la media de la población, y como esta depende de las frecuencias de los alelos, entonces los mismos son específicos a una población de referencia.
@@ -14323,11 +14278,6 @@ Claramente, como la frecuencia del genotipo \(LL\) es menor que la del \(FF\), e
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \begin{graybox}
-
-\begin{graybox-header}
-\textbf{PARA RECORDAR}
-
-\end{graybox-header}
 
 \begin{itemize}
 \item
@@ -14517,11 +14467,6 @@ La proporción de la varianza genética total debida la varianza aditiva es \(V_
 
 \begin{graybox}
 
-\begin{graybox-header}
-\textbf{PARA RECORDAR}
-
-\end{graybox-header}
-
 \begin{itemize}
 \item
   Podemos descomponer el modelo genético básico en términos de varianza de la siguiente manera:
@@ -14571,12 +14516,6 @@ V_I=V_{AA}+V_{AD}+V_{DD}+... \approx V_{AA}+V_{AD}+V_{DD}
 En general, resulta bastante complejo de estimar por separado los distintos componentes de la varianza epistática, que ya de por sí es complicada de estimar en la mayor parte de los diseños experimentales tradicionales, al menos en el caso del modelo infinitesimal. Cuando en el próximo capítulo desarrollemos la covarianza entre parientes, veremos que algunas relaciones de parentesco incluyen estos efectos y que en teoría podemos llegar a estimar sus efectos con determinadas combinaciones de estructuras de parentesco.
 
 \begin{graybox}
-
-\begin{graybox-header}
-\textbf{PARA RECORDAR}
-
-\end{graybox-header}
-
 -En general, utilizamos el término \textbf{varianza ambiental} para describir de manera genérica todo aquello que no este englobado en lo genético.
 
 \begin{itemize}
@@ -14984,7 +14923,7 @@ En nuestro modelo genético básico identificamos factores genéticos y ambienta
 
 En el presente capítulo se discutirá el concepto de parentesco en términos generales, antes de presentar el concepto de \textbf{parentesco aditivo}, estrechamente relacionado a conceptos que vimos previamente en el capítulo {[}Apareamiento no-aleatorios{]}. Veremos cómo el parentesco aditivo se relaciona con nuestro modelo genético básico, así como diferentes formas de calcularlo y de representar las relaciones entre individuos. Discutiremos al mismo tiempo el concepto de \textbf{consanguinidad} y su relación con el parentesco aditivo. Más adelante pasaremos a discutir otro concepto relacionado con nuestro modelo genético básico que es el de \textbf{parentesco de dominancia} y veremos en qué relaciones de parentesco el mismo es distinto de cero.
 
-Durante la construcción del modelo genético básico en el capítulo anterior vimos que la descomposición de la varianza fenotípica en sus distintas fuentes (tanto genéticas como ambientales, y su relativa importancia) se constituían en un elemento clave para entender las posibilidades de trabajar sobre la genética de una característica. Sin embargo, dado que la única varianza observable es la fenotípica, hasta ahora no hemos visto ni soslayado ninguna manera razonable de estimar los distintos componentes. El elemento clave para poder estimar los distintos componentes genéticos de la varianza es la semejanza que existe entre parientes, semejanza que se debe a la genética y las condiciones que comparten. Por lo tanto, se desarrollará un modelo causal para estas semejanzas, para luego vincularlo con el modelo observacional y de esta forma alcanzar nuestro objetivo de estimar los componentes de varianza. Finalmente, discutiremos las diferencias entre los conceptos de parentesco estadístico (todos los que veremos hasta el final) y parentesco genómico, el derivado de conocer la información genómica de los individuos.
+Durante la construcción del modelo genético básico en el capítulo anterior vimos que la descomposición de la varianza fenotípica en sus distintas fuentes (tanto genéticas como ambientales, y su relativa importancia) se constituían en un elemento clave para entender las posibilidades de trabajar sobre la genética de una característica. Sin embargo, dado que la única varianza observable es la fenotípica, hasta ahora no hemos visto ni soslayado ninguna manera razonable de estimar los distintos componentes. El elemento clave para poder estimar los distintos componentes genéticos de la varianza es la semejanza que existe entre parientes, semejanza que se debe a la genética y las condiciones que comparten. Por lo tanto, se desarrollará un modelo causal para estas semejanzas, para luego vincularlo con el modelo observacional y de esta forma alcanzar nuestro objetivo de estimar los componentes de varianza. Finalmente, discutiremos las diferencias entre los conceptos de parentesco estadístico (todos los que veremos hasta el final) y parentesco genómico, el derivado de conocer la información genómica de los individuos.\\
 
 \begin{boxobjetivos}
 \(\square\) Discutir el concepto de parentesco en términos generales.
@@ -15002,8 +14941,6 @@ Durante la construcción del modelo genético básico en el capítulo anterior v
 \(\square\) Presentar el concepto de \textbf{parentesco de dominancia} y analizar en qué relaciones de parentesco se observa el mismo.
 
 \end{boxobjetivos}
-
-\newpage
 
 \section{Parentesco}\label{parentesco-1}
 
@@ -17100,8 +17037,6 @@ Para entender mejor cómo juegan los distintos componentes de nuestro modelo gen
 \(\square\) Definir el concepto de repetibilidad y comprender su uso como herramienta.
 
 \end{boxobjetivos}
-
-\newpage
 
 \section{Heredabilidad}\label{heredabilidad}
 
@@ -19235,7 +19170,7 @@ En efecto, alcanza con observar la variedad de razas de perros para entender que
 
 Lo mismo es posible de observar en cada especie que tiene alguna importancia económica o cultural en nuestra vida diaria. En las diferentes razas bovinas vemos animales completamente especializados en la producción de leche, mientras que otros se especializan en la producción de carne. Las diferencias morfológicas son notables, pero aún más lo son en las características de interés productivo. El tamaño de los pollos parrilleros en los EEUU creció más de 4 veces desde 1957 a 1991 (Havenstein et al. (\citeproc{ref-Havensteinetal1994}{1994})), en gran parte debido a la selección especializada para carne o producción de huevos.
 
-En el presente capítulo vamos a comenzar a estudiar la selección artificial para características métricas. Para ello usaremos un escenario sencillo, esencialmente basado en lo que se conoce como selección por truncamiento, en el que solo los individuos que sobrepasen un valor umbral de la característica (asumiendo que los mejores se corresponden a valores altos, al revés si los mejores son los valores bajos) son considerados como reproductores y progenitores de la siguiente generación.
+En el presente capítulo vamos a comenzar a estudiar la selección artificial para características métricas. Para ello usaremos un escenario sencillo, esencialmente basado en lo que se conoce como selección por truncamiento, en el que solo los individuos que sobrepasen un valor umbral de la característica (asumiendo que los mejores se corresponden a valores altos, al revés si los mejores son los valores bajos) son considerados como reproductores y progenitores de la siguiente generación.\\
 
 \begin{boxobjetivos}
 \(\square\) Definir el concepto de diferencial de selección direccional, buscando comprender la relación entre la media poblacional en un momento dado y la obtenida luego de seleccionar una fracción de individuos.
@@ -19256,8 +19191,6 @@ En el presente capítulo vamos a comenzar a estudiar la selección artificial pa
 \(\square\) Obtener otra perspectiva del diferencial de selección direccional a través de la identidad de Robertson-Price.
 
 \end{boxobjetivos}
-
-\newpage
 
 \section{Factores de corrección}\label{factores-de-correcciuxf3n}
 
@@ -21075,7 +21008,7 @@ Es decir que cada generación es posible disminuir en algo más de \(2 \mu\) el 
 
 Hasta ahora, en la mayor parte de nuestro recorrido nos hemos limitado a examinar un solo fenotipo cada vez. Hemos construido modelos sobre el genotipo, descomponiendo su expresión en la suma de los aportes genéticos y ambientales y en algunos casos su interacción. Más aún, en el capítulo \hyperref[selartifI]{Selección Artificial I} estudiamos cómo sería la respuesta a nuestro esfuerzo de selección direccional en función de la presión de selección que ejercemos y de los parámetros genéticos asociados a la característica. Sin embargo, por lo general estamos interesados en mejorar más de un fenotipo en los individuos. En ovinos deseamos aumentar el peso del vellón, pero al mismo tiempo deseamos reducir el diámetro de las fibras. En producción lechera (en nuestro país) deseamos aumentar la producción de grasa y de proteína (en kg), pero al mismo tiempo deseamos reducir los litros de leche (ya que la industria castiga el volumen), reducir el recuento de células somáticas (al premiado por la industria) y al menos mantener el nivel de fertilidad del rodeo. En el capítulo \hyperref[selartifII]{Selección Artificial II} veremos diferentes estrategias para alcanzar estos objetivos múltiples, pero para llegar a eso primero debemos entender la base causal de las relaciones entre diferentes características fenotípicas.
 
-En el presente capítulo definiremos los tipos de correlaciones fenotípica (observable), genética (aditiva) y ambiental, en un modelo genético simplificado, donde el ambiente extendido contendrá además de los efectos ambientales propiamente dichos, todos los efectos genéticos no-aditivos. Esto nos permitirá simplificar los análisis mediante la comprensión de las correlaciones genéticas y ambientales.
+En el presente capítulo definiremos los tipos de correlaciones fenotípica (observable), genética (aditiva) y ambiental, en un modelo genético simplificado, donde el ambiente extendido contendrá además de los efectos ambientales propiamente dichos, todos los efectos genéticos no-aditivos. Esto nos permitirá simplificar los análisis mediante la comprensión de las correlaciones genéticas y ambientales.\\
 
 \begin{boxobjetivos}
 \(\square\) Definir tipos de correlaciones y utilizarlas para analizar las correlaciones genéticas y ambientales.
@@ -21105,8 +21038,6 @@ En el presente capítulo definiremos los tipos de correlaciones fenotípica (obs
 \(\square\) Analizar la información proporcionada por la matriz de varianza-covarianza genética en la selección y las restricciones que la misma impone a la evolución de características.
 
 \end{boxobjetivos}
-
-\newpage
 
 \section{Causas genéticas y ambientales de las correlaciones}\label{causas-genuxe9ticas-y-ambientales-de-las-correlaciones}
 
@@ -22924,8 +22855,6 @@ Muchos de los métodos de selección que discutiremos en el capítulo no se util
 
 \end{boxobjetivos}
 
-\newpage
-
 \section{Criterios y objetivos de selección}\label{criterios-y-objetivos-de-selecciuxf3n}
 
 En parte importante de este capítulo vamos a trabajar con la selección por varias características, mientras que en el resto trabajaremos con selección en una característica a partir de información obtenida de parientes de los candidatos. En ambos casos es importante entender la distinción que existe entre \textbf{objetivos de selección} y \textbf{criterios de selección}.
@@ -24341,7 +24270,7 @@ La lógica de este método se presenta en la Figura \ref{fig:tandem}, donde los 
 \caption{Selección en tandem. Durante la primera fase (imagen de la izquierda) se selecciona por la característica 1, de la manera usual en selección fenotípica individual para una sola característica (por ejemplo, selección umbral). El proceso se repite durante un determinado período de generaciones o años, para luego pasar a seleccionar por la segunda característica (imagen de la derecha), de la misma manera que lo hicimos en la primera fase. Notar el desplazamiento de la media de la población de la característica 1 hacia la derecha, antes de empezar el proceso de selección por la segunda característica. El proceso entero se repite todas las veces que sea necesario.}\label{fig:tandem}
 \end{figure}
 
-La complejidad de este método es muy baja ya que no requerimos nada adicional a lo que ya acostumbramos a trabajar en selección por una sola característica, alcanza con definir los momentos en que realizaremos los cambios de objetivos de selección, lo que puede realizarse \emph{a priori} o luego de observar la respuesta a la selección. Claramente la eficiencia de este método es generalmente baja o muy baja, en particular si las características poseen una fuerte correlación genética en sentido desfavorable. Por ejemplo, si mejoramos primero peso de vellón durante años, solo prestando atención a esa característica, lo más probable es que el grosor de la lana se incremente en forma sustantiva. Pasamos ahora a seleccionar por diámetro de las fibras y lentamente recuperamos la finura que habíamos perdido, pero ahora el peso del vellón volvió a bajar. Luego de un ciclo entero posiblemente estemos muy cerca del punto de partida, lo que no parece una buena estrategia. Por otro lado, para características donde la correlación genética es favorable, como vimos en el capítulo \hyperref[correlacionada]{Correlaciones y Respuesta Correlacionada}, la selección por una característica ``\,``arrastrará'' a la otra en sentido correcto y luego, al cambiar a seleccionar por la segunda característica, también la selección por la segunda mejorará la primera. En este caso, lo que consigue este método de selección es, de alguna manera, balancear el avance en las dos características, en relación a seleccionar solo por una de ellas.
+La complejidad de este método es muy baja ya que no requerimos nada adicional a lo que ya acostumbramos a trabajar en selección por una sola característica, alcanza con definir los momentos en que realizaremos los cambios de objetivos de selección, lo que puede realizarse \emph{a priori} o luego de observar la respuesta a la selección. Claramente la eficiencia de este método es generalmente baja o muy baja, en particular si las características poseen una fuerte correlación genética en sentido desfavorable. Por ejemplo, si mejoramos primero peso de vellón durante años, solo prestando atención a esa característica, lo más probable es que el grosor de la lana se incremente en forma sustantiva. Pasamos ahora a seleccionar por diámetro de las fibras y lentamente recuperamos la finura que habíamos perdido, pero ahora el peso del vellón volvió a bajar. Luego de un ciclo entero posiblemente estemos muy cerca del punto de partida, lo que no parece una buena estrategia. Por otro lado, para características donde la correlación genética es favorable, como vimos en el capítulo \hyperref[correlacionada]{Correlaciones y Respuesta Correlacionada}, la selección por una característica ````arrastrará'' a la otra en sentido correcto y luego, al cambiar a seleccionar por la segunda característica, también la selección por la segunda mejorará la primera. En este caso, lo que consigue este método de selección es, de alguna manera, balancear el avance en las dos características, en relación a seleccionar solo por una de ellas.
 
 \subsection*{Niveles Independientes de Rechazo}\label{niveles-independientes-de-rechazo}
 \addcontentsline{toc}{subsection}{Niveles Independientes de Rechazo}
@@ -25586,8 +25515,6 @@ En la segunda parte del capítulo veremos el fenómeno recíproco de la heterosi
 \(\square\) Analizar la importancia de mantener una proporción adecuada de machos y hembras en la población para preservar un tamaño efectivo poblacional óptimo, minimizando los efectos de la consanguinidad.
 
 \end{boxobjetivos}
-
-\newpage
 
 \section{El aumento de la consanguinidad a partir del número de individuos}\label{el-aumento-de-la-consanguinidad-a-partir-del-nuxfamero-de-individuos}
 
@@ -27745,8 +27672,6 @@ Para esto vamos a comenzar por mostrar cuán extendido es el alcance de este efe
 
 \end{boxobjetivos}
 
-\newpage
-
 \section{Plasticidad fenotípica y normas de reacción}\label{plasticidad-fenotuxedpica-y-normas-de-reacciuxf3n}
 
 Hasta ahora, en lo que hace a la genética cuantitativa, hemos venido trabajando esencialmente con una versión algo simplificada del modelo genético básico. Si bien establecimos desde un principio que el modelo, además de los efectos genéticos y ambientales, podía incorporar los efectos de la interacción entre genotipo y ambiente, hasta ahora logramos evitar razonablemente tener que lidiar con este último factor, que sin duda complica sobremanera muchas de las derivaciones. De hecho, en gran parte de las situaciones que modelamos no parece tan descabellado el ignorar esta interacción. Por ejemplo, cuando el ambiente es relativamente constante o uniforme para todos los individuos, el término de interacción no tendrá significación o importancia práctica. Por ejemplo, si los tambos de una determinada región se encuentran sometidos a las mismas condiciones geográficas, climáticas, etc. y además presentan un manejo muy similar de los animales (algo que parece razonable, ya que los mismos precios de insumos y egresos afectan las decisiones de manejo en forma similar), entonces podemos considerar el ``ambiente'' como relativamente homogéneo; en estas condiciones, no tiene mucho sentido considerar la interacción entre el genotipo y el ambiente ya que el ambiente es casi el mismo para todos los animales.
@@ -28826,7 +28751,8 @@ El valor en el que se debería encontrar este promedio que se mantiene estable s
 
 por lo que estimamos que los investigadores miden aproximadamente \(24,2\) litros de leche por día en cada animal lactante.
 
-\chapter{Apéndice I: CONCEPTOS MATEMÁTICOS BÁSICOS}\label{apuxe9ndice-i-conceptos-matemuxe1ticos-buxe1sicos}
+\chapter*{Apéndice A: CONCEPTOS MATEMÁTICOS BÁSICOS}\label{apuxe9ndice-a-conceptos-matemuxe1ticos-buxe1sicos}
+\addcontentsline{toc}{chapter}{Apéndice A: CONCEPTOS MATEMÁTICOS BÁSICOS}
 
 \section{FRACCIONES}\label{fracciones}
 
@@ -29246,7 +29172,8 @@ La \textbf{productoria} es el análogo a la sumatoria pero para representar el p
   \[\prod_{i = 0}^3 2^i = 1 . 2 . 4 . 8 = 64\]
 \end{enumerate}
 
-\chapter{Apéndice II: CÁLCULO DIFERENCIAL E INTEGRAL}\label{apuxe9ndice-ii-cuxe1lculo-diferencial-e-integral}
+\chapter*{Apéndice B: CÁLCULO DIFERENCIAL E INTEGRAL}\label{apuxe9ndice-b-cuxe1lculo-diferencial-e-integral}
+\addcontentsline{toc}{chapter}{Apéndice B: CÁLCULO DIFERENCIAL E INTEGRAL}
 
 \section{LÍMITES}\label{luxedmites}
 
@@ -29702,7 +29629,298 @@ Para hallar la solución a la ecuación, se llevan a un lado todas los términos
 
 \emph{Ejemplo de ecuación diferencial de segundo orden con solución:} \{-\}
 
-\chapter{PROBABILIDAD Y ESTADÍSTICA}\label{probabilidad-y-estaduxedstica}
+\chapter*{Apéndice C: ALGEBRA LINEAL Y GEOMETRÍA ANALÍTICA}\label{apuxe9ndice-c-algebra-lineal-y-geometruxeda-analuxedtica}
+\addcontentsline{toc}{chapter}{Apéndice C: ALGEBRA LINEAL Y GEOMETRÍA ANALÍTICA}
+
+\section{MATRICES}\label{matrices}
+
+Se define una matriz \(A\) de \(m\) filas y \(n\) columnas (\(m \times n\)) como una función \(A: {1,...,m} \times {1,...,n} \rightarrow \mathbb{R}\) con entradas \(a_{ij}\) donde la \(i\) indica a qué fila pertenece y la \(j\) la columna. Se reprensenta de la siguiente forma:
+
+\[A = \begin{matrix} a_{11} & a_{12} & ... & a_{1n} \\ a_{21} & a_{22} & ... & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & ... & a_{mn} \end{matrix}\]
+
+\emph{Ejemplo:}
+
+\[A = \begin{matrix} 1 & 1 & 2 & 1\\ 4 & 3 & -1 & 1 \\ -1 & 1 & 3 & 3 \end{matrix}\]
+Matriz de \(3 \times 4\), tres filas y cuatro columnas.
+
+\subsection{Relación con los sistemas de ecuaciones}\label{relaciuxf3n-con-los-sistemas-de-ecuaciones}
+
+Sea el sistema de ecuaciones
+\[\begin{cases} a_{11}x_1 + a_{12}x_2 + ... + a_{1n}x_n = b_1 \\ a_{21}x_1 + a_{22}x_2 + ... + a_{2n}x_n = b_2 \\
+\vdots\\ 
+a_{m1}x_1 + a_{m2}x_2 + ... + a_{mn}x_n = b_m \end{cases}\]
+
+se le llama \emph{matriz del sistema de ecuaciones} a la matriz \(A\) de dimensión \((m,n)\) que contiene los coeficientes del mismo:
+
+\[\begin{matrix} a_{11} & a_{12} & ... & a_{1n}\\ a_{21} & a_{22} & ... & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & ... & a_{mn} \end{matrix}\]
+
+y \emph{matriz ampliada del sistema} a la matriz de dimensión \((m,n+1)\) que contiene los coeficientes y el término independiente:
+\[\begin{matrix} a_{11} & a_{12} & ... & a_{1n}\\ a_{21} & a_{22} & ... & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & ... & a_{mn} \end{matrix} | \begin{matrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{matrix}\]
+
+\emph{Ejemplo:}
+El sistema de ecuaciones
+\[\begin{cases} x + y + 2z = 9 \\ 3x + 6y - 5z = 0 \\
+2x + 4y - 3z = 1 \end{cases}\]
+
+La matriz del sistema de ecuaciones en este caso es:
+\[A = \begin{matrix} 1 & 1 & 2 \\ 3 & 6 & -5 \\ 2 & 4 & -3 \end{matrix}\]
+
+y la matriz ampliada es:
+\[A = \begin{matrix} 1 & 1 & 2 \\ 3 & 6 & -5 \\ 2 & 4 & -3 \end{matrix} | \begin{matrix} 9 \\ 0 \\  1 \end{matrix}\]
+
+A partir de la matriz ampliada se puede aplicar un método sencillo para resolver el sistema de ecuaciones. Aplicando transformaciones elementales (interamcio, suma y resta entre filas de la matriz), se puede llevar la matriz a su formato \emph{escalerizado} y así despejar las incógnitas del sistema. Una matriz se encuentra escalerizada si cumple con las siguientes condiciones:
+1. Todas las filas, salvo (quizás) la primera, comienzan con una sucesión de ceros.
+2. Cada fila tiene al principio por lo menos un cero más que la fila inmediata superior.
+
+Se deja para el lector revisar a fondo la bibliografía sobre el método de escalerización, cómo realizarlo y cómo usarlo para resolver el sistema de ecuaciones.
+
+\emph{Ejemplo:}
+Se muestra a continuación un ejemplo de matriz escalerizada:
+\[E = \begin{matrix} 3 & 6 & -5 & 1 & 1 & 2 \\ 0 & -2 & -1 & -3 & 3 & 2 \\ 0 & 0 & 1 & 2 & 4 & -3 \\ 0 & 0 & 0 & -2 & -4 & 3 \\ 0 & 0 & 0 & 0 & 1 & 5 \\ 0 & 0 & 0 & 0 & 0 & -2 \end{matrix} | \begin{matrix} -1 \\ 1 \\ 3 \\ 1 \\-2 \\ 1 \end{matrix}\]
+
+\subsection{Álgebra de matrices}\label{uxe1lgebra-de-matrices}
+
+A continuación se definiran algunas operaciones con matrices.
+
+\subsubsection{Suma de matrices:}\label{suma-de-matrices}
+
+Sean A y B dos matrices de \(m \times n\) con coeficientes \((a_{ij})\) y \((b_{ij})\), \(i = 0,...,m\), \(j = 0,...,n\). Se define la suma de matrices \((+)\) de manera que \(A+B = C\) con \(C\) de coeficientes \((c_{ij})\) y \(c_{ij} = a_{ij} + b_{ij}\). Es importante notar que para sumar dos matrices, deben ser de la misma dimensión.
+
+\emph{Ejemplo:}
+La suma de las matrices \(A = \begin{pmatrix} 1 & 2 & 3 \\ 1 & 0 & 0 \\ 0 & 0 & \frac{1}{2} \end{pmatrix}\) y \(B = \begin{pmatrix} 0 & 2 & 1 \\ 0 & 5 & 5 \\ 0 & 4 & \frac{1}{2} \end{pmatrix}\) da como resultado la matriz
+\[C = \begin{pmatrix} 1 & 4 & 4 \\ 1 & 5 & 5 \\ 0 & 4 & 1 \end{pmatrix}\]
+
+Cada coeficiente de la matriz resultante es la suma de los coeficientes en la misma posición de las matrices sumando.
+
+\subsubsection{Resta de matrices:}\label{resta-de-matrices}
+
+Sean A y B dos matrices de \(m \times n\) con coeficientes \((a_{ij})\) y \((b_{ij})\), \(i = 0,...,m\), \(j = 0,...,n\). Se define la resta de matrices \((-)\) de manera que \(A-B = C\) con \(C\) de coeficientes \((c_{ij})\) y \(c_{ij} = a_{ij} - b_{ij}\) Es importante notar que para restar dos matrices deben ser de la misma dimensión.
+
+\emph{Ejemplo:}
+La resta de \(A = \begin{pmatrix} 1 & 2 & 3 \\ 1 & 0 & 0 \\ 0 & 0 & \frac{1}{2} \end{pmatrix}\) y \(B = \begin{pmatrix} 0 & 2 & 1 \\ 0 & 5 & 5 \\ 0 & 4 & \frac{1}{2} \end{pmatrix}\) da como resultado la matriz
+\[C = \begin{pmatrix} 1 & 0 & 2 \\ 1 & -5 & -5 \\ 0 & -4 & 0 \end{pmatrix}\]
+
+Cada coeficiente de la matriz resultante es la resta de los coeficientes en la misma posición de las matrices sumando.
+
+\subsubsection{Producto de matriz y escalar:}\label{producto-de-matriz-y-escalar}
+
+Sea \(\lambda \in \mathbb{R}\) y \(A\) una matriz de dimensión \(m \times n\) y coeficientes \((a_{ij})\). Se define el producto de \(\lambda\) y \(A\) tal que \(\lambda A = B\), donde cada coeficiente \(b_{ij} = \lambda a_{ij}\).
+
+\emph{Ejemplo:}
+Sean \(A = \begin{pmatrix} 1 & 2 & 3 \\ 1 & 0 & 0 \\ 0 & 0 & \frac{1}{2} \end{pmatrix}\) y \(\lambda = 3\), la matriz \(B\) que resulta del producto \(\lambda A\) es:
+\[B = \begin{pmatrix} 3 & 6 & 9 \\ 3 & 0 & 0 \\ 0 & 0 & \frac{3}{2} \end{pmatrix}\]
+
+\subsubsection{Producto de matrices:}\label{producto-de-matrices}
+
+Sea \(A\) una matriz de \(m \times p\) y \(B\) de dimensión \(p \times n\), se define el producto entre ellas como \(A \cdot B = C\) de dimensión \(m \times n\), con los coeficientes \(c_{ij} = \sum_{h=1}^p a_{ih}b_{hj}\). A diferencia de la suma y la resta, las matrices a multiplicar no necesariamente deben tener iguales dimensiones. Lo que deben cumplir es que sean \emph{matrices conformables}, la cantidad de columnas de la primera debe ser igual a la cantidad de filas de la segunda.
+
+El producto entre matrices no es conmutativo. Para matrices conformables de distintas dimensiones, si se da vuelta el orden de las matrices a multiplicar, la operación queda mal definida. En caso de poder realizarse el producto con factores conmutados, el resultado es distinto.
+
+\emph{Ejemplo:}
+Se muestra el producto entre matrices con un ejemplo, que ayudará a entender mejor las operaciones a realizar.
+
+\(A = \begin{pmatrix} 1 & 2 & 1 \\ 3 & -1 & 2 \\ 1 & -1 & 1 \\ -2 & -3 & -1 \end{pmatrix}\) y \(B = \begin{pmatrix} 1 & 1 \\ 2 & 1 \\ -1 & 1 \end{pmatrix}\)
+
+Para hallar el coeficiente de la fila y columna uno, se toma la primera fila de \(A\) y la primera columna de \(B\). Se multiplican posición a posición y se suman los resultados. La primera fila de \(A\) es \(\begin{pmatrix} 1 & 2 & 1 \end{pmatrix}\) mientras que la columna de \(B\) es \(\begin{pmatrix} 1 & 2 & -1 \end{pmatrix}\). El producto entre ellos posición a posición es \(\begin{pmatrix} 1 & 4 & -1 \end{pmatrix}\). La suma de estos tres valores es \(4\), por lo que \(c_{11} = 4\). Para \(c_{21}\) se toma la segunda fila de \(A\) y la primera columna de \(B\) y se procede de la misma forma.
+
+Repitiendo el procedimiento para todos los \(c_{ij}\), se obtiene una matrix de dimensión \(4 \times 2\),
+\[C = \begin{pmatrix} 4 & 6 \\ -1 & 4 \\ -2 & 1 \\ -7 & -6\end{pmatrix}\]
+
+\subsubsection{Trasposición:}\label{trasposiciuxf3n}
+
+Sea la matriz \(A\) de dimensiones \(m \times n\) con coeficientes \((a_{ij})\), se define la matriz traspuesta \(A^t\) como \(A^t = ((a_{ij}^t)) = ((a_{ji}))\).
+
+\emph{Ejemplo:}
+Sea \[A = \begin{pmatrix} 1 & 2 & 1 \\ 3 & -1 & 2 \\ 1 & -1 & 1 \\ -2 & -3 & -1 \end{pmatrix}\] su matriz traspuesta queda:
+\[A^t = \begin{pmatrix} 1 & 3 & 1 & -2 \\ 2 & -1 & -1 & -3 \\ 1 & 2 & 1 & -1\end{pmatrix}\]
+
+\textbf{Propiedades de la matriz traspuesta:}
+1. \((A+B)^t = A^t + B^t\)
+2. \((\lambda^t A)^t = \lambda A^t\)
+3. \((A\cdot B)^t = B^t \cdot A^t\)
+4. \((A^t)^t = A\)
+
+\subsubsection{Inversión:}\label{inversiuxf3n}
+
+Para definir la inversión de matrices es importante previamente definir la \emph{Matriz Identidad}. Se le llama \emph{identidad} de tamaño \(n\) a la matriz de dimensiones \(n \times n\) tal que:
+\[\mathbb{I}_n = \begin{pmatrix} 1 & 0 & ... & 0 \\ 0 & 1 & ... & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & ... & 1 \end{pmatrix}\]
+
+Tiene unos únicamente en la diagonal, mientras que el resto de los coeficientes son cero. Esta matriz cumple la propiedad de neutro del producto matricial, por lo que \(A\cdot \mathbb{I}_n = \mathbb{I}_n \cdot A = A\).
+
+Se define, ahora sí, una \emph{matriz invertible}. Se dice que una matriz \(A\) de \(n \times n\) es invertible si y solo si existe una matriz \(B\) de \(n \times n\) tal que \(A\cdot B = \mathbb{I}_n = B \cdot A\).
+
+Las matrices invertibles son sí o sí matrices cuadradas. La matriz \(B\) que multiplicada por \(A\) devuelve la identidad es una matriz única y se le denomina \emph{matriz inversa de \(A\)}, cumpliendo que \(B = A^{-1}\).
+
+\textbf{Propiedad de la matriz inversa:}
+Sean \(A\) y \(B\) dos matrices cuadradas de dimensión \(n\):
+\[(A\cdot B)^{-1} = B^{-1} \cdot A^{-1}\]
+
+\subsection{Determinante de una matriz}\label{determinante-de-una-matriz}
+
+El \emph{determinante} de una matriz cuadrada es un número, real o complejo, que se calcula a partir de cada matriz. Se trabajará con la definición inductiva del determinante, donde para una matriz de tamaño \(n \times n\) se define a partir del determinante de una matriz de \((n-1) \times (n-1)\).
+
+El determinante de \(A\), \(|A|\), de una matriz de \(1 \times 1\) es el propio número. Para una matriz de \(2 \times 2\), \(A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\) el determinante es el número \(|A| = ad - bc\). Para una matriz de \(n \times n\), el determinante se define como: \[\Rightarrow |A| = (-1)^{1+1} a_{11}|A_{11}|+ ... + (-1)^{i+1}a_{i1}|A_{i1}|+...+(-1)^{n+1}a_{n1}|A_{n1}|\]
+
+\emph{Ejemplos:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Calcular el determinante de la siguiente matriz: \(A = \begin{pmatrix} 1 & 1 & 2 \\ 0 & 1 & 1 \\ -1 & 4 & -1 \end{pmatrix}\).
+\end{enumerate}
+
+\[\Rightarrow |A| = (-1)^2 (1) \left| \begin{matrix} 1 & 1 \\ 4 & -1 \end{matrix} \right| + (-1)^3(0) \left| \begin{matrix} 1 & 2 \\ 4 & -1 \end{matrix} \right| + (-1)^4 (-1) \left| \begin{matrix} 1 & 2 \\ 1 & 1 \end{matrix} \right|\]
+\[= -5 + 0 + (-1)(-1) = -4\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Calcular el determinante de \(B = \begin{pmatrix} 1 & 1 & 2 & 1 \\ 1 & 0 & 2 & 1 \\ 0 & 0 & 4 & 3 \\ 3 & 3 & 3 & 0\end{pmatrix}\)
+\end{enumerate}
+
+\[\Rightarrow |B| = (-1)^2(1) \left| \begin{matrix} 0 & 2 & 1 \\ 0 & 4 & 3 \\ 3 & 3 & 0 \end{matrix} \right| + (-1)^3(1) \left|  \begin{matrix} 1 & 2 & 1 \\ 0 & 4 & 3 \\ 3 & 3 & 0 \end{matrix} \right| + (-1)^4 (0) \left| \begin{matrix} 1 & 2 & 1 \\ 0 & 2 & 1 \\ 3 & 3 & 0 \end{matrix} \right| + (-1)^5(3)\left|  \begin{matrix} 1 & 2 & 1 \\ 0 & 2 & 1 \\ 0 & 4 & 3 \end{matrix} \right| = 6 + 3 - 6 = 3\]
+
+Los determinantes de las matrices \(3 \times 3\) se calcularon como en el ejemplo \((1)\).
+
+Si bien se definió el determinante utilizando los elementos de la primera columna y sus matrices adjuntas, por propiedades del determinante puede utilizarse cualquier fila o columna que el lector crea conveniente.
+
+El determinante tiene gran importancia en la inversión de matrices. En primera instancia, una matriz cuadrada que tenga determinante cero no es invertible. Además, si se tiene una matriz de \(2 \times 2\) \(A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\), la matriz inversa se puede calcular como:
+\[A^{-1} = \frac{1}{|A|} \begin{pmatrix} d & -b \\ -c & a\end{pmatrix}\]
+
+\section{NORMA, PRODUCTO ESCALAR Y PRODUCTO VECTORIAL}\label{norma-producto-escalar-y-producto-vectorial}
+
+\subsection{Vectores}\label{vectores}
+
+Un vector \(\vec{x}\) es un elemento geométrico que consiste de una flecha que parte desde el origen y va hasta un punto de dimensión \(n\) determinado por las coordenadas \(x_i\). Los vectores son elementos con módulo (determinado por el largo), dirección y sentido (hacia donde va la flecha), siendo estos dos representables por el ángulo del vector.
+
+El ángulo también se puede utilizar para medir cuánto difieren dos vectores entre sí. Si el ángulo entre ellos es cero, son colineales y apuntan en el mismo sentido. Si es de \(180°\), son colineales pero tienen sentidos opuestos. Si es de \(90°\) o \(270°\) se dice que son ortogonales.
+
+\section{AGREGAR IMAGEN VECTORES}\label{agregar-imagen-vectores}
+
+\subsection{Distancia y norma}\label{distancia-y-norma}
+
+Se define la \emph{distancia entre dos puntos} como la longitud del segmento entre ellos, una función \(d: E \times E \rightarrow \mathbb{R}^+\), que satisface:
+1. \(d(A,B) = d(B,A) \: \forall A \in E\)
+2. \(d(A,B) = 0 \Leftrightarrow A = B\)
+3. \(d(A,C) \leq d(A,B) + d(B,C) \: \forall A,B,C \in E\)
+
+A partir de la distancia, se define la \emph{norma de un vector} \(v = \vec{AB}\) como la distancia \(d(A,B)\) y se denota como \(||v||\). La norma cumple que:
+1. \(||v|| \geq 0; ||v|| = 0 \Leftrightarrow v = \vec{0}\)
+2. \(||av|| = |a| ||v|| \: \forall a \in \mathbb{R}, \: \forall v \in V\)
+3. \(||u+v|| \leq ||u|| + ||v|| \: \forall u,v \in V\)
+
+En particular, siendo \(A = (x_a, y_a)\) y \(B = (x_b, y_b)\), se define la norma dos como \(||v||_2 = \sqrt{(x_a - x_b)^2 + (y_a - y_b)^2}\).
+
+\subsection{Producto escalar}\label{producto-escalar}
+
+Dados los vectores \(u\) y \(v\) de \(V\), se llama \emph{producto escalar} o \emph{producto interno} de \(u\) por \(v\) al número escalar \(||u||\,||v|| cos \theta\), donde \(\theta\) es el ángulo BAC de tres puntos tales que \(\vec{AB} = u\) y \(\vec{AC} = v\).
+
+\textbf{Propiedades:}
+1. \(u \cdot v = v \cdot u\)
+2. \((a \cdot u) \cdot v = a \cdot (u \cdot v) = u \cdot (a \cdot v)\)
+3. \((u_1 + u_2) \cdot v = u_1\cdot v + u_2 \cdot v\)
+4. \(v \dot v \geq 0 y v \cdot v = 0 \Leftrightarrow v = 0\)
+
+\subsubsection{Ortogonalidad y producto escalar:}\label{ortogonalidad-y-producto-escalar}
+
+Dos vectores \(u, v\) son ortogonales si \(u \cdot v = 0\).
+
+\subsection{Producto vectorial}\label{producto-vectorial}
+
+Se define el \emph{producto vectorial} como una función \(V \times V \rightarrow V\) que a cada par de vectores \(v, u\) le asocia un vector, que se denota \(v \wedge u\), que cumple:
+1. \(||v \wedge u||=||v|| \cdot ||u|| sen \theta\) donde \(\theta\) es el ángulo entre \(v\) y \(u\).
+2. \((v\wedge u)\cdot v = 0\) y \((v\wedge u) \cdot u = 0\)
+
+Además, \(v \wedge u = 0\) si y solo si \(v\) y \(u\) son colineales (en particular, si alguno de ellos es el vector \(\vec{0}\)).
+
+\section{TRANSFORMACIONES LINEALES}\label{transformaciones-lineales}
+
+Sean \(V\) y \(W\) dos espacios vectoriales sobre el mismo cuerpo \(K\). Se define como una \emph{transformación lineal} a una función \(T: V\rightarrow W\) que cumple:
+1. \(T(u+v) = T(u) + T(v)\) \(\forall u, v \in V\).
+2. \(T(a\cdot v) = aT(v)\) \(\forall a \in K\), \(\forall v \in V\).
+
+\emph{Ejemplo:}
+Sea \(C^1 = \{f: \mathbb{R} \rightarrow \mathbb{R} / f\) es derivable\(\}\) y \(F = \{f: \mathbb{R}\rightarrow \mathbb{R}\}\)
+
+La transformación \(T: C^1 \rightarrow F\) tal que \(T(f) = f'\) es una transformación lineal ya que cumple:
+1. \(T(f_1 + f_2) = (f_1+f_2)' = f_1' + f_2' = T(f_1) + T(f_1)\)
+2. \(T(\alpha f) = (\alpha f)' = \alpha f' = \alpha T(f)\)
+
+\subsection{Núcleo e Imagen de una Transformación Lineal}\label{nuxfacleo-e-imagen-de-una-transformaciuxf3n-lineal}
+
+Sean \(V\) y \(W\) espacios vectoriales sobre un mismo cuerpo \(K\) y \(T: V\rightarrow W\) una transformación lineal. Se define el \emph{núcleo de la transformación lineal} \(T\) al conjunto de \(V\) cuya imagen por \(T\) es el vector nulo \(\Rightarrow N(T) = \{ v \in V: \: T(v) = \vec{0}\}\) La imagen de \(T\) es el conjunto \(Im(T) = \{w \in W: \: \exists v \in V\) con \(w = T(v)\}\)
+
+\subsection{Geometría de matrices}\label{geometruxeda-de-matrices}
+
+Se definen un vector \(\vec{x}\) y otro vector \(\vec{y}\) tal que \(y = Ax\). El vector \(\vec{y}\) tendrá coordenadas distintas a las del vector \(\vec{x}\) a menos que \(A\) sea una matriz cuadrada. Por lo tanto, se dice que \(A\) describe una transformación (en particular rotación y escalado) del sistema de coordenadas de \(x\) a un nuevo sistema de coordenadas \(y\).
+
+Para definir las componentes de rotación y escalado de una matriz, conviene comenzar definiendo una matriz ortonormal. Una matriz \(U\) es ortonormal si: \[\mathbf{u}_i^T \mathbf{u}_j = \begin{cases} 1 \; if \;i = j \\  0 \; if \;i \neq j\end{cases}\]
+
+También se denominan \emph{unitarias} y cumplen que \(\mathbf{U}^T\mathbf{U}=\mathbf{I}\).
+
+Si se multiplica un vector por estas matrices, no hay escalado si no únicamente rotación dado que las matrices ortonormales preservan los productos internos. Las matrices de rotación son de la forma \[\begin{pmatrix} cos\phi & -sen\phi \\ sen\phi & cos\phi \end{pmatrix}\]
+
+donde \(\phi\) determina el ángulo de rotación.
+
+La transformación de escalado quedará descripta por los valores y vectores propios a tratar en la siguiente sección.
+
+\section{VALORES Y VECTORES PROPIOS}\label{valores-y-vectores-propios}
+
+\subsection{De una transformación lineal:}\label{de-una-transformaciuxf3n-lineal}
+
+Sea \(V\) un espacio vectorial sobre el conjunto de escalares \(\mathbb{K}\) y \(T: V \rightarrow V\) una transformación lineal. Se llama \emph{vector propio} de \(T\), asociado al \emph{valor propio} \(\lambda \in \mathbb{K}\) a todo vector \(\vec{v} \neq 0\) tal que \(T(v) = \lambda v\).
+
+Los valores propios describen como será el escalado de los vectores en su nuevo espacio vectorial que queda determinado por los vectores propios.
+
+\subsection{De una matriz:}\label{de-una-matriz}
+
+Sea \(A\) una matriz cuadrada con entradas en \(\mathbb{K}\). Se llama \emph{vector propio} de \(A\) asociado al \emph{valor propio} \(\lambda \in \mathbb{K}\) a todo vector no nulo de \(\mathbb{K}^n\) tal que:
+\[A \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = \lambda \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}\]
+
+\textbf{Proposición:}
+Sean \(V\) un espacio vectorial sobre el cuerpo \(\mathbb{K}\), \(T : V \rightarrow V\) una transformación lineal y \(A\) una matriz asociada a la transformación lineal \(T\). Entonces \(\lambda\) es valor propio de \(T\) si y solo si \(\lambda \in \mathbb{K}\) y \(\text{det} (A - \lambda I) = 0\).
+
+Se le llama \emph{polinomio característico} de una matriz cuadrada al polinomio representado por \(x_A{\lambda}\) que resulta de calcular \(\text{det} (A-\lambda I)\). La \emph{ecuación característica} es \(x_A{\lambda} = 0\) y a todas las soluciones de ella se les llama \emph{raíces características}. Estas soluciones, como se vio previamente, son los valores propios.
+
+\emph{Ejemplo:}
+Hallar los valores propios de la matriz \(A\) asociada a la transformación lineal \(T\):
+\[A = \begin{pmatrix} 2 & -1 & 0 \\ 3 & 2 & 0 \\ 0 & 0 & 1 \end{pmatrix}\]
+
+Se calcula el determinante de \(A - \lambda I\):
+\[\text{det}(A-\lambda I) = \left| \begin{pmatrix} 2-\lambda & -1 & 0 \\ 3 & 2-\lambda & 0 \\ 0 & 0 & 1-\lambda \end{pmatrix} \right| == (1-\lambda)(\lambda^2-4\lambda + 7) = 0\]
+
+Hallando las raíces de la ecuación previa se obtiene:
+
+\[\Rightarrow \begin{matrix} \lambda_1 = 1 \\ \lambda_ 2 = 2 + i\sqrt{3}\\ \lambda_3 = 2 - i\sqrt{3} \end{matrix}\]
+
+Para hallar los vectores propios, se sustituye cada uno de los valores propios en la matriz \(A - \lambda I\) para resolver el sistema \[(A - \lambda I) \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ \vdots \\ 0 \end{pmatrix}\].
+Será vector propio el vector \(v = \begin{pmatrix}x_1, x_2,...,x_n\end{pmatrix}\) con \(x_1, x_2,...,x_n\) soluciones del sistema.
+
+\subsection{Diagonalización de una matriz}\label{diagonalizaciuxf3n-de-una-matriz}
+
+Se le denomina \emph{matriz diagonal} a aquellas matrices que todos sus términos por fuera de la diagonal principal son nulos. Se busca llevar una matriz a su forma diagonal, para lo que se calcularán sus valores propios. Si \(A\) tiene \(n\) valores propios reales, se puede definir una matriz \(D\) diagnoal, tal que \(A = P^{-1}DP\) donde \(P\) es una matriz invertible compuesta por los vectores propios en columnas. Además, en ese caso, \(D = \begin{pmatrix} \lambda_1 & 0 & ... & 0 \\ 0 & \lambda_2 & ... & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & ... & \lambda_n \end{pmatrix}\).
+
+La matriz \(D\) es única a menos del orden de \(\lambda_1, \lambda_2, ... , \lambda_n\). A la matriz \(P\) la llamamos \emph{base} de la transformación a diferencia de \(D\) no es única.
+
+\section{DERIVADA DE LA FORMA CUADRÁTICA}\label{derivada-de-la-forma-cuadruxe1tica}
+
+Queremos estudiar la derivada de la forma cuadrática: \(f(x) = \mathbf{x}^T \mathbf{A} \mathbf{x}\) donde \(\mathbf{x}\) es un vector en \(\mathbf{R^m}\) y \(A\) una matriz de dimensión \(m \times m\). Reescribiendo de forma tal que se nombra a la transformada \(\mathbf{A}\mathbf{x}\) como una función \(y(x)\) se llega a que \(f(x,y(x)) = \mathbf{x}^T y(x)\).
+
+Se puede derivar \(f(x)\) usando la fórmula de derivada total, obteniendo que \(f'(x,y(x)) = \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y}y'(x)\).
+
+Para llegar a la expresión final, se realizará el análisis de cada sumando de manera independiente.
+
+En primera instancia, se calcula la derivada \(\frac{\partial f}{\partial x} = \frac{\partial x^T y(x)}{\partial x}\). Tomando \(y(x)\) fijo, la derivada de la expresión es la derivada de un producto interno, por lo que resulta en \(\frac{\partial x^Ty(x)}{\partial x} = y(x)^T = \mathbf{x}^T \mathbf{A}^T\).
+
+El segundo sumando tiene por un lado la derivada de la función \(f\) según \(y\), que siguiendo el procedimiento del previamente explicado es \(\mathbf{x}^T\). Por otro lado, \(y'(x)\) es la derivada del producto de una matriz y un vector, que resulta en la matriz. Por lo tanto, el segundo sumando nos queda \(\frac{\partial f}{\partial y}.y'(x) = \mathbf{x}^T \mathbf{A}\).
+
+Sustituyendo y operando, se obtiene \(f'(x,y(x)) = 2\mathbf{x}^T \mathbf{A}^T\).
+
+\chapter*{Apéndice D: PROBABILIDAD Y ESTADÍSTICA}\label{apuxe9ndice-d-probabilidad-y-estaduxedstica}
+\addcontentsline{toc}{chapter}{Apéndice D: PROBABILIDAD Y ESTADÍSTICA}
 
 \section{PROBABILIDAD Y CONTEO}\label{probabilidad-y-conteo}
 
@@ -29756,13 +29974,15 @@ Para las variables aleatorias discretas podemos definir dos formas de representa
 \textbf{Función de probabilidad puntual:}
 La función de probabilidad puntual de una variable aleatoria discreta \(X: \Omega \rightarrow X\) es una función \(p: \mathbb{R} \rightarrow [0,1]\), definida por \(p(x) = P(X = x)\), que indica para cada punto de \(x\) de \(\mathbb{R}\) la probabilidad de que \(X\) tome ese valor. Si \(x\) no es un posible valor de \(X\), \(p(x) = 1\). Además, \(\sum\limits_{x\in \mathbb{R}_X} p(x) =1\) debido a que en \(R_X\) están todos los posibles valores de \(X\).
 
+\begin{center}\includegraphics[width=0.8\linewidth]{figuras/fpp} \end{center}
+
 \emph{Ejemplo:}
 Función de probabilidad puntual de la suma del resultado de lanzar dos dados.
-\textbf{AGREGAR GRÁFICA}
 
 \textbf{Función de distribución acumulada:}
 La función de distribución acumulada de una variable aleatoria \(X\) es una función \(F: \mathbb{R} \rightarrow [0,1]\) definida por \(F(x) = P(X \leq x)\). \(F\) da la probabilidad acumulada al sumar las probabilidades \(p(y)\) con \(y \leq x\).
-\textbf{AGREGAR GRÁFICA}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figuras/fda} \end{center}
 
 \subsubsection{Distribución de probabilidad conjunta}\label{distribuciuxf3n-de-probabilidad-conjunta}
 
