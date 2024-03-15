@@ -418,7 +418,7 @@
 
 \title{Introducción a la Genética de Poblaciones y a la Genética Cuantitativa}
 \author{Hugo Naya\footnote{Genética Cuantitativa Evolutiva/GD Mejoramiento Genético Animal, Facultad de Agronomía, \href{mailto:hnaya@fagro.edu.uy}{\nolinkurl{hnaya@fagro.edu.uy}} \& Unidad de Bioinformática, Institut Pasteur de Montevideo, \href{mailto:naya@pasteur.edu.uy}{\nolinkurl{naya@pasteur.edu.uy}}} \and Federica Marín\footnote{GD Mejoramiento Genético Animal, Departamento de Producción Animal y Pasturas, Facultad de Agronomía} \and Mauricio Langleib\footnote{GD Mejoramiento Genético Animal, Departamento de Producción Animal y Pasturas, Facultad de Agronomía \& Unidad de Bioinformática, Institut Pasteur de Montevideo} \and (Graciana Castro)\footnote{(Apéndices), Instituto de Ingeniería Eléctrica, Facultad de Ingeniería}}
-\date{2024-03-03}
+\date{2024-03-15}
 
 \begin{document}
 \maketitle
@@ -4659,23 +4659,28 @@ F_t=1-\left(1-\frac{1}{2N}\right)^t
 Veamos ahora cómo se relaciona todo esto con el problema de la subdivisión poblacional planteado en la Figura \ref{fig:subdivPob}. Por definición, \(F\) es también la reducción en heterocigosis (o el incremento en homocigosis) respecto a la expectativa en equilibrio de Hardy-Weinberg (y sus frecuencias genotípicas) en poblaciones finitas (porque es la probabilidad de que dos alelos sean idénticos por ascendencia en un individuo, por lo tanto homocigoto). Entonces, el paralelismo de \(1-F\) es respecto a los heterocigotos conservados y el apareamiento aleatorio. Si consideramos que la frecuencia esperada de heterocigotas en una población de tamaño finito es una función de \(p\) y \(q\), pero también de esa probabilidad de que los alelos no sean idénticos por ascendencia, entonces si llamamos \(H_t\) a esa frecuencia, tenemos,
 
 \[
-\begin{split}
+\begin{split}a
 H_t=2pq(1-F_{t-1})\\
 \therefore 1-F_{t-1}=\frac{H_t}{2pq}
 \end{split}
 \]
 
-El \(t-1\) en el término \((1-F_{t-1})\) se corresponde con el hecho de que el efecto de la reducción de los pares de alelos \textbf{NO idénticos por ascendencia} se ve en la generación anterior a la presente. Sustituyendo en \eqref{eq:recursionF5}
+El \(t-1\) en el término \((1-F_{t-1})\) se corresponde con el hecho de que el efecto de la reducción de los pares de alelos \textbf{NO idénticos por ascendencia} se ve en la generación anterior a la presente. Notemos que \(H_t = 2pq(1-F_{t-1})\), lo cual equivale a decir \(1-F_{t-1} = \frac{H}{2pq}\). Sustituyendo en \eqref{eq:recursionF5}
 
 \[
-\begin{split}
-1-F_t=\frac{H_t}{2pq}=\left(1-\frac{1}{2N}\right)^t(1-F_{0}) \\
-\therefore H_t=\left(1-\frac{1}{2N}\right)^t [2pq(1-F_{0})]
-\end{split}
+1-F_t=\frac{H_t}{2pq}=\left(1-\frac{1}{2N}\right)(1-F_{t-1}) 
+\]
+
+O lo que es igual \(H_t = (1-\frac{1}{2N}) H_{t-1}\).
+
+Podemos extender este razonamiento un número arbitrario de generaciones hacia atrás, hasta la generación inicial (conozcamos el valor de heterocigosidad \(H_0\) en esta o no). Aplicando este razonamiento recursivo tenemos
+
+\[
+H_t = (1 - \frac{1}{2N})^t H_0
 \label{eq:recursionF7}
 \]
 
-Pero \([2pq(1-F_{0})]\) en la ecuación \eqref{eq:recursionF7} es la cantidad inicial de heterocigotas (\(H_0\)), teniendo en cuenta la posibilidad de que ya en esa generación inicial existiese una reducción de la frecuencia esperada respecto a Hardy-Weinberg (o sea, \(F_0 \ne 0\)), por lo que podemos escribir esta última ecuación como
+Utilizando la aproximación \(-b^t \approx e^{-bt}\) (teniendo en cuenta que \((1-\frac{1}{2N}) \approx -\frac{1}{2N}\) cuando \(N\) es pequeño), tenemos
 
 \begin{equationbox}
 \begin{equation}
