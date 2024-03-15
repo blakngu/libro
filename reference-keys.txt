@@ -205,9 +205,9 @@ eq:deslig17
 eq:deslig18
 eq:deslig19
 eq:deslig20
-fig:Dtevol
 eq:deslig21
 eq:deslig22
+fig:Dtevol
 tab:tablaDtr
 fig:supertDt
 eq:otrasmedas2
@@ -330,10 +330,10 @@ eq:dinamica16
 eq:dinamica17
 fig:verhulst
 eq:dinamica17p1
-fig:dndt
 eq:dinamica18
 eq:dinamica19
 eq:dinamica20
+fig:dndt
 eq:haplosel1
 eq:haplosel2
 eq:haplosel3
@@ -894,7 +894,7 @@ verdadero-o-falso-1
 deriva
 el-rol-de-los-procesos-estocásticos-en-la-genética
 el-modelo-de-wright-fisher
-el-rol-de-la-subdivisión-poblacional-en-la-evolución-de-las-frecuencias-alélicas
+la-subdivisión-poblacional-y-la-evolución-de-las-frecuencias-alélicas
 cadenas-de-markov
 tamaño-efectivo-poblacional
 aproximación-de-difusión
@@ -992,7 +992,7 @@ pargen
 heredabilidad
 heredabilidad-en-sentido-amplio-y-sentido-estricto
 heredabilidad-lograda
-heredabilidad-en-poblaciones-agronómicas-y-de-laboratorio-vs-poblaciones-naturales
+heredabilidad-en-poblaciones-agronómicaslab.-vs-poblaciones-naturales
 heredabilidad-y-filogenética
 heredabilidad-en-la-era-genómica
 métodos-más-avanzados-de-estimación
@@ -1024,7 +1024,7 @@ correlacionada
 causas-genéticas-y-ambientales-de-las-correlaciones
 introducción-al-path-analysis
 métodos-para-determinar-la-correlación-genética
-la-correlación-fenotípica-y-su-relación-con-la-correlación-genética-aditiva-y-ambiental
+la-correlación-fenotípica-y-su-relación-con-otras-correlaciones
 respuesta-correlacionada
 matrices-de-varianza-covarianza
 la-forma-generalizada-de-la-ecuación-del-criador
@@ -1074,7 +1074,6 @@ actividades-14
 control-de-lectura-14
 veradero-o-falso-2
 ejercicios-14
-apéndice-i-conceptos-matemáticos-básicos
 fracciones
 fracciones-equivalentes-y-fracciones-irreducibles
 operaciones-con-fracciones
@@ -1103,7 +1102,6 @@ función-racional
 función-exponencial
 función-logarítmica
 sumatoria-y-productoria
-apéndice-ii-cálculo-diferencial-e-integral
 límites
 límite-finito
 proposiciones-importantes
@@ -1125,7 +1123,6 @@ métodos-de-integración
 integración-por-sustitución
 integración-por-partes
 ecuaciones-diferenciales
-apéndice-iii-algebra-lineal-y-geometría-analítica
 matrices
 relación-con-los-sistemas-de-ecuaciones
 álgebra-de-matrices
@@ -1151,7 +1148,6 @@ de-una-transformación-lineal
 de-una-matriz
 diagonalización-de-una-matriz
 derivada-de-la-forma-cuadrática
-apéndice-iv-probabilidad-y-estadística
 probabilidad-y-conteo
 probabilidad-condicional
 fórmula-de-probabilidad-total
