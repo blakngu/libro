@@ -1085,14 +1085,13 @@ H_t=\left(1-\frac{1}{2N}\right)^t H_0= \left(1-\frac{1}{2N}\right)^t[2pq(1-F_{-1
 H_t = (1 - \frac{1}{2N})^t H_0
 \tag{3.11}
 \]</span></p>
-<p>Utilizando la aproximación <span class="math inline">\(-b^t \approx e^{-bt}\)</span> (teniendo en cuenta que <span class="math inline">\((1-\frac{1}{2N}) \approx -\frac{1}{2N}\)</span> cuando <span class="math inline">\(N\)</span> es pequeño), tenemos</p>
+<p>Utilizando la aproximación <span class="math inline">\((1-a)^b \approx (e^{-a})^b \approx e^{-ab}\)</span> cuando <span class="math inline">\(a \to 0\)</span> (en nuestro caso, <span class="math inline">\(a = \frac{1}{2N};\ b = t\)</span>), tenemos</p>
 <div class="equationbox">
 <p><span class="math display" id="eq:recursionF8">\[\begin{equation}
 H_t=\left(1-\frac{1}{2N}\right)^t H_0 \approx H_0 e^{\frac{-t}{2N}}
 \tag{3.12}
 \end{equation}\]</span></p>
 </div>
-<p>donde en el último paso se tiene en cuenta la siguiente aproximación: <span class="math inline">\((1-a)^b \approx (e^{-a})^b \approx e^{-ab}\)</span> cuando <span class="math inline">\(a \to 0\)</span> (en nuestro caso, <span class="math inline">\(a = \frac{1}{2N};\ b = t\)</span>).</p>
 <p>Es decir, pese a que en cada una de las poblaciones se mantiene el equilibrio de Hardy-Weinberg, como se puede apreciar en la Figura <a href="deriva.html#fig:figura3p9">3.11</a>, la proporción de individuos heterocigotos en el conjunto de ellas, o mejor dicho el promedio en el <strong>ensemble</strong>, decaerá en forma geométrica respecto al valor inicial a lo largo del tiempo ya que la proporción en cada generación es multiplicada por el factor <span class="math inline">\(\left(1-\frac{1}{2N}\right)\)</span> al pasar a la siguiente. La aproximación exponencial funciona en general razonablemente bien, y permite resolver algunos problemas en forma más sencilla. El efecto de la reducción en la proporción de heterocigotos es realmente drástico cuando los tamaños poblacionales son extremadamente pequeños, por ejemplo <span class="math inline">\(N=5\)</span> o <span class="math inline">\(N=10\)</span> individuos en la Figura <a href="deriva.html#fig:figura3p9">3.11</a>, pero son apenas notables cuando el número de individuos es 50 o más (notar que para 100 individuos el punto de reducción a <span class="math inline">\(50\%\)</span> de la heterocigosis inicial ni siquiera aparece en la gráfica, ya que llevaría más de 138 generaciones para alcanzarlo).</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura3p9"></span>
 <img src="ApuntesGeneticaII_files/figure-html/figura3p9-1.png" alt="Reducción esperada en el número inicial de heterocigotas $H_0$ de acuerdo al tamaño N de las poblaciones y al número de generaciones transcurridas. La línea negra horizontal marca la reducción a la mitad del valor inicial y los puntos sobre las curvas resaltan el número de generaciones requeridas para esa reducción a la mitad." width="70%" />
