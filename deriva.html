@@ -26,7 +26,7 @@
 <meta name="author" content="(Graciana Castro)" />
 
 
-<meta name="date" content="2024-03-15" />
+<meta name="date" content="2024-03-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1065,17 +1065,22 @@ F_t=1-\left(1-\frac{1}{2N}\right)^t
 </div>
 <p>Veamos ahora cómo se relaciona todo esto con el problema de la subdivisión poblacional planteado en la Figura <a href="deriva.html#fig:subdivPob">3.9</a>. Por definición, <span class="math inline">\(F\)</span> es también la reducción en heterocigosis (o el incremento en homocigosis) respecto a la expectativa en equilibrio de Hardy-Weinberg (y sus frecuencias genotípicas) en poblaciones finitas (porque es la probabilidad de que dos alelos sean idénticos por ascendencia en un individuo, por lo tanto homocigoto). Entonces, el paralelismo de <span class="math inline">\(1-F\)</span> es respecto a los heterocigotos conservados y el apareamiento aleatorio. Si consideramos que la frecuencia esperada de heterocigotas en una población de tamaño finito es una función de <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span>, pero también de esa probabilidad de que los alelos no sean idénticos por ascendencia, entonces si llamamos <span class="math inline">\(H_t\)</span> a esa frecuencia, tenemos,</p>
 <p><span class="math display">\[
-\begin{split}a
+\begin{split}
 H_t=2pq(1-F_{t-1})\\
 \therefore 1-F_{t-1}=\frac{H_t}{2pq}
 \end{split}
 \]</span></p>
-<p>El <span class="math inline">\(t-1\)</span> en el término <span class="math inline">\((1-F_{t-1})\)</span> se corresponde con el hecho de que el efecto de la reducción de los pares de alelos <strong>NO idénticos por ascendencia</strong> se ve en la generación anterior a la presente. Notemos que <span class="math inline">\(H_t = 2pq(1-F_{t-1})\)</span>, lo cual equivale a decir <span class="math inline">\(1-F_{t-1} = \frac{H}{2pq}\)</span>. Sustituyendo en <a href="deriva.html#eq:recursionF5">(3.9)</a></p>
+<p>El <span class="math inline">\(t-1\)</span> en el término <span class="math inline">\((1-F_{t-1})\)</span> se corresponde con el hecho de que el efecto de la reducción de los pares de alelos <strong>NO idénticos por ascendencia</strong> se ve en la generación anterior a la presente. Notemos que <span class="math inline">\(H_t = 2pq(1-F_{t-1})\)</span>, lo cual equivale a decir <span class="math inline">\(1-F_{t-1} = \frac{H}{2pq}\)</span>. Esto nos lleva a</p>
 <p><span class="math display">\[
-1-F_t=\frac{H_t}{2pq}=\left(1-\frac{1}{2N}\right)(1-F_{t-1})
+\begin{split}
+1-F_t=\left(1-\frac{1}{2N}\right)(1-F_{t-1})=\left(1-\frac{1}{2N}\right)\frac{H_t}{2pq}= \\
+=\left(1-\frac{1}{2N}\right)^2\frac{H_{t-1}}{2pq}=\left(1-\frac{1}{2N}\right)^3\frac{H_{t-2}}{2pq} \\
+\therefore \left(1-\frac{1}{2N}\right)\frac{H_t}{2pq}=\left(1-\frac{1}{2N}\right)^{t+1}\frac{H_{t-t}}{2pq} \\
+H_t=\left(1-\frac{1}{2N}\right)^t H_0= \left(1-\frac{1}{2N}\right)^t[2pq(1-F_{-1})]
+\end{split}
 \]</span></p>
-<p>O lo que es igual <span class="math inline">\(H_t = (1-\frac{1}{2N}) H_{t-1}\)</span>.</p>
-<p>Podemos extender este razonamiento un número arbitrario de generaciones hacia atrás, hasta la generación inicial (conozcamos el valor de heterocigosidad <span class="math inline">\(H_0\)</span> en esta o no). Aplicando este razonamiento recursivo tenemos</p>
+<p>Notemos que en el desarrollo anterior se continuó la recursión planteada hasta alcannzar el tiempo <span class="math inline">\(t=t\)</span> (de ahí que el exponente que acompaña a <span class="math inline">\(H_{t-t} = H_0\)</span> sea <span class="math inline">\(t+1\)</span>). Luego, como en ambos lados de la ecuación se tiene <span class="math inline">\(2pq\)</span> en el denominador, los términos se cancelan, y como en el lado izquierdo se tiene <span class="math inline">\(1-\frac{1}{2N}\)</span>, al dividir ambos lados por este término el exponente <span class="math inline">\(t+1\)</span> en el lado derecho pasa a ser <span class="math inline">\(t\)</span>.</p>
+<p>En resumen, luego de este desarrollo por recursión se llega a</p>
 <p><span class="math display" id="eq:recursionF7">\[
 H_t = (1 - \frac{1}{2N})^t H_0
 \tag{3.11}
@@ -1519,7 +1524,7 @@ de 4 alelos A
 </tbody>
 </table>
 <p>Otra forma de verlo, más gráfica, aparece en la Figura <a href="deriva.html#fig:figura3p6">3.12</a>. Claramente se aprecia que mientras que las probabilidades de encontrarse en los estados intermedios (<span class="math inline">\(i=1\)</span> a <span class="math inline">\(i=3\)</span>, en gris) decrece, la de los estados correspondientes a las <strong>barreras absorbentes</strong> (rojo: pérdida, azul: fijación) crece en la misma medida. La pregunta sería ¿hacia dónde va este movimiento?, o dicho de otra forma, ¿qué ocurre si seguimos de generación en generación?</p>
-<p>Antes de abordar esta cuestión, es interesante notar que <span class="math inline">\(\mathbf{I}_2=\mathbf{I}_1 * \mathbf{T} = (\mathbf{I}_0 * \mathbf{T}) * \mathbf{T} = \mathbf{I}_0 * (\mathbf{T} * \mathbf{T})=\mathbf{I}*0 * \mathbf{T}^2\)</span><a href="#fn43" class="footnote-ref" id="fnref43"><sup>43</sup></a>. Claramente, lo anterior se puede generalizar a <span class="math inline">\(\mathbf{I}*{t=k}=\mathbf{I}_0 * \mathbf{T}^{(k)}\)</span>. En palabras, para calcular la distribución de probabilidades de los estados (número de alelos <strong>A</strong> en nuestro <strong>ensemble</strong> de poblaciones) en cualquier generación <span class="math inline">\(k\)</span> (donde consideramos <span class="math inline">\(t=k\)</span>, <span class="math inline">\(k&gt;0\)</span>) basta con multplicar la distribución en la generación inicial (o sea en <span class="math inline">\(t=0\)</span>, que llamamos <span class="math inline">\(\mathbf{I}_0\)</span>) por la matriz de transición de probabilidades elevada a la potencia <span class="math inline">\(k\)</span>.</p>
+<p>Antes de abordar esta cuestión, es interesante notar que <span class="math inline">\(\mathbf{I}_2=\mathbf{I}_1 * \mathbf{T} = (\mathbf{I}_0 * \mathbf{T}) * \mathbf{T} = \mathbf{I}_0 * (\mathbf{T} * \mathbf{T})=\mathbf{I}_0 * \mathbf{T}^2\)</span><a href="#fn43" class="footnote-ref" id="fnref43"><sup>43</sup></a>. Claramente, lo anterior se puede generalizar a <span class="math inline">\(\mathbf{I}_{t=k}=\mathbf{I}_0 * \mathbf{T}^{(k)}\)</span>. En palabras, para calcular la distribución de probabilidades de los estados (número de alelos <strong>A</strong> en nuestro <strong>ensemble</strong> de poblaciones) en cualquier generación <span class="math inline">\(k\)</span> (donde consideramos <span class="math inline">\(t=k\)</span>, <span class="math inline">\(k&gt;0\)</span>) basta con multplicar la distribución en la generación inicial (o sea en <span class="math inline">\(t=0\)</span>, que llamamos <span class="math inline">\(\mathbf{I}_0\)</span>) por la matriz de transición de probabilidades elevada a la potencia <span class="math inline">\(k\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura3p6"></span>
 <img src="ApuntesGeneticaII_files/figure-html/figura3p6-1.png" alt="Evolución de la probabilidad de encontrar a las poblaciones en un estado alélico determinado desde la generación $t=0$ a $t=5$ (desde el costado superior izquierdo al inferior derecho). En rojo el estado de 0 alelos A (pérdida del mismo), en azul 4 alelos A (fijación del mismo) y en gris oscuro 2 alelos (nuestro punto de partida en todas las poblaciones). Notar la diferente escala de la generación $t=0$ al resto." width="80%" />
 <p class="caption">
