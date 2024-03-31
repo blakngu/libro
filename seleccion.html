@@ -459,6 +459,82 @@ Figura 4.1: Modelo fundamental utilizado para estudiar la selección en un locus
 </p>
 </div>
 <p>Podemos llamar a cada uno de los <strong>filtros</strong> anteriores la <strong>viabilidad</strong> de cada genotipo. Obviamente, las nuevas frecuencias de los genotipos antes y después de la selección deberán sumar a uno, ya que se trata de proporciones de un total y no aparecen nuevos genotipos. Si, siguiendo la notación de <span class="citation">John H. Gillespie (<a href="#ref-Gillespie2004">2004</a>)</span>, llamamos <span class="math inline">\(w_{ij}\)</span> a la viabilidad del genotipo con alelos <span class="math inline">\(i\)</span> y <span class="math inline">\(j\)</span> (pudiendo ser <span class="math inline">\(i \ne j\)</span> o <span class="math inline">\(i=j\)</span>), entonces la frecuencia del genotipo <span class="math inline">\(A_iA_j\)</span> después de la selección estará dada por el producto de su frecuencia antes de la selección (por ejemplo, <span class="math inline">\(p_ip_j\)</span> si los genotipos se encontraban en equilibrio Hardy-Weinberg), multiplicada por el <strong>filtro</strong> <span class="math inline">\(w_{ij}\)</span> y divido por el <strong><em>fitness</em> medio</strong>, de forma que el <strong><em>fitness</em> relativo</strong> de cada genotipo, ponderado por su frecuencia, sume a uno. Poniendo en un cuadro la situación antes y después de la selección, tenemos</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Genotipo
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2A_2\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Frecuencia}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Viabilidad}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(w_{11}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(w_{12}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(w_{22}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Frecuencia post-selección}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2w_{11}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pqw_{12}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2w_{22}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Frecuencia relativa post-selección}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{p^2w_{11}}{\bar{w}}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{2pqw_{12}}{\bar{w}}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{q^2w_{22}}{\bar{w}}\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>En el cuadro anterior <span class="math inline">\(\bar{w}\)</span> representa el *<strong>fitness</strong> promedio** de la población y es igual a</p>
 <div class="equationbox">
 <p><span class="math display" id="eq:fitmedio">\[\begin{equation}
@@ -544,11 +620,141 @@ Vemos que, como era de esperar, bajo el régimen del plaguicida se da un aumento
 <hr />
 <p>Ya veremos que es posible hacer una transformación de la escala que simplifique aún más la ecuación <a href="seleccion.html#eq:deltapfinal">(4.4)</a>, pero el numerador de la misma parece bastante informativo desde ya. El término <span class="math inline">\(pq\)</span>, que es igual a <span class="math inline">\(p(1-p)=p-p^2\)</span> y que aparece multiplicando todo, y ya vimos que alcanza su máximo cuando <span class="math inline">\(p=q=\frac{1}{2}\)</span><a href="#fn48" class="footnote-ref" id="fnref48"><sup>48</sup></a>. También vimos en el capítulo anterior que <span class="math inline">\(pq\)</span> era el numerador de la varianza en frecuencias por deriva. El otro término, entre paréntesis rectos, es el promedio, ponderado por las frecuencias de <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span>, respectivamente, de las diferencias en <strong><em>fitness</em></strong> entre homocigotos <span class="math inline">\(A_1A_1\)</span> y heterocigotos y entre estos últimos y los homocigotos <span class="math inline">\(A_2A_2\)</span><a href="#fn49" class="footnote-ref" id="fnref49"><sup>49</sup></a>.</p>
 <p>Veamos si podemos avanzar en la simplificación de todo esto. Como nuestro interés hasta ahora (en este capítulo) es ver cómo el proceso de selección afecta los genotipos y las frecuencias alélicas <strong>dentro</strong> de una población, podemos transformar todos los <strong><em>fitness</em></strong> de su escala absoluta a una escala relativa. Por ejemplo, podemos dividir todos los valores entre el mayor valor de <strong><em>fitness</em></strong> (asumamos para el ejemplo que se trata de<span class="math inline">\(w_{11}\)</span>). Ahora los <strong><em>fitness</em> relativos</strong> para los tres genotipos serán <span class="math inline">\(\frac{w_{11}}{w_{11}}=1\)</span>, <span class="math inline">\(\frac{w_{12}}{w_{11}}\)</span> y <span class="math inline">\(\frac{w_{22}}{w_{11}}\)</span>. Más aún, si llamamos <span class="math inline">\(s\)</span> al <strong>coeficiente de selección</strong> (la intensidad de la misma) contra el genotipo <span class="math inline">\(A_2A_2\)</span> (sin pérdida de generalidad, ya que la designación de los alelos <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span> es completamente arbitraria y podemos elegir a nuestro gusto cuál es uno y cuál el otro) y definimos un parámetro <span class="math inline">\(h\)</span> de tal forma de poder acomodar libremente los valores de <strong><em>fitness</em></strong> de los heterocigotos, tenemos que los nuevos <em>fitness</em> relativos estarán dados ahora por</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Genotipo
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2A_2\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Frecuencia}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Viabilidad}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(w_{11}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(w_{12}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(w_{22}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Viabilidad relativa}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{w_{11}}{w_{11}}=1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{w_{12}}{w_{11}}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{w_{22}}{w_{11}}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{*fitness* relativo (forma } h \text{ y } s)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-hs\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-s\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>En nuestro caso, vamos a permitir que <span class="math inline">\(0 \leqslant s \leqslant 1\)</span>, donde <span class="math inline">\(s=0\)</span> corresponde al caso en que no hay ninguna fuerza detrimental contra los genotipos que no son <span class="math inline">\(A_1A_1\)</span> y <span class="math inline">\(s=1\)</span> corresponde al caso de <strong>inviabilidad total</strong> del genotipo <span class="math inline">\(A_2A_2\)</span>. El parámetro <span class="math inline">\(h\)</span>, llamado usualmente <strong>efecto del heterocigoto</strong>, es un parámetro que permite ubicar libremente a los heterocigotos entre (y aún por fuera) de los valores de <strong><em>fitness</em> relativo</strong> de los homocigotos. En efecto, jugando con el parámetro <span class="math inline">\(h\)</span> podemos entrar en los modos de acción génica más relevantes, como se aprecia en el cuadro siguiente</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math inline">\(\textbf{Modo de acción}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\textbf{Valores de } h\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1\text{ dominante, } A_2 \text{ recesivo}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(h=0\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2\text{ dominante, } A_1 \text{ recesivo}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(h=1\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Dominancia incompleta}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0 &lt; h &lt; 1\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Sobredominancia}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(h &lt; 0\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Subdominancia}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(h &gt; 1\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Veamos cómo funciona lo anterior. Si <span class="math inline">\(h=0\)</span>, entonces los <strong><em>fitness</em> relativos</strong> serán <span class="math inline">\(1\)</span> para el genotipo <span class="math inline">\(A_1A_1\)</span>, <span class="math inline">\(1-hs=1-0 \cdot s=1\)</span> para el genotipo <span class="math inline">\(A_1A_2\)</span> y <span class="math inline">\(1-s\)</span> para el genotipo <span class="math inline">\(A_2A_2\)</span>, por lo que el genotipo heterocigoto tendrá el mismo valor de <strong><em>fitness</em></strong> que el genotipo <span class="math inline">\(A_1A_1\)</span>. Esto es equivalente a un modo de acción con el alelo <span class="math inline">\(A_1\)</span> dominante sobre el alelo <span class="math inline">\(A_2\)</span>. De la misma manera, si <span class="math inline">\(h=1\)</span>, entonces los <strong><em>fitness</em> relativos</strong> serán <span class="math inline">\(1\)</span> para el genotipo <span class="math inline">\(A_1A_1\)</span>, <span class="math inline">\(1-hs=1-1 \cdot s=1-s\)</span> para el genotipo <span class="math inline">\(A_1A_2\)</span> y <span class="math inline">\(1-s\)</span> para el genotipo <span class="math inline">\(A_2A_2\)</span>, por lo que el genotipo heterocigoto tendrá el mismo valor de <strong><em>fitness</em></strong> que el genotipo <span class="math inline">\(A_2A_2\)</span>. Esto es equivalente a su vez a un modo de acción con <span class="math inline">\(A_2\)</span> dominante sobre <span class="math inline">\(A_1\)</span>. Un caso menos extremo, pero paradigmático también, es el caso en que <span class="math inline">\(h=\frac{1}{2}\)</span>; en ese caso, los <strong><em>fitness</em> relativos</strong> serán <span class="math inline">\(1\)</span>, <span class="math inline">\(1-\frac{1}{2}s\)</span> y <span class="math inline">\(1-s\)</span>, con lo que el genotipo heterocigoto estará exactamente en el punto medio de los genotipos homocigotos (<span class="math inline">\(\frac{1+(1-s)}{2}=1-\frac{1}{2}s\)</span>). En este caso el modo de acción es completamente aditivo (algo sobre lo que abundaremos en el capítulo <a href="modelogenbas.html#modelogenbas">El Modelo Genético Básico</a>). Una representación gráfica de los modos de acción génica descritos anteriormente se puede ver en la Figura <a href="seleccion.html#fig:valoresh">4.2</a>, donde las alturas de las barras representan los <strong><em>fitness</em> relativos</strong> de cada genotipo en las 5 configuraciones del cuadro anterior.</p>
 
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:valoresh"></span>
-<img src="figuras/valoresh.jpg" alt="Representación gráfica de los modos de acción génica (o alélica) de acuerdo al parámetro \(h\). En cada caso se representan los 3 genotipos (\(A_1A_1\), \(A_1A_2\) y \(A_2A_2\)) y las alturas de las barras representan el \textbf{fitness relativo} de cada genotipo. Las barras en azul corresponden al alelo \(A_1\), mientras que las barras rojas corresponden al alelo \(A_2\)." width="80%" />
+<img src="figuras/valoresh.png" alt="Representación gráfica de los modos de acción génica (o alélica) de acuerdo al parámetro \(h\). En cada caso se representan los 3 genotipos (\(A_1A_1\), \(A_1A_2\) y \(A_2A_2\)) y las alturas de las barras representan el \textbf{fitness relativo} de cada genotipo. Las barras en azul corresponden al alelo \(A_1\), mientras que las barras rojas corresponden al alelo \(A_2\)." width="80%" />
 <p class="caption">
 Figura 4.2: Representación gráfica de los modos de acción génica (o alélica) de acuerdo al parámetro <span class="math inline">\(h\)</span>. En cada caso se representan los 3 genotipos (<span class="math inline">\(A_1A_1\)</span>, <span class="math inline">\(A_1A_2\)</span> y <span class="math inline">\(A_2A_2\)</span>) y las alturas de las barras representan el \textbf{<em>fitness</em> relativo} de cada genotipo. Las barras en azul corresponden al alelo <span class="math inline">\(A_1\)</span>, mientras que las barras rojas corresponden al alelo <span class="math inline">\(A_2\)</span>.
 </p>
