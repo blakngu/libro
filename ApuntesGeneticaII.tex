@@ -418,7 +418,7 @@
 
 \title{Introducción a la Genética de Poblaciones y a la Genética Cuantitativa}
 \author{Hugo Naya\footnote{Genética Cuantitativa Evolutiva/GD Mejoramiento Genético Animal, Facultad de Agronomía, \href{mailto:hnaya@fagro.edu.uy}{\nolinkurl{hnaya@fagro.edu.uy}} \& Unidad de Bioinformática, Institut Pasteur de Montevideo, \href{mailto:naya@pasteur.edu.uy}{\nolinkurl{naya@pasteur.edu.uy}}} \and Federica Marín\footnote{GD Mejoramiento Genético Animal, Departamento de Producción Animal y Pasturas, Facultad de Agronomía} \and Mauricio Langleib\footnote{GD Mejoramiento Genético Animal, Departamento de Producción Animal y Pasturas, Facultad de Agronomía \& Unidad de Bioinformática, Institut Pasteur de Montevideo} \and (Graciana Castro)\footnote{(Apéndices), Instituto de Ingeniería Eléctrica, Facultad de Ingeniería}}
-\date{2024-03-16}
+\date{2024-03-31}
 
 \begin{document}
 \maketitle
@@ -4685,7 +4685,7 @@ H_t = (1 - \frac{1}{2N})^t H_0
 \label{eq:recursionF7}
 \]
 
-Utilizando la aproximación \(-b^t \approx e^{-bt}\) (teniendo en cuenta que \((1-\frac{1}{2N}) \approx -\frac{1}{2N}\) cuando \(N\) es pequeño), tenemos
+Utilizando la aproximación \((1-a)^b \approx (e^{-a})^b \approx e^{-ab}\) cuando \(a \to 0\) (en nuestro caso, \(a = \frac{1}{2N};\ b = t\)), tenemos
 
 \begin{equationbox}
 \begin{equation}
@@ -4694,8 +4694,6 @@ H_t=\left(1-\frac{1}{2N}\right)^t H_0 \approx H_0 e^{\frac{-t}{2N}}
 \end{equation}
 
 \end{equationbox}
-
-donde en el último paso se tiene en cuenta la siguiente aproximación: \((1-a)^b \approx (e^{-a})^b \approx e^{-ab}\) cuando \(a \to 0\) (en nuestro caso, \(a = \frac{1}{2N};\ b = t\)).
 
 Es decir, pese a que en cada una de las poblaciones se mantiene el equilibrio de Hardy-Weinberg, como se puede apreciar en la Figura \ref{fig:figura3p9}, la proporción de individuos heterocigotos en el conjunto de ellas, o mejor dicho el promedio en el \textbf{ensemble}, decaerá en forma geométrica respecto al valor inicial a lo largo del tiempo ya que la proporción en cada generación es multiplicada por el factor \(\left(1-\frac{1}{2N}\right)\) al pasar a la siguiente. La aproximación exponencial funciona en general razonablemente bien, y permite resolver algunos problemas en forma más sencilla. El efecto de la reducción en la proporción de heterocigotos es realmente drástico cuando los tamaños poblacionales son extremadamente pequeños, por ejemplo \(N=5\) o \(N=10\) individuos en la Figura \ref{fig:figura3p9}, pero son apenas notables cuando el número de individuos es 50 o más (notar que para 100 individuos el punto de reducción a \(50\%\) de la heterocigosis inicial ni siquiera aparece en la gráfica, ya que llevaría más de 138 generaciones para alcanzarlo).
 
@@ -6561,6 +6559,25 @@ Ya veremos que es posible hacer una transformación de la escala que simplifique
 
 Veamos si podemos avanzar en la simplificación de todo esto. Como nuestro interés hasta ahora (en este capítulo) es ver cómo el proceso de selección afecta los genotipos y las frecuencias alélicas \textbf{dentro} de una población, podemos transformar todos los \textbf{\emph{fitness}} de su escala absoluta a una escala relativa. Por ejemplo, podemos dividir todos los valores entre el mayor valor de \textbf{\emph{fitness}} (asumamos para el ejemplo que se trata de\(w_{11}\)). Ahora los \textbf{\emph{fitness} relativos} para los tres genotipos serán \(\frac{w_{11}}{w_{11}}=1\), \(\frac{w_{12}}{w_{11}}\) y \(\frac{w_{22}}{w_{11}}\). Más aún, si llamamos \(s\) al \textbf{coeficiente de selección} (la intensidad de la misma) contra el genotipo \(A_2A_2\) (sin pérdida de generalidad, ya que la designación de los alelos \(A_1\) y \(A_2\) es completamente arbitraria y podemos elegir a nuestro gusto cuál es uno y cuál el otro) y definimos un parámetro \(h\) de tal forma de poder acomodar libremente los valores de \textbf{\emph{fitness}} de los heterocigotos, tenemos que los nuevos \emph{fitness} relativos estarán dados ahora por
 
+\begin{lstlisting}[language=R]
+t = "| $\\text{Genotipo}$                           |   $\\textbf{A_1A_1}$  |  $\\textbf{A_1A_2}$   |  $\\textbf{A_2A_2}$   |
+| $\\text{Frecuencia}$                         |      $p^2$       |      $2pq$       |      $q^2$       |
+| $\\text{Viabilidad}$                         |    $w_{11}$      |     $w_{12}$     |    $w_{22}$      |
+| $\\text{Viabilidad relativa}$ | $\\frac{w_{11}}{w_{11}}=1$ | $\\frac{w_{12}}{w_{11}}$ | $\\frac{w_{22}}{w_{11}}$ |
+| $\\text{*fitness* relativo (forma } h \\text{ y } s)$ |  $1$             |   $1-hs$         |    $1-s$         |"
+
+df <- read.table(text = t, header = TRUE, sep = "|", comment.char = "")
+df <- df[, colSums(is.na(df)) < nrow(df)]
+df <- df[!apply(df, 1, function(row) all(grepl("^\\s*---\\s*$",
+  row))), ]
+df <- df[, colSums(is.na(df)) < nrow(df)]
+colnames(df) <- trimws(colnames(df))
+kableExtra::kbl(df, escape = FALSE, booktabs = TRUE, format = "latex",
+  row.names = F, col.names = c("Genotipo", "$A_1A_1$",
+    "$A_1A_2$", "$A_2A_2$")) %>%
+  kable_styling(latex_options = "striped", protect_latex = TRUE)
+\end{lstlisting}
+
 \begin{table}
 \centering
 \begin{tabular}[t]{llll}
@@ -6576,6 +6593,26 @@ $\text{*fitness* relativo (forma } h \text{ y } s)$ & $1$ & $1-hs$ & $1-s$\\
 \end{table}
 
 En nuestro caso, vamos a permitir que \(0 \leqslant s \leqslant 1\), donde \(s=0\) corresponde al caso en que no hay ninguna fuerza detrimental contra los genotipos que no son \(A_1A_1\) y \(s=1\) corresponde al caso de \textbf{inviabilidad total} del genotipo \(A_2A_2\). El parámetro \(h\), llamado usualmente \textbf{efecto del heterocigoto}, es un parámetro que permite ubicar libremente a los heterocigotos entre (y aún por fuera) de los valores de \textbf{\emph{fitness} relativo} de los homocigotos. En efecto, jugando con el parámetro \(h\) podemos entrar en los modos de acción génica más relevantes, como se aprecia en el cuadro siguiente
+
+\begin{lstlisting}[language=R]
+t = "| **Modo de acción**                           |  **Valores de $h$**          | 
+| $A_1\\text{ dominante, } A_2 \\text{ recesivo}$              | $h=0$                        |
+| $A_2\\text{ dominante, } A_1 \\text{ recesivo}$              | $h=1$                        |
+| $\\text{Dominancia incompleta}$                        | $0 < h < 1$                  |
+| $\\text{Sobredominancia}$                              | $h < 0$                      |
+| $\\text{Subdominancia}$                                | $h > 1$                      |"
+
+df <- read.table(text = t, header = TRUE, sep = "|", comment.char = "")
+df <- df[, colSums(is.na(df)) < nrow(df)]
+df <- df[!apply(df, 1, function(row) all(grepl("^\\s*---\\s*$",
+  row))), ]
+df <- df[, colSums(is.na(df)) < nrow(df)]
+colnames(df) <- trimws(colnames(df))
+kableExtra::kbl(df, escape = FALSE, booktabs = TRUE, format = "latex",
+  row.names = F, col.names = c("$\\textbf{Modo de acción}$",
+    "$\\textbf{Valores de } h$")) %>%
+  kable_styling(latex_options = "striped", protect_latex = TRUE)
+\end{lstlisting}
 
 \begin{table}
 \centering
