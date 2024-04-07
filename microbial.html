@@ -663,7 +663,7 @@ n(t+1)=R \cdot n(t)=n(t) \cdot [1+r_d(1-\frac{n(t)}{K})]=n(t)+n(t) \cdot r_d \cd
 <span class="math display">\[n_t=\frac{[(n_t-K) \cdot n_0] \cdot e^{r_c\ t}}{n_0-K} \Leftrightarrow n_t=\frac{n_t \cdot n_0 \cdot e^{r_c\ t}-Kn_0 \cdot e^{r_c\ t}}{n_0-K} \Leftrightarrow n_t [1-\frac{n_0 \cdot e^{r_c\ t}}{n_0-K}]= -\frac{Kn_0 \cdot e^{r_c\ t}}{n_0-K} \Leftrightarrow\]</span>
 <span class="math display" id="eq:dinamica16">\[
 \begin{split}
-n_t \cdot [n_0-K- n_0 \cdot e^{r_c\ t}]=-Kn_0 \cdot e^{r_c\ t} \Leftrightarrow n_t=\frac{-Kn_0 \cdot e^{r_c\ t}{n_0-K-n_0 \cdot e^{r_c\ t}
+n_t \cdot [n_0-K- n_0 \cdot e^{r_c\ t}]=-Kn_0 \cdot e^{r_c\ t} \Leftrightarrow n_t=\frac{-Kn_0 \cdot e^{r_c\ t}}{n_0-K-n_0 \cdot e^{r_c\ t}}
 \end{split}
 \tag{7.16}
 \]</span></p>
@@ -1545,6 +1545,81 @@ H_{t + 1} \approx H_t \cdot (1 - \frac{1}{N})
 </h4>
 <p>Un grupo de investigación detectó la existencia de una cepa de <em>Saccharomyces cerevisiae</em> que posee un alto potencial industrial para la elaboración de bebidas alcohólicas. Debido a que la cepa no logra aislarse en forma pura al momento, se decide investigar para buscar condiciones que favorezcan su crecimiento en el medio utilizado para la fermentaci[on. Afortunadamente se identificó un gen marcador (al cual llamaremos <span class="math inline">\(A\)</span>) para el cual existen dos alelos que separan claramente a la variante de interés (portador del alelo <span class="math inline">\(A_1\)</span>, de frecuencia <span class="math inline">\(p\)</span>) y otras cepas.</p>
 <p>Se realiza un experimento de secuenciación masiva con el objetivo de analizar la proliferación bajo una condición dada, secuenciando a dos tiempos (se estima que a una generación de la población) con tres réplicas cada uno. Se asume que la profundidad de secuenciado (número de bases) en ambos experimentos es la misma.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variante
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(T1_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(T1_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(T1_3\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(T2_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(T2_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(T2_3\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1\)</span>
+</td>
+<td style="text-align:left;">
+6555
+</td>
+<td style="text-align:left;">
+6520
+</td>
+<td style="text-align:left;">
+6590
+</td>
+<td style="text-align:left;">
+6980
+</td>
+<td style="text-align:left;">
+6915
+</td>
+<td style="text-align:left;">
+7030
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2\)</span>
+</td>
+<td style="text-align:left;">
+3460
+</td>
+<td style="text-align:left;">
+3510
+</td>
+<td style="text-align:left;">
+3435
+</td>
+<td style="text-align:left;">
+3135
+</td>
+<td style="text-align:left;">
+3180
+</td>
+<td style="text-align:left;">
+3055
+</td>
+</tr>
+</tbody>
+</table>
 <p>donde en las columnas A y B denotan a las condiciones experimentales estudiadas.</p>
 <p>¿En cual de las condiciones experimentales posee mayor <em>fitness</em> relativo la cepa de interés, y en qué magnitud?</p>
 <p><strong><em>Solución</em></strong></p>

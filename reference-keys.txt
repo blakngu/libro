@@ -37,6 +37,7 @@ eq:hA
 eq:pYasuda
 eq:kA
 eq:hAkA
+tab:tabla3p1
 fig:figura3p2
 fig:figura3p3
 fig:jarra-fisher-wright
@@ -50,9 +51,6 @@ fig:ensemble
 fig:efecto-fundador
 fig:CandidoGodoi
 fig:subdivPob
-tab:subdivtx1
-tab:subdivtx2
-tab:subdivtx3
 fig:recursionFt
 eq:recursionF1
 eq:recursionF2
@@ -64,12 +62,7 @@ eq:recursionF7
 eq:recursionF8
 fig:figura3p9
 eq:WrightFisher2
-tab:matrizMarkov
-tab:vectorProbabilidades1
-tab:vectorProbabilidades2
-tab:evolProbabilidades1
 fig:figura3p6
-tab:matrizMarkov50
 fig:figura3p8
 eq:F1
 eq:F2
@@ -208,7 +201,6 @@ eq:deslig20
 eq:deslig21
 eq:deslig22
 fig:Dtevol
-tab:tablaDtr
 fig:supertDt
 eq:otrasmedas2
 eq:otrasmedas3
@@ -527,8 +519,6 @@ fig:h2logra
 eq:h2log1
 fig:figura10p7
 fig:figura10p8
-tab:datosh2
-tab:datosh2p
 eq:repet0
 eq:repet1
 eq:repet2

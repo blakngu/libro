@@ -520,9 +520,276 @@ I=I_{AA}+I_{AD}+I_{DD}+I_{AAA}+I_{AAD}+...
 \]</span></p>
 <p>Por lo general solo se tienen en cuenta las interacciones entre dos componentes ya que las superiores suelen tener poco efecto en el valor global y en términos prácticos implica estimar una gran cantidad de componentes, lo que los datos no suelen garantizar.</p>
 <p>Veamos ahora un ejemplo de dos <em>loci</em> que se comportan en forma aditiva. En el <em>locus</em> <span class="math inline">\(A\)</span> tenemos dos alelos, con valores <span class="math inline">\(A_1=2\)</span>, <span class="math inline">\(A_2=-2\)</span>, mientras que para el segundo <em>locus</em>, sus alelos aportan <span class="math inline">\(B_1=1\)</span> y <span class="math inline">\(B_2=-1\)</span>. En el cuadro siguiente tenemos todas las 9 combinaciones posibles de los genotipos en los dos <em>loci</em> y los valores correspondientes, que surgen de sumar los efectos de los alelos presentes en cada uno:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2A_2\)</span>
+</th>
+<th style="text-align:left;">
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\({B_1B_1}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(6\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\({B_1B_2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\({B_2B_2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-6\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Promedio}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-4\)</span>
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+</tbody>
+</table>
 <p>Como el efecto de ambos genes es aditivo, tanto a nivel de filas como de columnas, el pasaje de una celda a la consiguiente es constante (diferentes constantes en filas que en columnas) y el valor del cambio es igual a la diferencia de valor del alelo que cambia. Por ejemplo, si miramos la primera fila, el pasaje de <span class="math inline">\(A_1A_1\)</span> a <span class="math inline">\(A_1A_2\)</span> significa perder una copia de <span class="math inline">\(A_1\)</span> con valor <span class="math inline">\(2\)</span> y ganar una de <span class="math inline">\(A_2\)</span> con valor <span class="math inline">\(-2\)</span>, es decir, el cambio es de <span class="math inline">\(-2-2=-4\)</span>, que es lo que observamos, ya que pasamos de un valor de <span class="math inline">\(6\)</span> a uno de <span class="math inline">\(2\)</span> y por lo tanto <span class="math inline">\(\Delta=2-6=-4\)</span>. El mismo valor vamos a obtener en cualquier movida de una celda a su contigua a la derecha, sin importar la fila, al tiempo que si movemos de derecha a izquierda su valor será el opuesto (<span class="math inline">\(4\)</span>) en este caso. Para las columnas ocurre lo mismo, pero ahora el valor de <span class="math inline">\(\Delta=-2\)</span> si nos desplazamos a la contigua inferior, mientras que <span class="math inline">\(\Delta=2\)</span> si nos desplazamos a la contigua superior.</p>
 <p>Veamos ahora qué ocurre cuando aparece el efecto de dominancia en uno de los <em>locus</em>. En el cuadro siguiente los efectos aditivos son idénticos que en el cuadro anterior, pero ahora aparece un efecto de dominancia en el <em>locus</em> <span class="math inline">\(A\)</span>. Mientras que si nos movemos verticalmente, es decir cambiamos en el número de copias de los alelos <span class="math inline">\(B_1\)</span> y <span class="math inline">\(B_2\)</span>, las distancias entre celdas contiguas se mantienen, es decir hay aditividad, si nos movemos en sentido horizontal la situación cambia. No solo cambia respecto al cuadro anterior, sino que tambien cambia dependiendo de en que columna me pare. Por ejemplo, la distancia entre cualquier celda de la primer columna (que corresponde al genotipo <span class="math inline">\(A_1A_1\)</span>) a la contigua de la segunda columna (que corresponde al genotipo <span class="math inline">\(A_1A_2\)</span>) es de <span class="math inline">\(\Delta=-3\)</span> unidades, mientras que de la segunda a la tercera columna (que corresponde al genotipo <span class="math inline">\(A_2A_2\)</span>) el cambio es de <span class="math inline">\(\Delta=-5\)</span> unidades. Claramente el promedio no coincide en ningún caso con el valor del genotipo de <span class="math inline">\(B\)</span> correspondiente a esa fila, como sí ocurría en el cuadro de arriba (aditividad en los dos <em>loci</em>).</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2A_2\)</span>
+</th>
+<th style="text-align:left;">
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\({B_1B_1}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(6\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(3\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2,333\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\({B_1B_2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\({B_2B_2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-6\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-1,667\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-4\)</span>
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+</tbody>
+</table>
 <p>Finalmente, en el cuadro siguiente le hemos agregado al cuadro de efectos aditivos un efecto de interacción <strong>aditivo x aditivo</strong>, sencillamente como el producto de los valores del efecto aditivo de los dos <em>loci</em> para cada par de genotipos (las funciones de interacción pueden ser infinitas, esta es una sola, elegida por sencilla para representar el fenómeno). El primer valor de cada celda corresponde al efecto aditivo y el segundo al <strong>efecto de epistasis</strong> del tipo <span class="math inline">\(I_{AA}\)</span>. Además de haberse alterado los valores de casi todas las celdas, el cambio entre celdas contiguas experimenta ahora algunos valores leves y otros abruptos, en los dos sentidos. Por ejemplo, pasar de <span class="math inline">\(A_1A_1/B_1B_1\)</span> a <span class="math inline">\(A_1A2/B_1B_1\)</span> significa solo <span class="math inline">\(\Delta=14-2=12\)</span> unidades, mientras que de <span class="math inline">\(A_1A_1/B_2B_2\)</span> a <span class="math inline">\(A_1A_2/B_2B_2\)</span> el cambio correspondiente es de <span class="math inline">\(\Delta=-6-(-2)=-4\)</span> unidades. Claramente, los efectos epistáticos pueden cambiar totalmente la configuración de los genotipos respecto a la aditividad o a la dominancia.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2A_2\)</span>
+</th>
+<th style="text-align:left;">
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\({B_1B_1}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(6+8=14\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2+0=2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2-8=-10\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\({B_1B_2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4-0=4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0+0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-4-0=-4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\({B_2B_2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2-8=-6\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2+0=-2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-6+8=2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-4\)</span>
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+</tbody>
+</table>
 <p>Teniendo en cuenta todo lo anterior, podemos ahora escribir nuestro modelo genético de una forma algo más complicada, pero menos rústica, describiendo mejor los componentes del genotipo y sus diversas interacciones. Si notamos con <span class="math inline">\(A\)</span> los <strong>efectos aditivos</strong>, con <span class="math inline">\(D\)</span> los <strong>desvíos de dominancia</strong> y con <span class="math inline">\(I\)</span> los <strong>efectos epistáticos</strong>, entonces podemos describir el fenotipo de cada individuo como</p>
 <p><span class="math display" id="eq:modgenbas1p3">\[
 \begin{split}
@@ -656,6 +923,54 @@ Figura 8.5: Toro de la raza <strong>Belgian Blue</strong> mostrando su impresion
 </p>
 </div>
 <p>En el cuadro siguiente se aprecian los promedios de mediciones para dos características que obtuvieron los autores del trabajo, de acuerdo al genotipo de los animales (<span class="math inline">\(G_{FF}\)</span> homocigotos para Fenilalanina, <span class="math inline">\(G_{LL}\)</span> para Leucina y <span class="math inline">\(G_{FL}\)</span> heterocigotos)</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Característica
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(G_{FF}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(G_{FL}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(G_{LL}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Peso al nacimiento (kg)
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(40,7\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(41,4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(43,3\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Área del ojo del bife (cm<span class="math inline">\(^2\)</span>)
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(89\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(93\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(103\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Asumiendo que estos valores son los promedios de un gran número de animales y que por lo tanto el promedio de los efectos ambientales es cero, transformar los valores genotípicos de las características a la escala en la que el cero es el punto medio entre los homocigotos.</p>
 <p>Para la primera característica, peso al nacimiento, el punto medio entre los homocigotas los calculamos como</p>
 <p><span class="math display">\[
@@ -681,6 +996,80 @@ m=\frac{G_{LL}+G_{FF}}{2}=\frac{103+89}{2}=96 \text{ cm}^2
 <div id="media-de-la-población" class="section level3 unnumbered hasAnchor">
 <h3>Media de la población<a href="modelogenbas.html#media-de-la-población" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A partir del cambio de escala que realizamos previmamente, los valores genotípicos quedarán expresados como desvíos del punto medio (<span class="math inline">\(m\)</span>) entre los homocigotas. En general, dicho punto no coincide con la media de la población ya que el mismo se desplazará de acuerdo a la importancia de <span class="math inline">\(d\)</span> en relación a <span class="math inline">\(a\)</span> y de las frecuencias de los alelos.<a href="#fn83" class="footnote-ref" id="fnref83"><sup>83</sup></a> Para calcular la media procedemos como de costumbre, multiplicando el valor de cada categoría por su frecuencia relativa. Asumiendo que los genotipos están en equilibrio de Hardy-Weinberg, las frecuencias de los 3 genotipos (<span class="math inline">\(A_1A_1\)</span>, <span class="math inline">\(A_1A_2\)</span> y <span class="math inline">\(A_2A_2\)</span>) serán <span class="math inline">\(p^2\)</span>, <span class="math inline">\(2pq\)</span> y <span class="math inline">\(q^2\)</span>, mientras que los valores genotípicos correspondientes (en la escala transformada) serán <span class="math inline">\(a\)</span>, <span class="math inline">\(d\)</span> y <span class="math inline">\(-a\)</span>. Poniendo todo junto en un cuadro, lo anterior queda resumido de la siguiente manera:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math inline">\(\textbf{Genotipo}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\textbf{Frecuencia}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\textbf{Valor genotípico}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\textbf{Producto}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\({A_1A_1}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(a\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2a\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\({A_1A_2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(d\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pqd\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\({A_2A_2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-a\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-q^2a\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Suma}\)</span>
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(M=a(p-q)+2pqd\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>El resultado final, <span class="math inline">\(M=a(p-q)+2pqd\)</span>, vienederiva de sumar todos los términos de la última columna y simplificar, es decir</p>
 <p><span class="math display">\[
 \begin{split}
@@ -776,6 +1165,45 @@ M=a(p-q)+2pqd
 <h2><span class="header-section-number">8.4</span> Efecto medio<a href="modelogenbas.html#efecto-medio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Hasta ahora hemos discutido la separación de lo genético y lo ambiental, asumiendo que el genotipo es lo relevante desde el punto de vista genético, ya que lo que identifica a los individuos desde ese punto de vista es no solo la suma de los valores de los alelos presentes sino también el aporte de las combinaciones específicas, tanto <strong>intra-<em>locus</em> </strong> como <strong>inter-<em>loci</em> </strong>. Sin embargo, cuando nos interesa entender la capacidad de transmitir un determinado valor genético de un individuo a sus descendientes, entonces debemos enfocarnos en los mecanismos de herencia y en la forma en que los individuos transmiten información a sus descendientes. En los organismos diploides con dos sexos, cada individuo transmite a su descendencia solamente la mitad de la información que este tendrá para cada posición del <strong>genoma autosomal</strong> (esto no es cierto para los cromosomas sexuales, por ejemplo, ni para los genomas de organelos como la mitocondria), viniendo la otra mitad del otro padre (o madre). Dicho de otra forma, los padres/madres transmiten a sus hijos uno de los dos alelos que cada uno de ellos posee en cada <em>loci</em> del genoma. Como nunca transmiten el par de alelos que cada padre/madre posee, entonces nunca transmiten genotipos y por lo tanto mal podrían transmitir su correspondiente valor.</p>
 <p>En este sentido, es necesario entender cuál es el impacto en el cambio de valor medio de una población que proporciona un alelo cuando es introducido en la misma. Supongamos que tenemos una población que tiene dos alelos, <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span>, con frecuencias <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span>, tanto en machos como en hembras. Supongamos ahora que elegimos como reproductor macho uno o más animales que son homocigotos para el alelo <span class="math inline">\(A_1\)</span>, es decir es <span class="math inline">\(A_1A_1\)</span>. Eso nos asegura que los gametos producidos por los machos serán <span class="math inline">\(A_1\)</span> (el mismo razonamiento vale si intercambiamos el rol de los sexos). Esos gametos se unirán a los gametos producidos por la hembras, que como son sacados al azar de la población estarán en frecuencias <span class="math inline">\(p\)</span> el alelo <span class="math inline">\(A_1\)</span> y <span class="math inline">\(q=1-p\)</span> el alelo <span class="math inline">\(A_2\)</span>. Si ponemos está información en un cuadro, donde la frecuencia del macho aparece en la primera fila y las frecuencias de los gametos en las hembras en las columnas, tenemos el siguiente resumen de la situación:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\bf{A_1}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{fr}(A_1)=p\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\bf{A_2}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{fr}(A_2)=q\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bf{A_1}\)</span>, <span class="math inline">\(\text{fr}(A_1)=1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(A_1A_1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(A_1A_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Es decir, como el macho produce gametos <span class="math inline">\(A_1\)</span> con frecuencia igual a uno, los únicos genotipos posibles serán <span class="math inline">\(A_1A_1\)</span> y <span class="math inline">\(A_1A_2\)</span>, con frecuencias respectivas <span class="math inline">\(1 \times p=p\)</span> y <span class="math inline">\(1 \times q=q\)</span>. Como los valores de los genotipos <span class="math inline">\(A_1A_1\)</span> y <span class="math inline">\(A_1A_2\)</span> son, respectivamente, <span class="math inline">\(a\)</span> y <span class="math inline">\(d\)</span>, entonces multiplicando cada valor por su frecuencia obtenemos la media de valores genotípicos de la población luego de haber asegurado que uno de los alelos de los individuos es <span class="math inline">\(A_1\)</span> y el otro está tomado al azar, es decir</p>
 <p><span class="math display" id="eq:efemed1">\[
 \begin{split}
@@ -808,6 +1236,45 @@ q[d+a-2pd]=q[a+d(1-2p)]=q[a+d(p+q-2p)]=q[a+d(q-p)]
 \tag{8.19}
 \]</span></p>
 <p>De la misma manera, para estudiar el efecto de asegurar la presencia del otro alelo en todos los genotipos de los descendientes (de la población original), podemos hacer el mismo cuadro que antes, pero ahora el o los machos serán homocigotos para el alelo <span class="math inline">\(A_2\)</span>, es decir serán <span class="math inline">\(A_2A_2\)</span>, mientras que los gametos de las hembras serán nuevamente extraídos al azar de la población (con frecuencias <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span>). Poniendo todo junto, tenemos el siguiente cuadro:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{fr}(A_1)=p\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{fr}(A_2)=q\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2\)</span>, <span class="math inline">\(\text{fr}(A_2)=1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(A_1A_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(A_1A_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>En este caso, la media de la nueva población estará dada por</p>
 <p><span class="math display" id="eq:efemed5">\[
 \begin{split}
@@ -833,6 +1300,79 @@ como uno presente en todos los genotipos es</p>
 \]</span></p>
 <p>que es el <strong>efecto medio del alelo <span class="math inline">\(A_2\)</span></strong>.</p>
 <p>Resumiendo, podemos juntar ambos cuadros y tenemos el cambio en la media genotípica de la población correspondiente a cada alelo:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Gameto
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2A_2\)</span>
+</th>
+<th style="text-align:left;">
+Valor medio
+</th>
+<th style="text-align:left;">
+Media poblacional
+</th>
+<th style="text-align:left;">
+Efecto medio del gen
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bf{A_1}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q\)</span>
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(pa+qd\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\([a(p-q)+2pqd]\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q[a+d(q-p)]\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bf{A_2}\)</span>
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(pd-qa\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\([a(p-q)+2pqd]\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-p[a+d(q-p)]\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Otra forma de entender lo que implican estos cambios es a través del concepto de <strong>efecto medio de sustitución de alelos</strong>, que se puede aplicar cuando tenemos dos alelos en un gen. Supongamos que podemos reemplazar al azar alelos <span class="math inline">\(A_2\)</span> de la población de individuos, <strong>sustituyéndolos</strong> con alelos <span class="math inline">\(A_1\)</span>. Los genotipos afectados serán los <span class="math inline">\(A_1A_2\)</span>, cuya mitad son alelos <span class="math inline">\(A_2\)</span> y que tienen frecuencia <span class="math inline">\(2pq\)</span>, porque su frecuencia de cambios será <span class="math inline">\(pq\)</span> y los <span class="math inline">\(A_2A_2\)</span>, con frecuencia <span class="math inline">\(q^2\)</span>. Asumiendo que cambiamos un solo alelo por genotipo, los cambios serán del genotipo <span class="math inline">\(A_1A_2\)</span> al <span class="math inline">\(A_2A_2\)</span> y del <span class="math inline">\(A_2A_2\)</span> al <span class="math inline">\(A_1A_2\)</span>. Poniendo todo junto tenemos</p>
 <p><span class="math display">\[\frac{pq(a-d)+q^2[d-(-a)]}{q^2+pq}=\frac{pq(a-d)+q^2(d+a)}{q(p+q)}=\frac{pq(a-d)+q^2(d+a)}{q}=\]</span>
 <span class="math display" id="eq:efemed8">\[
@@ -893,6 +1433,68 @@ p(A_1A_1-A_1A_2)+q(A_1A_2-A_2A_2)
 <p>Como vimos antes, en organismos diploides con el modo de reproducción sexual, los mismos transmiten a su descendencia la mitad de sus alelos. Este proceso es aleatorio en el sentido de que la combinación particular de alelos que va en cada gameto está determinada por el azar, ya que además de los procesos de recombinación a nivel de cada cromosoma, la combinación de cromosomas que va a cada gameto es también al azar (en el sentido de que puede ir la copia “paterna” o “materna” que tiene el organismo que se reproduce, no en qué número de cromosomas van). Más aún, como vimos más arriba, los organismos diploides de reproducción sexual pasan a los descendientes solamente alelos, no genotipos, por lo que fue necesario definir el <strong>efecto medio de un alelo</strong> precisamente como el efecto teórico de introducir dicho alelo de forma obligatoria en todos los genotipos de la nueva generación.</p>
 <p>En genética animal, por ejemplo, una posibilidad de conocer el <strong>valor reproductivo</strong> (también llamado valor de cría o EBV -estimated breeding value- según sus siglas en inglés) de un individuo determinado sería realizar en la práctica el experimento conceptual que nos permitió definir el concepto de <strong>efecto medio de un alelo</strong>, es decir, aparear a nuestro candidato con una muestra lo más amplia y representativa posible de la población. Los hijos de nuestro candidato se distribuirán en forma aleatoria en torno a un valor medio particular que en general no coincidirá con la media de la población. El desvío de la media de los hijos de nuestro candidato respecto a la media de la población será un estimador de <strong>la mitad del valor cría</strong> (o del valor reproductivo) del candidato. Será la mitad porque el candidato le aporta a sus hijos solo la mitad de sus alelos, la otra mitad viniendo al azar del otro progenitor. Es de destacar que cuanto más descendientes se evalúen más cerca estaremos del <strong>verdadero valor de cría</strong> del candidato (que se alcanzaría perfectamente si el mismo se aparease con un número infinito de individuos de la población) y por esto el término <strong>estimador</strong> (que como todo estimador posee una incertidumbre asociada, algo que veremos más adelante).</p>
 <p>Como el valor reproductivo se trata del efecto que cada alelo aporta al individuo, en nuestro modelo se trata de <strong>efectos aditivos</strong> y debemos sumarlos. En el caso de un <em>locus</em> con dos alelos las posibilidades se reducen al cuadro siguiente:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Genotipo
+</th>
+<th style="text-align:left;">
+Valor alelo 1
+</th>
+<th style="text-align:left;">
+Valor alelo 2
+</th>
+<th style="text-align:left;">
+Valor reproductivo
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bf{A_1A_1}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\alpha_1 = q \alpha\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\alpha_1 = q \alpha\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2 \alpha_1 = 2 q \alpha\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bf{A_1A_2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\alpha_1 = q \alpha\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\alpha_ 2 = -p \alpha\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\alpha_1+ \alpha_2 =(q-p) \alpha\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bf{A_2A_2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\alpha_2=-p \alpha\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\alpha_2= -p \alpha\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2 \alpha_2 = -2p \alpha\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Por ejemplo, el genotipo <span class="math inline">\(A_1A_1\)</span> está formado por dos alelos <span class="math inline">\(A_1\)</span>, que cada uno aporta un valor de <span class="math inline">\(\alpha_1=q \alpha\)</span>, por lo que el <strong>valor de cría</strong> de los individuos con este genotipo es de <span class="math inline">\(2\alpha_1=2q \alpha\)</span>. En el caso de un individuo con genotipo <span class="math inline">\(A_1A_2\)</span> el mismo tendrá un alelo de cada tipo, por lo que su valor de cría será <span class="math inline">\(\alpha_1+\alpha_2=q \alpha +(-p\alpha)=(q-p) \alpha\)</span>. Finalmente, en el caso de un individuo con genotipo <span class="math inline">\(A_2A_2\)</span>, el mismo tendrá dos alelos <span class="math inline">\(A_2\)</span> y por lo tanto su valor de cría será <span class="math inline">\(2\alpha_2=-2p\alpha\)</span>.</p>
 <p>En general, el valor de cría se expresa como desvío de la media de la población, y como esta depende de las frecuencias de los alelos, entonces los <strong>valores de cría</strong> (igual que el efecto medio de cada alelo) <strong>son específicos a una población de referencia</strong>. El valor reproductivo medio de la población viene dado por la multiplicación de los valores reproductivos de cada genotipo por su frecuencia correspondiente, es decir</p>
 <p><span class="math display" id="eq:vc0">\[
@@ -934,6 +1536,67 @@ Figura 8.7: <strong>Valor de cría</strong> (o reproductivo) de un individuo dip
 <p><span class="math display">\[\alpha_{CAPN1aCC}=q\alpha_{CAPN1}=(1-0,45)0,3\text{ cm}^2=0,55\times0,3\text{ cm}^2=0,165\text{ cm}^2\]</span>
 <span class="math display">\[\alpha_{CAPN1aNN}=-p\alpha_{CAPN1}=-0,45\times 0,3\text{ cm}^2=-0,135\text{ cm}^2\]</span></p>
 <p>Poniendo todo junto en el cuadro, recordando que los efectos aditivos de los alelos presentes se suman, tenemos (expresados en cm<span class="math inline">\(^2\)</span>)</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+<span class="math inline">\({CC-CC}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\({CC-NN}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\({NN-NN}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(LL\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2.5,28+2.0,165=10,89\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2.5,28+0,165-0,135=10,59\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2.5,28-2.0,135=10,29\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(LF\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(5,28-1,32+2.0,165=4,29\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(5,28-1,32+0,165-0,135=3,99\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(5,28-1,32-2.0,135=3,69\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(FF\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2.1,32+2.0,165=-2,31\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2.1,32+0,165-0,135=-2,61\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2.1,32-2.0,135=-2,91\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="derivación-de-los-efectos-medios-por-mínimos-cuadrados" class="section level3 unnumbered hasAnchor">
 <h3>Derivación de los efectos medios por mínimos cuadrados<a href="modelogenbas.html#derivación-de-los-efectos-medios-por-mínimos-cuadrados" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1068,6 +1731,95 @@ G=A+D \Leftrightarrow D=G-A
 \tag{8.38}
 \]</span></p>
 <p>Una forma sencilla de entender el procedimiento que hemos utilizado es organizar toda la información en un cuadro como el siguiente:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\bf{A_1A_1}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\bf{A_1A_2}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\bf{A_2A_2}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Frecuencia H-W}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Valor genotípico}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(a\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(d\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-a\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Genotípico como desvío de M}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2q(\alpha-qd)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\((q-p)\alpha+2pqd\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2p(\alpha+pd)\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Valor Reproductivo (de cría)}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2q \alpha\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\((q-p)\alpha\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2p \alpha\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Desvío de dominancia}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2q^2d\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pqd\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2p^2d\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>En un <em>locus</em> con dos alelos tenemos 3 genotipos posibles, que si además le incorporamos la restricción de que las frecuencias se encuentren en equilibrio de Hardy-Weinberg, estarán en las clásicas proporciones <span class="math inline">\(p^2\)</span>, <span class="math inline">\(2pq\)</span> y <span class="math inline">\(q^2\)</span> (para una frecuencia <span class="math inline">\(p\)</span> del alelo <span class="math inline">\(A_1\)</span>). Los valores, como ya hemos visto, en la escala transformada son <span class="math inline">\(a\)</span>, <span class="math inline">\(d\)</span> y <span class="math inline">\(-a\)</span>. A partir de las ecuaciones <a href="modelogenbas.html#eq:ddom1">(8.36)</a> a <a href="modelogenbas.html#eq:ddom3">(8.38)</a>, los valores genotípicos como desvíos de la media <span class="math inline">\(M\)</span> son los que aparecen en la tercera línea del cuadro. Si ahora le restamos a esos valores genotípicos los correspondientes valores reproductivos que aparecen en la cuarta línea (y que dedujimos en la sección precedente), tenemos ahora los <strong>desvíos de dominancia</strong> que aparecen en la última línea. Por ejemplo, para el genotipo <span class="math inline">\(A_1A_1\)</span>, su valor como desvío de la media de la población (como vimos en la ecuación <a href="modelogenbas.html#eq:ddom2">(8.37)</a>) es <span class="math inline">\(\gamma_{11}=2q(\alpha-qd)=2q\alpha-2q^2d\)</span>, por lo que si ahora le restamos su valor reproductivo <span class="math inline">\(A_{11}=2q\alpha\)</span>, tenemos el valor <span class="math inline">\(-2q^2\)</span>. Lo mismo se aplica para los otros genotipos, por lo que resumiendo tenemos</p>
 <p><span class="math display">\[\delta_{11}=\gamma_{11}-A_{11}=2q\alpha-2q^2d-2q\alpha=-2q^2d\]</span>
 <span class="math display">\[\delta_{12}=\gamma_{12}-A_{12}=(q-p)\alpha+2pqd-(q-p)\alpha=2pqd\]</span>
@@ -1174,6 +1926,94 @@ V_P=\mathbb{V}(G+E+I_{GxE})=(V_A+V_D+V_I)+V_E+V_{GxE}+2 {Cov}_{GE}
 <div id="componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos" class="section level3 unnumbered hasAnchor">
 <h3>Componentes genéticos de la varianza: un <em>locus</em> con dos alelos<a href="modelogenbas.html#componentes-genéticos-de-la-varianza-un-locus-con-dos-alelos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>En el caso de la varianza genética, cuando reducimos nuestro modelo al caso de un <em>locus</em> con dos alelos, podemos continuar el análisis que realizamos previamente para deducir el valor reproductivo y los desvíos de dominancia. Comencemos entonces por la varianza aditiva. Como los valores reproductivos ya están medidos como desvíos de la media de la población, entonces la varianza es solamente la suma de los productos de las frecuencias por el cuadrado del valor reproductivo de cada genotipo. Si organizamos la información de los valores reproductivos y las frecuencias de cada genotipo en un cuadro, así como los cuadrados de los valores reproductivos y el producto de las frecuencias por los cuadrados, tenemos la siguiente información:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Genotipo
+</th>
+<th style="text-align:left;">
+Frecuencia
+</th>
+<th style="text-align:left;">
+Valor reproductivo
+</th>
+<th style="text-align:left;">
+Cuadrado
+</th>
+<th style="text-align:left;">
+Producto
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bf{A_1A_1}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2q \alpha\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4q^2 \alpha^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4p^2q^2 \alpha^2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bf{A_1A_2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\((q-p) \alpha\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\((1-4pq) \alpha^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\((2pq-8p^2q^2) \alpha^2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bf{A_2A_2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2p \alpha\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4p^2 \alpha^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4p^2q^2 \alpha^2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Suma}\)</span>
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq \alpha^2\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Los cuadrados de los valores reproductivos de los genotipos <span class="math inline">\(A_1A_1\)</span> y <span class="math inline">\(A_2A_2\)</span> son triviales de obtener, mientras que el del valor reproductivo del heterocigota es bastante sencillo si tenemos en cuenta que <span class="math inline">\(p^2+2pq+q^2=1 \Leftrightarrow p^2+q^2=1-2pq\)</span>, por lo que</p>
 <p><span class="math display">\[
 \begin{split}
@@ -1189,6 +2029,94 @@ V_A=4p^2q^2 \alpha^2+(2pq-8p^2q^2) \alpha^2+4p^2q^2 \alpha^2=2pq\alpha^2[2pq+1-4
 \tag{8.44}
 \]</span></p>
 <p>Para determinar la varianza de dominancia podemos aplicar el mismo procedimiento, ya que también se trata de desvíos de la media de la población. Organizando la información en un cuadro tenemos:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Genotipo
+</th>
+<th style="text-align:left;">
+Frecuencia
+</th>
+<th style="text-align:left;">
+Desvío dominancia
+</th>
+<th style="text-align:left;">
+Cuadrado
+</th>
+<th style="text-align:left;">
+Producto
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1A_1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2q^2d\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4q^4d^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4p^2q^4d^2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1A_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pqd\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4p^2q^2d^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(8p^3q^3d^2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2A_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2p^2d\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4p^4d^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4p^4q^2d^2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Suma}\)</span>
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<span class="math inline">\((2pqd)^2\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Esta vez los cuadrados de los valores de desvíos de dominancia son todos triviales, por lo que si pasamos a sumar los productos por las correspondientes frecuencias, en la última columna, tenemos</p>
 <p><span class="math display">\[V_D=4p^2q^4d^2+8p^3q^3d^2+4p^4q^2d^2=4p^2q^2d^2[q^2+2pq+p^2]=4p^2q^2d^2(1)=4p^2q^2d^2\ \therefore\]</span>
 <span class="math display" id="eq:vard1">\[
@@ -1376,8 +2304,99 @@ V_I=V_{AA}+V_{AD}+V_{DD}+... \approx V_{AA}+V_{AD}+V_{DD}
 <p>Y sabiendo que <span class="math inline">\(p= \frac{18 + 12}{50} = 0,6\)</span> por lo tanto <span class="math inline">\(q=1-p = 0,4\)</span>, <span class="math inline">\(M=a(p-q)+2pqd = 3(0,6 - 0,4) + 2*0,6*0,4*1 = 1,08\)</span>, por lo que la media en la escala original sería <span class="math inline">\(1,08+5 =6,08\)</span>.</p>
 <p><strong>b.</strong> En el paso anterior determinamos que <span class="math inline">\(p=0,6\)</span> y por lo tanto <span class="math inline">\(q= 0,4\)</span> (<em>i.e.</em>, la frecuencia de <span class="math inline">\(D=0,6\)</span> y la de <span class="math inline">\(q=0,4\)</span>).</p>
 <p>Podemos entonces generar un cuadro que nos ayude a visualizar el apareamiento de esta población con los machos <span class="math inline">\(DD\)</span>.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+Frec. nuevos machos
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math display">\[ &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; \]</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(D=1\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Frec. población}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(D=0,6\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(DD=0,6\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+$$
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(d=0,4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(Dd=0,4\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Como se puede observar, al introducir machos homocigotos <span class="math inline">\(DD\)</span>, la nueva generación no contará con individuos <span class="math inline">\(dd\)</span>. A su vez, la nueva media poblacional será de <span class="math inline">\(0,6*8 + 0,4*6 = 7,2\)</span> cachorros por camada. Por lo tanto, el efecto medio del alelo <span class="math inline">\(D\)</span> será de <span class="math inline">\(7,2-6,08=1,12\)</span>, ya que corresponde al efecto producido por la introducción del alelo a la población.</p>
 <p><strong>c.</strong> Al igual que en el caso anterior podemos determinar las nuevas frecuencias a partir de una tabla:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+Frec. nuevos machos
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(d=1\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Frec. población}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(D=0,6\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(Dd=0,6\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(d=0,4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(dd=0,4\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>La nueva de esta media población sería entonces <span class="math inline">\(0,6*6 + 0,4*2 = 4,4\)</span> y el efecto medio del alelo <span class="math inline">\(d\)</span> sería <span class="math inline">\(4,4-6,08=-1,68\)</span>.<br />
 </p>
 <h4 id="logo" style="display: inline-block;">
@@ -1403,6 +2422,67 @@ V_I=V_{AA}+V_{AD}+V_{DD}+... \approx V_{AA}+V_{AD}+V_{DD}
 <li><p>Basados en esta información, ¿qué efectos genéticos afectan esta característica?</p></li>
 </ol>
 <p><strong>b.</strong> Este año, un nuevo estudio descubrió que existe otro locus con efecto en la característica. Este locus también posee dos alelos, sus valores son <span class="math inline">\(M=2 \text{ cm}\)</span> y <span class="math inline">\(m= -3 \text{ cm}\)</span>, y se ha determinado que el valor del fenotipo <span class="math inline">\(Mm\)</span> en escala transformada es de <span class="math inline">\(3\text{ cm}\)</span>. No existe interacción entre los alelos de los <em>loci</em> que influyen en el largo de la cola. Debido a este nuevo descubrimiento, se realizó un nuevo genotipado de los individuos de la población (descubriendo que se había visto muy reducida debido al aumento de las aves rapaces) y se encontró la siguiente distribución de individuos por genotipo:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+FF
+</th>
+<th style="text-align:left;">
+Ff
+</th>
+<th style="text-align:left;">
+ff
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{MM}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(6\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(6\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Mm}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(8\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(9\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(8\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{mm}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(5\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(5\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <ol style="list-style-type: decimal">
 <li><p>¿Cuánto mide la cola de los perros de cada genotipo presente en la población sabiendo que la característica está controlada por los dos <em>loci</em>?</p></li>
 <li><p>¿Cuál es el promedio de largo de cola para estos perros sabiendo que la característica está controlada por los dos <em>loci</em>?</p></li>
@@ -1453,6 +2533,67 @@ m = \frac{20 + 8}{2} = 14 \text{ cm}
 <p><strong>b.</strong></p>
 <p><strong>1.</strong> Al ahora existir dos <em>loci</em> que determinan la característica existirán más genotipos posibles y mayor número de interacciones. En primer lugar, podemos descartar los efectos epistáticos debido a que no existe interacción entre los alelos de los <em>loci</em>. Posteriormente podemos hallar el valor aditivo de cada genotipo calculando la suma del valor de los alelos que lo componen (como en el caso anterior). Por último, deberemos tener en cuenta el efecto de dominancia que existe entre los alelos de este nuevo locus, por lo que a los genotipos que presenten heterocigosis <span class="math inline">\(Mm\)</span> deberemos sumarles el valor de la dominancia (<span class="math inline">\(+3\text{ cm}\)</span>).</p>
 <p>En la siguiente tabla se resume el largo de patas por genotipo calculado con estas consideraciones:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+FF
+</th>
+<th style="text-align:left;">
+Ff
+</th>
+<th style="text-align:left;">
+ff
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{MM}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(24\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(18\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(12\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Mm}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(22\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(16\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(10\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{mm}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(14\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(8\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p><strong>2.</strong> Podemos calcular el largo de patas promedio ponderando la frecuencia de cada genotipo por su valor.</p>
 <p>Tenemos así</p>
 <p><span class="math display">\[

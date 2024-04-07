@@ -500,6 +500,89 @@ C=1-\frac{F_1}{N}
 <div id="ejemplo-1.1" class="section level3 unnumbered hasAnchor">
 <h3>Ejemplo 1.1<a href="intro.html#ejemplo-1.1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Luego de un muestreo realizado a partir de <strong><em>metagenómica</em></strong> en dos ambientes diferentes, la distribución de especies (<strong><em>OTUs</em></strong>) en los mismos es la siguiente:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Especie
+</th>
+<th style="text-align:left;">
+Ambiente.1
+</th>
+<th style="text-align:left;">
+Ambiente.2
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+OTU 1
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(60\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OTU 2
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(150\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OTU 3
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(297\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OTU 4
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(390\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OTU 5
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(400\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(700\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1000\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1000\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Calcular los difentes índices para los dos ambientes y discutir los resultados.</p>
 <p>Como el total de “individuos” (<strong><em>reads</em></strong>) obtenidos en ambas muestras es <span class="math inline">\(1000\)</span>, alcanza con dividir entre ese número para tener la frecuencia relativa. Por lo tanto, utilizando la ecuación <a href="intro.html#eq:alphadiver1">(1.1)</a> el índice de Shannon para el primer ambiente es igual a</p>
 <p><span class="math display">\[
@@ -962,6 +1045,133 @@ UC se adapte al UC en genes de alta expresión en el organismo hospedero.</p>
 <div id="ejemplo-1.3" class="section level3 unnumbered hasAnchor">
 <h3>Ejemplo 1.3<a href="intro.html#ejemplo-1.3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Teniendo en cuenta todas las secuencias codificantes, en una bacteria de interés biotecnológico se observó el siguiente conteo de codones para dos aminoácidos:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Aminoácido
+</th>
+<th style="text-align:left;">
+Codón
+</th>
+<th style="text-align:left;">
+Conteo
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Arg (R)
+</td>
+<td style="text-align:left;">
+CGU
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(666\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Arg (R)
+</td>
+<td style="text-align:left;">
+CGC
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1320\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Arg (R)
+</td>
+<td style="text-align:left;">
+CGA
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1457\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Arg (R)
+</td>
+<td style="text-align:left;">
+CGG
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1818\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Arg (R)
+</td>
+<td style="text-align:left;">
+AGA
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(5913\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Arg (R)
+</td>
+<td style="text-align:left;">
+AGG
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(5120\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Val (V)
+</td>
+<td style="text-align:left;">
+GUU
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(7123\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Val (V)
+</td>
+<td style="text-align:left;">
+GUC
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2144\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Val (V)
+</td>
+<td style="text-align:left;">
+GUA
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1125\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Val (V)
+</td>
+<td style="text-align:left;">
+GUG
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(8213\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Calcular el <strong>RSCU</strong> para cada codón y determinar cuáles son los usados y si hay diferencias entre los aminoácidos en la forma en que usan los codones.</p>
 <p><br />
 </p>
@@ -979,11 +1189,177 @@ RSCU_{R,CGU}=\frac{x_{CGU}}{\frac{1}{6}\sum_{j=1}^6\ x_{R,j}}=6 \times \frac{666
 RSCU_{R,CGC}=\frac{x_{CGC}}{\frac{1}{6}\sum_{j=1}^6\ x_{R,j}}=6 \times \frac{1320}{16294}=0,4861
 \end{equation}\]</span></p>
 <p>y así sucesivamente con todos los codones de este aminoácido, lo que nos deja con una tabla como la siguiente:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Codón
+</th>
+<th style="text-align:left;">
+Conteo
+</th>
+<th style="text-align:left;">
+RSCU
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{CGU}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(666\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,2452\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{CGC}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1320\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,4861\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{CGA}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1457\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,5365\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{CGG}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1818\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,6694\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{AGA}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(5913\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2,1774\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{AGG}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(5120\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1.8854\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Suma}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(16294\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(6\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>De la misma manera, para la Valina, el RSCU del primer codón es igual a</p>
 <p><span class="math display">\[\begin{equation}
 RSCU_{V,GUU}=\frac{x_{GUU}}{\frac{1}{4}\sum_{j=1}^4\ x_{V,j}}=4 \times \frac{7123}{18605}=1,5314
 \end{equation}\]</span></p>
 <p>mientras que para el resto de los codones se calcula en forma análoga, hasta obtener la siguiente tabla:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Codón
+</th>
+<th style="text-align:left;">
+Conteo
+</th>
+<th style="text-align:left;">
+RSCU
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{GUU}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(7123\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1,5314\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{GUC}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2144\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,4610\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{GUA}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1125\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,2419\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{GUG}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(8213\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1,7658\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Suma}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(18605\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>En ambos aminoácidos se observa que el uso de codones se aparta bastante de la hipótesis de uso similar. Mientras que en el primer caso (Arginina) los codones favorecidos son los codificados por el dueto (del sexteto), es decir <strong>AGA</strong> y <strong>AGG</strong>, en el segundo caso (Valina) los codones favorecidos son los que terminan en <strong>U</strong> o en <strong>G</strong>.</p>
 </div>
 <div id="exploracion-multivariada" class="section level3 hasAnchor" number="1.2.1">
@@ -1254,6 +1630,136 @@ EAAYALGTPKWKMISAITLKASVSGIMTGILLAIARIAGETAPLLF
 TALSNQFWSTDMMQPIANLPVTIFKFAMSPFAEWQQLAWAGVLIIT
 LCVLLLNILARVVFAKNKHG”</p>
 <p>Si realizamos el análisis composicional de la misma llegamos la siguiente tabla:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+A
+</th>
+<th style="text-align:right;">
+C
+</th>
+<th style="text-align:right;">
+D
+</th>
+<th style="text-align:right;">
+E
+</th>
+<th style="text-align:right;">
+F
+</th>
+<th style="text-align:right;">
+G
+</th>
+<th style="text-align:right;">
+H
+</th>
+<th style="text-align:right;">
+I
+</th>
+<th style="text-align:right;">
+K
+</th>
+<th style="text-align:right;">
+L
+</th>
+<th style="text-align:right;">
+M
+</th>
+<th style="text-align:right;">
+N
+</th>
+<th style="text-align:right;">
+P
+</th>
+<th style="text-align:right;">
+Q
+</th>
+<th style="text-align:right;">
+R
+</th>
+<th style="text-align:right;">
+S
+</th>
+<th style="text-align:right;">
+T
+</th>
+<th style="text-align:right;">
+V
+</th>
+<th style="text-align:right;">
+W
+</th>
+<th style="text-align:right;">
+Y
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+38
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+</tbody>
+</table>
 <p>El largo total es de <span class="math inline">\(296\)</span> aminoácidos. La suma de los 4 aminoácidos hidrofóbicos más importantes (<strong>A</strong>, <strong>I</strong>, <strong>L</strong> y <strong>V</strong>) es de <span class="math inline">\(38+27+41+18=124\)</span>, es decir, <span class="math inline">\(\frac{124}{296}=41,9\%\)</span> del total de aminoácidos. Si bien la comparación tiene poco sentido si no conocemos la composición global del genoma (es decir, del resto de las proteínas del genoma), sin duda es una buena pista de que se trata de una proteína de membrana (donde los aminoácidos hidrofóbicos juegan un papel relevante debido a la naturaleza lipídica de la bicapa que forma la membrana).</p>
 <div class="graybox">
 <div class="graybox-header">

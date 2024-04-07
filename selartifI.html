@@ -496,7 +496,129 @@ y_{j}=y_{i,j}+c_i
 <p>Supongamos que tenemos un grupo de vacas lecheras, y queremos seleccionar como reproductora a la que produce mayor volumen de leche por lactancia.</p>
 <p>Como información sabemos que, a nivel poblacional para producción de leche, distintas
 subclases de lactancia presentan diferente media e igual varianza:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Lactancia (no.)
+</th>
+<th style="text-align:left;">
+Media leche 305d <span class="math inline">\((\text{litros})\)</span>
+</th>
+<th style="text-align:left;">
+Varianza leche 305d <span class="math inline">\((\text{litros}^2)\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(3897\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1,3\times 10^6\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4481\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1,3\times 10^6\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(3\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4740\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1,3\times 10^6\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>¿Cuál de las siguientes vacas seleccionaríamos? Calculae la producción de leche corregida para cada vaca, planteado como subclase de referencia a la lactancia 2.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Vaca
+</th>
+<th style="text-align:left;">
+Nº Lactancia
+</th>
+<th style="text-align:left;">
+Leche 305d <span class="math inline">\((\text{litros})\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(I801\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4000\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(J805\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(3500\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(K709\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4900\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(L713\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(6000\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(M607\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(3\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(5600\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Lo primero que tenemos que hacer es calcular los factores de corrección para cada clase (número de lactancia), lo que hacemos eligiendo una clase de referencia, restándole luego a la media de dicha clase la media de cada clase, es decir (si elegimos la segunda lactancia como referencia)</p>
 <p><span class="math display">\[
 \begin{split}
@@ -556,8 +678,107 @@ y_{j}=y_{i,j} \cdot c_i
 destete.</p>
 <p>Como información sabemos que, a nivel poblacional para peso al destete, distintas subclases
 de edad de la madre presentan <strong>diferente media</strong> y <strong>diferente varianza</strong> (creciente con la edad de la madre):</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Edad de la madre <span class="math inline">\((años)\)</span>
+</th>
+<th style="text-align:left;">
+Media peso al destete <span class="math inline">\((\text{kg})\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(3\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(157\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(166\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(5\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(169\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>¿Cuál de los siguientes terneros seleccionaríamos? Calculae el peso al destete corregido para
 cada ternero, planteado como subclase de referencia a la edad de la madre de 4 años.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Ternero
+</th>
+<th style="text-align:left;">
+Edad de la madre <span class="math inline">\((\text{años})\)</span>
+</th>
+<th style="text-align:left;">
+Peso al destete <span class="math inline">\((\text{kg})\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(P101\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(3\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(132\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(Q108\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(3\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(145\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(R114\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(140\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(T123\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(5\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(150\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Lo primero que debemos hacer es nuevamente calcular los factores de corrección, en este caso multiplicativos. Para ello vamos a <strong>dividir</strong> la media de la clase de referencia entre el valor de la media de cada clase de <strong>edad de la madre</strong>, es decir</p>
 <p><span class="math display">\[
 \begin{split}
@@ -692,6 +913,196 @@ Figura 11.6: Proporción de selección representada gráficamente, suponiendo ca
 </p>
 </div>
 <p>Asumiendo normalidad, podemos usar la relación <span class="math inline">\(i=\frac{z}{p}\)</span>, donde <span class="math inline">\(p\)</span> es la proporción de animales seleccionados. A partir de esta relación podemos generar una tabla como la siguiente, con la proporción de animales seleccionados (aquí expresada en %) y la consiguiente intensidad de selección <span class="math inline">\(i\)</span>:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+Proporción %
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(i\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+2,6652
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+2,4209
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+2,2681
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+2,1543
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+2,0627
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+1,9854
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+1,9181
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+1,8583
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:left;">
+1,8043
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:left;">
+1,7550
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:left;">
+1,5544
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:left;">
+1,3998
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:left;">
+1,2711
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:left;">
+1,1590
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:left;">
+1,0583
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:left;">
+0,9659
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+50
+</td>
+<td style="text-align:left;">
+0,7979
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+0,6439
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+70
+</td>
+<td style="text-align:left;">
+0,4967
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+80
+</td>
+<td style="text-align:left;">
+0,3500
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+90
+</td>
+<td style="text-align:left;">
+0,1950
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+100
+</td>
+<td style="text-align:left;">
+0,0000
+</td>
+</tr>
+</tbody>
+</table>
 <p>Por lo tanto, el primer gráfico de la línea superior corresponde a seleccionar el <span class="math inline">\(5\%\)</span> de los mejores animales y de acuerdo a nuestra tabla eso equivale a una intensidad de selección de <span class="math inline">\(i=2,0627\)</span>. De la misma forma, para <span class="math inline">\(p=0,25\)</span> (es decir, <span class="math inline">\(25\%\)</span>) la intensidad será de <span class="math inline">\(i=1,2711\)</span>, para <span class="math inline">\(p=0,40\)</span> de <span class="math inline">\(i=0,9659\)</span>, para <span class="math inline">\(p=0,50\)</span> de <span class="math inline">\(i=0,7979\)</span>, para <span class="math inline">\(p=0,60\)</span> de <span class="math inline">\(i=0,6439\)</span>, para <span class="math inline">\(p=0,80\)</span> de <span class="math inline">\(i=0,3500\)</span> y finalmente <span class="math inline">\(p=0,90\)</span> será de <span class="math inline">\(i=0,1950\)</span>.</p>
 <div style="page-break-after: always;"></div>
 <div class="graybox">
@@ -1764,6 +2175,89 @@ Figura 11.10: Diferencial e intensidad de selección representados gráficamente
 <div id="ejemplo-11.5" class="section level4 unnumbered hasAnchor">
 <h4>Ejemplo 11.5<a href="selartifI.html#ejemplo-11.5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Un rodeo vacuno que produce sus propios reemplazos posee las siguientes cantidades de machos y hembras en las distintas categorías de edades (en años, al nacimiento de los hijos)</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Edad en años (al nacimiento de los hijos)
+</th>
+<th style="text-align:left;">
+Hembras
+</th>
+<th style="text-align:left;">
+Machos
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(3\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(250\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(15\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(220\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(10\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(5\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(200\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(5\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(6\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(170\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(7\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(160\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{TOTAL}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1000\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(30\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Calcular el intervalo generacional de machos, el de hembras y el intervalo generacional promedio.<br />
 </p>
 <p>En machos hay solo 3 categorías de edad, por lo que el intervalo generacional de machos sería, aplicando las ecuaciones <a href="selartifI.html#eq:ig3">(11.17)</a> y <a href="selartifI.html#eq:ig4">(11.18)</a>, tenemos que</p>
@@ -1908,6 +2402,68 @@ q_1=q+b_{qP}S
 \tag{11.26}
 \]</span></p>
 <p>Es decir, la nueva frecuencia será igual a la frecuencia anterior <span class="math inline">\(q\)</span>, más la regresión de la frecuencia en el diferencial de selección. Para determinar el coeficiente de selección vamos a necesitar calcular la covarianza entre las frecuencias de los alelos (<span class="math inline">\(q\)</span>) en los genotipos y los valores fenotípicos. Para ello vamos a emplear la siguiente tabla</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Genotipo
+</th>
+<th style="text-align:left;">
+Frecuencia
+</th>
+<th style="text-align:left;">
+Alelo <span class="math inline">\(q\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(G=P\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1A_1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(a\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1A_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(d\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2A_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-a\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>En ella tenemos las frecuencias de cada genotipo (asumiendo equilibrio de Hardy-Weinberg), la frecuencia del alelo <span class="math inline">\(q\)</span> en cada genotipo (no hay ninguno en <span class="math inline">\(A_1A_1\)</span>, hay uno de dos en <span class="math inline">\(A_1A_2\)</span> y hay dos de dos en <span class="math inline">\(A_2A_2\)</span>), así como el valor genotípico (observar que los heterocigotas se especifican como <span class="math inline">\(d\)</span>, por lo que no estamos asumiendo ningún modo particular de relación entre alelos). La covarianza podemos calcularla como el producto cruzado de la proporción de alelos <span class="math inline">\(q\)</span> en cada genotipo con el valor genotípico, ponderado por la frecuencia de cada genotipo. En la definición que hemos usado de covarianza hacíamos este producto cruzado de los desvíos respecto a las medias respectivas, pero más práctico en este caso resulta hacer los productos de las columnas 2, 3 y 4 de la tabla y a eso restarle el producto de las medias de la frecuencia alélica por la media fenotípica (genotípica). Del capítulo <a href="modelogenbas.html#modelogenbas">El Modelo Genético Básico</a>, recordarás que la media era <span class="math inline">\(M=a(p-q)+2pqd\)</span> (ecuación <a href="modelogenbas.html#eq:modgenbas8">(8.13)</a>). Por lo tanto, la covarianza será</p>
 <p><span class="math display" id="eq:cambfr1p1">\[
 \begin{split}
@@ -1949,6 +2505,79 @@ q_1=q+b_{qP}i \sigma_P=q-\frac{pq\alpha}{\sigma^2_P}i \sigma_P
 <p>La interpretación de esta ecuación es bastante sencilla: el cambio en la frecuencia del alelo <span class="math inline">\(A_2\)</span> será negativo ya que estamos seleccionando en contra del mismo. La intensidad del cambio será directamente proporcional a la intensidad de selección <span class="math inline">\(i\)</span>, al producto de las frecuencias de los alelos (<span class="math inline">\(pq\)</span>) y al efecto de sustitución alélica estandarizado entre el desvío fenotípico de la característica.</p>
 <p>La pregunta que nos hacemos ahora es cómo se relaciona esto con los cambios de frecuencia esperados bajo selección que vimos en capítulos previos (en especial en el capítulo <a href="seleccion.html#seleccion">Selección Natural</a>). Para ello vamos a realizar una pequeña disgresión para recordar como derivábamos el cambio de frecuencia en una generación bajo selección.</p>
 <p>Por ejemplo, en el caso de que el modo de acción génica fuese de <strong>dominancia completa</strong>, con un coeficiente de selección <span class="math inline">\(s\)</span> contra el recesivo, teníamos la siguiente tabla</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Genotipo
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2A_2\)</span>
+</th>
+<th style="text-align:left;">
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+$ ext{Frecuencia inicial}$
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Fitness}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-s\)</span>
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Contribución}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2(1-s)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-sq^2\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Por lo tanto, la frecuencia en la siguiente generación (es decir, después de la selección) sería</p>
 <p><span class="math display" id="eq:deltasel0">\[
 \begin{split}
@@ -1966,6 +2595,79 @@ q_1=\frac{q^2(1-s)+pq}{1-sq^2}
 \tag{11.33}
 \]</span></p>
 <p>En el caso</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Genotipos
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1A_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2A_2\)</span>
+</th>
+<th style="text-align:left;">
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Frecuencia inicial}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Fitness}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-rac{1}{2}s\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-s\)</span>
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Contribución}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq-pqs\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2(1-s)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-sq\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>El nuevo total de frecuencias (para relativizar) el resultado de cada alelo será
 <span class="math display" id="eq:deltasel3">\[
 \begin{split}
@@ -2223,6 +2925,67 @@ En este capítulos nos volcamos a estudiar cómo responden caractes fenotípicos
 </h4>
 <p><span class="citation">(Adaptado de <a href="#ref-Felsenstein2019">J. Felsenstein 2019</a>)</span></p>
 <p>Consideremos un caracter fenotípico cuyo valor numérico está controlado por dos <em>loci</em>, sin varianza ambiental. Si los valores especificados por los genotipos de estos <em>loci</em> bialélicos son</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{BB}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Bb}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{bb}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{AA}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(6\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(7\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(8\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Aa}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(7\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(8\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(9\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{aa}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(8\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(9\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(10\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>y las proporciones de las frecuencias génicas en ambos casos son <span class="math inline">\(50:50\)</span> (tal que <span class="math inline">\(p_A = 0,5\)</span> y <span class="math inline">\(p_B = 0,5\)</span>)</p>
 <p><strong>a.</strong> ¿Cuál será el valor medio para este fenotipo?</p>
 <p><strong>b.</strong> ¿Cuál será su varianza? ¿Y su desviación estándar?</p>
@@ -2274,6 +3037,83 @@ f’(aabb) = f(aabb) \cdot \frac{1}{0,6785}
 <img src='figuras/agro.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 11.3
 </h4>
 <p>En un rodeo de bovinos, se tiene como objetivo disminuir el peso adulto (<span class="math inline">\(h^2=0,45\)</span>). En este rodeo, el porcentaje de destete logrado es del 75% y el desvío fenotípico de la característica es de 30 kg. La estructura del mismo se presenta a continuación:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Edad al parto}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Hembras}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Machos}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(3\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(210\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(10\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(190\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(8\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(5\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(120\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(6\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(6\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(60\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math display">\[ &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; $7$ &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; $20$ &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; \]</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{TOTAL}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(600\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(24\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>¿Cuál es el progreso genético logrado al cabo de una generación?</p>
 <p><strong>Solución</strong></p>
 <p>En primer lugar, determinaremos la proporción de animales seleccionados:</p>

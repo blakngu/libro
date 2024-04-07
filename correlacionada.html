@@ -461,6 +461,125 @@ div.csl-indent {
 <p><strong>Correlación genética (aditiva)</strong> entre dos características, medidas ambas en los mismos individuos <strong>es la correlación entre los valores de cría</strong> de cada individuo en ambas características.</p>
 </div>
 <p>Desde el <strong>punto de vista genético</strong> hay dos causas que claramente pueden estar por detrás de la correlación entre dos mediciones realizadas en individuos (muestreados al azar) de la población: <strong>pleiotropía</strong> y <strong>ligamiento</strong>. En el capítulo <a href="dosloci.html#dosloci">Dinámica de 2 <em>loci</em></a> discutimos lo que acontecía cuando la proximidad física de los <em>loci</em> disminuía la probabilidad de recombinación entre los mismos. En ese caso, determinadas combinaciones de alelos (<strong>haplotipos</strong>) tienden a aparecer con mayor frecuencia de lo que sería esperable por azar <strong>si no estuviesen “ligados”</strong> (que sería el producto de las frecuencias de cada alelo). Si, por ejemplo, dos <em>loci</em> se encuentran fuertemente “ligados” y cada uno de ellos controla (genes de efecto mayor) una característica diferente, entonces valores específicos en una característica estarán asociados a valores específicos en otra característica, lo que genera correlación. Supongamos un caso sencillo, dos <em>loci</em> <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, cada uno gobernando una característica diferente, con dos alelos cada uno: <span class="math inline">\(A=5\)</span>, <span class="math inline">\(a=1\)</span> para la primera característica, <span class="math inline">\(B=4\)</span>, <span class="math inline">\(b=2\)</span> para la segunda característica. Si los dos <em>loci</em> no se encuentran ligados, la segregación distribuirá los gametos en forma independiente para los dos <em>loci</em> y por lo tanto no existirá correlación de valores entre las dos características. Sin embargo, en el caso de que se encuentren totalmente “ligados”, supongamos que <span class="math inline">\(A\)</span> va siempre con <span class="math inline">\(B\)</span> y que <span class="math inline">\(a\)</span> va siempre con <span class="math inline">\(b\)</span>. En ese caso, solo tendremos dos haplotipos posibles: <span class="math inline">\(AB\)</span> y <span class="math inline">\(ab\)</span>. Sin pérdida de generalidad, supongamos que las frecuencias de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son iguales a <span class="math inline">\(\frac{1}{2}\)</span>, por lo que los haplotipos <span class="math inline">\(AB\)</span> y <span class="math inline">\(ab\)</span> tendrán también frecuencias de <span class="math inline">\(\frac{1}{2}\)</span>. Ahora, los posibles genotipos y sus valores para las dos características serán</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Genotipo
+</th>
+<th style="text-align:left;">
+Frecuencia
+</th>
+<th style="text-align:left;">
+Caract..1
+</th>
+<th style="text-align:left;">
+Caract..2
+</th>
+<th style="text-align:left;">
+Dif.1
+</th>
+<th style="text-align:left;">
+Dif.2
+</th>
+<th style="text-align:left;">
+Prod.1.2
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(AB/AB\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{4}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(5+5=10\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4+4=8\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(8\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(AB/ab\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(5+1=6\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(4+2=6\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(ab/ab\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{4}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1+1=2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2+2=4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(8\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\mu_1=6\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\mu_2=6\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\sigma^2_1=8\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\sigma^2_2=2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\sigma_{12}=4\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Arriba, <strong>Dif. 1</strong> y <strong>Dif.2</strong> representan las diferencias de los valores de cada genotipo respecto a las medias correspondientes de cada característica (que están en la última línea de la tabla, en la columna respectiva), mientras que <strong>Prod.1,2</strong> se refiere al producto cruzado de esas diferencias.</p>
 <p>Las varianzas de las características 1 y 2 y la covarianza entre ellas se calculan como de costumbre, es decir</p>
 <p><span class="math display">\[{\sigma^2_1=\frac{1}{4}(4)^2+\frac{1}{2}(0)^2+\frac{1}{4}(-4)^2=4+0+4=8}\]</span>
@@ -599,7 +718,7 @@ Figura 12.3: Método de los “coeficientes de paso” para determinar las relac
 <div class="equationbox">
 <p><span class="math display" id="eq:path15">\[
 \begin{split}
-{r_{P_{12}=h_1\cdot h_2\cdot r_{A_{12}+e_1\cdot e_2\cdot r_{E_{12}}
+{r_{P_{12}}=h_1\cdot h_2\cdot r_{A_{12}}+e_1\cdot e_2\cdot r_{E_{12}}}
 \end{split}
 \tag{12.5}
 \]</span></p>
@@ -612,13 +731,13 @@ Figura 12.3: Método de los “coeficientes de paso” para determinar las relac
 <p>De acuerdo a la ecuación <a href="correlacionada.html#eq:path15">(12.5)</a>, la relación entre las correlaciones fenotípica, genética (aditiva) y ambiental es</p>
 <p><span class="math display">\[
 \begin{split}
-{r_P=h_1\cdot h_2\cdot r_{A}+e_1\cdot e_2\cdot r_{E}
+{r_P=h_1\cdot h_2\cdot r_{A}+e_1\cdot e_2\cdot r_{E}}
 \end{split}
 \]</span></p>
 <p>Por lo tanto, si despejamos la correlación ambiental, tenemos que</p>
 <p><span class="math display">\[
 \begin{split}
-{r_{E_{12}=\frac{r_{P_{12}-h_1\cdot h_2\cdot r_{A_{12}}{e_1\cdot e_2}
+{r_{E_{12}}=\frac{r_{P_{12}}-h_1\cdot h_2\cdot r_{A_{12}}}{e_1\cdot e_2}}
 \end{split}
 \]</span></p>
 <p>Los coeficientes de paso genéticos se calculan directamente haciendo la raíz cuadrada de las correspondientes heredabilidades, es decir</p>
@@ -709,6 +828,63 @@ Figura 12.3: Método de los “coeficientes de paso” para determinar las relac
 \]</span></p>
 </div>
 <p>Un diseño alternativo es el de medios hermanos, donde un padre (de <span class="math inline">\(I\)</span> disponibles) es apareado con varias (<span class="math inline">\(K\)</span>) madres. Con el cambio de notación de que ahora <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> representan las dos características de interés, de acuerdo al análisis de varianza-covarianza para este diseño, tenemos la siguiente tabla de las esperanzas de cuadrados medios y del producto medio:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Factor
+</th>
+<th style="text-align:left;">
+g.l.
+</th>
+<th style="text-align:left;">
+<span class="math inline">\({E[CM_X]}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\({E[CM_Y]}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\({E[PM_{XY}]}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Intergrupos
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(I−1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\sigma^2_{WX}+K\sigma^2_{BX}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\sigma^2_{WY}+K\sigma^2_{BY}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(cov_W+Kcov_B\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Error
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(I(K-1)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\sigma^2_{WX}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\sigma^2_{WY}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(cov_W\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>A su vez, desde el punto de vista de los componentes causales, tenemos que</p>
 <p><span class="math display" id="eq:metestcora6">\[
 \begin{split}
@@ -735,6 +911,52 @@ r_{A_{XY}}=\frac{cov_B}{\sigma_{BX}\ \sigma_{BY}}=\frac{\frac{Cov_{A_{XY}}}{4}}{
 <p>Los resultados del experimento se pueden resumir de la siguiente manera</p>
 <p><br />
 </p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Covarianza
+</th>
+<th style="text-align:left;">
+Valor
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Lsf}\text{ en la madre con }\textbf{Lhp}\text{ en hija}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,33 \text{ cm}^2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Lhp}\text{ en la madre con }\textbf{Lsf}\text{ en hija}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,29 \text{ cm}^2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Lsf}\text{ en la madre con }\textbf{Lsf}\text{ en hija}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,36 \text{ cm}^2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Lhp}\text{ en la madre con }\textbf{Lhp}\text{ en hija}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,39 \text{ cm}^2\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Estimar la covarianza genética entre el largo de la sutura frontal (<strong>Lsf</strong>) y el largo del hueso parietal (<strong>Lhp</strong>).</p>
 <p>Utilizando la ecuación <a href="correlacionada.html#eq:metestcora4">(12.9)</a>, tenemos que un estimador de la correlación genética a partir de estos datos esta dado por</p>
 <p><span class="math display">\[
@@ -784,7 +1006,7 @@ ambiente (extendido) en el otro,</p>
 <span class="math display">\[{r_{A_{12}}=\frac{Cov(A_1,A_2)} {\hat \sigma_{A_{1}}\ \hat \sigma_{A_{2}}}  \iff  Cov(A_1,A_2)= r_{A_{12}}\ \hat \sigma_{A_{1}}\ \hat \sigma_{A_{2}}}\]</span>
 <span class="math display" id="eq:corrpae2">\[
 \begin{split}
-{r_{E_{12}=\frac{Cov(E_1,E_2)} {\hat \sigma_{E_{1}\ \hat \sigma_{E_{2}}  \iff   {Cov(E_1,E_2)= r_{E_{12}\ \hat \sigma_{E_{1}\ \hat \sigma_{E_{2}}
+{r_{E_{12}}=\frac{Cov(E_1,E_2)} {\hat \sigma_{E_{1}}\ \hat \sigma_{E_{2}}}}  \iff   {Cov(E_1,E_2)= r_{E_{12}}\ \hat \sigma_{E_{1}}\ \hat \sigma_{E_{2}}}
 \end{split}
 \tag{12.14}
 \]</span></p>
@@ -808,11 +1030,11 @@ correspondiente producto del coeficiente de correlación multiplicado por
 los devíos estándar, tenemos</p>
 <p><span class="math display">\[{Cov(P_1,P_2)=Cov(A_1,A_2)+Cov(E_1,E_2) \iff}\]</span>
 <span class="math display">\[{r_{P_{12}}\ \hat \sigma_{P_{1}}\ \hat \sigma_{P_{2}}= r_{A_{12}}\ \hat \sigma_{A_{1}}\ \hat \sigma_{A_{2}} + r_{E_{12}}\ \hat \sigma_{E_{1}}\ \hat \sigma_{E_{2}}}\]</span>
-<span class="math display">\[{r_{P_{12}=\frac{r_{A_{12}\ \hat \sigma_{A_{1}\ \hat \sigma_{A_{2} + r_{E_{12}\ \hat \sigma_{E_{1}\ \hat \sigma_{E_{2}}{\hat \sigma_{P_{1}\ \hat \sigma_{P_{2}}
+<span class="math display">\[{r_{P_{12}}=\frac{r_{A_{12}}\ \hat \sigma_{A_{1}}\ \hat \sigma_{A_{2}} + r_{E_{12}}\ \hat \sigma_{E_{1}}\ \hat \sigma_{E_{2}}}{\hat \sigma_{P_{1}}\ \hat \sigma_{P_{2}}}
 =\frac{r_{A_{12}}\ \hat \sigma_{A_{1}}\ \hat \sigma_{A_{2}}}{\hat \sigma_{P_{1}}\ \hat \sigma_{P_{2}}} +\frac{r_{E_{12}}\ \hat \sigma_{E_{1}}\ \hat \sigma_{E_{2}}}{\hat \sigma_{P_{1}}\ \hat \sigma_{P_{2}}}}\]</span>
 <span class="math display" id="eq:corrpae4">\[
 \begin{split}
-{r_{P_{12}=r_{A_{12}\ \frac{\hat \sigma_{A_{1}}{\hat \sigma_{P_{1}}\ \frac{\hat \sigma_{A_{2}}{\hat \sigma_{P_{2}}\ + r_{E_{12}\ \frac{\hat \sigma_{E_{1}}{\hat \sigma_{P_{1}}\ \frac{\hat \sigma_{E_{2}}{\hat \sigma_{P_{2}}
+{r_{P_{12}}=r_{A_{12}}\ \frac{\hat \sigma_{A_{1}}}{\hat \sigma_{P_{1}}}\ \frac{\hat \sigma_{A_{2}}}{\hat \sigma_{P_{2}}}\ + r_{E_{12}}\ \frac{\hat \sigma_{E_{1}}}{\hat \sigma_{P_{1}}}\ \frac{\hat \sigma_{E_{2}}}{\hat \sigma_{P_{2}}}}
 \end{split}
 \tag{12.16}
 \]</span></p>
@@ -878,7 +1100,7 @@ pueden observar en la Figura <a href="correlacionada.html#fig:corrP">12.4</a>. S
 <div class="equationbox">
 <p><span class="math display" id="eq:corrpae8">\[
 \begin{split}
-{r_{P_{12} = a \cdot r_{A_{12}\ + b \cdot r_{E_{12}}
+{r_{P_{12}} = a \cdot r_{A_{12}}\ + b \cdot r_{E_{12}}}
 \end{split}
 \tag{12.21}
 \]</span></p>
@@ -945,7 +1167,7 @@ correlaciones. Una discusión interesante de este tema se puede encontrar en <sp
 <p>De acuerdo a la ecuación <a href="correlacionada.html#eq:eqcorrP">(12.17)</a>, el aporte de la correlación genética estará ponderado por <span class="math inline">\(h_1h_2=\sqrt{h^2_1h^2_2}\)</span>, mientras que el aporte de la correlación ambiental estará ponderado por <span class="math inline">\(\sqrt{1-h^2_1}\sqrt{1-h^2_2}\)</span>. La relación se aportes será entonces</p>
 <p><span class="math display">\[
 \begin{split}
-\mathrm{rel_{A/E}=\frac{\sqrt{h^2_1h^2_2}{\sqrt{1-h^2_1}\sqrt{1-h^2_2}=\sqrt{\frac{h^2_1h^2_2}{(1-h^2_1)(1-h^2_2)}
+\mathrm{rel_{A/E}}=\frac{\sqrt{h^2_1h^2_2}}{\sqrt{1-h^2_1}\sqrt{1-h^2_2}}=\sqrt{\frac{h^2_1h^2_2}{(1-h^2_1)(1-h^2_2)}}
 \end{split}
 \]</span></p>
 <p>En el caso de que <span class="math inline">\(h^2_1=0,25\)</span> y <span class="math inline">\(h^2_2=0,75\)</span>, entonces lo anterior se transforma en</p>
@@ -992,7 +1214,7 @@ correlaciones. Una discusión interesante de este tema se puede encontrar en <sp
 <p>Pero de la ecuación <a href="correlacionada.html#eq:corrpae2">(12.14)</a> sabemos que la relación entre la covarianza genética (aditiva) y su correspondientes coeficiente de correlación nos permite escribirla como</p>
 <p><span class="math display" id="eq:respcor2">\[
 \begin{split}
-{r_{A_{XY}=\frac{Cov_{A}(X,Y)}{\sigma_{A_{X}\sigma_{A_{Y}} \therefore Cov_{A}(X,Y)=r_{A_{XY} \sigma_{A_{X}\sigma_{A_{Y}}
+{r_{A_{XY}}=\frac{Cov_{A}(X,Y)}{\sigma_{A_{X}}\sigma_{A_{Y}}} \therefore Cov_{A}(X,Y)=r_{A_{XY}} \sigma_{A_{X}}\sigma_{A_{Y}}}
 \end{split}
 \tag{12.26}
 \]</span></p>
@@ -1000,7 +1222,7 @@ correlaciones. Una discusión interesante de este tema se puede encontrar en <sp
 <div class="equationbox">
 <p><span class="math display" id="eq:respcor3">\[
 \begin{split}
-{b_{A_{YX}=\frac{r_{A_{XY} \sigma_{A_{X}\sigma_{A_{Y}}{\sigma^2_{A_{X}}=r_{A_{XY}\frac{\sigma_{A_{Y}}{\sigma_{A_{X}}
+{b_{A_{YX}}=\frac{r_{A_{XY}} \sigma_{A_{X}}\sigma_{A_{Y}}}{\sigma^2_{A_{X}}}=r_{A_{XY}}\frac{\sigma_{A_{Y}}}{\sigma_{A_{X}}}}
 \end{split}
 \tag{12.27}
 \]</span></p>
@@ -1048,7 +1270,7 @@ RC_Y=i_X\ h_X\ r_{A_{XY}}\ \sigma_{A_{Y}}=i_X\ h_X\ r_{A_{XY}}\ h_Y\ \sigma_{P_{
 <p><span class="math display" id="eq:respcor9">\[
 \begin{split}
 {\frac{RC_X}{R_X}\frac{RC_Y}{R_Y}=\frac{h_Y}{h_X}\ r_{A_{XY}} \frac{h_X}{h_Y}\ r_{A_{XY}}=\frac{h_Y}{h_X} \frac{h_X}{h_Y}\ (r_{A_{XY}})^2 \therefore}\\
-{r^2_{A_{XY}=\frac{RC_X}{R_X}\frac{RC_Y}{R_Y}
+{r^2_{A_{XY}}=\frac{RC_X}{R_X}\frac{RC_Y}{R_Y}}
 \end{split}
 \tag{12.33}
 \]</span></p>
@@ -1056,6 +1278,82 @@ RC_Y=i_X\ h_X\ r_{A_{XY}}\ \sigma_{A_{Y}}=i_X\ h_X\ r_{A_{XY}}\ h_Y\ \sigma_{P_{
 <div id="ejemplo-12.4" class="section level4 unnumbered hasAnchor">
 <h4>Ejemplo 12.4<a href="correlacionada.html#ejemplo-12.4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>La oveja galesa de montaña <strong>Balwen</strong> (<strong>Balwen Welsh Mountain</strong>), Figura <a href="correlacionada.html#fig:balwen">12.5</a>, es una raza que se cría especialmente para carne. A fin de definir estrategias para mejorar su producción de lana, para estimar la correlación genética entre peso de vellón sucio (<strong>PVS</strong>) y peso de vellón limpio (<strong>PVL</strong>) se realizó un experimento de selección directa y selección indirecta para ambas características, donde se obtuvieron las siguiente respuestas en una generación:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Característica.Seleccionada
+</th>
+<th style="text-align:left;">
+Característica..de.Interés
+</th>
+<th style="text-align:left;">
+Tipo
+</th>
+<th style="text-align:left;">
+Valor
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{PVL}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{PVL}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Directa}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,113     ext{ kg}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{PVS}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{PVS}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Directa}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,101     ext{ kg}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{PVS}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{PVL}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Indirecta}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,084     ext{ kg}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{PVL}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{PVS}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Indirecta}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,082     ext{ kg}\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Estimar la correlación genética (aditiva) entre ambas características.</p>
 <p><br />
 </p>
@@ -1203,7 +1501,7 @@ Figura 12.7: La matriz de varianza-covarianza fenotípica para 3 característica
 <div class="equationbox">
 <p><span class="math display" id="eq:corra1">\[
 \begin{split}
-{r_{A_{i,j}=\frac{Cov(A_i,A_j)}{\sqrt{Var(A_i) Var(A_j)}=\frac{\sigma_{A_{i,j}}{\sqrt{\sigma^2_{A_{i}\sigma^2_{A_{j}}=\frac{\sigma_{A_{i,j}}{\sigma_{A_{i}\sigma_{A_{j}}
+{r_{A_{i,j}}=\frac{Cov(A_i,A_j)}{\sqrt{Var(A_i) Var(A_j)}}=\frac{\sigma_{A_{i,j}}}{\sqrt{\sigma^2_{A_{i}}\sigma^2_{A_{j}}}}=\frac{\sigma_{A_{i,j}}}{\sigma_{A_{i}}\sigma_{A_{j}}}}
 \end{split}
 \tag{12.37}
 \]</span></p>
@@ -1219,7 +1517,7 @@ Figura 12.7: La matriz de varianza-covarianza fenotípica para 3 característica
 <p>De la misma manera, las correlaciones fenotípicas quedan definidas por</p>
 <p><span class="math display" id="eq:corrp1">\[
 \begin{split}
-{r_{P_{i,j}=\frac{Cov(P_i,P_j)}{\sqrt{Var(P_i) Var(P_j)}=\frac{\sigma_{P_{i,j}}{\sqrt{\sigma^2_{P_{i}\sigma^2_{P_{j}}=\frac{\sigma_{P_{i,j}}{\sigma_{P_{i}\sigma_{P_{j}}
+{r_{P_{i,j}}=\frac{Cov(P_i,P_j)}{\sqrt{Var(P_i) Var(P_j)}}=\frac{\sigma_{P_{i,j}}}{\sqrt{\sigma^2_{P_{i}}\sigma^2_{P_{j}}}}=\frac{\sigma_{P_{i,j}}}{\sigma_{P_{i}}\sigma_{P_{j}}}}
 \end{split}
 \tag{12.38}
 \]</span></p>
@@ -1243,14 +1541,14 @@ Figura 12.7: La matriz de varianza-covarianza fenotípica para 3 característica
 <p>Como vimos previamente, la relación entre las correlaciones fenotípicas, genéticas (aditivas) y ambientales viene dada por</p>
 <p><span class="math display">\[
 \begin{split}
-{r_{P_{i,j}=h_i\cdot h_j\cdot r_{A_{i,j}+e_i\cdot e_j\cdot r_{E_{i,j}}
+{r_{P_{i,j}}=h_i\cdot h_j\cdot r_{A_{i,j}}+e_i\cdot e_j\cdot r_{E_{i,j}}}
 \end{split}
 \]</span></p>
 <p>Por lo que, recordando que <span class="math inline">\({e_i=\sqrt{1-h_i}}\)</span>, <span class="math inline">\({e_j=\sqrt{1-h_j}}\)</span>, podemos obtener también la correlación ambiental (más allá de que a veces tenemos la matriz <span class="math inline">\(\mathbf{E}\)</span> disponible) a partir de
 ::::{.equationbox data-latex=““}</p>
 <p><span class="math display" id="eq:corre1">\[
 \begin{split}
-{r_{E_{i,j}=\frac{r_{P_{i,j}-h_i\cdot h_j\cdot r_{A_{i,j}}{e_i\cdot e_j}=\frac{r_{P_{i,j}-h_i\cdot h_j\cdot r_{A_{i,j}}{\sqrt{1-h^2_i}\sqrt{1-h^2_j}=\frac{r_{P_{i,j}-h_i\cdot h_j\cdot r_{A_{i,j}}{\sqrt{(1-h^2_i)(1-h^2_j)}}
+{r_{E_{i,j}}=\frac{r_{P_{i,j}}-h_i\cdot h_j\cdot r_{A_{i,j}}}{e_i\cdot e_j}=\frac{r_{P_{i,j}}-h_i\cdot h_j\cdot r_{A_{i,j}}}{\sqrt{1-h^2_i}\sqrt{1-h^2_j}}=\frac{r_{P_{i,j}}-h_i\cdot h_j\cdot r_{A_{i,j}}}{\sqrt{(1-h^2_i)(1-h^2_j)}}}
 \end{split}
 \tag{12.41}
 \]</span></p>
@@ -1533,6 +1831,67 @@ Entender las causas y el comportamiento de estas respuestas correlacionadas es f
 </h4>
 <p>Un grupo de laboratorio se encuentra estudiando una enfermedad rara (<em>i.e.</em>, de baja incidencia en poblaciones celulares comunes). La selección de células que presentan el fenotipo resulta engorrosa, por lo que se plantean la posibilidad de realizar un proceso de selección indirecta, a efectos de enriquecer los cultivos celulares en dichas células. La idea es seleccionar células según su capacidad de metabolización de diferentes medios de cultivo (algo que es fácil de manipular a nivel experimental).</p>
 <p>Un estudio previo estimó la matriz de varianza-covarianza genético aditiva para tres fenotipos: <span class="math inline">\(F_E\)</span> (fenotipo de la enfermedad), <span class="math inline">\(F_\text{M1}\)</span> (alta capacidad de metabolización de un compuesto) y <span class="math inline">\(F_\text{M2}\)</span> (alta capacidad de metabolización de otro compuesto). La misma se muestra a continuación</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(F_E\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(F_{\text{M1}}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(F_{\text{M2}}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(F_E\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,23\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,76\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,15\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(F_{\text{M1}}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,76\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,12\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,21\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(F_{\text{M2}}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,15\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,21\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,1\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>A su vez, el mismo estudio estima que las heredabilidades de estos tres fenotipos son <span class="math inline">\(h^2_E = 0,69\)</span>, <span class="math inline">\(h^2_{\text{M1}} = 0,82\)</span> y <span class="math inline">\(h^2_{\text{M2}} = 0,55\)</span></p>
 <p>¿Conviene al grupo realizar selección indirecta para este fenotipo? ¿Empleando cuál de los metabolitos?</p>
 <p><strong><em>Solución</em></strong></p>

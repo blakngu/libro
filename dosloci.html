@@ -564,6 +564,46 @@ x_2=x_2 \cdot (x_1+x_2+x_3+x_4)=x_2 \cdot (1)=x_2
 \end{equation}\]</span></p>
 <p>que es lo que queríamos verificar. El procedimiento es el mismo para el resto de las ecuaciones.</p>
 <p>Resumiento, las formas de expresar las frecuencias de los gametos en función de <span class="math inline">\(p_i\)</span>, <span class="math inline">\(q_i\)</span> y <span class="math inline">\(D\)</span> aparecen en el siguiente cuadro que resume las ecuaciones <a href="dosloci.html#eq:deslig6">(5.7)</a> y <a href="dosloci.html#eq:deslig7">(5.8)</a>.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Gametos
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1B_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1B_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2B_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2B_2\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+$ $ (<span class="math inline">\(D\)</span>)
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p_1p_2+D\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p_1q_2-D\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q_1p_2-D\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q_1q_2+D\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Puesto en conjunto con la ecuación <a href="dosloci.html#eq:deslig13">(5.14)</a>, los resultados del cuadro anterior nos confirman que cuando <span class="math inline">\(D\)</span> es positivo el desequilibrio de ligamiento produce un exceso de gametos en <strong>fase de acoplamiento</strong> respecto a lo esperado si no existiese ese <strong>ligamiento</strong>. Este exceso debe compensarse con un déficit de gametos en <strong>fase de repulsión</strong>. Cuando <span class="math inline">\(D\)</span> es negativo, se trata de la situación inversa (recordar que la definición de que pares de gametos consideramos en en <strong>fase de acoplamiento</strong> o en en <strong>fase de repulsión</strong> es algo completamente arbitrario a nivel molecular).</p>
 <p>El otro resultado importante que se desprende del cuadro es el que tiene que ver con los máximos y mínimos para <span class="math inline">\(D\)</span>. Como <span class="math inline">\(x_i \geqslant 0\)</span> para todos los <span class="math inline">\(i \in {1 \cdots 4}\)</span> ya que son la frecuencias de los gametos, entonces</p>
 <p><span class="math display">\[0 \leqslant x_1=p_1p_2+D \Leftrightarrow D \geqslant -p_1p_2\]</span>
@@ -628,6 +668,63 @@ x_4=\frac{N_4}{N}=\frac{280}{980} = 0,286
 \]</span></p>
 <p>Un chequeo obvio es que tanto la suma <span class="math inline">\(\sum_i \mathbb{E}_i=1\)</span> (<span class="math inline">\(0,256+0,193+0,315+0,236=1\)</span>), así como <span class="math inline">\(\sum_i x_i=1\)</span> (<span class="math inline">\(0,306+0,143+0,265+0,286=1\)</span>).</p>
 <p>Ahora, podemos armar un cuadro con las frecuencias esperadas y observadas</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Gametos}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1B_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1B_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2B_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2B_2\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Frecuencia esperada}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,256\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,193\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,315\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,236\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Diferencia } (D\text{ o } -D)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,050\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-0,050\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-0,050\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,050\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>A partir de este cuadro vemos claramente las diferencias entre las frecuencias esperadas y las observadas, que se corresponden con un valor de <span class="math inline">\(D=0,05\)</span>. Los gametos en <strong>fase de acoplamiento</strong>, es decir <span class="math inline">\(A_1B_1\)</span> y <span class="math inline">\(A_2B_2\)</span> están en exceso respecto a lo esperado.</p>
 <p>De acuerdo a la ecuación <a href="dosloci.html#eq:desligp2">(5.18)</a>, <span class="math inline">\(D_\text{máx}=\text{mínimo}(p_1q_2,q_1p_2)\)</span>, por lo que en nuestro caso</p>
 <p><span class="math display">\[
@@ -644,7 +741,103 @@ D_\text{máx}=\text{mínimo}(0,1926 ; 0,3146) = 0,1926
 \tag{5.19}
 \end{equation}\]</span></p>
 <p>siendo <span class="math inline">\(gl\)</span> los grados de libertad del test, <span class="math inline">\(O_i\)</span> el conteo observado para la “celda” <span class="math inline">\(i\)</span>, y <span class="math inline">\(E_i\)</span> el esperado para esa misma celda. En nuestro caso, podemos arreglar los datos que observamos en una tabla como la siguiente</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Gametos}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(B_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(B_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\textbf{Marginal}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(x_3N\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(x_4N\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\((x_3+x_4)N=q_1N\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Marginal}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\((x_1+x_3)N=p_2N\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\((x_2+x_4)N=q_2N\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(N\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Es de notar que los <span class="math inline">\(x_1N,...,x_4N\)</span> representan los <strong>conteos observados</strong> de los 4 haplotipos posibles (ya que <span class="math inline">\(x_1,...,x_4\)</span> son la frecuencias relativas de los mismos). Al mismo tiempo, los <strong>conteos esperados</strong> estarán dados por el siguiente cuadro</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Gametos}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(B_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(B_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\textbf{Marginal}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q_1p_2N\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p_2q_2N\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q_1N\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Marginal}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p_2N\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q_2N\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(N\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Con esta configuración de las celdas en una tabla podemos volver a formular la ecuación <a href="dosloci.html#eq:chicuad1">(5.19)</a> para considerar la sumatoria en las <span class="math inline">\(i\)</span> filas y <span class="math inline">\(j\)</span> columnas de la siguiente forma</p>
 <p><span class="math display" id="eq:chicuad2">\[\begin{equation}
 \chi_{gl}^2=\sum_{i,j} \frac{(O_{i,j}-E_{i,j})^2}{E_{i,j}}=\sum_{i,j} \frac{[O_{i,j}-(m_i*m_j/N)]^2}{(m_i*m_j/N)}
@@ -656,7 +849,103 @@ D_\text{máx}=\text{mínimo}(0,1926 ; 0,3146) = 0,1926
 <h4>Ejemplo 5.2<a href="dosloci.html#ejemplo-5.2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Con los datos del <a href="dosloci.html#ejemplo-5.1">Ejemplo 5.1</a> determinar si el desequilibrio de ligamiento observado es estadísticamente significativo al valor de <span class="math inline">\(\alpha=1\%\)</span>.</p>
 <p>Ordenando los haplotipos observados en una tabla tenemos</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Gametos}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(B_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(B_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\textbf{Marginal}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(260\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(280\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(540\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Marginal}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(560\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(420\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(980\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>El valor esperado para la celda <span class="math inline">\(i,j\)</span> podemos calcularlos de acuerdo a <span class="math inline">\(E_{i,j}=\frac{m_1*m_j}{N}\)</span>. Por ejemplo, para el haplotipo <span class="math inline">\(A_1B_1\)</span> sería <span class="math inline">\(E_{1,1}=\frac{440*560}{980}=251,43\)</span> Por lo tanto, si lo calculamos para las celdas restantes, los esperados serían</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Gametos}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(B_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(B_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\textbf{Marginal}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(308,57\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(231,43\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(540\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Marginal}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(560\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(420\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(980\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Ahora, aplicando la ecuación <a href="dosloci.html#eq:chicuad2">(5.20)</a>,</p>
 <p><span class="math display">\[\begin{equation}
 \chi_{gl}^2=\sum_{i,j} \frac{(O_{i,j}-E_{i,j})^2}{E_{i,j}}
@@ -766,10 +1055,10 @@ t=\frac{\ln(f)}{\ln (1-r)}
 Figura 5.4: Evolución del desequilibrio de ligamiento respecto de <span class="math inline">\(D_0=D_\text{máx}=0,25\)</span>. Rojo <span class="math inline">\(r=0,50\)</span>, anaranjado <span class="math inline">\(r=0,25\)</span>, verde <span class="math inline">\(r=0,20\)</span>, azul <span class="math inline">\(r=0,10\)</span> y negro <span class="math inline">\(r=0,05\)</span>
 </p>
 </div>
-<p>El resultado de aplicar la ecuación <a href="dosloci.html#eq:deslig22">(5.27)</a> a distintas combinaciones de la fracción <span class="math inline">\(f=\frac{D_t}{D_0}\)</span> y <span class="math inline">\(r\)</span> se puede apreciar en la Tabla <a href="dosloci.html#tab:tablaDtr">5.1</a>. Claramente, a medida de que disminuye la fracción de gametos recombinantes <span class="math inline">\(r\)</span> (de izquierda a derecha en la tabla), mayor se hace el número de generaciones necesarias para alcanzar una fracción determinada <span class="math inline">\(f\)</span>. Por ejemplo, mientras que para reducir el desequilibrio de ligamiento inicial a la mitad con un <span class="math inline">\(r=0,50\)</span> se precisa una generación, para lograrlo con un <span class="math inline">\(r=0,01\)</span> se precisan <span class="math inline">\(\approx 69\)</span> generaciones.</p>
+<p>El resultado de aplicar la ecuación <a href="dosloci.html#eq:deslig22">(5.27)</a> a distintas combinaciones de la fracción <span class="math inline">\(f=\frac{D_t}{D_0}\)</span> y <span class="math inline">\(r\)</span> se puede apreciar en la Tabla <a href="#tab:tablaDtr"><strong>??</strong></a>. Claramente, a medida de que disminuye la fracción de gametos recombinantes <span class="math inline">\(r\)</span> (de izquierda a derecha en la tabla), mayor se hace el número de generaciones necesarias para alcanzar una fracción determinada <span class="math inline">\(f\)</span>. Por ejemplo, mientras que para reducir el desequilibrio de ligamiento inicial a la mitad con un <span class="math inline">\(r=0,50\)</span> se precisa una generación, para lograrlo con un <span class="math inline">\(r=0,01\)</span> se precisan <span class="math inline">\(\approx 69\)</span> generaciones.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:tablaDtr">Tabla 5.1: </span><span id="tab:tablaDtr">Tabla 5.2: </span>Número de generaciones requeridas para alcanzar una fracción del desequilibrio de ligamiento inicial (“f”), de acuerdo a la fracción recombinante (“r”).
+(#tab:tablaDtr_html)(#tab:tablaDtr_html)Número de generaciones requeridas para alcanzar una fracción del desequilibrio de ligamiento inicial (“f”), de acuerdo a la fracción recombinante (“r”).
 </caption>
 <thead>
 <tr>
@@ -1164,6 +1453,80 @@ Figura 5.7: Ilustración del modelo de selección que vamos a analizar. Mientras
 </div>
 <p>Tenemos un <em>locus</em> bajo selección, el <em>locus</em> <strong>A</strong>, y un <em>locus</em> “cercano” <strong>B</strong> “neutral” (<em>i.e.</em>, que no está sujeto a selección). En el presente contexto el término “cercano” refiere a que <span class="math inline">\(r&lt;\frac{1}{2}\)</span>, es decir, que ambos <em>loci</em> no se comportan desde el punto de vista de la recombinación como totalmente independientes. A medida de que nos alejamos del <em>locus</em> bajo selección la probabilidad de que aparezca un quiasma entre el <em>locus</em> <strong>A</strong> y el <strong>B</strong> se incrementa (lo que representamos por flecha de tamaño creciente). En forma ingenua podríamos pensar que la dinámica del <em>locus</em> <strong>A</strong> sería la de selección de acuerdo a lo que ya vimos mientras que el comportamiento de <strong>B</strong> (no sujeto a la selección) sería complemante al azar y dominado exclusivamente por fenómenos como la mutación y la deriva. Sin embargo, en esta sección vamos a ignorar los efectos de estas dos últimas fuerzas evolutivas y vamos a estudiar si en ausencia de esas fuerzas las frecuencias de los alelos en <strong>B</strong> siguen imperturbables.</p>
 <p>Tenemos dos <em>loci</em> con dos alelos cada uno, <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span> en el <em>locus</em> <strong>A</strong>, <span class="math inline">\(B_1\)</span> y <span class="math inline">\(B_2\)</span> en el <strong>B</strong>. Imaginemos ahora que en lugar de asignar <strong><em>fitness</em></strong> a los gametos (como hicimos en el capítulo <a href="seleccion.html#seleccion">Selección Natural</a>) vamos a asignarle ese <strong><em>fitness</em></strong> a los genotipos (<em>i.e.</em>, a la combinación específica de gametos). Para ello vamos a hacer una matriz con las frecuencias de los distintos genotipos luego del apareamiento aleatorio y la selección por viabilidad. El cuadro siguiente resume estos resultados. La primer columna y el encabezado representan los gametos, mientras que cada celda de la matriz representa la frecuencia esperada para dicho genotipo (el constituido por el gameto de fila con el de columna).</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Gametos}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1B_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1B_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2B_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2B_2\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1B_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(x_2^2w_{22}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2x_2x_3w_{23}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2x_2x_4w_{24}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2B_1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(x_3^2w_{33}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2x_3x_4w_{34}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2B_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(x_4^2w_{44}\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>El número de parámetros de <strong><em>fitness</em></strong> es ahora de <span class="math inline">\(n(n+1)/2=4 \cdot 5/2=10\)</span>. La lógica de la notación es sencilla. Las frecuencias de los gametos (haplotipos) son <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, <span class="math inline">\(x_3\)</span> y <span class="math inline">\(x_4\)</span>, con los subíndices haciendo referencia a los gametos <span class="math inline">\(A_1B_1\)</span>, <span class="math inline">\(A_1B_2\)</span>, <span class="math inline">\(A_2B_1\)</span> y <span class="math inline">\(A_2B_2\)</span>. Entonces <span class="math inline">\(w_{ij}\)</span> es el <strong><em>fitness</em></strong> asociado a la combinación del gameto <span class="math inline">\(i\)</span> con el gameto <span class="math inline">\(j\)</span>. En la matriz (cuadro) de arriba tenemos las posibles combinaciones de gametos y los <strong><em>fitness</em></strong> asociados a cada combinación (fila <span class="math inline">\(i\)</span>, columna <span class="math inline">\(j\)</span>). La matriz sería simétrica (por eso la ausencia de valores en el triángulo inferior izquierdo), los valores ausentes están contemplados en su simétrico (de ahí que exista un factor 2 cuando <span class="math inline">\(i \ne j\)</span>).</p>
 <p>Si recordamos, por ejemplo, <span class="math inline">\(x_1\)</span> es la frecuencia del gameto <span class="math inline">\(A_1B_1\)</span>. Veamos cuántos de esos aparecen en la siguiente generación (<span class="math inline">\(x&#39;_1\)</span>), luego de un apareamiento al azar. Analicemos la primera fila del cuadro anterior que corresponde a este gameto. Por ejemplo, la primera fila con la primera columna representa un genotipo <span class="math inline">\(A_1B_1/A_1B_1\)</span> que en la meiosis producirá gametos. Más allá de que haya o no recombinación todos los gametos serán <span class="math inline">\(A_1B_1\)</span> en este caso, por lo que la frecuencia de este genotipo en la edad adulta y produciendo gametos será <span class="math inline">\(x_1^2w_{11}\)</span>. El caso de la primera fila con la segunda columna es aún más ilustrativo. El genotipo <span class="math inline">\(A_1B_1/A_1B_2\)</span>, más allá de la recombinación o ausencia de ella, producirá la mitad de los gametos <span class="math inline">\(A_1B_1\)</span> y la otra mitad <span class="math inline">\(A_1B_2\)</span>. La frecuencia de este genotipo que llega a la reproducción es <span class="math inline">\(2x_1x_2w_{12}\)</span>, por lo que la mitad de nuestro interés (la que genera <span class="math inline">\(A_1B_1\)</span>) será <span class="math inline">\(\frac{1}{2}2x_1x_2w_{12}=x_1x_2w_{12}\)</span>. Para la tercera fila el genotipo a considerar es <span class="math inline">\(A_1B_1/A_2B_1\)</span>, que producirá la mitad de los gametos <span class="math inline">\(A_1B_1\)</span> y la mitad <span class="math inline">\(A_2B_1\)</span>, por lo que su aporte a <span class="math inline">\(x&#39;_1\)</span> será <span class="math inline">\(x_1x_3w_{13}\)</span> (por razonamiento análogo al planteado en el caso anterior). Finalmente, de esta fila solo nos queda el genotipo <span class="math inline">\(A_1B_1/A_2B_2\)</span>, que solo producirá gametos <span class="math inline">\(A_1B_1\)</span> en el caso de que no haya recombinación, que serán en ese caso la mitad. Como la probabilidad de no-recombinación es <span class="math inline">\((1-r)\)</span>, entonces todo junto es <span class="math inline">\(\frac{1}{2}(1-r)2x_1x_4w_{14}=(1-r)x_1x_4w_{14}\)</span>. De todos los otros genotipos en el resto de las filas, el único que puede producir gametos <span class="math inline">\(A_1B_1\)</span> es el <span class="math inline">\(A_1B_2/A_2B_1\)</span> (fila <span class="math inline">\(i=2\)</span>, columna <span class="math inline">\(j=3\)</span>), pero solamente si ocurre recombinación, lo que acontece con probabilidad <span class="math inline">\(r\)</span>, en cuyo caso la mitad de los gametos serán del tipo <span class="math inline">\(A_1B_1\)</span>. Poniendo todo junto para este caso, obtenemos <span class="math inline">\(\frac{1}{2}r(2x_2x_3w_{23})=rx_2x_3w_{23}\)</span>.</p>
 <p>Ahora, combinando los resultados de todas las posibilidades de obtener gametos <span class="math inline">\(A_1B_1\)</span> en la siguiente generación y recordando de dividir por el <strong><em>fitness</em> medio</strong> (<span class="math inline">\(\bar{w}\)</span>), tenemos que la frecuencia de este gameto en la siguiente generación será</p>
@@ -1223,6 +1586,80 @@ x&#39;_1=\frac{x_1\bar{w}_1-rDw_{14}}{\bar{w}}
 <div id="selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento" class="section level3 unnumbered hasAnchor">
 <h3>Selección en un locus: impacto en <em>loci</em> en desequilibrio de ligamiento<a href="dosloci.html#selección-en-un-locus-impacto-en-loci-en-desequilibrio-de-ligamiento" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Un ejemplo de la aplicación del análisis previo es el de un <em>locus</em> bajo selección en desequilibrio de ligamiento con un <em>locus</em> cercano, neutral este último (<em>i.e.</em>, sin ventaja selectiva ninguno de sus alelos o combinaciones) aparece en el libro de John H. Gillespie <span class="citation">(<a href="#ref-Gillespie2004">John H. Gillespie 2004</a>)</span>. ¿Qué ocurrirá con las frecuencias alélicas bajo estas condiciones? Utilizaremos la misma notación del capítulo <a href="seleccion.html#seleccion">Selección Natural</a>. Para el primer <em>locus</em>, los <strong><em>fitness</em> relativos</strong> quedan definidos por <span class="math inline">\(1\)</span>, <span class="math inline">\(1-hs\)</span> y <span class="math inline">\(1-s\)</span>, y entonces nuestro cuadro de <strong><em>fitness</em></strong> <span class="math inline">\(w_{ij}\)</span> estará dado por</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Gametos}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1B_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_1B_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2B_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(A_2B_2\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1B_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-hs\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-hs\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2B_1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-s\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-s\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2B_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-s\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>La matriz anterior es fácil de entender. Como solo el primer <em>locus</em> se encuentra bajo selección, todos los genotipos que compartan los mismos dos alelos en el <em>locus</em> <strong>A</strong> tendrán el mismo <strong><em>fitness</em></strong>. Por ejemplo, <span class="math inline">\(A_1B_1/A_1B_1\)</span> será equivalente a <span class="math inline">\(A_1B_1/A_1B_2\)</span> y a <span class="math inline">\(A_1B_2/A_1B_2\)</span>, ya que en los tres casos se trata de genotipos homocigotas <span class="math inline">\(A_1/A_1\)</span> para el primer <em>locus</em>. Con este cuadro y los resultados previos vamos a ver qué ocurre con las frecuencias alélicas luego de una generación de selección.</p>
 <p>Calculemos primero los <strong><em>fitness</em> marginales</strong> y el <strong><em>fitness</em> medio</strong>. Para los <strong><em>fitness</em> marginales</strong> usamos la ecuación <a href="dosloci.html#eq:recsel2">(5.31)</a></p>
 <p><span class="math display">\[\begin{equation}
@@ -1396,6 +1833,162 @@ Figura 5.8: Heterocigosidad final (relativa a la inicial) en función de la dist
 <div id="desequilibrio-debido-al-mestizaje" class="section level3 unnumbered hasAnchor">
 <h3>Desequilibrio debido al mestizaje<a href="dosloci.html#desequilibrio-debido-al-mestizaje" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Supongamos que tenemos dos poblaciones de la misma especie que han evolucionado en paralelo durante un tiempo relativamente importante respecto al tamaño poblacional como para que la deriva pueda hacer su trabajo en el cambio de las frecuencias alélicas. Supongamos también que vamos a estudiar dos <em>loci</em> bi-alélicos en particular en ambas poblaciones, que además se encuentran en equilibrio de Hardy-Weinberg. Luego del análisis genómico logramos determinar las frecuencias de los 4 haplotipos posibles, que son las que aparecen en el siguiente cuadro (bajo las columnas <strong>Población 1</strong> y <strong>Población 2</strong>):</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math inline">\(\textbf{Gameto/estadístico}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\textbf{Frecuencia}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\textbf{Población 1}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\textbf{Población 2}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\textbf{Población mezcla}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1B_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(x_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,09\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,09\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,09\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2B_1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(x_3\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,09\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,09\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,09\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2B_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(x_4\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,01\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,81\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,41\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(p_1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(x_1+x_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,90\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,10\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,50\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(p_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(x_1+x_3\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,90\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,10\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,50\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(D\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,16\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(D_\text{máx}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,09\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,09\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,25\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(D\)</span> | <span class="math inline">\(-\)</span> | <span class="math inline">\(0\)</span> | <span class="math inline">\(0\)</span> | <span class="math inline">\(0,64\)</span> |
+| <span class="math inline">\(r^2\)</span> | <span class="math inline">\(-\)</span> | <span class="math inline">\(0\)</span> | <span class="math inline">\(0\)</span> | <span class="math inline">\(0,41\)</span> |
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+</tbody>
+</table>
 <p>A partir de las frecuencias de los haplotipos podemos calcular las frecuencias de los alelos, como ya lo hemos hecho antes. Por ejemplo, la frecuencia del alelo <span class="math inline">\(A_1\)</span> la calculamos como <span class="math inline">\(p_1=x_1+x_2\)</span>. Como vemos a partir de las líneas de <span class="math inline">\(p_1\)</span> y <span class="math inline">\(p_2\)</span> en el cuadro de arriba, mientras que en la <strong>Población 1</strong> la frecuencia del alelo <span class="math inline">\(A_1\)</span> es <span class="math inline">\(p_1=0,9\)</span>, en la <strong>Población 2</strong> <span class="math inline">\(p_1=0,10\)</span>. Curiosamente (en realidad, a fin de mostrar el punto con número claros) para el alelo <span class="math inline">\(B_1\)</span> (del segundo <em>locus</em>) las frecuencias son también <span class="math inline">\(p_2=0,9\)</span> para la <strong>Población 1</strong> y <span class="math inline">\(p_2=0,1\)</span> para la <strong>Población 2</strong>.</p>
 <p>Veamos ahora qué ocurre con el desequilibrio de ligamiento dentro de ambas poblaciones. Si recordamos que <span class="math inline">\(D=x_1x_4-x_2x_3\)</span>, haciendo los cálculos tenemos que para la <strong>Población 1</strong>, <span class="math inline">\(D=0,81 \cdot 0,01 - 0,09 \cdot 0,09=0\)</span>, mientras que para la <strong>Población 2</strong>, <span class="math inline">\(D=0,01 \cdot 0,81 - 0,09 \cdot 0,09=0\)</span>. Es decir, llegamos a la conclusión de que dentro de ambas poblaciones el desequilibrio de ligamiento para estos dos <em>loci</em> es cero. Como <span class="math inline">\(D=0\)</span>, entonces también lo será <span class="math inline">\(D&#39;=\frac{D}{D_\text{máx}}\)</span> (no importa si usamos <span class="math inline">\(D_\text{máx}\)</span> o <span class="math inline">\(D_\text{mín}\)</span> en el denominador, ya que el numerador es cero) y también tenemos <span class="math inline">\(r^2=\frac{D^2}{p_1q_1p_2q_2} = 0\)</span>. Solo para chequear de que no se trata de un artefacto producto de que dadas las frecuencias sea imposible que se encuentren en desequilibrio de ligamiento, calculamos el <span class="math inline">\(D_\text{máx}=mín(p_1q_2,q_1p_2)\)</span> para ambas poblaciones, que es igual a <span class="math inline">\(0,09\)</span> en ambas.</p>
 <p>Hasta aquí nada sorprendente. Veamos qué ocurre si ahora formamos una nueva población, mezclando la mitad de los individuos de la <strong>Población 1</strong> con la mitad de los individuos de la <strong>Población 2</strong>. Los resultados de mezclar estas dos poblaciones se encuentran en la última columna del cuadro de arriba. Como mezclamos mitad y mitad los individuos, las frecuencias de los haplotipos y de los alelos serán simplemente la media aritmética de las frecuencias en ambas poblaciones. Por ejemplo, para la frecuencia del haplotipo <span class="math inline">\(A_1B_1\)</span> tenemos <span class="math inline">\(x_1=\frac{0,81 + 0,01}{2}=0,41\)</span>, mientras que las del <span class="math inline">\(A_1B_2\)</span> es de <span class="math inline">\(x_2=\frac{0,09 + 0,09}{2}=0,09\)</span> (el mismo cálculo para los restantes). Lo mismo para las frecuencias alélicas, donde <span class="math inline">\(p_1=\frac{0,9 + 0,1}{2}=0,5\)</span> y <span class="math inline">\(p_2=\frac{0,9 + 0,1}{2}=0,5\)</span>. Veamos entonces qué ocurre con el desequilibrio de ligamiento. Usando las frecuencias de los haplotipos calculadas para la población <strong>mezcla</strong>, tenemos que <span class="math inline">\(D=x_1x_4-x_2x_3=0,41 \cdot 0,41 - 0,09 \cdot 0,09=0,16\)</span>. Este es un resultado por lo menos sorprendente, considerando que en ambas poblaciones ambos <em>loci</em> se encontraban en equilibrio de ligamiento. Si ahora calculamos los otros dos estadísticos de desequilibrio para esta población <strong>mezcla</strong>, tenemos <span class="math inline">\(D&#39;= \frac{0,16}{0,25} = 0,64\)</span> y <span class="math inline">\(r^2= \frac{0,16^2}{0,5 \cdot 0,5 \cdot 0,5 \cdot 0,5} = 0,41\)</span>. O sea, en la nueva población no solo tenemos un desequilibrio de ligamiento distinto de cero, sino que además el mismo es del <span class="math inline">\(64\%\)</span> de su valor máximo posible para las frecuencias alélicas en ambos <em>loci</em>. ¿De dónde sale este desequilibrio?</p>
@@ -1596,14 +2189,143 @@ t \approx 23,6
 Inicialmente sólo segregan tres alelos en la población, que llamaremos <span class="math inline">\(A_1\)</span>, <span class="math inline">\(B_1\)</span> y <span class="math inline">\(B_2\)</span>.
 En un momento dado surge un nuevo alelo por una mutación espontánea <span class="math inline">\(A_1 \rightarrow A_2\)</span>.
 Los conteos haplotípicos en dicho momento son</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+<span class="math inline">\(A_1B_1\)</span>
+</th>
+<th style="text-align:right;">
+<span class="math inline">\(A_1B_2\)</span>
+</th>
+<th style="text-align:right;">
+<span class="math inline">\(A_2B_1\)</span>
+</th>
+<th style="text-align:right;">
+<span class="math inline">\(A_2B_2\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+50
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+</tbody>
+</table>
 <p><strong>a.</strong> Calcule el valor de <span class="math inline">\(D&#39;\)</span> y <span class="math inline">\(r^2\)</span> en esta situación, discutiendo en función de los máximos y mínimos teóricos esperados para dichos estadísticos.</p>
 <p><strong>b.</strong> Un tiempo después, algunos organismos portadores de los haplotipos <span class="math inline">\(A_1B_2\)</span> y <span class="math inline">\(A_2B_1\)</span> migran hacia otra región geográfica, fundando una nueva población.
 Algunas generaciones después se realiza un muestreo, observándose los siguientes conteos haplotípicos en la población resultante.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+<span class="math inline">\(A_1B_1\)</span>
+</th>
+<th style="text-align:right;">
+<span class="math inline">\(A_1B_2\)</span>
+</th>
+<th style="text-align:right;">
+<span class="math inline">\(A_2B_1\)</span>
+</th>
+<th style="text-align:right;">
+<span class="math inline">\(A_2B_2\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+43
+</td>
+<td style="text-align:right;">
+46
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+</tbody>
+</table>
 <p>Recalcule los valores de <span class="math inline">\(D&#39;\)</span> y <span class="math inline">\(r^2\)</span>, discutiendo las diferencias observadas en la nueva población respecto al momento en que surge el haplotipo <span class="math inline">\(A_2B_1\)</span> en la población original.</p>
 <p><strong><em>Solución</em></strong></p>
 <p><strong>a.</strong> Notemos que al surgir una nueva variante alélica (en este caso, <span class="math inline">\(A_2\)</span>) se observará siempre desequilibrio de ligamiento, ya que hasta que ocurra un evento de recombinación una de las cuatro variantes haplotípicas posibles no será observada.
 En este caso puntual, existe un déficit de gametos con haplotipo <span class="math inline">\(A_2B_2\)</span> (en fase de acoplamiento).
 Las frecuencias esperadas (en función de <span class="math inline">\(D\)</span> y las frecuencias alélicas) y las frecuencias haplotípicas observadas son</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Haplotipo
+</th>
+<th style="text-align:left;">
+Frecuencia.esperada
+</th>
+<th style="text-align:left;">
+Frecuencia.observada
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1B_1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p_1p_2 + D\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{50}{50+49+1+0} = 0,50\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1B_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p_1q_2 - D\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{49}{50+49+1+0} = 0,49\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2B_1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q_1p_2 - D\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{50+49+1+0} = 0,01\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2B_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q_1q_2 + D\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{0}{50+49+1+0} = 0\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>donde <span class="math inline">\(p_1,\ q_1,\ p_2,\ q_2\)</span> son las frecuencias de los alelos <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span>, <span class="math inline">\(B_1\)</span> y <span class="math inline">\(B_2\)</span> respectivamente.
 Recordemos que las frecuencias alélicas son calculables a partir de las haplotípicas, siendo</p>
 <p><span class="math display">\[
@@ -1638,6 +2360,67 @@ Por lo tanto, mientras que <span class="math inline">\(D&#39;\)</span> se encuen
 Recordemos que este estadístico refiere a la correlación entre los estados alélicos; podríamos pensarlo como la capacidad de predecir el estado alélico de un locus dada la información del estado alélico en el otro.
 En este caso particular, si bien el alelo <span class="math inline">\(A_2\)</span> se encuentra exclusivamente asociado al alelo <span class="math inline">\(B_2\)</span>, el alelo <span class="math inline">\(A_1\)</span> se encuentra asociado casi por igual a los alelos <span class="math inline">\(B_1\)</span> y <span class="math inline">\(B_2\)</span>, por lo que la correlación entre estados alélicos entre los <em>loci</em> es muy baja.</p>
 <p><strong>b.</strong> Para la nueva población fundada tenemos</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Haplotipo
+</th>
+<th style="text-align:left;">
+Frecuencia.esperada
+</th>
+<th style="text-align:left;">
+Frecuencia.observada
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1B_1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p_1p_2 + D\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{5}{5+43+46+6} = 0,050\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1B_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p_1q_2 - D\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{43}{5+43+46+6} = 0,43\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2B_1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q_1p_2 - D\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{46}{5+43+46+6} = 0,46\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2B_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q_1q_2 + D\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{6}{5+43+46+6} = 0,060\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Tenemos por lo tanto ahora <span class="math inline">\(p_1 = 0,05 + 0,43 = 0,48 \Rightarrow q_1 = 1-0,48 = 0,52\)</span> y <span class="math inline">\(p_2 = 0,05 + 0,46 = 0,51 \Rightarrow q_2 = 1-0,51 = 0,49\)</span>.
 Calculemos <span class="math inline">\(D\)</span> a partir las frecuencias del haplotipo <span class="math inline">\(A_1B_2\)</span>,</p>
 <p><span class="math display">\[
@@ -1668,6 +2451,76 @@ Si bien la recombinación generó otras combinaciones alélicas (disminuyendo la
 <p>Poco después de que se redescubrieran las leyes de Mendel, William Bateson, Edith Saunders y Reginald Punnett se dispusieron a estudiar la herencia de caracteres en <em>Lathyrus odoratus.</em> En particular, se centraron en el estudio de dos caracteres: color de flor (alelo <span class="math inline">\(V\)</span> dominante, color violeta; alelo <span class="math inline">\(v\)</span> recesivo, color rojo) y forma del grano de polen (alelo <span class="math inline">\(A\)</span> dominante, forma alargada; alelo <span class="math inline">\(a\)</span> recesivo, redondo).</p>
 <p>Los investigadores realizaron cruces entre líneas homocigotas <span class="math inline">\(VV/AA\)</span> (flor violeta, grano de polen alargado) y <span class="math display">\[vv/aa\]</span> (flor roja, <strong>grano de polen</strong> redondo).</p>
 <p>La distribución de la generación resultante fue la siguiente</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Fenotipo
+</th>
+<th style="text-align:left;">
+Genotipo
+</th>
+<th style="text-align:left;">
+Número observado
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Flor violeta; grano alargado}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(V\_/A\_\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1528\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Flor violeta; grano redondo}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(V\_/aa\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(106\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Flor roja: grano alargado}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(vv/A\_\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(117\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{Flor roja; grano redondo}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(vv/aa\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(381\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\textbf{Total}: 2132\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>¿Se encuentran los <em>loci</em> segregando de forma independiente?</p>
 <p><strong><em>Solución</em></strong></p>
 <p>Bajo equilibrio de Hardy-Weinberg la hipótesis nula es que los <em>loci</em> segregan de forma independiente.

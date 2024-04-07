@@ -446,13 +446,817 @@ modelo de Wright-Fisher.
 <div id="el-rol-de-los-procesos-estocásticos-en-la-genética" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> El rol de los procesos estocásticos en la genética<a href="deriva.html#el-rol-de-los-procesos-estocásticos-en-la-genética" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Para estudiar el alcance del azar en nuestro contexto propongamos un experimento conceptual sencillo, que cada persona puede reproducir en su casa. Tomemos una jarra o vaso grande y coloquemos 20 bolitas de vidrio azules y 20 bolitas de vidrio rojas, <strong>idénticas excepto por el color</strong>. Si, como es de esperar, no tienes tantas bolitas de diferentes colores, alcanza con hacer bolitas de papel coloreado o cosas similares, aunque nosotros nos seguiremos refiriendo en nuestro ejemplo a las bolitas. Por lo tanto, el estado inicial de nuestro experimento (la jarra) es:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+Azul
+</th>
+<th style="text-align:left;">
+Roja
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Cantidad
+</td>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Proporción
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{20}{40}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{20}{40}\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Si sacas una bolita sin mirar el color, ¿qué esperas que ocurra? ¿Será roja o será azul? La extracción de una bolita de nuestra jarra se trata de un fenómeno aleatorio (no podemos saber el resultado con certeza), aunque en algunos casos podemos hacer conjeturas razonables. Por ejemplo, en nuestra jarra hay 20 bolitas azules y 20 rojas (<span class="math inline">\(20+20=40\)</span> bolitas en total), por lo que la proporción de azules es <span class="math inline">\(p_{azul}=\frac{20}{40}=\frac{1}{2}=0,5\)</span> y lo mismo para las rojas <span class="math inline">\(p_{roja}=\frac{20}{40}=\frac{1}{2}=0,5\)</span> <a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a>. Por lo tanto, como elegimos al azar qué bolita agarramos y no existe nada (en principio) que lleve a tener preferencias por el color al elegirlas (recordar que las estamos agarrando sin verlas) la probabilidad de tomar unas u otras será esencialmente la proporción de las mismas. Como la proporción de azules es igual a la de rojas (<span class="math inline">\(\frac{1}{2}\)</span> en cada caso), lo único que podría conjeturar razonablemente es que hay tanta probabilidad de que aparezca una roja como una azul. Además, si <strong>reponemos</strong> la bolita elegida en la jarra la situación vuelve a ser como al principio (20 rojas y 20 azules), por lo que podemos repetir la lógica tantas veces como queramos.</p>
 <p>Supongamos ahora que la bolita que sacamos antes fue azul y que <strong>en lugar de reponerla la dejamos afuera del juego</strong> (la puedes colocar en una caja). Tenemos ahora como estado del sistema antes de extraer la siguiente bolita:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+.
+</th>
+<th style="text-align:left;">
+Azul
+</th>
+<th style="text-align:left;">
+Roja
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Cantidad
+</td>
+<td style="text-align:left;">
+19
+</td>
+<td style="text-align:left;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Proporción
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{19}{39}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{20}{39}\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>¿Cuál será la probabilidad, en una nueva extracción de la jarra, de sacar una bolita azul? ¿Será nuevamente equiprobable sacar una bolita roja que una azul? Para responder a estas preguntas debemos volver a hacer las cuentas. La probabilidad de sacar una bolita azul en la segunda extracción, <strong>dado que la primera fue azul y que no la repusimos</strong> es de <span class="math inline">\(p_{azul}=\frac{19}{39} \sim 0,4872\)</span>, y la probabilidad de sacar una roja será por lo tanto <span class="math inline">\(p_{roja}=\frac{20}{39} \sim 0,5128\)</span> (notar que ahora en lugar de 40 bolitas solo teníamos 39 antes de sacar la segunda). La diferencia de probabilidades respecto al experimento original es relativamente pequeña, pero aún así real: <span class="math inline">\(p_{azul}=0,5\)</span> en la primer extracción, mientras que <span class="math inline">\(p_{azul} \sim 0,4872\)</span> en la segunda.</p>
 <p>Supongamos que, una vez más, en la segunda extracción volvió a aparecer una bolita azul, algo nada extraño ya que existían aún en la jarra casi tantas bolitas rojas como azules. Nuevamente, la dejamos afuera de la jarra (la guardamos en la caja, junto a la primera). El estado actual de nuestro sistema es, por lo tanto:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+Azul
+</th>
+<th style="text-align:left;">
+Roja
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Cantidad
+</td>
+<td style="text-align:left;">
+18
+</td>
+<td style="text-align:left;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Proporción
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{18}{38}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{20}{38}\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Ahora, si volvemos a hacer las cuentas previas a una tercer extracción, tenemos que <span class="math inline">\(p_{azul}=\frac{18}{38} \sim 0,47372\)</span>, y la probabilidad de sacar una roja será por lo tanto <span class="math inline">\(p_{roja}=\frac{20}{38} \sim 0,5263\)</span> (siempre la suma de <span class="math inline">\(p_{azul}+p_{roja}=1\)</span>). Claramente, si empezamos (por azar) a extraer más bolitas azules que rojas (o más rojas que azules) <strong>y no reponemos</strong>, la probabilidad de volver a sacar una del mismo color que las que venían saliendo tiende a bajar.</p>
 <p>Vayamos para atrás en el tiempo (afortundamente podemos hacerlo porque se trata de un experimento conceptual). Supongamos en cambio que luego de haber sacado la primera bolita azul, la segunda hubiese sido roja y, por supuesto, no repusimos ninguna de las dos. En este escenario la probabilidad de sacar una bolita azul en la tercera extracción hubiese sido <span class="math inline">\(p_{azul}=\frac{19}{38}=\frac{1}{2}=0,5\)</span>, y la de sacar una roja hubiese sido también <span class="math inline">\(p_{roja}=\frac{19}{38}=\frac{1}{2}=0,5\)</span>. En otras palabras, como volvimos a igualar las proporciones respecto al estado inicial de la jarra (cuando había 40 bolitas), la probabilidad de extraer alguno de los dos colores hubiese sido la misma.</p>
-<p>Hasta ahora habíamos parado nuestro experimento luego de la extracción de dos bolitas. Veamos un experimento real, pero sigámoslo hasta que no queden más bolitas en la jarra. Las extracciones han seguido el orden que aparece en la primer columna (“bolita”) de la Tabla <a href="#tab:tabla3p1"><strong>??</strong></a>. Es fundamental entender que este es el resultado de <strong>un</strong> experimento en particular. Si repetimos el experimento el resultado (orden de salida de las bolitas) posiblemente sea muy distinto. Tenemos solo 39 filas y no 40, porque la última extracción ya no es aleatoria y porque además no tiene sentido calcular las proporciones luego de esa última extracción (ya no quedan más bolitas).</p>
+<p>Hasta ahora habíamos parado nuestro experimento luego de la extracción de dos bolitas. Veamos un experimento real, pero sigámoslo hasta que no queden más bolitas en la jarra. Las extracciones han seguido el orden que aparece en la primer columna (“bolita”) de la Tabla <a href="deriva.html#tab:tabla3p1">3.1</a>. Es fundamental entender que este es el resultado de <strong>un</strong> experimento en particular. Si repetimos el experimento el resultado (orden de salida de las bolitas) posiblemente sea muy distinto. Tenemos solo 39 filas y no 40, porque la última extracción ya no es aleatoria y porque además no tiene sentido calcular las proporciones luego de esa última extracción (ya no quedan más bolitas).</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:tabla3p1">Tabla 3.1: </span>La realización de un experimento en particular. Partimos de 20 bolitas azules y 20 bolitas rojas. En la columna “bolita” aparece qué bolita sacamos (sin reposición) y en las otras columnas cuántas nos quedan luego de esa extracción de cada color, así como su proporción
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+bolita
+</th>
+<th style="text-align:left;">
+rojas
+</th>
+<th style="text-align:left;">
+azules
+</th>
+<th style="text-align:left;">
+p.roja
+</th>
+<th style="text-align:left;">
+p.azul
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+19
+</td>
+<td style="text-align:left;">
+0,5128
+</td>
+<td style="text-align:left;">
+0,4872
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+19
+</td>
+<td style="text-align:left;">
+19
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+18
+</td>
+<td style="text-align:left;">
+19
+</td>
+<td style="text-align:left;">
+0,4865
+</td>
+<td style="text-align:left;">
+0,5135
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+18
+</td>
+<td style="text-align:left;">
+18
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+18
+</td>
+<td style="text-align:left;">
+17
+</td>
+<td style="text-align:left;">
+0,5143
+</td>
+<td style="text-align:left;">
+0,4857
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+18
+</td>
+<td style="text-align:left;">
+16
+</td>
+<td style="text-align:left;">
+0,5294
+</td>
+<td style="text-align:left;">
+0,4706
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+17
+</td>
+<td style="text-align:left;">
+16
+</td>
+<td style="text-align:left;">
+0,5152
+</td>
+<td style="text-align:left;">
+0,4848
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+16
+</td>
+<td style="text-align:left;">
+16
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+16
+</td>
+<td style="text-align:left;">
+15
+</td>
+<td style="text-align:left;">
+0,5161
+</td>
+<td style="text-align:left;">
+0,4839
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+15
+</td>
+<td style="text-align:left;">
+15
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+14
+</td>
+<td style="text-align:left;">
+15
+</td>
+<td style="text-align:left;">
+0,4828
+</td>
+<td style="text-align:left;">
+0,5172
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+14
+</td>
+<td style="text-align:left;">
+14
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+13
+</td>
+<td style="text-align:left;">
+14
+</td>
+<td style="text-align:left;">
+0,4815
+</td>
+<td style="text-align:left;">
+0,5185
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+13
+</td>
+<td style="text-align:left;">
+13
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:left;">
+13
+</td>
+<td style="text-align:left;">
+0,4800
+</td>
+<td style="text-align:left;">
+0,5200
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:left;">
+13
+</td>
+<td style="text-align:left;">
+0,4583
+</td>
+<td style="text-align:left;">
+0,5417
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:left;">
+0,4783
+</td>
+<td style="text-align:left;">
+0,5217
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:left;">
+0,4762
+</td>
+<td style="text-align:left;">
+0,5238
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:left;">
+0,4500
+</td>
+<td style="text-align:left;">
+0,5500
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:left;">
+0,4211
+</td>
+<td style="text-align:left;">
+0,5789
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:left;">
+0,3889
+</td>
+<td style="text-align:left;">
+0,6111
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:left;">
+0,4118
+</td>
+<td style="text-align:left;">
+0,5882
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:left;">
+0,3750
+</td>
+<td style="text-align:left;">
+0,6250
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:left;">
+0,3333
+</td>
+<td style="text-align:left;">
+0,6667
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:left;">
+0,3571
+</td>
+<td style="text-align:left;">
+0,6429
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:left;">
+0,3846
+</td>
+<td style="text-align:left;">
+0,6154
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:left;">
+0,4167
+</td>
+<td style="text-align:left;">
+0,5833
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+0,4545
+</td>
+<td style="text-align:left;">
+0,5455
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+0,4444
+</td>
+<td style="text-align:left;">
+0,5556
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+0,3750
+</td>
+<td style="text-align:left;">
+0,6250
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+0,4286
+</td>
+<td style="text-align:left;">
+0,5714
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+0,3333
+</td>
+<td style="text-align:left;">
+0,6667
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+0,4000
+</td>
+<td style="text-align:left;">
+0,6000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+<td style="text-align:left;">
+0,5000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0,6667
+</td>
+<td style="text-align:left;">
+0,3333
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+azul
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1,0000
+</td>
+<td style="text-align:left;">
+0,0000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+roja
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1,0000
+</td>
+<td style="text-align:left;">
+0,0000
+</td>
+</tr>
+</tbody>
+</table>
 <p>El resultado de graficar las proporciones de bolitas azules remanentes (probabilidades de extraer una bolita azul) la podemos ver en la Figura <a href="deriva.html#fig:figura3p2">3.1</a>. Claramente, arrancando desde una proporción de <span class="math inline">\(p_{azul}=\frac{1}{2}\)</span>, como tenemos muchas bolitas, al comienzo las variaciones en las proporciones son relativamente pequeñas en cada extracción. A medida que van quedando cada vez menos bolitas (porque se trata de un <strong>muestreo sin reposición</strong>), las oscilaciones son cada vez mayores hasta que llegamos a una de las dos <strong>barreras absorbentes</strong> que tiene nuestro experimento: las proporciones de 0 (0%) y de 1 (100%). <strong>Se les denomina barreras absorbentes porque luego de llegar a estos valores no podremos escaparnos hacia otros</strong> (insistiremos en este concepto en breve). Es decir, luego de que llegamos a la proporción de 0 bolitas azules (y por lo tanto una proporción de 0), no hay forma de incrementar esa proporción. Lo mismo para la proporción de 1, cuando todas las bolitas que quedan son azules: la proporción se mantendrá así hasta el final del experimento.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura3p2"></span>
 <img src="ApuntesGeneticaII_files/figure-html/figura3p2-1.png" alt="Probabilidad de sacar una bolita azul en la próxima extracción, para un nuevo experimento (en rojo), con las mismas condiciones iniciales." width="80%" />
@@ -628,10 +1432,10 @@ Aa=2pq=2 \cdot \frac{1}{2} \frac{1}{2}=2 \cdot \frac{1}{4}=\frac{1}{2}\\
 aa=q^2=\left(\frac{1}{2}\right)^2=\frac{1}{4}
 \end{split}
 \]</span></p>
-<p>Luego, con el paso del tiempo, llegamos a un determinado momento <span class="math inline">\(t_1\)</span> en que las frecuencias alélicas ya han divergido algo. En la Tabla <a href="deriva.html#tab:subdivtx1">3.1</a> podemos ver lo que ocurre a nivel de los genotipos en cada una de las 4 poblaciones, así como la media de las 4 poblaciones (que como son todas iguales en tamaño es directamente igual al promedio de los valores). En la última columna tenemos también la frecuencia de los genotipos homocigotos, es decir <strong>AA</strong> y <strong>aa</strong>. Claramente, la frecuencia alélica promedio no ha cambiado, era de <span class="math inline">\(\frac{1}{2}\)</span> en <span class="math inline">\(t_0=0\)</span> y sigue siendo <span class="math inline">\(\frac{1}{2}\)</span> en <span class="math inline">\(t_1\)</span>. Sin embargo, dentro de las poblaciones el cambio de frecuencia, sumado al equilibrio Hardy-Weinberg para cada una de ellas se refleja en diferencias importantes entre poblaciones en la proporción de homocigotos. Más aún, el promedio de los homocigotos (el promedio de la suma <strong>AA</strong> y <strong>aa</strong> en cada población) se vio incrementado, desde <span class="math inline">\(fr(AA)+fr(aa)=\frac{1}{4}+\frac{1}{4}=\frac{1}{2}=0,5\)</span> a <span class="math inline">\(0,5725\)</span>. Este hecho no es menor: sin cambiar el promedio de las frecuencias alélicas y manteniendo el equilibrio de Hardy-Weinberg dentro de las poblaciones, si las volviésemos a agrupar a el solo efecto de contar los genotipos, el <strong>ensemble</strong> ya no se encuentra en el equilibrio de Hardy-Weinberg (porque el equilibrio para <span class="math inline">\(p=0,5\)</span> es de <span class="math inline">\(G=\frac{1}{2}=0,5\)</span>) <a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a>.</p>
+<p>Luego, con el paso del tiempo, llegamos a un determinado momento <span class="math inline">\(t_1\)</span> en que las frecuencias alélicas ya han divergido algo. En la Tabla <a href="#tab:subdivtx1"><strong>??</strong></a> podemos ver lo que ocurre a nivel de los genotipos en cada una de las 4 poblaciones, así como la media de las 4 poblaciones (que como son todas iguales en tamaño es directamente igual al promedio de los valores). En la última columna tenemos también la frecuencia de los genotipos homocigotos, es decir <strong>AA</strong> y <strong>aa</strong>. Claramente, la frecuencia alélica promedio no ha cambiado, era de <span class="math inline">\(\frac{1}{2}\)</span> en <span class="math inline">\(t_0=0\)</span> y sigue siendo <span class="math inline">\(\frac{1}{2}\)</span> en <span class="math inline">\(t_1\)</span>. Sin embargo, dentro de las poblaciones el cambio de frecuencia, sumado al equilibrio Hardy-Weinberg para cada una de ellas se refleja en diferencias importantes entre poblaciones en la proporción de homocigotos. Más aún, el promedio de los homocigotos (el promedio de la suma <strong>AA</strong> y <strong>aa</strong> en cada población) se vio incrementado, desde <span class="math inline">\(fr(AA)+fr(aa)=\frac{1}{4}+\frac{1}{4}=\frac{1}{2}=0,5\)</span> a <span class="math inline">\(0,5725\)</span>. Este hecho no es menor: sin cambiar el promedio de las frecuencias alélicas y manteniendo el equilibrio de Hardy-Weinberg dentro de las poblaciones, si las volviésemos a agrupar a el solo efecto de contar los genotipos, el <strong>ensemble</strong> ya no se encuentra en el equilibrio de Hardy-Weinberg (porque el equilibrio para <span class="math inline">\(p=0,5\)</span> es de <span class="math inline">\(G=\frac{1}{2}=0,5\)</span>) <a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a>.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:subdivtx1">Tabla 3.1: </span>Frecuencias de los genotipos en las 4 poblaciones, manteniendo el equilibrio de Hardy-Weinberg en cada una de ellas, en el primer punto en el tiempo luego del inicio (<span class="math inline">\(t_1\)</span>).
+(#tab:subdivtx1_html)Frecuencias de los genotipos en las 4 poblaciones, manteniendo el equilibrio de Hardy-Weinberg en cada una de ellas, en el primer punto en el tiempo luego del inicio (<span class="math inline">\(t_1\)</span>).
 </caption>
 <thead>
 <tr>
@@ -757,10 +1561,10 @@ Media
 </tr>
 </tbody>
 </table>
-<p>Veamos qué ocurre entonces a medida de que nos alejamos del punto inicial en el tiempo. Cuando llegamos al punto <span class="math inline">\(t_2\)</span>, las frecuencias en las poblaciones divergen un poco más, aunque ninguna población ha llegado aún a fijar alguno de los dos alelos. La distribución de los genotipos en las mismas, de acuerdo a las nuevas frecuencias alélicas, se puede apreciar en la Tabla <a href="deriva.html#tab:subdivtx2">3.2</a>. Claramente volvemos a ver un incremento en promedio de homocigotos en la población, que ahora alcanzó el valor <span class="math inline">\(0,6450\)</span>.</p>
+<p>Veamos qué ocurre entonces a medida de que nos alejamos del punto inicial en el tiempo. Cuando llegamos al punto <span class="math inline">\(t_2\)</span>, las frecuencias en las poblaciones divergen un poco más, aunque ninguna población ha llegado aún a fijar alguno de los dos alelos. La distribución de los genotipos en las mismas, de acuerdo a las nuevas frecuencias alélicas, se puede apreciar en la Tabla <a href="#tab:subdivtx2"><strong>??</strong></a>. Claramente volvemos a ver un incremento en promedio de homocigotos en la población, que ahora alcanzó el valor <span class="math inline">\(0,6450\)</span>.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:subdivtx2">Tabla 3.2: </span>Frecuencias de los genotipos en las 4 poblaciones, manteniendo el equilibrio de Hardy-Weinberg en cada una de ellas, en el segundo punto en el tiempo luego del inicio (<span class="math inline">\(t_2\)</span>).
+(#tab:subdivtx2_html)Frecuencias de los genotipos en las 4 poblaciones, manteniendo el equilibrio de Hardy-Weinberg en cada una de ellas, en el segundo punto en el tiempo luego del inicio (<span class="math inline">\(t_2\)</span>).
 </caption>
 <thead>
 <tr>
@@ -886,10 +1690,10 @@ Media
 </tr>
 </tbody>
 </table>
-<p>Para ser breves y confirmar la tendencia observada (además de comenzar a imaginar hacia dónde nos lleva ésta), veamos qué ocurre en el instante <span class="math inline">\(t_3\)</span>. Llegado este momento, en la <em>Población 1</em> se ha fijado el alelo <strong>A</strong> (<span class="math inline">\(p=1\)</span>), mientras que en la <em>Población 4</em> se ha fijado el alelo <strong>a</strong> (o lo que es equivalente, se ha perdido el <strong>A</strong>, <span class="math inline">\(p=0\)</span>). La distribución de genotipos se observa en la Tabla <a href="deriva.html#tab:subdivtx3">3.3</a>.</p>
+<p>Para ser breves y confirmar la tendencia observada (además de comenzar a imaginar hacia dónde nos lleva ésta), veamos qué ocurre en el instante <span class="math inline">\(t_3\)</span>. Llegado este momento, en la <em>Población 1</em> se ha fijado el alelo <strong>A</strong> (<span class="math inline">\(p=1\)</span>), mientras que en la <em>Población 4</em> se ha fijado el alelo <strong>a</strong> (o lo que es equivalente, se ha perdido el <strong>A</strong>, <span class="math inline">\(p=0\)</span>). La distribución de genotipos se observa en la Tabla <a href="#tab:subdivtx3"><strong>??</strong></a>.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:subdivtx3">Tabla 3.3: </span>Frecuencias de los genotipos en las 4 poblaciones, manteniendo el equilibrio de Hardy-Weinberg en cada una de ellas, en el tercer punto en el tiempo luego del inicio (<span class="math inline">\(t_3\)</span>).
+(#tab:subdivtx3_html)Frecuencias de los genotipos en las 4 poblaciones, manteniendo el equilibrio de Hardy-Weinberg en cada una de ellas, en el tercer punto en el tiempo luego del inicio (<span class="math inline">\(t_3\)</span>).
 </caption>
 <thead>
 <tr>
@@ -1167,10 +1971,10 @@ T_{2,3}={4 \choose 3}\left(\frac{2}{4}\right)^{3}\left(\frac{4-2}{4}\right)^{4-3
 <p><span class="math display">\[\begin{equation}
 T_{2,4}={4 \choose 4}\left(\frac{2}{4}\right)^{4}\left(\frac{4-2}{4}\right)^{4-4}={4 \choose 4}\left(\frac{1}{2}\right)^{4}\left(\frac{1}{2}\right)^{0}=1 \left(\frac{1}{2}\right)^4=0,0625
 \end{equation}\]</span></p>
-<p>En la tabla <a href="deriva.html#tab:matrizMarkov">3.4</a> puedes ver el resultado de calcular las probabilidades de transición para todos los pares de estados posibles (pares entrada-salida, o generación actual-próxima generación, <span class="math inline">\(0 \leq i \leq 2N\)</span>, <span class="math inline">\(0 \leq j \leq 2N\)</span>). Llamaremos a esta matriz <span class="math inline">\(T\)</span>, por ser la matriz de probabilidad de <strong>transiciones</strong> de estado. En las filas tenemos los posibles estados en la generación actual, definidos como el número de alelos <strong>A</strong> en la generación actual, mientras que en las columnas tenemos el número de alelos <strong>A</strong> en la generación próxima. Se trata de probabilidades, ya que lo visto hasta ahora es que el apareamiento de acuerdo al modelo de Wright-Fisher generará poblaciones descendientes en forma aleatoria, con una probabilidad dada por esta matriz de transición. Es de notar que los estados actuales de <strong>0</strong> y <strong>4</strong> alelos <strong>A</strong> se corresponden a lo que definimos como <strong>barreras absorbentes</strong> de nuestro sistema, pues una vez alcanzado alguno de estos dos estados será imposible abandonarlos (estamos asumiendo la ausencia de mutación). Dicho de otra forma, una vez que se pierde el alelo <strong>A</strong> en una población (<span class="math inline">\(0\)</span> copias del mismo), o que el mismo queda fijado en la población (<span class="math inline">\(2N\)</span> copias, en nuestro ejemplo <span class="math inline">\(2N=4\)</span> copias), en las próximas generaciones esto no va a cambiar.</p>
+<p>En la tabla <a href="#tab:matrizMarkov"><strong>??</strong></a> puedes ver el resultado de calcular las probabilidades de transición para todos los pares de estados posibles (pares entrada-salida, o generación actual-próxima generación, <span class="math inline">\(0 \leq i \leq 2N\)</span>, <span class="math inline">\(0 \leq j \leq 2N\)</span>). Llamaremos a esta matriz <span class="math inline">\(T\)</span>, por ser la matriz de probabilidad de <strong>transiciones</strong> de estado. En las filas tenemos los posibles estados en la generación actual, definidos como el número de alelos <strong>A</strong> en la generación actual, mientras que en las columnas tenemos el número de alelos <strong>A</strong> en la generación próxima. Se trata de probabilidades, ya que lo visto hasta ahora es que el apareamiento de acuerdo al modelo de Wright-Fisher generará poblaciones descendientes en forma aleatoria, con una probabilidad dada por esta matriz de transición. Es de notar que los estados actuales de <strong>0</strong> y <strong>4</strong> alelos <strong>A</strong> se corresponden a lo que definimos como <strong>barreras absorbentes</strong> de nuestro sistema, pues una vez alcanzado alguno de estos dos estados será imposible abandonarlos (estamos asumiendo la ausencia de mutación). Dicho de otra forma, una vez que se pierde el alelo <strong>A</strong> en una población (<span class="math inline">\(0\)</span> copias del mismo), o que el mismo queda fijado en la población (<span class="math inline">\(2N\)</span> copias, en nuestro ejemplo <span class="math inline">\(2N=4\)</span> copias), en las próximas generaciones esto no va a cambiar.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:matrizMarkov">Tabla 3.4: </span><span id="tab:matrizMarkov">Tabla 3.5: </span>Matriz de transición para un locus con dos alelos y dos individuos diploides.
+(#tab:matrizMarkov_html)(#tab:matrizMarkov_html)Matriz de transición para un locus con dos alelos y dos individuos diploides.
 </caption>
 <thead>
 <tr>
@@ -1296,10 +2100,10 @@ de 4 alelos A
 </tr>
 </tbody>
 </table>
-<p>¡Excelente! Tenemos computada nuestra matriz de transiciones. Si observas con cuidado verás que la suma de cada fila es igual a 1, es decir <span class="math inline">\(\sum_{j=0}^{2N} p_{i,j}=1\)</span>. Esto quiere decir que las poblaciones que parten de <span class="math inline">\(i\)</span> alelos en la generación padre deben distribuirse entre todas las posibilidades <span class="math inline">\(j\)</span>, pero que en última instancia, al tratarse de un probabilidad, la suma de todas las posibilidades disjuntas debe ser igual a 1. Veamos ahora cómo la podemos usar para calcular la evolución de las frecuencias alélicas en un <strong>ensemble</strong> de poblaciones, todas del mismo tamaño y que parten de la misma frecuencia alélica. Supongamos que todas estas poblaciones parten en tiempo <span class="math inline">\(t=0\)</span> de <span class="math inline">\(i=2\)</span> alelos <strong>A</strong>. Representaremos las frecuencia de poblaciones en las que hay <span class="math inline">\(i\)</span> alelos con un vector de largo <span class="math inline">\(2N+1\)</span>; la primera posición en el vector representará la frecuencia de poblaciones con 0 alelos <strong>A</strong>, la segunda la frecuencia de poblaciones con 1 alelo <strong>A</strong>, la tercera con 2 alelos <strong>AA</strong>, y así hasta la posición <span class="math inline">\(2n+1=5\)</span> en nuestro caso. Como todas las poblaciones arrancan desde <span class="math inline">\(i=2\)</span>, nuestro vector de frecuencias será <span class="math inline">\(\mathbf{I}_0=(0;0;1;0;0)\)</span>. Ahora, si multiplicamos este <strong>vector fila</strong> <span class="math inline">\(\mathbf{I}_0\)</span> por nuestra matriz <span class="math inline">\(\mathbf{T}\)</span> de transiciones (si precisas recordar como se multiplican matrices y vectores, recurre al [APENDICE A: Conceptos Matemáticos Básicos]), obtendremos un nuevo vector de probabilidad de que las distintas poblaciones del <strong>ensemble</strong> posean un número determinado de alelos <strong>A</strong>, dado por <span class="math inline">\(\mathbf{I}_1=\mathbf{I}_0 * \mathbf{T}\)</span> (representado en la Tabla <a href="deriva.html#tab:vectorProbabilidades1">3.6</a>).</p>
+<p>¡Excelente! Tenemos computada nuestra matriz de transiciones. Si observas con cuidado verás que la suma de cada fila es igual a 1, es decir <span class="math inline">\(\sum_{j=0}^{2N} p_{i,j}=1\)</span>. Esto quiere decir que las poblaciones que parten de <span class="math inline">\(i\)</span> alelos en la generación padre deben distribuirse entre todas las posibilidades <span class="math inline">\(j\)</span>, pero que en última instancia, al tratarse de un probabilidad, la suma de todas las posibilidades disjuntas debe ser igual a 1. Veamos ahora cómo la podemos usar para calcular la evolución de las frecuencias alélicas en un <strong>ensemble</strong> de poblaciones, todas del mismo tamaño y que parten de la misma frecuencia alélica. Supongamos que todas estas poblaciones parten en tiempo <span class="math inline">\(t=0\)</span> de <span class="math inline">\(i=2\)</span> alelos <strong>A</strong>. Representaremos las frecuencia de poblaciones en las que hay <span class="math inline">\(i\)</span> alelos con un vector de largo <span class="math inline">\(2N+1\)</span>; la primera posición en el vector representará la frecuencia de poblaciones con 0 alelos <strong>A</strong>, la segunda la frecuencia de poblaciones con 1 alelo <strong>A</strong>, la tercera con 2 alelos <strong>AA</strong>, y así hasta la posición <span class="math inline">\(2n+1=5\)</span> en nuestro caso. Como todas las poblaciones arrancan desde <span class="math inline">\(i=2\)</span>, nuestro vector de frecuencias será <span class="math inline">\(\mathbf{I}_0=(0;0;1;0;0)\)</span>. Ahora, si multiplicamos este <strong>vector fila</strong> <span class="math inline">\(\mathbf{I}_0\)</span> por nuestra matriz <span class="math inline">\(\mathbf{T}\)</span> de transiciones (si precisas recordar como se multiplican matrices y vectores, recurre al [APENDICE A: Conceptos Matemáticos Básicos]), obtendremos un nuevo vector de probabilidad de que las distintas poblaciones del <strong>ensemble</strong> posean un número determinado de alelos <strong>A</strong>, dado por <span class="math inline">\(\mathbf{I}_1=\mathbf{I}_0 * \mathbf{T}\)</span> (representado en la Tabla <a href="#tab:vectorProbabilidades1"><strong>??</strong></a>).</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:vectorProbabilidades1">Tabla 3.6: </span>Vector de probabilidades de que una población en nuestro ensemble se encuentre en un estado alélico determinado luego de la primera generación (<span class="math inline">\(I_1\)</span>).
+(#tab:vectorProbabilidades1_html)Vector de probabilidades de que una población en nuestro ensemble se encuentre en un estado alélico determinado luego de la primera generación (<span class="math inline">\(I_1\)</span>).
 </caption>
 <thead>
 <tr>
@@ -1323,27 +2127,27 @@ de 4 alelos A
 <tbody>
 <tr>
 <td style="text-align:right;">
-0.0625
+0,0625
 </td>
 <td style="text-align:right;">
-0.25
+0,25
 </td>
 <td style="text-align:right;">
-0.375
+0,375
 </td>
 <td style="text-align:right;">
-0.25
+0,25
 </td>
 <td style="text-align:right;">
-0.0625
+0,0625
 </td>
 </tr>
 </tbody>
 </table>
-<p>Es decir, si bien partimos de que todas las poblaciones poseían 2 alelos <strong>A</strong>, por efecto del azar (<strong>deriva genética</strong> le llamamos a este efecto), ahora un <span class="math inline">\(6,25\%\)</span> de ellas poseerán 0 alelos <strong>A</strong> (se habrá perdido el mismo), un <span class="math inline">\(25\%\)</span> 1 alelo <strong>A</strong>, un <span class="math inline">\(37,5\%\)</span> 2 alelos <strong>A</strong>, otro <span class="math inline">\(25\%\)</span> 3 alelos <strong>A</strong> y finalmente, <span class="math inline">\(6,25\%\)</span> de ellas tendrán todos los 4 alelos <strong>A</strong> (habrán fijado ese alelo). Ahora, la misma matriz de transición que aplicamos para pasar de la generación <span class="math inline">\(t=0 \to t=1\)</span> la podemos aplicar al vector de probabilidades (frecuencias relativas) de poblaciones en la generación <span class="math inline">\(t=1\)</span> para pasar a la <span class="math inline">\(t=2\)</span>. <a href="#fn41" class="footnote-ref" id="fnref41"><sup>41</sup></a> Es decir que ahora tenemos <span class="math inline">\(\mathbf{I}_2=\mathbf{I}_1 * \mathbf{T}\)</span>, cuyo resultado podemos apreciar en <a href="deriva.html#tab:vectorProbabilidades2">3.7</a>.</p>
+<p>Es decir, si bien partimos de que todas las poblaciones poseían 2 alelos <strong>A</strong>, por efecto del azar (<strong>deriva genética</strong> le llamamos a este efecto), ahora un <span class="math inline">\(6,25\%\)</span> de ellas poseerán 0 alelos <strong>A</strong> (se habrá perdido el mismo), un <span class="math inline">\(25\%\)</span> 1 alelo <strong>A</strong>, un <span class="math inline">\(37,5\%\)</span> 2 alelos <strong>A</strong>, otro <span class="math inline">\(25\%\)</span> 3 alelos <strong>A</strong> y finalmente, <span class="math inline">\(6,25\%\)</span> de ellas tendrán todos los 4 alelos <strong>A</strong> (habrán fijado ese alelo). Ahora, la misma matriz de transición que aplicamos para pasar de la generación <span class="math inline">\(t=0 \to t=1\)</span> la podemos aplicar al vector de probabilidades (frecuencias relativas) de poblaciones en la generación <span class="math inline">\(t=1\)</span> para pasar a la <span class="math inline">\(t=2\)</span>. <a href="#fn41" class="footnote-ref" id="fnref41"><sup>41</sup></a> Es decir que ahora tenemos <span class="math inline">\(\mathbf{I}_2=\mathbf{I}_1 * \mathbf{T}\)</span>, cuyo resultado podemos apreciar en <a href="#tab:vectorProbabilidades2"><strong>??</strong></a>.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:vectorProbabilidades2">Tabla 3.7: </span>Vector de probabilidades de que una población en nuestro ensemble se encuentre en un estado alélico determinado luego de la segunda generación (I2).
+(#tab:vectorProbabilidades2_html)Vector de probabilidades de que una población en nuestro ensemble se encuentre en un estado alélico determinado luego de la segunda generación (I2).
 </caption>
 <thead>
 <tr>
@@ -1367,27 +2171,27 @@ de 4 alelos A
 <tbody>
 <tr>
 <td style="text-align:right;">
-0.166
+0,166
 </td>
 <td style="text-align:right;">
-0.2109
+0,2109
 </td>
 <td style="text-align:right;">
-0.2461
+0,2461
 </td>
 <td style="text-align:right;">
-0.2109
+0,2109
 </td>
 <td style="text-align:right;">
-0.166
+0,166
 </td>
 </tr>
 </tbody>
 </table>
-<p>Podemos repetir este procedimiento de generación en generación. Cuando un proceso estocástico depende solamente del estado inmediantamente anterior en el tiempo, como en nuestro caso, decimos que se trata de un proceso Markoviano. Una cadena de Markov<a href="#fn42" class="footnote-ref" id="fnref42"><sup>42</sup></a> es una secuencia de eventos (usualmente en el tiempo) en la que cada resultado depende exclusivamente del resultado precedente. Dicho de otra manera, para predecir el siguiente resultado del proceso (futuro) solo la información del presente estado es relevante y el pasado (los estados anteriores del sistema) no tienen relevancia. A esto último se le conoce como <strong>propiedad markoviana</strong> (o de <strong>falta de memoria</strong>). En nuestro caso, como la distribución de probabilidades de cada nueva generación <span class="math inline">\(t=k\)</span> es determinada multiplicando el resultado de la anterior (<span class="math inline">\(\mathbf{I}_{t=(k-1)}\)</span>) por la matriz de transición (<span class="math inline">\(\mathbf{T}\)</span>), claramente podemos ver por qué se trata de una <strong>cadena</strong> (de Markov). Si comparamos la evolución de nuestro sistema, tenemos ahora que desde la generación <span class="math inline">\(t=0\)</span> hasta la generación <span class="math inline">\(t=5\)</span>, la frecuencias han ido cambiando de la manera que se aprecia en la Tabla <a href="deriva.html#tab:evolProbabilidades1">3.8</a>.</p>
+<p>Podemos repetir este procedimiento de generación en generación. Cuando un proceso estocástico depende solamente del estado inmediantamente anterior en el tiempo, como en nuestro caso, decimos que se trata de un proceso Markoviano. Una cadena de Markov<a href="#fn42" class="footnote-ref" id="fnref42"><sup>42</sup></a> es una secuencia de eventos (usualmente en el tiempo) en la que cada resultado depende exclusivamente del resultado precedente. Dicho de otra manera, para predecir el siguiente resultado del proceso (futuro) solo la información del presente estado es relevante y el pasado (los estados anteriores del sistema) no tienen relevancia. A esto último se le conoce como <strong>propiedad markoviana</strong> (o de <strong>falta de memoria</strong>). En nuestro caso, como la distribución de probabilidades de cada nueva generación <span class="math inline">\(t=k\)</span> es determinada multiplicando el resultado de la anterior (<span class="math inline">\(\mathbf{I}_{t=(k-1)}\)</span>) por la matriz de transición (<span class="math inline">\(\mathbf{T}\)</span>), claramente podemos ver por qué se trata de una <strong>cadena</strong> (de Markov). Si comparamos la evolución de nuestro sistema, tenemos ahora que desde la generación <span class="math inline">\(t=0\)</span> hasta la generación <span class="math inline">\(t=5\)</span>, la frecuencias han ido cambiando de la manera que se aprecia en la Tabla <a href="#tab:evolProbabilidades1"><strong>??</strong></a>.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:evolProbabilidades1">Tabla 3.8: </span>Evolución del vector de probabilidades de que una población en nuestro ensemble se encuentre en un estado alélico determinado desde la generación 0 a la quinta generación.
+(#tab:evolProbabilidades1_html)Evolución del vector de probabilidades de que una población en nuestro ensemble se encuentre en un estado alélico determinado desde la generación 0 a la quinta generación.
 </caption>
 <thead>
 <tr>
@@ -1411,104 +2215,104 @@ de 4 alelos A
 <tbody>
 <tr>
 <td style="text-align:right;">
-0.0000
+0,0000
 </td>
 <td style="text-align:right;">
-0.0000
+0,0000
 </td>
 <td style="text-align:right;">
-1.0000
+1,0000
 </td>
 <td style="text-align:right;">
-0.0000
+0,0000
 </td>
 <td style="text-align:right;">
-0.0000
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-0.0625
-</td>
-<td style="text-align:right;">
-0.2500
-</td>
-<td style="text-align:right;">
-0.3750
-</td>
-<td style="text-align:right;">
-0.2500
-</td>
-<td style="text-align:right;">
-0.0625
+0,0000
 </td>
 </tr>
 <tr>
 <td style="text-align:right;">
-0.1660
+0,0625
 </td>
 <td style="text-align:right;">
-0.2109
+0,2500
 </td>
 <td style="text-align:right;">
-0.2461
+0,3750
 </td>
 <td style="text-align:right;">
-0.2109
+0,2500
 </td>
 <td style="text-align:right;">
-0.1660
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-0.2490
-</td>
-<td style="text-align:right;">
-0.1604
-</td>
-<td style="text-align:right;">
-0.1813
-</td>
-<td style="text-align:right;">
-0.1604
-</td>
-<td style="text-align:right;">
-0.2490
+0,0625
 </td>
 </tr>
 <tr>
 <td style="text-align:right;">
-0.3117
+0,1660
 </td>
 <td style="text-align:right;">
-0.1205
+0,2109
 </td>
 <td style="text-align:right;">
-0.1356
+0,2461
 </td>
 <td style="text-align:right;">
-0.1205
+0,2109
 </td>
 <td style="text-align:right;">
-0.3117
+0,1660
 </td>
 </tr>
 <tr>
 <td style="text-align:right;">
-0.3587
+0,2490
 </td>
 <td style="text-align:right;">
-0.0904
+0,1604
 </td>
 <td style="text-align:right;">
-0.1017
+0,1813
 </td>
 <td style="text-align:right;">
-0.0904
+0,1604
 </td>
 <td style="text-align:right;">
-0.3587
+0,2490
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0,3117
+</td>
+<td style="text-align:right;">
+0,1205
+</td>
+<td style="text-align:right;">
+0,1356
+</td>
+<td style="text-align:right;">
+0,1205
+</td>
+<td style="text-align:right;">
+0,3117
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0,3587
+</td>
+<td style="text-align:right;">
+0,0904
+</td>
+<td style="text-align:right;">
+0,1017
+</td>
+<td style="text-align:right;">
+0,0904
+</td>
+<td style="text-align:right;">
+0,3587
 </td>
 </tr>
 </tbody>
@@ -1521,10 +2325,10 @@ de 4 alelos A
 Figura 3.12: Evolución de la probabilidad de encontrar a las poblaciones en un estado alélico determinado desde la generación <span class="math inline">\(t=0\)</span> a <span class="math inline">\(t=5\)</span> (desde el costado superior izquierdo al inferior derecho). En rojo el estado de 0 alelos A (pérdida del mismo), en azul 4 alelos A (fijación del mismo) y en gris oscuro 2 alelos (nuestro punto de partida en todas las poblaciones). Notar la diferente escala de la generación <span class="math inline">\(t=0\)</span> al resto.
 </p>
 </div>
-<p>Volvamos entonces a la pregunta anterior: ¿hacia dónde va el movimiento de las frecuencias en las distintas poblaciones a largo plazo? Para abordar esta cuestión, tendremos en cuenta el razonamiento de que <span class="math inline">\(\mathbf{I}_{t=k}=\mathbf{I}_0 * \mathbf{T}^{(k)}\)</span>. Resulta interesante ver cómo se comporta <span class="math inline">\(\mathbf{T}^{(k)}\)</span> cuando <span class="math inline">\(k \to \infty\)</span>, es decir cuando el número de generaciones tiende a infinito. Una aproximación numérica sencilla consiste en elevar <span class="math inline">\(\mathbf{T}\)</span> a un número suficientemente grande (<em>e.g</em> 50 generaciones) y ver la forma que adquiere la matriz, como aparece en la Tabla <a href="deriva.html#tab:matrizMarkov50">3.9</a>.</p>
+<p>Volvamos entonces a la pregunta anterior: ¿hacia dónde va el movimiento de las frecuencias en las distintas poblaciones a largo plazo? Para abordar esta cuestión, tendremos en cuenta el razonamiento de que <span class="math inline">\(\mathbf{I}_{t=k}=\mathbf{I}_0 * \mathbf{T}^{(k)}\)</span>. Resulta interesante ver cómo se comporta <span class="math inline">\(\mathbf{T}^{(k)}\)</span> cuando <span class="math inline">\(k \to \infty\)</span>, es decir cuando el número de generaciones tiende a infinito. Una aproximación numérica sencilla consiste en elevar <span class="math inline">\(\mathbf{T}\)</span> a un número suficientemente grande (<em>e.g</em> 50 generaciones) y ver la forma que adquiere la matriz, como aparece en la Tabla <a href="#tab:matrizMarkov50"><strong>??</strong></a>.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:matrizMarkov50">Tabla 3.9: </span>Matriz de transición para un locus con dos alelos y dos individuos diploides luego de 50 generaciones.
+(#tab:matrizMarkov50_html)Matriz de transición para un locus con dos alelos y dos individuos diploides luego de 50 generaciones.
 </caption>
 <thead>
 <tr>
@@ -1650,8 +2454,8 @@ de 4 alelos A
 </tr>
 </tbody>
 </table>
-<p>Si miramos las columnas de la Tabla <a href="deriva.html#tab:matrizMarkov50">3.9</a> podemos apreciar dos situaciones claramente distintas; en las columnas 2, 3 y 4 (que corresponden a pasar de una generación a la siguiente a los estados de 1, 2 y 3 alelos <strong>A</strong> respectivamente), todas las celdas son 0, es decir más allá del punto de arranque (el vector de frecuencias o probabilidades <span class="math inline">\(\mathbf{I}_0\)</span>), cuando el tiempo tiende a infinito (en principio lo estaríamos viendo con solo 50 generaciones) estos estados alélicos estarán vacíos (ninguna población tendrá 1, 2 o 3 alelos <strong>A</strong>), en nuestro modelo de dos individuos diploides. En cambio, las columnas 1 y 5, que se corresponden a la fijación del alelo <strong>a</strong> (pérdida del alelo <strong>A</strong>) y la fijación del alelo <strong>A</strong> respectivamente plantean una distribución que parece en espejo una de otra; claramente estas columnas se corresponden a las dos <strong>barreras absorbentes</strong>. Si nos fijamos en la columna 1, el único 0 corresponde a la probabilidad de pasar de 4 alelos <strong>A</strong> a 0 alelos <strong>A</strong>. Esto es trivial, ya que si el alelo <strong>A</strong> se encuentra fijado, al no existir mutación es imposible que las poblaciones evolucionen a otro estado alélico. Inversamente, en la columna 5 el único 0 se corresponde a la probabilidad de pasar de 0 a 4 alelos <strong>A</strong>. Esto también trivial, ya que no existe posibilidad de pasar del alelo <strong>a</strong> fijado a otro estado alélico. El resto de las celdas es fácil de explicar, si recordamos las probabilidades de fijación de un alelo dada su frecuencia inicial en la población. Cuando se parte de 1 solo alelo <strong>A</strong> (<em>i.e.</em>, 3 alelos <strong>a</strong>), la probabilidad de fijación del alelo <strong>a</strong> es <span class="math inline">\(\frac{3}{4}\)</span>; cuando se parte de 2 alelos <strong>A</strong>, es de <span class="math inline">\(\frac{2}{4}=\frac{1}{2}\)</span>, y cuando se parte de 3 alelos <strong>A</strong> (<em>i.e.</em> solo 1 alelo <strong>a</strong>), la probabilidad de fijación del alelo <strong>a</strong> es <span class="math inline">\(\frac{1}{4}\)</span>. Lo mismo acontece de forma inversa para las transiciones representadas en la columna 5.</p>
-<p>La conclusión de todo lo anterior no es menor: con la matriz de probabilidad de transiciones <span class="math inline">\(\mathbf{T}\)</span> (<a href="deriva.html#tab:matrizMarkov">3.4</a>) el estado estacionario (cuando <span class="math inline">\(t \to \infty\)</span>) implica que <strong>solo los estados de fijación de alguno de los alelos tienen probabilidad mayor a cero</strong>. El punto de partida solo influirá en la distribución entre ellos, pero no en que solo ellos pueden tener probabilidad positiva de fijación. Pongamos un ejemplo: todas las poblaciones inicialmente tienen 1 alelo <strong>A</strong> de los 4 posibles (recordar que son dos individuos diploides, <span class="math inline">\(2N=4\)</span>), es decir, <span class="math inline">\(\mathbf{I}_0=(0;1;0;0;0)\)</span>. Si multiplicamos este vector inicial de probabilidades (probabilidades de encontrar poblaciones del <strong>ensemble</strong> en ese estado), tenemos que <span class="math inline">\(\mathbf{I}_0*\mathbf{T}^\infty\)</span> (llamamos <span class="math inline">\(\mathbf{T}^\infty\)</span> a la potencia infinita, aunque en este contexto <span class="math inline">\(\mathbf{T}^{50} \sim \mathbf{T}^\infty\)</span>), el resultado es <span class="math inline">\(\mathbf{I}_0*\mathbf{T}^\infty=(0,75;0;0;0;0,25)\)</span>, claramente en línea con lo que esperábamos: ninguna población aún segregando (1, 2 o 3 alelos <strong>A</strong>), <span class="math inline">\(75\%\)</span> de la poblaciones con el alelo <strong>a</strong> fijado y <span class="math inline">\(25\%\)</span> de las poblaciones con el alelo <strong>A</strong> fijado.</p>
+<p>Si miramos las columnas de la Tabla <a href="#tab:matrizMarkov50"><strong>??</strong></a> podemos apreciar dos situaciones claramente distintas; en las columnas 2, 3 y 4 (que corresponden a pasar de una generación a la siguiente a los estados de 1, 2 y 3 alelos <strong>A</strong> respectivamente), todas las celdas son 0, es decir más allá del punto de arranque (el vector de frecuencias o probabilidades <span class="math inline">\(\mathbf{I}_0\)</span>), cuando el tiempo tiende a infinito (en principio lo estaríamos viendo con solo 50 generaciones) estos estados alélicos estarán vacíos (ninguna población tendrá 1, 2 o 3 alelos <strong>A</strong>), en nuestro modelo de dos individuos diploides. En cambio, las columnas 1 y 5, que se corresponden a la fijación del alelo <strong>a</strong> (pérdida del alelo <strong>A</strong>) y la fijación del alelo <strong>A</strong> respectivamente plantean una distribución que parece en espejo una de otra; claramente estas columnas se corresponden a las dos <strong>barreras absorbentes</strong>. Si nos fijamos en la columna 1, el único 0 corresponde a la probabilidad de pasar de 4 alelos <strong>A</strong> a 0 alelos <strong>A</strong>. Esto es trivial, ya que si el alelo <strong>A</strong> se encuentra fijado, al no existir mutación es imposible que las poblaciones evolucionen a otro estado alélico. Inversamente, en la columna 5 el único 0 se corresponde a la probabilidad de pasar de 0 a 4 alelos <strong>A</strong>. Esto también trivial, ya que no existe posibilidad de pasar del alelo <strong>a</strong> fijado a otro estado alélico. El resto de las celdas es fácil de explicar, si recordamos las probabilidades de fijación de un alelo dada su frecuencia inicial en la población. Cuando se parte de 1 solo alelo <strong>A</strong> (<em>i.e.</em>, 3 alelos <strong>a</strong>), la probabilidad de fijación del alelo <strong>a</strong> es <span class="math inline">\(\frac{3}{4}\)</span>; cuando se parte de 2 alelos <strong>A</strong>, es de <span class="math inline">\(\frac{2}{4}=\frac{1}{2}\)</span>, y cuando se parte de 3 alelos <strong>A</strong> (<em>i.e.</em> solo 1 alelo <strong>a</strong>), la probabilidad de fijación del alelo <strong>a</strong> es <span class="math inline">\(\frac{1}{4}\)</span>. Lo mismo acontece de forma inversa para las transiciones representadas en la columna 5.</p>
+<p>La conclusión de todo lo anterior no es menor: con la matriz de probabilidad de transiciones <span class="math inline">\(\mathbf{T}\)</span> (<a href="#tab:matrizMarkov"><strong>??</strong></a>) el estado estacionario (cuando <span class="math inline">\(t \to \infty\)</span>) implica que <strong>solo los estados de fijación de alguno de los alelos tienen probabilidad mayor a cero</strong>. El punto de partida solo influirá en la distribución entre ellos, pero no en que solo ellos pueden tener probabilidad positiva de fijación. Pongamos un ejemplo: todas las poblaciones inicialmente tienen 1 alelo <strong>A</strong> de los 4 posibles (recordar que son dos individuos diploides, <span class="math inline">\(2N=4\)</span>), es decir, <span class="math inline">\(\mathbf{I}_0=(0;1;0;0;0)\)</span>. Si multiplicamos este vector inicial de probabilidades (probabilidades de encontrar poblaciones del <strong>ensemble</strong> en ese estado), tenemos que <span class="math inline">\(\mathbf{I}_0*\mathbf{T}^\infty\)</span> (llamamos <span class="math inline">\(\mathbf{T}^\infty\)</span> a la potencia infinita, aunque en este contexto <span class="math inline">\(\mathbf{T}^{50} \sim \mathbf{T}^\infty\)</span>), el resultado es <span class="math inline">\(\mathbf{I}_0*\mathbf{T}^\infty=(0,75;0;0;0;0,25)\)</span>, claramente en línea con lo que esperábamos: ninguna población aún segregando (1, 2 o 3 alelos <strong>A</strong>), <span class="math inline">\(75\%\)</span> de la poblaciones con el alelo <strong>a</strong> fijado y <span class="math inline">\(25\%\)</span> de las poblaciones con el alelo <strong>A</strong> fijado.</p>
 <p>Si en lugar de haber arrancado con todas las poblaciones con 1 solo alelo <strong>A</strong>, hubiésemos arrancado con <span class="math inline">\(25\%\)</span> de las poblaciones con 1 alelo <strong>A</strong>, <span class="math inline">\(25\%\)</span> con dos alelos y <span class="math inline">\(50\%\)</span> con 3 alelos <strong>A</strong>, entonces <span class="math inline">\(\mathbf{I}_0=(0;0,25;0,25;0,50;0)\)</span>. Por lo tanto <span class="math inline">\(\mathbf{I}_0*\mathbf{T}^\infty=(0,4375;0;0;0;0,5625)\)</span>, es decir que el <span class="math inline">\(43,75\%\)</span> de las poblaciones de nuestro <strong>ensemble</strong> tendrían fijado el alelo <strong>a</strong> y el restante <span class="math inline">\(56,25\%\)</span> tendría fijado el alelo <strong>A</strong>.</p>
 <p>En general, si la deriva genética es la única fuerza evolutiva actuante (sin selección, sin mutación, sin migración), el equilibrio se alcanza cuando más tarde o más temprano todas las poblaciones se encuentran fijadas para uno de los dos alelos.</p>
 <p>Un último punto que cabe mencionar acá. Si observamos la forma en la que crece la suma de los estados correspondientes a las <strong>barreras absorbentes</strong>, es posible demostrar que a partir de determinado punto la tasa de aproximación al estado de equilibrio es igual a <span class="math inline">\((1-\frac{1}{2N})\)</span>. Dicho de otra forma, a partir de determinado momento, a cada generación la proporción de poblaciones aún segregantes se reduce en <span class="math inline">\(\frac{1}{2N_e}\)</span>, proporción que va a parar de los estados correspondientes a las <strong>barreras absorbentes</strong>.</p>
@@ -1955,6 +2759,97 @@ J_{x,t}=M(x)\phi(p,x,t)-D\frac{d\phi(p,x,t)}{dx}
 <h3>Kolmogorov Forward Equation<a href="deriva.html#kolmogorov-forward-equation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Asumiendo que las poblaciones de nuestro <strong>ensemble</strong> son suficientemente grandes, la frecuencia de los alelos se transforma razonablemente en una variable continua que avanza suvamente en el tiempo, sin grandes saltos. En este sentido, la “Kolmogorov Forward Equation” (<strong>KFE</strong>) nos permite analizar el comportamiento en el tiempo de la función continua de probabilidad <span class="math inline">\(\phi(p,x,t)\)</span>, es decir de la densidad de probabilidad de encontrar la frecuencia alélica en <span class="math inline">\(0&lt;x&lt;1\)</span> (notar que es válida solo entre las <strong>barreras absorbentes</strong>, pero no para ellas, es decir en las poblaciones aún segregantes) en determinado tiempo <span class="math inline">\(t\)</span>, partiendo de una frecuencia inicial <span class="math inline">\(p\)</span>.</p>
 <p>Para nuestro desarrollo, análogo a lo que hicimos en <a href="deriva.html#caminatas-al-azar-y-procesos-de-difusión">Caminatas al azar y procesos de difusión</a> vamos a permitir pequeños desplazamientos de nuestras variables <span class="math inline">\(x\)</span> y <span class="math inline">\(t\)</span>, es decir <span class="math inline">\(\Delta x\)</span> y <span class="math inline">\(\Delta t\)</span>. Nuevamente, como vimos más arriba, hay dos fuerzas que pueden hacer que <span class="math inline">\(x\)</span> cambie en un intervalo <span class="math inline">\(\Delta t\)</span>: una fuerza sistemática que desplace las frecuencias alélicas siempre en una dirección (nuestro análogo era el campo eléctrico para las partículas de tinta) y que llamaremos <span class="math inline">\(M(x)\)</span> y una fuerza aleatoria, la deriva genética (que en nuestra analogía previa era la difusión por movimiento “Browniano” de las partículas de tinta) que llamaremos <span class="math inline">\(V(x)\)</span>. Sin pérdida de generalidad, vamos a asumir que nuestro alelo favorecido es el <strong>A</strong>, cuya densidad de probabilidad (frecuencia) está dada por <span class="math inline">\(x\)</span> (y la inicial del mismo por <span class="math inline">\(p\)</span>) y que la fuerza sistemática es en el sentido creciente de <span class="math inline">\(x\)</span> (o sea, en sentido de la fijación del <strong>A</strong>). En el cuadro que sigue tenemos detallados los posibles movimientos hacia la “posición” <span class="math inline">\(x\)</span> en un intervalo <span class="math inline">\(\Delta t\)</span> a partir del momento <span class="math inline">\(t\)</span> en que estamos (recordar que en un intervalo <span class="math inline">\(\Delta t\)</span> <span class="math inline">\(x\)</span> solo puede moverse hacia abajo o hacia arriba, pérdida o fijación, una cantidad <span class="math inline">\(\Delta x\)</span>), así como las probabilidades asociadas y la causa del movimiento.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Posición (generación } t \text{)}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Prob. de esa frecuencia}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Posibilidad de cambio a } x  \text{ en } \Delta \text{t}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Prob. del cambio en } \Delta \text{t}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Fuerza}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(x-\Delta x\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\phi(p,x-\Delta x,t)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(x-\Delta x \to x\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(M(x-\Delta x)\)</span>
+</td>
+<td style="text-align:left;">
+Sistemática
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(x-\Delta x\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\phi(p,x-\Delta x,t)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(x-\Delta x \to x\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{V(x-\Delta x)}{2}\)</span>
+</td>
+<td style="text-align:left;">
+Deriva
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(x+\Delta x\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\phi(p,x+\Delta x,t)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(x+\Delta x \to x\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{V(x+\Delta x)}{2}\)</span>
+</td>
+<td style="text-align:left;">
+Deriva
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(x\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\phi(p,x,t)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(x     o x\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-M(x)-V(x)\)</span>
+</td>
+<td style="text-align:left;">
+Permanece
+</td>
+</tr>
+</tbody>
+</table>
 <p>Para llegar a <span class="math inline">\(x\)</span> en el próximo intervalo (<span class="math inline">\(t+\Delta t\)</span>), como el máximo recorrido posible en <span class="math inline">\(x\)</span> es <span class="math inline">\(\Delta x\)</span> debo estar a la distancia <span class="math inline">\(\|\Delta x\|\)</span> de <span class="math inline">\(x\)</span>, es decir en <span class="math inline">\(x-\Delta x\)</span> o en <span class="math inline">\(x+\Delta x\)</span>, o una tercera alternativa que es estar ya en <span class="math inline">\(x\)</span> y quedarme en esa posición. Las probabilidades de estar en esas posiciones en el tiempo <span class="math inline">\(t\)</span> son las que aparecen en la segunda columna del cuadro anterior. A cada una de ellas le corresponde una probabilidad de movimiento de <span class="math inline">\(x\)</span> determinada, como aparece en la columna 4 del cuadro. Como asumimos que <span class="math inline">\(M(x)\)</span> va hacia la fijación, solo participaría en la probabilidad de movernos de <span class="math inline">\(x-\Delta x\)</span> a <span class="math inline">\(x\)</span> (y no en el sentido contrario); esa es la razón porque <span class="math inline">\(x-\Delta x\)</span> aparece en dos filas del cuadro. La razón de por qué el efecto de la deriva es <span class="math inline">\(\frac{V(x)}{2}\)</span> es que se trata de una fuerza simétrica y por lo tanto la posibilidad de aumentar <span class="math inline">\(x\)</span> es igual a la de disminuirla y entonces debemos partir a la mitad su efecto para cada lado. Por último, la probabilidad de que <span class="math inline">\(x\)</span> se quede en donde está es el complemento de las otras probabilidades (<span class="math inline">\(M(x)\)</span> y <span class="math inline">\(V(x)\)</span>), ya que al ser probabilidades el conjunto de todos los eventos excluyentes deben sumar <span class="math inline">\(1\)</span>.</p>
 <p>Ahora, para analizar el cambio ocurrido entre <span class="math inline">\(\phi(p,x,t+\Delta t)\)</span> y <span class="math inline">\(\phi(p,x,t)\)</span>, si multiplicamos la columna 2 por la 4, sumamos y reordenamos los términos tenemos:</p>
 <p><span class="math display">\[\phi(p,x,t+\Delta t)-\phi(p,x,t)=-[M(x)\phi(p,x,t)-M(x-\Delta x)\phi(p,x-\Delta x,t)]+\]</span>
@@ -1980,6 +2875,82 @@ J_{x,t}=M(x)\phi(p,x,t)-D\frac{d\phi(p,x,t)}{dx}
 <div id="kolmogorov-backward-equation" class="section level3 unnumbered hasAnchor">
 <h3>Kolmogorov Backward Equation<a href="deriva.html#kolmogorov-backward-equation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Una segunda posibilidad que se nos brinda de analizar lo que ocurre con la función de densidad <span class="math inline">\(\phi(p,x,t)\)</span> es <strong>mirar hacia atrás en el tiempo</strong> (de ahí el <strong>Backward</strong>) y ver lo que podría haber ocurrido con <span class="math inline">\(p\)</span>, la frecuencia inicial (en lugar de <span class="math inline">\(x\)</span>) en el primer instante en el tiempo. Ahora, como todas las poblaciones del <strong>ensemble</strong> parten del mismo <span class="math inline">\(p\)</span>, en ese pequeño incremento de tiempo <span class="math inline">\(\Delta t\)</span>, los movimientos posibles serían <span class="math inline">\(p-\Delta p\)</span>, <span class="math inline">\(p+\Delta p\)</span> o quedarse en <span class="math inline">\(p\)</span>. Las probabilidades correspondientes a esos eventos las vemos en el siguiente cuadro.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Cambio en la 1era generación}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Probabilidad de ese cambio}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Probabilidad de cambiar a } x \text{ en } t-\Delta t\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Fuerza}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(p \to p+\Delta p\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(M(p)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\phi(p+\Delta p,x,t-\Delta t)\)</span>
+</td>
+<td style="text-align:left;">
+Sistemática
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(p \to p+\Delta p\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{V(p)}{2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\phi(p+\Delta p,x,t-\Delta t)\)</span>
+</td>
+<td style="text-align:left;">
+Deriva
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(p \to p-\Delta p\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{V(p)}{2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\phi(p-\Delta p,x,t-\Delta t)\)</span>
+</td>
+<td style="text-align:left;">
+Deriva
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(p \to p\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-M(p)-V(p)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\phi(p,x,t-\Delta t)\)</span>
+</td>
+<td style="text-align:left;">
+Permanece
+</td>
+</tr>
+</tbody>
+</table>
 <p>Para la movida <span class="math inline">\(p \to p+\Delta p\)</span> hay dos posibilidades, el efecto de la fuerza sistemática y de la aleatoria, por lo que su efecto combinado será <span class="math inline">\(M(p)+\frac{V(p)}{2}\)</span>. Para la movida <span class="math inline">\(p \to p-\Delta p\)</span> solamente <span class="math inline">\(\frac{V(p)}{2}\)</span> y para quedarse en <span class="math inline">\(p\)</span> por lo tanto <span class="math inline">\(1-M(p)-V(p)\)</span>. Ahora, como ya recorrimos un intervalo de tiempo <span class="math inline">\(\Delta t\)</span>, el tiempo remanente para llegar al estado <span class="math inline">\(x\)</span> en el presente será <span class="math inline">\(t-\Delta t\)</span> y por lo tanto las probabilidades asociadas a cada evento serán las que aparecen en la columna 3 del cuadro. Por ejemplo, para <span class="math inline">\(p \to p+\Delta p\)</span>, entonces para llegar a <span class="math inline">\(x\)</span> en el tiempo <span class="math inline">\(t-\Delta t\)</span> restante, la probabilidad es de <span class="math inline">\(\phi(p+\Delta p,x,t-\Delta t)\)</span>. De la misma manera, para <span class="math inline">\(p \to p-\Delta p\)</span> la probabilidad es de <span class="math inline">\(\phi(p-\Delta p,x,t-\Delta t)\)</span> y finalmente para permanecer en <span class="math inline">\(p\)</span> la probabilidad será de <span class="math inline">\(\phi(p,x,t-\Delta t)\)</span>. Ahora, la diferencia entre <span class="math inline">\(\phi(p,x,t)\)</span> y <span class="math inline">\(\phi(p,x,t-\Delta t)\)</span> saldrá de la multiplicación de las columnas 2 y 3 del cuadro, para luego sumarlas, que luego de reordenar los términos nos permite llegar a:</p>
 <p><span class="math display">\[\phi(p,x,t)-\phi(p,x,t-\Delta t)=M(p)\left[\phi(p+\Delta p,x,t-\Delta t)-\phi(p,x,t-\Delta t)\right]+\]</span>
 <span class="math display">\[\frac{V(p)}{2}\left\{\left[\phi(p+\Delta p,x,t-\Delta t) - \phi(p,x,t-\Delta t) \right] -\left[\phi(p,x,t-\Delta t) - \phi(p-\Delta p,x,t-\Delta t) \right] \right\}\]</span></p>
@@ -2395,6 +3366,92 @@ F_t = 1 - (1-\frac{1}{2N_e})^t
 En las mismas se segrega un locus con dos alelos (<span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span> , de frecuencias <span class="math inline">\(p_i\)</span> y <span class="math inline">\(q_i\)</span> respectivamente en la subpoblación <span class="math inline">\(i\)</span>).
 Se estima que el evento de estructuración geográfica ocurrió al rededor de 3000 años atrás.
 Se genotipan 50 individuos al azaar de cada población, observándose el siguiente conteo de individuos:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Genotipo
+</th>
+<th style="text-align:right;">
+Subpoblación.1
+</th>
+<th style="text-align:right;">
+Subpoblación.2
+</th>
+<th style="text-align:right;">
+Subpoblación.3
+</th>
+<th style="text-align:right;">
+Subpoblación.4
+</th>
+<th style="text-align:right;">
+Subpoblación.5
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1A_1\)</span>
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1A_2\)</span>
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
+13
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2A_2\)</span>
+</td>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+</tbody>
+</table>
 <p>Estime el tamaño de la población inicial, asumiendo <em>i)</em> que las subpoblaciones mantuvieron un tamaño aproximadamente constante a lo largo del tiempo, <em>ii)</em> que el tiempo generacional de la especie es de 30 años aproximadamente, <em>iii)</em> que las subpoblaciones cumplen todas las suposiciones para asumir que se encuentran en equilibrio de Hardy-Weinberg (salvo, naturalmente, la suposición de tamaño infinito).</p>
 <p><strong><em>Solución</em></strong></p>
 <p>La varianza que se espera observar en el <em>ensemble</em> poblacional para la frecuencia de un alelo (elegimos arbitrariamente el alelo <span class="math inline">\(A_1\)</span>) luego de <span class="math inline">\(t\)</span> generaciones está dada por</p>
@@ -2458,6 +3515,56 @@ q = 1-p \Rightarrow q = 0,4
 \end{cases}
 \]</span></p>
 <p>Para estas frecuencia alélicas se esperan las siguientes frecuencias genotípicas (y conteos en una población de <span class="math inline">\(N = 250\)</span> individuos):</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Genotipo}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Frecuencia esperada}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Conteo esperado }(N = 250)\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1A_1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,36\ (0.6^2)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(90\ (0,36 \cdot 250)\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1A_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,48\ (2\cdot0,6\cdot0,4)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(120\ (0,48 \cdot 250)\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2A_2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,16\ (0,4^2)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(40\ (0,16 \cdot 250)\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Realizando un test de <span class="math inline">\(\chi^2\)</span> con los conteos obtenidos, podemos establecer si las desviaciones observadas son estadísticamente significativas (en cuyo caso queda refutada la hipótesis nula de segregación en equilibrio de Hardy-Weinberg).</p>
 <p>Recordando que <span class="math inline">\(\chi^2 = \sum_{i=1}^{i=n} \frac{(\text{obs.} - \text{esp.})^2}{\text{esp.}}\)</span> , tenemos entonces <span class="math inline">\(\chi^2 = \frac{(102-90)^2}{90} + \frac{(96-120)^2}{120} + \frac{(52-40)^2}{40} = 10\)</span>.
 Considerando 1 grado de libertad, tal desviación respecto de los valores esperados se espera observar con una probabilidad <span class="math inline">\(&lt;0.01\)</span> según la distribución de <span class="math inline">\(\chi^2\)</span> .

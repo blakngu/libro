@@ -469,6 +469,131 @@ f_{XY}=(\frac{1}{4}) \cdot r_1 + (\frac{1}{2}) \cdot r_2
 \]</span></p>
 </div>
 <p>En el cuadro siguiente recolectamos las probabilidades de compartir exactamente 0, 1 o 2 alelos <strong>IBD</strong>, así como los coeficientes (<strong><em>coefficient of kinship</em></strong>) para algunas relaciones usuales de parentesco</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Parentesco
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(r_0\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(r_1\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(r_2\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(f_{XY}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Gemelos (monocigóticos)
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{2}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Padre-Hijo
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{4}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Abuelo-Nieto
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{8}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hermanos
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{4}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{4}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{4}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Medio-Hermanos
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{2}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{8}\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Primo-Hermanos
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{3}{4}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{4}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{1}{16}\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Por ejemplo, para calcular el coeficiente de parentesco (<strong><em>coefficient of kinship</em></strong>) entre Padre-Hijo basta fijarse que <span class="math inline">\(r_1=1\)</span> y <span class="math inline">\(r_2=0\)</span>, por lo que</p>
 <p><span class="math display">\[
 f_{PH}=(\frac{1}{4}) \cdot r_1 + (\frac{1}{2}) \cdot r_2= (\frac{1}{4}) \cdot (1) + (\frac{1}{2}) \cdot (0)=\frac{1}{4}
@@ -530,6 +655,81 @@ Figura 6.2: Representación de la distribución de frecuencias alélicas y genot
 <p>Para demostrar lo anterior podemos recurrir a la representación que aparece en la Figura <a href="aparnoalazar.html#fig:Fcuadrado">6.2</a>. Supongamos por ahora que llamamos <span class="math inline">\(F\)</span> a la probabilidad de que dos alelos en un <em>locus</em> sean IBD (<em>e.g.</em>, <span class="math inline">\(F=\frac{1}{2}\)</span> en el caso de auto-fertilización si asumimos que en la generación parental <span class="math inline">\(F=0\)</span>). Tenemos entonces dos posibilidades disjuntas: <em>a)</em> que los dos alelos en el <em>locus</em> sean IBD, con probabilidad <span class="math inline">\(F\)</span> (la parte derecha del cuadrado en la figura), y <em>b)</em> que no sean IBD (pueden ser IBS o ser distintos alelos, parte izquierda del cuadrado), con probabilidad <span class="math inline">\(1-F\)</span>. En este último caso, el comportamiento de los alelos que formarán los cigotos es de equilibrio de Hardy-Weinberg, por lo que los aportes a los gentipos serán: <span class="math inline">\(p^2(1-F)\)</span> para el <span class="math inline">\(A_1A_1\)</span>, <span class="math inline">\(2pq(1-F)\)</span> para el <span class="math inline">\(A_1A_2\)</span> y <span class="math inline">\(q^2(1-F)\)</span> para el <span class="math inline">\(A_2A_2\)</span>. En el primer caso, es decir cuando los dos alelos son IBD, como para que sean homocigotos los dos gametos deben ser iguales, entonces las frecuencias serán proporcionales a <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span> (no a <span class="math inline">\(p^2\)</span> y <span class="math inline">\(q^2\)</span>), por lo que el aporte a <span class="math inline">\(A_1A_1\)</span> será de <span class="math inline">\(pF\)</span> y el aporte a <span class="math inline">\(A_2A_2\)</span> será de <span class="math inline">\(qF\)</span>. Como se trata de dos eventos disjuntos podemos sumar las probabilidades. Esto nos deja con las siguientes proporciones:</p>
 <p><br />
 </p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Genotipos
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\bf{A_1A_1}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\bf{A_1A_2}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\bf{A_2A_2}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Frecuencia con endogamia
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2(1-F)+pF\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq(1-F)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2(1-F)+qF\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2+pqF\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq-2pqF\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2+pqF\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Esperado Hardy-Weinberg
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Diferencia
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(pqF\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2pqF\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(pqF\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Los resultados de la segunda línea salen simplemente del producto correspondiente en la primera línea. Por ejemplo, <span class="math inline">\(p^2(1-F)+pF=p^2-p^2F+pF=p^2+F(p-p^2) = p^2+pqF\)</span>, ya que <span class="math inline">\(pq=p(1-p)=p-p^2\)</span>. Más aún, si a estas frecuencias le restamos lo que esperamos del equilibrio Hardy-Weinberg, es decir si el apareamiento hubiese sido al azar entre todo el <strong>pool de gametos</strong>, entonces obtenemos la <strong>Diferencia</strong> que aparece en la última línea. Claramente hay un enriquecimiento en los genotipos homocigotas, <span class="math inline">\(pqF\)</span> para cada uno, a costa de los heterocigotas que pierden <span class="math inline">\(pqF+pqF=2pqF\)</span> (el signo negativo en la última línea indica que pierden esa cantidad). Como <span class="math inline">\(pqF+pqF-2pqF=0\)</span>, la restricción de que deben sumar a 1 se mantiene ya que el balance del cambio neto respecto a HW es cero. Puesto de otra forma, <span class="math inline">\(p^2+pqF+2pq-2pqF+q^2+pqF=p^2+2pq+q^2+(pqF-2pqF+pqF)=p^2+2pq+q^2=1\)</span>.<a href="#fn61" class="footnote-ref" id="fnref61"><sup>61</sup></a></p>
 <p>Veamos qué ocurre ahora con las frecuencias alélicas. En todos los individuos homocigotas <span class="math inline">\(A_1A_1\)</span> los alelos serán <span class="math inline">\(A_1\)</span>, mientras que en los individuos heterocigotas <span class="math inline">\(A_1A_2\)</span> la mitad de los alelos serán <span class="math inline">\(A_1\)</span>. Teniendo en cuenta las frecuencias del cuadro anterior, la frecuencia de <span class="math inline">\(A_1\)</span> será</p>
 <p><span class="math display">\[
@@ -564,6 +764,82 @@ Figura 6.2: Representación de la distribución de frecuencias alélicas y genot
 <h2><span class="header-section-number">6.3</span> <span class="math inline">\(F\)</span> como correlación entre gametos unidos<a href="aparnoalazar.html#f-como-correlación-entre-gametos-unidos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Hasta ahora hemos trabajado con la noción de <span class="math inline">\(F\)</span> en términos probabilísticos, ya que la definimos como la probabilidad de que los dos alelos en un gen cualquiera de un individuo endogámico sean IBD (o la proporción de <em>loci</em> con esas condiciones, lo cual es equivalente). Sin embargo, en la concepción original de Sewall Wright <span class="citation">(<a href="#ref-wright1922">Sewall Wright 1922</a>)</span>, <span class="math inline">\(F\)</span> fue definido como la correlación entre los gametos que se unen para formar un cigoto. Este enfoque es totalmente diferente pero nos lleva (en general) a los mismos resultados que el enfoque probabilístico, aunque la interpretación es algo diferente, así como los límites. Cuando se trata de una probabilidad los límites están definidos por un valor entre <span class="math inline">\(0\)</span> y <span class="math inline">\(1\)</span>, mientras que cuando se trata de un coeficiente de correlación, sus valores pueden variar en principio de <span class="math inline">\(-1\)</span> a <span class="math inline">\(1\)</span>.</p>
 <p>Veamos entonces cómo arribamos a esta definición. Supongamos que mantenemos la condición de que con una probabilidad <span class="math inline">\(F\)</span> los genes pueden transformarse en <strong>autocigotos</strong> a causa de la endocría. Supongamos además, sin pérdida de generalidad, que a los alelos les asignamos un valor numérico, en lugar de un código de letras. Es decir, el alelo <span class="math inline">\(A_1\)</span> pasa a ser representado por <span class="math inline">\(1\)</span>, mientras que <span class="math inline">\(A_2\)</span> por <span class="math inline">\(0\)</span>. En el cuadro siguiente podemos ver las posibilidades de formar cigotos a partir de los gametos de machos y de hembras, así como las frecuencias relativas de cada una de las combinaciones (las cuales dedujimos previamente). Vamos a usar <span class="math inline">\(x\)</span> para el alelo del macho e <span class="math inline">\(y\)</span> para el alelo que proviene de la hembra.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Gameto.macho
+</th>
+<th style="text-align:left;">
+Gameto.hembra
+</th>
+<th style="text-align:left;">
+Gametos.Unidos
+</th>
+<th style="text-align:left;">
+Frecuencia.relativa
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1 (x=1)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(A_1 (y=1)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(A_1A_1 (1,1)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2+pqF\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_1 (x=1)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(A_2 (y=0)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(A_1A_2 (1,0)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(pq-pqF\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2 (x=0)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(A_1 (y=1)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(A_2A_1 (0,1)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(pq-pqF\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(A_2 (x=0)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(A_2 (y=0)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(A_2A_2 (0,0)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2+pqF\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Como recordarás de los cursos de estadística, la correlación de Pearson es la covarianza entre las dos variables divida por el producto de los desvíos estándar de las mismas (o lo que es equivalente, la raíz cuadrada del producto de las varianzas). Nuestras variables <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> son los estados alélicos en gametos de machos y de hembras, codificados en forma numérica. Para calcular la correlación, necesitamos entonces calcular varianzas y covarianzas de nuestras variables aleatorias. En particular, <span class="math inline">\(\mathbb{V}(x)=\mathbb{E}(x^2)-\mathbb{E}^2(x)\)</span> y <span class="math inline">\(\mathbb{Cov}(xy)=\mathbb{E}(xy)-\mathbb{E}(x)\mathbb{E}(y)\)</span>, por lo que deberemos en primer lugar calcular las esperanzas de ambas variables, de los cuadrados de las mismas y del producto de ambas, ya que las precisamos para calcular varianzas y covarianzas. Para el caso de <span class="math inline">\(x\)</span>, la esperanza estará dada por<a href="#fn62" class="footnote-ref" id="fnref62"><sup>62</sup></a></p>
 <p><span class="math display" id="eq:fcor1">\[
 \begin{split}
@@ -648,6 +924,67 @@ r_{GU}=\frac{ {Cov}(xy)}{\sqrt{\mathbb{V}(x)\mathbb{V}(y)}}=\frac{pqF}{\sqrt{pq 
 <div id="endocría-y-depresión-endogámica" class="section level2 hasAnchor" number="6.4">
 <h2><span class="header-section-number">6.4</span> Endocría y depresión endogámica<a href="aparnoalazar.html#endocría-y-depresión-endogámica" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Como vimos en las secciones precedentes, la endocría (<em>i.e.</em>, el apareamiento entre parientes) produce un aumento del número de homocigotas y una reducción consiguiente del número de heterocigotas. Como existe un cambio en la frecuencia de los genotipos respecto al apareamiento aleatorio, entonces resulta interesante analizar el impacto que esto produce en el <strong><em>fitness</em></strong> de la población. En el cuadro siguiente combinamos la información de las frecuencias genotípicas esperadas para un coeficiente de endocría <span class="math inline">\(F\)</span>, que vimos en la sección <a href="aparnoalazar.html#generalización-de-hardy-weinberg-para-apareamientos-no-aleatorios">Generalización de Hardy-Weinberg para apareamientos no-aleatorios</a>, con nuestro modelo de <strong><em>fitness</em></strong> para un locus, que vimos en la sección <a href="seleccion.html#selección-natural-en-el-modelo-de-un-locus-con-dos-alelos">Selección natural en el modelo de un locus con dos alelos</a>.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Genotipos
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\bf{A_1A_1}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\bf{A_1A_2}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\bf{A_2A_2}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Frecuencia con endogamia
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2(1-F)+pF\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq(1-F)\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2(1-F)+qF\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p^2+pqF\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2pq-2pqF\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(q^2+pqF\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Fitness
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-hs\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-s\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>El <strong><em>fitness</em> medio</strong>, que denotaremos como <span class="math inline">\(\bar{w}_F\)</span> para marcar que se trata de una población bajo endogamia, será entonces la suma de los productos de la segunda y tercer línea del cuadro anterior. Es decir</p>
 <p><span class="math display" id="eq:endoc1">\[
 \begin{split}
@@ -687,6 +1024,44 @@ b=2pqs\left(\frac{1}{2}-h\right)
 </div>
 <p>que es una ecuación lineal en <span class="math inline">\(F\)</span>. En general, para muchos <em>loci</em> asociados al <strong><em>fitness</em></strong>, <span class="math inline">\(0 &lt; h &lt; \frac{1}{2}\)</span>, por lo que el término <span class="math inline">\(\left(\frac{1}{2}-h\right)\)</span> será positivo, y como además <span class="math inline">\(2pqs\)</span> también lo es, entonces necesariamente el coeficiente <span class="math inline">\(b&gt;0\)</span>. Como <span class="math inline">\(0 \leqslant F \leqslant 1\)</span>, entonces el <strong><em>fitness</em></strong> medio, en el caso de que éste dependa de un <em>locus</em>, decaerá en forma lineal con el coeficiente <span class="math inline">\(F\)</span>. En este caso, a medida que aumenta el apareamiento entre parientes decrecerá el <strong><em>fitness</em> medio</strong> de la población. Esto es una situación muy conocida por todos, y en general las especies han desarrollado mecanismos para evitar el apareamiento entre parientes muy cercanos. Por ejemplo, en la mayoría de las poblaciones humanas se ha desarrollado el tabú del incesto como forma de prevenir esta situación. Pese a esto, resulta notable que Yengo y colaboradores encuentran una prevalencia de eventos extremos de endogamia de <span class="math inline">\(\sim 1/3652\)</span> en individuos de ancestría europea, nacidos en el Reino Unido entre 1938 y 1967 <span class="citation">(<a href="#ref-Yengoetal2021">Yengo, Wray, and Visscher 2021</a>)</span>. En las poblaciones de animales de cría ésta suele ser también una variable de extremo interés a controlar, ya que produce el conocido fenómeno de la <strong>depresión endogámica</strong>, concepto veremos en mucho más detalle en el capítulo <a href="endoexo.html#endoexo">Endocría, exocría, consanguinidad y depresión endogámica</a>.</p>
 <p>Una forma alternativa de ver el impacto de la endocría en el <strong><em>fitness</em> medio</strong> de las poblaciones consiste en hacer la diferencia entre el <strong><em>fitness</em></strong> en condiciones de apareamiento aleatorio y en condiciones de endocría. De acuerdo a la ecuación <a href="seleccion.html#eq:fitmediorel">(4.6)</a>, el <strong><em>fitness</em> medio</strong> en condiciones de equilibrio Hardy-Weinberg estará dado por <span class="math inline">\(\bar{w}=1-2pqhs-q^2s\)</span>, lo cual es equivalente a <span class="math inline">\(\bar{w}=1-(2pqhs+q^2s)\)</span>. Al mismo tiempo, de acuerdo a la ecuación <a href="aparnoalazar.html#eq:endoc2">(6.16)</a>, <span class="math inline">\(\bar{w}_F=1-(2pqhs+q^2s)-2pqs\left(\frac{1}{2}-h\right)F\)</span>, por lo que la diferencia estará dada por</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Fitness.medio
+</th>
+<th style="text-align:left;">
+.
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bar{w}_F\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-(2pqhs+q^2s)-2pqs\left(\frac{1}{2}-h\right)F\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bar{w}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(1-(2pqhs+q^2s)\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\bar{w}_F-\bar{w}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(-2pqs\left(\frac{1}{2}-h\right)F\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>De acuerdo a la diferencia <span class="math inline">\(\bar{w}_F-\bar{w}\)</span>, la disminución del valor de <strong><em>fitness</em> medio</strong> que acontece por el apareamiento entre parientes será igual a <span class="math inline">\(-2pqs\left(\frac{1}{2}-h\right)F=-aF\)</span>; es decir, la disminución en el <em>fitness</em> medio será lineal respecto al valor de <span class="math inline">\(F\)</span>.</p>
 <p><br />
 </p>
@@ -859,6 +1234,80 @@ F_{IT}=F_{ST}+F_{IS}-F_{ST}F_{IS}
 <div id="ejemplo-6.1" class="section level3 unnumbered hasAnchor">
 <h3>Ejemplo 6.1<a href="aparnoalazar.html#ejemplo-6.1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Consideremos un <strong><em>ensemble</em></strong> de poblaciones constituido por las 3 poblaciones que aparecen en la Figura <a href="aparnoalazar.html#fig:Festad">6.4</a>. Veamos si existe deficiencia de heterocigotos a algún nivel que nos permita sospechar apareamientos no-aleatorios dentro de las mismas o alguna estructuración geográfica.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Parámetro}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Población 1}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Población 2}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Población 3}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Media}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{fr(rojo)}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p_1=\frac{13}{24}=0,542\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p_2=\frac{12}{24}=0,500\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(p_3=\frac{7}{24}=0,292\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\bar{p}=\frac{32}{72}=0,444\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\hat{H}\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(H_1=\frac{5}{12}=0,417\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(H_2=\frac{2}{12}=0,167\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(H_3=\frac{1}{12}=0,083\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{8}{36}=0,222\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(2p_iq_i\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2\frac{13}{24}\frac{11}{24}=0,497\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2\frac{12}{24}\frac{12}{24}=0,500\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2\frac{7}{24}\frac{17}{24}=0,413\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(0,470\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Primero vamos a calcular todos los índices de heterocigosidad. La heterocigosidad observada está dada por la ecuación <a href="aparnoalazar.html#eq:HI">(6.26)</a>, es decir (con <span class="math inline">\(n=3\)</span>)</p>
 <p><span class="math display">\[
 H_I=\frac{1}{n}\sum_{i=1}^{i=n}\hat{H}_i = (\frac{1}{3}) \cdot (0,417 + 0,167 + 0,083) = 0,222
@@ -1378,6 +1827,67 @@ F_{SD} = \frac{H_D - \bar{H}_S}{H_D}
 \]</span></p>
 <p>donde <span class="math inline">\(H_D\)</span> corresponde a la heterocigosidad esperada en cada isla y <span class="math inline">\(\bar{H}_S\)</span> es la heterocigosidad promedio observada entre subpoblaciones de la misma (la cual, por cómo se detalla se hizo el estudio, equivale al promedio de heterocigosidades observadas).</p>
 <p>A continuación se realiza el desgloce de estos cálculos para las tres islas</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Heterocigosidad esperada }(H_D)\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(\text{Heterocigosidad observada}\)</span>
+</th>
+<th style="text-align:left;">
+<span class="math inline">\(F_{SD}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Isla 1
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2 \cdot 0,63 \cdot (1 - 0,63) = 0,4662\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{[2 \cdot 0,12 \cdot (1 - 0,12)] + [2 \cdot 0,76 \cdot (1 - 0,76)] + [2 \cdot 0,23 \cdot (1 - 0,23)]}{3} \approx 0,31\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{0,4662 - 0,31}{0,4662} \approx 0,236\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Isla 2
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2 \cdot 0,49 \cdot (1-0,49) = 0,4998\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{[2 \cdot 0,29 \cdot (1 - 0,29)] + [2 \cdot 0,33 \cdot (1 - 0,33)] + [2 \cdot 0,42 \cdot (1-0,42)]}{3} \approx 0,4470\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\approx \frac{0,4998-0,4470}{0,4998} \approx 0,106\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Isla 3
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(2 \cdot 0,52 \cdot (1 - 0,52) = 0,4992\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\frac{[2 \cdot 0,53 \cdot (1 - 0,53)] + [2 \cdot 0,49 \cdot (1 - 0,49)] + [2 \cdot 0,48 \cdot (1-0,48)]}{3} \approx 0,4991\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\approx \frac{0,4992-0,4991}{0,4992} \approx 0,000200\)</span>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Basándonos en estos resultados y en los valores guía propuestos por Sewall Wright podemos decir que en la Isla 1 existe una diferenciación genética importante, en la Isla 2 una diferenciación genética moderada y en la Isla 3 una poca diferenciación genética. Esto podría reflejar diferencias respecto a en qué magnitud las condiciones geográficas impiden el apareamiento aleatorio entre las subpoblaciones de cada isla (es de esperar que un río sea una mayor limitante que una barrera de árboles, por ejemplo).</p>
 <p><strong>b</strong>. Consideramos que la probabilidad de que un individuo muestreado de cualquiera de las islas este conformado por alelos idénticos por descendencia debe tener en cuenta el efecto conjunto de todos los niveles de estructuración. Es decir, contemplar que sean puedan ser idénticos por ascendencia por pertenecer a una subpoblación de una isla en particular (en donde se conformaron las subpoblaciones), de una isla y del archipiélago en sí (en el que se conformaron las islas).</p>
 <p>El coeficiente de fijación dentro de una subpoblación será</p>
