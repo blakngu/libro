@@ -378,12 +378,14 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="apéndice-a-conceptos-matemáticos-básicos.html"><a href="apéndice-a-conceptos-matemáticos-básicos.html#funciones"><i class="fa fa-check"></i>FUNCIONES</a></li>
 <li class="chapter" data-level="" data-path="apéndice-a-conceptos-matemáticos-básicos.html"><a href="apéndice-a-conceptos-matemáticos-básicos.html#sumatoria-y-productoria"><i class="fa fa-check"></i>SUMATORIA Y PRODUCTORIA</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="apéndice-b-cálculo-diferencial-e-integral.html"><a href="apéndice-b-cálculo-diferencial-e-integral.html"><i class="fa fa-check"></i>Apéndice B: Cálculo diferencial e integral</a>
+<li class="chapter" data-level="" data-path="cálculo-diferencial-e-integral.html"><a href="cálculo-diferencial-e-integral.html"><i class="fa fa-check"></i>CÁLCULO DIFERENCIAL E INTEGRAL</a>
 <ul>
-<li class="chapter" data-level="" data-path="apéndice-b-cálculo-diferencial-e-integral.html"><a href="apéndice-b-cálculo-diferencial-e-integral.html#límites"><i class="fa fa-check"></i>LÍMITES</a></li>
-<li class="chapter" data-level="" data-path="apéndice-b-cálculo-diferencial-e-integral.html"><a href="apéndice-b-cálculo-diferencial-e-integral.html#derivadas"><i class="fa fa-check"></i>DERIVADAS</a></li>
-<li class="chapter" data-level="" data-path="apéndice-b-cálculo-diferencial-e-integral.html"><a href="apéndice-b-cálculo-diferencial-e-integral.html#integrales"><i class="fa fa-check"></i>INTEGRALES</a></li>
-<li class="chapter" data-level="" data-path="apéndice-b-cálculo-diferencial-e-integral.html"><a href="apéndice-b-cálculo-diferencial-e-integral.html#ecuaciones-diferenciales"><i class="fa fa-check"></i>ECUACIONES DIFERENCIALES</a></li>
+<li class="chapter" data-level="" data-path="cálculo-diferencial-e-integral.html"><a href="cálculo-diferencial-e-integral.html#límites"><i class="fa fa-check"></i>LÍMITES</a></li>
+<li class="chapter" data-level="" data-path="cálculo-diferencial-e-integral.html"><a href="cálculo-diferencial-e-integral.html#gráfica-de-límites_fx"><i class="fa fa-check"></i>GRÁFICA DE LÍMITES_FX</a></li>
+<li class="chapter" data-level="" data-path="cálculo-diferencial-e-integral.html"><a href="cálculo-diferencial-e-integral.html#derivadas"><i class="fa fa-check"></i>DERIVADAS</a></li>
+<li class="chapter" data-level="" data-path="cálculo-diferencial-e-integral.html"><a href="cálculo-diferencial-e-integral.html#gráfica-de-ptos-críticos"><i class="fa fa-check"></i>GRÁFICA DE PTOS CRÍTICOS</a></li>
+<li class="chapter" data-level="" data-path="cálculo-diferencial-e-integral.html"><a href="cálculo-diferencial-e-integral.html#integrales"><i class="fa fa-check"></i>INTEGRALES</a></li>
+<li class="chapter" data-level="" data-path="cálculo-diferencial-e-integral.html"><a href="cálculo-diferencial-e-integral.html#ecuaciones-diferenciales"><i class="fa fa-check"></i>ECUACIONES DIFERENCIALES</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="apéndice-c-álgebra-lineal-y-geometría-analítica.html"><a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html"><i class="fa fa-check"></i>Apéndice C: Álgebra lineal y geometría analítica</a>
 <ul>
@@ -1118,11 +1120,14 @@ de <span class="math inline">\(n\)</span> elementos tomados de a <span class="ma
 alelos de los 10 que genotipamos? De acuerdo a la ecuación
 <a href="variacion.html#eq:binomi">(2.7)</a>, la
 probabilidad de obtener 3 conteos en una muestra de 10, con una
-probabilidad <span class="math inline">\(p=0,5\)</span> en la población, es de:
-<span class="math display">\[\begin{equation}
-f(3)={10\choose 3} (0,5)^3 (1-0,5)^{10-3}=\frac{10!}{7! 3!} (0,5)^3 (0,5)^{7}=\frac{10*9*8}{6} (0,5)^{10}=0,1171875 \sim 11,7\%.
+probabilidad <span class="math inline">\(p=0,5\)</span> en la población, es de:</p>
+<p><span class="math display">\[\begin{equation}
+f(3)={10\choose 3} (0,5)^3 (1-0,5)^{10-3}=\frac{10!}{7! 3!} (0,5)^3 (0,5)^{7}=
 \end{equation}\]</span>
-Es decir, aún cuando la frecuencia real en la población es de <span class="math inline">\(p=0,5\)</span>,
+<span class="math display">\[
+\frac{10*9*8}{6} (0,5)^{10}=0,1171875 \sim 11,7\%.
+\]</span></p>
+<p>Es decir, aún cuando la frecuencia real en la población es de <span class="math inline">\(p=0,5\)</span>,
 en más de 1 de cada 10 muestras que tomemos, solo por azar, observaremos
 un conteo de 3 alelos. En estos casos, estimaríamos erróneamente <span class="math inline">\(p \approx 0,33\)</span>. Esto puede parecer poco, pero si nos fijamos en
 la Figura <a href="variacion.html#fig:HWmuestrapeque2">2.5</a>(a), donde graficamos la probabilidad de
@@ -1748,16 +1753,13 @@ Hardy-Weinberg.<br />
 \end{equation*}\]</span></p>
 <p>De acuerdo a las frecuencias estimadas previamente, el número esperado
 de cada fenotipo sería</p>
-<p><span class="math display">\[\begin{equation*}
-\begin{split}
-E(A)=(p^2+2pr)T=(0,3089808^2+2\cdot 0,3089808\cdot 0,5678058)\cdot 1500=669,527
-\sim 670\\
-E(B)=(q^2+2qr)T=(0,1232134^2+2\cdot 0,1232134\cdot 0,5678058)\cdot 1500=232,6562
-\sim 233\\
-E(AB)=2pqT=2\cdot 0,3089808\cdot 0,1232134\cdot 1500=114,2117 \sim 114 \\
-E(O)=r^2T=0,5678058^2\cdot 1500=483,6051=484,
-\end{split}
-\end{equation*}\]</span></p>
+<p><span class="math display">\[E(A)=(p^2+2pr)T=(0,3089808^2+2\cdot 0,3089808\cdot 0,5678058)\cdot 1500=\]</span>
+<span class="math display">\[669,527 \sim 670\]</span>
+<span class="math display">\[E(B)=(q^2+2qr)T=(0,1232134^2+2\cdot 0,1232134\cdot 0,5678058)\cdot 1500=\]</span>
+<span class="math display">\[232,6562 \sim 233\]</span>
+<span class="math display">\[E(AB)=2pqT=2\cdot 0,3089808\cdot 0,1232134\cdot 1500=\]</span>
+<span class="math display">\[114,2117 \sim 114 \]</span>
+<span class="math display">\[E(O)=r^2T=0,5678058^2\cdot 1500=483,6051=484\]</span></p>
 <p>lo que coincide estrechamente con los números observados, por lo que <strong>no podemos descartar que la población se encuentre en equilibrio Hardy-Weinberg</strong> (en general no podemos resolver a favor de una hipótesis alternativa basados en la estadística, a lo sumo podemos afirmar que la misma es completamente improbable dados los supuestos del test que aplicamos).</p>
 </div>
 </div>
@@ -2001,7 +2003,8 @@ f(E_aE_a) = 0,75^2;  f(E_aE_b) = 2 \cdot 0,75 \cdot 0,25; f(E_bE_b) = 0,25^2
 <p><span class="math display">\[
 \begin{cases}
 f(\text{Rojo}) = f(F_aF_a) \cdot f(E_aE_a) = 0,75^2 \cdot 0,75^2 \\
-f(\text{Albino}) = f(F_bF_b;\ E_\text{.}E_\text{.})  + f(F_\text{.}F_\text{.}; E_bE_b) - f(F_bF_b;\ E_bE_b) = 0,25^2 + 0,25^2 - (0,25^2 \cdot 0,25^2)
+f(\text{Albino}) = f(F_bF_b;\ E_\text{.}E_\text{.}) + f(F_\text{.}F_\text{.}; E_bE_b) - f(F_bF_b;\ E_bE_b) = \\
+0,25^2 + 0,25^2 - (0,25^2 \cdot 0,25^2)
 \end{cases}
 \]</span></p>
 <p>en donde en el último caso restamos <span class="math inline">\(f(F_bF_b;\ E_bE_b)\)</span> para no contar este genotipo dos veces.</p>
@@ -2009,6 +2012,96 @@ f(\text{Albino}) = f(F_bF_b;\ E_\text{.}E_\text{.})  + f(F_\text{.}F_\text{.}; E
 <p><span class="math display">\[f(\text{Rosado}) = 1 - (0,75^2 \cdot 0,75^2) - (0,25^2 + 0,25^2 - (0,25^2 \cdot 0,25^2)) \]</span>
 <span class="math display">\[f(\text{Rosado}) = 0,5625 \]</span></p>
 <p>Se puede verificar que esta frecuencia es equivalente a sumar las frecuencias de los genotipos que expresan este color.</p>
+<p><br />
+</p>
+<h4 id="logo" style="display: inline-block;">
+<img src='figuras/sigma.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 2.6
+</h4>
+<p>Demostrar (a) que para un locus con dos alelos en una especie diploide
+en equilibrio Hardy-Weinberg, la diferencia de frecuencias alélicas es
+igual a la diferencia de frecuencia entre los homocigotos respectivos y
+(b) que esta diferencia es igual a <span class="math inline">\(2p -1\)</span>.</p>
+<p><strong><em>Solución</em></strong></p>
+<p>Supongamos que llamamos <span class="math inline">\(p\)</span> y <span class="math inline">\(q=1-p\)</span> a las frecuencias de los dos
+alelos. Para la parte (a) debemos demostrar que su diferencia es igual a
+la diferencia entre los genotipos homocigotos, es decir, <span class="math inline">\(p-q=p^2-q^2\)</span>.
+Para ellos utilizaremos el hecho de que multiplicar por 1 ambos lados de
+la ecuación y el hecho de que <span class="math inline">\(p+q=1\)</span>.</p>
+<p><span class="math display">\[\begin{equation}
+(p-q)=1(p-q)=(p+q)(p-q)=p^2+pq-pq-q^2=p^2-q^2
+\end{equation}\]</span></p>
+<p>En tanto, para la parte (b) utilizaremos que <span class="math inline">\(q=1-p\)</span>, por lo que</p>
+<p><span class="math display">\[\begin{equation}
+p-q=p-(1-p)=p-1+p=2p-1
+\end{equation}\]</span></p>
+<p><br />
+</p>
+<h4 id="logo" style="display: inline-block;">
+<img src='figuras/sigma.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 2.7
+</h4>
+<p>En general, si bien en muchas enfermedades humanas y animales que se
+clasifican como de herencia mendeliana se considera que se trata de un
+solo alelo recesivo, a nivel molecular suelen co-existir varios alelos
+deletéreos que producen similar fenotipo. Demostrar que si en un locus
+existen dos alelos deletéreos recesivos respecto al alelo normal, bajo
+equilibrio de Hardy-Weinberg los resultados respecto al número de
+portadores y de enfermos son equivalentes a considerarlos como un solo
+alelo defectuoso.</p>
+<p><strong><em>Solución</em></strong>
+Supongamos que llamamos <span class="math inline">\(A_1\)</span> al alelo normal y <span class="math inline">\(A_2\)</span> y <span class="math inline">\(A_3\)</span> a los
+alelos defectuosos, con frecuencias respectivas <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span> y <span class="math inline">\(r\)</span>,
+<span class="math inline">\(p+q+r=1\)</span>. Llamemos <span class="math inline">\(u=q+r\)</span> a la frecuencia de los dos alelos
+defectuosos sumados, o lo que es lo mismo, a la frecuencia de alelos
+defectuosos (como si fuera uno solo). De acuerdo a lo visto para más de
+un alelo, las frecuencias esperadas bajo equilibrio Hardy-Weinberg serán</p>
+<p><span class="math display">\[\begin{equation}
+(p+q+r)^2=p^2+q^2+r^2+2pq+2pr+2qr
+\end{equation}\]</span></p>
+<p>De estos genotipos, los
+enfermos serán aquellos que tengan 2 alelos defectuosos, sean cuales
+sean, o sea <span class="math inline">\(A_2A_2\)</span>, <span class="math inline">\(A_3A_3\)</span> y <span class="math inline">\(A_2A3\)</span>, es decir</p>
+<p><span class="math display">\[\begin{equation}
+q^2+r^2+2qr=(q+r)^2=u^2
+\end{equation}\]</span></p>
+<p>Es decir, demostramos que el
+número de enfermos esperados es equivalente a considerarlo como un solo
+alelo. Ahora, el número de portadores será la suma de los genotipos que
+tienen un solo alelo defectuoso y el otro normal, o sea <span class="math inline">\(A_1A_2\)</span> y
+<span class="math inline">\(A_1A_3\)</span>, es decir</p>
+<p><span class="math display">\[\begin{equation}
+2pq+2pr=2p(q+r)=2pu
+\end{equation}\]</span></p>
+<p>con lo que queda demostrado que
+también la frecuencia de portadores es equivalente a considerarlo un
+solo alelo defectuoso.</p>
+<p><br />
+</p>
+<h4 id="logo" style="display: inline-block;">
+<img src='figuras/sigma.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 2.8
+</h4>
+<p>En muchos casos las ecuaciones que derivamos se simplifican enormemente debido a la restricción <span class="math inline">\(p+q=1\)</span>. Demostrar que las siguientes relaciones son válidas (adaptado de <span class="citation">Hartl and Clark (<a href="#ref-HartlClark2007">2007</a>)</span>)</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+p^2-q^2=p-q \\
+p^2+pq=p \\
+p-q=1-2q \\
+p^2+q^2=1-2pq \\
+(p-q)^2=1-4pq
+\end{split}
+\end{equation}\]</span></p>
+<p><strong><em>Solución</em></strong></p>
+<p>Haciendo uso de que <span class="math inline">\(p+q=1\)</span>, por lo que también <span class="math inline">\((p+q)^2=p^2+2pq+q^2=1\)</span> (ya que lo que está dentro del paréntesis vale <span class="math inline">\(1\)</span> y <span class="math inline">\(1^2=1\)</span>), tenemos que</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+p^2-q^2=(p+q)(p-q)=(1)(p-q)=p-q \\
+p^2+pq=p(p+q)=p(1)=p \\
+p-q=(1-q)-q=1-q-q=1-2q \\
+p^2+q^2=1-2pq \Leftrightarrow p^2+q^2+2pq=1 \Leftrightarrow (p+q)^2=1 \Leftrightarrow 1^2=1\\
+(p-q)^2=p^2-2pq+q^2=p^2-2pq+q^2+2pq-2pq=p^2+2pq+q^2-2pq-2pq=(p+q)^2-4pq=1-4pq
+\end{split}
+\end{equation}\]</span></p>
+<p><br />
+</p>
 <hr />
 
 </div>
@@ -2030,6 +2123,9 @@ Finetti, B. de. 1926. <span>“<span class="nocase"><span>C</span>onsiderazioni 
 </div>
 <div id="ref-pmid17779291" class="csl-entry">
 Hardy, G. H. 1908. <span>“<span><span>M</span><span>E</span><span>N</span><span>D</span><span>E</span><span>L</span><span>I</span><span>A</span><span>N</span> <span>P</span><span>R</span><span>O</span><span>P</span><span>O</span><span>R</span><span>T</span><span>I</span><span>O</span><span>N</span><span>S</span> <span>I</span><span>N</span> <span>A</span> <span>M</span><span>I</span><span>X</span><span>E</span><span>D</span> <span>P</span><span>O</span><span>P</span><span>U</span><span>L</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span></span>.”</span> <em>Science</em> 28 (706): 49–50.
+</div>
+<div id="ref-HartlClark2007" class="csl-entry">
+Hartl, Daniel L, and Andrew G Clark. 2007. <em>Principles of Population Genetics</em>. 4th. ed. Sinauer.
 </div>
 <div id="ref-pmid22737241" class="csl-entry">
 Medugorac, I., D. Seichter, A. Graf, I. Russ, H. Blum, K. H. Göpel, S. Rothammer, M. Förster, and S. Krebs. 2012. <span>“<span class="nocase"><span>B</span>ovine polledness–an autosomal dominant trait with allelic heterogeneity</span>.”</span> <em>PLoS ONE</em> 7 (6): e39477.

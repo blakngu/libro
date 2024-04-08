@@ -1038,14 +1038,8 @@ verdadero-o-falso-10
 ejercicios-12
 endoexo
 el-aumento-de-la-consanguinidad-a-partir-del-número-de-individuos
-ejemplo-14.2a
-ejemplo-14.2b
-ejemplo-14.2c
-ejemplo-14.2d
 el-coeficiente-de-consanguinidad-en-razas-lecheras
 depresión-endogámica
-ejemplo-14.4a
-ejemplo-14.4b
 exocría-y-heterosis
 modelo-genético-de-cruzamientos
 conclusión-13

@@ -378,12 +378,14 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="apéndice-a-conceptos-matemáticos-básicos.html"><a href="apéndice-a-conceptos-matemáticos-básicos.html#funciones"><i class="fa fa-check"></i>FUNCIONES</a></li>
 <li class="chapter" data-level="" data-path="apéndice-a-conceptos-matemáticos-básicos.html"><a href="apéndice-a-conceptos-matemáticos-básicos.html#sumatoria-y-productoria"><i class="fa fa-check"></i>SUMATORIA Y PRODUCTORIA</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="apéndice-b-cálculo-diferencial-e-integral.html"><a href="apéndice-b-cálculo-diferencial-e-integral.html"><i class="fa fa-check"></i>Apéndice B: Cálculo diferencial e integral</a>
+<li class="chapter" data-level="" data-path="cálculo-diferencial-e-integral.html"><a href="cálculo-diferencial-e-integral.html"><i class="fa fa-check"></i>CÁLCULO DIFERENCIAL E INTEGRAL</a>
 <ul>
-<li class="chapter" data-level="" data-path="apéndice-b-cálculo-diferencial-e-integral.html"><a href="apéndice-b-cálculo-diferencial-e-integral.html#límites"><i class="fa fa-check"></i>LÍMITES</a></li>
-<li class="chapter" data-level="" data-path="apéndice-b-cálculo-diferencial-e-integral.html"><a href="apéndice-b-cálculo-diferencial-e-integral.html#derivadas"><i class="fa fa-check"></i>DERIVADAS</a></li>
-<li class="chapter" data-level="" data-path="apéndice-b-cálculo-diferencial-e-integral.html"><a href="apéndice-b-cálculo-diferencial-e-integral.html#integrales"><i class="fa fa-check"></i>INTEGRALES</a></li>
-<li class="chapter" data-level="" data-path="apéndice-b-cálculo-diferencial-e-integral.html"><a href="apéndice-b-cálculo-diferencial-e-integral.html#ecuaciones-diferenciales"><i class="fa fa-check"></i>ECUACIONES DIFERENCIALES</a></li>
+<li class="chapter" data-level="" data-path="cálculo-diferencial-e-integral.html"><a href="cálculo-diferencial-e-integral.html#límites"><i class="fa fa-check"></i>LÍMITES</a></li>
+<li class="chapter" data-level="" data-path="cálculo-diferencial-e-integral.html"><a href="cálculo-diferencial-e-integral.html#gráfica-de-límites_fx"><i class="fa fa-check"></i>GRÁFICA DE LÍMITES_FX</a></li>
+<li class="chapter" data-level="" data-path="cálculo-diferencial-e-integral.html"><a href="cálculo-diferencial-e-integral.html#derivadas"><i class="fa fa-check"></i>DERIVADAS</a></li>
+<li class="chapter" data-level="" data-path="cálculo-diferencial-e-integral.html"><a href="cálculo-diferencial-e-integral.html#gráfica-de-ptos-críticos"><i class="fa fa-check"></i>GRÁFICA DE PTOS CRÍTICOS</a></li>
+<li class="chapter" data-level="" data-path="cálculo-diferencial-e-integral.html"><a href="cálculo-diferencial-e-integral.html#integrales"><i class="fa fa-check"></i>INTEGRALES</a></li>
+<li class="chapter" data-level="" data-path="cálculo-diferencial-e-integral.html"><a href="cálculo-diferencial-e-integral.html#ecuaciones-diferenciales"><i class="fa fa-check"></i>ECUACIONES DIFERENCIALES</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="apéndice-c-álgebra-lineal-y-geometría-analítica.html"><a href="apéndice-c-álgebra-lineal-y-geometría-analítica.html"><i class="fa fa-check"></i>Apéndice C: Álgebra lineal y geometría analítica</a>
 <ul>
@@ -1514,7 +1516,7 @@ p_{i,i+1} =\frac{i \cdot (N-i)}{N^2}  = (\frac{i}{N}) \cdot (\frac{N-i}{N}) = p 
 <p><span class="math display">\[
 H_{t + \delta t} = 2(p + \frac{1}{N})(1 - p - \frac{1}{N})[pq] + 2pq[p^2 + q^2] + 2(p - \frac{1}{N})(1 - p + \frac{1}{N})[qp]
 \]</span></p>
-<p>donde, como en todo calculo de esperanza, a los valores posibles su probabilidad (entre paréntesis rectos en la ecuación anterior). Es importante notar que por cómo se propone el modelo se abarcó en este cálculo a todos los valores de heterocigosidad posibles luego de un paso de replicación y muerte de una célula haploide.</p>
+<p>donde, como en todo calculo de esperanza, a los valores posibles los multiplicamos por su probabilidad (entre paréntesis rectos en la ecuación anterior). Es importante notar que por cómo se propone el modelo se abarcó en este cálculo a todos los valores de heterocigosidad posibles luego de un paso de replicación y muerte de una célula haploide.</p>
 <p>Si desarrollamos el cálculo, llegamos a que</p>
 <p><span class="math display">\[
 H_{t + \delta t} = 2pq(1 - \frac{2}{N^2})
@@ -1716,7 +1718,7 @@ P(T_k^N &gt; 100) \approx 3,76 \times 10^{-44}
 <h4 id="logo" style="display: inline-block;">
 <img src='figuras/medicina.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 7.5
 </h4>
-<p>En una población de aproximadamente 54 millones de personas ingresa un patógeno. Luego de un tiempo, un grupo interdisciplinario se dispone a estudiar la dinámica de transmisión en la población, logrando determinar una tasa de transmisión de <span class="math inline">\(\beta = 0,12\text{ contagios \it{per capita}/dia}\)</span> , una tasa de recuperación de <span class="math inline">\(\gamma = 0,1\text{ recuperados \it{per capita}/dia}\)</span> y una tasa de mortalidad de <span class="math inline">\(\mu = 0,001 \text{ muertes \it{per capita}/dia}\)</span> .</p>
+<p>En una población de aproximadamente 54 millones de personas ingresa un patógeno. Luego de un tiempo, un grupo interdisciplinario se dispone a estudiar la dinámica de transmisión en la población, logrando determinar una tasa de transmisión de <span class="math inline">\(\beta = 0,12\text{ contagios \textit{per capita}/dia}\)</span> , una tasa de recuperación de <span class="math inline">\(\gamma = 0,1\text{ recuperados \textit{per capita}/dia}\)</span> y una tasa de mortalidad de <span class="math inline">\(\mu = 0,001 \text{ muertes \textit{per capita}/dia}\)</span> .</p>
 <ol style="list-style-type: decimal">
 <li>¿Qué dinámica de transmisión espera en la población con estos datos?</li>
 <li>Determine la cantidad de individuos sanos, cursando enfermedad y recuperados en el largo plazo, una vez se alcance el equilibrio. Se asume que las condiciones generales de la situación epidemiológica se ven inalteradas.</li>
