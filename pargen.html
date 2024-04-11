@@ -26,7 +26,7 @@
 <meta name="author" content="(Graciana Castro)" />
 
 
-<meta name="date" content="2024-04-08" />
+<meta name="date" content="2024-04-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -2441,8 +2441,6 @@ Producción de proteína
 <span class="math inline">\(^6\)</span> <span class="citation">Frioni (<a href="#ref-Frioni2012">2012</a>)</span>,
 <span class="math inline">\(^7\)</span> <span class="citation">Frioni (<a href="#ref-Frioni2016">2016</a>)</span>.</p>
 <p>En algunos casos las características a mejorar son un poco más complejas y difíciles de especificar. En el cuadro siguiente aparecen algunas estimaciones de heredabilidad en caballos de competencia, en particular en competencias de resistencia (750 Km en 15 días de competencia) en nuestro país. En primer lugar, en el caso de carreras de este tipo, si bien la ubicación en el ranking y el tiempo total empleado parecen tener una parte importante de su base genética en común, no necesariamente la misma es total. Más aún, ambas características tienen distribuciones completamente diferentes, por lo que los modelos bajo los que se estima la heredabilidad no tienen por que ser necesariamente equivalentes. Por esta razón es usual ensayar diferentes modelos y reportar los estimados para cada uno de ellos. En el cuadro siguiente, dado de que <span class="citation">López-Correa (<a href="#ref-LopezCorrea2013">2013</a>)</span> reportan varios resultados diferentes para diferentes modelos, nosotros aprovechamos esto para mostrar que en algunos casos las estimaciones son consistentes entre modelos (lo que aparece en el cuadro es el intervalo de las medias de los distintos modelos).</p>
-<p>(ref:lopezcorreauno) <span class="citation">(<a href="#ref-LopezCorrea2018">López-Correa et al. 2018</a>)</span>
-(ref:lopezcorreados) <span class="citation">(<a href="#ref-LopezCorrea2013">López-Correa 2013</a>)</span> (intervalo de medias en los distintos modelos ensayados).</p>
 <table class="table" style="font-size: 9px; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -2515,19 +2513,9 @@ Caballos/Criollo
 </td>
 </tr>
 </tbody>
-<tfoot>
-<tr>
-<td style="padding: 0; border:0;" colspan="100%">
-<sup>1</sup> (ref:lopezcorreauno)
-</td>
-</tr>
-<tr>
-<td style="padding: 0; border:0;" colspan="100%">
-<sup>2</sup> (ref:lopezcorreados)
-</td>
-</tr>
-</tfoot>
 </table>
+<p><span class="math inline">\(^1\)</span> <span class="citation">(<a href="#ref-LopezCorrea2018">López-Correa et al. 2018</a>)</span>
+<span class="math inline">\(^2\)</span> <span class="citation">(<a href="#ref-LopezCorrea2013">López-Correa 2013</a>)</span> (intervalo de medias en los distintos modelos ensayados).</p>
 <p>En otros casos las características a mejorar se encuentran “mal medidas” (en el sentido de poca precisión) o no hay forma razonable de medir directamente lo que deseamos mejorar. Usualmente es el caso de las características reproductivas, donde el conjunto de los procesos que llevan a la preñez o al nacimiento de la cría resultan imposibles de separar a nivel de establecimientos comerciales, lo que nos lleva a usar <strong>variables poco informativas</strong> (cría nacida, por ejemplo). Más aún, en condiciones de predios comerciales, en muchos casos se superpone el problema de la ausencia de algunos registros importantes, por lo que las variables son aún menos informativas. Por ejemplo, teniendo en cuenta los problemas anteriores, para estimar parámetros genéticos de variables reproductivas (<strong>endpoints</strong>) en la raza Aberdeen Angus, <span class="citation">H. Naya, Peñagaricano, and Urioste (<a href="#ref-Nayaetal2017">2017</a>)</span> ensayaron diferentes modelos, incluyendo modelos lineales (gaussianos), de Poisson, probit (umbral), de Poisson censurados y gaussianos censurados. Los criterios tradicionales para rasgos de fertilidad incluyen el <strong>éxito del parto</strong> (<strong>CS</strong>), un rasgo binario codificado con 1 para el éxito y 0 para el fracaso, y uno algo más descriptivo, <strong>días al parto</strong> (<strong>CD</strong>), representado como el número de días desde el comienzo de la temporada de partos de un rodeo hasta la fecha de parto de la vaca. Mientras que <strong>CD</strong> es más descriptivo que <strong>CS</strong>, el mismo no permite una forma directa de representar la información de las vacas fallidas (que no tuvieron ternero). Existen diferentes alternativas para tratar este problema, alguna de las cuales incluyen <strong>añadir un ciclo estral</strong> a la variable (<strong>CD+21d</strong>), asumiendo que estas vacas estarían preñadas en el siguiente celo si se permitiese, tratar estos registros como información faltante (<strong>CD_NA</strong>) o considerar la CD como censurada a la derecha y modelizarla en consecuencia. Otra alternativa propuesta por <span class="citation">H. Naya, Peñagaricano, and Urioste (<a href="#ref-Nayaetal2017">2017</a>)</span> es la de modelar el <strong>número total de celos fallidos</strong> hasta la concepción (<strong>FE</strong>), como una nueva variable de respuesta no censurada de interés. La idea es de expresar en número de ciclos estrales (21 días) el tiempo en el que una vaca no está preñada, a pesar de estar en la temporada de cría; ventajas de esta variable incluyen de que es cuantitativa, con el número de eventos relevantes (ciclos estrales, no días) y que permite conectar de forma continua los años en caso de haber fallado todas las oportunidades en uno.</p>
 <p>En el cuadro siguiente se puede ver un resumen de las estimaciones de heredabilidad obtenidas por estos autores para los diferentes “endpoints” considerados, usando diferentes modelos de acuerdo al tipo de variable.</p>
 <table class="table" style="font-size: 9px; margin-left: auto; margin-right: auto;">
@@ -3578,10 +3566,8 @@ y la precisión de la estimación, <span class="math inline">\(r_{AC}\)</span>, 
 <img src='figuras/cienciabasica.png' alt='logo' style='width: 10%; position: relative; top: 0.5cm;'/> Ejercicio 10.1
 </h4>
 <p><span class="citation">(Inspirado en <a href="#ref-Felsenstein2019">J. Felsenstein 2019</a>)</span></p>
-<div class="float">
-<img src="figuras/cap10_ejercicio1.png" style="width:50.0%" alt="“¿Quién los manda a hacer un ejercicio sobre nosotros?”. Ejemplar de tamanduá (T. tetradactyla) leyendo este libro. Imagen generada con DALL-E 2 (https://openai.com/dall-e-2)." />
-<div class="figcaption">“<em>¿Quién los manda a hacer un ejercicio sobre nosotros?</em>”. Ejemplar de tamanduá (<em>T. tetradactyla</em>) leyendo este libro. Imagen generada con DALL-E 2 (<a href="https://openai.com/dall-e-2" class="uri">https://openai.com/dall-e-2</a>).</div>
-</div>
+<p><img src="figuras/cap10_ejercicio1.png" style="width:50.0%" alt="“¿Quién los manda a hacer un ejercicio sobre nosotros?”. Ejemplar de tamanduá (T. tetradactyla) leyendo este libro. Imagen generada con DALL-E 2 (https://openai.com/dall-e-2)." /><br />
+</p>
 <p>Una población de tamanduás (<em>T. tetradactyla</em>) posee un largo promedio de lengua de <span class="math inline">\(63,2 \text{ cm}\)</span>, con una varianza de <span class="math inline">\(8,4 \text{ cm}^2\)</span>. La correlación padre-hijo es de <span class="math inline">\(0,43\)</span>.</p>
 <p><strong>a.</strong> ¿Cuál es la heredabilidad del caracter fenotípico “<em>largo de lengua</em>”?</p>
 <p><strong>b.</strong> Si elegimos machos que tengan lenguas de exactamente <span class="math inline">\(70 \text{ cm}\)</span> y los apareamos con hembras tomadas al azar, cuál es el valor medio más probable para el largo de lengua de la descendencia? Nota: asuma que la varianza genotípica es de <span class="math inline">\(6,7 \text{ cm}\)</span> aproximadamente.</p>

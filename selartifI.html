@@ -26,7 +26,7 @@
 <meta name="author" content="(Graciana Castro)" />
 
 
-<meta name="date" content="2024-04-08" />
+<meta name="date" content="2024-04-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -3015,7 +3015,9 @@ f(aabb) = (p_a^2) \cdot (p_b^2) = 0,5^4
 <p><strong>b.</strong> Calcularemos la varianza según</p>
 <p><span class="math display">\[\sigma^2_x = \sum p_i \cdot (x_i - \bar{x})^2\]</span></p>
 <p>donde <span class="math inline">\(x_i\)</span> es el valor fenotípico para el <span class="math inline">\(i\)</span>-ésimo genotipo y <span class="math inline">\(p_i\)</span> su frecuencia (<em>i.e.</em> debemos ponderar al momento de calcular la varianza). Tenemos así</p>
-<p><span class="math display">\[\sigma^2_x = [0,5^4] \cdot (6 - 7,5)^2 + [2 \cdot 0,5^4] \cdot (7 - 7,5)^2 + [0,5^4] \cdot (8 - 7,5)^2 + [2 \cdot 0,5^4] \cdot (7 - 7,5)^2 + [4 \cdot 0,5^4] \cdot (8 - 7,5)^2 + [2 \cdot 0,5^4] \cdot (9 - 7,5)^2 + [0,5^4] \cdot (8 - 7,5)^2 + [2 \cdot 0,5^4] \cdot (9 - 7,5)^2 + [(0,5^4] \cdot (10 - 7,5)^2\]</span>
+<p><span class="math display">\[\sigma^2_x = [0,5^4] \cdot (6 - 7,5)^2 + [2 \cdot 0,5^4] \cdot (7 - 7,5)^2 + [0,5^4] \cdot (8 - 7,5)^2 + \]</span>
+<span class="math display">\[[2 \cdot 0,5^4] \cdot (7 - 7,5)^2 + [4 \cdot 0,5^4] \cdot (8 - 7,5)^2 + [2 \cdot 0,5^4] \cdot (9 - 7,5)^2 + \]</span>
+<span class="math display">\[[0,5^4] \cdot (8 - 7,5)^2 + [2 \cdot 0,5^4] \cdot (9 - 7,5)^2 + [(0,5^4] \cdot (10 - 7,5)^2\]</span>
 <span class="math display">\[\sigma^2_x \approx 1,9375 \Rightarrow \sigma_x = \sqrt{\sigma^2_x} \approx \sqrt{1,9375} \approx 1,3919\]</span></p>
 <p><strong>c.</strong> Observemos que en todos los casos el cambio de un alelo por otro genera un cambio en el valor fenotípico del respectivo genotipo de <span class="math inline">\(1\)</span>. Esto es una señal clara de aditividad: si existieran efectos epistáticos deberíamos observar desviaciones debido a las interacciones entre <em>loci</em>. A su vez es también señal de que no existen efectos de dominancia (de lo contrario, los fenotipos heterocigotas no serían equidistantes de los homocigotas). En resumen, la variación fenotípica parece estar determinada, en su componente genético, sólo por la componente aditiva.</p>
 <p><strong>d.</strong> Dado que toda la variación genética está dada por el componente aditivo, tenemos que en este caso <span class="math inline">\(h^2 = 1\)</span>.</p>
@@ -3031,7 +3033,9 @@ f’(aabb) = f(aabb) \cdot \frac{1}{0,6785}
 \end{cases}
 \]</span></p>
 <p>De esto sale que la media de los individuos seleccionados es de</p>
-<p><span class="math display">\[\bar{x}_s = (0,5^4 \cdot \frac{1}{0,6785} \cdot 8 ) + (4 \cdot 0,5^4 \frac{1}{0,6785} \cdot 8) + (2 \cdot 0,5^4 \frac{1}{0,6785} \cdot 9) + (0,5^4 \cdot \frac{1}{0,6785} \cdot 8) + (2 \cdot 0,5^4 \cdot \frac{1}{0,6785} \cdot 9) + (0,5^4 \cdot \frac{1}{0,6785} \cdot 10)\]</span></p>
+<p><span class="math display">\[\bar{x}_s = (0,5^4 \cdot \frac{1}{0,6785} \cdot 8 ) + (4 \cdot 0,5^4 \frac{1}{0,6785} \cdot 8) + \]</span>
+<span class="math display">\[(2 \cdot 0,5^4 \frac{1}{0,6785} \cdot 9) + (0,5^4 \cdot \frac{1}{0,6785} \cdot 8) + \]</span>
+<span class="math display">\[(2 \cdot 0,5^4 \cdot \frac{1}{0,6785} \cdot 9) + (0,5^4 \cdot \frac{1}{0,6785} \cdot 10)\]</span></p>
 <p><span class="math display">\[\bar{x}_s \approx 8,6588\]</span></p>
 <p>Por lo tanto, <span class="math inline">\(R \approx 1 \cdot (8,6588 - 7,5) = 1,1588\)</span>.<br />
 </p>
@@ -3095,12 +3099,16 @@ f’(aabb) = f(aabb) \cdot \frac{1}{0,6785}
 <span class="math inline">\(60\)</span>
 </td>
 <td style="text-align:left;">
-<span class="math display">\[ &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style=&quot;text-align:left;&quot;&gt; $7$ &lt;/td&gt;
-   &lt;td style=&quot;text-align:left;&quot;&gt; $20$ &lt;/td&gt;
-   &lt;td style=&quot;text-align:left;&quot;&gt; \]</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(7\)</span>
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(20\)</span>
+</td>
+<td style="text-align:left;">
 </td>
 </tr>
 <tr>
